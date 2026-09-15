@@ -1,18 +1,23 @@
 import numpy as np
 import pandas as pd
 
+from c2c.core.windows import benchmark_windows
 from c2c.i18n import translate
 
 
-def _first_response_delay(case: pd.DataFrame, step_s: float = 300.0) -> float | None:
+def _first_response_delay(
+    case: pd.DataFrame,
+    step_s: float = 300.0,
+    *,
+    column: str = "valve_position_pct",
+    threshold: float = 2.0,
+    end_s: float | None = None,
+) -> float | None:
     baseline = case[(case.timestamp_s >= step_s - 60) & (case.timestamp_s < step_s)]
     after = case[case.timestamp_s >= step_s]
-    base_valve = baseline.valve_position_pct.mean()
-    base_sp = baseline.temperature_setpoint_c.mean()
-    changed = after[
-        ((after.valve_position_pct - base_valve).abs() >= 2.0)
-        | ((after.temperature_setpoint_c - base_sp).abs() >= 0.25)
-    ]
+    if end_s is not None:
+        after = after[after.timestamp_s < end_s]
+    changed = after[(after[column] - baseline[column].mean()).abs() >= threshold]
     if changed.empty:
         return None
     return float(changed.timestamp_s.iloc[0] - step_s)
@@ -23,7 +28,8 @@ def _integrate_kwh(values: pd.Series, timestamps_s: pd.Series) -> float:
         return 0.0
     power = values.to_numpy(dtype=float)
     timestamps = timestamps_s.to_numpy(dtype=float)
-    interval_energy_kw_s = (power[:-1] + power[1:]) * 0.5 * np.diff(timestamps)
+    # Engine commands and loads are held over [t_i, t_{i+1}).
+    interval_energy_kw_s = power[:-1] * np.diff(timestamps)
     return float(interval_energy_kw_s.sum() / 3600.0)
 
 
@@ -53,18 +59,56 @@ def _check(
 
 
 def case_metrics(case: pd.DataFrame, config: dict, locale: str = "en") -> dict:
+    required = (
+        "timestamp_s",
+        "pump_power_kw",
+        "heat_rejected_kw",
+        "gpu_temperature_c",
+        "secondary_supply_temp_c",
+        "temperature_setpoint_c",
+        "coolant_heat_removed_kw",
+        "liquid_heat_kw",
+        "valve_position_pct",
+        "pump_speed_pct",
+        "accepted_temperature_setpoint_c",
+        "accepted_dp_kpa",
+        "secondary_return_temp_c",
+        "thermal_margin_k",
+        "throttle",
+    )
+    invalid = [
+        name
+        for name in required
+        if name not in case
+        or not pd.api.types.is_numeric_dtype(case[name])
+        or not np.isfinite(case[name].to_numpy(dtype=float)).all()
+    ]
+    if not invalid and (case.empty or (np.diff(case.timestamp_s) <= 0).any()):
+        invalid.append("timestamp_s")
+    if not invalid:
+        dt = config["time"]["dt_s"]
+        expected = np.arange(int(np.floor(config["time"]["duration_s"] / dt)) + 1) * dt
+        if len(case) != len(expected) or not np.allclose(
+            case.timestamp_s, expected, rtol=0, atol=1e-9
+        ):
+            invalid.append("timestamp_s")
+    if invalid:
+        return {"threshold_status": "INVALID", "threshold_checks": [], "validation_errors": invalid}
     phases = config["workload"]["phases"]
     step_s = float(phases[1]["start_s"]) if len(phases) > 1 else 0.0
     high_end_s = (
         float(phases[2]["start_s"]) if len(phases) > 2 else float(config["time"]["duration_s"])
     )
-    pre_window_s = min(60.0, step_s)
-    pre = case[(case.timestamp_s >= step_s - pre_window_s) & (case.timestamp_s < step_s)]
-    high = case[(case.timestamp_s >= step_s) & (case.timestamp_s < high_end_s)]
-    steady_start_s = max(step_s, high_end_s - min(100.0, (high_end_s - step_s) / 2.0))
-    steady_high = case[(case.timestamp_s >= steady_start_s) & (case.timestamp_s < high_end_s)]
-    if pre.empty or high.empty or steady_high.empty:
-        raise ValueError("scenario phases do not provide enough samples for benchmark metrics")
+    pre, high, steady_high = [
+        case[(case.timestamp_s >= lo) & (case.timestamp_s < hi)]
+        for lo, hi in benchmark_windows(config)
+    ]
+    if pre.empty or len(high) < 2 or steady_high.empty:
+        return {
+            "threshold_status": "INVALID",
+            "threshold_checks": [],
+            "validation_errors": ["sampled_windows"],
+        }
     facility_cop = float(config["reporting"]["facility_cop"])
     pump_kwh = _integrate_kwh(case.pump_power_kw, case.timestamp_s)
     facility_kwh = _integrate_kwh(case.heat_rejected_kw / facility_cop, case.timestamp_s)
@@ -185,7 +229,26 @@ def case_metrics(case: pd.DataFrame, config: dict, locale: str = "en") -> dict:
             high.secondary_return_temp_c.max() - pre.secondary_return_temp_c.mean()
         ),
         "max_supply_deviation_k": max_supply_deviation_k,
-        "controller_response_delay_s": _first_response_delay(case, step_s),
+        "startup_supply_deviation_k": float(
+            (
+                case[case.timestamp_s < step_s].secondary_supply_temp_c
+                - case[case.timestamp_s < step_s].temperature_setpoint_c
+            )
+            .abs()
+            .max()
+        ),
+        "post_step_supply_deviation_k": float(
+            (
+                case[case.timestamp_s >= step_s].secondary_supply_temp_c
+                - case[case.timestamp_s >= step_s].temperature_setpoint_c
+            )
+            .abs()
+            .max()
+        ),
+        "controller_response_delay_s": _first_response_delay(case, step_s, end_s=high_end_s),
+        "setpoint_response_delay_s": _first_response_delay(
+            case, step_s, column="temperature_setpoint_c", threshold=0.25, end_s=high_end_s
+        ),
         "pump_energy_kwh": pump_kwh,
         "facility_cooling_energy_kwh": facility_kwh,
         "minimum_thermal_margin_k": float(case.thermal_margin_k.min()),
@@ -203,15 +266,22 @@ def benchmark_summary(frame: pd.DataFrame, config: dict, locale: str = "en") -> 
         name: case_metrics(case, config, locale) for name, case in frame.groupby("case", sort=False)
     }
     a, b = metrics["feedback_only"], metrics["guarded_feedforward"]
+    valid = all(m["threshold_status"] != "INVALID" for m in metrics.values())
     return {
         "scenario": config["name"],
         "locale": locale,
         "claims": translate("claims.generic", locale),
         "cases": metrics,
-        "comparison": {
+        "comparison": None
+        if not valid
+        else {
             "peak_gpu_temperature_change_k": b["peak_gpu_temperature_c"]
             - a["peak_gpu_temperature_c"],
-            "pump_energy_change_pct": 100.0 * (b["pump_energy_kwh"] / a["pump_energy_kwh"] - 1.0),
+            "pump_energy_change_pct": (
+                100.0 * (b["pump_energy_kwh"] / a["pump_energy_kwh"] - 1.0)
+                if a["pump_energy_kwh"] > 0
+                else None
+            ),
             "response_delay_improvement_s": (
                 None
                 if a["controller_response_delay_s"] is None

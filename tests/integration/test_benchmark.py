@@ -25,14 +25,25 @@ def test_benchmark_is_reproducible_and_feedforward_is_earlier():
     assert (
         first[["gpu_temperature_c", "secondary_flow_m3h", "heat_rejected_kw"]].notna().all().all()
     )
-    for case in summary["cases"].values():
-        assert case["threshold_status"] == "PASS"
-        assert all(check["passed"] for check in case["threshold_checks"])
+    assert summary["cases"]["feedback_only"]["threshold_status"] == "PASS"
+    ff = summary["cases"]["guarded_feedforward"]
+    assert ff["threshold_status"] == "FAIL"
+    assert [check["key"] for check in ff["threshold_checks"] if not check["passed"]] == [
+        "supply_deviation"
+    ]
+    assert ff["setpoint_response_delay_s"] == 0
 
 
 def test_runner_writes_required_artifacts(tmp_path):
     output = run(CONFIG, tmp_path)
-    for name in ["config.yaml", "metadata.json", "timeseries.csv", "summary.json", "report.html"]:
+    for name in [
+        "config.yaml",
+        "metadata.json",
+        "timeseries.csv",
+        "summary.json",
+        "report.html",
+        "comparison.png",
+    ]:
         assert (output / name).is_file()
     assert "Generic assumed equipment" in (output / "report.html").read_text(encoding="utf-8")
 
@@ -47,7 +58,9 @@ def test_runner_writes_localized_chinese_report(tmp_path):
     report = (output / "report.html").read_text(encoding="utf-8")
     assert "阈值检查" in report
     assert "结果解释边界" in report
-    assert "超限" not in report
+    assert "超限" in report
+    assert "基准测试对比图" in report
+    assert "metric." not in report
     assert "peak_gpu_temperature_c" not in report
 
 
@@ -61,7 +74,8 @@ def test_metrics_follow_configured_workload_phase_times():
     feedback = summary["cases"]["feedback_only"]["controller_response_delay_s"]
     feedforward = summary["cases"]["guarded_feedforward"]["controller_response_delay_s"]
     assert feedback is not None and feedback > 0
-    assert feedforward == 0
+    assert feedforward is not None and 0 < feedforward < feedback
+    assert summary["cases"]["guarded_feedforward"]["setpoint_response_delay_s"] == 0
 
 
 def test_threshold_check_reports_a_real_failure():

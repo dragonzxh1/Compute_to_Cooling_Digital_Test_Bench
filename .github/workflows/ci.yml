@@ -31,4 +31,10 @@ jobs:
       - run: python -m pytest
       - run: python -m pip install build
       - run: python -m build
-      - run: cd "$(mktemp -d)" && c2c-dtb --output-root results --locale en
+      - name: Install wheel into an isolated environment and run outside checkout
+        run: |
+          python -m venv "$RUNNER_TEMP/wheel-venv"
+          "$RUNNER_TEMP/wheel-venv/bin/python" -m pip install dist/*.whl
+          cd "$(mktemp -d)"
+          "$RUNNER_TEMP/wheel-venv/bin/c2c-dtb" --locale en
+          "$RUNNER_TEMP/wheel-venv/bin/c2c-dtb" --locale zh-CN --output-root results-zh

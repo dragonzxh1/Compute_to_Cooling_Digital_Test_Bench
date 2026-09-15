@@ -39,6 +39,12 @@ def _html_report(summary: dict, image_path: Path, step_s: float, locale: str) ->
     rows = []
     check_rows = []
     for case, metrics in summary["cases"].items():
+        case_status = metrics["threshold_status"].lower()
+        check_rows.append(
+            f"<tr><td>{html.escape(translate(f'case.{case}', locale))}</td>"
+            f"<td colspan='3'>{html.escape(translate('report.overall', locale))}</td>"
+            f"<td>{html.escape(translate(f'report.{case_status}', locale))}</td></tr>"
+        )
         for metric, value in metrics.items():
             if metric in {"threshold_checks", "threshold_status"}:
                 continue
@@ -67,7 +73,7 @@ def _html_report(summary: dict, image_path: Path, step_s: float, locale: str) ->
 <style>body{{font:15px system-ui;max-width:1200px;margin:32px auto;color:#172033}}table{{border-collapse:collapse;width:100%}}th,td{{padding:8px;border:1px solid #ccd3df;text-align:left}}th{{background:#eef2f7}}.note{{background:#fff4d6;padding:14px;border-left:4px solid #c48600}}.pass{{color:#126c2e;font-weight:700}}.fail{{color:#b42318;font-weight:700;background:#fff1f0}}img{{max-width:100%;height:auto}}</style></head><body>
 <h1>{html.escape(translate("report.title", locale))}</h1><p class='note'>{html.escape(summary["claims"])}</p>
 <p>{html.escape(translate("report.explanation", locale, step_s=step_s))}</p>
-<img alt='benchmark comparison plots' src='data:image/png;base64,{image}'>
+<img alt='{html.escape(translate("report.plot_alt", locale))}' src='data:image/png;base64,{image}'>
 <h2>{html.escape(translate("report.threshold_checks", locale))}</h2><table><thead><tr><th>{html.escape(translate("report.case", locale))}</th><th>{html.escape(translate("report.metric", locale))}</th><th>{html.escape(translate("report.value", locale))}</th><th>{html.escape(translate("report.limit", locale))}</th><th>{html.escape(translate("report.status", locale))}</th></tr></thead><tbody>{"".join(check_rows)}</tbody></table>
 <h2>{html.escape(translate("report.kpis", locale))}</h2><table><thead><tr><th>{html.escape(translate("report.case", locale))}</th><th>{html.escape(translate("report.metric", locale))}</th><th>{html.escape(translate("report.value", locale))}</th></tr></thead><tbody>{"".join(rows)}</tbody></table>
 <h2>{html.escape(translate("report.interpretation_limits", locale))}</h2><p>{html.escape(translate("report.limits_text", locale))}</p>
@@ -89,7 +95,7 @@ def run(
     locale = normalize_locale(locale)
     raw, config = load_scenario(_default_config_path() if config_path is None else config_path)
     generated = datetime.now(UTC)
-    run_id = f"{config['name']}-{generated.strftime('%Y%m%dT%H%M%SZ')}"
+    run_id = f"{config['name']}-{generated.strftime('%Y%m%dT%H%M%S%fZ')}"
     output = Path(output_root) / run_id
     output.mkdir(parents=True, exist_ok=False)
     frame = run_benchmark(config)
@@ -107,7 +113,9 @@ def run(
     }
     (output / "metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
     frame.to_csv(output / "timeseries.csv", index=False)
-    (output / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    (output / "summary.json").write_text(
+        json.dumps(summary, indent=2, allow_nan=False), encoding="utf-8"
+    )
     step_times = tuple(float(phase["start_s"]) for phase in config["workload"]["phases"][1:])
     plot_path = comparison_plot(frame, output / "comparison.png", locale, step_times)
     step_s = step_times[0] if step_times else 0.0

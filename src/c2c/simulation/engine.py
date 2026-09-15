@@ -22,7 +22,8 @@ def run_case(config: dict, case_name: str, apply_supervisory: bool) -> pd.DataFr
     workload = SyntheticWorkloadSource(config["workload"], config["compute"])
     heat_model = ComputeToHeatModel(config["compute"], config["heat_capture"])
     pump = PumpSystem(config["hydraulics"])
-    hydraulic = pump.operating_point(60.0)
+    plc = VirtualPLC(config["controls"])
+    hydraulic = pump.operating_point(plc.pump_speed_pct)
     initial_telemetry = workload.next_step(0.0)
     initial_heat = heat_model.step(initial_telemetry)
     initial_thermal = steady_initial_state(
@@ -37,7 +38,6 @@ def run_case(config: dict, case_name: str, apply_supervisory: bool) -> pd.DataFr
         config["thermal"]["transport_delay_s"], clock.dt_s, initial_thermal.coolant_return_temp_c
     )
     cdu = CDUPlant(config["cdu"], fluid.density_kg_m3, fluid.cp_j_kgk)
-    plc = VirtualPLC(config["controls"])
     lci = ShadowLCI(config["lci"], pump, fluid.density_kg_m3, fluid.cp_j_kgk)
     supply_temp_c = config["controls"]["supply_temp_setpoint_c"]
     heat = initial_heat
@@ -64,7 +64,7 @@ def run_case(config: dict, case_name: str, apply_supervisory: bool) -> pd.DataFr
             0.0 if step_index == 0 else clock.dt_s,
             t_s,
             intent,
-            apply_supervisory,
+            apply_supervisory and t_s >= config["workload"]["phases"][1]["start_s"],
         )
         hydraulic = pump.operating_point(plc_output.pump_speed_pct)
         delayed_return_c = (

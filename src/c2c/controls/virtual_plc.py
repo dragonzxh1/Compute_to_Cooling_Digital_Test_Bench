@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from math import isfinite
 
 from c2c.controls.guardrails import clamp, deadband, rate_limit
 from c2c.controls.pid import PID
@@ -46,13 +47,19 @@ class VirtualPLC:
         intent: SupervisoryIntent | None,
         apply_supervisory: bool,
     ) -> PLCOutput:
+        if not isfinite(t_s) or t_s < 0 or not isfinite(dt_s) or dt_s < 0:
+            raise ValueError("PLC time and timestep must be finite and non-negative")
         local_temp = self.cfg["supply_temp_setpoint_c"]
         local_dp = self.cfg["dp_target_kpa"]
         requested_temp, requested_dp, status = local_temp, local_dp, "SHADOW"
         if intent is not None:
             requested_temp = intent.recommended_supply_temp_setpoint_c
             requested_dp = intent.recommended_dp_kpa
-        valid = intent is not None and (t_s - intent.timestamp_s) <= self.cfg["intent_timeout_s"]
+        valid = (
+            intent is not None
+            and all(isfinite(v) for v in vars(intent).values())
+            and 0 <= t_s - intent.timestamp_s <= self.cfg["intent_timeout_s"]
+        )
         if apply_supervisory and valid:
             accepted_temp = clamp(
                 requested_temp,
@@ -73,8 +80,17 @@ class VirtualPLC:
         temp_error = deadband(
             measured_supply_temp_c - accepted_temp, self.cfg.get("temp_deadband_k", 0.0)
         )
-        pump_target = self.dp_pid.step(dp_error, dt_s)
-        valve_target = self.temp_pid.step(temp_error, dt_s)
+        # Hold the affected actuator without updating PID state on sensor faults.
+        pump_target = (
+            self.dp_pid.step(dp_error, dt_s) if isfinite(measured_dp_kpa) else self.pump_speed_pct
+        )
+        valve_target = (
+            self.temp_pid.step(temp_error, dt_s)
+            if isfinite(measured_supply_temp_c)
+            else self.valve_position_pct
+        )
+        if not isfinite(measured_dp_kpa) or not isfinite(measured_supply_temp_c):
+            status = "INVALID_MEASUREMENT_HOLD"
         self.pump_speed_pct = rate_limit(
             pump_target, self.pump_speed_pct, self.cfg["pump_ramp_pct_s"], dt_s
         )

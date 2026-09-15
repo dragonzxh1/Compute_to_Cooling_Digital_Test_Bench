@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
-from math import isfinite
+from math import ceil, floor, isfinite
 from typing import Any
+
+from c2c.core.windows import benchmark_windows
 
 
 class ScenarioValidationError(ValueError):
@@ -80,6 +82,10 @@ def validate_scenario(config: Mapping[str, Any]) -> None:
         raise ScenarioValidationError(
             "benchmark phases must provide sampled pre-step and high-load windows"
         )
+    for (begin, end), minimum in zip(benchmark_windows(config), (1, 2, 1), strict=True):
+        count = max(0, min(ceil(end / dt_s), floor(duration_s / dt_s) + 1) - ceil(begin / dt_s))
+        if count < minimum:
+            raise ScenarioValidationError("benchmark windows have insufficient sampled points")
 
     for path in (
         "compute.gpu_count",

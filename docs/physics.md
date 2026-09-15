@@ -20,7 +20,7 @@ V0.1 uses four stored-energy nodes: GPU die, package, cold plate, and secondary 
 
 `C_i dT_i/dt = sum_j ((T_j - T_i) / R_ij) + Q_i`
 
-The directed heat path is die -> package -> cold plate -> coolant. Explicit Euler integration is used with a timestep checked against the smallest configured `R*C` time constant. A FIFO delay line represents pipe transport from rack outlet to CDU return.
+The directed heat path is equivalent hotspot -> package -> cold plate -> coolant. All liquid heat, including CPU/other capture, is injected at the equivalent hotspot; legacy GPU-named output fields retain this aggregate meaning. Explicit Euler integration checks `dt <= 0.5 min(C_i / sum_j G_ij)`, including both neighboring conductive paths and coolant advection `m_dot*cp`. This conservative bound keeps the homogeneous update coefficients non-negative. Unsafe steps are rejected before changing state. A FIFO with linear interpolation represents fractional pipe delays without rounding positive sub-step delays to zero.
 
 ## 4. Coolant energy balance
 
@@ -52,12 +52,16 @@ and `epsilon = NTU/(1+NTU)` as `C_r -> 1`. `UA_effective = UA_clean * fouling_fa
 
 ## 7. Controls
 
-The PLC has two positional PID loops with output clamps and back-calculation anti-windup:
+The PLC has two positional PID loops with output clamps and conditional-integration anti-windup:
 
 - secondary differential pressure error -> pump speed;
 - secondary supply temperature error -> primary valve position.
 
 The LCI feedforward estimate computes required flow from predicted liquid heat and an allowable secondary delta-T. In shadow mode its recommendation is logged but not applied. In the comparison case, its setpoint intent passes through PLC clamp and ramp-rate guards before affecting the plant.
+
+The comparison case enables supervisory control only at the first workload step. Before it, both cases follow identical local feedback control. Future-dated, expired or non-finite intents fall back to local targets. A non-finite sensor holds its affected actuator and freezes that PID's state; the other loop continues, and valid measurements resume normal operation. This is a simulation fault policy, not a hardware emergency cooling design.
+
+Power is held constant over each simulated interval; reported energy uses left-endpoint integration, matching that time convention. The initial rack state is steady for its assumed supply, but the CDU initial valve may cause a startup transient. Startup and post-step deviations are therefore reported separately. The current steady rack heat check does not certify transient rack-plus-pipe energy closure.
 
 ## Validation before fidelity
 

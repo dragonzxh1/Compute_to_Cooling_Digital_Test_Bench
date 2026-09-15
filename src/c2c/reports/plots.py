@@ -1,7 +1,9 @@
 from pathlib import Path
 
-import matplotlib.pyplot as plt
+import matplotlib as mpl
 from matplotlib import font_manager
+from matplotlib.backends.backend_agg import FigureCanvasAgg
+from matplotlib.figure import Figure
 
 from c2c.i18n import translate
 
@@ -31,8 +33,10 @@ def comparison_plot(
     frame, output: str | Path, locale: str = "en", step_times: tuple[float, ...] = (300, 750)
 ) -> Path:
     output = Path(output)
-    with plt.rc_context({"font.family": _font_family(locale), "axes.unicode_minus": False}):
-        fig, axes = plt.subplots(3, 2, figsize=(14, 12), sharex=True)
+    with mpl.rc_context({"font.family": _font_family(locale), "axes.unicode_minus": False}):
+        fig = Figure(figsize=(14, 12))
+        FigureCanvasAgg(fig)
+        axes = fig.subplots(3, 2, sharex=True)
         colors = {"feedback_only": "#3766a3", "guarded_feedforward": "#d26a2e"}
         series = (
             "gpu_power_kw",
@@ -61,5 +65,4 @@ def comparison_plot(
         fig.suptitle(translate("plot.title", locale))
         fig.tight_layout()
         fig.savefig(output, dpi=150)
-        plt.close(fig)
     return output
