@@ -1,0 +1,50 @@
+# C2C-DTB / 算力到冷却数字测试台
+
+Compute-to-Cooling Digital Test Bench is a deterministic, reduced-order simulator for developing and validating the chain from AI workload to GPU power, liquid heat capture, rack thermal response, coolant transport, CDU heat rejection, PLC control, and supervisory cooling intent.
+
+V0.1 is a local engineering model, not CFD, SCADA, a production PLC, or an OEM/NVIDIA performance claim. All GB300-class and CDU values are labeled assumptions until replaced by measured, OEM, literature, or calibrated data.
+
+V0.1 是本地工程模型，不是 CFD、SCADA、生产 PLC，也不构成 OEM/NVIDIA 性能声明。所有 GB300 级与 CDU 参数在被实测、OEM、文献或标定数据替换前，均明确标记为假设值。
+
+## Run the benchmark
+
+```powershell
+py -3.11 -m venv .venv
+.venv\Scripts\python -m pip install -e ".[dev]"
+.venv\Scripts\python -m c2c.simulation.runner configs/scenarios/workload_step.yaml
+.venv\Scripts\python -m c2c.simulation.runner configs/scenarios/workload_step.yaml --locale zh-CN
+.venv\Scripts\python -m pytest
+```
+
+Linux/macOS:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -e '.[dev]'
+.venv/bin/c2c-dtb --locale zh-CN
+.venv/bin/python -m pytest
+```
+
+The benchmark writes `config.yaml`, `metadata.json`, `timeseries.csv`, `summary.json`, plots, and a self-contained `report.html` under `results/<run-id>/`. Machine-readable field names remain stable in English; `--locale en` and `--locale zh-CN` localize human-facing report copy, case names, threshold labels, and plots.
+
+基准测试会在 `results/<run-id>/` 下生成配置、元数据、时序 CSV、摘要 JSON、图表和自包含 HTML 报告。机器可读字段名保持英文稳定；`--locale en` 与 `--locale zh-CN` 用于切换报告文字、工况名称、阈值标签和图表语言。
+
+## Threshold interpretation / 阈值解释
+
+`summary.json` and `report.html` now separate commanded safety limits from process response. A coolant temperature temporarily above its setpoint is a control deviation, not automatically a guardrail violation. The `threshold_checks` array reports the measured value, comparator, configured limit, unit, and pass/fail result for each case.
+
+`summary.json` 与 `report.html` 会区分“控制指令安全限值”和“被控过程响应”。冷却液温度短时高于设定值属于控制偏差，并不自动等于安全限值被突破。每个工况的 `threshold_checks` 都会列出实测值、比较符、配置阈值、单位及通过/超限状态。
+
+## Safety boundary
+
+L0 physical protection remains outside this simulator. L1 is a deterministic virtual PLC with clamps, ramps, timeout behavior, and local fallback. L2 LCI produces setpoint intent and cannot bypass L1. The default case logs LCI in shadow mode; the comparison case explicitly enables guarded feedforward for research comparison.
+
+L0 物理保护不在本仿真器范围内。L1 是具有限幅、斜率限制、超时与本地回退能力的确定性虚拟 PLC。L2 LCI 只产生设定值意图，不能绕过 L1。默认工况仅以影子模式记录 LCI；对比工况明确启用受保护前馈，仅用于研究比较。
+
+See [the architecture decision](docs/c2c-architecture-decision.md), [physics](docs/physics.md), [assumptions](docs/assumptions.md), and [validation plan](docs/validation.md).
+
+## GitHub readiness / GitHub 上传准备
+
+GitHub Actions runs Ruff and Pytest on Python 3.11–3.13 for every push and pull request. Generated results, local environments, caches, and downloaded references are excluded by `.gitignore`. No open-source license has been selected yet; add a `LICENSE` before making the repository public if reuse rights should be granted.
+
+GitHub Actions 会在每次推送和拉取请求中使用 Python 3.11–3.13 执行 Ruff 与 Pytest。生成结果、本地虚拟环境、缓存及下载的参考资料均已通过 `.gitignore` 排除。当前尚未选择开源许可证；如需授予他人复用权，请在公开仓库前添加 `LICENSE`。

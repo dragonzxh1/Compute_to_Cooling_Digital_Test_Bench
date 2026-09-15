@@ -1,0 +1,85 @@
+name: workload_step_30_to_95
+description: Generic GB300-class 30% to 95% load benchmark; all equipment values are assumptions.
+seed: 7
+time:
+  dt_s: 1.0
+  duration_s: 1000
+workload:
+  type: step
+  phases:
+    - {start_s: 0, utilization_pct: 30, workload_type: steady}
+    - {start_s: 300, utilization_pct: 95, workload_type: training_burst}
+    - {start_s: 750, utilization_pct: 30, workload_type: recovery}
+compute:
+  gpu_count: {value: 72, unit: count, source_type: ASSUMED, source: Generic GB300-Class Compute Profile, date: 2026-09-15, confidence: LOW, notes: Replace with actual rack inventory.}
+  gpu_idle_power_w: {value: 200, unit: W/GPU, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Not an NVIDIA specification.}
+  gpu_max_power_w: {value: 1200, unit: W/GPU, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Not an NVIDIA specification.}
+  gpu_power_limit_w: {value: 1200, unit: W/GPU, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Replace from DCGM/NVIDIA.}
+  cpu_power_w: {value: 12000, unit: W, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Aggregate rack CPU power.}
+  other_power_w: {value: 6000, unit: W, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Memory/network/PSU residual.}
+heat_capture:
+  alpha_gpu: {value: 0.97, unit: fraction, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Calibrate by calorimetry.}
+  alpha_cpu: {value: 0.75, unit: fraction, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: CPU cooling topology dependent.}
+  alpha_other: {value: 0.35, unit: fraction, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Residual equipment dependent.}
+fluid:
+  name: water
+  density_kg_m3: {value: 995, unit: kg/m3, source_type: LITERATURE, source: Approximate water property near 30 degC, date: 2026-09-15, confidence: MEDIUM, notes: Constant property in V0.1.}
+  cp_j_kgk: {value: 4180, unit: J/(kg*K), source_type: LITERATURE, source: Approximate water property near 30 degC, date: 2026-09-15, confidence: MEDIUM, notes: Constant property in V0.1.}
+thermal:
+  ambient_c: {value: 25, unit: degC, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Initial condition only.}
+  c_die_j_k: {value: 18000, unit: J/K, source_type: ASSUMED, source: Aggregate effective capacitance, date: 2026-09-15, confidence: LOW, notes: Calibrate transient.}
+  c_package_j_k: {value: 108000, unit: J/K, source_type: ASSUMED, source: Aggregate effective capacitance, date: 2026-09-15, confidence: LOW, notes: Calibrate transient.}
+  c_cold_plate_j_k: {value: 500000, unit: J/K, source_type: ASSUMED, source: Aggregate effective capacitance, date: 2026-09-15, confidence: LOW, notes: Includes plates/manifold.}
+  c_coolant_j_k: {value: 1250000, unit: J/K, source_type: ASSUMED, source: Approximate 0.30 m3 coolant inventory, date: 2026-09-15, confidence: LOW, notes: Replace with measured volume.}
+  r_die_package_k_w: {value: 0.00028, unit: K/W, source_type: ASSUMED, source: Aggregate parallel resistance, date: 2026-09-15, confidence: LOW, notes: Not an NVIDIA value.}
+  r_package_plate_k_w: {value: 0.00014, unit: K/W, source_type: ASSUMED, source: Aggregate parallel resistance, date: 2026-09-15, confidence: LOW, notes: Not an NVIDIA value.}
+  r_plate_coolant_k_w: {value: 0.00010, unit: K/W, source_type: ASSUMED, source: Aggregate parallel resistance, date: 2026-09-15, confidence: LOW, notes: Flow dependence deferred.}
+  transport_delay_s: {value: 18, unit: s, source_type: ASSUMED, source: Pipe residence-time estimate, date: 2026-09-15, confidence: LOW, notes: Replace with pipe volume/flow or step test.}
+  throttle_temp_c: {value: 90, unit: degC, source_type: ASSUMED, source: Conservative benchmark threshold, date: 2026-09-15, confidence: LOW, notes: Not an NVIDIA limit.}
+hydraulics:
+  system_k_pa_s2_m6: {value: 2.0e9, unit: Pa/(m3/s)^2, source_type: ASSUMED, source: Planning curve, date: 2026-09-15, confidence: LOW, notes: Replace with FAT DP-flow curve.}
+  pump_k_pa_s2_m6: {value: 5.0e8, unit: Pa/(m3/s)^2, source_type: ASSUMED, source: Planning curve, date: 2026-09-15, confidence: LOW, notes: Quadratic curve.}
+  pump_shutoff_dp_pa: {value: 130000, unit: Pa, source_type: ASSUMED, source: Planning curve, date: 2026-09-15, confidence: LOW, notes: At reference speed.}
+  pump_efficiency: {value: 0.72, unit: fraction, source_type: ASSUMED, source: Planning assumption, date: 2026-09-15, confidence: LOW, notes: Constant in V0.1.}
+cdu:
+  ua_clean_w_k: {value: 18000, unit: W/K, source_type: ASSUMED, source: Generic CDU planning value, date: 2026-09-15, confidence: LOW, notes: Replace with FAT/OEM map.}
+  fouling_factor: {value: 1.0, unit: fraction, source_type: ASSUMED, source: Clean baseline, date: 2026-09-15, confidence: LOW, notes: Multiplies UA.}
+  primary_inlet_temp_c: {value: 20, unit: degC, source_type: ASSUMED, source: Facility-water scenario, date: 2026-09-15, confidence: LOW, notes: Boundary condition.}
+  primary_max_flow_m3_s: {value: 0.0070, unit: m3/s, source_type: ASSUMED, source: Generic CDU planning value, date: 2026-09-15, confidence: LOW, notes: Valve scales this flow.}
+controls:
+  dp_target_kpa: {value: 60, unit: kPa, source_type: ASSUMED, source: Virtual PLC tuning, date: 2026-09-15, confidence: LOW, notes: Local fallback target.}
+  supply_temp_setpoint_c: {value: 30, unit: degC, source_type: ASSUMED, source: Virtual PLC tuning, date: 2026-09-15, confidence: LOW, notes: Local fallback setpoint.}
+  dp_min_kpa: {value: 35, unit: kPa, source_type: ASSUMED, source: Virtual PLC safety guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit; not an OEM protection setting.}
+  dp_max_kpa: {value: 95, unit: kPa, source_type: ASSUMED, source: Virtual PLC safety guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit; not an OEM protection setting.}
+  supply_temp_min_c: {value: 24, unit: degC, source_type: ASSUMED, source: Virtual PLC safety guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit; not an OEM protection setting.}
+  supply_temp_max_c: {value: 32, unit: degC, source_type: ASSUMED, source: Virtual PLC safety guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit; not an OEM protection setting.}
+  pump_speed_min_pct: {value: 25, unit: percent, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit.}
+  pump_speed_max_pct: {value: 100, unit: percent, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit.}
+  valve_min_pct: {value: 5, unit: percent, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit.}
+  valve_max_pct: {value: 100, unit: percent, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit.}
+  pump_ramp_pct_s: {value: 2.0, unit: percent/s, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit.}
+  valve_ramp_pct_s: {value: 1.5, unit: percent/s, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit.}
+  intent_timeout_s: {value: 15, unit: s, source_type: ASSUMED, source: Virtual PLC guardrail, date: 2026-09-15, confidence: LOW, notes: Reverts to local targets.}
+  dp_deadband_kpa: {value: 0.2, unit: kPa, source_type: ASSUMED, source: Virtual PLC tuning, date: 2026-09-15, confidence: LOW, notes: Suppresses actuator chatter near the pressure target.}
+  temp_deadband_k: {value: 0.10, unit: K, source_type: ASSUMED, source: Virtual PLC tuning, date: 2026-09-15, confidence: LOW, notes: Works with the reduced temperature-loop gains to avoid valve chatter near setpoint.}
+  dp_pid:
+    kp: {value: 0.20, unit: percent/kPa, source_type: ASSUMED, source: Tuned in V0.1 benchmark, date: 2026-09-15, confidence: LOW, notes: Removes one-second limit cycle; replace with OEM tuning.}
+    ki: {value: 0.03, unit: percent/(kPa*s), source_type: ASSUMED, source: Tuned in V0.1 benchmark, date: 2026-09-15, confidence: LOW, notes: Replace with OEM tuning.}
+    kd: {value: 0.0, unit: percent*s/kPa, source_type: ASSUMED, source: V0.1 simplification, date: 2026-09-15, confidence: LOW, notes: Derivative disabled.}
+  temp_pid:
+    kp: {value: 6.0, unit: percent/K, source_type: ASSUMED, source: V0.1 benchmark tuning, date: 2026-09-15, confidence: LOW, notes: Reduced from 9.0 after the one-second model showed a two-step valve limit cycle; replace with FAT/OEM tuning.}
+    ki: {value: 0.30, unit: percent/(K*s), source_type: ASSUMED, source: V0.1 benchmark tuning, date: 2026-09-15, confidence: LOW, notes: Reduced with Kp to remove simulated valve chatter; replace with FAT/OEM tuning.}
+    kd: {value: 0.0, unit: percent*s/K, source_type: ASSUMED, source: V0.1 simplification, date: 2026-09-15, confidence: LOW, notes: Derivative disabled.}
+lci:
+  update_interval_s: {value: 5, unit: s, source_type: ASSUMED, source: V0.1 supervisory timebase, date: 2026-09-15, confidence: LOW, notes: Independent of the one-second PLC simulation step.}
+  target_delta_t_k: {value: 3.5, unit: K, source_type: ASSUMED, source: Shadow LCI policy, date: 2026-09-15, confidence: LOW, notes: Optimization parameter.}
+  min_supply_setpoint_c: {value: 24, unit: degC, source_type: ASSUMED, source: Shadow LCI guardrail, date: 2026-09-15, confidence: LOW, notes: PLC also clamps.}
+  max_supply_setpoint_c: {value: 32, unit: degC, source_type: ASSUMED, source: Shadow LCI guardrail, date: 2026-09-15, confidence: LOW, notes: PLC also clamps.}
+  min_dp_setpoint_kpa: {value: 35, unit: kPa, source_type: ASSUMED, source: Shadow LCI policy bound, date: 2026-09-15, confidence: LOW, notes: PLC independently clamps the accepted intent.}
+  max_dp_setpoint_kpa: {value: 95, unit: kPa, source_type: ASSUMED, source: Shadow LCI policy bound, date: 2026-09-15, confidence: LOW, notes: PLC independently clamps the accepted intent.}
+reporting:
+  facility_cop: {value: 8.0, unit: fraction, source_type: ASSUMED, source: Reporting-only planning assumption, date: 2026-09-15, confidence: LOW, notes: Facility energy is illustrative until measured plant data exists.}
+  limits:
+    max_supply_deviation_k: {value: 3.0, unit: K, source_type: ASSUMED, source: Reporting acceptance criterion, date: 2026-09-15, confidence: LOW, notes: Reporting threshold only; not a PLC protection setting.}
+    max_steady_heat_balance_error_pct: {value: 3.0, unit: percent, source_type: ASSUMED, source: Numerical validation criterion, date: 2026-09-15, confidence: LOW, notes: Tighten after calibration and timestep convergence studies.}
+    max_valve_oscillation_index_pct: {value: 0.5, unit: percent/step, source_type: ASSUMED, source: Reporting acceptance criterion, date: 2026-09-15, confidence: LOW, notes: Flags persistent valve chatter; reporting-only until FAT tuning is available.}

@@ -1,0 +1,3 @@
+name: pg25
+density_kg_m3: {value: 1020, unit: kg/m3, source_type: LITERATURE, source: Planning approximation only, date: 2026-09-15, confidence: LOW, notes: Verify against supplier concentration/temperature data.}
+cp_j_kgk: {value: 3900, unit: J/(kg*K), source_type: LITERATURE, source: Planning approximation only, date: 2026-09-15, confidence: LOW, notes: Verify against supplier concentration/temperature data.}
