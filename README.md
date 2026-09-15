@@ -45,6 +45,6 @@ See [the architecture decision](docs/c2c-architecture-decision.md), [physics](do
 
 ## GitHub readiness / GitHub 上传准备
 
-GitHub Actions runs Ruff and Pytest on Python 3.11–3.13 for every push and pull request. Generated results, local environments, caches, and downloaded references are excluded by `.gitignore`. No open-source license has been selected yet; add a `LICENSE` before making the repository public if reuse rights should be granted.
+GitHub Actions runs Ruff and Pytest on Python 3.11–3.13 for every push and pull request. Generated results, local environments, caches, and downloaded references are excluded by `.gitignore`. The project is released under the [Apache License 2.0](LICENSE).
 
-GitHub Actions 会在每次推送和拉取请求中使用 Python 3.11–3.13 执行 Ruff 与 Pytest。生成结果、本地虚拟环境、缓存及下载的参考资料均已通过 `.gitignore` 排除。当前尚未选择开源许可证；如需授予他人复用权，请在公开仓库前添加 `LICENSE`。
+GitHub Actions 会在每次推送和拉取请求中使用 Python 3.11–3.13 执行 Ruff 与 Pytest。生成结果、本地虚拟环境、缓存及下载的参考资料均已通过 `.gitignore` 排除。本项目采用 [Apache License 2.0](LICENSE) 开源许可证。
