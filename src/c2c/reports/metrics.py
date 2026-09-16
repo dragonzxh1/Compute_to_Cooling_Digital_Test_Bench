@@ -154,7 +154,7 @@ def case_metrics(case: pd.DataFrame, config: dict, locale: str = "en") -> dict:
             valve_oscillation_index,
             limits["max_valve_oscillation_index_pct"],
             "<=",
-            "%/step",
+            "百分点/步" if locale == "zh-CN" else "percentage points/step",
             locale,
         ),
         _check(

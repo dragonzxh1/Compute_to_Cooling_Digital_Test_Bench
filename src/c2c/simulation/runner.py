@@ -26,10 +26,20 @@ def _git_revision() -> str | None:
         return None
 
 
-def _shown(value: object) -> str:
+def _shown(value: object, metric: str = "") -> str:
     if value is None:
         return "n/a"
     if isinstance(value, float):
+        if (
+            metric
+            in {
+                "controller_oscillation_index",
+                "controller_valve_oscillation_index",
+                "valve_oscillation",
+            }
+            and 0 < value < 0.0001
+        ):
+            return "< 0.0001"
         return f"{value:.4g}"
     return str(value)
 
@@ -52,7 +62,7 @@ def _html_report(summary: dict, image_path: Path, step_s: float, locale: str) ->
                 "<tr>"
                 f"<td>{html.escape(translate(f'case.{case}', locale))}</td>"
                 f"<td>{html.escape(translate(f'metric.{metric}', locale))}</td>"
-                f"<td>{html.escape(_shown(value))}</td>"
+                f"<td>{html.escape(_shown(value, metric))}</td>"
                 "</tr>"
             )
         for check in metrics["threshold_checks"]:
@@ -62,7 +72,8 @@ def _html_report(summary: dict, image_path: Path, step_s: float, locale: str) ->
                 "<tr>"
                 f"<td>{html.escape(translate(f'case.{case}', locale))}</td>"
                 f"<td>{html.escape(check['label'])}</td>"
-                f"<td>{check['actual']:.4g} {html.escape(check['unit'])}</td>"
+                f"<td>{html.escape(_shown(check['actual'], check['key']))} "
+                f"{html.escape(check['unit'])}</td>"
                 f"<td>{html.escape(check['comparison'])} {check['limit']:.4g} "
                 f"{html.escape(check['unit'])}</td>"
                 f"<td class='{status_class}'>{html.escape(translate(status_key, locale))}</td>"
