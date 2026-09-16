@@ -10,6 +10,8 @@ _TRANSLATIONS = {
             "Both cases use identical feedback control before {step_s:g} s. Feedforward "
             "is enabled at the load step. Setpoint and valve response delays are measured "
             "separately; valve delay uses the same 2 percentage-point threshold in both cases."
+            " The supply-deviation check uses the actual ramped setpoint; error to the "
+            "final accepted target is reported separately and is not covered by that PASS."
         ),
         "report.kpis": "KPIs",
         "report.threshold_checks": "Threshold checks",
@@ -48,9 +50,11 @@ _TRANSLATIONS = {
         "plot.secondary_flow_m3h": "Secondary flow (m³/h)",
         "plot.pump_power_kw": "Pump power (kW)",
         "plot.time": "Simulation time (s)",
+        "plot.ramped_target": "Feedforward ramped setpoint",
+        "plot.final_target": "Feedforward final target",
         "plot.title": "C2C-DTB V0.1: feedback-only vs guarded GPU-power feedforward",
         "check.gpu_temperature": "Peak equivalent hotspot temperature",
-        "check.supply_deviation": "Maximum supply-temperature deviation",
+        "check.supply_deviation": "Maximum tracking error to ramped setpoint",
         "check.heat_balance": "Steady-state heat-balance error",
         "check.valve_oscillation": "Valve command oscillation index",
         "check.pump_speed_min": "Minimum pump speed",
@@ -64,7 +68,8 @@ _TRANSLATIONS = {
         "metric.peak_gpu_temperature_c": "Peak equivalent hotspot temperature (°C)",
         "metric.gpu_temperature_variance_k2": "GPU temperature variance (K²)",
         "metric.coolant_return_overshoot_k": "Coolant return overshoot (K)",
-        "metric.max_supply_deviation_k": "Maximum supply deviation (K)",
+        "metric.max_supply_deviation_k": "Maximum tracking error to ramped setpoint (K)",
+        "metric.max_accepted_target_deviation_k": "Maximum deviation from final accepted target (K)",
         "metric.controller_response_delay_s": "Valve response delay (s)",
         "metric.pump_energy_kwh": "Pump energy (kWh)",
         "metric.facility_cooling_energy_kwh": "Facility cooling energy (kWh)",
@@ -80,6 +85,8 @@ _TRANSLATIONS = {
         "report.explanation": (
             "两组在 {step_s:g} 秒前使用相同反馈控制，负载阶跃时才启用前馈。"
             "设定值延迟和阀门响应延迟分别计算；两组阀门响应均以变化达到 2 个百分点判定。"
+            "供液偏差检查针对实际渐变控制设定值；相对最终接受目标的偏差单列，"
+            "该项 PASS 不代表最终目标偏差也已达标。"
         ),
         "report.kpis": "关键指标",
         "report.threshold_checks": "阈值检查",
@@ -113,9 +120,11 @@ _TRANSLATIONS = {
         "plot.secondary_flow_m3h": "二次侧流量 (m³/h)",
         "plot.pump_power_kw": "泵功率 (kW)",
         "plot.time": "仿真时间 (s)",
+        "plot.ramped_target": "前馈渐变控制设定值",
+        "plot.final_target": "前馈最终目标",
         "plot.title": "C2C-DTB V0.1：仅反馈控制与受保护 GPU 功率前馈控制对比",
         "check.gpu_temperature": "聚合等效热点峰值温度",
-        "check.supply_deviation": "最大供液温度偏差",
+        "check.supply_deviation": "相对渐变控制设定值的最大跟踪偏差",
         "check.heat_balance": "稳态热平衡误差",
         "check.valve_oscillation": "阀门指令振荡指数",
         "check.pump_speed_min": "泵速最小值",
@@ -129,7 +138,8 @@ _TRANSLATIONS = {
         "metric.peak_gpu_temperature_c": "聚合等效热点峰值温度 (°C)",
         "metric.gpu_temperature_variance_k2": "GPU 温度方差 (K²)",
         "metric.coolant_return_overshoot_k": "冷却液回水温度超调 (K)",
-        "metric.max_supply_deviation_k": "最大供液温度偏差 (K)",
+        "metric.max_supply_deviation_k": "相对渐变控制设定值的最大跟踪偏差 (K)",
+        "metric.max_accepted_target_deviation_k": "相对最终接受目标的最大偏差 (K)",
         "metric.controller_response_delay_s": "阀门响应延迟 (秒)",
         "metric.pump_energy_kwh": "泵耗电量 (kWh)",
         "metric.facility_cooling_energy_kwh": "设施冷却耗电量 (kWh)",

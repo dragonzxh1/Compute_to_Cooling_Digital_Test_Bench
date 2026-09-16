@@ -47,6 +47,7 @@ cdu:
   primary_inlet_temp_c: {value: 20, unit: degC, source_type: ASSUMED, source: Facility-water scenario, date: 2026-09-15, confidence: LOW, notes: Boundary condition.}
   primary_max_flow_m3_s: {value: 0.0070, unit: m3/s, source_type: ASSUMED, source: Generic CDU planning value, date: 2026-09-15, confidence: LOW, notes: Valve scales this flow.}
 controls:
+  temp_setpoint_ramp_k_s: {value: 0.1, unit: K/s, source_type: ASSUMED, source: Supervisory transition tuning, date: 2026-09-16, confidence: LOW, notes: Applies to accepted target changes and local fallback; validate against real equipment.}
   dp_target_kpa: {value: 60, unit: kPa, source_type: ASSUMED, source: Virtual PLC tuning, date: 2026-09-15, confidence: LOW, notes: Local fallback target.}
   supply_temp_setpoint_c: {value: 30, unit: degC, source_type: ASSUMED, source: Virtual PLC tuning, date: 2026-09-15, confidence: LOW, notes: Local fallback setpoint.}
   dp_min_kpa: {value: 35, unit: kPa, source_type: ASSUMED, source: Virtual PLC safety guardrail, date: 2026-09-15, confidence: LOW, notes: Research limit; not an OEM protection setting.}

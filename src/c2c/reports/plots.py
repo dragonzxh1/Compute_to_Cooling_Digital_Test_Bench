@@ -57,6 +57,20 @@ def comparison_plot(
                 )
             for step_s in step_times:
                 axis.axvline(step_s, color="#777", linestyle="--", linewidth=0.8)
+            if column == "secondary_supply_temp_c":
+                feedforward = frame[frame.case == "guarded_feedforward"]
+                for field, label, style in (
+                    ("temperature_setpoint_c", "ramped_target", "--"),
+                    ("accepted_temperature_setpoint_c", "final_target", ":"),
+                ):
+                    axis.plot(
+                        feedforward.timestamp_s,
+                        feedforward[field],
+                        linestyle=style,
+                        linewidth=1,
+                        label=translate(f"plot.{label}", locale),
+                    )
+                axis.legend(loc="best", fontsize=8)
             axis.set_ylabel(translate(f"plot.{column}", locale))
             axis.grid(alpha=0.25)
         axes[-1, 0].set_xlabel(translate("plot.time", locale))

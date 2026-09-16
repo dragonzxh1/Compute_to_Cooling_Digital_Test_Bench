@@ -61,6 +61,10 @@ The LCI feedforward estimate computes required flow from predicted liquid heat a
 
 The comparison case enables supervisory control only at the first workload step. Before it, both cases follow identical local feedback control. Future-dated, expired or non-finite intents fall back to local targets. A non-finite sensor holds its affected actuator and freezes that PID's state; the other loop continues, and valid measurements resume normal operation. This is a simulation fault policy, not a hardware emergency cooling design.
 
+Temperature requests are clamped to an accepted final target, then slewed at `controls.temp_setpoint_ramp_k_s` (positive finite K/s, default 0.1). The temperature PID uses this actual ramped setpoint. The same slew applies when returning to local fallback. At zero timestep the setpoint does not move; an invalid temperature sensor freezes both its setpoint and PID. Requested, accepted and actual setpoints remain distinct telemetry fields. The 3 K reporting check evaluates actual-setpoint tracking, while `max_accepted_target_deviation_k` separately discloses error to the final target and is not part of that check. A tracking PASS does not certify immediate final-target compliance.
+
+With the default ramp, timestep 1 / 0.5 / 0.25 / 0.125 s gives post-step tracking peaks of 1.838 / 1.848 / 1.854 / 1.857 K and hotspot peaks of 77.972 / 77.978 / 77.981 / 77.983°C. The two finest runs differ by less than 0.01 K on these metrics. This is a default-scenario refinement check, not validation over the full operating envelope. Rates 0.05, 0.1 and 0.2 K/s were compared; 0.1 is a provisional compromise between tracking error and response speed, not a calibrated optimum.
+
 Power is held constant over each simulated interval; reported energy uses left-endpoint integration, matching that time convention. The initial rack state is steady for its assumed supply, but the CDU initial valve may cause a startup transient. Startup and post-step deviations are therefore reported separately. The current steady rack heat check does not certify transient rack-plus-pipe energy closure.
 
 ## Validation before fidelity

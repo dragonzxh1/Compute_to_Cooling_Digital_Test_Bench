@@ -229,6 +229,9 @@ def case_metrics(case: pd.DataFrame, config: dict, locale: str = "en") -> dict:
             high.secondary_return_temp_c.max() - pre.secondary_return_temp_c.mean()
         ),
         "max_supply_deviation_k": max_supply_deviation_k,
+        "max_accepted_target_deviation_k": float(
+            (case.secondary_supply_temp_c - case.accepted_temperature_setpoint_c).abs().max()
+        ),
         "startup_supply_deviation_k": float(
             (
                 case[case.timestamp_s < step_s].secondary_supply_temp_c

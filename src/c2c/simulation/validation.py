@@ -47,6 +47,8 @@ def _ordered(config: Mapping[str, Any], low_path: str, high_path: str) -> None:
 def validate_scenario(config: Mapping[str, Any]) -> None:
     _positive(config, "time.dt_s")
     _positive(config, "time.duration_s")
+    if "temp_setpoint_ramp_k_s" in config.get("controls", {}):
+        _positive(config, "controls.temp_setpoint_ramp_k_s")
 
     phases = config.get("workload", {}).get("phases")
     if not isinstance(phases, list) or len(phases) < 2:

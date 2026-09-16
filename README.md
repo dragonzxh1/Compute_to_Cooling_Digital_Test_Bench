@@ -39,9 +39,9 @@ Both cases use identical feedback control before the first load step. Feedforwar
 
 两组在首次负载阶跃前采用完全相同的反馈控制，阶跃时才启用前馈。`controller_response_delay_s` 统一表示阀位变化 2 个百分点所需时间；`setpoint_response_delay_s` 单独记录设定值变化 0.25K 的延迟。这些指标衡量控制输出，不能解释为物理降温完成时间。启动阶段与阶跃后的供液偏差分别报告；数据缺失或非有限数值标为 `INVALID` 并停止工况比较，基准泵能耗为零时百分比变化记为 null。
 
-With the default assumptions, feedback passes all configured checks. The controlled feedforward case has about 3.062 K supply deviation against the unchanged 3 K reporting limit and correctly reports FAIL, even though peak equivalent-hotspot temperature stays below 90°C. A successful software test run does not mean every physical acceptance criterion passes.
+The default temperature setpoint now slews at 0.1 K/s (`controls.temp_setpoint_ramp_k_s`, also the default for older configs). Both cases pass the configured checks. The 3 K criterion evaluates tracking of the actual ramped control setpoint: feedforward post-step error is about 1.838 K; whole-run maximum is 2.909 K from startup. Deviation from the final accepted target is separately reported and still reaches about 3.261 K. PASS therefore does not mean the final target is reached immediately. Relative to an abrupt setpoint, hotspot peak increases about 0.077°C and illustrative facility cooling energy about 0.15%; pump energy is unchanged.
 
-默认假设下，仅反馈工况通过全部配置检查；公平对照的前馈工况供液偏差约 3.062K，超过原有 3K 报告阈值，因此如实显示 FAIL，聚合等效热点峰值温度仍低于 90°C。软件测试通过与物理验收指标通过是两件不同的事。
+默认温度设定值以 0.1K/s 渐变（`controls.temp_setpoint_ramp_k_s`，旧配置缺省值也为此值），两工况通过配置检查。3K 阈值检验相对实际渐变控制设定值的跟踪偏差：前馈阶跃后约 1.838K，全程最大值来自启动阶段，为 2.909K。相对最终接受目标的偏差单独报告，仍可达约 3.261K；PASS 不表示已经立即达到最终目标。相对设定值突变，热点峰值增加约 0.077°C，示意性设施冷却能耗增加约 0.15%，泵能耗不变。
 
 The legacy `gpu_temperature_c` field represents an aggregate equivalent hotspot, with CPU/other liquid heat traversing the same RC path. It is not a calibrated GPU junction temperature. See [model boundaries and review corrections](docs/review-corrections.md).
 

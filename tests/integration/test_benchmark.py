@@ -27,11 +27,9 @@ def test_benchmark_is_reproducible_and_feedforward_is_earlier():
     )
     assert summary["cases"]["feedback_only"]["threshold_status"] == "PASS"
     ff = summary["cases"]["guarded_feedforward"]
-    assert ff["threshold_status"] == "FAIL"
-    assert [check["key"] for check in ff["threshold_checks"] if not check["passed"]] == [
-        "supply_deviation"
-    ]
-    assert ff["setpoint_response_delay_s"] == 0
+    assert ff["threshold_status"] == "PASS"
+    assert ff["max_accepted_target_deviation_k"] > 3
+    assert ff["setpoint_response_delay_s"] > 0
 
 
 def test_runner_writes_required_artifacts(tmp_path):
@@ -58,7 +56,7 @@ def test_runner_writes_localized_chinese_report(tmp_path):
     report = (output / "report.html").read_text(encoding="utf-8")
     assert "阈值检查" in report
     assert "结果解释边界" in report
-    assert "超限" in report
+    assert "相对最终接受目标的最大偏差" in report
     assert "基准测试对比图" in report
     assert "metric." not in report
     assert "peak_gpu_temperature_c" not in report
@@ -75,7 +73,7 @@ def test_metrics_follow_configured_workload_phase_times():
     feedforward = summary["cases"]["guarded_feedforward"]["controller_response_delay_s"]
     assert feedback is not None and feedback > 0
     assert feedforward is not None and 0 < feedforward < feedback
-    assert summary["cases"]["guarded_feedforward"]["setpoint_response_delay_s"] == 0
+    assert summary["cases"]["guarded_feedforward"]["setpoint_response_delay_s"] > 0
 
 
 def test_threshold_check_reports_a_real_failure():

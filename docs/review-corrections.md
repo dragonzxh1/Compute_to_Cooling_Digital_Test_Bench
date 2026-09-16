@@ -9,11 +9,13 @@
 - Plots use an Agg canvas, independent of desktop Tk configuration. CI installs the actual wheel into an isolated environment and executes English and Chinese reports outside the repository.
 - Fractional transport delay is interpolated. Startup and post-step supply deviations are separated. Energy integration follows the engine's held-input convention.
 
-## Interpreting the changed default result
+## Historical result before setpoint slew limiting
 
 With the original 3 K supply-deviation criterion, the controlled feedforward case reaches about 3.062 K and correctly fails that check. No threshold was relaxed to obtain a green report. Feedback passes. Equivalent-hotspot peaks remain below the assumed 90°C threshold. Valve response is approximately 104 s versus 1 s; feedforward setpoint response is 0 s. These are controller-output thresholds, not cooling-completion times or OEM performance claims.
 
 ## Remaining model boundaries
+
+Update: temperature-setpoint slew limiting is now enabled at 0.1 K/s. The default tracking check passes, but final-target error is reported separately and remains above 3 K during transition. See [physics](physics.md#7-controls) for rate semantics, refinement results and limitations; the preceding abrupt-setpoint result is retained as historical context.
 
 The four-node network treats CPU/other liquid heat as part of the equivalent hotspot. Labels now disclose that meaning while CSV keys stay compatible. Separate CPU/GPU thermal paths need parameterization and calibration before changing that physics.
 

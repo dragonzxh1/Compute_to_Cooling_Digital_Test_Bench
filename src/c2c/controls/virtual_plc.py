@@ -21,6 +21,10 @@ class PLCOutput:
 class VirtualPLC:
     def __init__(self, config: dict):
         self.cfg = config
+        self.temp_setpoint_ramp_k_s = config.get("temp_setpoint_ramp_k_s", 0.1)
+        if not isfinite(self.temp_setpoint_ramp_k_s) or self.temp_setpoint_ramp_k_s <= 0:
+            raise ValueError("temp_setpoint_ramp_k_s must be finite and positive")
+        self.actual_temp_setpoint_c = config["supply_temp_setpoint_c"]
         self.pump_speed_pct = clamp(
             60.0, config["pump_speed_min_pct"], config["pump_speed_max_pct"]
         )
@@ -76,9 +80,15 @@ class VirtualPLC:
             accepted_temp, accepted_dp = local_temp, local_dp
             status = "LOCAL_FALLBACK" if apply_supervisory else "SHADOW"
 
+        # Slew both supervisory targets and fallback transitions. Freeze on a bad sensor.
+        if isfinite(measured_supply_temp_c):
+            self.actual_temp_setpoint_c = rate_limit(
+                accepted_temp, self.actual_temp_setpoint_c, self.temp_setpoint_ramp_k_s, dt_s
+            )
         dp_error = deadband(accepted_dp - measured_dp_kpa, self.cfg.get("dp_deadband_kpa", 0.0))
         temp_error = deadband(
-            measured_supply_temp_c - accepted_temp, self.cfg.get("temp_deadband_k", 0.0)
+            measured_supply_temp_c - self.actual_temp_setpoint_c,
+            self.cfg.get("temp_deadband_k", 0.0),
         )
         # Hold the affected actuator without updating PID state on sensor faults.
         pump_target = (
@@ -112,7 +122,7 @@ class VirtualPLC:
             self.valve_position_pct,
             requested_temp,
             accepted_temp,
-            accepted_temp,
+            self.actual_temp_setpoint_c,
             requested_dp,
             accepted_dp,
             status,
