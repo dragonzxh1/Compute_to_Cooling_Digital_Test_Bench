@@ -58,9 +58,11 @@ def run_case(config: dict, case_name: str, apply_supervisory: bool) -> pd.DataFr
         if intent is None or t_s - intent.timestamp_s >= config["lci"]["update_interval_s"]:
             intent = lci.recommend(t_s, heat)
 
+        measured_dp_kpa = hydraulic.dp_pa / 1000.0
+        measured_supply_temp_c = supply_temp_c
         plc_output = plc.step(
-            hydraulic.dp_pa / 1000.0,
-            supply_temp_c,
+            measured_dp_kpa,
+            measured_supply_temp_c,
             0.0 if step_index == 0 else clock.dt_s,
             t_s,
             intent,
@@ -120,6 +122,9 @@ def run_case(config: dict, case_name: str, apply_supervisory: bool) -> pd.DataFr
                 "lci_recommended_flow_m3h": intent.recommended_flow_m3_s * 3600.0,
                 "lci_recommended_dp_kpa": intent.recommended_dp_kpa,
                 "intent_status": plc_output.intent_status,
+                "lci_intent_timestamp_s": intent.timestamp_s,
+                "plc_measured_supply_temp_c": measured_supply_temp_c,
+                "plc_measured_dp_kpa": measured_dp_kpa,
                 "thermal_margin_k": config["thermal"]["throttle_temp_c"]
                 - thermal_state.gpu_die_temp_c,
                 "throttle": thermal_state.gpu_die_temp_c >= config["thermal"]["throttle_temp_c"],

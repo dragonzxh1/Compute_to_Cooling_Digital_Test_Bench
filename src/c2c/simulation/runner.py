@@ -13,6 +13,7 @@ import yaml
 from c2c.i18n import SUPPORTED_LOCALES, normalize_locale, translate
 from c2c.reports.metrics import benchmark_summary
 from c2c.reports.plots import comparison_plot
+from c2c.reports.timeline import response_events, response_timeline
 from c2c.simulation.engine import run_benchmark
 from c2c.simulation.scenario import load_scenario
 
@@ -44,10 +45,28 @@ def _shown(value: object, metric: str = "") -> str:
     return str(value)
 
 
-def _html_report(summary: dict, image_path: Path, step_s: float, locale: str) -> str:
+def _html_report(
+    summary: dict,
+    image_path: Path,
+    step_s: float,
+    locale: str,
+    timeline_path: Path,
+    events: dict,
+) -> str:
     image = base64.b64encode(image_path.read_bytes()).decode("ascii")
     rows = []
     check_rows = []
+    timeline_image = base64.b64encode(timeline_path.read_bytes()).decode("ascii")
+    timeline_rows = []
+    for case, case_events in events["cases"].items():
+        for event in ("power", "intent", "pump", "valve", "temperature", "pressure"):
+            value = case_events[event]
+            shown = translate("timeline.none", locale) if value is None else _shown(value)
+            timeline_rows.append(
+                f"<tr><td>{html.escape(translate(f'case.{case}', locale))}</td>"
+                f"<td>{html.escape(translate(f'timeline.{event}', locale))}</td>"
+                f"<td>{html.escape(shown)}</td></tr>"
+            )
     for case, metrics in summary["cases"].items():
         case_status = metrics["threshold_status"].lower()
         check_rows.append(
@@ -85,6 +104,11 @@ def _html_report(summary: dict, image_path: Path, step_s: float, locale: str) ->
 <h1>{html.escape(translate("report.title", locale))}</h1><p class='note'>{html.escape(summary["claims"])}</p>
 <p>{html.escape(translate("report.explanation", locale, step_s=step_s))}</p>
 <img alt='{html.escape(translate("report.plot_alt", locale))}' src='data:image/png;base64,{image}'>
+<h2>{html.escape(translate("timeline.title", locale))}</h2>
+<p>{html.escape(translate("timeline.explanation", locale))}</p>
+<img alt='{html.escape(translate("timeline.title", locale))}' src='data:image/png;base64,{timeline_image}'>
+<table><thead><tr><th>{html.escape(translate("report.case", locale))}</th><th>{html.escape(translate("report.metric", locale))}</th><th>{html.escape(translate("timeline.delay", locale))}</th></tr></thead><tbody>{"".join(timeline_rows)}</tbody></table>
+<p class='note'>{html.escape(translate("timeline.limits", locale))}</p>
 <h2>{html.escape(translate("report.threshold_checks", locale))}</h2><table><thead><tr><th>{html.escape(translate("report.case", locale))}</th><th>{html.escape(translate("report.metric", locale))}</th><th>{html.escape(translate("report.value", locale))}</th><th>{html.escape(translate("report.limit", locale))}</th><th>{html.escape(translate("report.status", locale))}</th></tr></thead><tbody>{"".join(check_rows)}</tbody></table>
 <h2>{html.escape(translate("report.kpis", locale))}</h2><table><thead><tr><th>{html.escape(translate("report.case", locale))}</th><th>{html.escape(translate("report.metric", locale))}</th><th>{html.escape(translate("report.value", locale))}</th></tr></thead><tbody>{"".join(rows)}</tbody></table>
 <h2>{html.escape(translate("report.interpretation_limits", locale))}</h2><p>{html.escape(translate("report.limits_text", locale))}</p>
@@ -130,8 +154,13 @@ def run(
     step_times = tuple(float(phase["start_s"]) for phase in config["workload"]["phases"][1:])
     plot_path = comparison_plot(frame, output / "comparison.png", locale, step_times)
     step_s = step_times[0] if step_times else 0.0
+    events = response_events(frame, config)
+    (output / "response_events.json").write_text(
+        json.dumps(events, indent=2, allow_nan=False), encoding="utf-8"
+    )
+    timeline_path = response_timeline(frame, config, output / "response_timeline.png", locale)
     (output / "report.html").write_text(
-        _html_report(summary, plot_path, step_s, locale), encoding="utf-8"
+        _html_report(summary, plot_path, step_s, locale, timeline_path, events), encoding="utf-8"
     )
     return output.resolve()
 

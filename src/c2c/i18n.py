@@ -4,6 +4,42 @@ SUPPORTED_LOCALES = ("en", "zh-CN")
 
 _TRANSLATIONS = {
     "en": {
+        "timeline.title": "Control response timeline — first load step",
+        "timeline.time": "Time relative to load step (s)",
+        "timeline.axis_power": "GPU power (kW)",
+        "timeline.axis_temp_target": "Supply target (°C)",
+        "timeline.axis_dp_target": "Pressure target (kPa)",
+        "timeline.axis_pump": "Pump speed (%)",
+        "timeline.axis_valve": "Valve position (%)",
+        "timeline.axis_temperature": "PLC temperature input\nchange from baseline (K)",
+        "timeline.axis_pressure": "PLC pressure input\nchange from baseline (kPa)",
+        "timeline.accepted": "Accepted final target",
+        "timeline.actual": "Ramped control setpoint",
+        "timeline.power": "GPU power change ≥ 1 kW",
+        "timeline.intent": "First refreshed post-step LCI intent (shadow in feedback case)",
+        "timeline.pump": "Pump movement ≥ 2 percentage points",
+        "timeline.valve": "Valve movement ≥ 2 percentage points",
+        "timeline.temperature": "PLC temperature input departure ≥ 0.1 K",
+        "timeline.pressure": "PLC pressure input departure ≥ 0.2 kPa",
+        "timeline.delay": "Delay from load step (s)",
+        "timeline.none": "Not reached in high-load window",
+        "timeline.explanation": (
+            "GPU power → estimated liquid heat → supervisory targets → PLC pump/valve commands. "
+            "Left: feedback; right: power feedforward. The chart zooms to 30 s before and "
+            "180 s after the first step; the table covers the entire first high-load phase. "
+            "Purple lines mark first absolute departures from the preceding 60 s mean "
+            "(or available pre-step samples); thresholds are listed below. LCI refresh is "
+            "not target acceptance in the shadow case. Sensor traces are inputs read by "
+            "the PLC before that row's commands, not the post-command plant outputs."
+        ),
+        "timeline.limits": (
+            "These are simulated threshold crossings, not sensor detection times or causal "
+            "proof. Feedforward itself changes temperature and pressure. The model has no "
+            "sensor acquisition/communication delay; its static hydraulic resistance does "
+            "not change with GPU heat. Power feedforward reacts to current load, does not "
+            "predict future work, and does not use junction temperature as a control input. "
+            "Temperature/pressure feedback remains active."
+        ),
         "report.title": "C2C-DTB V0.1 benchmark",
         "report.page_title": "C2C-DTB report",
         "report.explanation": (
@@ -80,6 +116,39 @@ _TRANSLATIONS = {
         "metric.steady_high_heat_balance_error_pct": "Steady heat-balance error (%)",
     },
     "zh-CN": {
+        "timeline.title": "控制响应时间线——首次负载阶跃",
+        "timeline.time": "相对负载阶跃的时间 (秒)",
+        "timeline.axis_power": "GPU 功率 (kW)",
+        "timeline.axis_temp_target": "供液温度目标 (°C)",
+        "timeline.axis_dp_target": "压差目标 (kPa)",
+        "timeline.axis_pump": "泵速 (%)",
+        "timeline.axis_valve": "阀门开度 (%)",
+        "timeline.axis_temperature": "PLC 温度输入\n相对基线变化 (K)",
+        "timeline.axis_pressure": "PLC 压差输入\n相对基线变化 (kPa)",
+        "timeline.accepted": "接受的最终目标",
+        "timeline.actual": "渐变控制设定值",
+        "timeline.power": "GPU 功率变化 ≥ 1kW",
+        "timeline.intent": "阶跃后首次更新前馈建议（反馈工况仅影子计算）",
+        "timeline.pump": "泵速变化 ≥ 2 个百分点",
+        "timeline.valve": "阀位变化 ≥ 2 个百分点",
+        "timeline.temperature": "PLC 温度输入偏离基线 ≥ 0.1K",
+        "timeline.pressure": "PLC 压差输入偏离基线 ≥ 0.2kPa",
+        "timeline.delay": "距负载阶跃的时间 (秒)",
+        "timeline.none": "高负载窗口内未达到",
+        "timeline.explanation": (
+            "GPU 功率 → 估算液冷热负荷 → 上层控制目标 → PLC 泵速与阀位指令。"
+            "左列为仅反馈，右列为功率前馈。图中放大首次阶跃前 30 秒至后 180 秒，"
+            "下表统计完整的首次高负载阶段。紫色线表示相对阶跃前 60 秒均值"
+            "（不足时取可用样本）首次达到下列绝对变化阈值的时刻。"
+            "反馈工况更新前馈建议不代表应用建议。温度、压差曲线是 PLC 在本次动作前"
+            "实际读到的模型输入，与动作后的模型输出区分。"
+        ),
+        "timeline.limits": (
+            "这些时刻是仿真信号越过指定阈值的时间，不是传感器感知延迟或因果证明。"
+            "前馈动作本身也会改变温度、压差。模型未模拟传感器采集与通信延迟；"
+            "静态水力阻力不随 GPU 热负荷改变。当前功率前馈响应已经发生的负载变化，"
+            "尚未预测未来任务，也未以结温作为控制输入。温度与压力反馈始终参与调节。"
+        ),
         "report.title": "C2C-DTB V0.1 基准测试",
         "report.page_title": "C2C-DTB 报告",
         "report.explanation": (

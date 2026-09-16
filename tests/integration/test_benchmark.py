@@ -41,6 +41,8 @@ def test_runner_writes_required_artifacts(tmp_path):
         "summary.json",
         "report.html",
         "comparison.png",
+        "response_timeline.png",
+        "response_events.json",
     ]:
         assert (output / name).is_file()
     assert "Generic assumed equipment" in (output / "report.html").read_text(encoding="utf-8")
@@ -58,6 +60,8 @@ def test_runner_writes_localized_chinese_report(tmp_path):
     assert "结果解释边界" in report
     assert "相对最终接受目标的最大偏差" in report
     assert "基准测试对比图" in report
+    assert "控制响应时间线" in report
+    assert "不是传感器感知延迟" in report
     assert "metric." not in report
     assert "peak_gpu_temperature_c" not in report
 
