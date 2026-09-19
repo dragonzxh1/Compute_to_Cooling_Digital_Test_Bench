@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "c2c-dtb-thermal-v02"
-version = "0.2.0a3"
-description = "Isolated Phase 3 generic open-loop thermal core"
+version = "0.2.0a4"
+description = "Isolated V0.2 thermal core and generic physical coolant-loop plant"
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
 
 [tool.setuptools]
-packages = ["v0_2", "v0_2.thermal", "v0_2.examples"]
+packages = ["v0_2", "v0_2.thermal", "v0_2.fluids", "v0_2.hydraulics", "v0_2.coolant", "v0_2.cdu", "v0_2.plant", "v0_2.examples"]
 package-dir = {"v0_2" = "."}
 
 [tool.pytest.ini_options]

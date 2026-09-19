@@ -55,5 +55,15 @@ limits are 0.1 K. Node trajectory 0.1 K and heat-export `max(1 J, 1% of finest h
 explicit **fixture criteria**, not amendments or misattributions to frozen Contract 11. Every run must
 also satisfy all per-step and cumulative energy gates, including sum of absolute residuals.
 
-Phase 3 ends at its report gate. No hydraulics, pumps, CDU/FWS dynamics, controllers, live adapters,
-full FAIR_COMPARISON or Phase 4 implementation is included.
+The Phase 3 bath fixture remains independently runnable. Phase 4 adds a separate physical coolant-loop
+topology in `plant/`, with finite-volume upwind transport, pressure/flow network, pump electrical and
+thermal accounts, and a finite CDU reservoir coupled to an epsilon-NTU heat exchanger. The physical
+topology refuses an external liquid test bath, fixed FIFO transport on the same path, or a second
+posting of pump hydraulic work. Its generic fixture is uncalibrated; see the repository-root
+`PHASE4_PHYSICAL_PLANT_REPORT.md` for raw evidence and OEM gaps. No controller, live adapter,
+FAIR_COMPARISON, feedforward or real GB300 calibration is included.
+
+```powershell
+.venv/Scripts/python.exe -m pytest -c v0_2/pyproject.toml v0_2/tests/plant -W error
+.venv/Scripts/python.exe -m v0_2.examples.phase4_validation
+```
