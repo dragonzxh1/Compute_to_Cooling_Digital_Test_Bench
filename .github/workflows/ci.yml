@@ -38,3 +38,34 @@ jobs:
           cd "$(mktemp -d)"
           "$RUNNER_TEMP/wheel-venv/bin/c2c-dtb" --locale en
           "$RUNNER_TEMP/wheel-venv/bin/c2c-dtb" --locale zh-CN --output-root results-zh
+
+  # The isolated V0.2 tree is a separate distribution with its own pyproject and
+  # its own test paths, so the `test` job above neither collects nor exercises it.
+  # It is gated here instead, and the `test` job's `ruff check .` still covers it.
+  v0_2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install numpy pytest
+      # Run from the repository root: the suite imports `v0_2` through the
+      # current directory, exactly as the v0_2 README instructs. `-W error`
+      # is the declared gate policy for this tree, not an extra strictness.
+      - name: Run the isolated V0.2 suite
+        run: python -m pytest -c v0_2/pyproject.toml v0_2/tests -W error
+      - run: python -m pip install build
+      - run: python -m build ./v0_2
+      - name: Install the V0.2 wheel and reproduce Phase 4 evidence outside the checkout
+        run: |
+          python -m venv "$RUNNER_TEMP/v02-venv"
+          "$RUNNER_TEMP/v02-venv/bin/python" -m pip install ./v0_2/dist/*.whl
+          cd "$(mktemp -d)"
+          "$RUNNER_TEMP/v02-venv/bin/python" -m v0_2.examples.phase4_validation
