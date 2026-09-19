@@ -30,7 +30,31 @@ A phase gate covers only the evidence in its own report. No PASS above means GB3
 .venv\Scripts\python -m pytest -c v0_2/pyproject.toml v0_2/tests -W error
 .venv\Scripts\python -m v0_2.examples.phase3_validation
 .venv\Scripts\python -m v0_2.examples.phase4_validation
+.venv\Scripts\python -m pip install -e "./v0_2[figures]"
+.venv\Scripts\python -m v0_2.examples.phase4_figures
 ```
+
+The plotting extra is opt-in; the thermal core itself still runs on numpy alone.
+
+绘图依赖为可选安装项；热学核心本身仍只依赖 numpy。
+
+## Phase 4 evidence at a glance / Phase 4 证据速览
+
+![图 1 水力网络 / Figure 1 hydraulic network](figures/phase4/01_hydraulic_network.png)
+
+Branch flows come from solving the pump curve against the actual series-plus-parallel system curve at shared supply/return pressure junctions. There is no after-the-fact normalization to force the split. The star is the reported 2-branch 0.9× operating point.
+
+支路流量来自泵曲线与实际“串联加并联”系统曲线在共用供回液压力节点上的求交，不做任何事后归一化去凑分流比例。星号为 2 支路 0.9× 的报告工作点。
+
+![图 4 全回路能量账本 / Figure 4 full-loop energy ledger](figures/phase4/04_energy_ledger.png)
+
+The full-loop ledger closes to a maximum signed residual of `4.18e-9 J` across the twelve qualified runs. Pump electrical consumption is reported separately rather than added in full a second time, and hydraulic work becomes heat only at passive resistance receivers.
+
+全回路账本在十二组合格运行中最大有符号残差为 `4.18e-9 J`。泵电能单独报告，不整体二次计入；水力功只在被动阻力处转为热。
+
+All seven bilingual figures, with their per-section captions, are embedded in [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md).
+
+七张中英双语图及逐节说明均嵌入 [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md)。
 
 ## Run the benchmark
 

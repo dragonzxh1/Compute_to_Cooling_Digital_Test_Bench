@@ -2,6 +2,8 @@
 
 Status: **PHASE4_GATE_STATUS = PASS for the declared generic numerical fixture only.** This is not an OEM-calibrated GB300 model, a safety claim, or an authorized controller. Phase 5–7 are not started. Reproduce the numerical evidence with `python -m v0_2.examples.phase4_validation`; all tabulated values below are from that module, not GB300 measurements. The fixture parameters are marked `ENGINEERING_ASSUMPTION / NUMERICAL_TEST_FIXTURE / UNVALIDATED`.
 
+The figures below are rendered from that same module's API by `python -m v0_2.examples.phase4_figures`, which needs the opt-in plotting extra (`pip install -e "./v0_2[figures]"`). Every PNG carries the uncalibrated-fixture disclaimer in its footer; a figure shows the fixture's behavior and adds no evidence beyond the tables it sits beside.
+
 ## Scope and compatibility
 
 The isolated `v0_2` implementation now has: `fluids/` (constant-Cp density/enthalpy), `coolant/` (finite-volume inventory and signed upwind transport), `hydraulics/` (junction/edge graph, quadratic resistance, parallel common-manifold solution and pump drive), `cdu/` (finite heat-transfer effectiveness), and `plant/` (coupled solids/liquids, physical loop, FWS input and signed ledgers). The fixture models 1, 2, or 4 coldplate branches, supply/return cells, manifolds, a finite CDU tank, pump, and an isolated primary FWS side. It reuses Phase 3 solid nodes, power mapping, coldplate conductance, provenance and validity semantics. No controls, PLC, safety supervisor, feedforward, DCGM or actuator dynamics were added.
@@ -20,6 +22,10 @@ The drive separates `P_electrical`, `P_hydraulic=ΔP·Q`, VFD/motor/internal los
 
 Generic fixture uses `H0=60,000 Pa`, `Kpump=1e11 Pa/(m³/s)²`, two equal branch path K of `2e12 Pa/(m³/s)²`, and four series pipe K of `5e10 Pa/(m³/s)²` each. All these values require calibration. `branch ΔP` below is the shared manifold pressure drop; flows are mass flows at fixture `ρ=1000 kg/m³`.
 
+![图 1 水力网络 / Figure 1 hydraulic network](figures/phase4/01_hydraulic_network.png)
+
+*图 1 泵曲线与系统曲线在声明图线上直接求交，星号为 2 支路 0.9× 的报告工作点；右图为支路分流，红色为 K×1.5 受限支路。Figure 1 — the pump curve intersects the series-plus-parallel system curve directly; the star is the reported 2-branch 0.9× operating point, and the red bars are the K×1.5 restricted branch.*
+
 | Branches / branch-0 K multiplier | Speed | Total kg/s | Pump ΔP Pa | Branch kg/s | Branch ΔP Pa | Solver residual norm | Max node mass kg/s | Max pressure Pa | Pump-curve Pa |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|
 | 1 / 1 | 0.9 | 0.145363114 | 46486.9565 | 0.145363114 | 42260.8696 | 7.28e-12 | 0 | 2.27e-12 | 7.28e-12 |
@@ -30,6 +36,12 @@ Generic fixture uses `H0=60,000 Pa`, `Kpump=1e11 Pa/(m³/s)²`, two equal branch
 
 Each listed solve used **1 iteration**. The independent equal-branch intersection gives `Q=sqrt((60000·0.9²)/(2e11+2e12/4+1e11))=0.000246475150877 m³/s`, matching the third row. In the unequal case the higher-resistance branch gets less flow, the other branch gets more, and the pump/network intersection moves. The test suite additionally uses a 1.5× restriction. A constructed 100 W electrical reference splits into 60 W hydraulic, 10 W VFD, 20 W motor and 10 W internal losses; 80 W reaches liquid after passive hydraulic dissipation and selected drive losses, 20 W reaches ambient. With zero speed/flow, only the explicit standby parameter can consume power. The full-loop 2-branch 5 s case has 97.049591 J pump electrical and 52.406779 J pump hydraulic; 78.610168 J is deposited in liquid, 18.439422 J in ambient. All passive-edge `ΔP·Q` sums equal pump hydraulic power.
 
+![图 7 泵电能分解 / Figure 7 pump electrical energy split](figures/phase4/07_pump_energy_split.png)
+
+*图 7 左：总电能按液压、泵内部、电机、VFD 分解。右：去向分配，虚线为总电能，两去向之和等于总电能，被动水力耗散计入去向而非重复计入泵。Figure 7 — left: electrical energy split by stage; right: destination split, where the dashed line is the electrical total, the destinations sum to it, and passive hydraulic dissipation is a destination rather than a second deposit at the pump.*
+
+The fixture's `pump_efficiency=0.75` and `motor_efficiency=0.8` make the internal and motor losses algebraically equal (`e_motor = 1/(2 − e_pump)`), so both left-hand bars read 17.469 J. That identity is a property of the chosen fixture efficiencies, not a duplicated posting.
+
 ## Raw transport, HX and FWS results
 
 One-cell fixture: volume `0.001 m³`, mass `1 kg`, initial `300 K / 0 J/kg`, inlet `310 K / 40000 J/kg`, `m_dot=0.2 kg/s`, residence `5 s`, duration `5 s`. Outlet denotes the mixed cell/outflow at the end of the run; stored change uses the 300 K enthalpy reference.
@@ -39,6 +51,10 @@ One-cell fixture: volume `0.001 m³`, mass `1 kg`, initial `300 K / 0 J/kg`, inl
 | 0.20 | 306.248832 | 24995.327910 | 24995.327910 | 306.321206 | 0.072374 |
 | 0.10 | 306.284721 | 25138.884715 | 25138.884715 | 306.321206 | 0.036484 |
 | 0.05 | 306.302888 | 25211.551507 | 25211.551507 | 306.321206 | 0.018318 |
+
+![图 2 输运网格收敛 / Figure 2 transport mesh convergence](figures/phase4/02_transport_convergence.png)
+
+*图 2 一单元输运出口温度随 dt 细化逼近解析解，误差单调下降。Figure 2 — the one-cell transport outlet approaches the analytic reference as dt refines, with error falling monotonically.*
 
 HX equal-capacity analytic reference: `UA=100 W/K`, primary/secondary flow each `0.2 kg/s`, `Cp=4000 J/(kg·K)`, secondary inlet `320 K`, primary inlet `300 K`, `NTU=0.125`, effectiveness `1/9=0.111111111`, secondary outlet `317.777778 K`, primary outlet `302.222222 K`, heat `1777.777778 W` out of secondary and into primary. The independent counterflow and parallel unequal-capacity formulas, rated-capacity rejection and zero-flow result are tested. Primary and secondary masses never mix.
 
@@ -52,9 +68,17 @@ At 10 s in the two-branch fixture, a disturbance is applied at 5 s:
 
 The CDU does not jump to a new steady state: its 2 kg finite inventory changes gradually. Warmer FWS and reduced FWS flow reduce heat removal in this fixture. No primary-fluid inventory is added to the secondary mass ledger.
 
+![图 5 FWS 扰动 / Figure 5 FWS disturbance](figures/phase4/05_fws_disturbance.png)
+
+*图 5 FWS 扰动下的 CDU 供液温度与 HX 二次侧输出：有限存量使其渐变而非跳变。Figure 5 — CDU supply and HX secondary export under FWS disturbance; the finite CDU inventory drifts rather than steps.*
+
 ## Full-loop mass and energy ledgers
 
 For the equal two-branch 5 s run at 0.2 s mesh, supply manifold **in** is 0.246475151 kg/s, branch **out** is 0.123237575 + 0.123237575 kg/s, residual 0. The same two branches enter the return manifold and its outlet is 0.246475151 kg/s, residual 0. Every fluid volume has the same summed incoming/outgoing mass at steady hydraulic flow; no cell mass changes. Across all four 0.2/0.1/0.05 s qualification scenarios, maximum single-step hydraulic-node or volume mass residual is **2.78e-17 kg/s**. Signed and absolute cumulative mass audits both pass their declared `1e-9 kg + 1e-8·incident mass` tolerance.
+
+![图 3 耦合温度链 / Figure 3 coupled temperature chain](figures/phase4/03_temperature_chain.png)
+
+*图 3 左：各节点相对 CDU 供液的温升，裸片承担几乎全部梯度；右：绝对温度，冷 FWS 使供液在 5 s 内下移约 0.4 K。Figure 3 — left: the chain as rise above the CDU supply, where the die carries nearly the whole gradient; right: absolute temperatures, where the cold FWS pulls the supply down about 0.4 K over 5 s.*
 
 The full-loop energy equation is `ΔE = E_IT + E_pump_to_liquid − E_air − E_HX`; pump electrical consumption is separately reported, not added in full a second time. Values below are the two-branch 5 s run at dt 0.2 s:
 
@@ -63,6 +87,10 @@ The full-loop energy equation is `ΔE = E_IT + E_pump_to_liquid − E_air − E_
 | 1200.000000 | 97.049591 | 52.406779 | 78.610168 | 1.293080 | 4510.801204 | -3233.484115 | -2.81e-10 | 3.62e-9 |
 
 The maximum signed full-loop residual magnitude among the twelve qualified runs is **4.18e-9 J**; maximum sum of absolute step residuals is **2.24e-8 J**; maximum per-step node energy residual is **2.38e-10 J**. Maximum single-step residual rate is **1.31e-8 W**. Per-node, per-step, cumulative signed and cumulative absolute energy checks pass. The negative stored change is physical for this deliberately cold FWS transient: heat export exceeds IT plus pump heat over the initial 5 s; it is not an energy-balance violation.
+
+![图 4 全回路能量账本 / Figure 4 full-loop energy ledger](figures/phase4/04_energy_ledger.png)
+
+*图 4 累积能量进出与储能变化；负储能变化对应冷 FWS 瞬态中 HX 导出超过 IT 加泵热，账本残差仍在声明容差内。Figure 4 — cumulative energy in and out against stored change; the negative stored change is the cold-FWS transient where HX export exceeds IT plus pump heat, and the ledger residual stays inside its declared tolerance.*
 
 ## dt refinement and validity
 
@@ -76,6 +104,10 @@ All four scenarios use **identical topology, initial state, speed, source trace 
 | Source + FWS event | 301.762516 / 301.768651 / 301.771750 | .006135 / .003099 | .006217 / .003120 | .9042 / .4563 | .8721 / .4404 | 0 | PASS |
 
 All adjacent temperature, enthalpy, HX and storage errors decrease toward the finer reference. Flow, branch flow, pressure and pump energies have zero mesh error here because the hydraulic map and held speed are static within intervals; the independent analytic operating-point comparison establishes their value. The separate one-cell transport errors above also decrease against an exact continuous reference. A 0.025 s fourth-mesh check confirms CDU endpoint error decreases for 1/2/4 branches. The harness rejects three nominal dt values if events make their *effective* meshes identical (`NOT_EVALUABLE`).
+
+![图 6 dt 网格收敛 / Figure 6 dt mesh convergence](figures/phase4/06_dt_convergence.png)
+
+*图 6 峰值温度与相邻网格误差随 dt 细化；四个场景的相邻误差逐级下降。Figure 6 — peak temperature and adjacent-mesh error under dt refinement; adjacent error falls at each step across all four scenarios.*
 
 Invalid-domain tests cover bath/advection, FIFO/finite-volume, pump work duplicate, invalid/zero/negative resistance, out-of-range pump speed/flow, negative pump map, unsupported reverse advection, unbalanced cell mass, duplicate storage owner/flux, missing endpoints, HX capacity/flow, primary/secondary identity and transactional failed steps. There is no clipping or fabricated fallback solution. Unsupported pressure/FWS/thermal operating domains are rejected under the declared generic ranges; this is not validation of real hardware limits.
 

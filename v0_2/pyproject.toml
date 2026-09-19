@@ -9,6 +9,11 @@ description = "Isolated V0.2 thermal core and generic physical coolant-loop plan
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
 
+# Plotting is evidence rendering, not simulation: the thermal core keeps numpy as
+# its only runtime dependency, and the figure generator is opt-in.
+[project.optional-dependencies]
+figures = ["matplotlib>=3.8"]
+
 [tool.setuptools]
 packages = ["v0_2", "v0_2.thermal", "v0_2.fluids", "v0_2.hydraulics", "v0_2.coolant", "v0_2.cdu", "v0_2.plant", "v0_2.examples"]
 package-dir = {"v0_2" = "."}
