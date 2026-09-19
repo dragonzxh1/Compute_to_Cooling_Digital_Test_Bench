@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "c2c-dtb-thermal-v02"
+version = "0.2.0a3"
+description = "Isolated Phase 3 generic open-loop thermal core"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26"]
+
+[tool.setuptools]
+packages = ["v0_2", "v0_2.thermal", "v0_2.examples"]
+package-dir = {"v0_2" = "."}
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
