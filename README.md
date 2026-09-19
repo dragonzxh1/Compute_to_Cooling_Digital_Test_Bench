@@ -6,6 +6,32 @@ V0.1 is a local engineering model, not CFD, SCADA, a production PLC, or an OEM/N
 
 V0.1 是本地工程模型，不是 CFD、SCADA、生产 PLC，也不构成 OEM/NVIDIA 性能声明。所有 GB300 级与 CDU 参数在被实测、OEM、文献或标定数据替换前，均明确标记为假设值。
 
+## V0.2 phase baselines / V0.2 阶段基线
+
+V0.2 is built as an isolated tree (`v0_2/`) with its own distribution and test paths. It neither imports from nor modifies the V0.1 `src/c2c` package. Every phase stops for review and is frozen as an annotated tag whose message carries that phase's gate status verbatim from its report.
+
+V0.2 以隔离目录 `v0_2/` 构建，拥有独立的发行包与测试路径，既不导入、也不修改 V0.1 的 `src/c2c` 包。每个阶段都停止待审，并以 annotated tag 冻结，tag message 原样引用该阶段报告中的 gate 状态。
+
+| Phase | Tag | Commit | Deliverable | Report | Gate |
+|---|---|---|---|---|---|
+| 1 + 2 | `v0.2-phase1-2` | `020f681` | Refactor plan, V0.1 manifest, architecture, 16 contracts | [PHASE2_REVIEW_SUMMARY.md](PHASE2_REVIEW_SUMMARY.md) | `PHASE2_GATE_STATUS = PASS` |
+| 3 | `v0.2-phase3` | `9aa8cc0` | Isolated constant-C thermal core and integrator | [PHASE3_THERMAL_REPORT.md](PHASE3_THERMAL_REPORT.md) | `PHASE3_GATE_STATUS = PASS` |
+| 4 | `v0.2-phase4` | `5588915` | Physical coolant loop, pump network, finite CDU/FWS | [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md) | `PHASE4_GATE_STATUS = PASS` (generic fixture only) |
+
+Phase 1 and Phase 2 share a single commit; no separate Phase 1 commit exists. Phase 4.1 and Phases 5–9 are not published.
+
+阶段 1 与阶段 2 共用一个 commit，不存在单独的 Phase 1 commit。Phase 4.1 与 Phase 5–9 尚未发布。
+
+A phase gate covers only the evidence in its own report. No PASS above means GB300/OEM calibration, equipment safety, or an authorized controller. Every V0.2 fixture parameter stays `ENGINEERING_ASSUMPTION / NUMERICAL_TEST_FIXTURE / UNVALIDATED` until replaced by measured or vendor data. The published evidence reproduces directly from the repository root:
+
+每个阶段门禁只覆盖其报告中的证据范围。以上任何 PASS 都不代表 GB300/OEM 标定、设备安全或可授权的控制器。在替换为实测或厂家数据前，V0.2 的全部夹具参数保持 `ENGINEERING_ASSUMPTION / NUMERICAL_TEST_FIXTURE / UNVALIDATED`。已发布的证据可从仓库根目录直接复现：
+
+```powershell
+.venv\Scripts\python -m pytest -c v0_2/pyproject.toml v0_2/tests -W error
+.venv\Scripts\python -m v0_2.examples.phase3_validation
+.venv\Scripts\python -m v0_2.examples.phase4_validation
+```
+
 ## Run the benchmark
 
 ```powershell
@@ -61,6 +87,6 @@ See [the architecture decision](docs/c2c-architecture-decision.md), [physics](do
 
 ## GitHub readiness / GitHub 上传准备
 
-GitHub Actions runs Ruff and Pytest on Python 3.11–3.13 for every push and pull request. Generated results, local environments, caches, and downloaded references are excluded by `.gitignore`. The project is released under the [Apache License 2.0](LICENSE).
+GitHub Actions runs Ruff and Pytest on Python 3.11–3.13 for every push and pull request. The isolated V0.2 tree is a separate distribution with its own test paths, so it is gated by its own job, which additionally builds the `v0_2` wheel and reproduces the Phase 4 evidence from outside the checkout. Generated results, local environments, caches, and downloaded references are excluded by `.gitignore`. The project is released under the [Apache License 2.0](LICENSE).
 
-GitHub Actions 会在每次推送和拉取请求中使用 Python 3.11–3.13 执行 Ruff 与 Pytest。生成结果、本地虚拟环境、缓存及下载的参考资料均已通过 `.gitignore` 排除。本项目采用 [Apache License 2.0](LICENSE) 开源许可证。
+GitHub Actions 会在每次推送和拉取请求中使用 Python 3.11–3.13 执行 Ruff 与 Pytest。隔离的 V0.2 目录是独立发行包，拥有自己的测试路径，因此由单独的 job 把关，该 job 还会构建 `v0_2` wheel 并在仓库外复现 Phase 4 证据。生成结果、本地虚拟环境、缓存及下载的参考资料均已通过 `.gitignore` 排除。本项目采用 [Apache License 2.0](LICENSE) 开源许可证。
