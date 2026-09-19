@@ -22,10 +22,11 @@ from math import exp, fsum
 from pathlib import Path
 
 from v0_2.coolant.advection import AdvectiveLink, solve_implicit
+from v0_2.examples import phase4_validation
 from v0_2.hydraulics.pump import pump_energy
 from v0_2.hydraulics.solver import solve
 from v0_2.plant.fixtures import generic_fluid, physical_fixture, volume
-from v0_2.plant.phase4_harness import PlantEvent, convergence, run
+from v0_2.plant.phase4_harness import PlantEvent, run
 from v0_2.thermal.provenance import fixture_parameter as p
 
 # Same candidate order as the V0.1 plotting module, so both trees resolve CJK text
@@ -179,19 +180,28 @@ def hydraulic_figure(backend, output):
     left.legend(fontsize=7, loc="upper right")
     left.grid(alpha=0.3)
 
-    labels, values, colours = [], [], []
-    for count, multiplier in ((1, None), (2, None), (2, 1.5), (4, None)):
+    # Mirrors the five rows of the raw hydraulic table exactly, in the same order, so
+    # the bars and the table can be read against each other without a lookup. Mass
+    # flow is taken from the fixture density rather than the `* 1000` shorthand the
+    # table uses, so the two cannot silently agree for the wrong reason.
+    rows = ((1, None, 0.9), (2, None, 0.6), (2, None, 0.9), (2, 2.0, 0.9), (4, None, 0.9))
+    positions, heights, colours, ticks = [], [], [], []
+    for index, (count, multiplier, speed) in enumerate(rows):
         fixture, _ = physical_fixture(count, branch_multiplier=multiplier)
-        result = solve(fixture.hydraulic_graph, fixture.pump_curve, 0.9, 1000)
-        for index, flow in enumerate(result.branch_flows_m3_s):
-            labels.append(f"{count}支路×{multiplier or 1.0:.1f}\n支路 {index}")
-            values.append(flow * 1000)
+        result = solve(fixture.hydraulic_graph, fixture.pump_curve, speed, 1000)
+        density = fixture.heat_exchanger.secondary_fluid.density.value
+        flows = [flow * density for flow in result.branch_flows_m3_s]
+        width = 0.8 / len(flows)
+        for branch, flow in enumerate(flows):
+            positions.append(index + (branch - (len(flows) - 1) / 2) * width)
+            heights.append(flow)
             colours.append(RED if multiplier else BLUE)
-    right.bar(range(len(values)), values, color=colours)
-    right.set_xticks(range(len(values)))
-    right.set_xticklabels(labels, fontsize=6.5)
+        ticks.append(f"{count}支路 K×{multiplier or 1:g}\n{speed}×")
+    right.bar(positions, heights, width=width * 0.9, color=colours)
+    right.set_xticks(range(len(rows)))
+    right.set_xticklabels(ticks, fontsize=7)
     right.set_ylabel("支路质量流量 Branch mass flow (kg/s)")
-    right.set_title("支路分流（红 = 0 号支路 K×1.5 受限）/ branch split", fontsize=10)
+    right.set_title("报告工况的支路分流（红 = K×2 限制支路）/ branch split", fontsize=10)
     right.grid(alpha=0.3, axis="y")
     return finish(drawn, backend, output, "01_hydraulic_network.png")
 
@@ -404,40 +414,73 @@ def fws_disturbance_figure(backend, output):
 
 
 def dt_convergence_figure(backend, output):
-    """Figure 6: mesh refinement against the frozen tolerances."""
+    """Figure 6: mesh refinement across every scenario in the frozen dt table.
+
+    The scenario set, tolerances and adjacent differences are read straight from the
+    evidence module, so this figure cannot drift away from the table it illustrates.
+    """
     drawn, (left, right) = figure(
         backend,
-        "图 6 网格收敛 / Figure 6 — Mesh (dt) convergence on the coupled plant",
+        "图 6 网格收敛：四个场景 / "
+        "Figure 6 — Mesh (dt) convergence across all four scenarios",
     )
+    reported = phase4_validation.evidence()["convergence"]
+    names = list(reported)
+
     fixture, controls = physical_fixture(2, power_each=120)
     runs = [run(fixture, controls, 5_000_000_000, dt) for dt in DT_MESHES]
-    report = convergence(runs)
+    measured = [result.metrics()["peak_k"] for result in runs]
+    expected = [item["peak_k"] for item in reported["two_branch"]["metrics"]]
+    if any(abs(a - b) > 1e-9 for a, b in zip(measured, expected)):
+        raise SystemExit(
+            "the two-branch peaks plotted here disagree with phase4_validation, so the "
+            f"figure and the frozen table have diverged: {measured} vs {expected}"
+        )
     for result, dt, colour in zip(runs, DT_MESHES, (BLUE, ORANGE, GREEN)):
         left.plot(times(result), temperature(result, "b0:die"), color=colour,
                   linewidth=1.3, label=f"dt={dt / 1e9:g}s")
     left.set_xlabel("时间 Time (s)")
     left.set_ylabel("裸片温度 Die temperature (K)")
-    left.set_title(f"2 支路裸片轨迹，收敛 {report['status']} / die trajectory", fontsize=10)
-    left.legend(fontsize=8)
+    left.set_title("2 支路裸片轨迹 / two-branch die trajectory", fontsize=10)
+    left.legend(fontsize=8, loc="upper left")
     left.grid(alpha=0.3)
+    # On a 300-302.5 K axis the three meshes genuinely coincide, so the separation has
+    # to be stated as numbers instead of being read off the lines.
+    left.annotate(
+        "峰值 peak K at 0.2 / 0.1 / 0.05 s\n"
+        + " / ".join(f"{value:.6f}" for value in measured)
+        + "\n三套网格在此尺度上重合 / coincide at this scale",
+        xy=(0.97, 0.06),
+        xycoords="axes fraction",
+        ha="right",
+        fontsize=7.5,
+    )
 
-    keys = list(report["tolerances"])
-    differences = report["adjacent_differences"]
-    positions = list(range(len(keys)))
-    right.bar([i - 0.2 for i in positions],
-              [differences[0][k] / report["tolerances"][k] for k in keys],
-              width=0.38, color=BLUE, label="粗→中 coarse→medium")
-    right.bar([i + 0.2 for i in positions],
-              [differences[1][k] / report["tolerances"][k] for k in keys],
-              width=0.38, color=ORANGE, label="中→细 medium→fine")
+    # Most metrics -- flow, pressure, pump energy -- have exactly zero mesh error here
+    # because the hydraulic map and held speed are static within each interval, so the
+    # per-metric view would be dominated by zeros. Collapsing each adjacent pair to its
+    # worst metric-to-tolerance ratio keeps all four scenarios on one readable axis.
+    positions = list(range(len(names)))
+    for offset, index, colour, label in (
+        (-0.2, 0, BLUE, "粗→中 coarse→medium"),
+        (0.2, 1, ORANGE, "中→细 medium→fine"),
+    ):
+        ratios = []
+        for name in names:
+            tolerances = reported[name]["tolerances"]
+            differences = reported[name]["adjacent_differences"][index]
+            ratios.append(max(differences[key] / tolerances[key] for key in tolerances))
+        bars = right.bar([place + offset for place in positions], ratios, width=0.38,
+                         color=colour, label=label)
+        right.bar_label(bars, fmt="%.3f", fontsize=6.5, padding=2)
     right.axhline(1.0, color=RED, linestyle="--", linewidth=1.2, label="冻结容差 tolerance")
-    right.set_yscale("log")
     right.set_xticks(positions)
-    right.set_xticklabels(keys, rotation=35, ha="right", fontsize=6.5)
-    right.set_ylabel("差异 ÷ 容差 difference ÷ tolerance")
+    right.set_xticklabels(names, rotation=20, ha="right", fontsize=7)
+    right.set_ylim(0.0, 1.05)
+    right.set_ylabel("最差 差异 ÷ 容差 worst difference ÷ tolerance")
     right.set_title("全部低于 1 = 通过 / all below 1 = pass", fontsize=10)
-    right.legend(fontsize=7.5)
-    right.grid(alpha=0.3, axis="y", which="both")
+    right.legend(fontsize=7, loc="upper left")
+    right.grid(alpha=0.3, axis="y")
     return finish(drawn, backend, output, "06_dt_convergence.png")
 
 

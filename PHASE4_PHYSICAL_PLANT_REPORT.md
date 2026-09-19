@@ -24,7 +24,7 @@ Generic fixture uses `H0=60,000 Pa`, `Kpump=1e11 Pa/(m³/s)²`, two equal branch
 
 ![图 1 水力网络 / Figure 1 hydraulic network](figures/phase4/01_hydraulic_network.png)
 
-*图 1 泵曲线与系统曲线在声明图线上直接求交，星号为 2 支路 0.9× 的报告工作点；右图为支路分流，红色为 K×1.5 受限支路。Figure 1 — the pump curve intersects the series-plus-parallel system curve directly; the star is the reported 2-branch 0.9× operating point, and the red bars are the K×1.5 restricted branch.*
+*图 1 左：泵曲线与系统曲线在声明图线上直接求交，星号为 2 支路 0.9× 的报告工作点；右：上表五个工况的支路分流按同一顺序逐行对应，红色为 K×2 限制支路，受限制支路流量更低、与它并联的支路更高。Figure 1 — left: the pump curve intersects the series-plus-parallel system curve directly, with the star at the reported 2-branch 0.9× point; right: branch split for the five rows of the table above, in the same order, where the red K×2 restricted branch carries less flow and its parallel partner more.*
 
 | Branches / branch-0 K multiplier | Speed | Total kg/s | Pump ΔP Pa | Branch kg/s | Branch ΔP Pa | Solver residual norm | Max node mass kg/s | Max pressure Pa | Pump-curve Pa |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|
@@ -78,7 +78,7 @@ For the equal two-branch 5 s run at 0.2 s mesh, supply manifold **in** is 0.2464
 
 ![图 3 耦合温度链 / Figure 3 coupled temperature chain](figures/phase4/03_temperature_chain.png)
 
-*图 3 左：各节点相对 CDU 供液的温升，裸片承担几乎全部梯度；右：绝对温度，冷 FWS 使供液在 5 s 内下移约 0.4 K。Figure 3 — left: the chain as rise above the CDU supply, where the die carries nearly the whole gradient; right: absolute temperatures, where the cold FWS pulls the supply down about 0.4 K over 5 s.*
+*图 3 左：各节点相对 CDU 供液的温升，裸片承担几乎全部梯度（2.801 K，下一级仅 0.677 K）；右：绝对温度，冷 FWS 使供液在 5 s 内下移 0.413 K 至 299.587 K。回液看起来持平是因为局部冷却液的温升几乎抵消了供液下移：`return_1` 末态 300.0018 K，仅比初始 300 K 高 0.002 K。Figure 3 — left: the chain as rise above the CDU supply, where the die carries nearly the whole gradient (2.801 K against 0.677 K at the next level); right: absolute temperatures, where the cold FWS pulls the supply down 0.413 K to 299.587 K over 5 s. The return looks flat because the local coolant rise almost exactly offsets the supply drift: `return_1` ends at 300.0018 K, just 0.002 K above its 300 K start.*
 
 The full-loop energy equation is `ΔE = E_IT + E_pump_to_liquid − E_air − E_HX`; pump electrical consumption is separately reported, not added in full a second time. Values below are the two-branch 5 s run at dt 0.2 s:
 
@@ -90,7 +90,7 @@ The maximum signed full-loop residual magnitude among the twelve qualified runs 
 
 ![图 4 全回路能量账本 / Figure 4 full-loop energy ledger](figures/phase4/04_energy_ledger.png)
 
-*图 4 累积能量进出与储能变化；负储能变化对应冷 FWS 瞬态中 HX 导出超过 IT 加泵热，账本残差仍在声明容差内。Figure 4 — cumulative energy in and out against stored change; the negative stored change is the cold-FWS transient where HX export exceeds IT plus pump heat, and the ledger residual stays inside its declared tolerance.*
+*图 4 累积能量进出与储能变化；负储能变化对应冷 FWS 瞬态中 HX 导出超过 IT 加泵热。本图为 2 支路 dt=0.2 s 单次运行（25 步），其单步残差率最大 2.19e-9 W；上文 1.31e-8 W 是十二组运行的全局最大值，出自 4 支路 dt=0.05 s，两者范围不同而非不一致。Figure 4 — cumulative energy in and out against stored change; the negative stored change is the cold-FWS transient where HX export exceeds IT plus pump heat. This is the single 2-branch dt=0.2 s run (25 steps), whose largest per-step residual rate is 2.19e-9 W; the 1.31e-8 W quoted above is the global maximum over all twelve runs, from the 4-branch dt=0.05 s case. The two differ in scope, not in value.*
 
 ## dt refinement and validity
 
@@ -107,7 +107,7 @@ All adjacent temperature, enthalpy, HX and storage errors decrease toward the fi
 
 ![图 6 dt 网格收敛 / Figure 6 dt mesh convergence](figures/phase4/06_dt_convergence.png)
 
-*图 6 峰值温度与相邻网格误差随 dt 细化；四个场景的相邻误差逐级下降。Figure 6 — peak temperature and adjacent-mesh error under dt refinement; adjacent error falls at each step across all four scenarios.*
+*图 6 左：2 支路裸片轨迹在三套网格下重合，峰值分别为 302.387748 / 302.395106 / 302.398817 K，因此差异必须以数字而非曲线间距表述；右：四个场景各自的相邻差异与冻结容差之比（取十个受检指标中最差者），全部远低于 1。流量、压力与泵能量的网格差异在此恒为零，因为每个区间内水力映射与保持的转速不变。右图使用的容差与差异直接取自证据模块，与本图重算的峰值逐位校验，不一致即报错。Figure 6 — left: the two-branch die trajectory coincides across the three meshes, peaking at 302.387748 / 302.395106 / 302.398817 K, so the separation has to be stated as numbers rather than read off the lines; right: each scenario's worst metric-to-tolerance ratio across the ten checked metrics, all far below 1. Flow, pressure and pump energy have exactly zero mesh error here because the hydraulic map and held speed are static within each interval. The tolerances and differences are read from the evidence module, and the peaks recomputed here are checked against it so the two cannot diverge silently.*
 
 Invalid-domain tests cover bath/advection, FIFO/finite-volume, pump work duplicate, invalid/zero/negative resistance, out-of-range pump speed/flow, negative pump map, unsupported reverse advection, unbalanced cell mass, duplicate storage owner/flux, missing endpoints, HX capacity/flow, primary/secondary identity and transactional failed steps. There is no clipping or fabricated fallback solution. Unsupported pressure/FWS/thermal operating domains are rejected under the declared generic ranges; this is not validation of real hardware limits.
 
