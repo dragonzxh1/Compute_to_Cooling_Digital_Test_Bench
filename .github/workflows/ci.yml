@@ -75,9 +75,10 @@ jobs:
       # The core wheel above installs and runs with numpy alone. Only this step
       # pulls matplotlib, and the generator aborts if any bilingual glyph is
       # missing from the resolved CJK face rather than shipping tofu boxes.
-      - name: Render the Phase 4 figures from the installed wheel
+      - name: Render the Phase 4 figures and evidence page from the installed wheel
         run: |
           wheel=$(echo "$PWD"/v0_2/dist/*.whl)
           cd "$(mktemp -d)"
           "$RUNNER_TEMP/v02-venv/bin/python" -m pip install "${wheel}[figures]"
           "$RUNNER_TEMP/v02-venv/bin/python" -m v0_2.examples.phase4_figures
+          "$RUNNER_TEMP/v02-venv/bin/python" -m v0_2.examples.phase4_report

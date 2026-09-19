@@ -32,6 +32,7 @@ A phase gate covers only the evidence in its own report. No PASS above means GB3
 .venv\Scripts\python -m v0_2.examples.phase4_validation
 .venv\Scripts\python -m pip install -e "./v0_2[figures]"
 .venv\Scripts\python -m v0_2.examples.phase4_figures
+.venv\Scripts\python -m v0_2.examples.phase4_report
 ```
 
 The plotting extra is opt-in; the thermal core itself still runs on numpy alone.
@@ -55,6 +56,10 @@ The full-loop ledger closes to a maximum signed residual of `4.18e-9 J` across t
 All seven bilingual figures, with their per-section captions, are embedded in [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md).
 
 七张中英双语图及逐节说明均嵌入 [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md)。
+
+The same figures, their captions and the underlying result tables are also rendered as one self-contained page: **[PHASE4_EVIDENCE.html](PHASE4_EVIDENCE.html)**. It is a single file with no sibling assets, so download it and open it in a browser. GitHub shows an `.html` file's source rather than rendering it, and this repository does not publish GitHub Pages, so the page is not displayed inline here. Rebuild it with `python -m v0_2.examples.phase4_report`.
+
+同样的图、图注与结果表另有一个自包含页面：**[PHASE4_EVIDENCE.html](PHASE4_EVIDENCE.html)**。该页为单文件、无外部依赖，下载后用浏览器打开即可。GitHub 对 `.html` 文件显示源码而非渲染结果，本仓库也未启用 GitHub Pages，因此该页不会在此内联展示。可用 `python -m v0_2.examples.phase4_report` 重新生成。
 
 ## Run the benchmark
 

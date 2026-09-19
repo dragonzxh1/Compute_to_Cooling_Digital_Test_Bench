@@ -564,9 +564,8 @@ FIGURES = (
 )
 
 
-def main(argv):
-    output = Path(argv[1]) if len(argv) > 1 else Path.cwd() / "figures" / "phase4"
-    output.mkdir(parents=True, exist_ok=True)
+def render_all(output):
+    """Render every figure into `output`, returning the written paths in order."""
     backend = load_backend()
     # The CJK face must be active while the Figure and its text objects are
     # created: a Text captures its font at construction, so wrapping only
@@ -587,6 +586,13 @@ def main(argv):
             "boxes. Replace them with characters the font covers:\n  "
             + "\n  ".join(missing)
         )
+    return written
+
+
+def main(argv):
+    output = Path(argv[1]) if len(argv) > 1 else Path.cwd() / "figures" / "phase4"
+    output.mkdir(parents=True, exist_ok=True)
+    written = render_all(output)
     print(f"\n{len(written)} figures written to {output}")
 
 

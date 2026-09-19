@@ -2,7 +2,7 @@
 
 Status: **PHASE4_GATE_STATUS = PASS for the declared generic numerical fixture only.** This is not an OEM-calibrated GB300 model, a safety claim, or an authorized controller. Phase 5–7 are not started. Reproduce the numerical evidence with `python -m v0_2.examples.phase4_validation`; all tabulated values below are from that module, not GB300 measurements. The fixture parameters are marked `ENGINEERING_ASSUMPTION / NUMERICAL_TEST_FIXTURE / UNVALIDATED`.
 
-The figures below are rendered from that same module's API by `python -m v0_2.examples.phase4_figures`, which needs the opt-in plotting extra (`pip install -e "./v0_2[figures]"`). Every PNG carries the uncalibrated-fixture disclaimer in its footer; a figure shows the fixture's behavior and adds no evidence beyond the tables it sits beside.
+The figures below are rendered from that same module's API by `python -m v0_2.examples.phase4_figures`, which needs the opt-in plotting extra (`pip install -e "./v0_2[figures]"`). Every PNG carries the uncalibrated-fixture disclaimer in its footer; a figure shows the fixture's behavior and adds no evidence beyond the tables it sits beside. The same figures, captions and tables are also collected into one self-contained page by `python -m v0_2.examples.phase4_report` (see [`PHASE4_EVIDENCE.html`](PHASE4_EVIDENCE.html)); this report stays the authoritative record.
 
 ## Scope and compatibility
 
