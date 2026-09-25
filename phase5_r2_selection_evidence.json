@@ -1,0 +1,620 @@
+{
+  "schema": "phase5-r2-selection-evidence-v1",
+  "status": "OUTER_SELECTION_CHANGED_DUE_TO_TARGET_REVISION",
+  "authority": {
+    "load_w_per_device": 120.0,
+    "low_speed_fraction": 0.3,
+    "high_speed_fraction": 0.9,
+    "t_low_k": 314.7243256180813,
+    "t_high_k": 312.69712629276637,
+    "target_k": 313.71072595542387,
+    "upper_margin_k": 1.013599662657441,
+    "lower_margin_k": 1.013599662657498,
+    "residuals": {
+      "low": {
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.4450310926768e-10
+      },
+      "high": {
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.124434210301843e-10
+      }
+    }
+  },
+  "endpoint_reproduction": {
+    "low_difference_k": 0.0,
+    "high_difference_k": 0.0,
+    "tolerance_k": 0.01,
+    "status": "PASS"
+  },
+  "target_formula_exact": true,
+  "minimum_required_margin_k": 0.75,
+  "target_provenance": "GENERIC NUMERICAL CONTROL TARGET / ENGINEERING_ASSUMPTION / UNVALIDATED / NOT OEM-NVIDIA-GB300",
+  "inner_training": [
+    {
+      "candidate": {
+        "id": "inner_a",
+        "kp": 1e-05,
+        "ki": 2e-06,
+        "kd": 0.0
+      },
+      "training": [
+        {
+          "scenario": "TUNE-01-load",
+          "metrics": {
+            "peak_device_k": 316.0719121433026,
+            "minimum_headroom_k": 23.928087856697402,
+            "temperature_iae_k_s": 11.862503772121807,
+            "temperature_ise_k2_s": 18.950380335351745,
+            "temperature_overshoot_k": 2.3611861878787295,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 112897.92861688469,
+            "pump_electrical_j": 413.32289869751327,
+            "control_total_variation": 0.18779604117555682,
+            "actuator_tracking_iae_fraction_s": 0.09652233770683652,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.79218442706042e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-02-fws-temperature",
+          "metrics": {
+            "peak_device_k": 308.5463879804749,
+            "minimum_headroom_k": 31.45361201952511,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 28596.260248304297,
+            "pump_electrical_j": 381.20082529695037,
+            "control_total_variation": 0.038444226588984165,
+            "actuator_tracking_iae_fraction_s": 0.022048737325082855,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.79218442706042e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-03-fws-flow",
+          "metrics": {
+            "peak_device_k": 308.53753225542204,
+            "minimum_headroom_k": 31.462467744577964,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 28564.7024145486,
+            "pump_electrical_j": 381.19462667696405,
+            "control_total_variation": 0.038554232143203415,
+            "actuator_tracking_iae_fraction_s": 0.022008832789771126,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 5.497611255123047e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-04-branch-restriction",
+          "metrics": {
+            "peak_device_k": 308.54442102994676,
+            "minimum_headroom_k": 31.45557897005324,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 24623.25319608778,
+            "pump_electrical_j": 372.13728227060346,
+            "control_total_variation": 0.03951775849069561,
+            "actuator_tracking_iae_fraction_s": 0.019669903091560803,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 4.1633363423443376e-17,
+            "max_energy_residual_j": 4.79218442706042e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        }
+      ],
+      "selection_score": [
+        false,
+        194682.14447582536,
+        0.30431225839844,
+        1547.8556329420312,
+        "inner_a"
+      ]
+    },
+    {
+      "candidate": {
+        "id": "inner_b",
+        "kp": 1.5e-05,
+        "ki": 4e-06,
+        "kd": 0.0
+      },
+      "training": [
+        {
+          "scenario": "TUNE-01-load",
+          "metrics": {
+            "peak_device_k": 316.0703184894692,
+            "minimum_headroom_k": 23.929681510530827,
+            "temperature_iae_k_s": 11.853641284061212,
+            "temperature_ise_k2_s": 18.92428638025098,
+            "temperature_overshoot_k": 2.359592534045305,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 78528.22165933647,
+            "pump_electrical_j": 433.0257874683851,
+            "control_total_variation": 0.2985597915184054,
+            "actuator_tracking_iae_fraction_s": 0.12632921699352437,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 6.132410135251121e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-02-fws-temperature",
+          "metrics": {
+            "peak_device_k": 308.5459676780653,
+            "minimum_headroom_k": 31.454032321934676,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 18238.743471289195,
+            "pump_electrical_j": 386.8237639575419,
+            "control_total_variation": 0.05758535307633306,
+            "actuator_tracking_iae_fraction_s": 0.02712961524679509,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.2437875436007744e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-03-fws-flow",
+          "metrics": {
+            "peak_device_k": 308.5370368753684,
+            "minimum_headroom_k": 31.462963124631585,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 18212.251590123284,
+            "pump_electrical_j": 386.8145128851561,
+            "control_total_variation": 0.05777258196824242,
+            "actuator_tracking_iae_fraction_s": 0.027086575603653594,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.922782181893126e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-04-branch-restriction",
+          "metrics": {
+            "peak_device_k": 308.54399596246714,
+            "minimum_headroom_k": 31.456004037532864,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 15595.124307753516,
+            "pump_electrical_j": 376.8757100470662,
+            "control_total_variation": 0.059844799402522186,
+            "actuator_tracking_iae_fraction_s": 0.024395561080223983,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 4.1633363423443376e-17,
+            "max_energy_residual_j": 4.2437875436007744e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        }
+      ],
+      "selection_score": [
+        false,
+        130574.34102850247,
+        0.47376252596550306,
+        1583.5397743581493,
+        "inner_b"
+      ]
+    }
+  ],
+  "outer_training": [
+    {
+      "candidate": {
+        "id": "outer_a",
+        "kp": 1000.0,
+        "ki": 20.0,
+        "kd": 0.0
+      },
+      "training": [
+        {
+          "scenario": "TUNE-01-load",
+          "metrics": {
+            "peak_device_k": 316.0703184894692,
+            "minimum_headroom_k": 23.929681510530827,
+            "temperature_iae_k_s": 11.853641284061212,
+            "temperature_ise_k2_s": 18.92428638025098,
+            "temperature_overshoot_k": 2.359592534045305,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 78528.22165933647,
+            "pump_electrical_j": 433.0257874683851,
+            "control_total_variation": 0.2985597915184054,
+            "actuator_tracking_iae_fraction_s": 0.12632921699352437,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 6.132410135251121e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-02-fws-temperature",
+          "metrics": {
+            "peak_device_k": 308.5459676780653,
+            "minimum_headroom_k": 31.454032321934676,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 18238.743471289195,
+            "pump_electrical_j": 386.8237639575419,
+            "control_total_variation": 0.05758535307633306,
+            "actuator_tracking_iae_fraction_s": 0.02712961524679509,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.2437875436007744e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-03-fws-flow",
+          "metrics": {
+            "peak_device_k": 308.5370368753684,
+            "minimum_headroom_k": 31.462963124631585,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 18212.251590123284,
+            "pump_electrical_j": 386.8145128851561,
+            "control_total_variation": 0.05777258196824242,
+            "actuator_tracking_iae_fraction_s": 0.027086575603653594,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.922782181893126e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-04-branch-restriction",
+          "metrics": {
+            "peak_device_k": 308.54399596246714,
+            "minimum_headroom_k": 31.456004037532864,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 15595.124307753516,
+            "pump_electrical_j": 376.8757100470662,
+            "control_total_variation": 0.059844799402522186,
+            "actuator_tracking_iae_fraction_s": 0.024395561080223983,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 4.1633363423443376e-17,
+            "max_energy_residual_j": 4.2437875436007744e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        }
+      ],
+      "selection_score": [
+        false,
+        11.853641284061212,
+        0.47376252596550306,
+        1583.5397743581493,
+        "outer_a"
+      ]
+    },
+    {
+      "candidate": {
+        "id": "outer_b",
+        "kp": 2000.0,
+        "ki": 40.0,
+        "kd": 0.0
+      },
+      "training": [
+        {
+          "scenario": "TUNE-01-load",
+          "metrics": {
+            "peak_device_k": 316.06774688387657,
+            "minimum_headroom_k": 23.932253116123434,
+            "temperature_iae_k_s": 11.842375553972943,
+            "temperature_ise_k2_s": 18.888283526847307,
+            "temperature_overshoot_k": 2.357020928452698,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 139221.73615479213,
+            "pump_electrical_j": 473.32247257045674,
+            "control_total_variation": 0.6800726454643957,
+            "actuator_tracking_iae_fraction_s": 0.2458432708630957,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.04085653826769e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-02-fws-temperature",
+          "metrics": {
+            "peak_device_k": 308.5466457120602,
+            "minimum_headroom_k": 31.453354287939817,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 20905.193593505795,
+            "pump_electrical_j": 377.09967332803484,
+            "control_total_variation": 0.1906381928210359,
+            "actuator_tracking_iae_fraction_s": 0.051823596800080994,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 5.593534524450661e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-03-fws-flow",
+          "metrics": {
+            "peak_device_k": 308.53781386128856,
+            "minimum_headroom_k": 31.462186138711445,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 20852.801534072256,
+            "pump_electrical_j": 377.08165375576976,
+            "control_total_variation": 0.19103639990916443,
+            "actuator_tracking_iae_fraction_s": 0.051808431950730725,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 3.8586733808188e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-04-branch-restriction",
+          "metrics": {
+            "peak_device_k": 308.5447669815479,
+            "minimum_headroom_k": 31.455233018452077,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 18289.234937203106,
+            "pump_electrical_j": 367.3950890623681,
+            "control_total_variation": 0.18914026726256106,
+            "actuator_tracking_iae_fraction_s": 0.04861588888063537,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 5.551115123125783e-17,
+            "max_energy_residual_j": 4.269793407729594e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        }
+      ],
+      "selection_score": [
+        false,
+        11.842375553972943,
+        1.250887505457157,
+        1594.8988887166295,
+        "outer_b"
+      ]
+    },
+    {
+      "candidate": {
+        "id": "outer_c",
+        "kp": 3000.0,
+        "ki": 60.0,
+        "kd": 0.0
+      },
+      "training": [
+        {
+          "scenario": "TUNE-01-load",
+          "metrics": {
+            "peak_device_k": 316.08169765876494,
+            "minimum_headroom_k": 23.918302341235062,
+            "temperature_iae_k_s": 11.938551443014182,
+            "temperature_ise_k2_s": 19.154352549900185,
+            "temperature_overshoot_k": 2.3709717033410698,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 231445.05541376577,
+            "pump_electrical_j": 331.3291348992582,
+            "control_total_variation": 1.1669053822338764,
+            "actuator_tracking_iae_fraction_s": 0.41847305262266254,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.761915306517039e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-02-fws-temperature",
+          "metrics": {
+            "peak_device_k": 308.562056415718,
+            "minimum_headroom_k": 31.43794358428198,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 127191.76148207669,
+            "pump_electrical_j": 217.5107654247593,
+            "control_total_variation": 0.46775072283377306,
+            "actuator_tracking_iae_fraction_s": 0.19510352528965058,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 5.610587550108903e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-03-fws-flow",
+          "metrics": {
+            "peak_device_k": 308.5557175623048,
+            "minimum_headroom_k": 31.44428243769522,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 127250.80213823951,
+            "pump_electrical_j": 217.4986907693407,
+            "control_total_variation": 0.468012813187914,
+            "actuator_tracking_iae_fraction_s": 0.19523688655766563,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 2.7755575615628914e-17,
+            "max_energy_residual_j": 4.0093084407999413e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        },
+        {
+          "scenario": "TUNE-04-branch-restriction",
+          "metrics": {
+            "peak_device_k": 308.5623415298008,
+            "minimum_headroom_k": 31.43765847019921,
+            "temperature_iae_k_s": 0.0,
+            "temperature_ise_k2_s": 0.0,
+            "temperature_overshoot_k": 0.0,
+            "settling_time_s": null,
+            "dp_tracking_iae_pa_s": 129126.91310912016,
+            "pump_electrical_j": 212.53445079914957,
+            "control_total_variation": 0.4646179406279868,
+            "actuator_tracking_iae_fraction_s": 0.1980101255910151,
+            "saturation_duration_s": 0.0,
+            "max_mass_residual_kg_s": 4.1633363423443376e-17,
+            "max_energy_residual_j": 4.461071512196213e-10,
+            "safety_event_count": 1,
+            "safety_fault_event_count": 0,
+            "safety_state_duration_s": {
+              "FF_DISABLED": 1.9999999999999998,
+              "NORMAL": 38.0
+            }
+          }
+        }
+      ],
+      "selection_score": [
+        false,
+        11.938551443014182,
+        2.5672868588835502,
+        978.8730418925077,
+        "outer_c"
+      ]
+    }
+  ],
+  "selected": {
+    "inner": "inner_b",
+    "outer": "outer_b"
+  },
+  "selection_priority": [
+    "physical_and_safety_feasibility",
+    "thermal_tracking_iae",
+    "control_total_variation",
+    "pump_electrical_energy",
+    "candidate_id_lexicographic"
+  ],
+  "holdout_used_in_selection": false,
+  "ownership_audit_reference": {
+    "path": "docs/results/phase5_r1_ownership_audit.json",
+    "sha256": "3db58e12480af4fd4c2522743cbdc144562d55d97096882369926f008628c8dd",
+    "status": "PASS"
+  },
+  "downstream_stress_convergence_stability_executed": false
+}

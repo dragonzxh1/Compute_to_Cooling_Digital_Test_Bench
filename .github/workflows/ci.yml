@@ -28,7 +28,9 @@ jobs:
       - run: python -m pip install --upgrade pip
       - run: python -m pip install -e ".[dev]"
       - run: python -m ruff check .
-      - run: python -m pytest
+      # V0.2 has its own pytest job; collecting both trees together collides on
+      # duplicate test_hydraulics.py module names.
+      - run: python -m pytest tests
       - run: python -m pip install build
       - run: python -m build
       - name: Install wheel into an isolated environment and run outside checkout
@@ -82,3 +84,13 @@ jobs:
           "$RUNNER_TEMP/v02-venv/bin/python" -m pip install "${wheel}[figures]"
           "$RUNNER_TEMP/v02-venv/bin/python" -m v0_2.examples.phase4_figures
           "$RUNNER_TEMP/v02-venv/bin/python" -m v0_2.examples.phase4_report
+      # Phase 5 tuning, holdout, repeated stability and documentation rendering
+      # run once per CI matrix rather than tripling this deterministic workload.
+      - name: Reproduce Phase 5 feedback evidence and documentation figures
+        if: matrix.python-version == '3.11'
+        run: |
+          python -m pip install matplotlib
+          python -m v0_2.examples.phase5_evidence
+          python -m v0_2.tools.generate_docs_figures
+          test -s phase5_feedback_baseline.json
+          test -s docs/results/phase5_closed_loop_holdout.png

@@ -1,0 +1,143 @@
+{
+  "schema": "phase5-r4-outer-pi-tuning-registration-v1",
+  "status": "FROZEN_BEFORE_NEW_GAIN_EXECUTION",
+  "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+  "source_r3_registration_sha256": "7636af8958f6c87a2516ba1cc90ac357fd7f1812a4234ed97749a434c5a2bbf6",
+  "source_r3_evidence_sha256": "51c5fc07b5739cad6995a9d479ae4fa978fa3b0f4f9c46423e340738b83371cd",
+  "source_phase5_1r2_registration_sha256": "a7466babe2cd32a016db138dc83ccd1c9b9367ca6a3fd43af0f67490cab33c5b",
+  "source_phase5_1r2_result_sha256": "003bf73a0e37a6b046ef23c34f6d4d6d8640e76f535a090472051a883e2a6b53",
+  "target_k": 313.71072595542387,
+  "inner": {"id": "inner_b", "kp": 0.000015, "ki": 0.000004, "kd": 0.0},
+  "outer_candidates": [
+    {"id": "R4-KP3000-KI60", "kp": 3000.0, "ki": 60.0, "kd": 0.0},
+    {"id": "R4-KP3000-KI80", "kp": 3000.0, "ki": 80.0, "kd": 0.0},
+    {"id": "R4-KP3000-KI100", "kp": 3000.0, "ki": 100.0, "kd": 0.0},
+    {"id": "R4-KP3000-KI120", "kp": 3000.0, "ki": 120.0, "kd": 0.0},
+    {"id": "R4-KP4000-KI60", "kp": 4000.0, "ki": 60.0, "kd": 0.0},
+    {"id": "R4-KP4000-KI80", "kp": 4000.0, "ki": 80.0, "kd": 0.0},
+    {"id": "R4-KP4000-KI100", "kp": 4000.0, "ki": 100.0, "kd": 0.0},
+    {"id": "R4-KP4000-KI120", "kp": 4000.0, "ki": 120.0, "kd": 0.0},
+    {"id": "R4-KP5000-KI60", "kp": 5000.0, "ki": 60.0, "kd": 0.0},
+    {"id": "R4-KP5000-KI80", "kp": 5000.0, "ki": 80.0, "kd": 0.0},
+    {"id": "R4-KP5000-KI100", "kp": 5000.0, "ki": 100.0, "kd": 0.0},
+    {"id": "R4-KP5000-KI120", "kp": 5000.0, "ki": 120.0, "kd": 0.0},
+    {"id": "R4-KP6000-KI60", "kp": 6000.0, "ki": 60.0, "kd": 0.0},
+    {"id": "R4-KP6000-KI80", "kp": 6000.0, "ki": 80.0, "kd": 0.0},
+    {"id": "R4-KP6000-KI100", "kp": 6000.0, "ki": 100.0, "kd": 0.0},
+    {"id": "R4-KP6000-KI120", "kp": 6000.0, "ki": 120.0, "kd": 0.0}
+  ],
+  "training_cases": ["WARM_CAPTURE", "COLD_CAPTURE"],
+  "workload_w_per_device": 120.0,
+  "preparation": {
+    "duration_ns": 180000000000,
+    "physics_dt_ns": 200000000,
+    "warm_speed_fraction": 0.3,
+    "cold_speed_fraction": 0.9,
+    "endpoint_window_start_ns": 150000000000,
+    "endpoint_window_end_ns": 180000000000,
+    "historical_warm_endpoint_k": 314.7243256180813,
+    "historical_cold_endpoint_k": 312.69712629276637,
+    "endpoint_reproduction_tolerance_k": 0.01,
+    "initial_state_rule": "reuse independently prepared Phase 5.1R2 physical states with normalized epoch and exact historical state hashes",
+    "controller_prehistory": "none",
+    "integrator_warm_start": false
+  },
+  "qualification_duration_ns": 180000000000,
+  "final_window_start_ns": 150000000000,
+  "final_window_end_ns": 180000000000,
+  "settling": {
+    "signal": "maximum released MEASURED device temperature",
+    "band_k": 0.5,
+    "continuous_dwell_ns": 15000000000,
+    "must_remain_in_band_through_end": true,
+    "finite_settling_time_required": true,
+    "adjacent_mesh_settling_time_tolerance_s": 2.0
+  },
+  "saturation": {
+    "minimum_speed_fraction": 0.3,
+    "maximum_speed_fraction": 0.9,
+    "bound_tolerance_fraction": 0.000001,
+    "initial_prepared_bound_occupancy_allowed": true,
+    "final_window_command_bound_time_s": 0.0,
+    "final_window_actual_bound_time_s": 0.0,
+    "final_actual_speed_must_be_strictly_interior": true
+  },
+  "control_direction": {
+    "evaluation_window_ns": 10000000000,
+    "minimum_dp_change_pa": 1.0,
+    "minimum_actual_speed_change_fraction": 0.0001,
+    "warm": "accepted DP and actual speed increase from starting values",
+    "cold": "accepted DP and actual speed decrease from starting values"
+  },
+  "nonphysics_clocks_ns": {
+    "measurement": 200000000,
+    "outer": 1000000000,
+    "plc": 200000000,
+    "safety": 200000000,
+    "actuator": 200000000
+  },
+  "conservation_limits": {
+    "max_mass_residual_kg_s": 1e-8,
+    "max_absolute_step_energy_residual_j": 0.001
+  },
+  "stage_a": {
+    "physics_dt_ns": 200000000,
+    "expected_runs": 32,
+    "candidate_count": 16,
+    "hard_thermal_feasibility": ["finite_settling_both_cases", "final_window_temperature_in_band", "final_window_zero_bound_time", "final_actual_speed_interior", "control_direction_correct", "no_oscillation_or_divergence", "finite_state", "solver_valid", "mass_energy_pass", "ownership_pass", "no_derate_protected_fault"],
+    "ranking_hierarchy": ["bidirectional_thermal_feasibility", "minimum_worst_side_settling_time", "minimum_total_temperature_iae", "minimum_total_control_total_variation", "minimum_total_pump_electrical_j", "candidate_id"],
+    "zero_feasible_stop_status": "NO_R4_GRID_CANDIDATE_HAS_BIDIRECTIONAL_REGULATION"
+  },
+  "safety_startup_handling": {
+    "policy_unchanged": true,
+    "startup_ff_disabled_allowed": true,
+    "common_degraded_reason": "ACTUATOR_TRACKING_PENDING",
+    "common_degraded_must_be_candidate_independent": true,
+    "common_degraded_selection_treatment": "record separately; may rank thermally successful candidate but full qualification remains blocked",
+    "forbidden_states": ["DERATE_REQUESTED", "PROTECTED", "FAULT"],
+    "noncommon_degraded_is_hard_failure": true,
+    "final_status_if_common_startup_only_blocker": "R4_THERMAL_CONTROLLER_FOUND_WITH_STARTUP_SAFETY_BLOCKER"
+  },
+  "stage_b": {
+    "trigger": "at least one Stage A thermally feasible candidate",
+    "maximum_finalists": 5,
+    "finalist_rule": "top five thermally feasible Stage A candidates by registered ranking hierarchy, or all if fewer than five",
+    "physics_dt_ns": [100000000, 50000000],
+    "requires_both_cases_pass_all_three_meshes": true,
+    "adjacent_settling_time_tolerance_s": 2.0,
+    "fine_pair_continuous_metric_tolerances": {
+      "peak_device_k": 0.1,
+      "minimum_device_k": 0.1,
+      "final_window_mean_measured_k": 0.1,
+      "temperature_iae_k_s": 5.0,
+      "dp_tracking_iae_pa_s": 10000.0,
+      "pump_electrical_relative": 0.01,
+      "control_total_variation": 0.01,
+      "actuator_tracking_iae_fraction_s": 0.02,
+      "saturation_duration_s": 0.2
+    }
+  },
+  "numerical_uncertainty_rule": {
+    "comparison_mesh_ns": 200000000,
+    "sensitivity_pair_ns": [100000000, 50000000],
+    "pairwise_bound": "abs(metric_A_0.1-metric_A_0.05)+abs(metric_B_0.1-metric_B_0.05)",
+    "veto": "candidate difference <= pairwise bound is numerically indistinguishable; advance to next registered criterion",
+    "metrics_in_priority_order": ["worst_side_settling_time_s", "total_temperature_iae_k_s", "total_control_total_variation", "total_pump_electrical_j"]
+  },
+  "selected_candidate_repeatability": {
+    "physics_dt_ns": 200000000,
+    "warm_runs": 10,
+    "cold_runs": 10,
+    "identical_result_hash_per_case": true,
+    "retained_memory_span_limit_bytes": 3000000
+  },
+  "holdout_used_for_tuning": false,
+  "independent_validation_claim_allowed": false,
+  "automatically_expand_grid": false,
+  "phase6_authorized": false,
+  "new_final_baseline_allowed": false,
+  "evidence_file": "phase5_r4_outer_tuning_evidence.json",
+  "candidate_baseline_file": "phase5_r4_candidate_baseline.json",
+  "figure_file": "docs/results/phase5_r4_bidirectional_tuning.png",
+  "report_file": "PHASE5_R4_BIDIRECTIONAL_PID_RETUNING_REPORT.md"
+}

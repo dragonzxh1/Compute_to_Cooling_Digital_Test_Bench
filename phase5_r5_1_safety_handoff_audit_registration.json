@@ -1,0 +1,22 @@
+{
+  "schema": "phase5-r5-1-safety-handoff-audit-registration-v1",
+  "source_r5_registration_sha256": "61f48d159f208ce4ba8a7e5e958ccad31b659e24bfee69f199133fdf2cf52791",
+  "source_r5_evidence_sha256": "1707b3b854291e5eeb29a5ec10ad665ddc81dbc3f9f42a9ec8dededc84efc171",
+  "source_r5_candidate_baseline_sha256": "3a34d0bc1e93da0e985d773125214ae301e5b9e2a2c9ec673745706e137c3766",
+  "frozen_controller": {"kp": 4500.0, "ki_hot": 110.0, "ki_cold": 130.0, "kd": 0.0, "blend_halfwidth_k": 0.1, "single_integral_state": true, "anti_windup": "unchanged"},
+  "frozen_source_sha256": {"safety_supervisor": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036", "pump_actuator": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f"},
+  "cases": ["WARM_NOMINAL_HANDOFF", "COLD_NOMINAL_HANDOFF", "COLD_STUCK"],
+  "preparation": {"power_w_per_device": 120, "duration_ns": 180000000000, "warm_pump_speed": 0.3, "cold_pump_speed": 0.9, "source": "exact Phase 5.1R2 preparation and normalized state SHA"},
+  "observation": {"early_window_ns": 5000000000, "full_run_ns": 180000000000, "physics_step_ns": 200000000, "recording": "all native scheduled event rows, commands, measurements, envelopes, states, PI ticks, hydraulics"},
+  "nominal_actuator_contract": {"minimum": 0.3, "maximum": 0.9, "tau_s": 1.0, "ramp_per_s": 0.2, "command_delay_ns": 200000000},
+  "safety_classification": {"measured_tracking_tolerance_fraction": 0.15, "tracking_failure_ns": 2000000000, "normal_false_positive_requires": ["valid PLC ownership", "material command change", "inside nominal delay lag ramp envelope", "correct response direction", "error shrinking after possible response", "causally consistent measured echo", "no saturation or fault", "no real thermal flow pressure violation", "only ACTUATOR_TRACKING_PENDING reason"]},
+  "expected_response_tests": {"speed_tolerance": 1e-9, "material_command_delta": 0.15, "correct_direction_min_delta": 1e-12, "measured_only_min_pump_delta": 0.001, "measured_only_min_tracking_error_drop": 0.001},
+  "fault_injections": {"cold_stuck": "existing Disturbance(time_ns=0,pump_stuck=True)", "excessive_tracking": "only if existing qualified fixture is found; otherwise EXCESSIVE_TRACKING_FAULT_FIXTURE_NOT_AVAILABLE"},
+  "separation_criteria": {"data": "PLC command and released measured pump, DP, flow, temperature, timestamps, quality, Safety state only", "window_ns": 5000000000, "pass": "nominal has causally timed measured pump response and falling measured tracking error while stuck has no comparable response and remains restrictive"},
+  "repeatability": {"cold_nominal_runs": 10, "cold_stuck_runs": 10, "require_identical_hashes": true, "require_identical_transitions_and_response_times": true},
+  "stop_conditions": ["historical 0.4 s DEGRADED not reproduced", "nominal response violates frozen dynamics", "measured-only separation fails", "ownership or conservation fails", "otherwise stop for user review after diagnostic classification"],
+  "production_behavior_change_authorized": false,
+  "safety_change_authorized": false,
+  "final_baseline_freeze_authorized": false,
+  "phase6_authorized": false
+}

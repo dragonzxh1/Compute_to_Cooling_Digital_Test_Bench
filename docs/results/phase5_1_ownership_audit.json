@@ -1,0 +1,31 @@
+{
+  "phase": "5.1",
+  "audit_type": "FROZEN_BASELINE_STATIC_ACTUATION_OWNERSHIP",
+  "integrity": {
+    "registration_sha256": "9a937de41a8466f4a6f33a06de899929576a3653217901084a2fb7675f0fe00f",
+    "expected_registration_sha256": "9a937de41a8466f4a6f33a06de899929576a3653217901084a2fb7675f0fe00f",
+    "registration_match": true,
+    "baseline_file_sha256": "b14281edc630b49de1ddcfbff1894cfe129f75e1c6b891786dbeae02de73b033",
+    "control_core_sha256": "092b3ff035da69a95294543cdf716e4a025f506ab213543d1a640ed1d10db6d8",
+    "expected_control_core_sha256": "092b3ff035da69a95294543cdf716e4a025f506ab213543d1a640ed1d10db6d8",
+    "control_core_match": true
+  },
+  "contract": {
+    "safety": "writes restrictive envelope/derate request",
+    "plc": "sole writer of final actuator command",
+    "source": [
+      "contracts/14_control_input_permission_contract.md",
+      "contracts/15_safety_supervisor_contract.md"
+    ]
+  },
+  "findings": {
+    "safety_decision_contains_forced_speed": true,
+    "plc_receives_forced_speed": true,
+    "actuator_call_directly_selects_safety_forced_speed": true,
+    "actuator_call_uses_plc_return_exclusively": false
+  },
+  "status": "ACTUATION_OWNERSHIP_CONTRACT_VIOLATION",
+  "qualification_gate": "BLOCKED",
+  "closed_loop_qualification_executed": false,
+  "note": "The scheduler directly selects SafetyDecision.forced_speed at the actuator call site. Equality with the value returned by the PLC does not establish sole-writer ownership or the required command provenance. Frozen control sources were not changed."
+}

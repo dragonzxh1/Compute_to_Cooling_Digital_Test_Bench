@@ -1,0 +1,1 @@
+"""Optional reproducible documentation rendering."""

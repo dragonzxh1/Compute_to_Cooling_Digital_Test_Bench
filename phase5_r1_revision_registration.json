@@ -1,0 +1,70 @@
+{
+  "schema": "phase5-r1-revision-registration-v1",
+  "status": "REGISTERED_BEFORE_R1_CODE_CHANGE",
+  "purpose": "Correct actuation ownership and add end-to-end command provenance only",
+  "original_tuning_registration_sha256": "9a937de41a8466f4a6f33a06de899929576a3653217901084a2fb7675f0fe00f",
+  "original_baseline_file_sha256": "b14281edc630b49de1ddcfbff1894cfe129f75e1c6b891786dbeae02de73b033",
+  "original_control_core_sha256": "092b3ff035da69a95294543cdf716e4a025f506ab213543d1a640ed1d10db6d8",
+  "allowed_semantic_change": [
+    "Safety emits a typed restrictive envelope rather than a final speed command",
+    "PLC is the sole producer of typed ActuatorCommand records",
+    "Actuator accepts PLC-produced ActuatorCommand records only",
+    "Add deterministic end-to-end command provenance and ownership assertions"
+  ],
+  "forbidden_semantic_changes": [
+    "plant or actuator physics",
+    "PID equations, gains, candidate sets, or selection policy",
+    "physical limits, safety thresholds, thermal target, or sample periods",
+    "feedforward, Phase 6, DCGM, ML, MPC, RL, or new disturbance models"
+  ],
+  "allowed_files": [
+    "v0_2/safety/*",
+    "v0_2/control/*",
+    "v0_2/plant/controlled_loop.py",
+    "v0_2/actuators/pump.py",
+    "v0_2/measurement/local_sensor.py",
+    "v0_2/tests/control/*",
+    "v0_2/examples/phase5_r1_*.py",
+    "evidence/reporting/provenance code",
+    "documentation"
+  ],
+  "numerical_equivalence_policy": {
+    "safety_inactive": "physical and controller traces equal within floating-point precision",
+    "safety_active": "final actuator command and physical response equal when the old forced speed equals the PLC-constrained result",
+    "comparison_fields": [
+      "device_k",
+      "accepted_dp_pa",
+      "measured_dp_pa",
+      "pump_command",
+      "pump_actual",
+      "total_flow_kg_s",
+      "pump_electrical_j",
+      "safety_state",
+      "mass_residual_kg_s",
+      "energy_residual_j"
+    ]
+  },
+  "candidate_source": "phase5_tuning_registration.json",
+  "inner_candidate_ids": ["inner_a", "inner_b"],
+  "outer_candidate_ids": ["outer_a", "outer_b", "outer_c"],
+  "selection_priority": [
+    "physical_and_safety_feasibility",
+    "thermal_tracking_iae",
+    "control_total_variation",
+    "pump_electrical_energy",
+    "candidate_id_lexicographic"
+  ],
+  "required_selection": {"inner": "inner_b", "outer": "outer_c"},
+  "reselection_uses_holdout": false,
+  "historical_holdout_id": "HOLDOUT-01-combined",
+  "historical_holdout_role": "HISTORICAL_HOLDOUT_REGRESSION",
+  "physics_dt_ns": [200000000, 100000000, 50000000],
+  "repeated_stability_runs": 10,
+  "regression_requirements": [
+    "Phase 5R1 ownership and provenance tests",
+    "original Phase 5 tests",
+    "Phase 4.1, Phase 4, and Phase 3 tests",
+    "V0.1 tests",
+    "Ruff"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema": "phase5-1r-plant-only-feasibility-v1",
+  "qualification_registration_sha256": "1f7dd7f37742ac8430721b6f19ccc6d1efde0994d58e97d43e040d92930943e7",
+  "controller_executed": false,
+  "selection_uses_closed_loop_metrics": false,
+  "candidates": [
+    {
+      "candidate_id": "LOAD-120",
+      "power_w_per_device": 120.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 314.7243256180813,
+        "final_max_device_k": 315.07446347854744,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.4450310926768e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 312.69712629276637,
+        "final_max_device_k": 312.78345829604956,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.124434210301843e-10
+      },
+      "target_bracketed_by_plant": false
+    },
+    {
+      "candidate_id": "LOAD-140",
+      "power_w_per_device": 140.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 317.3474743016138,
+        "final_max_device_k": 317.7843502935655,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.411777692643227e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 315.0947184489193,
+        "final_max_device_k": 315.23527999929433,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.167066774447449e-10
+      },
+      "target_bracketed_by_plant": false
+    },
+    {
+      "candidate_id": "LOAD-160",
+      "power_w_per_device": 160.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 319.97062298514606,
+        "final_max_device_k": 320.4942371085831,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.643840950142476e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 317.49231060507293,
+        "final_max_device_k": 317.68710170253956,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.635172328766203e-10
+      },
+      "target_bracketed_by_plant": false
+    },
+    {
+      "candidate_id": "LOAD-180",
+      "power_w_per_device": 180.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 322.59377166867813,
+        "final_max_device_k": 323.2041239236006,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.924647439314867e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 319.88990276122615,
+        "final_max_device_k": 320.1389234057844,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.508411504706601e-10
+      },
+      "target_bracketed_by_plant": false
+    },
+    {
+      "candidate_id": "LOAD-200",
+      "power_w_per_device": 200.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 325.2169203522108,
+        "final_max_device_k": 325.91401073861863,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.539249059438589e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 322.2874949173795,
+        "final_max_device_k": 322.5907451090294,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.407230219134362e-10
+      },
+      "target_bracketed_by_plant": false
+    },
+    {
+      "candidate_id": "LOAD-220",
+      "power_w_per_device": 220.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 327.8400690357428,
+        "final_max_device_k": 328.623897553636,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 4.984741508451407e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 324.685087073533,
+        "final_max_device_k": 325.04256681227474,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.257447810436133e-10
+      },
+      "target_bracketed_by_plant": false
+    },
+    {
+      "candidate_id": "LOAD-240",
+      "power_w_per_device": 240.0,
+      "low_cooling": {
+        "speed_fraction": 0.3,
+        "qualified_window_mean_max_device_k": 330.4632177192752,
+        "final_max_device_k": 331.33378436865365,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.707079253625125e-10
+      },
+      "maximum_cooling": {
+        "speed_fraction": 0.9,
+        "qualified_window_mean_max_device_k": 327.08267922968616,
+        "final_max_device_k": 327.49438851551946,
+        "max_mass_residual_kg_s": 0.0,
+        "max_energy_residual_j": 5.968558980384842e-10
+      },
+      "target_bracketed_by_plant": false
+    }
+  ],
+  "selected": null,
+  "status": "NO_FEASIBLE_REGULATION_REGION"
+}

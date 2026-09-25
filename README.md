@@ -1,6 +1,6 @@
 # C2C-DTB / 算力到冷却数字测试台
 
-Compute-to-Cooling Digital Test Bench is a deterministic, reduced-order simulator for developing and validating the chain from AI workload to GPU power, liquid heat capture, rack thermal response, coolant transport, CDU heat rejection, PLC control, and supervisory cooling intent.
+Compute-to-Cooling Digital Test Bench is a physics-based rack liquid-cooling digital twin and control-research platform. It connects IT power, device thermal storage, flow-dependent coldplates, solved branch hydraulics, finite coolant transport, CDU/HX/FWS heat rejection, measured-state feedback, PLC logic and actuator dynamics.
 
 V0.1 is a local engineering model, not CFD, SCADA, a production PLC, or an OEM/NVIDIA performance claim. All GB300-class and CDU values are labeled assumptions until replaced by measured, OEM, literature, or calibrated data.
 
@@ -8,19 +8,33 @@ V0.1 是本地工程模型，不是 CFD、SCADA、生产 PLC，也不构成 OEM/
 
 ## V0.2 phase baselines / V0.2 阶段基线
 
-V0.2 is built as an isolated tree (`v0_2/`) with its own distribution and test paths. It neither imports from nor modifies the V0.1 `src/c2c` package. Every phase stops for review and is frozen as an annotated tag whose message carries that phase's gate status verbatim from its report.
+V0.2 is built as an isolated tree (`v0_2/`) with its own distribution and test paths. It neither imports from nor modifies the V0.1 `src/c2c` package. Phases 1–4 have annotated tags; later phase outcomes are recorded in their reports and evidence, without implying that every diagnostic gate is a tagged final baseline.
 
-V0.2 以隔离目录 `v0_2/` 构建，拥有独立的发行包与测试路径，既不导入、也不修改 V0.1 的 `src/c2c` 包。每个阶段都停止待审，并以 annotated tag 冻结，tag message 原样引用该阶段报告中的 gate 状态。
+V0.2 以隔离目录 `v0_2/` 构建，拥有独立的发行包与测试路径，既不导入、也不修改 V0.1 的 `src/c2c` 包。阶段 1–4 有 annotated tag；后续阶段的结论记录在报告与证据中，不把每个诊断门禁误称为最终基线标签。
 
-| Phase | Tag | Commit | Deliverable | Report | Gate |
+| Phase | Publication | Commit or status | Deliverable | Report | Gate |
 |---|---|---|---|---|---|
 | 1 + 2 | `v0.2-phase1-2` | `020f681` | Refactor plan, V0.1 manifest, architecture, 16 contracts | [PHASE2_REVIEW_SUMMARY.md](PHASE2_REVIEW_SUMMARY.md) | `PHASE2_GATE_STATUS = PASS` |
 | 3 | `v0.2-phase3` | `9aa8cc0` | Isolated constant-C thermal core and integrator | [PHASE3_THERMAL_REPORT.md](PHASE3_THERMAL_REPORT.md) | `PHASE3_GATE_STATUS = PASS` |
-| 4 | `v0.2-phase4` | `5588915` | Physical coolant loop, pump network, finite CDU/FWS | [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md) | `PHASE4_GATE_STATUS = PASS` (generic fixture only) |
+| 4 | `v0.2-phase4` | `5588915` | Physical coolant loop, pump network, finite CDU/FWS | [PHASE4_PHYSICAL_PLANT_REPORT.md](PHASE4_PHYSICAL_PLANT_REPORT.md) | `PASS` (generic fixture) |
+| 4.1 | this repository | completed | Coupled pump→flow→Rth→temperature authority | [PHASE4_1_CONTROL_AUTHORITY_REPORT.md](PHASE4_1_CONTROL_AUTHORITY_REPORT.md) | `PASS` (generic fixture) |
+| 5 original | this repository | historical, superseded | First feedback baseline | [Phase 5 report](PHASE5_FEEDBACK_CONTROL_REPORT.md) | Implementation `PASS`; superseded after ownership audit |
+| 5R1 | this repository | historical baseline | PLC-only command ownership and lineage | [Phase 5R1 report](PHASE5_R1_ACTUATION_OWNERSHIP_REPORT.md) | `APPROVED`; ownership remains authoritative |
+| 5.1 original | this repository | historical, blocked | Original-baseline ownership audit | [Phase 5.1 report](PHASE5_1_FEEDBACK_QUALIFICATION_REPORT.md) | `BLOCKED`; found superseded-baseline defect |
+| 5.1R | this repository | blocked | Frozen R1 nominal regulation qualification | [Phase 5.1R report](PHASE5_1R_FEEDBACK_QUALIFICATION_REPORT.md) | `NO_FEASIBLE_REGULATION_REGION` |
+| 5R2 | this repository | completed | Authority-derived generic target and coarse candidate reselection | [Phase 5R2 report](PHASE5_R2_CONTROL_TARGET_REVISION_REPORT.md) | Target revision completed |
+| 5R2.1 | this repository | completed | Three-mesh outer-selection robustness | [Phase 5R2.1 report](PHASE5_R2_1_SELECTION_ROBUSTNESS_REPORT.md) | Robust selection: `outer_a` |
+| 5R2.2 | this repository | historical R2 baseline frozen | `inner_b + outer_a` R2 baseline | [Phase 5R2.2 report](PHASE5_R2_2_FINAL_BASELINE_REPORT.md) | `PASS` for R2; not the final R5 baseline |
+| 5.1R2 | this repository | blocked | Frozen R2 nominal regulation qualification | [Phase 5.1R2 report](PHASE5_1R2_FEEDBACK_QUALIFICATION_REPORT.md) | `BLOCKED_FINAL_FROZEN_FEEDBACK_NOMINAL_REGULATION_NOT_QUALIFIED` |
+| 5R3 | this repository | diagnostic complete | Bidirectional controller revision | [Phase 5R3 report](PHASE5_R3_BIDIRECTIONAL_CONTROLLER_REVISION_REPORT.md) | `NO_EXISTING_OUTER_CANDIDATE_HAS_BIDIRECTIONAL_REGULATION` |
+| 5R4–R4.2 | this repository | diagnostic complete | Symmetric PI tuning and feasibility boundary | [R4](PHASE5_R4_BIDIRECTIONAL_PID_RETUNING_REPORT.md), [R4.1](PHASE5_R4_1_LOCAL_PI_REFINEMENT_REPORT.md), [R4.2](PHASE5_R4_2_PI_FEASIBILITY_BOUNDARY_REPORT.md) | No symmetric PI overlap in registered domain |
+| 5R5 | this repository | candidate, not final baseline | Directional PI candidate | [Phase 5R5 report](PHASE5_R5_DIRECTIONAL_PI_REPORT.md) | `DIRECTIONAL_PI_CANDIDATE_FOUND_WITH_STARTUP_SAFETY_BLOCKER` |
+| 5R5.1 | this repository | diagnostic complete | Cold-start Safety handoff audit | [Phase 5R5.1 report](PHASE5_R5_1_COLD_START_SAFETY_HANDOFF_AUDIT_REPORT.md) | `NORMAL_HANDOFF_MISCLASSIFIED_AS_DEGRADED` |
+| 5R5.2 | this repository | diagnostic complete | Silent tracking-fault separation | [Phase 5R5.2 report](PHASE5_R5_2_SILENT_TRACKING_FAULT_QUALIFICATION_REPORT.md) | `MEASURED_ONLY_SILENT_TRACKING_FAULT_SEPARATION_PASS` |
 
-Phase 1 and Phase 2 share a single commit; no separate Phase 1 commit exists. Phase 4.1 and Phases 5–9 are not published.
+Phase 1 and Phase 2 share a single commit; no separate Phase 1 commit exists. Phase 5R5.2 is diagnostic evidence only: production Safety remains unchanged, the R5 controller remains a candidate, and independent qualification has not happened. Phase 6 feedforward and Phases 7–9 have not started.
 
-阶段 1 与阶段 2 共用一个 commit，不存在单独的 Phase 1 commit。Phase 4.1 与 Phase 5–9 尚未发布。
+阶段 1 与阶段 2 共用一个 commit，不存在单独的 Phase 1 commit。Phase 5R5.2 只是诊断证据：生产 Safety 未修改，R5 控制器仍是候选方案，尚未独立验证。Phase 6 前馈与 Phase 7–9 尚未开始。
 
 A phase gate covers only the evidence in its own report. No PASS above means GB300/OEM calibration, equipment safety, or an authorized controller. Every V0.2 fixture parameter stays `ENGINEERING_ASSUMPTION / NUMERICAL_TEST_FIXTURE / UNVALIDATED` until replaced by measured or vendor data. The published evidence reproduces directly from the repository root:
 
@@ -30,14 +44,88 @@ A phase gate covers only the evidence in its own report. No PASS above means GB3
 .venv\Scripts\python -m pytest -c v0_2/pyproject.toml v0_2/tests -W error
 .venv\Scripts\python -m v0_2.examples.phase3_validation
 .venv\Scripts\python -m v0_2.examples.phase4_validation
+.venv\Scripts\python -m v0_2.examples.phase4_1_validation
+.venv\Scripts\python -m v0_2.examples.phase5_validation
+.venv\Scripts\python -m v0_2.examples.phase5_evidence
+.venv\Scripts\python -m v0_2.examples.phase5_r1_ownership_audit
+.venv\Scripts\python -m v0_2.examples.phase5_r1_evidence
+.venv\Scripts\python -m v0_2.examples.phase5_r2_evidence
+.venv\Scripts\python -m v0_2.examples.phase5_r2_figures
+.venv\Scripts\python -m v0_2.examples.phase5_r2_1_robustness
+.venv\Scripts\python -m v0_2.examples.phase5_r2_2_finalization
+.venv\Scripts\python -m v0_2.examples.phase5_r3_bidirectional_selection
+.venv\Scripts\python -m v0_2.examples.phase5_r4_outer_tuning
+.venv\Scripts\python -m v0_2.examples.phase5_r4_1_local_pi_refinement
+.venv\Scripts\python -m v0_2.examples.phase5_r4_2_pi_boundary_search
+.venv\Scripts\python -m v0_2.examples.phase5_r5_directional_pi
+.venv\Scripts\python -m v0_2.examples.phase5_r5_1_safety_handoff_audit
+.venv\Scripts\python -m v0_2.examples.phase5_r5_2_silent_tracking_fault
 .venv\Scripts\python -m pip install -e "./v0_2[figures]"
 .venv\Scripts\python -m v0_2.examples.phase4_figures
 .venv\Scripts\python -m v0_2.examples.phase4_report
+.venv\Scripts\python -m v0_2.tools.generate_docs_figures
 ```
 
 The plotting extra is opt-in; the thermal core itself still runs on numpy alone.
 
 绘图依赖为可选安装项；热学核心本身仍只依赖 numpy。
+
+## System architecture / 系统架构
+
+![C2C-DTB system architecture](docs/results/system_architecture.svg)
+
+Phase 3's fixed `R_test_bath` exists only in its isolated thermal-validation fixture. The Phase 4/4.1/5 physical path uses advective coolant volumes, a solved pump/network operating point, finite CDU inventory, HX and FWS boundary. Phase 5 uses feedback only; any Phase 6 feedforward path is planned, not implemented.
+
+Phase 3 的固定 `R_test_bath` 仅用于独立热学验证夹具。Phase 4/4.1/5 的物理路径使用有限体积冷却液输运、泵与网络交点、有限 CDU 储液、HX 与 FWS 边界。Phase 5 仅实现反馈控制；Phase 6 前馈仍为规划项。
+
+## Validation summary / 验证摘要
+
+| Layer | Verified in the generic fixture | Evidence | Status |
+|---|---|---|---|
+| Thermal core | RC storage, flow-dependent coldplate, conservative integration | [Phase 3 report](PHASE3_THERMAL_REPORT.md) | PASS |
+| Physical coolant loop | Hydraulics, finite transport, CDU/HX/FWS, mass/energy | [Phase 4 report](PHASE4_PHYSICAL_PLANT_REPORT.md) | PASS |
+| Control authority | Actual speed changes flow, Rth, heat transfer and temperature | [Phase 4.1 report](PHASE4_1_CONTROL_AUTHORITY_REPORT.md) | PASS |
+| Original feedback baseline | Historical measured-state Phase 5 implementation | [Phase 5 report](PHASE5_FEEDBACK_CONTROL_REPORT.md) | PASS historically; superseded |
+| Ownership correction | Safety constraints → PLC command → actuator, with lineage | [Phase 5R1 report](PHASE5_R1_ACTUATION_OWNERSHIP_REPORT.md) | APPROVED / FROZEN |
+| Feedback qualification restart | Plant-only bracket scan for frozen 305 K target | [Phase 5.1R report](PHASE5_1R_FEEDBACK_QUALIFICATION_REPORT.md) | BLOCKED: `NO_FEASIBLE_REGULATION_REGION` |
+| Control-target revision | 120 W/device frozen-authority midpoint and original-grid reselection | [Phase 5R2 report](PHASE5_R2_CONTROL_TARGET_REVISION_REPORT.md) | STOP FOR USER REVIEW: outer changed to `outer_b` |
+
+These statuses validate software behavior and numerical fixtures, not physical hardware.
+
+## Selected results / 精选结果
+
+![Coldplate Rth versus flow](docs/results/coldplate_rth_flow.png)
+
+![Pump and system operating points](docs/results/hydraulic_operating_point.png)
+
+![Phase 4.1 control authority](docs/results/phase4_1_control_authority.png)
+
+![Branch restriction](docs/results/branch_restriction.png)
+
+![Phase 5 feedback-only combined stress holdout](docs/results/phase5_closed_loop_holdout.png)
+
+`HOLDOUT-01-combined` is a **capacity-limited combined stress holdout**. It is retained as
+historical Phase 5 evidence and is not nominal-settling or Phase 5.1 qualification evidence.
+
+Phase 5.1R did not generate a nominal regulation figure: even at the lowest registered
+120 W/device load and maximum frozen pump speed, the plant-only final-window mean was 312.697 K,
+so the frozen 305 K target was not bracketed. The stress image below remains stress evidence only.
+
+Phase 5R2 derived `313.71072595542387 K` from the exact midpoint of the frozen plant's 120 W/device
+authority window. This is a generic numerical research setpoint, not a hardware limit. At that stage,
+reselection changed the outer candidate from `outer_c` to `outer_b` and paused finalization for review.
+
+Phase 5R2.1 found `outer_b` to be the raw IAE winner at all three registered meshes, but the
+candidate differences are smaller than the pre-registered numerical-sensitivity bound. Applying the
+next frozen criterion, control total variation, selected `outer_a`. R2.1 paused finalization for review;
+it did not validate nominal settling.
+
+After explicit user authorization, Phase 5R2.2 completed historical stress characterization,
+three-mesh selected-baseline convergence, ownership regression and ten-run stability, then froze the
+historical generic R2 baseline as `inner_b + outer_a`. Phase 5.1R2 subsequently ran and was blocked;
+the R2 freeze is not nominal-settling or hardware validation. Phase 6 has not started.
+
+Every image is generated by repository Python code and captioned as a generic numerical fixture. See the [results gallery](docs/results/README.md) and [figure manifest](docs/results/FIGURE_MANIFEST.md) for commands, source data and limitations.
 
 ## Phase 4 evidence at a glance / Phase 4 证据速览
 
@@ -61,7 +149,13 @@ The same figures, their captions and the underlying result tables are also rende
 
 同样的图、图注与结果表另有一个自包含页面：**[PHASE4_EVIDENCE.html](PHASE4_EVIDENCE.html)**。该页为单文件、无外部依赖，下载后用浏览器打开即可。GitHub 对 `.html` 文件显示源码而非渲染结果，本仓库也未启用 GitHub Pages，因此该页不会在此内联展示。可用 `python -m v0_2.examples.phase4_report` 重新生成。
 
-## Run the benchmark
+## Legacy V0.1 benchmark
+
+This command runs the older simplified V0.1 feedback/feedforward model. It does not execute the
+V0.2 architecture and is not Phase 6 feedforward evidence; V0.2 Phase 6 has not started.
+
+以下命令运行旧版简化的 V0.1 反馈/前馈模型，不执行 V0.2 架构，也不能作为 Phase 6 前馈证据；
+V0.2 Phase 6 尚未开始。
 
 ```powershell
 py -3.11 -m venv .venv

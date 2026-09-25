@@ -1,0 +1,1789 @@
+{
+  "schema": "phase5-r3-bidirectional-selection-evidence-v1",
+  "status": "NO_EXISTING_OUTER_CANDIDATE_HAS_BIDIRECTIONAL_REGULATION",
+  "blocking_classification": "NO_EXISTING_OUTER_CANDIDATE_HAS_BIDIRECTIONAL_REGULATION",
+  "registration_sha256": "7636af8958f6c87a2516ba1cc90ac357fd7f1812a4234ed97749a434c5a2bbf6",
+  "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+  "integrity": {
+    "status": "PASS",
+    "checks": {
+      "registration_frozen_before_execution": true,
+      "source_r2_baseline": true,
+      "source_phase5_1r2_registration": true,
+      "source_phase5_1r2_result": true,
+      "r2_referenced_hashes": true,
+      "target_unchanged": true,
+      "inner_unchanged": true,
+      "candidate_grid_exact": true,
+      "phase5_1r2_exam_reused": true,
+      "no_holdout_selection": true,
+      "no_new_gains": true
+    },
+    "registration_sha256": "7636af8958f6c87a2516ba1cc90ac357fd7f1812a4234ed97749a434c5a2bbf6",
+    "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+    "source_phase5_1r2_registration_sha256": "a7466babe2cd32a016db138dc83ccd1c9b9367ca6a3fd43af0f67490cab33c5b",
+    "source_phase5_1r2_result_sha256": "003bf73a0e37a6b046ef23c34f6d4d6d8640e76f535a090472051a883e2a6b53"
+  },
+  "target_k": 313.71072595542387,
+  "inner": {
+    "id": "inner_b",
+    "kp": 1.5e-05,
+    "ki": 4e-06,
+    "kd": 0.0
+  },
+  "outer_candidates": [
+    {
+      "id": "outer_a",
+      "kp": 1000.0,
+      "ki": 20.0,
+      "kd": 0.0
+    },
+    {
+      "id": "outer_b",
+      "kp": 2000.0,
+      "ki": 40.0,
+      "kd": 0.0
+    },
+    {
+      "id": "outer_c",
+      "kp": 3000.0,
+      "ki": 60.0,
+      "kd": 0.0
+    }
+  ],
+  "preparation": {
+    "WARM_CAPTURE": {
+      "case": "WARM_CAPTURE",
+      "speed_fraction": 0.3,
+      "duration_s": 180.0,
+      "qualified_window_mean_max_device_k": 314.7243256180813,
+      "historical_endpoint_k": 314.7243256180813,
+      "reproduction_error_k": 0.0,
+      "reproduction_tolerance_k": 0.01,
+      "reproduction_status": "PASS",
+      "normalized_initial_state_sha256": "463c24e3d0b70ec0f52292fc6276d9978b933131aba9bb1868453dac55273f7f",
+      "normalized_initial_state": {
+        "time_ns": 0,
+        "solids": [
+          {
+            "node_id": "b0:die",
+            "temperature_k": 315.07446347854744,
+            "energy_j": 3014.8926957094886
+          },
+          {
+            "node_id": "b0:package",
+            "temperature_k": 309.28629813353314,
+            "energy_j": 3714.519253413255
+          },
+          {
+            "node_id": "b0:plate",
+            "temperature_k": 306.38940980581674,
+            "energy_j": 5111.527844653392
+          },
+          {
+            "node_id": "b1:die",
+            "temperature_k": 315.07446347854744,
+            "energy_j": 3014.8926957094886
+          },
+          {
+            "node_id": "b1:package",
+            "temperature_k": 309.28629813353314,
+            "energy_j": 3714.519253413255
+          },
+          {
+            "node_id": "b1:plate",
+            "temperature_k": 306.38940980581674,
+            "energy_j": 5111.527844653392
+          }
+        ],
+        "volumes": [
+          {
+            "volume_id": "cdu",
+            "specific_enthalpy_j_kg": -15886.913997670035,
+            "temperature_k": 296.0282715005825,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "supply_0",
+            "specific_enthalpy_j_kg": -15596.482028051241,
+            "temperature_k": 296.1008794929872,
+            "pressure_pa": 105712.5
+          },
+          {
+            "volume_id": "supply_1",
+            "specific_enthalpy_j_kg": -15298.722862611157,
+            "temperature_k": 296.1753192843472,
+            "pressure_pa": 105375.0
+          },
+          {
+            "volume_id": "supply_manifold",
+            "specific_enthalpy_j_kg": -14993.913706946387,
+            "temperature_k": 296.2515215732634,
+            "pressure_pa": 105375.0
+          },
+          {
+            "volume_id": "return_manifold",
+            "specific_enthalpy_j_kg": -11486.073758481552,
+            "temperature_k": 297.1284815603796,
+            "pressure_pa": 102000.0
+          },
+          {
+            "volume_id": "return_0",
+            "specific_enthalpy_j_kg": -11170.43243088392,
+            "temperature_k": 297.207391892279,
+            "pressure_pa": 101662.5
+          },
+          {
+            "volume_id": "return_1",
+            "specific_enthalpy_j_kg": -10845.128629322744,
+            "temperature_k": 297.2887178426693,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "b0:local",
+            "specific_enthalpy_j_kg": -12388.76282866272,
+            "temperature_k": 296.9028092928343,
+            "pressure_pa": 103687.5
+          },
+          {
+            "volume_id": "b0:return",
+            "specific_enthalpy_j_kg": -11792.138535371805,
+            "temperature_k": 297.05196536615705,
+            "pressure_pa": 102000.0
+          },
+          {
+            "volume_id": "b1:local",
+            "specific_enthalpy_j_kg": -12388.76282866272,
+            "temperature_k": 296.9028092928343,
+            "pressure_pa": 103687.5
+          },
+          {
+            "volume_id": "b1:return",
+            "specific_enthalpy_j_kg": -11792.138535371805,
+            "temperature_k": 297.05196536615705,
+            "pressure_pa": 102000.0
+          }
+        ]
+      },
+      "controller_prehistory": "none",
+      "integrator_warm_start": false
+    },
+    "COLD_CAPTURE": {
+      "case": "COLD_CAPTURE",
+      "speed_fraction": 0.9,
+      "duration_s": 180.0,
+      "qualified_window_mean_max_device_k": 312.69712629276637,
+      "historical_endpoint_k": 312.69712629276637,
+      "reproduction_error_k": 0.0,
+      "reproduction_tolerance_k": 0.01,
+      "reproduction_status": "PASS",
+      "normalized_initial_state_sha256": "f0ae5c3f34a1db08438a64f464308f43d23c3891c15dad93ec26986fa37544d5",
+      "normalized_initial_state": {
+        "time_ns": 0,
+        "solids": [
+          {
+            "node_id": "b0:die",
+            "temperature_k": 312.78345829604956,
+            "energy_j": 2556.691659209912
+          },
+          {
+            "node_id": "b0:package",
+            "temperature_k": 306.8224274440674,
+            "energy_j": 2728.9709776269547
+          },
+          {
+            "node_id": "b0:plate",
+            "temperature_k": 303.52770882768624,
+            "energy_j": 2822.167062148992
+          },
+          {
+            "node_id": "b1:die",
+            "temperature_k": 312.78345829604956,
+            "energy_j": 2556.691659209912
+          },
+          {
+            "node_id": "b1:package",
+            "temperature_k": 306.8224274440674,
+            "energy_j": 2728.9709776269547
+          },
+          {
+            "node_id": "b1:plate",
+            "temperature_k": 303.52770882768624,
+            "energy_j": 2822.167062148992
+          }
+        ],
+        "volumes": [
+          {
+            "volume_id": "cdu",
+            "specific_enthalpy_j_kg": -15166.070170790363,
+            "temperature_k": 296.2084824573024,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "supply_0",
+            "specific_enthalpy_j_kg": -15066.358710430222,
+            "temperature_k": 296.23341032239244,
+            "pressure_pa": 140812.5
+          },
+          {
+            "volume_id": "supply_1",
+            "specific_enthalpy_j_kg": -14965.773998991153,
+            "temperature_k": 296.2585565002522,
+            "pressure_pa": 137775.0
+          },
+          {
+            "volume_id": "supply_manifold",
+            "specific_enthalpy_j_kg": -14867.340836655103,
+            "temperature_k": 296.2831647908362,
+            "pressure_pa": 137775.0
+          },
+          {
+            "volume_id": "return_manifold",
+            "specific_enthalpy_j_kg": -13450.764622475845,
+            "temperature_k": 296.63730884438104,
+            "pressure_pa": 107400.0
+          },
+          {
+            "volume_id": "return_0",
+            "specific_enthalpy_j_kg": -13347.207840615738,
+            "temperature_k": 296.66319803984607,
+            "pressure_pa": 104362.5
+          },
+          {
+            "volume_id": "return_1",
+            "specific_enthalpy_j_kg": -13242.77063119689,
+            "temperature_k": 296.6893073422008,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "b0:local",
+            "specific_enthalpy_j_kg": -13763.191948344456,
+            "temperature_k": 296.5592020129139,
+            "pressure_pa": 122587.5
+          },
+          {
+            "volume_id": "b0:return",
+            "specific_enthalpy_j_kg": -13550.41556274864,
+            "temperature_k": 296.61239610931284,
+            "pressure_pa": 107400.0
+          },
+          {
+            "volume_id": "b1:local",
+            "specific_enthalpy_j_kg": -13763.191948344456,
+            "temperature_k": 296.5592020129139,
+            "pressure_pa": 122587.5
+          },
+          {
+            "volume_id": "b1:return",
+            "specific_enthalpy_j_kg": -13550.41556274864,
+            "temperature_k": 296.61239610931284,
+            "pressure_pa": 107400.0
+          }
+        ]
+      },
+      "controller_prehistory": "none",
+      "integrator_warm_start": false
+    }
+  },
+  "preparation_state_hashes_match_phase5_1r2": true,
+  "run_matrix": [
+    {
+      "candidate_id": "outer_a",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 200000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4222872354098,
+        "minimum_device_k": 313.5701347850751,
+        "final_window_mean_measured_k": 313.73229475263395,
+        "final_window_minimum_measured_k": 313.5701347850751,
+        "final_window_maximum_measured_k": 313.90185232214054,
+        "final_measured_device_k": 313.5701347850751,
+        "temperature_iae_k_s": 169.88001920768474,
+        "temperature_ise_k2_s": 222.99750222850207,
+        "settling_time_s": 125.4,
+        "dp_tracking_iae_pa_s": 465202.9098661301,
+        "pump_electrical_j": 1578.94149143002,
+        "control_total_variation": 0.4369106881409088,
+        "actuator_tracking_iae_fraction_s": 0.559238443936884,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.6000000000000001,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.6000000000000001,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7219942228254131,
+        "final_pump_actual": 0.7222661835849643,
+        "final_pump_measured": 0.7222661835849643,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 1.9999999999999998,
+          "NORMAL": 177.99999999999844
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.197691166358709e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_a",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 200000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.0803589504827,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 312.95525447372586,
+        "final_window_minimum_measured_k": 312.908434112393,
+        "final_window_maximum_measured_k": 312.99879791654655,
+        "final_measured_device_k": 312.908434112393,
+        "temperature_iae_k_s": 129.67502629467066,
+        "temperature_ise_k2_s": 94.65630057886942,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 144371.27103887053,
+        "pump_electrical_j": 1634.4033854640552,
+        "control_total_variation": 0.2832597089128126,
+        "actuator_tracking_iae_fraction_s": 0.3006311907962603,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.4,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.4,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6737275180009313,
+        "final_pump_actual": 0.6741760132051144,
+        "final_pump_measured": 0.6741760132051144,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.1999999999999997,
+          "DEGRADED": 0.4,
+          "NORMAL": 177.39999999999847
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 4.891305138698954e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_a",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 100000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4222360801249,
+        "minimum_device_k": 313.5694633483744,
+        "final_window_mean_measured_k": 313.7320902823715,
+        "final_window_minimum_measured_k": 313.5694633483744,
+        "final_window_maximum_measured_k": 313.90103470014657,
+        "final_measured_device_k": 313.5694633483744,
+        "temperature_iae_k_s": 169.77235114656222,
+        "temperature_ise_k2_s": 222.8054112299558,
+        "settling_time_s": 125.2,
+        "dp_tracking_iae_pa_s": 465185.1541533442,
+        "pump_electrical_j": 1579.3063367311504,
+        "control_total_variation": 0.43690344900628947,
+        "actuator_tracking_iae_fraction_s": 0.5592134467487304,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.5,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.5,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7219603373411635,
+        "final_pump_actual": 0.7222325231671071,
+        "final_pump_measured": 0.7222325231671071,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.0000000000000004,
+          "NORMAL": 177.99999999999417
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.633751243294682e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_a",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 100000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.08091160072644,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 312.9557128748738,
+        "final_window_minimum_measured_k": 312.90868240919974,
+        "final_window_maximum_measured_k": 312.99915672611826,
+        "final_measured_device_k": 312.90868240919974,
+        "temperature_iae_k_s": 129.60207792789262,
+        "temperature_ise_k2_s": 94.55563655220406,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 144380.23700764496,
+        "pump_electrical_j": 1633.90510152552,
+        "control_total_variation": 0.2830594166985472,
+        "actuator_tracking_iae_fraction_s": 0.30077175840303594,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.30000000000000004,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.30000000000000004,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6737471948936243,
+        "final_pump_actual": 0.6741956347670688,
+        "final_pump_measured": 0.6741956347670688,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.2000000000000006,
+          "DEGRADED": 0.4,
+          "NORMAL": 177.3999999999942
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.239328970674251e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_a",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 50000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4222210960678,
+        "minimum_device_k": 313.56913191222804,
+        "final_window_mean_measured_k": 313.7319944694737,
+        "final_window_minimum_measured_k": 313.56913191222804,
+        "final_window_maximum_measured_k": 313.90063219227693,
+        "final_measured_device_k": 313.56913191222804,
+        "temperature_iae_k_s": 169.7200108472288,
+        "temperature_ise_k2_s": 222.71281964138416,
+        "settling_time_s": 125.2,
+        "dp_tracking_iae_pa_s": 465176.5682739867,
+        "pump_electrical_j": 1579.4850322510488,
+        "control_total_variation": 0.4369000957429848,
+        "actuator_tracking_iae_fraction_s": 0.559201377264121,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.45,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.45,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7219437912966489,
+        "final_pump_actual": 0.7222160888416073,
+        "final_pump_measured": 0.7222160888416073,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.000000000000001,
+          "NORMAL": 178.00000000000622
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.727507357278228e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_a",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 50000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.0811832894545,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 312.9559402971578,
+        "final_window_minimum_measured_k": 312.9088046036292,
+        "final_window_maximum_measured_k": 312.9993334447963,
+        "final_measured_device_k": 312.9088046036292,
+        "temperature_iae_k_s": 129.56630367560751,
+        "temperature_ise_k2_s": 94.50631288462068,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 144394.18112150193,
+        "pump_electrical_j": 1633.6682885661353,
+        "control_total_variation": 0.2828992767407543,
+        "actuator_tracking_iae_fraction_s": 0.3009073048852745,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.25,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.25,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6737568491251781,
+        "final_pump_actual": 0.67420526189615,
+        "final_pump_measured": 0.67420526189615,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.2,
+          "DEGRADED": 0.39999999999999997,
+          "NORMAL": 177.4000000000061
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.610356623719781e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 200000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.41981824737076,
+        "minimum_device_k": 313.4833800905911,
+        "final_window_mean_measured_k": 313.6491201700783,
+        "final_window_minimum_measured_k": 313.4833800905911,
+        "final_window_maximum_measured_k": 313.82350117122417,
+        "final_measured_device_k": 313.4833800905911,
+        "temperature_iae_k_s": 165.3161002420457,
+        "temperature_ise_k2_s": 216.21930723253666,
+        "settling_time_s": 120.6,
+        "dp_tracking_iae_pa_s": 490420.6516488252,
+        "pump_electrical_j": 1710.0952965990452,
+        "control_total_variation": 0.47805007347494904,
+        "actuator_tracking_iae_fraction_s": 0.5964925787282772,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.6000000000000001,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.6000000000000001,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7386602474879563,
+        "final_pump_actual": 0.7392865901104916,
+        "final_pump_measured": 0.7392865901104916,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 1.9999999999999998,
+          "NORMAL": 177.99999999999844
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.777849310106831e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 200000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.0946549553961,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 313.00103534640965,
+        "final_window_minimum_measured_k": 312.96354603927125,
+        "final_window_maximum_measured_k": 313.0358728786623,
+        "final_measured_device_k": 312.96354603927125,
+        "temperature_iae_k_s": 126.63177982131144,
+        "temperature_ise_k2_s": 90.458275309211,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 165777.1945068472,
+        "pump_electrical_j": 1563.1052266270856,
+        "control_total_variation": 0.32757966454606335,
+        "actuator_tracking_iae_fraction_s": 0.33238427745345206,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.4,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.4,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6489968859680703,
+        "final_pump_actual": 0.6498300036827787,
+        "final_pump_measured": 0.6498300036827787,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.1999999999999997,
+          "DEGRADED": 0.4,
+          "NORMAL": 177.39999999999847
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.408153924690851e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 100000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4197719871642,
+        "minimum_device_k": 313.4827584461923,
+        "final_window_mean_measured_k": 313.64895827585315,
+        "final_window_minimum_measured_k": 313.4827584461923,
+        "final_window_maximum_measured_k": 313.8226956755679,
+        "final_measured_device_k": 313.4827584461923,
+        "temperature_iae_k_s": 165.21584055985488,
+        "temperature_ise_k2_s": 216.03378292292552,
+        "settling_time_s": 120.6,
+        "dp_tracking_iae_pa_s": 490389.1062223925,
+        "pump_electrical_j": 1710.360077454477,
+        "control_total_variation": 0.47803197902618716,
+        "actuator_tracking_iae_fraction_s": 0.5964481149974938,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.5,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.5,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7385938945933361,
+        "final_pump_actual": 0.7392205977135775,
+        "final_pump_measured": 0.7392205977135775,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.0000000000000004,
+          "NORMAL": 177.99999999999417
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.350919707325374e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 100000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.09519444921324,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 313.00145086055744,
+        "final_window_minimum_measured_k": 312.9637796264336,
+        "final_window_maximum_measured_k": 313.03622288056226,
+        "final_measured_device_k": 312.9637796264336,
+        "temperature_iae_k_s": 126.55915592769685,
+        "temperature_ise_k2_s": 90.3604654960733,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 165767.75988564867,
+        "pump_electrical_j": 1562.6349394380447,
+        "control_total_variation": 0.3273474815011963,
+        "actuator_tracking_iae_fraction_s": 0.3325061039789475,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.30000000000000004,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.30000000000000004,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6490371478039173,
+        "final_pump_actual": 0.6498701599538156,
+        "final_pump_measured": 0.6498701599538156,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.2000000000000006,
+          "DEGRADED": 0.4,
+          "NORMAL": 177.3999999999942
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.42115685675526e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 50000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4197612478281,
+        "minimum_device_k": 313.48245084886395,
+        "final_window_mean_measured_k": 313.6488828392063,
+        "final_window_minimum_measured_k": 313.48245084886395,
+        "final_window_maximum_measured_k": 313.82229850546423,
+        "final_measured_device_k": 313.48245084886395,
+        "temperature_iae_k_s": 165.16724036835043,
+        "temperature_ise_k2_s": 215.94438483570158,
+        "settling_time_s": 120.4,
+        "dp_tracking_iae_pa_s": 490373.9698216497,
+        "pump_electrical_j": 1710.4902839181107,
+        "control_total_variation": 0.47802353446176454,
+        "actuator_tracking_iae_fraction_s": 0.596426684268202,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.45,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.45,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7385614597918131,
+        "final_pump_actual": 0.7391883428139524,
+        "final_pump_measured": 0.7391883428139524,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.000000000000001,
+          "NORMAL": 178.00000000000622
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.619700260695026e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 50000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.09545976753174,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 313.0016569265539,
+        "final_window_minimum_measured_k": 312.96389465763855,
+        "final_window_maximum_measured_k": 313.03639531671917,
+        "final_measured_device_k": 312.96389465763855,
+        "temperature_iae_k_s": 126.52354037271563,
+        "temperature_ise_k2_s": 90.31254495014439,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 165772.67559155394,
+        "pump_electrical_j": 1562.4119117146229,
+        "control_total_variation": 0.32717155056642666,
+        "actuator_tracking_iae_fraction_s": 0.3326285148491096,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.25,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.25,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6490569024069666,
+        "final_pump_actual": 0.6498898627726791,
+        "final_pump_measured": 0.6498898627726791,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.2,
+          "DEGRADED": 0.39999999999999997,
+          "NORMAL": 177.4000000000061
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.537561520441159e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 200000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4174614808339,
+        "minimum_device_k": 313.40842602885886,
+        "final_window_mean_measured_k": 313.5759774099066,
+        "final_window_minimum_measured_k": 313.40842602885886,
+        "final_window_maximum_measured_k": 313.75341492779893,
+        "final_measured_device_k": 313.40842602885886,
+        "temperature_iae_k_s": 162.00062493359678,
+        "temperature_ise_k2_s": 210.63161298455347,
+        "settling_time_s": 116.6,
+        "dp_tracking_iae_pa_s": 515454.6174180675,
+        "pump_electrical_j": 1834.1727758905956,
+        "control_total_variation": 0.523999110693923,
+        "actuator_tracking_iae_fraction_s": 0.6336134586464055,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.6000000000000001,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.6000000000000001,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7510284552859267,
+        "final_pump_actual": 0.7520676758363392,
+        "final_pump_measured": 0.7520676758363392,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 1.9999999999999998,
+          "NORMAL": 177.99999999999844
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.345270892576082e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 200000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.1110437398109,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 313.04646616808105,
+        "final_window_minimum_measured_k": 313.01807756197184,
+        "final_window_maximum_measured_k": 313.07278426075686,
+        "final_measured_device_k": 313.01807756197184,
+        "temperature_iae_k_s": 123.59821429094478,
+        "temperature_ise_k2_s": 86.47505499138595,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 185822.39062235435,
+        "pump_electrical_j": 1497.250706836173,
+        "control_total_variation": 0.36743493894887325,
+        "actuator_tracking_iae_fraction_s": 0.3620694969197071,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.4,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.4,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6259219643362719,
+        "final_pump_actual": 0.6270741955521897,
+        "final_pump_measured": 0.6270741955521897,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.1999999999999997,
+          "DEGRADED": 0.4,
+          "NORMAL": 177.39999999999847
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.635527600134083e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 100000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4174208159996,
+        "minimum_device_k": 313.40785891748385,
+        "final_window_mean_measured_k": 313.5758575189557,
+        "final_window_minimum_measured_k": 313.40785891748385,
+        "final_window_maximum_measured_k": 313.7526272175295,
+        "final_measured_device_k": 313.40785891748385,
+        "temperature_iae_k_s": 161.90607201975882,
+        "temperature_ise_k2_s": 210.45206627091872,
+        "settling_time_s": 116.6,
+        "dp_tracking_iae_pa_s": 515411.354393013,
+        "pump_electrical_j": 1834.3167057004698,
+        "control_total_variation": 0.5239649730066653,
+        "actuator_tracking_iae_fraction_s": 0.6335519880390148,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.5,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.5,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7509309493183927,
+        "final_pump_actual": 0.7519705793664507,
+        "final_pump_measured": 0.7519705793664507,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.0000000000000004,
+          "NORMAL": 177.99999999999417
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.664659852300247e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 100000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.11156133475396,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 313.0468345520575,
+        "final_window_minimum_measured_k": 313.01829003137385,
+        "final_window_maximum_measured_k": 313.0731217408646,
+        "final_measured_device_k": 313.01829003137385,
+        "temperature_iae_k_s": 123.52618104038146,
+        "temperature_ise_k2_s": 86.38035660340262,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 185794.05691248618,
+        "pump_electrical_j": 1496.8103610131138,
+        "control_total_variation": 0.3671700124543047,
+        "actuator_tracking_iae_fraction_s": 0.36216385194144834,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.30000000000000004,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.30000000000000004,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6259833268077414,
+        "final_pump_actual": 0.627135424083501,
+        "final_pump_measured": 0.627135424083501,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.2000000000000006,
+          "DEGRADED": 0.4,
+          "NORMAL": 177.3999999999942
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.37610844730807e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "case": "WARM_CAPTURE",
+      "physics_dt_ns": 50000000,
+      "metrics": {
+        "initial_measured_device_k": 315.07446347854744,
+        "peak_device_k": 315.4174112745015,
+        "minimum_device_k": 313.4075775957364,
+        "final_window_mean_measured_k": 313.575802203904,
+        "final_window_minimum_measured_k": 313.4075775957364,
+        "final_window_maximum_measured_k": 313.75223823966036,
+        "final_measured_device_k": 313.4075775957364,
+        "temperature_iae_k_s": 161.86027640820538,
+        "temperature_ise_k2_s": 210.365584699496,
+        "settling_time_s": 116.6,
+        "dp_tracking_iae_pa_s": 515390.5341907997,
+        "pump_electrical_j": 1834.3882114217706,
+        "control_total_variation": 0.5239489343177222,
+        "actuator_tracking_iae_fraction_s": 0.6335226858461299,
+        "command_saturation_duration_s": 0.2,
+        "actual_saturation_duration_s": 0.45,
+        "command_minimum_bound_time_s": 0.2,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.45,
+        "actual_maximum_bound_time_s": 0.0,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.7508832413755617,
+        "final_pump_actual": 0.7519230773376745,
+        "final_pump_measured": 0.7519230773376745,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.000000000000001,
+          "NORMAL": 178.00000000000622
+        },
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 1,
+        "safety_events": [
+          [
+            2000000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.625437893286289e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": true,
+        "final_window_pass": true,
+        "final_saturation_pass": true,
+        "safety_pass": true,
+        "conservation_pass": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "case": "COLD_CAPTURE",
+      "physics_dt_ns": 50000000,
+      "metrics": {
+        "initial_measured_device_k": 312.78345829604956,
+        "peak_device_k": 313.11181636148405,
+        "minimum_device_k": 312.78345829604956,
+        "final_window_mean_measured_k": 313.04701719789006,
+        "final_window_minimum_measured_k": 313.01839475950453,
+        "final_window_maximum_measured_k": 313.0732880784068,
+        "final_measured_device_k": 313.01839475950453,
+        "temperature_iae_k_s": 123.49085424441915,
+        "temperature_ise_k2_s": 86.3339649314274,
+        "settling_time_s": null,
+        "dp_tracking_iae_pa_s": 185789.69874331017,
+        "pump_electrical_j": 1496.6020563887357,
+        "control_total_variation": 0.36697778084935584,
+        "actuator_tracking_iae_fraction_s": 0.3622727820251367,
+        "command_saturation_duration_s": 0.0,
+        "actual_saturation_duration_s": 0.25,
+        "command_minimum_bound_time_s": 0.0,
+        "command_maximum_bound_time_s": 0.0,
+        "actual_minimum_bound_time_s": 0.0,
+        "actual_maximum_bound_time_s": 0.25,
+        "final_window_command_bound_time_s": 0.0,
+        "final_window_actual_bound_time_s": 0.0,
+        "final_pump_command": 0.6260134359934562,
+        "final_pump_actual": 0.6271654674479301,
+        "final_pump_measured": 0.6271654674479301,
+        "safety_state_duration_s": {
+          "FF_DISABLED": 2.2,
+          "DEGRADED": 0.39999999999999997,
+          "NORMAL": 177.4000000000061
+        },
+        "safety_states": [
+          "DEGRADED",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "safety_event_count": 3,
+        "safety_events": [
+          [
+            200000000,
+            "DEGRADED",
+            [
+              "ACTUATOR_TRACKING_PENDING"
+            ]
+          ],
+          [
+            600000000,
+            "FF_DISABLED",
+            [
+              "RECOVERY_QUALIFICATION"
+            ]
+          ],
+          [
+            2600000000,
+            "NORMAL",
+            []
+          ]
+        ],
+        "max_mass_residual_kg_s": 2.7755575615628914e-17,
+        "max_energy_residual_j": 5.909441824769601e-10,
+        "ownership_lineage_pass": true,
+        "control_direction_pass": true,
+        "settling_pass": false,
+        "final_window_pass": false,
+        "final_saturation_pass": true,
+        "safety_pass": false,
+        "conservation_pass": true,
+        "status": "FAIL"
+      }
+    }
+  ],
+  "run_matrix_summary": {
+    "expected_runs": 18,
+    "completed_runs": 18,
+    "invalid_runs": 0
+  },
+  "candidate_decisions": [
+    {
+      "candidate_id": "outer_a",
+      "status": "BIDIRECTIONAL_FEASIBILITY_FAIL",
+      "failure_reasons": [
+        "SETTLING",
+        "FINAL_WINDOW_TEMPERATURE",
+        "SAFETY"
+      ],
+      "thermal_control_pass_without_safety": false,
+      "safety_only_failure": false,
+      "aggregates_by_dt_ns": {
+        "200000000": {
+          "temperature_iae_k_s": 299.55504550235537,
+          "control_total_variation": 0.7201703970537214,
+          "pump_electrical_j": 3213.3448768940752,
+          "warm_temperature_iae_k_s": 169.88001920768474,
+          "cold_temperature_iae_k_s": 129.67502629467066
+        },
+        "100000000": {
+          "temperature_iae_k_s": 299.37442907445484,
+          "control_total_variation": 0.7199628657048367,
+          "pump_electrical_j": 3213.2114382566706,
+          "warm_temperature_iae_k_s": 169.77235114656222,
+          "cold_temperature_iae_k_s": 129.60207792789262
+        },
+        "50000000": {
+          "temperature_iae_k_s": 299.2863145228363,
+          "control_total_variation": 0.719799372483739,
+          "pump_electrical_j": 3213.153320817184,
+          "warm_temperature_iae_k_s": 169.7200108472288,
+          "cold_temperature_iae_k_s": 129.56630367560751
+        }
+      }
+    },
+    {
+      "candidate_id": "outer_b",
+      "status": "BIDIRECTIONAL_FEASIBILITY_FAIL",
+      "failure_reasons": [
+        "SETTLING",
+        "FINAL_WINDOW_TEMPERATURE",
+        "SAFETY"
+      ],
+      "thermal_control_pass_without_safety": false,
+      "safety_only_failure": false,
+      "aggregates_by_dt_ns": {
+        "200000000": {
+          "temperature_iae_k_s": 291.94788006335716,
+          "control_total_variation": 0.8056297380210125,
+          "pump_electrical_j": 3273.200523226131,
+          "warm_temperature_iae_k_s": 165.3161002420457,
+          "cold_temperature_iae_k_s": 126.63177982131144
+        },
+        "100000000": {
+          "temperature_iae_k_s": 291.77499648755173,
+          "control_total_variation": 0.8053794605273834,
+          "pump_electrical_j": 3272.9950168925216,
+          "warm_temperature_iae_k_s": 165.21584055985488,
+          "cold_temperature_iae_k_s": 126.55915592769685
+        },
+        "50000000": {
+          "temperature_iae_k_s": 291.6907807410661,
+          "control_total_variation": 0.8051950850281913,
+          "pump_electrical_j": 3272.9021956327333,
+          "warm_temperature_iae_k_s": 165.16724036835043,
+          "cold_temperature_iae_k_s": 126.52354037271563
+        }
+      }
+    },
+    {
+      "candidate_id": "outer_c",
+      "status": "BIDIRECTIONAL_FEASIBILITY_FAIL",
+      "failure_reasons": [
+        "SETTLING",
+        "FINAL_WINDOW_TEMPERATURE",
+        "SAFETY"
+      ],
+      "thermal_control_pass_without_safety": false,
+      "safety_only_failure": false,
+      "aggregates_by_dt_ns": {
+        "200000000": {
+          "temperature_iae_k_s": 285.59883922454156,
+          "control_total_variation": 0.8914340496427963,
+          "pump_electrical_j": 3331.4234827267687,
+          "warm_temperature_iae_k_s": 162.00062493359678,
+          "cold_temperature_iae_k_s": 123.59821429094478
+        },
+        "100000000": {
+          "temperature_iae_k_s": 285.4322530601403,
+          "control_total_variation": 0.89113498546097,
+          "pump_electrical_j": 3331.1270667135836,
+          "warm_temperature_iae_k_s": 161.90607201975882,
+          "cold_temperature_iae_k_s": 123.52618104038146
+        },
+        "50000000": {
+          "temperature_iae_k_s": 285.35113065262453,
+          "control_total_variation": 0.890926715167078,
+          "pump_electrical_j": 3330.9902678105063,
+          "warm_temperature_iae_k_s": 161.86027640820538,
+          "cold_temperature_iae_k_s": 123.49085424441915
+        }
+      }
+    }
+  ],
+  "numerical_uncertainty": [
+    {
+      "pair": "outer_a_vs_outer_b",
+      "canonical_iae_difference_k_s": 7.607165438998209,
+      "numerical_uncertainty_bound_k_s": 0.17233029810421385,
+      "thermal_iae_result": "NUMERICALLY_DISTINGUISHABLE"
+    },
+    {
+      "pair": "outer_a_vs_outer_c",
+      "canonical_iae_difference_k_s": 13.956206277813806,
+      "numerical_uncertainty_bound_k_s": 0.16923695913430947,
+      "thermal_iae_result": "NUMERICALLY_DISTINGUISHABLE"
+    },
+    {
+      "pair": "outer_b_vs_outer_c",
+      "canonical_iae_difference_k_s": 6.349040838815597,
+      "numerical_uncertainty_bound_k_s": 0.16533815400140384,
+      "thermal_iae_result": "NUMERICALLY_DISTINGUISHABLE"
+    }
+  ],
+  "selection_hierarchy": [
+    "bidirectional_feasibility",
+    "canonical_0.2s_total_thermal_iae_with_numerical_uncertainty_veto",
+    "canonical_0.2s_total_control_variation",
+    "canonical_0.2s_total_pump_electrical_energy",
+    "candidate_id"
+  ],
+  "selection": {
+    "candidate_id": null,
+    "reason": "NO_EXISTING_OUTER_CANDIDATE_HAS_BIDIRECTIONAL_REGULATION"
+  },
+  "safety": {
+    "common_startup_safety_acceptance_blocker": false,
+    "rule_unchanged_from_phase5_1r2": true
+  },
+  "ownership": {
+    "schema": "phase5-r1-ownership-audit-v1",
+    "static": {
+      "checks": {
+        "plc_is_unique_actuator_command_constructor": true,
+        "actuator_call_receives_plc_result_only": true,
+        "actuator_has_no_safety_decision_dependency": true,
+        "safety_does_not_construct_actuator_command": true,
+        "supervisor_does_not_construct_actuator_command": true,
+        "outer_feedback_does_not_construct_actuator_command": true
+      },
+      "actuator_command_constructor_modules": [
+        "v0_2/control/inner_loop.py"
+      ],
+      "actuator_call_arguments": [
+        "held_plc_result.actuator_command"
+      ],
+      "status": "PASS"
+    },
+    "runtime": {
+      "checks": {
+        "normal_all_commands_from_plc": true,
+        "fault_all_commands_from_plc": true,
+        "normal_lineage_complete": true,
+        "fault_lineage_complete": true,
+        "fault_path_exercised": true,
+        "degraded_path_through_plc": true,
+        "pressure_path_through_plc": true,
+        "protected_path_through_plc": true,
+        "emergency_paths_same_tick": true
+      },
+      "scenarios": {
+        "normal": {
+          "command_count": 201,
+          "command_producers": [
+            "PLC"
+          ],
+          "all_commands_from_plc": true,
+          "lineage_complete": true,
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "first_command": {
+            "command_id": "actuator-command:0:1",
+            "created_ns": 0,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:0:1",
+            "accepted_target_id": "accepted-target:0:1",
+            "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+            "requested_speed": 0.7,
+            "applied_command_before_actuator_dynamics": 0.7,
+            "reason": "NORMAL_DP_FEEDBACK",
+            "mode": "NORMAL",
+            "source_ids": [
+              "plc-cycle:0:1",
+              "accepted-target:0:1",
+              "safety-envelope:0:FF_DISABLED"
+            ]
+          },
+          "last_command": {
+            "command_id": "actuator-command:40000000000:201",
+            "created_ns": 40000000000,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:40000000000:201",
+            "accepted_target_id": "accepted-target:40000000000:201",
+            "safety_envelope_id": "safety-envelope:40000000000:NORMAL",
+            "requested_speed": 0.9,
+            "applied_command_before_actuator_dynamics": 0.9,
+            "reason": "NORMAL_DP_FEEDBACK",
+            "mode": "NORMAL",
+            "source_ids": [
+              "plc-cycle:40000000000:201",
+              "accepted-target:40000000000:201",
+              "safety-envelope:40000000000:NORMAL"
+            ]
+          }
+        },
+        "fault": {
+          "command_count": 31,
+          "command_producers": [
+            "PLC"
+          ],
+          "all_commands_from_plc": true,
+          "lineage_complete": true,
+          "safety_states": [
+            "DEGRADED",
+            "FAULT",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "first_command": {
+            "command_id": "actuator-command:0:1",
+            "created_ns": 0,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:0:1",
+            "accepted_target_id": "accepted-target:0:1",
+            "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+            "requested_speed": 0.648,
+            "applied_command_before_actuator_dynamics": 0.648,
+            "reason": "NORMAL_DP_FEEDBACK",
+            "mode": "NORMAL",
+            "source_ids": [
+              "plc-cycle:0:1",
+              "accepted-target:0:1",
+              "safety-envelope:0:FF_DISABLED"
+            ]
+          },
+          "last_command": {
+            "command_id": "actuator-command:6000000000:31",
+            "created_ns": 6000000000,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:6000000000:31",
+            "accepted_target_id": "accepted-target:6000000000:31",
+            "safety_envelope_id": "safety-envelope:6000000000:FAULT",
+            "requested_speed": 0.5,
+            "applied_command_before_actuator_dynamics": 0.5,
+            "reason": "SAFETY_EXACT_SPEED_ENVELOPE",
+            "mode": "EMERGENCY",
+            "source_ids": [
+              "plc-cycle:6000000000:31",
+              "accepted-target:6000000000:31",
+              "safety-envelope:6000000000:FAULT"
+            ]
+          }
+        }
+      },
+      "direct_safety_modes": {
+        "degraded": {
+          "state": "DEGRADED",
+          "producer_module": "PLC",
+          "speed": 0.3,
+          "mode": "NORMAL",
+          "same_tick": true
+        },
+        "pressure_restriction": {
+          "state": "FAULT",
+          "producer_module": "PLC",
+          "speed": 0.5,
+          "mode": "EMERGENCY",
+          "same_tick": true
+        },
+        "protected": {
+          "state": "PROTECTED",
+          "producer_module": "PLC",
+          "speed": 0.5,
+          "mode": "EMERGENCY",
+          "same_tick": true
+        }
+      },
+      "status": "PASS"
+    },
+    "status": "PASS"
+  },
+  "ownership_all_runs_pass": true,
+  "conservation": {
+    "status": "PASS",
+    "max_mass_residual_kg_s": 2.7755575615628914e-17,
+    "max_energy_residual_j": 5.909441824769601e-10
+  },
+  "no_truth_or_future_access": true,
+  "holdout_used_in_selection": false,
+  "historical_holdout_executed": false,
+  "new_gains_created": false,
+  "r2_baseline_overwritten": false,
+  "phase6_authorized": false
+}

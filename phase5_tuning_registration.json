@@ -1,0 +1,22 @@
+{
+  "schema": "phase5-feedback-tuning-v1",
+  "provenance": "NUMERICAL_TEST_FIXTURE / ENGINEERING_ASSUMPTION / UNVALIDATED; not OEM gains",
+  "registered_before_holdout": true,
+  "selection_priority": ["physical_and_safety_feasibility", "thermal_tracking_iae", "control_total_variation", "pump_electrical_energy"],
+  "tie_break": "candidate_id_lexicographic",
+  "inner_candidates": [
+    {"id": "inner_a", "kp": 0.000010, "ki": 0.000002, "kd": 0.0},
+    {"id": "inner_b", "kp": 0.000015, "ki": 0.000004, "kd": 0.0}
+  ],
+  "outer_candidates": [
+    {"id": "outer_a", "kp": 1000.0, "ki": 20.0, "kd": 0.0},
+    {"id": "outer_b", "kp": 2000.0, "ki": 40.0, "kd": 0.0},
+    {"id": "outer_c", "kp": 3000.0, "ki": 60.0, "kd": 0.0}
+  ],
+  "training_ids": ["TUNE-01-load", "TUNE-02-fws-temperature", "TUNE-03-fws-flow", "TUNE-04-branch-restriction"],
+  "holdout_ids": ["HOLDOUT-01-combined"],
+  "training_duration_ns": 40000000000,
+  "holdout_duration_ns": 60000000000,
+  "physics_dt_ns": 200000000,
+  "hard_constraints": {"max_energy_residual_j": 0.001, "max_mass_residual_kg_s": 1e-8, "minimum_headroom_k": -5.0, "max_safety_fault_events": 0}
+}

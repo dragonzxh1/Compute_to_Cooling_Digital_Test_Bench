@@ -1,0 +1,80 @@
+{
+  "schema": "phase5-r1-feedback-baseline-v1",
+  "status": "FROZEN_GENERIC_TEST_BASELINE_REVISION_1_NOT_OEM",
+  "inner_gains": {
+    "kp": 1.5e-05,
+    "ki": 4e-06,
+    "kd": 0.0
+  },
+  "outer_gains": {
+    "kp": 3000.0,
+    "ki": 60.0,
+    "kd": 0.0
+  },
+  "inner_candidate_id": "inner_b",
+  "outer_candidate_id": "outer_c",
+  "sample_period_ns": 200000000,
+  "outer_period_ns": 1000000000,
+  "plc_period_ns": 200000000,
+  "actuator_period_ns": 200000000,
+  "actuator": {
+    "minimum": 0.3,
+    "maximum": 0.9,
+    "tau_s": 1.0,
+    "ramp_per_s": 0.2,
+    "command_delay_ns": 200000000,
+    "owner_id": "fixture_pump_vfd",
+    "meaning": "physical actuator response, not network/telemetry delay",
+    "source": "NUMERICAL_TEST_FIXTURE",
+    "provenance": "ENGINEERING_ASSUMPTION/UNVALIDATED"
+  },
+  "sensor": {
+    "sample_ns": 200000000,
+    "local_delay_ns": 0,
+    "max_age_ns": 1000000000,
+    "source": "NUMERICAL_TEST_FIXTURE/UNVALIDATED"
+  },
+  "safety": {
+    "control_target_k": 305,
+    "operating_limit_k": 340,
+    "derate_k": 335,
+    "hard_k": 345,
+    "derate_clear_k": 333,
+    "hard_clear_k": 343,
+    "minimum_flow_kg_s": 0.02,
+    "maximum_dp_pa": 60000,
+    "fallback_dp_pa": 25725,
+    "minimum_dp_pa": 6000,
+    "maximum_target_dp_pa": 50000,
+    "maximum_target_rate_pa_s": 30000,
+    "fault_speed": 0.5,
+    "dwell_ns": 2000000000,
+    "recovery_samples": 5,
+    "source": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED"
+  },
+  "thermal_control_target_k": 305,
+  "base_dp_pa": 25725,
+  "tuning_registration_sha256": "9a937de41a8466f4a6f33a06de899929576a3653217901084a2fb7675f0fe00f",
+  "training_ids": [
+    "TUNE-01-load",
+    "TUNE-02-fws-temperature",
+    "TUNE-03-fws-flow",
+    "TUNE-04-branch-restriction"
+  ],
+  "holdout_ids": [
+    "HOLDOUT-01-combined"
+  ],
+  "code_sha256": "b79eaf9c7cdc2665856db87bd6a59b900eb2f31efb0b3a94112bbbe476152579",
+  "revision": 1,
+  "supersedes_status": "SUPERSEDED_DUE_TO_ACTUATION_OWNERSHIP_DEFECT",
+  "supersedes_original_baseline_sha256": "b14281edc630b49de1ddcfbff1894cfe129f75e1c6b891786dbeae02de73b033",
+  "original_baseline_file_sha256": "b14281edc630b49de1ddcfbff1894cfe129f75e1c6b891786dbeae02de73b033",
+  "original_control_core_sha256": "092b3ff035da69a95294543cdf716e4a025f506ab213543d1a640ed1d10db6d8",
+  "physics_period_ns": 200000000,
+  "safety_period_ns": 200000000,
+  "revision_registration_sha256": "9ef5cd97c2d4bf3f2540739a58d676bf2c64c4e6be0421fe8a21a4482cb36066",
+  "ownership_contract_version": "contracts/14 and 15 revision 1.1",
+  "command_provenance_schema_version": "phase5-r1-command-lineage-v1",
+  "historical_holdout_id": "HOLDOUT-01-combined",
+  "selection_evidence_sha256": "fe9f5e78cbf27197ffbe61ea68f7b5ab76264ae6f864fa0494b6fdc6d5c1c6d5"
+}

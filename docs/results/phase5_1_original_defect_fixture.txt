@@ -1,0 +1,16 @@
+# Historical source excerpt from the original Phase 5 frozen control core.
+# SHA-256 of the complete original control core:
+# 092b3ff035da69a95294543cdf716e4a025f506ab213543d1a640ed1d10db6d8
+
+@dataclass(frozen=True)
+class SafetyDecision:
+    forced_speed: float | None
+
+held_plc_command = plc.update(
+    now,
+    measured,
+    accepted_dp,
+    sensor_config.max_age_ns,
+    forced_speed=decision.forced_speed,
+)
+actuator.command(decision.forced_speed if decision.forced_speed is not None else held_plc_command, now)

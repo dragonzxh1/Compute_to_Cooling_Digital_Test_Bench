@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "c2c-dtb-thermal-v02"
-version = "0.2.0a4"
-description = "Isolated V0.2 thermal core and generic physical coolant-loop plant"
+version = "0.2.0a5"
+description = "Isolated V0.2 thermal/physical plant and feedback-control test bench"
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
 
@@ -15,7 +15,7 @@ dependencies = ["numpy>=1.26"]
 figures = ["matplotlib>=3.8"]
 
 [tool.setuptools]
-packages = ["v0_2", "v0_2.thermal", "v0_2.fluids", "v0_2.hydraulics", "v0_2.coolant", "v0_2.cdu", "v0_2.plant", "v0_2.examples"]
+packages = ["v0_2", "v0_2.thermal", "v0_2.fluids", "v0_2.hydraulics", "v0_2.coolant", "v0_2.cdu", "v0_2.plant", "v0_2.examples", "v0_2.control", "v0_2.actuators", "v0_2.measurement", "v0_2.safety", "v0_2.tools"]
 package-dir = {"v0_2" = "."}
 
 [tool.pytest.ini_options]

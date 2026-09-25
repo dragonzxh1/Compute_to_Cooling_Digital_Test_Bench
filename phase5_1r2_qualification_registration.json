@@ -1,0 +1,96 @@
+{
+  "schema": "phase5-1r2-final-frozen-feedback-qualification-registration-v1",
+  "status": "FROZEN_BEFORE_CLOSED_LOOP_QUALIFICATION",
+  "baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+  "finalization_evidence_sha256": "f33eb500ee224fbbd4a80b88affcaa77902ea08c33714c10ae4493c76d576208",
+  "target_k": 313.71072595542387,
+  "inner": {"id": "inner_b", "kp": 0.000015, "ki": 0.000004, "kd": 0.0},
+  "outer": {"id": "outer_a", "kp": 1000.0, "ki": 20.0, "kd": 0.0},
+  "workload_w_per_device": 120.0,
+  "qualification_cases": ["WARM_CAPTURE", "COLD_CAPTURE"],
+  "preparation": {
+    "duration_ns": 180000000000,
+    "physics_dt_ns": 200000000,
+    "warm_speed_fraction": 0.3,
+    "cold_speed_fraction": 0.9,
+    "endpoint_window_start_ns": 150000000000,
+    "endpoint_window_end_ns": 180000000000,
+    "endpoint_statistic": "mean maximum device temperature over final 30 seconds",
+    "historical_warm_endpoint_k": 314.7243256180813,
+    "historical_cold_endpoint_k": 312.69712629276637,
+    "endpoint_reproduction_tolerance_k": 0.01,
+    "initial_state_rule": "use the independently prepared open-loop final physical state, normalize its epoch to zero, and hash canonical state fields",
+    "controller_prehistory": "none",
+    "integrator_warm_start": false
+  },
+  "qualification_duration_ns": 180000000000,
+  "final_window_start_ns": 150000000000,
+  "final_window_end_ns": 180000000000,
+  "settling": {
+    "signal": "maximum released MEASURED device temperature",
+    "band_k": 0.5,
+    "continuous_dwell_ns": 15000000000,
+    "must_remain_in_band_through_end": true,
+    "finite_settling_time_required": true,
+    "adjacent_mesh_settling_time_tolerance_s": 2.0
+  },
+  "saturation": {
+    "minimum_speed_fraction": 0.3,
+    "maximum_speed_fraction": 0.9,
+    "bound_tolerance_fraction": 0.000001,
+    "initial_prepared_bound_occupancy_allowed": true,
+    "final_window_command_bound_time_s": 0.0,
+    "final_window_actual_bound_time_s": 0.0,
+    "final_actual_speed_must_be_strictly_interior": true
+  },
+  "safety_acceptance": {
+    "startup_state_allowed": "FF_DISABLED",
+    "qualified_states": ["NORMAL"],
+    "forbidden_states": ["DERATE_REQUESTED", "PROTECTED", "FAULT"],
+    "forbidden_reasons": ["CAPACITY_LIMITED", "SAFETY_OVERRIDE"],
+    "emergency_fallback_allowed": false
+  },
+  "control_direction": {
+    "evaluation_window_ns": 10000000000,
+    "minimum_dp_change_pa": 1.0,
+    "minimum_actual_speed_change_fraction": 0.0001,
+    "warm": "accepted DP and actual speed must increase from their starting values",
+    "cold": "accepted DP and actual speed must decrease from their starting values"
+  },
+  "physics_dt_ns": [200000000, 100000000, 50000000],
+  "nonphysics_clocks": {
+    "measurement_ns": 200000000,
+    "outer_ns": 1000000000,
+    "plc_ns": 200000000,
+    "safety_ns": 200000000,
+    "actuator_ns": 200000000
+  },
+  "continuous_metric_tolerances": {
+    "peak_device_k": 0.1,
+    "minimum_device_k": 0.1,
+    "final_window_mean_measured_k": 0.1,
+    "temperature_iae_k_s": 5.0,
+    "dp_tracking_iae_pa_s": 10000.0,
+    "pump_electrical_relative": 0.01,
+    "control_total_variation": 0.01,
+    "actuator_tracking_iae_fraction_s": 0.02,
+    "saturation_duration_s": 0.2
+  },
+  "convergence_rule": "every mesh must pass qualification; adjacent settling-time differences <=2.0 s; every 0.1-to-0.05 continuous-metric difference must satisfy the frozen tolerance",
+  "conservation_limits": {
+    "max_mass_residual_kg_s": 1e-8,
+    "max_absolute_step_energy_residual_j": 0.001
+  },
+  "repeatability": {
+    "canonical_case": "WARM_CAPTURE",
+    "physics_dt_ns": 200000000,
+    "runs": 10,
+    "identical_result_hash_required": true,
+    "retained_memory_span_limit_bytes": 3000000
+  },
+  "result_figure": "docs/results/phase5_1r2_nominal_regulation.png",
+  "result_json": "phase5_1r2_nominal_result.json",
+  "historical_stress_role": "separate R2 stress evidence; never a nominal qualification substitute",
+  "retuning_allowed": false,
+  "phase6_authorized": false
+}

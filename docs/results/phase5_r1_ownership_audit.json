@@ -1,0 +1,154 @@
+{
+  "schema": "phase5-r1-ownership-audit-v1",
+  "static": {
+    "checks": {
+      "plc_is_unique_actuator_command_constructor": true,
+      "actuator_call_receives_plc_result_only": true,
+      "actuator_has_no_safety_decision_dependency": true,
+      "safety_does_not_construct_actuator_command": true,
+      "supervisor_does_not_construct_actuator_command": true,
+      "outer_feedback_does_not_construct_actuator_command": true
+    },
+    "actuator_command_constructor_modules": [
+      "v0_2/control/inner_loop.py"
+    ],
+    "actuator_call_arguments": [
+      "held_plc_result.actuator_command"
+    ],
+    "status": "PASS"
+  },
+  "runtime": {
+    "checks": {
+      "normal_all_commands_from_plc": true,
+      "fault_all_commands_from_plc": true,
+      "normal_lineage_complete": true,
+      "fault_lineage_complete": true,
+      "fault_path_exercised": true,
+      "degraded_path_through_plc": true,
+      "pressure_path_through_plc": true,
+      "protected_path_through_plc": true,
+      "emergency_paths_same_tick": true
+    },
+    "scenarios": {
+      "normal": {
+        "command_count": 201,
+        "command_producers": [
+          "PLC"
+        ],
+        "all_commands_from_plc": true,
+        "lineage_complete": true,
+        "safety_states": [
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "first_command": {
+          "command_id": "actuator-command:0:1",
+          "created_ns": 0,
+          "producer_module": "PLC",
+          "plc_cycle_id": "plc-cycle:0:1",
+          "accepted_target_id": "accepted-target:0:1",
+          "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+          "requested_speed": 0.7,
+          "applied_command_before_actuator_dynamics": 0.7,
+          "reason": "NORMAL_DP_FEEDBACK",
+          "mode": "NORMAL",
+          "source_ids": [
+            "plc-cycle:0:1",
+            "accepted-target:0:1",
+            "safety-envelope:0:FF_DISABLED"
+          ]
+        },
+        "last_command": {
+          "command_id": "actuator-command:40000000000:201",
+          "created_ns": 40000000000,
+          "producer_module": "PLC",
+          "plc_cycle_id": "plc-cycle:40000000000:201",
+          "accepted_target_id": "accepted-target:40000000000:201",
+          "safety_envelope_id": "safety-envelope:40000000000:NORMAL",
+          "requested_speed": 0.9,
+          "applied_command_before_actuator_dynamics": 0.9,
+          "reason": "NORMAL_DP_FEEDBACK",
+          "mode": "NORMAL",
+          "source_ids": [
+            "plc-cycle:40000000000:201",
+            "accepted-target:40000000000:201",
+            "safety-envelope:40000000000:NORMAL"
+          ]
+        }
+      },
+      "fault": {
+        "command_count": 31,
+        "command_producers": [
+          "PLC"
+        ],
+        "all_commands_from_plc": true,
+        "lineage_complete": true,
+        "safety_states": [
+          "DEGRADED",
+          "FAULT",
+          "FF_DISABLED",
+          "NORMAL"
+        ],
+        "first_command": {
+          "command_id": "actuator-command:0:1",
+          "created_ns": 0,
+          "producer_module": "PLC",
+          "plc_cycle_id": "plc-cycle:0:1",
+          "accepted_target_id": "accepted-target:0:1",
+          "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+          "requested_speed": 0.648,
+          "applied_command_before_actuator_dynamics": 0.648,
+          "reason": "NORMAL_DP_FEEDBACK",
+          "mode": "NORMAL",
+          "source_ids": [
+            "plc-cycle:0:1",
+            "accepted-target:0:1",
+            "safety-envelope:0:FF_DISABLED"
+          ]
+        },
+        "last_command": {
+          "command_id": "actuator-command:6000000000:31",
+          "created_ns": 6000000000,
+          "producer_module": "PLC",
+          "plc_cycle_id": "plc-cycle:6000000000:31",
+          "accepted_target_id": "accepted-target:6000000000:31",
+          "safety_envelope_id": "safety-envelope:6000000000:FAULT",
+          "requested_speed": 0.5,
+          "applied_command_before_actuator_dynamics": 0.5,
+          "reason": "SAFETY_EXACT_SPEED_ENVELOPE",
+          "mode": "EMERGENCY",
+          "source_ids": [
+            "plc-cycle:6000000000:31",
+            "accepted-target:6000000000:31",
+            "safety-envelope:6000000000:FAULT"
+          ]
+        }
+      }
+    },
+    "direct_safety_modes": {
+      "degraded": {
+        "state": "DEGRADED",
+        "producer_module": "PLC",
+        "speed": 0.3,
+        "mode": "NORMAL",
+        "same_tick": true
+      },
+      "pressure_restriction": {
+        "state": "FAULT",
+        "producer_module": "PLC",
+        "speed": 0.5,
+        "mode": "EMERGENCY",
+        "same_tick": true
+      },
+      "protected": {
+        "state": "PROTECTED",
+        "producer_module": "PLC",
+        "speed": 0.5,
+        "mode": "EMERGENCY",
+        "same_tick": true
+      }
+    },
+    "status": "PASS"
+  },
+  "status": "PASS"
+}

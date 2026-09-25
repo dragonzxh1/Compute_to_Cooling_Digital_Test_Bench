@@ -1,0 +1,82 @@
+{
+  "schema": "phase5-r5-directional-pi-registration-v1",
+  "status": "FROZEN_BEFORE_DIRECTIONAL_GAIN_EXECUTION",
+  "source_r4_2_registration_sha256": "6c24855e76b4967c9fa3327a57dfcf796a54e58447208c233dff0b07820b1070",
+  "source_r4_2_evidence_sha256": "f84ac5dfb2694ae815fdcb9f6f069b05613e1409171e326b7087954fb7ebb47b",
+  "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+  "source_r4_1_registration_sha256": "87ee1de2312de45fe598712f951c3e08621a06f68dbf5f64bceb98c46cdf8925",
+  "target_k": 313.71072595542387,
+  "inner": {"id": "inner_b", "kp": 0.000015, "ki": 0.000004, "kd": 0.0},
+  "outer_kp": 4500.0,
+  "outer_kd": 0.0,
+  "ki_hot_values": [110.0, 112.0, 114.0, 116.0],
+  "ki_cold_values": [124.0, 126.0, 128.0, 130.0],
+  "candidate_count": 16,
+  "candidate_id_format": "R5-KP4500-H{integer_ki_hot}-C{integer_ki_cold}",
+  "directional_law": {
+    "error": "maximum released MEASURED device temperature - target_k",
+    "blend_halfwidth_k": 0.1,
+    "cold_region": "e <= -0.1 K: Ki_eff = Ki_cold",
+    "hot_region": "e >= +0.1 K: Ki_eff = Ki_hot",
+    "blend_region": "-0.1 K < e < +0.1 K: alpha=(e+0.1)/0.2; Ki_eff=(1-alpha)*Ki_cold+alpha*Ki_hot",
+    "classification": "ENGINEERING_ASSUMPTION / NUMERICAL_TEST_FIXTURE / UNVALIDATED",
+    "single_integral_state": true,
+    "integrator_law": "existing TrackingPID integral += Ki_eff*error*dt + unchanged measured-applied tracking back-calculation*dt, with existing limit",
+    "no_reset_or_warm_start_at_direction_change": true,
+    "runtime_injection": "R5-only outer-controller substitution at run_feedback entry; historical core files and hashes unchanged"
+  },
+  "training_cases": ["WARM_CAPTURE", "COLD_CAPTURE"],
+  "frozen_exam_source": "phase5_r4_1_local_pi_refinement_registration.json",
+  "preparation_state_rule": "exact Phase 5.1R2 normalized warm/cold physical-state hashes; no controller prehistory or integral warm-start",
+  "stage_a": {
+    "physics_dt_ns": 200000000,
+    "expected_runs": 32,
+    "hard_feasibility": ["finite_settling_through_end", "final_window_inside_band", "final_command_and_actual_bound_time_zero", "final_pump_interior", "control_direction", "no_oscillation_or_divergence", "no_directional_gain_chatter", "integral_continuity", "finite_solver_state", "ownership", "mass_energy", "no_derate_protected_fault"],
+    "ranking_hierarchy": ["bidirectional_feasibility", "minimum_worst_side_settling_time", "minimum_settling_imbalance", "minimum_total_temperature_iae", "minimum_total_control_tv", "minimum_pump_electrical_energy", "fewest_full_directional_traversals", "candidate_id"],
+    "zero_feasible_status": "NO_R5_DIRECTIONAL_PI_CANDIDATE_FOUND"
+  },
+  "blend_audit": {
+    "outer_tick_log": "time,error,region,Ki_eff,integral_before,integral_after,measured_applied_echo,requested_DP_before,requested_DP_after,accepted_DP_before,accepted_DP_after",
+    "log_every_blend_entry_exit": true,
+    "integral_continuity_check": "post-tick integral equals unchanged TrackingPID back-calculation/integration formula; no direction-triggered initialize/reset",
+    "no_instantaneous_gain_jump_check": "at identical error and pre-update integral, proposed correction kp*error+integral+kd*derivative is independent of Ki_eff",
+    "chatter_window_start_ns": 120000000000,
+    "chatter_window_end_ns": 180000000000,
+    "complete_traversal": "an opposite HOT or COLD full-region state reached after a prior full-region state; intermediate BLEND movement alone is not counted",
+    "maximum_complete_traversals": 6,
+    "growing_control_tv_rejection": "final 60 s pump-command TV > 1.5 times preceding 60 s TV plus 0.05, and at least 4 complete traversals"
+  },
+  "safety": {
+    "policy_unchanged": true,
+    "common_cold_startup_signature_must_match_r4_1": true,
+    "common_startup_status": "STARTUP_SAFETY_BLOCKER_PENDING",
+    "common_startup_separate_from_thermal_feasibility": true,
+    "noncommon_degraded_hard_failure": true,
+    "forbidden_states": ["DERATE_REQUESTED", "PROTECTED", "FAULT"]
+  },
+  "stage_b": {
+    "trigger": "at least one Stage A BOTH_PASS candidate",
+    "maximum_finalists": 5,
+    "physics_dt_ns": [100000000, 50000000],
+    "both_cases_all_three_meshes_required": true,
+    "adjacent_settling_time_tolerance_s": 2.0,
+    "fine_pair_continuous_metric_tolerances_source": "phase5_r4_1_local_pi_refinement_registration.json"
+  },
+  "numerical_uncertainty": {
+    "sensitivity_pair_ns": [100000000, 50000000],
+    "veto": "candidate difference on ranking metric <= sum of both candidates' absolute 0.1-to-0.05 sensitivity: indistinguishable, advance to next criterion",
+    "ranking_metrics": ["worst_side_settling_time_s", "settling_imbalance_s", "total_temperature_iae_k_s", "total_control_total_variation", "total_pump_electrical_j", "total_directional_traversals"]
+  },
+  "selected_candidate_repeatability": {"physics_dt_ns": 200000000, "warm_runs": 10, "cold_runs": 10, "identical_result_hash_per_case": true, "retained_memory_span_limit_bytes": 3000000},
+  "holdout_used_for_tuning": false,
+  "independent_validation_claim_allowed": false,
+  "automatically_expand_grid": false,
+  "controller_structure_changes_beyond_directional_ki_authorized": false,
+  "phase6_authorized": false,
+  "final_feedback_baseline_freeze_authorized": false,
+  "stop_statuses": ["DIRECTIONAL_PI_CANDIDATE_FOUND_WITH_STARTUP_SAFETY_BLOCKER", "DIRECTIONAL_PI_CANDIDATE_FOUND", "NO_R5_DIRECTIONAL_PI_CANDIDATE_FOUND", "DIRECTIONAL_KI_REQUIRES_ANTI_WINDUP_ARCHITECTURE_CHANGE"],
+  "evidence_file": "phase5_r5_directional_pi_evidence.json",
+  "candidate_baseline_file": "phase5_r5_directional_pi_candidate_baseline.json",
+  "figure_file": "docs/results/phase5_r5_directional_pi_tuning.png",
+  "report_file": "PHASE5_R5_DIRECTIONAL_PI_REPORT.md"
+}

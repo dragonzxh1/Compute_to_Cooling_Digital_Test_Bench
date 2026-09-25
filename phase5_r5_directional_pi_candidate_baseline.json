@@ -1,0 +1,103 @@
+{
+  "schema": "phase5-r5-directional-pi-candidate-baseline-v1",
+  "status": "CANDIDATE_AWAITING_USER_REVIEW_NOT_FROZEN",
+  "target_k": 313.71072595542387,
+  "inner": {
+    "id": "inner_b",
+    "kp": 1.5e-05,
+    "ki": 4e-06,
+    "kd": 0.0
+  },
+  "outer_kp": 4500.0,
+  "ki_hot": 110.0,
+  "ki_cold": 130.0,
+  "kd": 0.0,
+  "blend_halfwidth_k": 0.1,
+  "blending_law": "-0.1 K < e < +0.1 K: alpha=(e+0.1)/0.2; Ki_eff=(1-alpha)*Ki_cold+alpha*Ki_hot",
+  "single_integral_state": true,
+  "warm_settling_time_s": 109.0,
+  "cold_settling_time_s": 127.2,
+  "worst_side_settling_time_s": 127.2,
+  "warm_temperature_iae_k_s": 157.73982214371435,
+  "cold_temperature_iae_k_s": 111.02784562916777,
+  "total_temperature_iae_k_s": 268.76766777288213,
+  "total_control_total_variation": 1.1340668883698768,
+  "total_pump_electrical_j": 3434.30416461439,
+  "settling_imbalance_s": 18.200000000000003,
+  "total_directional_traversals": 1,
+  "all_mesh_robustness": {
+    "candidate_id": "R5-KP4500-H110-C130",
+    "status": "PASS",
+    "cases": {
+      "WARM_CAPTURE": {
+        "status": "PASS",
+        "all_mesh_runs_pass": true,
+        "adjacent_settling_time_differences_s": [
+          0.0,
+          0.0
+        ],
+        "fine_pair_differences": {
+          "peak_device_k": 3.5057270793004136e-06,
+          "minimum_device_k": 0.00024056323798049561,
+          "final_window_mean_measured_k": 2.5215240725628973e-05,
+          "temperature_iae_k_s": 0.04038332903621722,
+          "dp_tracking_iae_pa_s": 29.821807637810707,
+          "pump_electrical_relative": 3.411217461425758e-05,
+          "control_total_variation": 6.397130303037457e-05,
+          "actuator_tracking_iae_fraction_s": 4.1913505238300175e-05,
+          "saturation_duration_s": 0.0
+        },
+        "tolerances": {
+          "peak_device_k": 0.1,
+          "minimum_device_k": 0.1,
+          "final_window_mean_measured_k": 0.1,
+          "temperature_iae_k_s": 5.0,
+          "dp_tracking_iae_pa_s": 10000.0,
+          "pump_electrical_relative": 0.01,
+          "control_total_variation": 0.01,
+          "actuator_tracking_iae_fraction_s": 0.02,
+          "saturation_duration_s": 0.2
+        }
+      },
+      "COLD_CAPTURE": {
+        "status": "PASS",
+        "all_mesh_runs_pass": true,
+        "adjacent_settling_time_differences_s": [
+          0.4000000000000057,
+          0.20000000000000284
+        ],
+        "fine_pair_differences": {
+          "peak_device_k": 6.332367320283083e-05,
+          "minimum_device_k": 0.0,
+          "final_window_mean_measured_k": 0.00010374412079272588,
+          "temperature_iae_k_s": 0.035683609719470155,
+          "dp_tracking_iae_pa_s": 38.825840577686904,
+          "pump_electrical_relative": 0.00013914808270273002,
+          "control_total_variation": 0.0002579060493022034,
+          "actuator_tracking_iae_fraction_s": 5.8779943773290544e-05,
+          "saturation_duration_s": 0.0
+        },
+        "tolerances": {
+          "peak_device_k": 0.1,
+          "minimum_device_k": 0.1,
+          "final_window_mean_measured_k": 0.1,
+          "temperature_iae_k_s": 5.0,
+          "dp_tracking_iae_pa_s": 10000.0,
+          "pump_electrical_relative": 0.01,
+          "control_total_variation": 0.01,
+          "actuator_tracking_iae_fraction_s": 0.02,
+          "saturation_duration_s": 0.2
+        }
+      }
+    },
+    "directional_all_meshes_pass": true
+  },
+  "startup_safety_blocker_status": "STARTUP_SAFETY_BLOCKER_PENDING",
+  "ownership_status": "PASS",
+  "conservation_status": "PASS",
+  "repeatability_status": "PASS",
+  "registration_sha256": "61f48d159f208ce4ba8a7e5e958ccad31b659e24bfee69f199133fdf2cf52791",
+  "evidence_sha256": "1707b3b854291e5eeb29a5ec10ad665ddc81dbc3f9f42a9ec8dededc84efc171",
+  "source_r4_2_evidence_sha256": "f84ac5dfb2694ae815fdcb9f6f069b05613e1409171e326b7087954fb7ebb47b",
+  "phase6_authorized": false
+}

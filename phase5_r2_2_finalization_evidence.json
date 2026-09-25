@@ -1,0 +1,327 @@
+{
+  "schema": "phase5-r2-2-finalization-evidence-v1",
+  "status": "PASS_FINAL_R2_BASELINE_FROZEN_AWAITING_USER_REVIEW",
+  "integrity": {
+    "status": "PASS",
+    "expected": {
+      "phase5_r1_baseline_sha256": "24a0198daf1e823bc6e8ff087e9a2d0491391afa3d5a4aed7b75a8a39800920d",
+      "phase5_r2_target_registration_sha256": "8b2bda84c6591e678d0fde972562e1f0dc7a10d0b22c82b76a10f34372c860a2",
+      "phase5_r2_selection_evidence_sha256": "94bd66cf9c66602ca37fd16d65f92b93536d7ff36974a8d10153723897c93e37",
+      "phase5_r2_candidate_baseline_sha256": "2f97cc36ff10d81be7a3a74a9c8d94cd2099222e5cd5c22ba09fad8f458f9a0a",
+      "phase5_r2_1_robustness_registration_sha256": "4942860bf06d991942b4ae5fbe1d8bfd9a28ded3263e77c716bfabaa5481f735",
+      "phase5_r2_1_robustness_evidence_sha256": "dafa0034206912172901de8655c147886cfb7296a3c24601dcc64e3696fa2052",
+      "r1_control_core_sha256": "b79eaf9c7cdc2665856db87bd6a59b900eb2f31efb0b3a94112bbbe476152579",
+      "frozen_plant_sha256": "d240051ccdc8681ba44d3fc8c30597ce920a761b834dabbdd5d5d93d9d016254"
+    },
+    "actual": {
+      "phase5_r1_baseline_sha256": "24a0198daf1e823bc6e8ff087e9a2d0491391afa3d5a4aed7b75a8a39800920d",
+      "phase5_r2_target_registration_sha256": "8b2bda84c6591e678d0fde972562e1f0dc7a10d0b22c82b76a10f34372c860a2",
+      "phase5_r2_selection_evidence_sha256": "94bd66cf9c66602ca37fd16d65f92b93536d7ff36974a8d10153723897c93e37",
+      "phase5_r2_candidate_baseline_sha256": "2f97cc36ff10d81be7a3a74a9c8d94cd2099222e5cd5c22ba09fad8f458f9a0a",
+      "phase5_r2_1_robustness_registration_sha256": "4942860bf06d991942b4ae5fbe1d8bfd9a28ded3263e77c716bfabaa5481f735",
+      "phase5_r2_1_robustness_evidence_sha256": "dafa0034206912172901de8655c147886cfb7296a3c24601dcc64e3696fa2052",
+      "r1_control_core_sha256": "b79eaf9c7cdc2665856db87bd6a59b900eb2f31efb0b3a94112bbbe476152579",
+      "frozen_plant_sha256": "d240051ccdc8681ba44d3fc8c30597ce920a761b834dabbdd5d5d93d9d016254"
+    }
+  },
+  "user_authorized_selection": {
+    "target_k": 313.71072595542387,
+    "inner": {
+      "id": "inner_b",
+      "kp": 1.5e-05,
+      "ki": 4e-06,
+      "kd": 0.0
+    },
+    "outer": {
+      "id": "outer_a",
+      "kp": 1000.0,
+      "ki": 20.0,
+      "kd": 0.0
+    }
+  },
+  "historical_stress": {
+    "status": "PASS",
+    "scenario_id": "HOLDOUT-01-combined",
+    "classification": "HISTORICAL STRESS CHARACTERIZATION",
+    "selection_input": false,
+    "metrics": {
+      "peak_device_k": 319.47806087915274,
+      "minimum_headroom_k": 20.521939120847264,
+      "temperature_iae_k_s": 94.99276759847699,
+      "temperature_ise_k2_s": 383.77052270395546,
+      "temperature_overshoot_k": 5.767334923728868,
+      "settling_time_s": null,
+      "dp_tracking_iae_pa_s": 123967.97090639918,
+      "pump_electrical_j": 720.2367196948386,
+      "control_total_variation": 0.42131134882594923,
+      "actuator_tracking_iae_fraction_s": 0.19009600411198874,
+      "saturation_duration_s": 0.0,
+      "max_mass_residual_kg_s": 4.1633363423443376e-17,
+      "max_energy_residual_j": 4.2437875436007744e-10,
+      "safety_event_count": 1,
+      "safety_fault_event_count": 0,
+      "safety_state_duration_s": {
+        "FF_DISABLED": 1.9999999999999998,
+        "NORMAL": 58.000000000000284
+      }
+    }
+  },
+  "selected_baseline_convergence": {
+    "status": "PASS",
+    "coarse_metrics": {
+      "peak_device_k": 316.0703184894692,
+      "minimum_headroom_k": 23.929681510530827,
+      "temperature_iae_k_s": 11.853641284061212,
+      "temperature_ise_k2_s": 18.92428638025098,
+      "temperature_overshoot_k": 2.359592534045305,
+      "settling_time_s": null,
+      "dp_tracking_iae_pa_s": 78528.22165933647,
+      "pump_electrical_j": 433.0257874683851,
+      "control_total_variation": 0.2985597915184054,
+      "actuator_tracking_iae_fraction_s": 0.12632921699352437,
+      "saturation_duration_s": 0.0,
+      "max_mass_residual_kg_s": 2.7755575615628914e-17,
+      "max_energy_residual_j": 6.132410135251121e-10,
+      "safety_event_count": 1,
+      "safety_fault_event_count": 0,
+      "safety_state_duration_s": {
+        "FF_DISABLED": 1.9999999999999998,
+        "NORMAL": 38.0
+      }
+    },
+    "medium_metrics": {
+      "peak_device_k": 316.0794092183967,
+      "minimum_headroom_k": 23.920590781603323,
+      "temperature_iae_k_s": 12.072246233523737,
+      "temperature_ise_k2_s": 19.439748993031476,
+      "temperature_overshoot_k": 2.3686832629728087,
+      "settling_time_s": null,
+      "dp_tracking_iae_pa_s": 78679.83746412364,
+      "pump_electrical_j": 433.45075683477006,
+      "control_total_variation": 0.29901108827804557,
+      "actuator_tracking_iae_fraction_s": 0.12655352433738895,
+      "saturation_duration_s": 0.0,
+      "max_mass_residual_kg_s": 2.7755575615628914e-17,
+      "max_energy_residual_j": 6.601936775041395e-10,
+      "safety_event_count": 1,
+      "safety_fault_event_count": 0,
+      "safety_state_duration_s": {
+        "FF_DISABLED": 2.0000000000000004,
+        "NORMAL": 38.00000000000027
+      }
+    },
+    "fine_metrics": {
+      "peak_device_k": 316.0839548311995,
+      "minimum_headroom_k": 23.91604516880051,
+      "temperature_iae_k_s": 12.182465538164081,
+      "temperature_ise_k2_s": 19.700561961384484,
+      "temperature_overshoot_k": 2.3732288757756237,
+      "settling_time_s": null,
+      "dp_tracking_iae_pa_s": 78755.86296854798,
+      "pump_electrical_j": 433.6613753973099,
+      "control_total_variation": 0.29923717325759747,
+      "actuator_tracking_iae_fraction_s": 0.12666598175821583,
+      "saturation_duration_s": 0.0,
+      "max_mass_residual_kg_s": 2.7755575615628914e-17,
+      "max_energy_residual_j": 5.716742634831462e-10,
+      "safety_event_count": 1,
+      "safety_fault_event_count": 0,
+      "safety_state_duration_s": {
+        "FF_DISABLED": 2.000000000000001,
+        "NORMAL": 37.99999999999998
+      }
+    },
+    "fine_pair_differences": {
+      "peak_device_k": 0.004545612802814958,
+      "temperature_iae_k_s": 0.11021930464034391,
+      "dp_tracking_iae_pa_s": 76.02550442433858,
+      "pump_electrical_relative": 0.000485675170740898,
+      "saturation_duration_s": 0.0,
+      "control_total_variation": 0.00022608497955189932,
+      "actuator_tracking_iae_fraction_s": 0.00011245742082688359
+    },
+    "tolerances": {
+      "peak_device_k": 0.1,
+      "temperature_iae_k_s": 5.0,
+      "dp_tracking_iae_pa_s": 10000.0,
+      "pump_electrical_relative": 0.01,
+      "saturation_duration_s": 0.2,
+      "control_total_variation": 0.01,
+      "actuator_tracking_iae_fraction_s": 0.02
+    }
+  },
+  "ownership": {
+    "status": "PASS",
+    "static": {
+      "checks": {
+        "plc_is_unique_actuator_command_constructor": true,
+        "actuator_call_receives_plc_result_only": true,
+        "actuator_has_no_safety_decision_dependency": true,
+        "safety_does_not_construct_actuator_command": true,
+        "supervisor_does_not_construct_actuator_command": true,
+        "outer_feedback_does_not_construct_actuator_command": true
+      },
+      "actuator_command_constructor_modules": [
+        "v0_2/control/inner_loop.py"
+      ],
+      "actuator_call_arguments": [
+        "held_plc_result.actuator_command"
+      ],
+      "status": "PASS"
+    },
+    "runtime": {
+      "checks": {
+        "normal_all_commands_from_plc": true,
+        "fault_all_commands_from_plc": true,
+        "normal_lineage_complete": true,
+        "fault_lineage_complete": true,
+        "fault_path_exercised": true,
+        "degraded_path_through_plc": true,
+        "pressure_path_through_plc": true,
+        "protected_path_through_plc": true,
+        "emergency_paths_same_tick": true
+      },
+      "scenarios": {
+        "normal": {
+          "command_count": 201,
+          "command_producers": [
+            "PLC"
+          ],
+          "all_commands_from_plc": true,
+          "lineage_complete": true,
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "first_command": {
+            "command_id": "actuator-command:0:1",
+            "created_ns": 0,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:0:1",
+            "accepted_target_id": "accepted-target:0:1",
+            "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+            "requested_speed": 0.7,
+            "applied_command_before_actuator_dynamics": 0.7,
+            "reason": "NORMAL_DP_FEEDBACK",
+            "mode": "NORMAL",
+            "source_ids": [
+              "plc-cycle:0:1",
+              "accepted-target:0:1",
+              "safety-envelope:0:FF_DISABLED"
+            ]
+          },
+          "last_command": {
+            "command_id": "actuator-command:40000000000:201",
+            "created_ns": 40000000000,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:40000000000:201",
+            "accepted_target_id": "accepted-target:40000000000:201",
+            "safety_envelope_id": "safety-envelope:40000000000:NORMAL",
+            "requested_speed": 0.9,
+            "applied_command_before_actuator_dynamics": 0.9,
+            "reason": "NORMAL_DP_FEEDBACK",
+            "mode": "NORMAL",
+            "source_ids": [
+              "plc-cycle:40000000000:201",
+              "accepted-target:40000000000:201",
+              "safety-envelope:40000000000:NORMAL"
+            ]
+          }
+        },
+        "fault": {
+          "command_count": 31,
+          "command_producers": [
+            "PLC"
+          ],
+          "all_commands_from_plc": true,
+          "lineage_complete": true,
+          "safety_states": [
+            "DEGRADED",
+            "FAULT",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "first_command": {
+            "command_id": "actuator-command:0:1",
+            "created_ns": 0,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:0:1",
+            "accepted_target_id": "accepted-target:0:1",
+            "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+            "requested_speed": 0.648,
+            "applied_command_before_actuator_dynamics": 0.648,
+            "reason": "NORMAL_DP_FEEDBACK",
+            "mode": "NORMAL",
+            "source_ids": [
+              "plc-cycle:0:1",
+              "accepted-target:0:1",
+              "safety-envelope:0:FF_DISABLED"
+            ]
+          },
+          "last_command": {
+            "command_id": "actuator-command:6000000000:31",
+            "created_ns": 6000000000,
+            "producer_module": "PLC",
+            "plc_cycle_id": "plc-cycle:6000000000:31",
+            "accepted_target_id": "accepted-target:6000000000:31",
+            "safety_envelope_id": "safety-envelope:6000000000:FAULT",
+            "requested_speed": 0.5,
+            "applied_command_before_actuator_dynamics": 0.5,
+            "reason": "SAFETY_EXACT_SPEED_ENVELOPE",
+            "mode": "EMERGENCY",
+            "source_ids": [
+              "plc-cycle:6000000000:31",
+              "accepted-target:6000000000:31",
+              "safety-envelope:6000000000:FAULT"
+            ]
+          }
+        }
+      },
+      "direct_safety_modes": {
+        "degraded": {
+          "state": "DEGRADED",
+          "producer_module": "PLC",
+          "speed": 0.3,
+          "mode": "NORMAL",
+          "same_tick": true
+        },
+        "pressure_restriction": {
+          "state": "FAULT",
+          "producer_module": "PLC",
+          "speed": 0.5,
+          "mode": "EMERGENCY",
+          "same_tick": true
+        },
+        "protected": {
+          "state": "PROTECTED",
+          "producer_module": "PLC",
+          "speed": 0.5,
+          "mode": "EMERGENCY",
+          "same_tick": true
+        }
+      },
+      "status": "PASS"
+    },
+    "validated_run_lineage_pass": true,
+    "frozen_r1_audit_sha256": "3db58e12480af4fd4c2522743cbdc144562d55d97096882369926f008628c8dd"
+  },
+  "repeated_stability": {
+    "status": "PASS",
+    "runs": 10,
+    "identical_hashes": true,
+    "hash": "dfca4f532c6425c6cb89c00dfb3ff7d826a5f0b1e79c05210e7c86a15d416701",
+    "bounded_retained_memory": true,
+    "retained_memory_span_bytes": 10646
+  },
+  "mass_energy": {
+    "max_mass_residual_kg_s": 4.1633363423443376e-17,
+    "max_energy_residual_j": 6.601936775041395e-10,
+    "status": "PASS"
+  },
+  "final_baseline": {
+    "path": "phase5_r2_feedback_baseline.json",
+    "file_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+    "payload_sha256": "a68733669ca07cfad6d591c2288d3f279727ba40e66a5d9b01386d2dc21439b3",
+    "supersedes_r1_baseline_sha256": "24a0198daf1e823bc6e8ff087e9a2d0491391afa3d5a4aed7b75a8a39800920d"
+  }
+}

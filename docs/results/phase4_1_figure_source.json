@@ -1,0 +1,465 @@
+{
+  "policy": {
+    "duration_s": 120.0,
+    "window_start_s": 96.0,
+    "dt_s": [
+      0.2,
+      0.1,
+      0.05
+    ],
+    "power_each_w": 240,
+    "restriction_multiplier": 1.5,
+    "min_temperature_effect_k": 0.05,
+    "fine_pair_temperature_uncertainty_k": 0.0022367602281860854
+  },
+  "sweep": {
+    "0.5": {
+      "b0": {
+        "branch": "b0",
+        "speed": 0.5,
+        "pump_dp_pa": 13125.0,
+        "total_mass_flow_kg_s": 0.13693063937629152,
+        "branch_mass_flow_kg_s": 0.06846531968814575,
+        "coldplate_rth_k_w": 0.08518393227241743,
+        "window_plate_to_coolant_w": 128.07182867189064,
+        "window_device_k": 325.37572191351427,
+        "window_plate_k": 308.86847671555336,
+        "peak_device_k": 326.29670347488394,
+        "final_device_k": 326.29670347488394,
+        "peak_plate_k": 309.56874855687795,
+        "final_plate_k": 309.56874855687795,
+        "final_return_k": 297.904170471448,
+        "pump_electrical_w": 3.3281752626181964,
+        "hx_final_w": 630.0022838126547,
+        "plate_to_coolant_integral_j": 8546.194413722507
+      },
+      "b1": {
+        "branch": "b1",
+        "speed": 0.5,
+        "pump_dp_pa": 13125.0,
+        "total_mass_flow_kg_s": 0.13693063937629152,
+        "branch_mass_flow_kg_s": 0.06846531968814575,
+        "coldplate_rth_k_w": 0.08518393227241743,
+        "window_plate_to_coolant_w": 128.07182867189064,
+        "window_device_k": 325.37572191351427,
+        "window_plate_k": 308.86847671555336,
+        "peak_device_k": 326.29670347488394,
+        "final_device_k": 326.29670347488394,
+        "peak_plate_k": 309.56874855687795,
+        "final_plate_k": 309.56874855687795,
+        "final_return_k": 297.904170471448,
+        "pump_electrical_w": 3.3281752626181964,
+        "hx_final_w": 630.0022838126547,
+        "plate_to_coolant_integral_j": 8546.194413722507
+      },
+      "energy_pass": true,
+      "mass_pass": true
+    },
+    "0.7": {
+      "b0": {
+        "branch": "b0",
+        "speed": 0.7,
+        "pump_dp_pa": 25724.999999999996,
+        "total_mass_flow_kg_s": 0.19170289512680813,
+        "branch_mass_flow_kg_s": 0.09585144756340407,
+        "coldplate_rth_k_w": 0.07150518258821512,
+        "window_plate_to_coolant_w": 142.6885610298451,
+        "window_device_k": 324.87801612901114,
+        "window_plate_k": 308.0877436604738,
+        "peak_device_k": 325.688222643062,
+        "final_device_k": 325.688222643062,
+        "peak_plate_k": 308.6656731410434,
+        "final_plate_k": 308.6656731410434,
+        "final_return_k": 297.8046574742024,
+        "pump_electrical_w": 9.13251292062433,
+        "hx_final_w": 654.5565509243523,
+        "plate_to_coolant_integral_j": 9707.927480589724
+      },
+      "b1": {
+        "branch": "b1",
+        "speed": 0.7,
+        "pump_dp_pa": 25724.999999999996,
+        "total_mass_flow_kg_s": 0.19170289512680813,
+        "branch_mass_flow_kg_s": 0.09585144756340407,
+        "coldplate_rth_k_w": 0.07150518258821512,
+        "window_plate_to_coolant_w": 142.68856102984546,
+        "window_device_k": 324.87801612901114,
+        "window_plate_k": 308.08774366047385,
+        "peak_device_k": 325.688222643062,
+        "final_device_k": 325.688222643062,
+        "peak_plate_k": 308.6656731410434,
+        "final_plate_k": 308.6656731410434,
+        "final_return_k": 297.8046574742024,
+        "pump_electrical_w": 9.13251292062433,
+        "hx_final_w": 654.5565509243523,
+        "plate_to_coolant_integral_j": 9707.927480589738
+      },
+      "energy_pass": true,
+      "mass_pass": true
+    },
+    "0.9": {
+      "b0": {
+        "branch": "b0",
+        "speed": 0.9,
+        "pump_dp_pa": 42525.0,
+        "total_mass_flow_kg_s": 0.24647515087732474,
+        "branch_mass_flow_kg_s": 0.12323757543866237,
+        "coldplate_rth_k_w": 0.063196623634669,
+        "window_plate_to_coolant_w": 152.81692417578282,
+        "window_device_k": 324.5129465406599,
+        "window_plate_k": 307.5229111690584,
+        "peak_device_k": 325.2451694769098,
+        "final_device_k": 325.2451694769098,
+        "peak_plate_k": 308.01772624867453,
+        "final_plate_k": 308.01772624867453,
+        "final_return_k": 297.7743056348439,
+        "pump_electrical_w": 19.409918131589322,
+        "hx_final_w": 671.6819363444125,
+        "plate_to_coolant_integral_j": 10545.28041415642
+      },
+      "b1": {
+        "branch": "b1",
+        "speed": 0.9,
+        "pump_dp_pa": 42525.0,
+        "total_mass_flow_kg_s": 0.24647515087732474,
+        "branch_mass_flow_kg_s": 0.12323757543866237,
+        "coldplate_rth_k_w": 0.063196623634669,
+        "window_plate_to_coolant_w": 152.81692417578282,
+        "window_device_k": 324.5129465406599,
+        "window_plate_k": 307.5229111690584,
+        "peak_device_k": 325.2451694769098,
+        "final_device_k": 325.2451694769098,
+        "peak_plate_k": 308.01772624867453,
+        "final_plate_k": 308.01772624867453,
+        "final_return_k": 297.7743056348439,
+        "pump_electrical_w": 19.409918131589322,
+        "hx_final_w": 671.6819363444125,
+        "plate_to_coolant_integral_j": 10545.280414156425
+      },
+      "energy_pass": true,
+      "mass_pass": true
+    }
+  },
+  "restriction": {
+    "baseline": {
+      "b0": {
+        "branch": "b0",
+        "speed": 0.9,
+        "pump_dp_pa": 42525.0,
+        "total_mass_flow_kg_s": 0.24647515087732474,
+        "branch_mass_flow_kg_s": 0.12323757543866237,
+        "coldplate_rth_k_w": 0.063196623634669,
+        "window_plate_to_coolant_w": 152.81692417578282,
+        "window_device_k": 324.5129465406599,
+        "window_plate_k": 307.5229111690584,
+        "peak_device_k": 325.2451694769098,
+        "final_device_k": 325.2451694769098,
+        "peak_plate_k": 308.01772624867453,
+        "final_plate_k": 308.01772624867453,
+        "final_return_k": 297.7743056348439,
+        "pump_electrical_w": 19.409918131589322,
+        "hx_final_w": 671.6819363444125,
+        "plate_to_coolant_integral_j": 10545.28041415642
+      },
+      "b1": {
+        "branch": "b1",
+        "speed": 0.9,
+        "pump_dp_pa": 42525.0,
+        "total_mass_flow_kg_s": 0.24647515087732474,
+        "branch_mass_flow_kg_s": 0.12323757543866237,
+        "coldplate_rth_k_w": 0.063196623634669,
+        "window_plate_to_coolant_w": 152.81692417578282,
+        "window_device_k": 324.5129465406599,
+        "window_plate_k": 307.5229111690584,
+        "peak_device_k": 325.2451694769098,
+        "final_device_k": 325.2451694769098,
+        "peak_plate_k": 308.01772624867453,
+        "final_plate_k": 308.01772624867453,
+        "final_return_k": 297.7743056348439,
+        "pump_electrical_w": 19.409918131589322,
+        "hx_final_w": 671.6819363444125,
+        "plate_to_coolant_integral_j": 10545.280414156425
+      },
+      "energy_pass": true,
+      "mass_pass": true
+    },
+    "branch0_k_multiplier_1_5": {
+      "b0": {
+        "branch": "b0",
+        "speed": 0.9,
+        "pump_dp_pa": 42930.91300651594,
+        "total_mass_flow_kg_s": 0.23809844588917545,
+        "branch_mass_flow_kg_s": 0.11241483713380154,
+        "coldplate_rth_k_w": 0.06606737429074082,
+        "window_plate_to_coolant_w": 149.05714220143116,
+        "window_device_k": 324.64948103971307,
+        "window_plate_k": 307.7337599016088,
+        "peak_device_k": 325.4107045467789,
+        "final_device_k": 325.4107045467789,
+        "peak_plate_k": 308.25936080646375,
+        "final_plate_k": 308.25936080646375,
+        "final_return_k": 297.79937831987843,
+        "pump_electrical_w": 18.929229013805244,
+        "hx_final_w": 669.627348767998,
+        "plate_to_coolant_integral_j": 10232.845102220515
+      },
+      "b1": {
+        "branch": "b1",
+        "speed": 0.9,
+        "pump_dp_pa": 42930.91300651594,
+        "total_mass_flow_kg_s": 0.23809844588917545,
+        "branch_mass_flow_kg_s": 0.12568360875537393,
+        "coldplate_rth_k_w": 0.06260641123634984,
+        "window_plate_to_coolant_w": 153.6778227939943,
+        "window_device_k": 324.48243129427993,
+        "window_plate_k": 307.47548200161566,
+        "peak_device_k": 325.2080453358082,
+        "final_device_k": 325.2080453358082,
+        "peak_plate_k": 307.9632013243864,
+        "final_plate_k": 307.9632013243864,
+        "final_return_k": 297.7615945870881,
+        "pump_electrical_w": 18.929229013805244,
+        "hx_final_w": 669.627348767998,
+        "plate_to_coolant_integral_j": 10615.62829088505
+      },
+      "energy_pass": true,
+      "mass_pass": true
+    }
+  },
+  "dynamic": {
+    "before": {
+      "time_ns": 39800000000,
+      "end_ns": 40000000000,
+      "speed": 0.5,
+      "dp_pa": 13125.0,
+      "branch_flow_kg_s": 0.06846531968814575,
+      "rth_k_w": 0.08518393227241743,
+      "plate_to_liquid_w": 47.05984084837626,
+      "device_k": 317.17931848471153,
+      "hydraulic_solution_id": "hydraulic:d49d777ca0aa46f4b980",
+      "thermal_step_id": "thermal:39800000000:40000000000:hydraulic:d49d777ca0aa46f4b980"
+    },
+    "at_event_continuous_device_k": 317.17931848471153,
+    "first_held_interval": {
+      "time_ns": 40000000000,
+      "end_ns": 40200000000,
+      "speed": 0.9,
+      "dp_pa": 42525.0,
+      "branch_flow_kg_s": 0.12323757543866237,
+      "rth_k_w": 0.063196623634669,
+      "plate_to_liquid_w": 63.86000785328408,
+      "device_k": 317.21681420026357,
+      "hydraulic_solution_id": "hydraulic:25f79d8c8d0adc975f5c",
+      "thermal_step_id": "thermal:40000000000:40200000000:hydraulic:25f79d8c8d0adc975f5c"
+    },
+    "late": {
+      "time_ns": 119800000000,
+      "end_ns": 120000000000,
+      "speed": 0.9,
+      "dp_pa": 42525.0,
+      "branch_flow_kg_s": 0.12323757543866237,
+      "rth_k_w": 0.063196623634669,
+      "plate_to_liquid_w": 163.69883211701057,
+      "device_k": 325.34407148880877,
+      "hydraulic_solution_id": "hydraulic:35a9748c1efc86f79759",
+      "thermal_step_id": "thermal:119800000000:120000000000:hydraulic:35a9748c1efc86f79759"
+    }
+  },
+  "mesh": {
+    "speed_step": {
+      "gate": "PASS",
+      "samples": [
+        {
+          "dt_s": 0.2,
+          "branch_flow_kg_s": 0.12323757543866237,
+          "rth_k_w": 0.063196623634669,
+          "plate_to_liquid_j": 10409.772106212124,
+          "final_device_k": 325.34407148880877,
+          "final_return_k": 297.8047729479882,
+          "hx_export_j": 90372.08168801713,
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "signed_energy_residual_j": -7.784421995893354e-09,
+          "sum_abs_energy_residual_j": 8.772852311267343e-08,
+          "energy_pass": true,
+          "mass_pass": true
+        },
+        {
+          "dt_s": 0.1,
+          "branch_flow_kg_s": 0.12323757543866237,
+          "rth_k_w": 0.063196623634669,
+          "plate_to_liquid_j": 10405.532931083198,
+          "final_device_k": 325.34828856212357,
+          "final_return_k": 297.8042657065706,
+          "hx_export_j": 90378.57080943428,
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "signed_energy_residual_j": -1.3101981721774791e-09,
+          "sum_abs_energy_residual_j": 1.718260449479203e-07,
+          "energy_pass": true,
+          "mass_pass": true
+        },
+        {
+          "dt_s": 0.05,
+          "branch_flow_kg_s": 0.12323757543866237,
+          "rth_k_w": 0.063196623634669,
+          "plate_to_liquid_j": 10403.412289696591,
+          "final_device_k": 325.35039784835556,
+          "final_return_k": 297.8040126426254,
+          "hx_export_j": 90381.8164016396,
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "signed_energy_residual_j": 1.0892406976381608e-09,
+          "sum_abs_energy_residual_j": 3.586348071848988e-07,
+          "energy_pass": true,
+          "mass_pass": true
+        }
+      ],
+      "adjacent": [
+        {
+          "branch_flow_kg_s": 0.0,
+          "rth_k_w": 0.0,
+          "plate_to_liquid_j": 4.239175128925126,
+          "final_device_k": 0.004217073314805475,
+          "final_return_k": 0.0005072414176083839,
+          "hx_export_j": 6.489121417151182
+        },
+        {
+          "branch_flow_kg_s": 0.0,
+          "rth_k_w": 0.0,
+          "plate_to_liquid_j": 2.120641386607531,
+          "final_device_k": 0.0021092862319846972,
+          "final_return_k": 0.0002530639451947536,
+          "hx_export_j": 3.2455922053195536
+        }
+      ]
+    },
+    "restriction_baseline": {
+      "gate": "PASS",
+      "samples": [
+        {
+          "dt_s": 0.2,
+          "branch_flow_kg_s": 0.12323757543866237,
+          "rth_k_w": 0.063196623634669,
+          "plate_to_liquid_j": 10545.28041415642,
+          "final_device_k": 325.2451694769098,
+          "final_return_k": 297.7743056348439,
+          "hx_export_j": 91988.33690645607,
+          "max_mass_residual_kg_s": 0.0,
+          "signed_energy_residual_j": -3.427658157306723e-11,
+          "sum_abs_energy_residual_j": 9.024779501487501e-08,
+          "energy_pass": true,
+          "mass_pass": true
+        },
+        {
+          "dt_s": 0.1,
+          "branch_flow_kg_s": 0.12323757543866237,
+          "rth_k_w": 0.063196623634669,
+          "plate_to_liquid_j": 10540.700489132072,
+          "final_device_k": 325.24964094511944,
+          "final_return_k": 297.7737686990138,
+          "hx_export_j": 91994.86513661468,
+          "max_mass_residual_kg_s": 0.0,
+          "signed_energy_residual_j": -6.076973591007118e-09,
+          "sum_abs_energy_residual_j": 1.7428685339382355e-07,
+          "energy_pass": true,
+          "mass_pass": true
+        },
+        {
+          "dt_s": 0.05,
+          "branch_flow_kg_s": 0.12323757543866237,
+          "rth_k_w": 0.063196623634669,
+          "plate_to_liquid_j": 10538.409233194216,
+          "final_device_k": 325.2518777053476,
+          "final_return_k": 297.7735001055072,
+          "hx_export_j": 91998.13062372558,
+          "max_mass_residual_kg_s": 0.0,
+          "signed_energy_residual_j": 2.4663648900968838e-09,
+          "sum_abs_energy_residual_j": 3.6102099443269253e-07,
+          "energy_pass": true,
+          "mass_pass": true
+        }
+      ],
+      "adjacent": [
+        {
+          "branch_flow_kg_s": 0.0,
+          "rth_k_w": 0.0,
+          "plate_to_liquid_j": 4.579925024347176,
+          "final_device_k": 0.004471468209658269,
+          "final_return_k": 0.0005369358301550164,
+          "hx_export_j": 6.528230158612132
+        },
+        {
+          "branch_flow_kg_s": 0.0,
+          "rth_k_w": 0.0,
+          "plate_to_liquid_j": 2.2912559378564765,
+          "final_device_k": 0.0022367602281860854,
+          "final_return_k": 0.00026859350657559844,
+          "hx_export_j": 3.2654871108970838
+        }
+      ]
+    },
+    "restriction_1_5": {
+      "gate": "PASS",
+      "samples": [
+        {
+          "dt_s": 0.2,
+          "branch_flow_kg_s": 0.11241483713380154,
+          "rth_k_w": 0.06606737429074082,
+          "plate_to_liquid_j": 10232.845102220515,
+          "final_device_k": 325.4107045467789,
+          "final_return_k": 297.79937831987843,
+          "hx_export_j": 91745.37306455252,
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "signed_energy_residual_j": -2.2568258373212302e-10,
+          "sum_abs_energy_residual_j": 8.091281245015125e-08,
+          "energy_pass": true,
+          "mass_pass": true
+        },
+        {
+          "dt_s": 0.1,
+          "branch_flow_kg_s": 0.11241483713380154,
+          "rth_k_w": 0.06606737429074082,
+          "plate_to_liquid_j": 10228.239631598653,
+          "final_device_k": 325.4151720736156,
+          "final_return_k": 297.79884205731685,
+          "hx_export_j": 91751.91507045037,
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "signed_energy_residual_j": -3.7263987451297e-09,
+          "sum_abs_energy_residual_j": 1.629638433087166e-07,
+          "energy_pass": true,
+          "mass_pass": true
+        },
+        {
+          "dt_s": 0.05,
+          "branch_flow_kg_s": 0.11241483713380154,
+          "rth_k_w": 0.06606737429074082,
+          "plate_to_liquid_j": 10225.935592782993,
+          "final_device_k": 325.4174068590574,
+          "final_return_k": 297.7985737647133,
+          "hx_export_j": 91755.18745889819,
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "signed_energy_residual_j": 4.128249742052503e-09,
+          "sum_abs_energy_residual_j": 3.2824926776697794e-07,
+          "energy_pass": true,
+          "mass_pass": true
+        }
+      ],
+      "adjacent": [
+        {
+          "branch_flow_kg_s": 0.0,
+          "rth_k_w": 0.0,
+          "plate_to_liquid_j": 4.6054706218619685,
+          "final_device_k": 0.004467526836720026,
+          "final_return_k": 0.0005362625615816796,
+          "hx_export_j": 6.542005897848867
+        },
+        {
+          "branch_flow_kg_s": 0.0,
+          "rth_k_w": 0.0,
+          "plate_to_liquid_j": 2.304038815660533,
+          "final_device_k": 0.0022347854417716917,
+          "final_return_k": 0.00026829260355043516,
+          "hx_export_j": 3.27238844781823
+        }
+      ]
+    }
+  }
+}

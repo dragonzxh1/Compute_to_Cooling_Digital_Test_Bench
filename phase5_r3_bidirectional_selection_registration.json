@@ -1,0 +1,110 @@
+{
+  "schema": "phase5-r3-bidirectional-selection-registration-v1",
+  "status": "FROZEN_BEFORE_CANDIDATE_EXECUTION",
+  "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+  "source_phase5_1r2_registration_sha256": "a7466babe2cd32a016db138dc83ccd1c9b9367ca6a3fd43af0f67490cab33c5b",
+  "source_phase5_1r2_result_sha256": "003bf73a0e37a6b046ef23c34f6d4d6d8640e76f535a090472051a883e2a6b53",
+  "target_k": 313.71072595542387,
+  "inner": {"id": "inner_b", "kp": 0.000015, "ki": 0.000004, "kd": 0.0},
+  "outer_candidates": [
+    {"id": "outer_a", "kp": 1000.0, "ki": 20.0, "kd": 0.0},
+    {"id": "outer_b", "kp": 2000.0, "ki": 40.0, "kd": 0.0},
+    {"id": "outer_c", "kp": 3000.0, "ki": 60.0, "kd": 0.0}
+  ],
+  "workload_w_per_device": 120.0,
+  "qualification_cases": ["WARM_CAPTURE", "COLD_CAPTURE"],
+  "preparation": {
+    "duration_ns": 180000000000,
+    "physics_dt_ns": 200000000,
+    "warm_speed_fraction": 0.3,
+    "cold_speed_fraction": 0.9,
+    "endpoint_window_start_ns": 150000000000,
+    "endpoint_window_end_ns": 180000000000,
+    "historical_warm_endpoint_k": 314.7243256180813,
+    "historical_cold_endpoint_k": 312.69712629276637,
+    "endpoint_reproduction_tolerance_k": 0.01,
+    "initial_state_rule": "reuse the Phase 5.1R2 independently prepared physical state with epoch normalized to zero",
+    "controller_prehistory": "none",
+    "integrator_warm_start": false
+  },
+  "qualification_duration_ns": 180000000000,
+  "final_window_start_ns": 150000000000,
+  "final_window_end_ns": 180000000000,
+  "settling": {
+    "signal": "maximum released MEASURED device temperature",
+    "band_k": 0.5,
+    "continuous_dwell_ns": 15000000000,
+    "must_remain_in_band_through_end": true,
+    "finite_settling_time_required": true,
+    "adjacent_mesh_settling_time_tolerance_s": 2.0
+  },
+  "saturation": {
+    "minimum_speed_fraction": 0.3,
+    "maximum_speed_fraction": 0.9,
+    "bound_tolerance_fraction": 0.000001,
+    "initial_prepared_bound_occupancy_allowed": true,
+    "final_window_command_bound_time_s": 0.0,
+    "final_window_actual_bound_time_s": 0.0,
+    "final_actual_speed_must_be_strictly_interior": true
+  },
+  "safety_acceptance": {
+    "startup_state_allowed": "FF_DISABLED",
+    "qualified_states": ["NORMAL"],
+    "restrictive_degraded_allowed": false,
+    "forbidden_states": ["DEGRADED", "DERATE_REQUESTED", "PROTECTED", "FAULT"],
+    "forbidden_reasons": ["ACTUATOR_TRACKING_PENDING", "CAPACITY_LIMITED", "SAFETY_OVERRIDE"],
+    "emergency_fallback_allowed": false
+  },
+  "control_direction": {
+    "evaluation_window_ns": 10000000000,
+    "minimum_dp_change_pa": 1.0,
+    "minimum_actual_speed_change_fraction": 0.0001,
+    "warm": "accepted DP and actual speed increase from their starting values",
+    "cold": "accepted DP and actual speed decrease from their starting values"
+  },
+  "physics_dt_ns": [200000000, 100000000, 50000000],
+  "nonphysics_clocks": {
+    "measurement_ns": 200000000,
+    "outer_ns": 1000000000,
+    "plc_ns": 200000000,
+    "safety_ns": 200000000,
+    "actuator_ns": 200000000
+  },
+  "conservation_limits": {
+    "max_mass_residual_kg_s": 1e-8,
+    "max_absolute_step_energy_residual_j": 0.001
+  },
+  "bidirectional_feasibility": {
+    "priority": "hard prerequisite before all scoring",
+    "requires_all_six_runs_pass": true,
+    "requires_finite_settling_all_meshes": true,
+    "requires_final_window_temperature_pass": true,
+    "requires_final_saturation_pass": true,
+    "requires_control_direction_pass": true,
+    "requires_safety_pass": true,
+    "requires_ownership_pass": true,
+    "requires_conservation_pass": true
+  },
+  "selection_hierarchy": [
+    "bidirectional_feasibility",
+    "canonical_0.2s_total_thermal_iae_with_numerical_uncertainty_veto",
+    "canonical_0.2s_total_control_variation",
+    "canonical_0.2s_total_pump_electrical_energy",
+    "candidate_id"
+  ],
+  "numerical_uncertainty_rule": {
+    "candidate_metric": "warm plus cold temperature IAE at 0.2 s",
+    "sensitivity_pair_ns": [100000000, 50000000],
+    "pairwise_bound": "abs(A_0.1-A_0.05)+abs(B_0.1-B_0.05)",
+    "veto": "IAE difference <= bound means NUMERICALLY_INDISTINGUISHABLE and selection advances to control TV"
+  },
+  "holdout_selection_allowed": false,
+  "historical_holdout_id": "HOLDOUT-01-combined",
+  "historical_holdout_action": "not executed before user review if selection changes",
+  "new_gains_allowed": false,
+  "retuning_allowed": false,
+  "phase6_authorized": false,
+  "evidence_file": "phase5_r3_bidirectional_selection_evidence.json",
+  "candidate_baseline_file": "phase5_r3_candidate_baseline.json",
+  "report_file": "PHASE5_R3_BIDIRECTIONAL_CONTROLLER_REVISION_REPORT.md"
+}

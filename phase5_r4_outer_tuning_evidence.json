@@ -1,0 +1,3138 @@
+{
+  "schema": "phase5-r4-outer-pi-tuning-evidence-v1",
+  "status": "NO_R4_GRID_CANDIDATE_HAS_BIDIRECTIONAL_REGULATION",
+  "registration_sha256": "b75eb532e825eea4960956c0812e19eb70ca3055c22a483b5b435f665a1e93b8",
+  "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+  "source_r3_evidence_sha256": "51c5fc07b5739cad6995a9d479ae4fa978fa3b0f4f9c46423e340738b83371cd",
+  "integrity": {
+    "status": "PASS",
+    "checks": {
+      "registration_sha256": true,
+      "r2_baseline_sha256": true,
+      "r3_registration_sha256": true,
+      "r3_evidence_sha256": true,
+      "phase5_1r2_registration_sha256": true,
+      "phase5_1r2_result_sha256": true,
+      "r2_lineage": true,
+      "target": true,
+      "inner": true,
+      "grid_exact": true,
+      "exam_unchanged": true,
+      "nonphysics_clocks": true,
+      "control_core": true,
+      "plant_core": true,
+      "r3_gate": true,
+      "no_holdout": true
+    },
+    "registration_sha256": "b75eb532e825eea4960956c0812e19eb70ca3055c22a483b5b435f665a1e93b8",
+    "source_r2_baseline_sha256": "891aba6f348e14a0d36c350ac407004635da780f07e4d29a92b526b558aca8d1",
+    "source_r3_evidence_sha256": "51c5fc07b5739cad6995a9d479ae4fa978fa3b0f4f9c46423e340738b83371cd",
+    "control_core_sha256": "b79eaf9c7cdc2665856db87bd6a59b900eb2f31efb0b3a94112bbbe476152579",
+    "plant_sha256": "d240051ccdc8681ba44d3fc8c30597ce920a761b834dabbdd5d5d93d9d016254"
+  },
+  "target_k": 313.71072595542387,
+  "inner": {
+    "id": "inner_b",
+    "kp": 1.5e-05,
+    "ki": 4e-06,
+    "kd": 0.0
+  },
+  "outer_candidates": [
+    {
+      "id": "R4-KP3000-KI60",
+      "kp": 3000.0,
+      "ki": 60.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP3000-KI80",
+      "kp": 3000.0,
+      "ki": 80.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP3000-KI100",
+      "kp": 3000.0,
+      "ki": 100.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP3000-KI120",
+      "kp": 3000.0,
+      "ki": 120.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP4000-KI60",
+      "kp": 4000.0,
+      "ki": 60.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP4000-KI80",
+      "kp": 4000.0,
+      "ki": 80.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP4000-KI100",
+      "kp": 4000.0,
+      "ki": 100.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP4000-KI120",
+      "kp": 4000.0,
+      "ki": 120.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP5000-KI60",
+      "kp": 5000.0,
+      "ki": 60.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP5000-KI80",
+      "kp": 5000.0,
+      "ki": 80.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP5000-KI100",
+      "kp": 5000.0,
+      "ki": 100.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP5000-KI120",
+      "kp": 5000.0,
+      "ki": 120.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP6000-KI60",
+      "kp": 6000.0,
+      "ki": 60.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP6000-KI80",
+      "kp": 6000.0,
+      "ki": 80.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP6000-KI100",
+      "kp": 6000.0,
+      "ki": 100.0,
+      "kd": 0.0
+    },
+    {
+      "id": "R4-KP6000-KI120",
+      "kp": 6000.0,
+      "ki": 120.0,
+      "kd": 0.0
+    }
+  ],
+  "preparation": {
+    "WARM_CAPTURE": {
+      "case": "WARM_CAPTURE",
+      "speed_fraction": 0.3,
+      "duration_s": 180.0,
+      "qualified_window_mean_max_device_k": 314.7243256180813,
+      "historical_endpoint_k": 314.7243256180813,
+      "reproduction_error_k": 0.0,
+      "reproduction_tolerance_k": 0.01,
+      "reproduction_status": "PASS",
+      "normalized_initial_state_sha256": "463c24e3d0b70ec0f52292fc6276d9978b933131aba9bb1868453dac55273f7f",
+      "normalized_initial_state": {
+        "time_ns": 0,
+        "solids": [
+          {
+            "node_id": "b0:die",
+            "temperature_k": 315.07446347854744,
+            "energy_j": 3014.8926957094886
+          },
+          {
+            "node_id": "b0:package",
+            "temperature_k": 309.28629813353314,
+            "energy_j": 3714.519253413255
+          },
+          {
+            "node_id": "b0:plate",
+            "temperature_k": 306.38940980581674,
+            "energy_j": 5111.527844653392
+          },
+          {
+            "node_id": "b1:die",
+            "temperature_k": 315.07446347854744,
+            "energy_j": 3014.8926957094886
+          },
+          {
+            "node_id": "b1:package",
+            "temperature_k": 309.28629813353314,
+            "energy_j": 3714.519253413255
+          },
+          {
+            "node_id": "b1:plate",
+            "temperature_k": 306.38940980581674,
+            "energy_j": 5111.527844653392
+          }
+        ],
+        "volumes": [
+          {
+            "volume_id": "cdu",
+            "specific_enthalpy_j_kg": -15886.913997670035,
+            "temperature_k": 296.0282715005825,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "supply_0",
+            "specific_enthalpy_j_kg": -15596.482028051241,
+            "temperature_k": 296.1008794929872,
+            "pressure_pa": 105712.5
+          },
+          {
+            "volume_id": "supply_1",
+            "specific_enthalpy_j_kg": -15298.722862611157,
+            "temperature_k": 296.1753192843472,
+            "pressure_pa": 105375.0
+          },
+          {
+            "volume_id": "supply_manifold",
+            "specific_enthalpy_j_kg": -14993.913706946387,
+            "temperature_k": 296.2515215732634,
+            "pressure_pa": 105375.0
+          },
+          {
+            "volume_id": "return_manifold",
+            "specific_enthalpy_j_kg": -11486.073758481552,
+            "temperature_k": 297.1284815603796,
+            "pressure_pa": 102000.0
+          },
+          {
+            "volume_id": "return_0",
+            "specific_enthalpy_j_kg": -11170.43243088392,
+            "temperature_k": 297.207391892279,
+            "pressure_pa": 101662.5
+          },
+          {
+            "volume_id": "return_1",
+            "specific_enthalpy_j_kg": -10845.128629322744,
+            "temperature_k": 297.2887178426693,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "b0:local",
+            "specific_enthalpy_j_kg": -12388.76282866272,
+            "temperature_k": 296.9028092928343,
+            "pressure_pa": 103687.5
+          },
+          {
+            "volume_id": "b0:return",
+            "specific_enthalpy_j_kg": -11792.138535371805,
+            "temperature_k": 297.05196536615705,
+            "pressure_pa": 102000.0
+          },
+          {
+            "volume_id": "b1:local",
+            "specific_enthalpy_j_kg": -12388.76282866272,
+            "temperature_k": 296.9028092928343,
+            "pressure_pa": 103687.5
+          },
+          {
+            "volume_id": "b1:return",
+            "specific_enthalpy_j_kg": -11792.138535371805,
+            "temperature_k": 297.05196536615705,
+            "pressure_pa": 102000.0
+          }
+        ]
+      },
+      "controller_prehistory": "none",
+      "integrator_warm_start": false
+    },
+    "COLD_CAPTURE": {
+      "case": "COLD_CAPTURE",
+      "speed_fraction": 0.9,
+      "duration_s": 180.0,
+      "qualified_window_mean_max_device_k": 312.69712629276637,
+      "historical_endpoint_k": 312.69712629276637,
+      "reproduction_error_k": 0.0,
+      "reproduction_tolerance_k": 0.01,
+      "reproduction_status": "PASS",
+      "normalized_initial_state_sha256": "f0ae5c3f34a1db08438a64f464308f43d23c3891c15dad93ec26986fa37544d5",
+      "normalized_initial_state": {
+        "time_ns": 0,
+        "solids": [
+          {
+            "node_id": "b0:die",
+            "temperature_k": 312.78345829604956,
+            "energy_j": 2556.691659209912
+          },
+          {
+            "node_id": "b0:package",
+            "temperature_k": 306.8224274440674,
+            "energy_j": 2728.9709776269547
+          },
+          {
+            "node_id": "b0:plate",
+            "temperature_k": 303.52770882768624,
+            "energy_j": 2822.167062148992
+          },
+          {
+            "node_id": "b1:die",
+            "temperature_k": 312.78345829604956,
+            "energy_j": 2556.691659209912
+          },
+          {
+            "node_id": "b1:package",
+            "temperature_k": 306.8224274440674,
+            "energy_j": 2728.9709776269547
+          },
+          {
+            "node_id": "b1:plate",
+            "temperature_k": 303.52770882768624,
+            "energy_j": 2822.167062148992
+          }
+        ],
+        "volumes": [
+          {
+            "volume_id": "cdu",
+            "specific_enthalpy_j_kg": -15166.070170790363,
+            "temperature_k": 296.2084824573024,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "supply_0",
+            "specific_enthalpy_j_kg": -15066.358710430222,
+            "temperature_k": 296.23341032239244,
+            "pressure_pa": 140812.5
+          },
+          {
+            "volume_id": "supply_1",
+            "specific_enthalpy_j_kg": -14965.773998991153,
+            "temperature_k": 296.2585565002522,
+            "pressure_pa": 137775.0
+          },
+          {
+            "volume_id": "supply_manifold",
+            "specific_enthalpy_j_kg": -14867.340836655103,
+            "temperature_k": 296.2831647908362,
+            "pressure_pa": 137775.0
+          },
+          {
+            "volume_id": "return_manifold",
+            "specific_enthalpy_j_kg": -13450.764622475845,
+            "temperature_k": 296.63730884438104,
+            "pressure_pa": 107400.0
+          },
+          {
+            "volume_id": "return_0",
+            "specific_enthalpy_j_kg": -13347.207840615738,
+            "temperature_k": 296.66319803984607,
+            "pressure_pa": 104362.5
+          },
+          {
+            "volume_id": "return_1",
+            "specific_enthalpy_j_kg": -13242.77063119689,
+            "temperature_k": 296.6893073422008,
+            "pressure_pa": 101325.0
+          },
+          {
+            "volume_id": "b0:local",
+            "specific_enthalpy_j_kg": -13763.191948344456,
+            "temperature_k": 296.5592020129139,
+            "pressure_pa": 122587.5
+          },
+          {
+            "volume_id": "b0:return",
+            "specific_enthalpy_j_kg": -13550.41556274864,
+            "temperature_k": 296.61239610931284,
+            "pressure_pa": 107400.0
+          },
+          {
+            "volume_id": "b1:local",
+            "specific_enthalpy_j_kg": -13763.191948344456,
+            "temperature_k": 296.5592020129139,
+            "pressure_pa": 122587.5
+          },
+          {
+            "volume_id": "b1:return",
+            "specific_enthalpy_j_kg": -13550.41556274864,
+            "temperature_k": 296.61239610931284,
+            "pressure_pa": 107400.0
+          }
+        ]
+      },
+      "controller_prehistory": "none",
+      "integrator_warm_start": false
+    }
+  },
+  "training_cases_not_independent_validation": true,
+  "stage_a": {
+    "expected_runs": 32,
+    "completed_runs": 32,
+    "invalid_runs": 0,
+    "run_matrix": [
+      {
+        "candidate_id": "R4-KP3000-KI60",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4174614808339,
+          "minimum_device_k": 313.40842602885886,
+          "final_window_mean_measured_k": 313.5759774099066,
+          "final_window_minimum_measured_k": 313.40842602885886,
+          "final_window_maximum_measured_k": 313.75341492779893,
+          "final_measured_device_k": 313.40842602885886,
+          "temperature_iae_k_s": 162.00062493359678,
+          "temperature_ise_k2_s": 210.63161298455347,
+          "settling_time_s": 116.6,
+          "dp_tracking_iae_pa_s": 515454.6174180675,
+          "pump_electrical_j": 1834.1727758905956,
+          "control_total_variation": 0.523999110693923,
+          "actuator_tracking_iae_fraction_s": 0.6336134586464055,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7510284552859267,
+          "final_pump_actual": 0.7520676758363392,
+          "final_pump_measured": 0.7520676758363392,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.345270892576082e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI60",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1110437398109,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.04646616808105,
+          "final_window_minimum_measured_k": 313.01807756197184,
+          "final_window_maximum_measured_k": 313.07278426075686,
+          "final_measured_device_k": 313.01807756197184,
+          "temperature_iae_k_s": 123.59821429094478,
+          "temperature_ise_k2_s": 86.47505499138595,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 185822.39062235435,
+          "pump_electrical_j": 1497.250706836173,
+          "control_total_variation": 0.36743493894887325,
+          "actuator_tracking_iae_fraction_s": 0.3620694969197071,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6259219643362719,
+          "final_pump_actual": 0.6270741955521897,
+          "final_pump_measured": 0.6270741955521897,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.635527600134083e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI80",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4160733736172,
+          "minimum_device_k": 313.31937056069455,
+          "final_window_mean_measured_k": 313.4939402972648,
+          "final_window_minimum_measured_k": 313.31937056069455,
+          "final_window_maximum_measured_k": 313.67936250315154,
+          "final_measured_device_k": 313.31937056069455,
+          "temperature_iae_k_s": 160.28026259899153,
+          "temperature_ise_k2_s": 206.98666045692266,
+          "settling_time_s": 113.4,
+          "dp_tracking_iae_pa_s": 539770.9691219812,
+          "pump_electrical_j": 1992.6996332761298,
+          "control_total_variation": 0.5693566588602794,
+          "actuator_tracking_iae_fraction_s": 0.6692658671260155,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7757701811194797,
+          "final_pump_actual": 0.7770756808732541,
+          "final_pump_measured": 0.7770756808732541,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.337881248124177e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI80",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1375591824263,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.1040342075575,
+          "final_window_minimum_measured_k": 313.08554622046387,
+          "final_window_maximum_measured_k": 313.12074658791033,
+          "final_measured_device_k": 313.08554622046387,
+          "temperature_iae_k_s": 119.642829289268,
+          "temperature_ise_k2_s": 81.58407583089098,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 206906.66579827826,
+          "pump_electrical_j": 1421.208502648373,
+          "control_total_variation": 0.40470232601830713,
+          "actuator_tracking_iae_fraction_s": 0.3930179178174108,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6019982302914867,
+          "final_pump_actual": 0.6033428918267861,
+          "final_pump_measured": 0.6033428918267861,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.284377380121441e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI100",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4147210450171,
+          "minimum_device_k": 313.2380376865993,
+          "final_window_mean_measured_k": 313.41831090375905,
+          "final_window_minimum_measured_k": 313.2380376865993,
+          "final_window_maximum_measured_k": 313.610424033864,
+          "final_measured_device_k": 313.2380376865993,
+          "temperature_iae_k_s": 159.28945170234346,
+          "temperature_ise_k2_s": 204.15772381776992,
+          "settling_time_s": 110.4,
+          "dp_tracking_iae_pa_s": 564509.8077481356,
+          "pump_electrical_j": 2152.281682393927,
+          "control_total_variation": 0.6248888687937686,
+          "actuator_tracking_iae_fraction_s": 0.7056607193958072,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7979336186591285,
+          "final_pump_actual": 0.7995563625617035,
+          "final_pump_measured": 0.7995563625617035,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.453770768326649e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI100",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.17237909560697,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.1630464628302,
+          "final_window_minimum_measured_k": 313.1545902317622,
+          "final_window_maximum_measured_k": 313.169960873719,
+          "final_measured_device_k": 313.1545902317622,
+          "temperature_iae_k_s": 115.59495446562735,
+          "temperature_ise_k2_s": 76.92341948424651,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 227171.76386801375,
+          "pump_electrical_j": 1349.4963935346798,
+          "control_total_variation": 0.43925006748061013,
+          "actuator_tracking_iae_fraction_s": 0.42267459275244496,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5791217859349921,
+          "final_pump_actual": 0.5805998917417821,
+          "final_pump_measured": 0.5805998917417821,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.532925229090324e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI120",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4134021167704,
+          "minimum_device_k": 313.16336709601336,
+          "final_window_mean_measured_k": 313.3482716148198,
+          "final_window_minimum_measured_k": 313.16336709601336,
+          "final_window_maximum_measured_k": 313.54600684881024,
+          "final_measured_device_k": 313.16336709601336,
+          "temperature_iae_k_s": 158.81325746371937,
+          "temperature_ise_k2_s": 202.00804922284874,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 589068.4922514374,
+          "pump_electrical_j": 2312.5760051859916,
+          "control_total_variation": 0.6861014713250111,
+          "actuator_tracking_iae_fraction_s": 0.7418848752152473,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.8178392521124214,
+          "final_pump_actual": 0.8198232599204208,
+          "final_pump_measured": 0.8198232599204208,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.951292791905871e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI120",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.2251505910907,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.2235039261465,
+          "final_window_minimum_measured_k": 313.22046184345555,
+          "final_window_maximum_measured_k": 313.2251505910907,
+          "final_measured_device_k": 313.2251505910907,
+          "temperature_iae_k_s": 111.45274976337974,
+          "temperature_ise_k2_s": 72.51631911449984,
+          "settling_time_s": 131.4,
+          "dp_tracking_iae_pa_s": 246499.9436882739,
+          "pump_electrical_j": 1281.9695734882723,
+          "control_total_variation": 0.4708253258640016,
+          "actuator_tracking_iae_fraction_s": 0.450852840328913,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5574405016525071,
+          "final_pump_actual": 0.5589878263615912,
+          "final_pump_measured": 0.5589878263615912,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 4.889031401944521e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI60",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41656223165484,
+          "minimum_device_k": 313.4322447998254,
+          "final_window_mean_measured_k": 313.59306549968807,
+          "final_window_minimum_measured_k": 313.4322447998254,
+          "final_window_maximum_measured_k": 313.7640631933023,
+          "final_measured_device_k": 313.4322447998254,
+          "temperature_iae_k_s": 161.3635870774332,
+          "temperature_ise_k2_s": 209.6762857073496,
+          "settling_time_s": 116.6,
+          "dp_tracking_iae_pa_s": 518885.5789077579,
+          "pump_electrical_j": 1797.3570816486779,
+          "control_total_variation": 0.5434930605124155,
+          "actuator_tracking_iae_fraction_s": 0.6392191028192272,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7354501868669262,
+          "final_pump_actual": 0.7366792306360246,
+          "final_pump_measured": 0.7366792306360246,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.135021297064668e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI60",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1052747508657,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.0350799265812,
+          "final_window_minimum_measured_k": 313.00589667522434,
+          "final_window_maximum_measured_k": 313.0624296229995,
+          "final_measured_device_k": 313.00589667522434,
+          "temperature_iae_k_s": 124.46766379989687,
+          "temperature_ise_k2_s": 87.58947589130283,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 183815.95779941085,
+          "pump_electrical_j": 1512.0196744814534,
+          "control_total_variation": 0.3667812520852467,
+          "actuator_tracking_iae_fraction_s": 0.3593034924395492,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6279817255187453,
+          "final_pump_actual": 0.6292001566476527,
+          "final_pump_measured": 0.6292001566476527,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.960458793197176e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI80",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4151978787118,
+          "minimum_device_k": 313.3431664013805,
+          "final_window_mean_measured_k": 313.51118268739197,
+          "final_window_minimum_measured_k": 313.3431664013805,
+          "final_window_maximum_measured_k": 313.6903131416585,
+          "final_measured_device_k": 313.3431664013805,
+          "temperature_iae_k_s": 159.536238478181,
+          "temperature_ise_k2_s": 205.9775741557246,
+          "settling_time_s": 113.2,
+          "dp_tracking_iae_pa_s": 540539.7433259294,
+          "pump_electrical_j": 1951.3538862029593,
+          "control_total_variation": 0.5746238894023523,
+          "actuator_tracking_iae_fraction_s": 0.6709148532743889,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7598533511454604,
+          "final_pump_actual": 0.7613477343724087,
+          "final_pump_measured": 0.7613477343724087,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.16507725478732e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI80",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1301651017276,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.09140598417275,
+          "final_window_minimum_measured_k": 313.0718022872813,
+          "final_window_maximum_measured_k": 313.1094559103938,
+          "final_measured_device_k": 313.0718022872813,
+          "temperature_iae_k_s": 120.58002971533605,
+          "temperature_ise_k2_s": 82.71052477967363,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 204420.0469215756,
+          "pump_electrical_j": 1436.5052146526011,
+          "control_total_variation": 0.40265837940113713,
+          "actuator_tracking_iae_fraction_s": 0.3895439381727103,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6046067825007261,
+          "final_pump_actual": 0.6060116638978098,
+          "final_pump_measured": 0.6060116638978098,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.475797593135212e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI100",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4138687386608,
+          "minimum_device_k": 313.2617555037718,
+          "final_window_mean_measured_k": 313.43564520087153,
+          "final_window_minimum_measured_k": 313.2617555037718,
+          "final_window_maximum_measured_k": 313.62161253274184,
+          "final_measured_device_k": 313.2617555037718,
+          "temperature_iae_k_s": 158.47550231612598,
+          "temperature_ise_k2_s": 203.0943902115419,
+          "settling_time_s": 110.4,
+          "dp_tracking_iae_pa_s": 563852.8799914691,
+          "pump_electrical_j": 2106.5019990933583,
+          "control_total_variation": 0.6227577189490159,
+          "actuator_tracking_iae_fraction_s": 0.7052017225101134,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7817318309012402,
+          "final_pump_actual": 0.7835413688059634,
+          "final_pump_measured": 0.7835413688059634,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.682352366420673e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI100",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.16227824842525,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.1490656037202,
+          "final_window_minimum_measured_k": 313.13913642978434,
+          "final_window_maximum_measured_k": 313.1576572867095,
+          "final_measured_device_k": 313.13913642978434,
+          "temperature_iae_k_s": 116.60526541625478,
+          "temperature_ise_k2_s": 78.05318449559725,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 224191.03840824447,
+          "pump_electrical_j": 1365.25514788751,
+          "control_total_variation": 0.43593401557616074,
+          "actuator_tracking_iae_fraction_s": 0.41847418935215513,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5822919709053644,
+          "final_pump_actual": 0.5838256627680841,
+          "final_pump_measured": 0.5838256627680841,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.045706075179623e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI120",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41257245088906,
+          "minimum_device_k": 313.18696822091994,
+          "final_window_mean_measured_k": 313.36565036768803,
+          "final_window_minimum_measured_k": 313.18696822091994,
+          "final_window_maximum_measured_k": 313.5573814825476,
+          "final_measured_device_k": 313.18696822091994,
+          "temperature_iae_k_s": 157.95228584384395,
+          "temperature_ise_k2_s": 200.8911153148078,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 587660.1419931385,
+          "pump_electrical_j": 2262.4626013515162,
+          "control_total_variation": 0.6802946232691511,
+          "actuator_tracking_iae_fraction_s": 0.7403180328116171,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.8013945222580754,
+          "final_pump_actual": 0.8035623768534033,
+          "final_pump_measured": 0.8035623768534033,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.043503392698767e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI120",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.2083611142937,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.2080507151359,
+          "final_window_minimum_measured_k": 313.2070616659745,
+          "final_window_maximum_measured_k": 313.2083611142937,
+          "final_measured_device_k": 313.20782956745416,
+          "temperature_iae_k_s": 112.54197160219869,
+          "temperature_ise_k2_s": 73.63897922020777,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 243015.01530160513,
+          "pump_electrical_j": 1298.1264352077674,
+          "control_total_variation": 0.4663655177358993,
+          "actuator_tracking_iae_fraction_s": 0.44591417440185743,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5611796521729369,
+          "final_pump_actual": 0.5627797491375709,
+          "final_pump_measured": 0.5627797491375709,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.318199214343622e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI60",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41568458783354,
+          "minimum_device_k": 313.4566381733146,
+          "final_window_mean_measured_k": 313.61065855605807,
+          "final_window_minimum_measured_k": 313.4566381733146,
+          "final_window_maximum_measured_k": 313.7751450199523,
+          "final_measured_device_k": 313.4566381733146,
+          "temperature_iae_k_s": 160.76479638608845,
+          "temperature_ise_k2_s": 208.76568169908685,
+          "settling_time_s": 116.6,
+          "dp_tracking_iae_pa_s": 525722.1979248695,
+          "pump_electrical_j": 1761.4729543657256,
+          "control_total_variation": 0.5709122761974392,
+          "actuator_tracking_iae_fraction_s": 0.6498824900970679,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7200660721863057,
+          "final_pump_actual": 0.7214676528164378,
+          "final_pump_measured": 0.7214676528164378,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.818066028950852e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI60",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.09983794724525,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.0241818038398,
+          "final_window_minimum_measured_k": 312.9943292025758,
+          "final_window_maximum_measured_k": 313.05244162293644,
+          "final_measured_device_k": 312.9943292025758,
+          "temperature_iae_k_s": 125.31090312462506,
+          "temperature_ise_k2_s": 88.6840831535658,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 182029.45740418576,
+          "pump_electrical_j": 1526.3165412398725,
+          "control_total_variation": 0.36675628571946994,
+          "actuator_tracking_iae_fraction_s": 0.35685847295511136,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6297946553655355,
+          "final_pump_actual": 0.6310799300976389,
+          "final_pump_measured": 0.6310799300976389,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 6.199272206686146e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI80",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41433999588,
+          "minimum_device_k": 313.3675172623465,
+          "final_window_mean_measured_k": 313.52890694698016,
+          "final_window_minimum_measured_k": 313.3675172623465,
+          "final_window_maximum_measured_k": 313.7016729220159,
+          "final_measured_device_k": 313.3675172623465,
+          "temperature_iae_k_s": 158.8146545398162,
+          "temperature_ise_k2_s": 205.0078651611545,
+          "settling_time_s": 113.2,
+          "dp_tracking_iae_pa_s": 544447.4459873289,
+          "pump_electrical_j": 1911.0570612601573,
+          "control_total_variation": 0.5935707952272342,
+          "actuator_tracking_iae_fraction_s": 0.6771854363696854,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7441194081759938,
+          "final_pump_actual": 0.7457859818441748,
+          "final_pump_measured": 0.7457859818441748,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.25965049291699e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI80",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1232829542801,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.07932820611353,
+          "final_window_minimum_measured_k": 313.05875852750546,
+          "final_window_maximum_measured_k": 313.09857271789207,
+          "final_measured_device_k": 313.05875852750546,
+          "temperature_iae_k_s": 121.48814392292948,
+          "temperature_ise_k2_s": 83.81876516589185,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 202182.9406265339,
+          "pump_electrical_j": 1451.3298715768344,
+          "control_total_variation": 0.4012798860103115,
+          "actuator_tracking_iae_fraction_s": 0.38643521957274035,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6069340087005818,
+          "final_pump_actual": 0.6084003235315847,
+          "final_pump_measured": 0.6084003235315847,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.84179815632524e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI100",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41302870375006,
+          "minimum_device_k": 313.28601120085733,
+          "final_window_mean_measured_k": 313.45344135857124,
+          "final_window_minimum_measured_k": 313.28601120085733,
+          "final_window_maximum_measured_k": 313.6331890486724,
+          "final_measured_device_k": 313.28601120085733,
+          "temperature_iae_k_s": 157.67392934722758,
+          "temperature_ise_k2_s": 202.06579113452196,
+          "settling_time_s": 110.4,
+          "dp_tracking_iae_pa_s": 565792.0425235284,
+          "pump_electrical_j": 2061.8809609601626,
+          "control_total_variation": 0.6297819522668431,
+          "actuator_tracking_iae_fraction_s": 0.7085407630727034,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7657025501502389,
+          "final_pump_actual": 0.7676827119350671,
+          "final_pump_measured": 0.7676827119350671,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.536691105589853e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI100",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1530724897521,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.1357065801737,
+          "final_window_minimum_measured_k": 313.1244829831897,
+          "final_window_maximum_measured_k": 313.1458074303063,
+          "final_measured_device_k": 313.1244829831897,
+          "temperature_iae_k_s": 117.5832292008015,
+          "temperature_ise_k2_s": 79.16705212256751,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 221492.69396156268,
+          "pump_electrical_j": 1380.543975056537,
+          "control_total_variation": 0.43330600982551826,
+          "actuator_tracking_iae_fraction_s": 0.41468823122778053,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5851425486121802,
+          "final_pump_actual": 0.5867336365426742,
+          "final_pump_measured": 0.5867336365426742,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.703384431399172e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI120",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4117483943963,
+          "minimum_device_k": 313.2110920349638,
+          "final_window_mean_measured_k": 313.38347343947885,
+          "final_window_minimum_measured_k": 313.2110920349638,
+          "final_window_maximum_measured_k": 313.5691256658528,
+          "final_measured_device_k": 313.2110920349638,
+          "temperature_iae_k_s": 157.09699291806322,
+          "temperature_ise_k2_s": 199.8048437544823,
+          "settling_time_s": 107.8,
+          "dp_tracking_iae_pa_s": 588395.4920308316,
+          "pump_electrical_j": 2213.610524517352,
+          "control_total_variation": 0.6811006665110724,
+          "actuator_tracking_iae_fraction_s": 0.7418736342610137,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7851127504901744,
+          "final_pump_actual": 0.7874487460303173,
+          "final_pump_measured": 0.7874487460303173,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.769607014372014e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI120",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.1942534223539,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.1933011234471,
+          "final_window_minimum_measured_k": 313.1914244455307,
+          "final_window_maximum_measured_k": 313.1942534223539,
+          "final_measured_device_k": 313.1914244455307,
+          "temperature_iae_k_s": 113.5951456198001,
+          "temperature_ise_k2_s": 74.74893769373661,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 239848.7437248858,
+          "pump_electrical_j": 1313.8175901770965,
+          "control_total_variation": 0.4626103385888053,
+          "actuator_tracking_iae_fraction_s": 0.44144416728748265,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5645570608069288,
+          "final_pump_actual": 0.5662123351659613,
+          "final_pump_measured": 0.5662123351659613,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.436433525574103e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI60",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41481202790317,
+          "minimum_device_k": 313.4815936130299,
+          "final_window_mean_measured_k": 313.6287487922,
+          "final_window_minimum_measured_k": 313.4815936130299,
+          "final_window_maximum_measured_k": 313.78665519580034,
+          "final_measured_device_k": 313.4815936130299,
+          "temperature_iae_k_s": 160.2110237959459,
+          "temperature_ise_k2_s": 207.9011502480047,
+          "settling_time_s": 116.6,
+          "dp_tracking_iae_pa_s": 534895.4773440637,
+          "pump_electrical_j": 1726.5377282085587,
+          "control_total_variation": 0.6026825847597137,
+          "actuator_tracking_iae_fraction_s": 0.6640026428883683,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7049002819477685,
+          "final_pump_actual": 0.7064564799612222,
+          "final_pump_measured": 0.7064564799612222,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.61811930310796e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI60",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.0947003497156,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.01374734932114,
+          "final_window_minimum_measured_k": 312.9833408278102,
+          "final_window_maximum_measured_k": 313.04280442172154,
+          "final_measured_device_k": 312.9833408278102,
+          "temperature_iae_k_s": 126.12904702968885,
+          "temperature_ise_k2_s": 89.75889988876693,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 180446.7589391882,
+          "pump_electrical_j": 1540.1550862907486,
+          "control_total_variation": 0.36730888217087665,
+          "actuator_tracking_iae_fraction_s": 0.3547101055970904,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6313798627981255,
+          "final_pump_actual": 0.6327321573356379,
+          "final_pump_measured": 0.6327321573356379,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.758167276326276e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI80",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.41348927504197,
+          "minimum_device_k": 313.39241331792346,
+          "final_window_mean_measured_k": 313.54710713421593,
+          "final_window_minimum_measured_k": 313.39241331792346,
+          "final_window_maximum_measured_k": 313.7134378820708,
+          "final_measured_device_k": 313.39241331792346,
+          "temperature_iae_k_s": 158.11905493294793,
+          "temperature_ise_k2_s": 204.0789470909431,
+          "settling_time_s": 113.2,
+          "dp_tracking_iae_pa_s": 551008.1061220667,
+          "pump_electrical_j": 1871.8242549350564,
+          "control_total_variation": 0.6201237237469235,
+          "actuator_tracking_iae_fraction_s": 0.6873887084879985,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7285910401097058,
+          "final_pump_actual": 0.7304124933102966,
+          "final_pump_measured": 0.7304124933102966,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.572289296651434e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI80",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.11685193602256,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.06777188769934,
+          "final_window_minimum_measured_k": 313.04637369051324,
+          "final_window_maximum_measured_k": 313.0880785822641,
+          "final_measured_device_k": 313.04637369051324,
+          "temperature_iae_k_s": 122.36847453169291,
+          "temperature_ise_k2_s": 84.90861948857241,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 200176.4347372851,
+          "pump_electrical_j": 1465.6955894480527,
+          "control_total_variation": 0.4005356205559645,
+          "actuator_tracking_iae_fraction_s": 0.3836631639033944,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.6090023807630162,
+          "final_pump_actual": 0.610530777046909,
+          "final_pump_measured": 0.610530777046909,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.336318054105504e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI100",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.412200560313,
+          "minimum_device_k": 313.3107971540935,
+          "final_window_mean_measured_k": 313.4716949287179,
+          "final_window_minimum_measured_k": 313.3107971540935,
+          "final_window_maximum_measured_k": 313.6451506309299,
+          "final_measured_device_k": 313.3107971540935,
+          "temperature_iae_k_s": 156.8868368419893,
+          "temperature_ise_k2_s": 201.0733695369569,
+          "settling_time_s": 110.2,
+          "dp_tracking_iae_pa_s": 570191.4429664819,
+          "pump_electrical_j": 2018.4316833884575,
+          "control_total_variation": 0.6476741831133856,
+          "actuator_tracking_iae_fraction_s": 0.7155047999330579,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7498671746420515,
+          "final_pump_actual": 0.7520011857797829,
+          "final_pump_measured": 0.7520011857797829,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.693507887372107e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI100",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.14462347231427,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.1229349449555,
+          "final_window_minimum_measured_k": 313.11058020287385,
+          "final_window_maximum_measured_k": 313.134389808354,
+          "final_measured_device_k": 313.11058020287385,
+          "temperature_iae_k_s": 118.53037243855228,
+          "temperature_ise_k2_s": 80.2645682974433,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 219054.55208823824,
+          "pump_electrical_j": 1395.375142667401,
+          "control_total_variation": 0.43133054675693483,
+          "actuator_tracking_iae_fraction_s": 0.41128310840315685,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5876999411066964,
+          "final_pump_actual": 0.5893495555408436,
+          "final_pump_measured": 0.5893495555408436,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 6.061924295863719e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI120",
+        "case": "WARM_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 315.07446347854744,
+          "peak_device_k": 315.4109422994885,
+          "minimum_device_k": 313.2357327244052,
+          "final_window_mean_measured_k": 313.4017376050495,
+          "final_window_minimum_measured_k": 313.2357327244052,
+          "final_window_maximum_measured_k": 313.581237275015,
+          "final_measured_device_k": 313.2357327244052,
+          "temperature_iae_k_s": 156.24884441795328,
+          "temperature_ise_k2_s": 198.75068272632214,
+          "settling_time_s": 107.8,
+          "dp_tracking_iae_pa_s": 591261.1915403241,
+          "pump_electrical_j": 2166.031130297662,
+          "control_total_variation": 0.6894479952145605,
+          "actuator_tracking_iae_fraction_s": 0.746548814424443,
+          "command_saturation_duration_s": 0.2,
+          "actual_saturation_duration_s": 0.6000000000000001,
+          "command_minimum_bound_time_s": 0.2,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.6000000000000001,
+          "actual_maximum_bound_time_s": 0.0,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.7690142043005515,
+          "final_pump_actual": 0.7715020422396357,
+          "final_pump_measured": 0.7715020422396357,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 1.9999999999999998,
+            "NORMAL": 177.99999999999844
+          },
+          "safety_states": [
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 1,
+          "safety_events": [
+            [
+              2000000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.311520112627477e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": true,
+          "final_window_pass": true,
+          "final_saturation_pass": true,
+          "safety_pass": true,
+          "conservation_pass": true,
+          "status": "PASS"
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI120",
+        "case": "COLD_CAPTURE",
+        "physics_dt_ns": 200000000,
+        "status": "EXECUTED",
+        "metrics": {
+          "initial_measured_device_k": 312.78345829604956,
+          "peak_device_k": 313.18194648435934,
+          "minimum_device_k": 312.78345829604956,
+          "final_window_mean_measured_k": 313.17921412171273,
+          "final_window_minimum_measured_k": 313.1758752740685,
+          "final_window_maximum_measured_k": 313.18175463494185,
+          "final_measured_device_k": 313.1758752740685,
+          "temperature_iae_k_s": 114.61406593046101,
+          "temperature_ise_k2_s": 75.84536445698413,
+          "settling_time_s": null,
+          "dp_tracking_iae_pa_s": 236975.13544689293,
+          "pump_electrical_j": 1329.054258332436,
+          "control_total_variation": 0.4595284664930781,
+          "actuator_tracking_iae_fraction_s": 0.43740335583935064,
+          "command_saturation_duration_s": 0.0,
+          "actual_saturation_duration_s": 0.4,
+          "command_minimum_bound_time_s": 0.0,
+          "command_maximum_bound_time_s": 0.0,
+          "actual_minimum_bound_time_s": 0.0,
+          "actual_maximum_bound_time_s": 0.4,
+          "final_window_command_bound_time_s": 0.0,
+          "final_window_actual_bound_time_s": 0.0,
+          "final_pump_command": 0.5676037593801236,
+          "final_pump_actual": 0.5693158069453004,
+          "final_pump_measured": 0.5693158069453004,
+          "safety_state_duration_s": {
+            "FF_DISABLED": 2.1999999999999997,
+            "DEGRADED": 0.4,
+            "NORMAL": 177.39999999999847
+          },
+          "safety_states": [
+            "DEGRADED",
+            "FF_DISABLED",
+            "NORMAL"
+          ],
+          "safety_event_count": 3,
+          "safety_events": [
+            [
+              200000000,
+              "DEGRADED",
+              [
+                "ACTUATOR_TRACKING_PENDING"
+              ]
+            ],
+            [
+              600000000,
+              "FF_DISABLED",
+              [
+                "RECOVERY_QUALIFICATION"
+              ]
+            ],
+            [
+              2600000000,
+              "NORMAL",
+              []
+            ]
+          ],
+          "max_mass_residual_kg_s": 2.7755575615628914e-17,
+          "max_energy_residual_j": 5.536264779948397e-10,
+          "ownership_lineage_pass": true,
+          "control_direction_pass": true,
+          "settling_pass": false,
+          "final_window_pass": false,
+          "final_saturation_pass": true,
+          "safety_pass": false,
+          "conservation_pass": true,
+          "status": "FAIL"
+        }
+      }
+    ],
+    "candidate_decisions": [
+      {
+        "candidate_id": "R4-KP3000-KI60",
+        "kp": 3000.0,
+        "ki": 60.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 116.6,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 162.00062493359678,
+          "cold_temperature_iae_k_s": 123.59821429094478,
+          "total_temperature_iae_k_s": 285.59883922454156,
+          "total_control_total_variation": 0.8914340496427963,
+          "total_pump_electrical_j": 3331.4234827267687
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI80",
+        "kp": 3000.0,
+        "ki": 80.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 113.4,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 160.28026259899153,
+          "cold_temperature_iae_k_s": 119.642829289268,
+          "total_temperature_iae_k_s": 279.92309188825953,
+          "total_control_total_variation": 0.9740589848785866,
+          "total_pump_electrical_j": 3413.908135924503
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI100",
+        "kp": 3000.0,
+        "ki": 100.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 110.4,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 159.28945170234346,
+          "cold_temperature_iae_k_s": 115.59495446562735,
+          "total_temperature_iae_k_s": 274.88440616797084,
+          "total_control_total_variation": 1.0641389362743787,
+          "total_pump_electrical_j": 3501.778075928607
+        }
+      },
+      {
+        "candidate_id": "R4-KP3000-KI120",
+        "kp": 3000.0,
+        "ki": 120.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ],
+          "COLD_CAPTURE": []
+        },
+        "score": {
+          "warm_settling_time_s": null,
+          "cold_settling_time_s": 131.4,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 158.81325746371937,
+          "cold_temperature_iae_k_s": 111.45274976337974,
+          "total_temperature_iae_k_s": 270.2660072270991,
+          "total_control_total_variation": 1.1569267971890127,
+          "total_pump_electrical_j": 3594.545578674264
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI60",
+        "kp": 4000.0,
+        "ki": 60.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 116.6,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 161.3635870774332,
+          "cold_temperature_iae_k_s": 124.46766379989687,
+          "total_temperature_iae_k_s": 285.8312508773301,
+          "total_control_total_variation": 0.9102743125976622,
+          "total_pump_electrical_j": 3309.376756130131
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI80",
+        "kp": 4000.0,
+        "ki": 80.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 113.2,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 159.536238478181,
+          "cold_temperature_iae_k_s": 120.58002971533605,
+          "total_temperature_iae_k_s": 280.11626819351704,
+          "total_control_total_variation": 0.9772822688034895,
+          "total_pump_electrical_j": 3387.8591008555604
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI100",
+        "kp": 4000.0,
+        "ki": 100.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 110.4,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 158.47550231612598,
+          "cold_temperature_iae_k_s": 116.60526541625478,
+          "total_temperature_iae_k_s": 275.08076773238076,
+          "total_control_total_variation": 1.0586917345251767,
+          "total_pump_electrical_j": 3471.757146980868
+        }
+      },
+      {
+        "candidate_id": "R4-KP4000-KI120",
+        "kp": 4000.0,
+        "ki": 120.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": null,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 157.95228584384395,
+          "cold_temperature_iae_k_s": 112.54197160219869,
+          "total_temperature_iae_k_s": 270.49425744604264,
+          "total_control_total_variation": 1.1466601410050505,
+          "total_pump_electrical_j": 3560.5890365592836
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI60",
+        "kp": 5000.0,
+        "ki": 60.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 116.6,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 160.76479638608845,
+          "cold_temperature_iae_k_s": 125.31090312462506,
+          "total_temperature_iae_k_s": 286.0756995107135,
+          "total_control_total_variation": 0.9376685619169092,
+          "total_pump_electrical_j": 3287.789495605598
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI80",
+        "kp": 5000.0,
+        "ki": 80.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 113.2,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 158.8146545398162,
+          "cold_temperature_iae_k_s": 121.48814392292948,
+          "total_temperature_iae_k_s": 280.30279846274567,
+          "total_control_total_variation": 0.9948506812375457,
+          "total_pump_electrical_j": 3362.386932836992
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI100",
+        "kp": 5000.0,
+        "ki": 100.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 110.4,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 157.67392934722758,
+          "cold_temperature_iae_k_s": 117.5832292008015,
+          "total_temperature_iae_k_s": 275.2571585480291,
+          "total_control_total_variation": 1.0630879620923612,
+          "total_pump_electrical_j": 3442.4249360166996
+        }
+      },
+      {
+        "candidate_id": "R4-KP5000-KI120",
+        "kp": 5000.0,
+        "ki": 120.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 107.8,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 157.09699291806322,
+          "cold_temperature_iae_k_s": 113.5951456198001,
+          "total_temperature_iae_k_s": 270.69213853786334,
+          "total_control_total_variation": 1.1437110050998776,
+          "total_pump_electrical_j": 3527.4281146944486
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI60",
+        "kp": 6000.0,
+        "ki": 60.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 116.6,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 160.2110237959459,
+          "cold_temperature_iae_k_s": 126.12904702968885,
+          "total_temperature_iae_k_s": 286.3400708256347,
+          "total_control_total_variation": 0.9699914669305904,
+          "total_pump_electrical_j": 3266.692814499307
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI80",
+        "kp": 6000.0,
+        "ki": 80.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 113.2,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 158.11905493294793,
+          "cold_temperature_iae_k_s": 122.36847453169291,
+          "total_temperature_iae_k_s": 280.48752946464083,
+          "total_control_total_variation": 1.020659344302888,
+          "total_pump_electrical_j": 3337.519844383109
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI100",
+        "kp": 6000.0,
+        "ki": 100.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 110.2,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 156.8868368419893,
+          "cold_temperature_iae_k_s": 118.53037243855228,
+          "total_temperature_iae_k_s": 275.41720928054156,
+          "total_control_total_variation": 1.0790047298703205,
+          "total_pump_electrical_j": 3413.8068260558584
+        }
+      },
+      {
+        "candidate_id": "R4-KP6000-KI120",
+        "kp": 6000.0,
+        "ki": 120.0,
+        "kd": 0.0,
+        "status": "BIDIRECTIONAL_THERMAL_FAIL",
+        "failure_reasons_by_case": {
+          "WARM_CAPTURE": [],
+          "COLD_CAPTURE": [
+            "NO_SETTLING",
+            "FINAL_WINDOW_TEMPERATURE"
+          ]
+        },
+        "score": {
+          "warm_settling_time_s": 107.8,
+          "cold_settling_time_s": null,
+          "worst_side_settling_time_s": null,
+          "warm_temperature_iae_k_s": 156.24884441795328,
+          "cold_temperature_iae_k_s": 114.61406593046101,
+          "total_temperature_iae_k_s": 270.8629103484143,
+          "total_control_total_variation": 1.1489764617076386,
+          "total_pump_electrical_j": 3495.085388630098
+        }
+      }
+    ],
+    "thermally_feasible_count": 0,
+    "feasible_ranking": []
+  },
+  "stage_b": {
+    "status": "NOT_EXECUTED_NO_STAGE_A_FEASIBLE_CANDIDATE",
+    "finalist_ids": [],
+    "expected_runs": 0,
+    "completed_runs": 0,
+    "run_matrix": [],
+    "convergence": [],
+    "robust_candidate_ids": []
+  },
+  "numerical_uncertainty": {
+    "status": "NOT_APPLICABLE_NO_ROBUST_FINALIST",
+    "pairwise_comparisons": []
+  },
+  "selection_hierarchy": [
+    "bidirectional_thermal_feasibility",
+    "minimum_worst_side_settling_time",
+    "minimum_total_temperature_iae",
+    "minimum_total_control_total_variation",
+    "minimum_total_pump_electrical_j",
+    "candidate_id"
+  ],
+  "selection": {
+    "candidate_id": null,
+    "reason": null,
+    "frozen_final_baseline": false
+  },
+  "startup_safety": {
+    "status": "COMMON_STARTUP_SAFETY_BLOCKER",
+    "candidate_independent": true,
+    "expected_cold_startup_events": [
+      [
+        200000000,
+        "DEGRADED",
+        [
+          "ACTUATOR_TRACKING_PENDING"
+        ]
+      ],
+      [
+        600000000,
+        "FF_DISABLED",
+        [
+          "RECOVERY_QUALIFICATION"
+        ]
+      ],
+      [
+        2600000000,
+        "NORMAL",
+        []
+      ]
+    ],
+    "cold_degraded_duration_s": 0.4,
+    "full_feedback_qualification_pending": true
+  },
+  "ownership": {
+    "status": "PASS",
+    "audit": {
+      "schema": "phase5-r1-ownership-audit-v1",
+      "static": {
+        "checks": {
+          "plc_is_unique_actuator_command_constructor": true,
+          "actuator_call_receives_plc_result_only": true,
+          "actuator_has_no_safety_decision_dependency": true,
+          "safety_does_not_construct_actuator_command": true,
+          "supervisor_does_not_construct_actuator_command": true,
+          "outer_feedback_does_not_construct_actuator_command": true
+        },
+        "actuator_command_constructor_modules": [
+          "v0_2/control/inner_loop.py"
+        ],
+        "actuator_call_arguments": [
+          "held_plc_result.actuator_command"
+        ],
+        "status": "PASS"
+      },
+      "runtime": {
+        "checks": {
+          "normal_all_commands_from_plc": true,
+          "fault_all_commands_from_plc": true,
+          "normal_lineage_complete": true,
+          "fault_lineage_complete": true,
+          "fault_path_exercised": true,
+          "degraded_path_through_plc": true,
+          "pressure_path_through_plc": true,
+          "protected_path_through_plc": true,
+          "emergency_paths_same_tick": true
+        },
+        "scenarios": {
+          "normal": {
+            "command_count": 201,
+            "command_producers": [
+              "PLC"
+            ],
+            "all_commands_from_plc": true,
+            "lineage_complete": true,
+            "safety_states": [
+              "FF_DISABLED",
+              "NORMAL"
+            ],
+            "first_command": {
+              "command_id": "actuator-command:0:1",
+              "created_ns": 0,
+              "producer_module": "PLC",
+              "plc_cycle_id": "plc-cycle:0:1",
+              "accepted_target_id": "accepted-target:0:1",
+              "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+              "requested_speed": 0.7,
+              "applied_command_before_actuator_dynamics": 0.7,
+              "reason": "NORMAL_DP_FEEDBACK",
+              "mode": "NORMAL",
+              "source_ids": [
+                "plc-cycle:0:1",
+                "accepted-target:0:1",
+                "safety-envelope:0:FF_DISABLED"
+              ]
+            },
+            "last_command": {
+              "command_id": "actuator-command:40000000000:201",
+              "created_ns": 40000000000,
+              "producer_module": "PLC",
+              "plc_cycle_id": "plc-cycle:40000000000:201",
+              "accepted_target_id": "accepted-target:40000000000:201",
+              "safety_envelope_id": "safety-envelope:40000000000:NORMAL",
+              "requested_speed": 0.9,
+              "applied_command_before_actuator_dynamics": 0.9,
+              "reason": "NORMAL_DP_FEEDBACK",
+              "mode": "NORMAL",
+              "source_ids": [
+                "plc-cycle:40000000000:201",
+                "accepted-target:40000000000:201",
+                "safety-envelope:40000000000:NORMAL"
+              ]
+            }
+          },
+          "fault": {
+            "command_count": 31,
+            "command_producers": [
+              "PLC"
+            ],
+            "all_commands_from_plc": true,
+            "lineage_complete": true,
+            "safety_states": [
+              "DEGRADED",
+              "FAULT",
+              "FF_DISABLED",
+              "NORMAL"
+            ],
+            "first_command": {
+              "command_id": "actuator-command:0:1",
+              "created_ns": 0,
+              "producer_module": "PLC",
+              "plc_cycle_id": "plc-cycle:0:1",
+              "accepted_target_id": "accepted-target:0:1",
+              "safety_envelope_id": "safety-envelope:0:FF_DISABLED",
+              "requested_speed": 0.648,
+              "applied_command_before_actuator_dynamics": 0.648,
+              "reason": "NORMAL_DP_FEEDBACK",
+              "mode": "NORMAL",
+              "source_ids": [
+                "plc-cycle:0:1",
+                "accepted-target:0:1",
+                "safety-envelope:0:FF_DISABLED"
+              ]
+            },
+            "last_command": {
+              "command_id": "actuator-command:6000000000:31",
+              "created_ns": 6000000000,
+              "producer_module": "PLC",
+              "plc_cycle_id": "plc-cycle:6000000000:31",
+              "accepted_target_id": "accepted-target:6000000000:31",
+              "safety_envelope_id": "safety-envelope:6000000000:FAULT",
+              "requested_speed": 0.5,
+              "applied_command_before_actuator_dynamics": 0.5,
+              "reason": "SAFETY_EXACT_SPEED_ENVELOPE",
+              "mode": "EMERGENCY",
+              "source_ids": [
+                "plc-cycle:6000000000:31",
+                "accepted-target:6000000000:31",
+                "safety-envelope:6000000000:FAULT"
+              ]
+            }
+          }
+        },
+        "direct_safety_modes": {
+          "degraded": {
+            "state": "DEGRADED",
+            "producer_module": "PLC",
+            "speed": 0.3,
+            "mode": "NORMAL",
+            "same_tick": true
+          },
+          "pressure_restriction": {
+            "state": "FAULT",
+            "producer_module": "PLC",
+            "speed": 0.5,
+            "mode": "EMERGENCY",
+            "same_tick": true
+          },
+          "protected": {
+            "state": "PROTECTED",
+            "producer_module": "PLC",
+            "speed": 0.5,
+            "mode": "EMERGENCY",
+            "same_tick": true
+          }
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    }
+  },
+  "conservation": {
+    "status": "PASS",
+    "max_mass_residual_kg_s": 2.7755575615628914e-17,
+    "max_energy_residual_j": 6.199272206686146e-10
+  },
+  "invalid_run_count": 0,
+  "repeatability": {
+    "status": "NOT_EXECUTED",
+    "reason": "no selected robust candidate"
+  },
+  "holdout_used_for_tuning": false,
+  "phase6_authorized": false,
+  "figure_traces": {}
+}

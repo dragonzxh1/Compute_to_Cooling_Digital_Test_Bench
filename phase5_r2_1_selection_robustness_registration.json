@@ -1,0 +1,97 @@
+{
+  "schema": "phase5-r2-1-selection-robustness-registration-v1",
+  "status": "FROZEN_BEFORE_36_ROBUSTNESS_RUNS",
+  "source_integrity": {
+    "phase5_r1_baseline_sha256": "24a0198daf1e823bc6e8ff087e9a2d0491391afa3d5a4aed7b75a8a39800920d",
+    "phase5_r2_target_registration_sha256": "8b2bda84c6591e678d0fde972562e1f0dc7a10d0b22c82b76a10f34372c860a2",
+    "phase5_r2_initial_selection_evidence_sha256": "94bd66cf9c66602ca37fd16d65f92b93536d7ff36974a8d10153723897c93e37",
+    "phase5_r2_candidate_baseline_sha256": "2f97cc36ff10d81be7a3a74a9c8d94cd2099222e5cd5c22ba09fad8f458f9a0a",
+    "r1_control_core_sha256": "b79eaf9c7cdc2665856db87bd6a59b900eb2f31efb0b3a94112bbbe476152579",
+    "frozen_plant_sha256": "d240051ccdc8681ba44d3fc8c30597ce920a761b834dabbdd5d5d93d9d016254"
+  },
+  "target_k": 313.71072595542387,
+  "target_policy": "frozen Phase 5R2 generic numerical control target; do not recompute or revise",
+  "inner_candidate": {
+    "id": "inner_b",
+    "kp": 0.000015,
+    "ki": 0.000004,
+    "kd": 0.0
+  },
+  "outer_candidates": [
+    {"id": "outer_a", "kp": 1000.0, "ki": 20.0, "kd": 0.0},
+    {"id": "outer_b", "kp": 2000.0, "ki": 40.0, "kd": 0.0},
+    {"id": "outer_c", "kp": 3000.0, "ki": 60.0, "kd": 0.0}
+  ],
+  "physics_dt_ns": [200000000, 100000000, 50000000],
+  "nonphysics_clocks_policy": "measurement, outer, PLC, Safety, and actuator periods remain frozen and independent of physics dt",
+  "training_ids": [
+    "TUNE-01-load",
+    "TUNE-02-fws-temperature",
+    "TUNE-03-fws-flow",
+    "TUNE-04-branch-restriction"
+  ],
+  "run_count": 36,
+  "aggregation_rule": {
+    "feasibility_failed": "logical OR across all four training scenarios",
+    "thermal_tracking_iae": "sum temperature_iae_k_s across all four training scenarios",
+    "control_total_variation": "sum control_total_variation across all four training scenarios",
+    "pump_electrical_energy": "sum pump_electrical_j across all four training scenarios"
+  },
+  "feasibility_rule": {
+    "maximum_mass_residual_kg_s": 1e-8,
+    "maximum_absolute_step_energy_residual_j": 0.001,
+    "minimum_headroom_k": -5.0,
+    "maximum_safety_fault_events": 0,
+    "invalid_domain_nonfinite_or_solver_failure": "FAIL"
+  },
+  "selection_priority": [
+    "physical_and_safety_feasibility",
+    "thermal_tracking_iae",
+    "control_total_variation",
+    "pump_electrical_energy",
+    "candidate_id_lexicographic"
+  ],
+  "numerical_indistinguishability_rule": {
+    "candidate_pair_difference": "absolute difference between candidate aggregate thermal IAE values at dt=0.05 s",
+    "uncertainty_bound": "abs(candidate_A IAE_0.1 - IAE_0.05) + abs(candidate_B IAE_0.1 - IAE_0.05)",
+    "indistinguishable_when": "candidate_pair_difference <= uncertainty_bound",
+    "effect": "thermal IAE cannot rank that pair; apply the next registered criterion using dt=0.05 s aggregates"
+  },
+  "mesh_ordering_policy": {
+    "raw_winner": "minimum original selection tuple independently at each mesh",
+    "robust_winner": "outer_b at all three meshes with outer_a-minus-outer_b thermal IAE positive at all meshes",
+    "unstable": "raw winner changes across meshes without resolution by the registered indistinguishability and tie-break hierarchy"
+  },
+  "candidate_convergence_rule": "for every candidate, abs(IAE_0.1-IAE_0.05) must not exceed abs(IAE_0.2-IAE_0.1)",
+  "selected_baseline_convergence_policy": {
+    "meshes_ns": [200000000, 100000000, 50000000],
+    "fine_pair_tolerances": {
+      "peak_device_k": 0.1,
+      "temperature_iae_k_s": 5.0,
+      "dp_tracking_iae_pa_s": 10000.0,
+      "pump_electrical_relative": 0.01,
+      "saturation_duration_s": 0.2,
+      "control_total_variation": 0.01,
+      "actuator_tracking_iae_fraction_s": 0.02
+    }
+  },
+  "holdout_policy": {
+    "scenario_id": "HOLDOUT-01-combined",
+    "selection_input": false,
+    "role_after_final_selection": "HISTORICAL STRESS CHARACTERIZATION"
+  },
+  "repeated_stability_runs": 10,
+  "final_freeze_conditions": {
+    "final_candidate_must_be": "outer_b",
+    "all_36_runs_valid": true,
+    "candidate_convergence_acceptable": true,
+    "ownership_mass_energy_and_regressions_pass": true,
+    "historical_stress_selected_convergence_and_stability_run_after_selection": true,
+    "outer_a_result": "FINAL_SELECTION_CHANGED_AFTER_MESH_ROBUSTNESS / STOP FOR USER REVIEW"
+  },
+  "forbidden": [
+    "target, plant, actuator, sensor, Safety, candidate, scenario, event, clock, or selection-policy changes",
+    "holdout use in selection",
+    "retuning, new gains, Phase 5.1R2, Phase 6, or feedforward"
+  ]
+}

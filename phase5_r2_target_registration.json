@@ -1,0 +1,92 @@
+{
+  "schema": "phase5-r2-target-selection-registration-v1",
+  "status": "FROZEN_BEFORE_TARGET_SELECTION_RUN",
+  "source_r1_baseline_sha256": "24a0198daf1e823bc6e8ff087e9a2d0491391afa3d5a4aed7b75a8a39800920d",
+  "source_r1_control_core_sha256": "b79eaf9c7cdc2665856db87bd6a59b900eb2f31efb0b3a94112bbbe476152579",
+  "source_r1_revision_registration_sha256": "9ef5cd97c2d4bf3f2540739a58d676bf2c64c4e6be0421fe8a21a4482cb36066",
+  "source_r1_selection_evidence_sha256": "fe9f5e78cbf27197ffbe61ea68f7b5ab76264ae6f864fa0494b6fdc6d5c1c6d5",
+  "source_phase5_1r_registration_sha256": "1f7dd7f37742ac8430721b6f19ccc6d1efde0994d58e97d43e040d92930943e7",
+  "reason_for_revision": "The frozen 305 K research target is outside the frozen generic plant cooling authority at every Phase 5.1R candidate load.",
+  "frozen_plant_reference": {
+    "hash_algorithm": "SHA-256 over sorted repository-relative Python paths, NUL separator, and exact file bytes",
+    "source_sha256": "d240051ccdc8681ba44d3fc8c30597ce920a761b834dabbdd5d5d93d9d016254",
+    "excluded_control_wrapper": "v0_2/plant/controlled_loop.py",
+    "fixture": "v0_2.plant.fixtures.physical_fixture(branch_count=2, power_each=120)"
+  },
+  "target_derivation_load_w_per_device": 120.0,
+  "cooling_authority_endpoints": {
+    "low_speed_fraction": 0.3,
+    "high_speed_fraction": 0.9,
+    "duration_ns": 180000000000,
+    "qualified_window_start_ns": 150000000000,
+    "qualified_window_end_ns": 180000000000,
+    "statistic": "mean maximum device temperature across the fixed final 30-second window",
+    "historical_low_k": 314.7243256180813,
+    "historical_high_k": 312.69712629276637,
+    "endpoint_reproduction_tolerance_k": 0.01
+  },
+  "target_derivation_rule": "AUTHORITY_MIDPOINT: target_k = (T_low_k + T_high_k) / 2 using full binary64 result from the registered rerun",
+  "required_authority_margin_k_each_side": 0.75,
+  "hard_stop_authority_margin_k_each_side": 0.5,
+  "allowed_target_precision": "full binary64 value in artifacts; human documentation may display two decimals",
+  "target_provenance": "GENERIC NUMERICAL CONTROL TARGET / ENGINEERING_ASSUMPTION / UNVALIDATED / NOT OEM-NVIDIA-GB300",
+  "controller_candidate_policy": {
+    "source": "phase5_tuning_registration.json",
+    "inner_candidates": ["inner_a", "inner_b"],
+    "outer_candidates": ["outer_a", "outer_b", "outer_c"],
+    "candidate_values_unchanged": true,
+    "selection_priority": [
+      "physical_and_safety_feasibility",
+      "thermal_tracking_iae",
+      "control_total_variation",
+      "pump_electrical_energy",
+      "candidate_id_lexicographic"
+    ]
+  },
+  "reselection_policy": {
+    "training_ids": [
+      "TUNE-01-load",
+      "TUNE-02-fws-temperature",
+      "TUNE-03-fws-flow",
+      "TUNE-04-branch-restriction"
+    ],
+    "inner_selection_must_remain": "inner_b",
+    "outer_selection_change_action": "STOP_FOR_USER_REVIEW_WITH_CANDIDATE_BASELINE",
+    "holdout_used_in_selection": false,
+    "initial_integrator_or_warm_start_changes_allowed": false
+  },
+  "historical_holdout_role": {
+    "scenario_id": "HOLDOUT-01-combined",
+    "classification": "REGRESSION / STRESS CHARACTERIZATION",
+    "blind_holdout": false,
+    "selection_input": false,
+    "nominal_qualification": false
+  },
+  "numerical_requirements": {
+    "physics_dt_ns": [200000000, 100000000, 50000000],
+    "max_mass_residual_kg_s": 1e-8,
+    "max_absolute_step_energy_residual_j": 0.001,
+    "closed_loop_convergence_policy": "existing Phase 5 registered policy",
+    "repeated_stability_runs": 10
+  },
+  "regression_requirements": [
+    "Phase 5R2 tests",
+    "Phase 5R1 ownership and regression tests",
+    "original Phase 5 tests",
+    "Phase 4.1, Phase 4, and Phase 3 tests",
+    "V0.1 tests",
+    "Ruff",
+    "authority-figure smoke",
+    "README local-link validation"
+  ],
+  "allowed_changes": [
+    "new target/baseline/evidence JSON",
+    "R2 runners, tests, figures, reports, and documentation"
+  ],
+  "forbidden_changes": [
+    "control-core Python",
+    "plant, actuator, sensor, or Safety physical parameters",
+    "candidate gains or selection priority",
+    "feedforward or Phase 6"
+  ]
+}
