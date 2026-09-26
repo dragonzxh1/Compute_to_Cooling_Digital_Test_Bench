@@ -1,0 +1,66 @@
+{
+  "schema": "phase5-r5-2-1-continuous-tracking-semantics-spec-v1",
+  "status": "BLOCKED_NOT_PRODUCTION_PORTABLE",
+  "registration_sha256": "5194b76256d74a2b37db606c5e952bb15462e7b5703dbd0f6ce24716e0937d48",
+  "source_evidence_sha256": {
+    "r5": "1707b3b854291e5eeb29a5ec10ad665ddc81dbc3f9f42a9ec8dededc84efc171",
+    "r5_1": "624d082f1ae19ca5433a365b68a16049091989caa7fb79ddbfe535676b3648f7",
+    "r5_2": "02c3dd6098dcc241f5fed578d3b0f35f7e0cb8dfe714a83b36cb5f59f7d300b3"
+  },
+  "states": ["STEADY_TRACKING", "HANDOFF_PENDING", "TRACKING_PROGRESS", "TRACKING_FAULT_SUSPECTED", "TRACKING_FAULT_CONFIRMED", "INSUFFICIENT_MEASUREMENT"],
+  "events": ["MATERIAL_DEMAND", "IMMATERIAL_UPDATE", "MATERIAL_SAME_DIRECTION_UPDATE", "MATERIAL_REVERSAL", "QUALIFIED_PROGRESS", "INSUFFICIENT_PROGRESS", "CONFIRMING_DEFICIT", "MEASUREMENT_INVALID", "MEASUREMENT_RECOVERED", "TRACKING_RESOLVED", "POST_PROGRESS_LOSS", "EXPLICIT_TOP_LEVEL_FAULT_RESET"],
+  "guards": {
+    "material_demand": "R5.2 generic-fixture command delta >= 0.15 speed fraction; hardware calibration required",
+    "qualified_measurement": "released by decision time, VALID, age <= profile validity limit; no raw ACTUAL fallback",
+    "response_open": "command timestamp + qualified command delay + sensor sampling/release opportunity; exact hardware profile required",
+    "r5_2_generic_progress": "directed measured displacement >= 0.01 and displacement / expected >= 0.5 after expected >= 0.03; initial handoff only",
+    "r5_2_generic_confirmation": "expected >= 0.12 and directed-progress ratio < 0.35 on two qualified samples; initial handoff only",
+    "steady_completion": "UNRESOLVED: no frozen continuous tracking tolerance or noise/resolution qualification",
+    "post_progress_loss": "UNRESOLVED: no frozen guard for continuously moving commands",
+    "reversal_anti_mask": "UNRESOLVED: no qualified observation horizon or persistent-demand rule",
+    "sensor_recovery": "UNRESOLVED: no qualified re-anchor/evidence-retention rule"
+  },
+  "transitions": [
+    {"from": "STEADY_TRACKING", "event": "MATERIAL_DEMAND", "to": "HANDOFF_PENDING", "status": "conceptual_only"},
+    {"from": "HANDOFF_PENDING", "event": "QUALIFIED_PROGRESS", "to": "TRACKING_PROGRESS", "status": "R5.2_initial_handoff_fixture_only"},
+    {"from": "HANDOFF_PENDING", "event": "INSUFFICIENT_PROGRESS", "to": "TRACKING_FAULT_SUSPECTED", "status": "R5.2_initial_handoff_fixture_only"},
+    {"from": "TRACKING_FAULT_SUSPECTED", "event": "CONFIRMING_DEFICIT", "to": "TRACKING_FAULT_CONFIRMED", "status": "R5.2_initial_handoff_fixture_only"},
+    {"from": "TRACKING_FAULT_SUSPECTED", "event": "QUALIFIED_PROGRESS", "to": "TRACKING_PROGRESS", "status": "R5.2_initial_handoff_fixture_only"},
+    {"from": "TRACKING_PROGRESS", "event": "TRACKING_RESOLVED", "to": "STEADY_TRACKING", "status": "UNRESOLVED"},
+    {"from": "TRACKING_PROGRESS", "event": "POST_PROGRESS_LOSS", "to": "TRACKING_FAULT_SUSPECTED", "status": "UNRESOLVED"},
+    {"from": "STEADY_TRACKING", "event": "POST_PROGRESS_LOSS", "to": "TRACKING_FAULT_SUSPECTED", "status": "UNRESOLVED"},
+    {"from": "HANDOFF_PENDING", "event": "MEASUREMENT_INVALID", "to": "INSUFFICIENT_MEASUREMENT", "status": "existing_sensor_quality_path"},
+    {"from": "TRACKING_FAULT_SUSPECTED", "event": "MEASUREMENT_INVALID", "to": "INSUFFICIENT_MEASUREMENT", "status": "retain_prior_suspicion_required_but_resume_guard_UNRESOLVED"},
+    {"from": "INSUFFICIENT_MEASUREMENT", "event": "MEASUREMENT_RECOVERED", "to": "HANDOFF_PENDING_OR_TRACKING_FAULT_SUSPECTED", "status": "UNRESOLVED"},
+    {"from": "TRACKING_FAULT_CONFIRMED", "event": "EXPLICIT_TOP_LEVEL_FAULT_RESET", "to": "UNRESOLVED", "status": "existing_Safety_reset_authority_only"}
+  ],
+  "epoch_rules": {
+    "fields": ["tracking_epoch_id", "start_timestamp", "anchor_command", "latest_command", "anchor_measured_speed", "expected_direction", "response_window", "measurement_quality_state", "tracking_status", "progress_evidence", "suspected_since", "confirmed_since", "completion_reason"],
+    "small_same_direction": "must retain original unresolved-demand age",
+    "material_same_direction": "must retain original unresolved-demand age; envelope update is not qualified",
+    "material_reversal": "directional context replacement required; anti-mask evidence retention unresolved",
+    "completion": "requires qualified evidence; exact steady guard unresolved",
+    "post_completion": "later material demand must start a new qualification",
+    "command_chatter": "no proven bounded-detection guarantee without a qualified persistent-demand/observability rule"
+  },
+  "parameter_requirements": [
+    {"name": "command_delay", "unit": "s", "source_type": "typed_actuator_config", "source_ref": "PumpActuatorConfig.command_delay_ns", "valid_range": ">=0", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "speed_rate_limit", "unit": "fraction/s", "source_type": "typed_actuator_config", "source_ref": "PumpActuatorConfig.ramp_per_s", "valid_range": ">0", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "lag_time_constant", "unit": "s", "source_type": "typed_actuator_config", "source_ref": "PumpActuatorConfig.tau_s", "valid_range": ">0", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "measurement_period", "unit": "s", "source_type": "typed_sensor_config", "source_ref": "SensorConfig.sample_ns", "valid_range": ">0", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "measurement_release_delay", "unit": "s", "source_type": "typed_sensor_config", "source_ref": "SensorConfig.local_delay_ns", "valid_range": ">=0", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "measurement_validity_limit", "unit": "s", "source_type": "typed_sensor_config", "source_ref": "SensorConfig.max_age_ns", "valid_range": ">0", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "material_command_delta", "unit": "speed fraction", "source_type": "R5.2_diagnostic_registration", "source_ref": "classifier.material_command_change_fraction", "valid_range": "0..1", "calibration_status": "GENERIC_FIXTURE_ONLY_HARDWARE_CALIBRATION_REQUIRED"},
+    {"name": "measured_speed_resolution_and_noise_bound", "unit": "speed fraction", "source_type": "NOT_PRESENT_IN_TYPED_SENSOR_CONFIG", "source_ref": "none", "valid_range": "unknown", "calibration_status": "CALIBRATION_REQUIRED"},
+    {"name": "continuous_progress_loss_guard", "unit": "speed fraction and time", "source_type": "NOT_QUALIFIED_IN_R5.2", "source_ref": "none", "valid_range": "unknown", "calibration_status": "CALIBRATION_REQUIRED"},
+    {"name": "reversal_observability_or_persistent_demand", "unit": "time/command history", "source_type": "NOT_QUALIFIED_IN_R5.2", "source_ref": "none", "valid_range": "unknown", "calibration_status": "CALIBRATION_REQUIRED"}
+  ],
+  "response_window_rule": "Generic earliest observation = command time + command delay + sensor sample/release opportunity. A certified latest expected progress time additionally requires qualified measurement resolution/noise and continuous command-trajectory observability; currently unavailable.",
+  "progress_rule": "R5.2 initial-handoff formula only; cannot be reused for continuous post-progress monitoring without a qualified re-anchor/trajectory rule",
+  "suspected_rule": "R5.2 initial-handoff insufficient-progress rule only; continuous entry and retained suspicion across reversal/telemetry loss unresolved",
+  "confirmed_rule": "R5.2 initial-handoff two-qualified-sample criterion only; no confirmation from absent telemetry",
+  "measurement_invalid_rule": "INSUFFICIENT_MEASUREMENT; existing CRITICAL_LOCAL_SENSOR_INVALID Safety path remains authoritative; do not erase prior fault evidence",
+  "recovery_constraints": "No qualifier output clears top-level FAULT; existing Safety reset and recovery authority only. Resume/re-anchor guard remains unresolved.",
+  "invariants": ["small_updates_do_not_reset_age", "same_direction_updates_cannot_mask_stuck", "progress_not_permanent_immunity", "no_raw_actual_fallback", "no_automatic_fault_clear", "reversal_deterministic", "prefix_causal", "no_ActuatorCommand_output"],
+  "production_port_allowed": false
+}

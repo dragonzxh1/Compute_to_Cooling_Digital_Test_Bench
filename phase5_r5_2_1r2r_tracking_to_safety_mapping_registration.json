@@ -1,0 +1,64 @@
+{
+  "schema": "phase5-r5-2-1r2r-registration-v1",
+  "scope": "OFFLINE_CONTRACT_REVALIDATION_ONLY",
+  "source_sha256": {
+    "contracts/14_control_input_permission_contract.md": "efd8d325753163b91170578ceeb3de02dafafbf8fb0a208a279c76c964d7b144",
+    "contracts/15_safety_supervisor_contract.md": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+    "contracts/15A_tracking_safety_policy_amendment.md": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "phase5_r5_2_1r3_tracking_safety_policy_contract.json": "2d94871405e1b8ca62793d7511392903cf946aea5c8ffeea6b07421ef5fa625e",
+    "phase5_r5_2_1r3_tracking_safety_policy_evidence.json": "6f7b9581c271b0607524828dab0ead4d8bf442bbd70dacdb11698bfea510ea49",
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "phase5_r5_2_1r_continuous_tracking_semantics_spec.json": "34898bd1ed3e53ae596cdddea22735e0aca3531a31f2157c3100d6bc50718c16",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8"
+  },
+  "production_sha256": {
+    "v0_2/safety/supervisor.py": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "v0_2/control/directional_outer.py": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "v0_2/control/outer_feedback.py": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+    "v0_2/control/inner_loop.py": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+    "v0_2/control/pid.py": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+    "v0_2/actuators/pump.py": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "v0_2/measurement/local_sensor.py": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+    "v0_2/plant/controlled_loop.py": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+    "v0_2/plant/authority.py": "7eb907031954b60b0c12c2abb9b11c1e1b35aee9a5edc0c41a02ed99a0a7e0c4"
+  },
+  "required_gates": {
+    "r1a": "CUMULATIVE_COMMAND_DEMAND_SEMANTICS_VALIDATED_IN_PROFILE_DOMAIN",
+    "r3": "TRACKING_SAFETY_POLICY_AMENDMENT_SPECIFIED_AND_VALIDATED",
+    "historical_r2": "TRACKING_STATE_TO_SAFETY_LEVEL_UNDERSPECIFIED"
+  },
+  "type_schema": {
+    "SafetyDecision": "frozen dataclass: state SafetyState, accepted_dp_pa float, reasons tuple[str,...], derate_requested bool, envelope SafetyEnvelope; no primary_reason",
+    "SafetyEnvelope": "frozen dataclass: state SafetyState, DP and speed bounds, fallback, shutdown flag, reason_codes tuple[str,...], source_measurement_ids tuple[str,...], provenance/validity fields",
+    "SafetySupervisor": "mutable fault_latched and explicit reset_fault; current evaluate uses single-branch if/elif and does not retain all simultaneous channel reasons"
+  },
+  "hierarchy_high_to_low": ["FAULT", "PROTECTED", "DERATE_REQUESTED", "DEGRADED", "FF_DISABLED", "NORMAL"],
+  "channels": ["THERMAL", "PRESSURE", "SENSOR_QUALITY", "ACTUATOR_TRACKING", "FF", "DERATE_PROTECTION"],
+  "state_mapping": {
+    "STEADY_TRACKING": ["NORMAL", null, "NONE", "QUALIFIER_ON_LATER_DEMAND"],
+    "HANDOFF_PENDING": ["NORMAL", null, "NONE", "QUALIFIER_ON_RESPONSE_OPPORTUNITY"],
+    "TRACKING_PROGRESS": ["NORMAL", null, "NONE", "QUALIFIER_ON_LATER_DEMAND"],
+    "TRACKING_FAULT_SUSPECTED": ["DEGRADED", "ACTUATOR_TRACKING_SUSPECTED", "NONE", "FROZEN_QUALIFIED_PROGRESS_BEFORE_CONFIRMATION"],
+    "TRACKING_FAULT_CONFIRMED": ["FAULT", "ACTUATOR_TRACKING_CONFIRMED", "EXISTING_GENERIC_FAULT", "EXPLICIT_SAFETY_FAULT_RESET_AND_QUALIFIED_RECOVERY"],
+    "INSUFFICIENT_MEASUREMENT": ["NORMAL", null, "NONE", "SENSOR_CHANNEL_AND_PRESERVED_QUALIFIER_CONTEXT"]
+  },
+  "reason_model": "All simultaneous active reasons in SafetyDecision.reasons and SafetyEnvelope.reason_codes; no primary field; legacy ACTUATOR_TRACKING_PENDING historical only; exactly two new tracking reasons",
+  "reducer": "maximum active severity by frozen hierarchy; all active reasons retained; pressure restriction priority over thermal demand",
+  "envelope": "tracking suspected adds none; tracking confirmed invokes existing generic FAULT fallback/fault_speed; no tracking-specific command; Safety owns envelope and PLC owns ActuatorCommand",
+  "recovery": "suspected clears on qualified progress before confirmation; confirmed requires explicit Safety FAULT reset/qualification; sensor loss retains prior valid tracking evidence and does not fabricate confirmation",
+  "cases": {
+    "M1": ["STEADY_TRACKING", "NORMAL"], "M2": ["HANDOFF_PENDING", "NORMAL"],
+    "M3": ["TRACKING_PROGRESS", "NORMAL"], "M4": ["TRACKING_FAULT_SUSPECTED", "DEGRADED"],
+    "M5": ["TRACKING_FAULT_CONFIRMED", "FAULT"], "M6": ["INSUFFICIENT_MEASUREMENT+SENSOR_INVALID", "FAULT"],
+    "M7": ["SUSPECTED+PRESSURE_FAULT", "FAULT"], "M8": ["CONFIRMED+PRESSURE_FAULT", "FAULT"],
+    "M9": ["SUSPECTED+THERMAL_PROTECTED", "PROTECTED"], "M10": ["CONFIRMED+THERMAL_PROTECTED", "FAULT"],
+    "M11": ["SUSPECTED+DERATE_REQUESTED", "DERATE_REQUESTED"], "M12": ["CONFIRMED+DERATE_REQUESTED", "FAULT"],
+    "M13": ["SUSPECTED_THEN_SENSOR_INVALID", "FAULT"], "M14": ["CONFIRMED_THEN_SENSOR_INVALID", "FAULT"],
+    "M15": ["TRACKING_PROGRESS+FF_DISABLED", "FF_DISABLED"], "M16": ["CONFIRMED_THEN_RESTORED_MOTION", "FAULT"]
+  },
+  "readiness_audit": ["multiple reasons representable", "severity state representable", "SafetyEnvelope bounds and reasons representable", "FAULT latch/reset representable", "tracking provenance via existing IDs/evidence linkage", "sensor coexisting reasons representable", "no command ownership change"],
+  "audits": ["Contract14 ownership/deny-default", "Contract15 unchanged architecture/hierarchy/recovery", "Contract15A exact mapping/reasons/restrictions", "all production hashes unchanged"],
+  "stop_gates": ["SAFETY_REASON_MODEL_REQUIRES_SCHEMA_REVISION", "SAFETY_DECISION_SCHEMA_REQUIRES_REVISION", "SAFETY_CHANNEL_REDUCTION_STILL_UNDERSPECIFIED", "TRACKING_CONFIRMED_REQUIRES_NEW_FAULT_RESTRICTION", "TRACKING_SAFETY_MAPPING_CONTRACT_CONFLICT"],
+  "production_change_authorized": false,
+  "r5_3r_before_review_authorized": false
+}

@@ -1,0 +1,330 @@
+{
+  "schema": "P_HISTORY_RECOVERY_CANDIDATE-v1",
+  "canonical_hash_rule": "SHA-256 of UTF-8 JSON sort_keys=True separators=(',', ':') ensure_ascii=False; no trailing newline",
+  "source_registration_sha256": "541433aeb903fca820bcdc4f5992563c90cd746c72fcf5a936c0b620be4f3785",
+  "cases": [
+    {
+      "case_id": "P1",
+      "purpose": "normal continuous up",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P2",
+      "purpose": "normal continuous down",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P3",
+      "purpose": "normal variable-slope command",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P4",
+      "purpose": "continuous-command silent stuck",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P5",
+      "purpose": "normal then stuck",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P6",
+      "purpose": "intermittent qualified progress then stuck",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P7",
+      "purpose": "cumulative small-step normal",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P8",
+      "purpose": "cumulative small-step stuck",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P9",
+      "purpose": "harmless chatter",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P10",
+      "purpose": "reversal stuck attack",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P11",
+      "purpose": "normal reversal",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P12",
+      "purpose": "sensor invalid",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P13",
+      "purpose": "sensor recovery",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P14",
+      "purpose": "baseline offset matched pair",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P15",
+      "purpose": "C9R A-to-B-to-C",
+      "recovery_status": "RECONSTRUCTED_DETERMINISTICALLY",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json",
+        "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json",
+        "v0_2/examples/phase5_r5_2_1r1a_validation.py",
+        "v0_2/examples/phase5_r5_2_2_tracking_calibration.py"
+      ],
+      "input_file": "v0_2/tests/data/tracking_history/P15_C9R_candidate.json",
+      "input_sha256": "9bc270330f79d1692a3ba5ec47501624d747136ff383fadb82de345bf6e5f279",
+      "expected_behavior_source": "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json",
+      "timing_normative": "TRIGGER_EXACT; ANCHOR_ORDER_ONLY",
+      "known_ambiguities": [
+        "P15 is named C9R but no independent R4 P15 capture exists; candidate requires manifest review"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P16",
+      "purpose": "moving command then plateau",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P17",
+      "purpose": "plateau then true stuck",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P18",
+      "purpose": "checkpoint at command update",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P19",
+      "purpose": "command update without progress",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    },
+    {
+      "case_id": "P20",
+      "purpose": "measured progress without new command",
+      "recovery_status": "PARTIALLY_RECOVERED",
+      "source_evidence": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json"
+      ],
+      "input_file": null,
+      "input_sha256": null,
+      "expected_behavior_source": null,
+      "timing_normative": "UNKNOWN",
+      "known_ambiguities": [
+        "No frozen P-specific executable input timeline, measurement sequence, validity/fault fixture, or exact public-state oracle exists"
+      ],
+      "formal_gate_eligible": false
+    }
+  ]
+}

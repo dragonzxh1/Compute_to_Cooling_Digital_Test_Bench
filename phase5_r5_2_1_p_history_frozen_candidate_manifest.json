@@ -1,0 +1,126 @@
+{
+  "schema": "phase5-r5-2-1-p-history-frozen-candidate-manifest-v1",
+  "status": "CANDIDATE_FOR_USER_APPROVED_FREEZE",
+  "canonicalization": "UTF-8 JSON sort_keys=True separators=(',', ':') ensure_ascii=False allow_nan=False; no trailing newline",
+  "eligible_fixture_records": [
+    {
+      "case_id": "P15",
+      "recovery_class": "RECONSTRUCTED_DETERMINISTICALLY",
+      "input_path": "v0_2/tests/data/tracking_history/P15_C9R_candidate.json",
+      "input_sha256": "9bc270330f79d1692a3ba5ec47501624d747136ff383fadb82de345bf6e5f279",
+      "input_file_sha256": "bbf2145b4347630d6e78ff51a5569002a6d5d6fc75f128ea0377e72691bc7fd1",
+      "input_record_count": 31,
+      "generator_path": "v0_2/examples/phase5_r5_2_1r1a_validation.py::c9r_source",
+      "generator_file_sha256": "238a03cef6b7b0c25a05ef71c4f699c75a91626c716f978a452ac23bc27d4ef1",
+      "underlying_generator_path": "v0_2/examples/phase5_r5_2_2_tracking_calibration.py::run_open_loop",
+      "underlying_generator_file_sha256": "110ce80946f1ca118dfa7b062e3fa998c04b65cc26afda1cfce799dbbdc744dd",
+      "generator_parameters": {
+        "name": "C9R_IN_DOMAIN_ANCHOR_ADVANCEMENT",
+        "initial_actual_speed": 0.35,
+        "initial_qualified_plc_anchor": 0.35,
+        "normal_actuator": true,
+        "sensor_period_ns": 200000000,
+        "duration_ns": 6000000000,
+        "commands": [
+          {
+            "time_ns": 0,
+            "command": 0.35,
+            "stage": "INITIAL_OBSERVED_BASELINE"
+          },
+          {
+            "time_ns": 200000000,
+            "command": 0.4,
+            "stage": "STAGE_1"
+          },
+          {
+            "time_ns": 400000000,
+            "command": 0.45,
+            "stage": "STAGE_1"
+          },
+          {
+            "time_ns": 600000000,
+            "command": 0.51,
+            "stage": "STAGE_1"
+          },
+          {
+            "time_ns": 3000000000,
+            "command": 0.56,
+            "stage": "STAGE_2"
+          },
+          {
+            "time_ns": 3200000000,
+            "command": 0.61,
+            "stage": "STAGE_2"
+          },
+          {
+            "time_ns": 3400000000,
+            "command": 0.67,
+            "stage": "STAGE_2"
+          }
+        ],
+        "selection_rationale": "A=0.35, B expected 0.51, C expected 0.67; each individual update is below frozen material delta 0.15, each stage signed net displacement is 0.16, and all commands are strictly inside profile [0.3,0.9]. A 2.4-second hold after stage 1 permits the frozen nominal actuator to resolve before stage 2. These are test-fixture values only.",
+        "expected_first_trigger_ns": 600000000,
+        "expected_second_trigger_ns": 3400000000,
+        "expected_anchor_sequence": [
+          0.35,
+          0.51,
+          0.67
+        ]
+      },
+      "randomness": "NONE; deterministic scheduler, actuator and released-sensor fixture",
+      "old_serialized_input_trace_sha256": "77fb0fbd539d3ed1afccb04f0d3150b0fecaf0ff1885c576a9f315d54edd102f",
+      "expected_behavior_source": {
+        "registration_path": "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json",
+        "registration_sha256": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+        "evidence_path": "phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json",
+        "evidence_sha256": "b7dac0d2bf27edd23df74d1ca1b7d7bf44a79ca8eb85f56ecfd0cfb7d80acba8",
+        "acceptance_function": "v0_2/examples/phase5_r5_2_1r1a_validation.py::c9r_checks",
+        "expected_behavior_sha256": "8536762881c581cf29a07cf34b1ce0abad793c4896329b21ba7f6dd76eef82d7",
+        "normative": {
+          "stage_1_trigger_ns": 600000000,
+          "stage_2_trigger_ns": 3400000000,
+          "anchor_command_sequence": [
+            0.35,
+            0.51,
+            0.67
+          ],
+          "qualified_progress_and_resolution_both_stages": true,
+          "no_tracking_fault_confirmed": true,
+          "exact_old_anchor_resolution_ns": "NON_NORMATIVE"
+        }
+      },
+      "formal_gate_eligible": true,
+      "freeze_status": "CANDIDATE_FOR_USER_APPROVED_FREEZE",
+      "provenance_refs": [
+        "phase5_r5_2_1r4_paired_reference_tracking_registration.json::preregistered_case_matrix.P15",
+        "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json::replacement_case",
+        "phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json::c9r_case.input_trace",
+        "phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json::c9r_pass_criteria"
+      ],
+      "historical_capture_claim": false
+    }
+  ],
+  "eligible_fixture_records_sha256": "6d8a0d2055708ff75003cd221c24da42657a3827dfbb373bcc21e5e76bfc5285",
+  "unresolved_cases": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "P9",
+    "P10",
+    "P11",
+    "P12",
+    "P13",
+    "P14",
+    "P16",
+    "P17",
+    "P18",
+    "P19",
+    "P20"
+  ],
+  "final_frozen_baseline": false
+}

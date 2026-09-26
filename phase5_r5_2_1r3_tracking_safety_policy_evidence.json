@@ -1,0 +1,441 @@
+{
+  "schema": "phase5-r5-2-1r3-tracking-safety-policy-evidence-v1",
+  "registration_sha256": "e3ecfbd1de129ba230062ac15a775d5458d7c6deaff4d260a31c2aff344aad5d",
+  "source_hash_checks": {
+    "contracts/14_control_input_permission_contract.md": true,
+    "contracts/15_safety_supervisor_contract.md": true,
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json": true,
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json": true,
+    "phase5_r5_2_1r1_cumulative_command_demand_spec.json": true,
+    "phase5_r5_2_2_fixture_tracking_profile.json": true,
+    "v0_2/safety/supervisor.py": true,
+    "v0_2/control/directional_outer.py": true,
+    "v0_2/control/outer_feedback.py": true,
+    "v0_2/control/inner_loop.py": true,
+    "v0_2/control/pid.py": true,
+    "v0_2/actuators/pump.py": true,
+    "v0_2/measurement/local_sensor.py": true,
+    "v0_2/plant/controlled_loop.py": true,
+    "amendment": true,
+    "contract14": true,
+    "contract15": true,
+    "registration": true,
+    "latest_gate": true
+  },
+  "historical_source_sha256": {
+    "contracts/14_control_input_permission_contract.md": "efd8d325753163b91170578ceeb3de02dafafbf8fb0a208a279c76c964d7b144",
+    "contracts/15_safety_supervisor_contract.md": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json": "b7dac0d2bf27edd23df74d1ca1b7d7bf44a79ca8eb85f56ecfd0cfb7d80acba8",
+    "phase5_r5_2_1r1_cumulative_command_demand_spec.json": "196cebb392ab22d40205b8ef8c25cc95f4fd8191e6e912712d10449365508c59",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8"
+  },
+  "original_contract15_sha256": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+  "amendment_sha256": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+  "machine_contract_sha256": "2d94871405e1b8ca62793d7511392903cf946aea5c8ffeea6b07421ef5fa625e",
+  "reason_inventory": [
+    "ACTUATOR_FAULT_MEASURED",
+    "ACTUATOR_TRACKING_FAILURE_MEASURED",
+    "ACTUATOR_TRACKING_PENDING",
+    "CAPACITY_LIMITED",
+    "CONTROL_REQUEST_REJECTED",
+    "CRITICAL_LOCAL_SENSOR_INVALID",
+    "FAULT_LATCHED_RESET_REQUIRED",
+    "HARD_THERMAL_MEASURED",
+    "OVERPRESSURE_MEASURED",
+    "RECOVERY_QUALIFICATION",
+    "SAFETY_OVERRIDE",
+    "THERMAL_OR_FLOW_CAPACITY_LIMITED"
+  ],
+  "reason_checks": {
+    "new_codes_not_in_production": true,
+    "legacy_pending_exists": true,
+    "legacy_pending_not_mapped": true,
+    "all_simultaneous_reasons_retained": true,
+    "current_api_has_no_primary": true,
+    "pending_no_false_degraded": true,
+    "confirmed_restored_does_not_clear": true,
+    "sensor_invalid_not_tracking_confirmation": true,
+    "pressure_fault_not_downgraded": true,
+    "thermal_protected_not_suppressed": true,
+    "confirmed_uses_existing_fault_restriction": true
+  },
+  "tracking_state_mapping": {
+    "STEADY_TRACKING": {
+      "severity": "NORMAL",
+      "reason_codes": [],
+      "restriction": "NONE",
+      "latched": false,
+      "recovery_authority": "QUALIFIER_ON_LATER_DEMAND"
+    },
+    "HANDOFF_PENDING": {
+      "severity": "NORMAL",
+      "reason_codes": [],
+      "restriction": "NONE",
+      "latched": false,
+      "recovery_authority": "QUALIFIER_ON_RESPONSE_OPPORTUNITY"
+    },
+    "TRACKING_PROGRESS": {
+      "severity": "NORMAL",
+      "reason_codes": [],
+      "restriction": "NONE",
+      "latched": false,
+      "recovery_authority": "QUALIFIER_ON_LATER_DEMAND"
+    },
+    "TRACKING_FAULT_SUSPECTED": {
+      "severity": "DEGRADED",
+      "reason_codes": [
+        "ACTUATOR_TRACKING_SUSPECTED"
+      ],
+      "restriction": "NONE",
+      "latched": false,
+      "recovery_authority": "FROZEN_QUALIFIED_PROGRESS_BEFORE_CONFIRMATION"
+    },
+    "TRACKING_FAULT_CONFIRMED": {
+      "severity": "FAULT",
+      "reason_codes": [
+        "ACTUATOR_TRACKING_CONFIRMED"
+      ],
+      "restriction": "EXISTING_GENERIC_FAULT",
+      "latched": true,
+      "recovery_authority": "EXPLICIT_SAFETY_FAULT_RESET_AND_QUALIFIED_RECOVERY"
+    },
+    "INSUFFICIENT_MEASUREMENT": {
+      "severity": "NORMAL",
+      "reason_codes": [],
+      "restriction": "NONE",
+      "latched": false,
+      "recovery_authority": "SENSOR_CHANNEL_AND_PRESERVED_QUALIFIER_CONTEXT"
+    }
+  },
+  "case_outputs": {
+    "A1": {
+      "tracking_state": "STEADY_TRACKING",
+      "effective_tracking_contribution": "STEADY_TRACKING",
+      "tracking_severity": "NORMAL",
+      "final_safety": "NORMAL",
+      "all_reasons": [],
+      "primary_reason": null,
+      "restriction_sources": [],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A2": {
+      "tracking_state": "HANDOFF_PENDING",
+      "effective_tracking_contribution": "HANDOFF_PENDING",
+      "tracking_severity": "NORMAL",
+      "final_safety": "NORMAL",
+      "all_reasons": [],
+      "primary_reason": null,
+      "restriction_sources": [],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A3": {
+      "tracking_state": "TRACKING_PROGRESS",
+      "effective_tracking_contribution": "TRACKING_PROGRESS",
+      "tracking_severity": "NORMAL",
+      "final_safety": "NORMAL",
+      "all_reasons": [],
+      "primary_reason": null,
+      "restriction_sources": [],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A4": {
+      "tracking_state": "TRACKING_FAULT_SUSPECTED",
+      "effective_tracking_contribution": "TRACKING_FAULT_SUSPECTED",
+      "tracking_severity": "DEGRADED",
+      "final_safety": "DEGRADED",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_SUSPECTED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A5": {
+      "tracking_state": "TRACKING_FAULT_CONFIRMED",
+      "effective_tracking_contribution": "TRACKING_FAULT_CONFIRMED",
+      "tracking_severity": "FAULT",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_CONFIRMED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": true,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A6": {
+      "tracking_state": "INSUFFICIENT_MEASUREMENT",
+      "effective_tracking_contribution": "INSUFFICIENT_MEASUREMENT",
+      "tracking_severity": "NORMAL",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "CRITICAL_LOCAL_SENSOR_INVALID"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "SENSOR_INVALID",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A7": {
+      "tracking_state": "TRACKING_FAULT_SUSPECTED",
+      "effective_tracking_contribution": "TRACKING_FAULT_SUSPECTED",
+      "tracking_severity": "DEGRADED",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_SUSPECTED",
+        "OVERPRESSURE_MEASURED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "PRESSURE_FAULT",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A8": {
+      "tracking_state": "TRACKING_FAULT_CONFIRMED",
+      "effective_tracking_contribution": "TRACKING_FAULT_CONFIRMED",
+      "tracking_severity": "FAULT",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_CONFIRMED",
+        "OVERPRESSURE_MEASURED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "PRESSURE_FAULT",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": true,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A9": {
+      "tracking_state": "TRACKING_FAULT_SUSPECTED",
+      "effective_tracking_contribution": "TRACKING_FAULT_SUSPECTED",
+      "tracking_severity": "DEGRADED",
+      "final_safety": "PROTECTED",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_SUSPECTED",
+        "HARD_THERMAL_MEASURED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "THERMAL_PROTECTED"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A10": {
+      "tracking_state": "TRACKING_FAULT_CONFIRMED",
+      "effective_tracking_contribution": "TRACKING_FAULT_CONFIRMED",
+      "tracking_severity": "FAULT",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_CONFIRMED",
+        "HARD_THERMAL_MEASURED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "THERMAL_PROTECTED",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": true,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A11": {
+      "tracking_state": "TRACKING_FAULT_SUSPECTED",
+      "effective_tracking_contribution": "TRACKING_FAULT_SUSPECTED",
+      "tracking_severity": "DEGRADED",
+      "final_safety": "DERATE_REQUESTED",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_SUSPECTED",
+        "THERMAL_OR_FLOW_CAPACITY_LIMITED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "DERATE_REQUESTED"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A12": {
+      "tracking_state": "TRACKING_FAULT_CONFIRMED",
+      "effective_tracking_contribution": "TRACKING_FAULT_CONFIRMED",
+      "tracking_severity": "FAULT",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_CONFIRMED",
+        "THERMAL_OR_FLOW_CAPACITY_LIMITED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "DERATE_REQUESTED",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": true,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A13": {
+      "tracking_state": "INSUFFICIENT_MEASUREMENT",
+      "effective_tracking_contribution": "INSUFFICIENT_MEASUREMENT",
+      "tracking_severity": "NORMAL",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "CRITICAL_LOCAL_SENSOR_INVALID"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "SENSOR_INVALID",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": true,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A14": {
+      "tracking_state": "INSUFFICIENT_MEASUREMENT",
+      "effective_tracking_contribution": "TRACKING_FAULT_CONFIRMED",
+      "tracking_severity": "FAULT",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_CONFIRMED",
+        "CRITICAL_LOCAL_SENSOR_INVALID"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "SENSOR_INVALID",
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": true,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A15": {
+      "tracking_state": "TRACKING_PROGRESS",
+      "effective_tracking_contribution": "TRACKING_PROGRESS",
+      "tracking_severity": "NORMAL",
+      "final_safety": "FF_DISABLED",
+      "all_reasons": [
+        "RECOVERY_QUALIFICATION"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": false,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    },
+    "A16": {
+      "tracking_state": "TRACKING_FAULT_CONFIRMED",
+      "effective_tracking_contribution": "TRACKING_FAULT_CONFIRMED",
+      "tracking_severity": "FAULT",
+      "final_safety": "FAULT",
+      "all_reasons": [
+        "ACTUATOR_TRACKING_CONFIRMED"
+      ],
+      "primary_reason": null,
+      "restriction_sources": [
+        "EXISTING_GENERIC_FAULT"
+      ],
+      "tracking_specific_new_restriction": false,
+      "confirmed_latch_retained": true,
+      "prior_suspected_evidence_retained_internally": false,
+      "restored_motion_clears_fault": false,
+      "command_producer": "PLC_ONLY"
+    }
+  },
+  "case_pass": {
+    "A1": true,
+    "A2": true,
+    "A3": true,
+    "A4": true,
+    "A5": true,
+    "A6": true,
+    "A7": true,
+    "A8": true,
+    "A9": true,
+    "A10": true,
+    "A11": true,
+    "A12": true,
+    "A13": true,
+    "A14": true,
+    "A15": true,
+    "A16": true
+  },
+  "primary_reason_tests": {
+    "current_api_no_primary": true,
+    "no_primary_in_offline_results": true
+  },
+  "contract14_audit": {
+    "deny_default_and_measured_only": true,
+    "safety_restriction_only": true,
+    "plc_sole_final_command": true
+  },
+  "contract15_compatibility": {
+    "hierarchy": true,
+    "all_reasons": true,
+    "pressure_priority": true,
+    "ff_local_feedback": true,
+    "sensor_boundary": true,
+    "fault_recovery": true,
+    "no_new_restriction": true
+  },
+  "production_source_hashes_unchanged": true,
+  "production_safety_changed": false,
+  "r2r_started": false,
+  "r5_3r_started": false,
+  "phase6_started": false,
+  "status": "TRACKING_SAFETY_POLICY_AMENDMENT_SPECIFIED_AND_VALIDATED"
+}

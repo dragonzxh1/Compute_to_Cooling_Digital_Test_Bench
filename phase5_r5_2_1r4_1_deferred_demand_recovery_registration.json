@@ -1,0 +1,56 @@
+{
+  "schema": "phase5-r5-2-1r4-1-deferred-demand-recovery-registration-v1",
+  "scope": "OFFLINE_EVENT_AND_BOOKKEEPING_REVISION_ONLY",
+  "preregistration_status": "BEFORE_R4_1_SEMANTIC_CODE_OR_RESULT",
+  "required_r4_gate": "PAIRED_REFERENCE_REVISION_MASKS_SILENT_FAULT",
+  "exact_defect": "R4 required valid measurement and a new command event to open a cumulative-demand epoch. In C11 the material command arrived during invalid measurement; on valid recovery no command event occurred, so no epoch/watch was created and silent stuck was missed.",
+  "source_sha256": {
+    "phase5_r5_2_1r4_paired_reference_tracking_registration.json": "541433aeb903fca820bcdc4f5992563c90cd746c72fcf5a936c0b620be4f3785",
+    "phase5_r5_2_1r4_paired_reference_tracking_evidence.json": "73cdf4cd8d9c17849afea85a3d01ab9e2aed762ee8048c87b159b0ded9aa9c1a",
+    "v0_2/examples/phase5_r5_2_1r4_paired_engine.py": "ecf473f703ac6d11b49b83de6b7684c6653a9ad42e5eada66034178e4e668334",
+    "phase5_r5_3r_a_tune01_false_positive_audit_evidence.json": "94841714a0645dd3957514fb4153b6c26df4ffa7f6075132886b0d718ddb7fa2",
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_evidence.json": "bde8bee30d635a1882a5447a82f37aa61cdb51d1dcf9aa85f9ad2f97da2259ef",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "contracts/15A_tracking_safety_policy_amendment.md": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "phase5_r5_3r_a_tune01_released_input_trace.json": "a63c5a413e3a3b02d3f86a4f6c6d52bad615272916f664722a452ff5be25fd61",
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": "40b207b5faa3c7b92f8cabb9ad56cef1f31936f335e89479f1f4004f921f309f",
+    "v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py": "e9bb0de5c15c10a9ccbdbe899c3fd1cb1f5e05145af79c2e142b9990cd7020ef"
+  },
+  "production_sha256_authority": "phase5_r5_2_1r4_paired_reference_tracking_registration.json:production_sha256; verify every member unchanged before and after candidate",
+  "frozen_profile_sha256": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+  "contract_15a_sha256": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+  "deferred_demand": {
+    "fields": ["deferred_demand_active", "deferred_demand_id", "first_observable_demand_ns", "latest_command", "resolved_anchor_pair_id", "resolved_command_anchor", "resolved_measurement_anchor", "net_command_demand", "expected_direction", "measurement_unavailable_since_ns", "prior_valid_tracking_state", "prior_valid_suspicion_evidence", "prior_watch_id", "source_command_record_id", "cancellation_reason", "recovery_reevaluated"],
+    "creation": "At first released command tick with invalid measurement where signed current command minus existing resolved command anchor reaches frozen material_command_delta and frozen response-opening model predicts observable motion; mark first_observable_demand_ns as that tick's command timestamp. No measurement or fault evidence is fabricated.",
+    "preservation": "Keep first observable timestamp through same-direction command updates and invalid samples. Retain resolved/progress pairs and already valid suspicion/watch evidence. Update latest released command/net demand and direction; never advance either pair while measurement invalid.",
+    "cancellation_without_valid_evidence": "If current signed net command returns below frozen material threshold during outage and there is no prior valid unresolved suspicion/non-response evidence, close deferred-only obligation with CANCELED_BEFORE_RECOVERY_NO_VALID_FAULT_EVIDENCE. Do not create a recovery epoch from canceled historical demand.",
+    "cancellation_with_valid_evidence": "Retain prior watch/suspicion evidence and its age even if current net demand cancels; no fabricated new fault from invalid samples. Current new demand direction is assessed at first valid recovery using preserved valid evidence.",
+    "reversal": "During invalidity, update directional deferred context from current signed net demand. If still material in opposite direction, keep oldest relevant unresolved demand age and any prior valid suspicion; do not credit motion or reset pairs. If no prior valid evidence and demand crosses below material, close old deferred-only obligation, then a later opposite material demand establishes a new deferred obligation at its own first crossing."
+  },
+  "recovery": {
+    "trigger": "First INVALID-to-VALID released measurement reevaluates active deferred observable demand regardless of command_event; also reevaluate if valid prior epoch/watch exists.",
+    "epoch_creation": "For deferred-only material current net demand, open one paired-reference epoch at recovery from preserved resolved pair. Set oldest_unresolved_demand_ns and epoch command time to first_observable_demand_ns, not recovery time. Only the current valid recovered measurement can produce progress or non-response evidence.",
+    "measurement_credit": "Evaluate first recovered measurement against preserved matched progress/resolved pair before any checkpoint reset. Qualified directional motion uses frozen minimum/ratio profile; only then may checkpoint pair advance atomically.",
+    "no_fresh_grace": "Recovery does not change first observable timestamp, prior watch start, suspicion age/count, or grant a new response window. Invalid rows never increment fault evidence.",
+    "confirmed_latch": "A confirmed tracking fault remains latched through invalid measurement; Contract 15A external recovery authority unchanged."
+  },
+  "mini_suite_inputs": {
+    "R41-1": "Unchanged historical C11 from v0_2/examples/phase5_r5_2_1r1_validation.py:cases(profile)['C11']; stuck; command 0.5@0,0.6@0.2s,0.7@0.4s, invalid 0.4s-<1.2s, recovery 1.2s without command.",
+    "R41-2": "Normal frozen run_open_loop initial 0.5, commands 0.5@0,0.6@0.2s,0.7@0.4s, sensor sample period 0.2s, duration 3.0s; replace observations 0.4s-<1.2s with MISSING while preserving generated valid measurement at recovery.",
+    "R41-3": "Synthetic stuck initial 0.5, commands 0.5@0,0.6@0.2s,0.7@0.4s,0.8@0.6s, invalid 0.4s-<1.2s, duration 3.0s.",
+    "R41-4": "Synthetic stuck initial 0.5, commands 0.5@0,0.6@0.2s,0.7@0.4s,0.5@0.6s, invalid 0.4s-<1.2s, duration 3.0s; deferred-only cancellation before valid non-response evidence.",
+    "R41-5": "Synthetic stuck initial 0.5, commands 0.5@0,0.7@0.2s, invalid 1.0s-<1.8s, duration 3.0s; require a valid SUSPECTED row before outage, no invalid-sample confirmation, preserve evidence on recovery.",
+    "R41-6": "Normal frozen run_open_loop initial 0.5, commands 0.5@0,0.7@0.2s,0.85@0.8s, sensor sample period 0.2s, duration 4.0s; replace observations 1.2s-<2.0s with MISSING, retain valid recovery observation.",
+    "R41-7": "Synthetic stuck initial 0.5, commands 0.5@0,0.7@0.2s,0.3@0.6s, invalid 0.4s-<1.2s, duration 3.0s; reversal during outage and valid recovery without new command.",
+    "R41-8": "Exact R5.3R-A TUNE-01 reconstructed released-input trace SHA a63c5a413e3a3b02d3f86a4f6c6d52bad615272916f664722a452ff5be25fd61; no confirmed fault."
+  },
+  "mini_suite_gate": "All R41-1 through R41-8 pass before running P1-P20/full historical suite. Any failure stops without post-result semantic changes.",
+  "full_regressions_after_mini_pass": ["R4 P1-P20 inputs unchanged", "C1-C8,C9R,C10-C12; original C9 INVALID", "S1-S16 and S16 variant", "R5.2 startup/post-startup/delay/sluggish/sensor fault fixtures", "TUNE-01", "prefix causality", "10-repeat determinism for R41-1,2,3,4,5,8,P4,P5,C11,TUNE-01", "full v0_2/tests", "Ruff", "git diff --check"],
+  "new_invariants": ["DEFERRED_DEMAND_PRESERVATION_INVARIANT", "RECOVERY_REEVALUATION_INVARIANT", "NO_INVALID_SAMPLE_FAULT_EVIDENCE_INVARIANT", "NO_FRESH_GRACE_ON_RECOVERY_INVARIANT", "RECOVERY_MOTION_CREDIT_INVARIANT", "NO_RECOVERY_BASELINE_RESET_INVARIANT", "CANCELLATION_WITHOUT_EVIDENCE_INVARIANT", "PRIOR_VALID_EVIDENCE_RETENTION_INVARIANT"],
+  "r4_invariants_preserved": ["PAIRED_REFERENCE_INVARIANT", "ATOMIC_PAIR_ADVANCEMENT_INVARIANT", "REALIZED_MOTION_CREDIT_INVARIANT", "NO_FREE_GRACE_FROM_PROGRESS_INVARIANT", "NO_PROGRESS_WITHOUT_MEASUREMENT_INVARIANT", "RESOLVED_ANCHOR_STABILITY_INVARIANT", "CONTINUOUS_NORMAL_TRACKING_INVARIANT", "SILENT_STUCK_DETECTABILITY_INVARIANT", "CUMULATIVE_SMALL_STEP_PRESERVATION_INVARIANT", "REVERSAL_MASKING_PREVENTION_INVARIANT"],
+  "authorized_changes": ["new offline R4.1 semantic wrapper/candidate", "test-only fixtures/tests", "R4.1 specification/evidence/figure"],
+  "forbidden_changes": ["production Safety/PLC/controller/actuator/sensor/plant/scheduler", "Contracts 14/15/15A", "R2R mapping", "frozen profile", "controller gains", "new numeric threshold/timer/dwell/sample count/state/reason code", "Git commit or push"],
+  "stop_gates": ["R4_1_SOURCE_OR_PRODUCTION_HASH_MISMATCH", "MEASUREMENT_RECOVERY_STILL_MASKS_SILENT_FAULT", "RECOVERY_REEVALUATION_CAUSES_NORMAL_RESPONSE_FALSE_POSITIVE", "MEASUREMENT_RECOVERY_CREATES_FRESH_GRACE_LOOPHOLE", "DEFERRED_DEMAND_REVISION_REOPENS_TUNE01_FALSE_POSITIVE", "DEFERRED_DEMAND_REVISION_BREAKS_PAIRED_REFERENCE_INVARIANT", "R4_1_REQUIRES_NEW_TRACKING_CALIBRATION_PARAMETER", "DEFERRED_DEMAND_CANCELLATION_SEMANTICS_UNDERSPECIFIED"],
+  "success_gate": "DEFERRED_DEMAND_AND_MEASUREMENT_RECOVERY_SEMANTICS_VALIDATED",
+  "commit_or_push_authorized": false
+}

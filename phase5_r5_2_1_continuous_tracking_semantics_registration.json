@@ -1,0 +1,76 @@
+{
+  "schema": "phase5-r5-2-1-continuous-tracking-semantics-registration-v1",
+  "phase": "SPECIFICATION_AND_OFFLINE_VALIDATION_ONLY",
+  "source_sha256": {
+    "r5_registration": "61f48d159f208ce4ba8a7e5e958ccad31b659e24bfee69f199133fdf2cf52791",
+    "r5_evidence": "1707b3b854291e5eeb29a5ec10ad665ddc81dbc3f9f42a9ec8dededc84efc171",
+    "r5_candidate": "3a34d0bc1e93da0e985d773125214ae301e5b9e2a2c9ec673745706e137c3766",
+    "r5_1_registration": "a6564f7425ab1cff533944364048812a1ae2ff9d9a4bd5d5bd890e3e5a32e8da",
+    "r5_1_evidence": "624d082f1ae19ca5433a365b68a16049091989caa7fb79ddbfe535676b3648f7",
+    "r5_2_registration": "ff23daf0708e54235a4127b4b0559115f63e839b8f61ebb43de7034bc99d8878",
+    "r5_2_evidence": "02c3dd6098dcc241f5fed578d3b0f35f7e0cb8dfe714a83b36cb5f59f7d300b3"
+  },
+  "blocked_r5_3": {
+    "status": "R5_2_TRACKING_RULE_INSUFFICIENTLY_SPECIFIED_FOR_PRODUCTION_PORT",
+    "source": "prior user-visible task result; no R5.3 artifact or production edit exists"
+  },
+  "frozen_controller": {
+    "kp": 4500,
+    "ki_hot": 110,
+    "ki_cold": 130,
+    "kd": 0,
+    "blend_halfwidth_k": 0.1,
+    "one_integral_state": true,
+    "anti_windup": "unchanged"
+  },
+  "frozen_production_sha256": {
+    "safety": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "directional_outer": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "outer_feedback": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+    "inner_loop": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+    "pid": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+    "actuator": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "plant": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+    "sensor": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe"
+  },
+  "allowed_information": ["PLC command and timestamp", "Safety-maintained command history", "released measured pump speed and timestamp", "measurement age and quality", "released DP and flow", "existing Safety timers and state", "qualified static actuator and sensor profile"],
+  "forbidden_information": ["raw ACTUAL", "hidden actuator state", "fault identity", "scenario identity", "future data", "plant truth"],
+  "terminology": {
+    "tracking_epoch": "causal interval assessing response to a qualified material command demand",
+    "unresolved_demand_age": "elapsed time from the first unresolved material demand; ordinary PLC ticks may not reset it",
+    "internal_states": ["STEADY_TRACKING", "HANDOFF_PENDING", "TRACKING_PROGRESS", "TRACKING_FAULT_SUSPECTED", "TRACKING_FAULT_CONFIRMED", "INSUFFICIENT_MEASUREMENT"]
+  },
+  "frozen_r5_2_rules": {
+    "material_command_delta_fraction": 0.15,
+    "minimum_measured_response_fraction": 0.01,
+    "suspect_min_expected_progress_fraction": 0.03,
+    "confirm_min_expected_progress_fraction": 0.12,
+    "suspect_progress_ratio_below": 0.5,
+    "confirm_progress_ratio_below": 0.35,
+    "confirm_consecutive_qualified_samples": 2,
+    "max_measurement_age_ns": 1000000000,
+    "expected_displacement": "min(ramp * elapsed_after_delay, initial_material_step * (1-exp(-elapsed_after_delay/tau)))",
+    "scope": "diagnostic initial handoff in generic numerical fixture only"
+  },
+  "proposed_epoch_constraints": {
+    "start": "only qualified material demand when no unresolved epoch exists",
+    "small_same_direction": "retain original start and fault-evidence age",
+    "material_same_direction": "retain original start; latest command may change, but unresolved age cannot reset",
+    "material_reversal": "close old directional context and establish a new one; anti-reset policy remains unresolved",
+    "completion": "requires qualified measured tracking, not elapsed time alone",
+    "replacement": "must not erase unresolved fault evidence merely because PLC command changes",
+    "steady_monitoring": "new material demands must be evaluated after earlier progress",
+    "progress_loss": "must return to qualification; exact guard unresolved",
+    "recovery": "suspected requires qualified measured progress; confirmed cannot clear top-level FAULT",
+    "measurement_invalid": "INSUFFICIENT_MEASUREMENT and existing sensor-quality Safety path; do not fabricate tracking confirmation",
+    "response_window": "derive from typed delay, lag, ramp, sensor sample/release timing and qualified measurement resolution; calibration dependency must be audited before validation"
+  },
+  "synthetic_sequences": ["S1_NORMAL_STARTUP", "S2_SILENT_STUCK_STARTUP", "S3_DELAY_0_6", "S4_DELAY_1_0", "S5_POST_STARTUP_STUCK", "S6_MOVING_COMMAND_STUCK", "S7_SMALL_CHATTER", "S8_MATERIAL_SAME_DIRECTION", "S9_REVERSAL", "S10_SENSOR_LOSS_HANDOFF", "S11_SENSOR_LOSS_SUSPECTED", "S12_SENSOR_RECOVERY", "S13_TRACK_THEN_FAIL", "S14_SUSPECT_THEN_RECOVER", "S15_CONFIRMED_THEN_RECOVERY", "S16_REVERSAL_ATTACK"],
+  "acceptance": "all S1-S16 and all eight formal invariants pass under a fully specified parameterized rule; no forbidden input or production-source modification",
+  "pre_validation_stop_conditions": ["missing production-critical guard", "timing requires unknown hardware calibration", "reversal or chatter can mask stuck", "forbidden information required"],
+  "possible_gates": ["CONTINUOUS_TRACKING_SEMANTICS_SPECIFIED_AND_VALIDATED", "CONTINUOUS_TRACKING_SEMANTICS_STILL_UNDERSPECIFIED", "TRACKING_EPOCH_SEMANTICS_CAN_MASK_SILENT_FAULT", "CONTINUOUS_TRACKING_REQUIRES_UNAVAILABLE_INFORMATION", "TRACKING_SEMANTICS_REQUIRE_CALIBRATION_PARAMETERS"],
+  "production_change_authorized": false,
+  "r5_3_restart_authorized": false,
+  "final_feedback_baseline_freeze_authorized": false,
+  "phase6_authorized": false
+}

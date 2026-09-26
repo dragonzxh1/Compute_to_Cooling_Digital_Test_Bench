@@ -1,0 +1,539 @@
+{
+  "schema": "phase5-r5-2-1r4-3c-p-history-recovery-v1",
+  "r4_3b_engine_sha256": "52b4ddd46401c16793a3602f49f02a5e9ca78906178390f9934c3453ed7b065e",
+  "r4_3b_engine_matches_prior_evidence": true,
+  "historical_source_hashes": {
+    "R4_registration": "541433aeb903fca820bcdc4f5992563c90cd746c72fcf5a936c0b620be4f3785",
+    "R1a_registration": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "R1a_evidence": "b7dac0d2bf27edd23df74d1ca1b7d7bf44a79ca8eb85f56ecfd0cfb7d80acba8",
+    "R1a_generator": "238a03cef6b7b0c25a05ef71c4f699c75a91626c716f978a452ac23bc27d4ef1",
+    "physical_fixture_generator": "110ce80946f1ca118dfa7b062e3fa998c04b65cc26afda1cfce799dbbdc744dd",
+    "P15_candidate_file": "bbf2145b4347630d6e78ff51a5569002a6d5d6fc75f128ea0377e72691bc7fd1",
+    "prior_recovery_manifest": "3cd333fb6972c9f1f14a7bf02acfeac8d28f39a527c6434c447dbe87b62ad9f3",
+    "tracking_profile": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "Contract15A": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280"
+  },
+  "git_history_search": {
+    "commits_inspected": [
+      "da552d2e0bfeb0b73ee8bf4148a009a65db2718b",
+      "caf88071aa1e645dfef30b9e6d98f1b9d952bf8d",
+      "5c29444febbe431b19a6b1feacf59611b10760ca",
+      "1f0eec715529393af7c9b038de845c25c96c441d",
+      "8a6f260c0f55a940fdb7c4996a99ed5e68ee47ad",
+      "ec00305bfe31569fd7382ba9fb48f0535c94fa40",
+      "5588915d683e44a49056d54e9a8dd9687e578d84",
+      "4f9f6744e20d55fc6942302fddc0d9d20f686b53",
+      "9aa8cc0e31b70b7cf0cd40e6338fa48080f1b2c9",
+      "020f6817dd5739024acde7f81467eb8d797e471a",
+      "62c0220e8e8b7edffc5ef59c8dfaa282f4d1c812",
+      "62cdd8e31fbd7542ac70203e0c32e6064843293b",
+      "2eda24d00067b9ffc4a9f23014f0b57df98a9335",
+      "39f680d3e463c341e2647dc38e5509ba76df60d8",
+      "4db3d9a7855cc51ad669616b8037d8c2cb5d58ce",
+      "2b435599d22b787de8e41d631c933baf4f9904ab"
+    ],
+    "branches_inspected": [
+      "* main",
+      "  remotes/origin/HEAD -> origin/main",
+      "  remotes/origin/main"
+    ],
+    "P_specific_or_plateau_diff_hits": [
+      "caf8807 docs: add the rendered phase 4 evidence page"
+    ],
+    "hit_adjudication": {
+      "caf8807": "Unrelated Phase 4 rendered HTML/base64 content; no P-history executable fixture or input"
+    },
+    "deleted_or_renamed_relevant_files": [],
+    "result": "No P1-P20 executable fixture, serialized P input, P generator or P-specific historical hash found in available Git history"
+  },
+  "P15_input_checks": {
+    "r4_registration_explicitly_maps_P15_to_C9R": true,
+    "candidate_matches_frozen_generator": true,
+    "candidate_matches_old_serialized_input": true,
+    "generator_is_deterministic_10x": true,
+    "registered_input_math_passes": true,
+    "old_expected_behavior_independently_passed": true,
+    "old_evidence_gate_validated": true,
+    "old_trace_no_false_confirmed_fault": true
+  },
+  "P15_freeze_decision": "APPROVE_RECONSTRUCTED_HISTORICAL_FIXTURE",
+  "P15_old_trace_sha256": "77fb0fbd539d3ed1afccb04f0d3150b0fecaf0ff1885c576a9f315d54edd102f",
+  "P15_regenerated_trace_sha256": "77fb0fbd539d3ed1afccb04f0d3150b0fecaf0ff1885c576a9f315d54edd102f",
+  "P15_canonical_input_sha256": "9bc270330f79d1692a3ba5ec47501624d747136ff383fadb82de345bf6e5f279",
+  "cases": [
+    {
+      "case_id": "P1",
+      "historical_purpose": "normal continuous up",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P2",
+      "historical_purpose": "normal continuous down",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P3",
+      "historical_purpose": "normal variable-slope command",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P4",
+      "historical_purpose": "continuous-command silent stuck",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P5",
+      "historical_purpose": "normal then stuck",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P6",
+      "historical_purpose": "intermittent qualified progress then stuck",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P7",
+      "historical_purpose": "cumulative small-step normal",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P8",
+      "historical_purpose": "cumulative small-step stuck",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P9",
+      "historical_purpose": "harmless chatter",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P10",
+      "historical_purpose": "reversal stuck attack",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P11",
+      "historical_purpose": "normal reversal",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P12",
+      "historical_purpose": "sensor invalid",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P13",
+      "historical_purpose": "sensor recovery",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P14",
+      "historical_purpose": "baseline offset matched pair",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P15",
+      "historical_purpose": "C9R A-to-B-to-C",
+      "best_available_source": "R4 P15=C9R registration + R1a registration/generator/old serialized input and acceptance",
+      "input_recovery_class": "RECONSTRUCTED_DETERMINISTICALLY",
+      "complete_input_available": true,
+      "expected_behavior_available": true,
+      "timing_normativity_known": true,
+      "generator_available": true,
+      "generator_sha256": "238a03cef6b7b0c25a05ef71c4f699c75a91626c716f978a452ac23bc27d4ef1",
+      "candidate_input_sha256": "9bc270330f79d1692a3ba5ec47501624d747136ff383fadb82de345bf6e5f279",
+      "formal_gate_eligible": true,
+      "missing_evidence": [],
+      "notes": "C9R alias, deterministic reconstruction, not original R4 P15 capture; user freeze pending"
+    },
+    {
+      "case_id": "P16",
+      "historical_purpose": "moving command then plateau",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P17",
+      "historical_purpose": "plateau then true stuck",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P18",
+      "historical_purpose": "checkpoint at command update",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P19",
+      "historical_purpose": "command update without progress",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    },
+    {
+      "case_id": "P20",
+      "historical_purpose": "measured progress without new command",
+      "best_available_source": "R4 preregistered narrative purpose only",
+      "input_recovery_class": "NOT_RECOVERABLE",
+      "complete_input_available": false,
+      "expected_behavior_available": false,
+      "timing_normativity_known": false,
+      "generator_available": false,
+      "generator_sha256": null,
+      "candidate_input_sha256": null,
+      "formal_gate_eligible": false,
+      "missing_evidence": [
+        "No original P-specific executable command/measurement/validity timeline",
+        "No frozen P-specific generator parameters or input hash",
+        "No P-specific public-state/anchor/fault acceptance oracle"
+      ],
+      "notes": "Narrative intent is known, but no partial executable timeline exists in available local evidence"
+    }
+  ],
+  "status_counts": {
+    "exact_recovered_count": 0,
+    "deterministically_reconstructed_count": 1,
+    "partial_count": 0,
+    "not_recoverable_count": 19,
+    "formal_gate_eligible_count": 1
+  },
+  "coverage_percentage_descriptive_only": 5.0,
+  "candidate_manifest_path": "phase5_r5_2_1_p_history_frozen_candidate_manifest.json",
+  "candidate_manifest_sha256": "c485debbaf7af75be8208884012b036f02ab8dd01cd97b46d6b829bdbd4cb22c",
+  "eligible_records_aggregate_sha256": "6d8a0d2055708ff75003cd221c24da42657a3827dfbb373bcc21e5e76bfc5285",
+  "P15_diagnostic": {
+    "classification": "DIAGNOSTIC_PRE_FREEZE_NOT_FORMAL_HISTORICAL_PASS",
+    "candidate_engine_sha256": "52b4ddd46401c16793a3602f49f02a5e9ca78906178390f9934c3453ed7b065e",
+    "anchor_events": [
+      [
+        0,
+        0.35
+      ],
+      [
+        1000000000,
+        0.51
+      ],
+      [
+        3800000000,
+        0.67
+      ]
+    ],
+    "qualified_progress_times_ns": [
+      1000000000,
+      3800000000
+    ],
+    "confirmed_fault": false,
+    "state_sequence": [
+      "STEADY_TRACKING",
+      "HANDOFF_PENDING",
+      "TRACKING_PROGRESS",
+      "STEADY_TRACKING",
+      "HANDOFF_PENDING",
+      "TRACKING_PROGRESS",
+      "STEADY_TRACKING"
+    ],
+    "P15_formal_result": "NOT_RUN_PENDING_USER_FREEZE"
+  },
+  "production_source_before_after_hashes": {
+    "v0_2/safety/supervisor.py": {
+      "registered_sha256": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+      "current_sha256": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+      "unchanged": true
+    },
+    "v0_2/plant/controlled_loop.py": {
+      "registered_sha256": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+      "current_sha256": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+      "unchanged": true
+    },
+    "v0_2/control/directional_outer.py": {
+      "registered_sha256": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+      "current_sha256": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+      "unchanged": true
+    },
+    "v0_2/control/outer_feedback.py": {
+      "registered_sha256": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+      "current_sha256": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+      "unchanged": true
+    },
+    "v0_2/control/inner_loop.py": {
+      "registered_sha256": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+      "current_sha256": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+      "unchanged": true
+    },
+    "v0_2/control/pid.py": {
+      "registered_sha256": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+      "current_sha256": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+      "unchanged": true
+    },
+    "v0_2/actuators/pump.py": {
+      "registered_sha256": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+      "current_sha256": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+      "unchanged": true
+    },
+    "v0_2/measurement/local_sensor.py": {
+      "registered_sha256": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+      "current_sha256": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+      "unchanged": true
+    },
+    "v0_2/plant/authority.py": {
+      "registered_sha256": "7eb907031954b60b0c12c2abb9b11c1e1b35aee9a5edc0c41a02ed99a0a7e0c4",
+      "current_sha256": "7eb907031954b60b0c12c2abb9b11c1e1b35aee9a5edc0c41a02ed99a0a7e0c4",
+      "unchanged": true
+    }
+  },
+  "contract15a_unchanged": true,
+  "tracking_profile_unchanged": true,
+  "full_P_history_validation_available": false,
+  "full_historical_validation_claimed": false,
+  "production_port_eligible": false,
+  "final_freeze_approved": false,
+  "gate": "P15_RECOVERABLE_BUT_P_HISTORY_REMAINS_INCOMPLETE"
+}

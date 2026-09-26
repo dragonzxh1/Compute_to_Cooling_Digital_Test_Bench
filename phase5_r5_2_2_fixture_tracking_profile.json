@@ -1,0 +1,259 @@
+{
+  "schema": "phase5-r5-2-2-fixture-tracking-profile-v1",
+  "classification": [
+    "GENERIC NUMERICAL FIXTURE ONLY",
+    "NOT OEM",
+    "NOT NVIDIA GB300",
+    "NOT HARDWARE VALIDATION",
+    "REQUIRES RECALIBRATION FOR REAL EQUIPMENT"
+  ],
+  "registration_sha256": "3f847abbe78f1705d4a23b18f13f4655701e99e4179ff30b806e538753aa24fc",
+  "ActuatorTrackingProfile": {
+    "command_delay_s": {
+      "value": 0.2,
+      "unit": "s",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "PumpActuatorConfig.command_delay_ns",
+      "method": "exact typed fixture",
+      "valid_range": ">=0",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "speed_min": {
+      "value": 0.3,
+      "unit": "fraction",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "PumpActuatorConfig.minimum",
+      "method": "exact typed fixture",
+      "valid_range": "0..1",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "speed_max": {
+      "value": 0.9,
+      "unit": "fraction",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "PumpActuatorConfig.maximum",
+      "method": "exact typed fixture",
+      "valid_range": "0..1",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "speed_rate_limit_per_s": {
+      "value": 0.2,
+      "unit": "fraction/s",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "PumpActuatorConfig.ramp_per_s",
+      "method": "exact typed fixture",
+      "valid_range": ">0",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "lag_time_constant_s": {
+      "value": 1.0,
+      "unit": "s",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "PumpActuatorConfig.tau_s",
+      "method": "exact typed fixture",
+      "valid_range": ">0",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "command_resolution": {
+      "value": null,
+      "unit": "fraction",
+      "source_type": "NOT_MODELED",
+      "source_ref": "PumpActuator.command",
+      "method": "no command quantization in source",
+      "valid_range": "not applicable",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "directional_symmetry": {
+      "value": "symmetric nominal lag/ramp",
+      "unit": "metadata",
+      "source_type": "DERIVED_FROM_MODEL",
+      "source_ref": "PumpActuator._advance_segment",
+      "method": "same equation for signed delta",
+      "valid_range": "fixture only",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    }
+  },
+  "SensorObservationProfile": {
+    "measurement_period_s": {
+      "value": 0.2,
+      "unit": "s",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "SensorConfig.sample_ns",
+      "method": "exact typed fixture",
+      "valid_range": ">0",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "measurement_release_delay_s": {
+      "value": 0.0,
+      "unit": "s",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "SensorConfig.local_delay_ns",
+      "method": "exact typed fixture",
+      "valid_range": ">=0",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "measurement_validity_limit_s": {
+      "value": 1.0,
+      "unit": "s",
+      "source_type": "MODEL_CONFIG",
+      "source_ref": "SensorConfig.max_age_ns",
+      "method": "exact typed fixture",
+      "valid_range": ">0",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "speed_measurement_resolution": {
+      "value": null,
+      "unit": "fraction",
+      "source_type": "NOT_MODELED",
+      "source_ref": "LocalMeasurement.sample",
+      "method": "no quantization/digitization in source; not float epsilon",
+      "valid_range": "CALIBRATION_REQUIRED for hardware",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "speed_measurement_noise_bound": {
+      "value": 0.0,
+      "unit": "fraction",
+      "source_type": "DERIVED_FROM_MODEL",
+      "source_ref": "LocalMeasurement.sample",
+      "method": "no stochastic perturbation in source",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "speed_measurement_stationary_variation": {
+      "value": 0.0,
+      "unit": "fraction peak-to-peak",
+      "source_type": "FIXTURE_CALIBRATION",
+      "source_ref": "phase5_r5_2_2_tracking_calibration_evidence.json/static",
+      "method": "max stable-window peak-to-peak",
+      "valid_range": ">=0; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "timestamp_resolution_s": {
+      "value": 1e-09,
+      "unit": "s representation",
+      "source_type": "DERIVED_FROM_MODEL",
+      "source_ref": "MeasuredSnapshot.sample_ns/available_ns",
+      "method": "integer nanosecond timestamp representation, not physical clock accuracy",
+      "valid_range": "hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "quality_semantics": {
+      "value": "VALID/MISSING and released by decision time",
+      "unit": "metadata",
+      "source_type": "DERIVED_FROM_MODEL",
+      "source_ref": "MeasuredSnapshot.qualified",
+      "method": "source quality and age audit",
+      "valid_range": "fixture only",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    }
+  },
+  "TrackingQualificationProfile": {
+    "material_command_delta": {
+      "value": 0.15,
+      "unit": "fraction",
+      "source_type": "ENGINEERING_ASSUMPTION",
+      "source_ref": "R5.2 classifier.material_command_change_fraction",
+      "method": "historical diagnostic value; observability audit only",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "minimum_observable_speed_change": {
+      "value": 0.01,
+      "unit": "fraction",
+      "source_type": "FIXTURE_CALIBRATION",
+      "source_ref": "R5.2 0.01 and R5.2.2 observation floor",
+      "method": "max(0.01,2*floor) registered before fault runs",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "minimum_progress_margin": {
+      "value": 2.0,
+      "unit": "dimensionless floor multiplier",
+      "source_type": "ENGINEERING_ASSUMPTION",
+      "source_ref": "R5.2.2 registration.estimation_and_uncertainty",
+      "method": "pre-registered factor above stationary/mesh floor",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "tracking_error_tolerance": {
+      "value": 0.15,
+      "unit": "fraction",
+      "source_type": "ENGINEERING_ASSUMPTION",
+      "source_ref": "SafetySupervisor.evaluate historical mismatch predicate",
+      "method": "provenance audit only; not a progress threshold",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "response_opening_rule": {
+      "value": "first sensor release at or after command time + configured actuator command delay, with expected model displacement reaching threshold; report separately from fault confirmation",
+      "unit": "rule",
+      "source_type": "DERIVED_FROM_MODEL",
+      "source_ref": "PumpActuatorConfig + SensorConfig",
+      "method": "sample grid and nominal displacement model",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "progress_rule": {
+      "value": "released VALID speed displacement in demand direction >= minimum_observable_speed_change, with release time <= decision time and age <= configured max_age",
+      "unit": "rule",
+      "source_type": "FIXTURE_CALIBRATION",
+      "source_ref": "R5.2.2 registration",
+      "method": "released measured-only directional displacement",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "suspected_rule_parameters": {
+      "value": {
+        "expected_min": 0.03,
+        "ratio_below": 0.5
+      },
+      "unit": "fraction/ratio",
+      "source_type": "ENGINEERING_ASSUMPTION",
+      "source_ref": "R5.2 classifier",
+      "method": "historical initial-handoff diagnostic only; not continuous Safety",
+      "valid_range": "fixture only",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "confirmed_rule_parameters": {
+      "value": {
+        "expected_min": 0.12,
+        "ratio_below": 0.35,
+        "qualified_samples": 2
+      },
+      "unit": "fraction/ratio/count",
+      "source_type": "ENGINEERING_ASSUMPTION",
+      "source_ref": "R5.2 classifier",
+      "method": "historical initial-handoff diagnostic only; not continuous Safety",
+      "valid_range": "fixture only",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "measurement_quality_requirements": {
+      "value": "VALID, released <= decision time, age <= max_age",
+      "unit": "rule",
+      "source_type": "DERIVED_FROM_MODEL",
+      "source_ref": "MeasuredSnapshot.qualified",
+      "method": "source quality semantics",
+      "valid_range": "fixture only",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "reversal_observability_rule": {
+      "value": "new-direction released displacement >= calibrated threshold relative to reversal-time measured anchor",
+      "unit": "rule",
+      "source_type": "FIXTURE_CALIBRATION",
+      "source_ref": "R5.2.2 reversal experiment",
+      "method": "test-only observable evidence, not epoch-reset logic",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    },
+    "sensor_recovery_rule": {
+      "value": "first released VALID sample is available at recovery sample; do not infer progress from invalid interval",
+      "unit": "observation only",
+      "source_type": "FIXTURE_CALIBRATION",
+      "source_ref": "R5.2.2 sensor-loss experiment",
+      "method": "no production recovery state machine",
+      "valid_range": "fixture only; hardware CALIBRATION_REQUIRED",
+      "calibration_status": "NUMERICAL_TEST_FIXTURE/ENGINEERING_ASSUMPTION/UNVALIDATED/NOT_OEM/NOT_GB300/NOT_HARDWARE_CERTIFICATION"
+    }
+  },
+  "real_hardware": "CALIBRATION_REQUIRED; no fixture value is a hardware default"
+}

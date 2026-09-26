@@ -1,0 +1,412 @@
+{
+  "schema": "phase5-r5-2-1-p15-reconstructed-history-freeze-v1",
+  "freeze_status": "FROZEN_RECONSTRUCTED_HISTORICAL_FIXTURE",
+  "freeze_date_utc": "2026-09-26T05:39:05.990612+00:00",
+  "case_id": "P15",
+  "recovery_class": "RECONSTRUCTED_DETERMINISTICALLY",
+  "original_historical_capture_recovered": false,
+  "formal_gate_eligible": true,
+  "input_path": "v0_2/tests/data/tracking_history/P15_C9R_candidate.json",
+  "input_canonical_sha256": "9bc270330f79d1692a3ba5ec47501624d747136ff383fadb82de345bf6e5f279",
+  "input_file_sha256": "bbf2145b4347630d6e78ff51a5569002a6d5d6fc75f128ea0377e72691bc7fd1",
+  "record_count": 31,
+  "generator_path": "v0_2/examples/phase5_r5_2_1r1a_validation.py::c9r_source",
+  "generator_file_sha256": "238a03cef6b7b0c25a05ef71c4f699c75a91626c716f978a452ac23bc27d4ef1",
+  "underlying_generator_path": "v0_2/examples/phase5_r5_2_2_tracking_calibration.py::run_open_loop",
+  "underlying_generator_file_sha256": "110ce80946f1ca118dfa7b062e3fa998c04b65cc26afda1cfce799dbbdc744dd",
+  "generator_parameters": {
+    "name": "C9R_IN_DOMAIN_ANCHOR_ADVANCEMENT",
+    "initial_actual_speed": 0.35,
+    "initial_qualified_plc_anchor": 0.35,
+    "normal_actuator": true,
+    "sensor_period_ns": 200000000,
+    "duration_ns": 6000000000,
+    "commands": [
+      {
+        "time_ns": 0,
+        "command": 0.35,
+        "stage": "INITIAL_OBSERVED_BASELINE"
+      },
+      {
+        "time_ns": 200000000,
+        "command": 0.4,
+        "stage": "STAGE_1"
+      },
+      {
+        "time_ns": 400000000,
+        "command": 0.45,
+        "stage": "STAGE_1"
+      },
+      {
+        "time_ns": 600000000,
+        "command": 0.51,
+        "stage": "STAGE_1"
+      },
+      {
+        "time_ns": 3000000000,
+        "command": 0.56,
+        "stage": "STAGE_2"
+      },
+      {
+        "time_ns": 3200000000,
+        "command": 0.61,
+        "stage": "STAGE_2"
+      },
+      {
+        "time_ns": 3400000000,
+        "command": 0.67,
+        "stage": "STAGE_2"
+      }
+    ],
+    "selection_rationale": "A=0.35, B expected 0.51, C expected 0.67; each individual update is below frozen material delta 0.15, each stage signed net displacement is 0.16, and all commands are strictly inside profile [0.3,0.9]. A 2.4-second hold after stage 1 permits the frozen nominal actuator to resolve before stage 2. These are test-fixture values only.",
+    "expected_first_trigger_ns": 600000000,
+    "expected_second_trigger_ns": 3400000000,
+    "expected_anchor_sequence": [
+      0.35,
+      0.51,
+      0.67
+    ]
+  },
+  "randomness": "NONE; deterministic scheduler, actuator and released-sensor fixture",
+  "generation_procedure": "Run c9r_source(replacement_case registration); it calls deterministic run_open_loop, then from_calibration; serialize all ReleasedObservation dataclass fields in order",
+  "canonical_serialization": "UTF-8 JSON sort_keys=True separators=(',', ':') ensure_ascii=False allow_nan=False; hash full input object; no trailing newline",
+  "historical_registration_source": {
+    "path": "phase5_r5_2_1r4_paired_reference_tracking_registration.json",
+    "sha256": "541433aeb903fca820bcdc4f5992563c90cd746c72fcf5a936c0b620be4f3785",
+    "P15_alias": "C9R A-to-B-to-C"
+  },
+  "historical_expectation_source": {
+    "registration_path": "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json",
+    "registration_sha256": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "evidence_path": "phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json",
+    "evidence_sha256": "b7dac0d2bf27edd23df74d1ca1b7d7bf44a79ca8eb85f56ecfd0cfb7d80acba8",
+    "acceptance_function": "v0_2/examples/phase5_r5_2_1r1a_validation.py::c9r_checks",
+    "expected_behavior_sha256": "8536762881c581cf29a07cf34b1ce0abad793c4896329b21ba7f6dd76eef82d7",
+    "normative": {
+      "stage_1_trigger_ns": 600000000,
+      "stage_2_trigger_ns": 3400000000,
+      "anchor_command_sequence": [
+        0.35,
+        0.51,
+        0.67
+      ],
+      "qualified_progress_and_resolution_both_stages": true,
+      "no_tracking_fault_confirmed": true,
+      "exact_old_anchor_resolution_ns": "NON_NORMATIVE"
+    }
+  },
+  "C9R_relationship": "P15 is the R4-registered C9R alias, not an independent original capture",
+  "R4_3A_timing_adjudication": {
+    "path": "phase5_r5_2_1r4_3a_historical_timing_p_recovery_evidence.json",
+    "sha256": "31ea23d3d9f5c3a25d5a4085766bd2d9da050e3901dcba9025259921ccee9892",
+    "verdict": "TIMING_SHIFT_ACCEPTABLE_BUT_SPEC_UPDATE_REQUIRED"
+  },
+  "normativity_table": [
+    {
+      "property": "P15 registration aliases C9R A-to-B-to-C",
+      "class": "EXACT_NORMATIVE",
+      "expected": "C9R A-to-B-to-C"
+    },
+    {
+      "property": "input record count and canonical content",
+      "class": "EXACT_NORMATIVE",
+      "expected": {
+        "count": 31,
+        "sha256": "9bc270330f79d1692a3ba5ec47501624d747136ff383fadb82de345bf6e5f279"
+      }
+    },
+    {
+      "property": "material-demand epoch start times",
+      "class": "EXACT_NORMATIVE",
+      "expected_ns": [
+        600000000,
+        3400000000
+      ]
+    },
+    {
+      "property": "direction of both demands",
+      "class": "EXACT_NORMATIVE",
+      "expected": [
+        1,
+        1
+      ]
+    },
+    {
+      "property": "qualified command anchors",
+      "class": "EXACT_NORMATIVE",
+      "expected": [
+        0.35,
+        0.51,
+        0.67
+      ]
+    },
+    {
+      "property": "progress then resolution in each stage",
+      "class": "ORDER_NORMATIVE",
+      "expected": "positive qualified progress and resolved A→B→C after respective trigger"
+    },
+    {
+      "property": "final public state and no erroneous fault",
+      "class": "ORDER_NORMATIVE",
+      "expected": "eventual STEADY_TRACKING; no TRACKING_FAULT_CONFIRMED"
+    },
+    {
+      "property": "old B/C anchor resolution timestamps",
+      "class": "NON_NORMATIVE",
+      "old_observed_ns": [
+        1200000000,
+        4000000000
+      ]
+    },
+    {
+      "property": "current R4.3B B/C resolution timestamps",
+      "class": "NON_NORMATIVE",
+      "diagnostic_observed_ns": [
+        1000000000,
+        3800000000
+      ]
+    }
+  ],
+  "R4_3B_engine_sha256": "52b4ddd46401c16793a3602f49f02a5e9ca78906178390f9934c3453ed7b065e",
+  "formal_execution_result": {
+    "status": "PASS",
+    "checks": {
+      "ten_identical_repeats": true,
+      "pre_freeze_confirmation_equal": true,
+      "prefix_causal": true,
+      "exact_registered_epoch_starts": true,
+      "both_expected_upward": true,
+      "registered_anchor_sequence": true,
+      "initial_anchor_directly_observed": true,
+      "both_progress_milestones": true,
+      "resolved_after_each_trigger": true,
+      "anchor_epoch_provenance": true,
+      "eventual_steady": true,
+      "no_confirmed_fault": true,
+      "protected_sources_unchanged": true,
+      "fixture_file_unchanged": true,
+      "generator_file_unchanged": true
+    },
+    "repeatability_sha256_10x": [
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+      "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0"
+    ],
+    "pre_freeze_confirmation_sha256": "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "epoch_starts_ns": [
+      600000000,
+      3400000000
+    ],
+    "qualified_progress_ns": [
+      1000000000,
+      3800000000
+    ],
+    "anchor_events": [
+      {
+        "time_ns": 0,
+        "command_anchor": 0.35,
+        "source_epoch_id": null
+      },
+      {
+        "time_ns": 1000000000,
+        "command_anchor": 0.51,
+        "source_epoch_id": "tracking-epoch:1"
+      },
+      {
+        "time_ns": 3800000000,
+        "command_anchor": 0.67,
+        "source_epoch_id": "tracking-epoch:2"
+      }
+    ],
+    "final_state": "STEADY_TRACKING",
+    "confirmed_fault": false,
+    "result_snapshot_sha256": "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0"
+  },
+  "formal_execution_result_sha256": "4a62bda81b3a6dd981b02c5b4fe2f7c95260ba1b9406713281a7fe053f7fb03b",
+  "repeatability_sha256_10x": [
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0",
+    "d85a5dd067c2df9c69a6f84597a13ed4343dd518f0c796b9f1e0dac12c2a33f0"
+  ],
+  "candidate_manifest_source_sha256": "c485debbaf7af75be8208884012b036f02ab8dd01cd97b46d6b829bdbd4cb22c",
+  "Git_HEAD": "da552d2e0bfeb0b73ee8bf4148a009a65db2718b",
+  "working_tree_status_at_freeze_start": [
+    "?? PHASE5_R5_2_1R1A_IN_DOMAIN_ANCHOR_REVALIDATION_REPORT.md",
+    "?? PHASE5_R5_2_1R1_CUMULATIVE_COMMAND_DEMAND_SEMANTICS_SPEC.md",
+    "?? PHASE5_R5_2_1R2R_TRACKING_TO_SAFETY_MAPPING_REVALIDATION_REPORT.md",
+    "?? PHASE5_R5_2_1R2R_TRACKING_TO_SAFETY_MAPPING_SPEC.md",
+    "?? PHASE5_R5_2_1R3_TRACKING_SAFETY_POLICY_AMENDMENT_REPORT.md",
+    "?? PHASE5_R5_2_1R4_1A_SENSOR_OUTAGE_REVERSAL_DIRECTIONAL_OBLIGATION_AUDIT.md",
+    "?? PHASE5_R5_2_1R4_1_DEFERRED_DEMAND_MEASUREMENT_RECOVERY_SPEC.md",
+    "?? PHASE5_R5_2_1R4_2_DIRECTIONAL_OBLIGATION_PLAN.md",
+    "?? PHASE5_R5_2_1R4_2_DIRECTIONAL_OBLIGATION_REPORT.md",
+    "?? PHASE5_R5_2_1R4_3A_HISTORICAL_TIMING_AND_P_RECOVERY_REPORT.md",
+    "?? PHASE5_R5_2_1R4_3B_OBSERVABLE_PROGRESS_COMPATIBILITY_REPORT.md",
+    "?? PHASE5_R5_2_1R4_3C_P_HISTORY_RECOVERY_POLICY_AND_FREEZE_REVIEW.md",
+    "?? PHASE5_R5_2_1R4_3_STARTUP_TRACKING_REPORT.md",
+    "?? PHASE5_R5_2_1R_CONTINUOUS_TRACKING_SEMANTICS_SPEC.md",
+    "?? PHASE5_R5_2_1_CONTINUOUS_TRACKING_SEMANTICS_SPEC.md",
+    "?? PHASE5_R5_2_2_TRACKING_CALIBRATION_OBSERVABILITY_REPORT.md",
+    "?? PHASE5_R5_3R_A_TUNE01_FALSE_POSITIVE_ROOT_CAUSE_AUDIT.md",
+    "?? PHASE5_R5_3R_PRODUCTION_SAFETY_TRACKING_PORT_REPORT.md",
+    "?? artifacts/twin_v0_1/a3_tune_01_load_replay_summary.txt",
+    "?? artifacts/twin_v0_1/a3_tune_01_load_source.json",
+    "?? artifacts/twin_v0_1/a3_tune_01_load_twin_v0_1.jsonl",
+    "?? artifacts/twin_v0_1/a4_1_dsx_composition.usda",
+    "?? artifacts/twin_v0_1/a4_1_dsx_scene_inventory.json",
+    "?? artifacts/twin_v0_1/a4_1_tune_01_dsx_overlay.usda",
+    "?? artifacts/twin_v0_1/a4_generic_scene.usda",
+    "?? artifacts/twin_v0_1/a4_tune_01_twin_overlay.usda",
+    "?? contracts/15A_tracking_safety_policy_amendment.md",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_A3_OFFLINE_REPLAY_REPORT.md",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_A4_1_REAL_DSX_ASSET_MAPPING_REPORT.md",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_A4_OPENUSD_MAPPING_REPORT.md",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_DRAFT.json",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_FREEZE.json",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_FREEZE.md",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_REVIEW.md",
+    "?? docs/architecture/C2C_TWIN_INTERFACE_V0_1_SPEC.md",
+    "?? docs/results/phase5_r5_2_1r1_cumulative_command_demand.png",
+    "?? docs/results/phase5_r5_2_1r1a_in_domain_anchor_revalidation.png",
+    "?? docs/results/phase5_r5_2_1r2r_tracking_to_safety_mapping.png",
+    "?? docs/results/phase5_r5_2_1r3_tracking_safety_policy.png",
+    "?? docs/results/phase5_r5_2_1r_continuous_tracking_semantics.png",
+    "?? docs/results/phase5_r5_2_2_tracking_observability.png",
+    "?? docs/results/phase5_r5_3r_a_tune01_false_positive_audit.png",
+    "?? phase5_r5_2_1_continuous_tracking_semantics_evidence.json",
+    "?? phase5_r5_2_1_continuous_tracking_semantics_registration.json",
+    "?? phase5_r5_2_1_continuous_tracking_semantics_spec.json",
+    "?? phase5_r5_2_1_p_history_frozen_candidate_manifest.json",
+    "?? phase5_r5_2_1_p_history_input_recovery_manifest.json",
+    "?? phase5_r5_2_1r1_cumulative_command_demand_evidence.json",
+    "?? phase5_r5_2_1r1_cumulative_command_demand_registration.json",
+    "?? phase5_r5_2_1r1_cumulative_command_demand_spec.json",
+    "?? phase5_r5_2_1r1a_in_domain_anchor_revalidation_evidence.json",
+    "?? phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json",
+    "?? phase5_r5_2_1r2r_tracking_to_safety_mapping_contract.json",
+    "?? phase5_r5_2_1r2r_tracking_to_safety_mapping_evidence.json",
+    "?? phase5_r5_2_1r2r_tracking_to_safety_mapping_registration.json",
+    "?? phase5_r5_2_1r3_tracking_safety_policy_contract.json",
+    "?? phase5_r5_2_1r3_tracking_safety_policy_evidence.json",
+    "?? phase5_r5_2_1r3_tracking_safety_policy_registration.json",
+    "?? phase5_r5_2_1r4_1_deferred_demand_recovery_evidence.json",
+    "?? phase5_r5_2_1r4_1_deferred_demand_recovery_registration.json",
+    "?? phase5_r5_2_1r4_1_deferred_demand_recovery_semantics.json",
+    "?? phase5_r5_2_1r4_2_directional_obligation_evidence.json",
+    "?? phase5_r5_2_1r4_3_full_history_evidence.json",
+    "?? phase5_r5_2_1r4_3a_historical_timing_p_recovery_evidence.json",
+    "?? phase5_r5_2_1r4_3b_observable_progress_evidence.json",
+    "?? phase5_r5_2_1r4_3c_p_history_recovery_evidence.json",
+    "?? phase5_r5_2_1r4_paired_reference_tracking_evidence.json",
+    "?? phase5_r5_2_1r4_paired_reference_tracking_registration.json",
+    "?? phase5_r5_2_1r_continuous_tracking_semantics_evidence.json",
+    "?? phase5_r5_2_1r_continuous_tracking_semantics_registration.json",
+    "?? phase5_r5_2_1r_continuous_tracking_semantics_spec.json",
+    "?? phase5_r5_2_2_fixture_tracking_profile.json",
+    "?? phase5_r5_2_2_tracking_calibration_evidence.json",
+    "?? phase5_r5_2_2_tracking_calibration_registration.json",
+    "?? phase5_r5_3r_a_tune01_false_positive_audit_evidence.json",
+    "?? phase5_r5_3r_a_tune01_false_positive_audit_registration.json",
+    "?? phase5_r5_3r_a_tune01_released_input_trace.json",
+    "?? phase5_r5_3r_production_safety_tracking_evidence.json",
+    "?? phase5_r5_3r_production_safety_tracking_port_registration.json",
+    "?? phase5_tracking_profile_schema.json",
+    "?? phase_arch_a3_offline_twin_projection_evidence.json",
+    "?? phase_arch_a3_offline_twin_projection_registration.json",
+    "?? phase_arch_a4_1_real_dsx_asset_mapping_evidence.json",
+    "?? phase_arch_a4_1_real_dsx_asset_mapping_registration.json",
+    "?? phase_arch_a4_offline_dsx_openusd_mapping_evidence.json",
+    "?? phase_arch_a4_offline_dsx_openusd_mapping_registration.json",
+    "?? v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py",
+    "?? v0_2/examples/phase5_r5_2_1r1_validation.py",
+    "?? v0_2/examples/phase5_r5_2_1r1a_validation.py",
+    "?? v0_2/examples/phase5_r5_2_1r2r_mapping_validation.py",
+    "?? v0_2/examples/phase5_r5_2_1r3_mapping_contract.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_1_deferred_engine.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_2_directional_engine.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_2_validation.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_3_history_validation.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_3_startup_engine.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_3a_audit.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_3b_validation.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_3c_recovery_review.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_3d_freeze.py",
+    "?? v0_2/examples/phase5_r5_2_1r4_paired_engine.py",
+    "?? v0_2/examples/phase5_r5_2_1r_semantic_engine.py",
+    "?? v0_2/examples/phase5_r5_2_1r_validation.py",
+    "?? v0_2/examples/phase5_r5_2_2_tracking_calibration.py",
+    "?? v0_2/examples/phase5_r5_3r_a_tune01_audit.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1_spec_boundary.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r1_cumulative_demand.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r1a_in_domain_anchor.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r2r_mapping.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r3_tracking_safety_policy.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r4_1_deferred_demand.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r4_2_directional_obligation.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r4_3_startup.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_1r_continuous_tracking.py",
+    "?? v0_2/tests/control/test_phase5_r5_2_2_tracking_calibration.py",
+    "?? v0_2/tests/control/test_phase5_r5_3r_a_tune01_audit.py",
+    "?? v0_2/tests/data/tracking_history/P15_C9R_candidate.json",
+    "?? v0_2/tests/tools/test_twin_offline.py",
+    "?? v0_2/tests/tools/test_twin_openusd_a4.py",
+    "?? v0_2/tests/tools/test_twin_openusd_a4_1.py",
+    "?? v0_2/tools/twin/__init__.py",
+    "?? v0_2/tools/twin/capture.py",
+    "?? v0_2/tools/twin/codec.py",
+    "?? v0_2/tools/twin/identity_manifest_v1.json",
+    "?? v0_2/tools/twin/openusd/adapter.py",
+    "?? v0_2/tools/twin/openusd/asset_mapping_v1.json",
+    "?? v0_2/tools/twin/openusd/dsx_asset_mapping_v1.json",
+    "?? v0_2/tools/twin/openusd/dsx_discovery.py",
+    "?? v0_2/tools/twin/openusd/dsx_projection.py",
+    "?? v0_2/tools/twin/openusd/dsx_validate.py",
+    "?? v0_2/tools/twin/openusd/validate_a4.py",
+    "?? v0_2/tools/twin/projection.py",
+    "?? v0_2/tools/twin/replay.py",
+    "?? v0_2/tools/twin/requirements.txt"
+  ],
+  "P1_P20_coverage": {
+    "formal_eligible": 1,
+    "required": 20,
+    "remaining_case_status": "NOT_RECOVERABLE_FROM_CURRENT_EVIDENCE",
+    "remaining_case_ids": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20"
+    ]
+  },
+  "FULL_P_HISTORY_VALIDATION_AVAILABLE": "NO",
+  "FULL_P_HISTORY_VALIDATION_PASSED": "NOT_EVALUABLE",
+  "CAN_PRODUCTION_PORT_START": "NO"
+}

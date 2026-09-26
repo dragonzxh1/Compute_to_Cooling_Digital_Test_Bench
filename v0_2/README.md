@@ -100,6 +100,28 @@ as `inner_b + outer_a` at `313.71072595542387 K`. This is a historical generic R
 Phase 5.1R2 subsequently ran and was blocked, while Phase 6 remains not started. R5 later selected a
 directional PI candidate, but R5.1/R5.2 remain diagnostic audits and do not freeze a final R5 baseline.
 
+### P15 reconstructed historical fixture baseline
+
+Phase 5R5.2.1R4.3D freezes only the reconstructed P15/C9R historical input, not a final R5
+controller or production Safety baseline. The 31-record input is reproducible from the R1a
+generator and matches its earlier serialized evidence. Against the unchanged R4.3B tracker it
+passes ten identical executions and prefix causality; startup, C and S regressions remain
+50/50, 11/11 and 17/17. See the [freeze report](../PHASE5_R5_2_1R4_3D_P15_FREEZE_REPORT.md)
+and [hash-backed manifest](../phase5_r5_2_1_p15_reconstructed_history_freeze.json).
+
+P15 is only **1/20** of the original P-history cases. The remaining 19 are
+`NOT_RECOVERABLE_FROM_CURRENT_EVIDENCE`, not failed executions. Full P-history validation is
+unavailable, and production port and Phase 6 remain out of scope. Re-running the command below
+verifies the existing frozen artifact without overwriting it:
+
+The earlier R4.1 `test_r41_7_reversal_during_outage_is_causal` remains a known historical failure
+in the full control-test collection; it is intentionally not rewritten. R4.3B's R41-7 candidate
+check passes. A full-collection run is therefore **not** an all-green release gate.
+
+```powershell
+py -3.13 -m v0_2.examples.phase5_r5_2_1r4_3d_freeze
+```
+
 The registered generic baseline, holdout and figures are reproduced by:
 
 ```powershell

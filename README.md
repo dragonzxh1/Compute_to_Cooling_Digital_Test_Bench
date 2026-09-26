@@ -31,8 +31,17 @@ V0.2 以隔离目录 `v0_2/` 构建，拥有独立的发行包与测试路径，
 | 5R5 | this repository | candidate, not final baseline | Directional PI candidate | [Phase 5R5 report](PHASE5_R5_DIRECTIONAL_PI_REPORT.md) | `DIRECTIONAL_PI_CANDIDATE_FOUND_WITH_STARTUP_SAFETY_BLOCKER` |
 | 5R5.1 | this repository | diagnostic complete | Cold-start Safety handoff audit | [Phase 5R5.1 report](PHASE5_R5_1_COLD_START_SAFETY_HANDOFF_AUDIT_REPORT.md) | `NORMAL_HANDOFF_MISCLASSIFIED_AS_DEGRADED` |
 | 5R5.2 | this repository | diagnostic complete | Silent tracking-fault separation | [Phase 5R5.2 report](PHASE5_R5_2_SILENT_TRACKING_FAULT_QUALIFICATION_REPORT.md) | `MEASURED_ONLY_SILENT_TRACKING_FAULT_SEPARATION_PASS` |
+| 5R5.2.1R4.3D | `v0.2-p15-history-fixture` | P15-only historical fixture baseline | Deterministically reconstructed and frozen P15/C9R input; unchanged R4.3B candidate passes 10/10 | [P15 freeze report](PHASE5_R5_2_1R4_3D_P15_FREEZE_REPORT.md), [manifest](phase5_r5_2_1_p15_reconstructed_history_freeze.json) | `P15_RECONSTRUCTED_HISTORICAL_FIXTURE_FROZEN_AND_VALIDATED`; full P history unavailable |
 
 Phase 1 and Phase 2 share a single commit; no separate Phase 1 commit exists. Phase 5R5.2 is diagnostic evidence only: production Safety remains unchanged, the R5 controller remains a candidate, and independent qualification has not happened. Phase 6 feedforward and Phases 7–9 have not started.
+
+The later R4.3D freeze is **a historical-fixture baseline for P15 only**, not a production-control baseline. P15 is the R4-registered C9R alias, reconstructed from a deterministic historical generator; it is not an exact recovered original capture. Its frozen 31-record input passed the unchanged R4.3B tracker in ten identical runs with prefix causality. The other 19 P fixtures remain unavailable from current evidence, so `FULL_P_HISTORY_VALIDATION_AVAILABLE = NO`, complete historical validation cannot be claimed, and production port remains blocked. The [freeze record](PHASE5_R5_2_1_P15_RECONSTRUCTED_HISTORICAL_FIXTURE_FREEZE.md) distinguishes exact requirements from incidental anchor timing. No Phase 6 feedforward is authorized.
+
+The previously uncommitted [R5.3R production-port trial](PHASE5_R5_3R_PRODUCTION_SAFETY_TRACKING_PORT_REPORT.md) and [R5.3R-A false-positive audit](PHASE5_R5_3R_A_TUNE01_FALSE_POSITIVE_ROOT_CAUSE_AUDIT.md) are published as **historical blocked/audit evidence**, not as an active production port. The trial's Safety/plant edits were reverted; the audit identified a continuous-command reference-frame false positive that motivated the later R4 revisions. Neither report authorizes production deployment.
+
+The full control-test collection still contains the intentionally preserved R4.1 `R41-7` historical failure (`test_r41_7_reversal_during_outage_is_causal` in the old deferred-demand engine). The current R4.3B candidate's corresponding check and frozen P15 gate pass. Do not interpret the old failure as a new R4.3B failure or claim that the entire historical test collection is green.
+
+后续 R4.3D 仅冻结 **P15 历史测试输入基线**，不是生产控制基线。P15 是登记在案的 C9R 对应案例，通过历史确定性生成逻辑重建，并非找回原始采集文件。31 条冻结输入在未修改的 R4.3B 上重复运行 10 次均通过，前缀因果性也通过。其余 19 个 P 案例的输入目前仍不可恢复，因此不能宣称完整历史验证通过，也不能进入生产移植；Phase 6 前馈尚未启动。
 
 阶段 1 与阶段 2 共用一个 commit，不存在单独的 Phase 1 commit。Phase 5R5.2 只是诊断证据：生产 Safety 未修改，R5 控制器仍是候选方案，尚未独立验证。Phase 6 前馈与 Phase 7–9 尚未开始。
 
@@ -60,6 +69,7 @@ A phase gate covers only the evidence in its own report. No PASS above means GB3
 .venv\Scripts\python -m v0_2.examples.phase5_r5_directional_pi
 .venv\Scripts\python -m v0_2.examples.phase5_r5_1_safety_handoff_audit
 .venv\Scripts\python -m v0_2.examples.phase5_r5_2_silent_tracking_fault
+.venv\Scripts\python -m v0_2.examples.phase5_r5_2_1r4_3d_freeze
 .venv\Scripts\python -m pip install -e "./v0_2[figures]"
 .venv\Scripts\python -m v0_2.examples.phase4_figures
 .venv\Scripts\python -m v0_2.examples.phase4_report

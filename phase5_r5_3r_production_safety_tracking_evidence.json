@@ -1,0 +1,46 @@
+{
+  "schema": "phase5-r5-3r-blocked-port-evidence-v1",
+  "scope": "BLOCKING_DEVELOPMENT_TRIAL_ONLY",
+  "registration_file": "phase5_r5_3r_production_safety_tracking_port_registration.json",
+  "registration_sha256": "4ff6a7df8228400c9a2f3d8d584a94208c17e995ceef644deabc41dd971d1b7c",
+  "required_source_gates": {
+    "r1a": "CUMULATIVE_COMMAND_DEMAND_SEMANTICS_VALIDATED_IN_PROFILE_DOMAIN",
+    "r3": "TRACKING_SAFETY_POLICY_AMENDMENT_SPECIFIED_AND_VALIDATED",
+    "r2r": "TRACKING_TO_SAFETY_MAPPING_CONTRACT_REVALIDATED"
+  },
+  "source_authority_sha256": {
+    "r1a_registration": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "r3_registration": "e3ecfbd1de129ba230062ac15a775d5458d7c6deaff4d260a31c2aff344aad5d",
+    "r2r_registration": "c29b911a7dd5e9320d13991a1f17236191c8ffc5433dd2025d388b756a7e0aa5",
+    "contract14": "efd8d325753163b91170578ceeb3de02dafafbf8fb0a208a279c76c964d7b144",
+    "contract15": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+    "contract15a": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "r2r_mapping_contract": "35b4284b7c7864da2f6cafc31901548a432267ba4e591aafb9d3843e64e3da05",
+    "tracking_profile": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8"
+  },
+  "baseline_before_trial": "v0_2/tests PASS",
+  "trial_authorized_files_only": ["v0_2/safety/supervisor.py", "v0_2/plant/controlled_loop.py", "v0_2/safety/tracking_qualifier.py"],
+  "trial": {
+    "qualifier_source": "Mechanical port of frozen offline R5.2.1R/R1 qualifier with production class naming; consumed released measured pump speed and PLC command timestamp.",
+    "safety_mapping": "Old raw 0.15 tracking branch removed from authority; independent channel reasons and frozen 15A mapping added.",
+    "focused_test_result": "21 PASS, 3 FAIL in phase5_feedback and phase5_r5_1_safety_handoff_audit",
+    "blocking_case": "TUNE-01-load legacy full-regression scenario",
+    "observed_first_tracking_suspected_ns": 29600000000,
+    "observed_first_tracking_fault_ns": 31000000000,
+    "observed_reasons": ["ACTUATOR_TRACKING_SUSPECTED", "ACTUATOR_TRACKING_CONFIRMED"],
+    "observed_command_measured_at_fault": [0.5, 0.8545016311066375],
+    "pre_fault_example_at_29_6s": {"command": 0.8529860916051749, "measured_speed": 0.8467742566513572, "tracking_safety_state": "DEGRADED"},
+    "legacy_regression_expectation": "All TUNE-01-load Safety rows must not be FAULT",
+    "other_focused_failures": ["Historical measured-stall test expects legacy 2.1s FAULT, now gets FF_DISABLED under new frozen qualifier timing", "Historical R5.1 integrity test compares current Safety source to pre-port historical SHA; fails during any authorized production port"],
+    "interpretation": "The frozen qualifier/profile applied to continuous TUNE-01-load command evolution produced a tracking false positive or an unresolved integration/semantic compatibility issue. No threshold, timer, profile or tracking rule was changed to suppress it."
+  },
+  "production_trial_reverted": true,
+  "restored_safety_sha256": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+  "restored_controlled_loop_sha256": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+  "production_qualifier_file_removed": true,
+  "golden_semantic_equivalence": "NOT_COMPLETED_AFTER_BLOCKER",
+  "r2r_mapping_equivalence": "NOT_COMPLETED_AFTER_BLOCKER",
+  "thermal_mesh_and_full_regression": "NOT_RUN_AFTER_BLOCKER",
+  "candidate_baseline_created": false,
+  "status": "PRODUCTION_TRACKING_FALSE_POSITIVE_REMAINS"
+}

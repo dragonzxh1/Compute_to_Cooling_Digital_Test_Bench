@@ -1,0 +1,68 @@
+{
+  "schema": "phase5-r5-2-1r4-paired-reference-registration-v1",
+  "scope": "OFFLINE_TRACKING_SEMANTICS_ONLY",
+  "preregistration_status": "BEFORE_R4_SEMANTIC_CODE_OR_RESULT",
+  "historical_gate": "TUNE01_FALSE_POSITIVE_ROOT_CAUSE_IDENTIFIED",
+  "root_cause_class": "FROZEN_SEMANTICS_FALSE_POSITIVE_ON_VALID_IN_DOMAIN_TRACE",
+  "source_sha256": {
+    "phase5_r5_2_1r_continuous_tracking_semantics_registration.json": "a5ccc13dc8a7ecc7a2aa5205a11a6c2635f78c1bba51d564cb72aceb156731ca",
+    "phase5_r5_2_1r1_cumulative_command_demand_registration.json": "349faabfeda2661c472044bf572e6073d49c76d9f4042bc1158d37ff13a8ead1",
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "phase5_r5_2_1r3_tracking_safety_policy_registration.json": "e3ecfbd1de129ba230062ac15a775d5458d7c6deaff4d260a31c2aff344aad5d",
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_registration.json": "c29b911a7dd5e9320d13991a1f17236191c8ffc5433dd2025d388b756a7e0aa5",
+    "phase5_r5_3r_production_safety_tracking_port_registration.json": "4ff6a7df8228400c9a2f3d8d584a94208c17e995ceef644deabc41dd971d1b7c",
+    "phase5_r5_3r_a_tune01_false_positive_audit_registration.json": "dc5475f5bee91efda39a1ea42f44e2a110233368ca3362dba478bd270429cd24",
+    "phase5_r5_3r_a_tune01_released_input_trace.json": "a63c5a413e3a3b02d3f86a4f6c6d52bad615272916f664722a452ff5be25fd61",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "contracts/15A_tracking_safety_policy_amendment.md": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": "40b207b5faa3c7b92f8cabb9ad56cef1f31936f335e89479f1f4004f921f309f",
+    "v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py": "e9bb0de5c15c10a9ccbdbe899c3fd1cb1f5e05145af79c2e142b9990cd7020ef"
+  },
+  "production_sha256": {
+    "v0_2/safety/supervisor.py": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "v0_2/plant/controlled_loop.py": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+    "v0_2/control/directional_outer.py": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "v0_2/control/outer_feedback.py": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+    "v0_2/control/inner_loop.py": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+    "v0_2/control/pid.py": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+    "v0_2/actuators/pump.py": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "v0_2/measurement/local_sensor.py": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+    "v0_2/plant/authority.py": "7eb907031954b60b0c12c2abb9b11c1e1b35aee9a5edc0c41a02ed99a0a7e0c4"
+  },
+  "defect": "Old resolved command anchor is paired with current measurement at a newly opened epoch; expected motion since old command reference is compared with measured motion since newer measurement reference.",
+  "trace_limitation": "Reconstructed unchanged scenario prefix to first FAULT, not a byte-for-byte failed-production capture; development regression evidence only, not hardware/OEM/NVIDIA/GB300 evidence.",
+  "resolved_pair": {
+    "fields": ["resolved_command_anchor", "resolved_measurement_anchor", "resolved_anchor_pair_id", "resolved_anchor_ns", "source_obligation_id", "source_epoch_id", "establishment_reason"],
+    "creation": "First directly observed valid released PLC command and released measurement already within frozen tracking tolerance, or first frozen startup obligation that legitimately resolves; no fabricated PLC history.",
+    "advancement": "One atomic record at qualified epoch resolution to STEADY_TRACKING within frozen tolerance, with both current released command and current valid released measurement. Never advance for partial progress, command update, reversal, invalid measurement or timer expiry."
+  },
+  "progress_pair": {
+    "fields": ["progress_command_reference", "progress_measurement_reference", "progress_pair_id", "progress_pair_ns", "source_epoch_id", "source_measurement_record_id", "source_command_record_id", "update_reason"],
+    "creation": "At first cumulative same-direction epoch copy the latest resolved pair atomically; at material reversal use the current valid released command/measurement observation atomically and retain any prior unresolved watch age/evidence. If no resolved pair exists, use the first valid released observation pair and preserve startup handoff rules.",
+    "advancement": "After qualified directional measured progress, atomically replace both references with the released command and valid released measurement from that same evaluation tick; command-only updates and invalid measurement never advance it.",
+    "credited_motion": "Keep ledger of cumulative signed qualified measurement displacement from resolved pair and prior checkpoints; a checkpoint refresh never deletes previously credited motion."
+  },
+  "comparison_rules": [
+    "Gross cumulative command demand = current released command - resolved command anchor; materiality uses frozen material delta and response-open model.",
+    "At initial same-direction epoch compare directed command and measurement displacement from the same resolved pair, never from different timestamps.",
+    "During unresolved response use command increment since progress checkpoint plus the nonnegative directional command-minus-measurement debt stored in that same pair. Compare with directed measured increment since that pair; retain already-qualified measured motion in a ledger. At material reversal establish a fresh current-observation progress pair but retain prior no-motion watch age/evidence.",
+    "Use frozen minimum observable motion, directional ratio, expected response model, suspect/confirm thresholds and sample count; no new numeric parameter or instantaneous-error health shortcut.",
+    "For no-motion evidence, keep oldest unresolved demand/watch age and suspicion count across checkpoint refresh, same-direction command updates and reversal. Qualified progress does not clear the unresolved watch until the epoch is within frozen tracking tolerance and resolves to STEADY_TRACKING. A checkpoint refresh is not an obligation resolution.",
+    "A plateau remains unresolved until qualified progress and frozen tracking-tolerance resolution; its outstanding paired command-minus-measurement debt is evaluated using frozen response model and original unresolved age, not a fresh checkpoint grace."
+  ],
+  "sensor_rules": "Invalid measurement yields INSUFFICIENT_MEASUREMENT and freezes both pairs, watch, suspicion and oldest demand; recovered valid measurement resumes existing context with no synthetic baseline.",
+  "reversal_rules": "Material reversal changes epoch direction but not resolved pair; preserve unresolved no-motion watch and suspicion unless qualified prior motion legitimately resolves that watch; new progress pair must be an atomic causal observation pair.",
+  "states": ["STEADY_TRACKING", "HANDOFF_PENDING", "TRACKING_PROGRESS", "TRACKING_FAULT_SUSPECTED", "TRACKING_FAULT_CONFIRMED", "INSUFFICIENT_MEASUREMENT"],
+  "tune01_acceptance": "In-domain reconstructed trace must never reach TRACKING_FAULT_CONFIRMED; report any TRACKING_FAULT_SUSPECTED separately; compare old/new every tick around 28-32 seconds.",
+  "preregistered_case_matrix": {
+    "P1": "normal continuous up", "P2": "normal continuous down", "P3": "normal variable-slope command", "P4": "continuous-command silent stuck", "P5": "normal then stuck", "P6": "intermittent qualified progress then stuck", "P7": "cumulative small-step normal", "P8": "cumulative small-step stuck", "P9": "harmless chatter", "P10": "reversal stuck attack", "P11": "normal reversal", "P12": "sensor invalid", "P13": "sensor recovery", "P14": "baseline offset matched pair", "P15": "C9R A-to-B-to-C", "P16": "moving command then plateau", "P17": "plateau then true stuck", "P18": "checkpoint at command update", "P19": "command update without progress", "P20": "measured progress without new command"
+  },
+  "historical_regressions": ["S1-S16 and S16 variant unchanged", "C1-C8,C9R,C10-C12 unchanged; original C9 remains INVALID", "R5.2 silent-fault, delay, sluggish, invalid/recovery", "prefix causality on all traces", "10 deterministic repeats for TUNE-01,P1,P4,P5,P8,P10,P13,P15", "full v0_2/tests, Ruff, git diff --check"],
+  "invariants": ["PAIRED_REFERENCE_INVARIANT", "ATOMIC_PAIR_ADVANCEMENT_INVARIANT", "REALIZED_MOTION_CREDIT_INVARIANT", "NO_FREE_GRACE_FROM_PROGRESS_INVARIANT", "NO_PROGRESS_WITHOUT_MEASUREMENT_INVARIANT", "RESOLVED_ANCHOR_STABILITY_INVARIANT", "CONTINUOUS_NORMAL_TRACKING_INVARIANT", "SILENT_STUCK_DETECTABILITY_INVARIANT", "CUMULATIVE_SMALL_STEP_PRESERVATION_INVARIANT", "REVERSAL_MASKING_PREVENTION_INVARIANT"],
+  "authorized_changes": ["new offline R4 semantic engine", "test-only semantic structures", "R4 specification", "R4 tests", "R4 evidence/report/figure"],
+  "forbidden_changes": ["production Safety/PLC/controller/actuator/sensor/plant/scheduler", "Contracts 14/15/15A", "R2R mapping", "profile recalibration", "controller retune", "new threshold/timer/sample count/tolerance/state/reason code", "Git commit or push"],
+  "stop_gates": ["R4_SOURCE_OR_PRODUCTION_HASH_MISMATCH", "PAIRED_REFERENCE_REVISION_DID_NOT_CLOSE_TUNE01_FALSE_POSITIVE", "PAIRED_REFERENCE_REVISION_MASKS_SILENT_FAULT", "PAIRED_REFERENCE_REVISION_REOPENS_CUMULATIVE_MASKING", "PAIRED_REFERENCE_REVISION_REOPENS_REVERSAL_MASKING", "PROGRESS_CHECKPOINT_CREATES_INFINITE_GRACE", "PAIRED_REFERENCE_FIX_REQUIRES_NEW_CALIBRATION_PARAMETER", "PAIRED_REFERENCE_LIFECYCLE_UNDERSPECIFIED"],
+  "success_gate": "PAIRED_REFERENCE_CONTINUOUS_COMMAND_SEMANTICS_VALIDATED",
+  "next_phase_requires_user_review": "R5.3R-B",
+  "commit_or_push_authorized": false
+}

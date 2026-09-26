@@ -1,0 +1,62 @@
+{
+  "schema": "phase5-r5-2-1r3-tracking-safety-policy-contract-v1",
+  "amendment_version": "15A/1.0",
+  "registration_sha256": "e3ecfbd1de129ba230062ac15a775d5458d7c6deaff4d260a31c2aff344aad5d",
+  "parent_contract_15_sha256": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+  "contract_14_sha256": "efd8d325753163b91170578ceeb3de02dafafbf8fb0a208a279c76c964d7b144",
+  "amendment_sha256": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+  "source_hashes": "All historical, profile and production source hashes frozen in registration; validate there before interpreting this contract.",
+  "scope": "ACTUATOR_TRACKING_TO_SAFETY_POLICY_ONLY",
+  "hierarchy_low_to_high": ["NORMAL", "FF_DISABLED", "DEGRADED", "DERATE_REQUESTED", "PROTECTED", "FAULT"],
+  "tracking_contribution_fields": ["tracking_internal_state", "severity_contribution", "reason_codes", "restriction_contribution", "latched", "recovery_authority", "tracking_epoch_id", "tracking_evidence_id", "measurement_quality_dependency"],
+  "tracking_states": {
+    "STEADY_TRACKING": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "QUALIFIER_ON_LATER_DEMAND"},
+    "HANDOFF_PENDING": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "QUALIFIER_ON_RESPONSE_OPPORTUNITY"},
+    "TRACKING_PROGRESS": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "QUALIFIER_ON_LATER_DEMAND"},
+    "TRACKING_FAULT_SUSPECTED": {"severity": "DEGRADED", "reason_codes": ["ACTUATOR_TRACKING_SUSPECTED"], "restriction": "NONE", "latched": false, "recovery_authority": "FROZEN_QUALIFIED_PROGRESS_BEFORE_CONFIRMATION"},
+    "TRACKING_FAULT_CONFIRMED": {"severity": "FAULT", "reason_codes": ["ACTUATOR_TRACKING_CONFIRMED"], "restriction": "EXISTING_GENERIC_FAULT", "latched": true, "recovery_authority": "EXPLICIT_SAFETY_FAULT_RESET_AND_QUALIFIED_RECOVERY"},
+    "INSUFFICIENT_MEASUREMENT": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "SENSOR_CHANNEL_AND_PRESERVED_QUALIFIER_CONTEXT"}
+  },
+  "reason_codes": {
+    "ACTUATOR_TRACKING_SUSPECTED": {"status": "NEW_SPECIFIED_NOT_PRODUCTION_IMPLEMENTED", "channel": "ACTUATOR_TRACKING", "severity": "DEGRADED", "meaning": "Valid released measured-only insufficient progress after profile-qualified response opportunity, before frozen confirmation", "restriction": "NONE", "latched": false},
+    "ACTUATOR_TRACKING_CONFIRMED": {"status": "NEW_SPECIFIED_NOT_PRODUCTION_IMPLEMENTED", "channel": "ACTUATOR_TRACKING", "severity": "FAULT", "meaning": "Frozen measured-only confirmed non-response", "restriction": "EXISTING_GENERIC_FAULT", "latched": true},
+    "ACTUATOR_TRACKING_PENDING": {"status": "LEGACY_HISTORICAL_ONLY", "channel": "ACTUATOR_TRACKING", "new_mapping_use": false, "meaning": "Old raw mismatch waiting path that caused nominal cold-start false DEGRADED"}
+  },
+  "all_reason_retention": "Collect every currently active channel reason in SafetyDecision.reasons and SafetyEnvelope.reason_codes; primary does not delete secondary reasons.",
+  "primary_reason": {"current_api_has_primary_field": false, "current_rule": "DO_NOT_ADD_PRIMARY_FIELD", "future_if_required": "Pick among final highest-severity reasons; use prior frozen production tie-break if present; otherwise diagnostic PRESSURE>THERMAL>SENSOR>ACTUATOR_TRACKING>FF>OTHER; never change severity/envelope."},
+  "state_reducer": "Maximum active severity under hierarchy_low_to_high; tracking cannot overwrite other channels.",
+  "envelope_combination": "SUSPECTED contributes identity/no tracking-specific envelope; CONFIRMED selects existing generic FAULT fallback DP and fault_speed bounds; non-tracking restrictions follow unchanged Contract 15, including pressure-over-thermal authority. No new actuator command.",
+  "latching": "Confirmed tracking invokes existing top-level FAULT latch. Restored measured motion is evidence only; existing explicit reset, valid sensors and recovery qualification own top-level clearing.",
+  "sensor_quality": "INSUFFICIENT_MEASUREMENT adds no new actuator failure. Existing sensor-invalid channel can independently contribute FAULT. Prior suspected evidence remains internal; prior confirmed latch and reason remain active.",
+  "thermal": "Thermal PROTECTED/DERATE_REQUESTED contributes independently; tracking cannot suppress it. Final severity is maximum; all reasons retained.",
+  "pressure": "Pressure FAULT contributes independently, remains FAULT with tracking suspected/confirmed, and retains pressure-over-thermal restriction priority.",
+  "ff": "FF_DISABLED remains when tracking contributes NORMAL; suspected raises final to DEGRADED, confirmed to FAULT; local feedback/PLC continue under existing rules.",
+  "ownership": "Contract14 deny-default; Safety restriction/envelope only; PLC sole final ActuatorCommand producer; no raw ACTUAL or hidden state; same-tick Safety-before-PLC authority unchanged.",
+  "channel_reason_examples": {
+    "PRESSURE_FAULT": "OVERPRESSURE_MEASURED",
+    "THERMAL_PROTECTED": "HARD_THERMAL_MEASURED",
+    "DERATE_REQUESTED": "THERMAL_OR_FLOW_CAPACITY_LIMITED",
+    "SENSOR_INVALID": "CRITICAL_LOCAL_SENSOR_INVALID",
+    "FF_DISABLED": "RECOVERY_QUALIFICATION"
+  },
+  "cases": {
+    "A1": {"tracking": "STEADY_TRACKING", "channels": [], "expected": "NORMAL"},
+    "A2": {"tracking": "HANDOFF_PENDING", "channels": [], "expected": "NORMAL"},
+    "A3": {"tracking": "TRACKING_PROGRESS", "channels": [], "expected": "NORMAL"},
+    "A4": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": [], "expected": "DEGRADED"},
+    "A5": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": [], "expected": "FAULT"},
+    "A6": {"tracking": "INSUFFICIENT_MEASUREMENT", "channels": ["SENSOR_INVALID"], "expected": "FAULT"},
+    "A7": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": ["PRESSURE_FAULT"], "expected": "FAULT"},
+    "A8": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": ["PRESSURE_FAULT"], "expected": "FAULT"},
+    "A9": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": ["THERMAL_PROTECTED"], "expected": "PROTECTED"},
+    "A10": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": ["THERMAL_PROTECTED"], "expected": "FAULT"},
+    "A11": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": ["DERATE_REQUESTED"], "expected": "DERATE_REQUESTED"},
+    "A12": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": ["DERATE_REQUESTED"], "expected": "FAULT"},
+    "A13": {"tracking": "INSUFFICIENT_MEASUREMENT", "prior_suspected": true, "channels": ["SENSOR_INVALID"], "expected": "FAULT"},
+    "A14": {"tracking": "INSUFFICIENT_MEASUREMENT", "prior_confirmed": true, "channels": ["SENSOR_INVALID"], "expected": "FAULT"},
+    "A15": {"tracking": "TRACKING_PROGRESS", "channels": ["FF_DISABLED"], "expected": "FF_DISABLED"},
+    "A16": {"tracking": "TRACKING_FAULT_CONFIRMED", "restored_motion": true, "channels": [], "expected": "FAULT"}
+  },
+  "production_code_change_authorized": false,
+  "next_phase_after_review": "Phase 5R5.2.1R2R mapping contract revalidation, not direct R5.3R production port"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "phase5-r5-3r-production-safety-tracking-port-registration-v1",
+  "scope": "FROZEN_SEMANTICS_AND_CONTRACT_15A_PRODUCTION_PORT_ONLY",
+  "required_gates": {
+    "r1a": "CUMULATIVE_COMMAND_DEMAND_SEMANTICS_VALIDATED_IN_PROFILE_DOMAIN",
+    "r3": "TRACKING_SAFETY_POLICY_AMENDMENT_SPECIFIED_AND_VALIDATED",
+    "r2r": "TRACKING_TO_SAFETY_MAPPING_CONTRACT_REVALIDATED"
+  },
+  "authority_sha256": {
+    "contracts/14_control_input_permission_contract.md": "efd8d325753163b91170578ceeb3de02dafafbf8fb0a208a279c76c964d7b144",
+    "contracts/15_safety_supervisor_contract.md": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+    "contracts/15A_tracking_safety_policy_amendment.md": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "phase5_r5_2_1r1a_in_domain_anchor_revalidation_registration.json": "371eec87a6e3b1e559474acc3e420115ec05fed302c4590ed75a8380a2da588e",
+    "phase5_r5_2_1r3_tracking_safety_policy_registration.json": "e3ecfbd1de129ba230062ac15a775d5458d7c6deaff4d260a31c2aff344aad5d",
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_registration.json": "c29b911a7dd5e9320d13991a1f17236191c8ffc5433dd2025d388b756a7e0aa5",
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_contract.json": "35b4284b7c7864da2f6cafc31901548a432267ba4e591aafb9d3843e64e3da05",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "phase5_r5_2_silent_tracking_fault_registration.json": "ff23daf0708e54235a4127b4b0559115f63e839b8f61ebb43de7034bc99d8878",
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": "40b207b5faa3c7b92f8cabb9ad56cef1f31936f335e89479f1f4004f921f309f",
+    "v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py": "e9bb0de5c15c10a9ccbdbe899c3fd1cb1f5e05145af79c2e142b9990cd7020ef"
+  },
+  "prechange_production_sha256": {
+    "v0_2/safety/supervisor.py": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "v0_2/plant/controlled_loop.py": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+    "v0_2/control/directional_outer.py": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "v0_2/control/outer_feedback.py": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+    "v0_2/control/inner_loop.py": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+    "v0_2/control/pid.py": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+    "v0_2/actuators/pump.py": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "v0_2/measurement/local_sensor.py": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+    "v0_2/plant/authority.py": "7eb907031954b60b0c12c2abb9b11c1e1b35aee9a5edc0c41a02ed99a0a7e0c4"
+  },
+  "authorized_production_files": {
+    "v0_2/safety/supervisor.py": "Replace legacy raw 0.15 mismatch authority with six-state qualifier mapping; reduce all active reasons and preserve existing envelope/FAULT latch. Contract 15A sections 6–24.",
+    "v0_2/plant/controlled_loop.py": "Minimal released PLC command/timestamp/quality wiring into Safety before PLC tick; no scheduler timing change. Contract 14 same-tick command chain.",
+    "v0_2/safety/tracking_qualifier.py": "Narrow production port of frozen R1/R1a tracking semantics using typed frozen R5.2.2 profile values; new file only. No command creation."
+  },
+  "six_states": ["STEADY_TRACKING", "HANDOFF_PENDING", "TRACKING_PROGRESS", "TRACKING_FAULT_SUSPECTED", "TRACKING_FAULT_CONFIRMED", "INSUFFICIENT_MEASUREMENT"],
+  "mapping": {
+    "STEADY_TRACKING": ["NORMAL", null, "NONE"],
+    "HANDOFF_PENDING": ["NORMAL", null, "NONE"],
+    "TRACKING_PROGRESS": ["NORMAL", null, "NONE"],
+    "TRACKING_FAULT_SUSPECTED": ["DEGRADED", "ACTUATOR_TRACKING_SUSPECTED", "NONE"],
+    "TRACKING_FAULT_CONFIRMED": ["FAULT", "ACTUATOR_TRACKING_CONFIRMED", "EXISTING_GENERIC_FAULT"],
+    "INSUFFICIENT_MEASUREMENT": ["NORMAL", null, "SENSOR_CHANNEL"]
+  },
+  "reason_codes": ["ACTUATOR_TRACKING_SUSPECTED", "ACTUATOR_TRACKING_CONFIRMED"],
+  "semantic_source": "Frozen R1 cumulative net demand over R5.2.1R epoch/watch/response/progress/reversal/sensor rules; R1a validates in-domain anchor A→B→C. Production must be tick-equivalent to source on identical released observations.",
+  "golden_equivalence": "For each released observation compare state, epoch/watch identities and starts, qualified anchor and advancement, net demand/classification, response opening, progress, suspicion, confirmation, invalid/recovery transitions, exact tick timestamps. Zero semantic mismatches.",
+  "allowed_changes": ["replace legacy tracking authority", "add exact two reasons", "add narrow production qualifier", "aggregate active reasons", "wire released PLC command and valid measurement", "test/report/evidence/candidate artifacts"],
+  "forbidden_changes": ["controller tuning", "physics/thermal/hydraulic/CDU/FWS/pump/sensor changes", "scheduler or PLC timing", "tracking timing/threshold/profile changes", "new Safety state or policy", "new tracking actuator restriction", "raw ACTUAL or future data", "command ownership change", "core SafetyDecision/SafetyEnvelope schema redesign"],
+  "nominal_cases": ["NOMINAL_COLD", "NOMINAL_WARM", "HARMLESS_CHATTER", "DELAY_0_6S", "DELAY_1_0S", "DELAY_2_0S"],
+  "fault_cases": ["STARTUP_SILENT_STUCK", "POST_STARTUP_SILENT_STUCK", "MOVING_COMMAND_STUCK", "CUMULATIVE_SMALL_STEP_STUCK", "REVERSAL_ATTACK", "SENSOR_INVALID_RECOVERY", "SLUGGISH", "C9R"],
+  "channel_cases": ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8", "M9", "M10", "M11", "M12", "M13", "M14", "M15", "M16"],
+  "thermal_regression": "Selected R5 directional PI WARM_CAPTURE/COLD_CAPTURE at physics dt 0.2/0.1/0.05s; retain frozen qualification, metrics and convergence.",
+  "ownership": "Safety outputs envelope only; PLC sole ActuatorCommand; qualifier reads released command/measurement/quality only.",
+  "causality": "Prefix-equivalent released traces must yield equal prefix states/evidence; no hidden ACTUAL, future sample, or scenario labels.",
+  "repeatability": "At least 10 deterministic repeats per required nominal/fault/delay/C9R case, equal trace/result hashes and transitions.",
+  "stop_gates": ["R5_3R_SOURCE_AUTHORITY_MISMATCH", "TRACKING_PRODUCTION_AUTHORITY_CONFLICT", "UNREGISTERED_PRODUCTION_FILE_CHANGE", "R2R_PRODUCTION_SCHEMA_ASSUMPTION_INVALIDATED", "PRODUCTION_PORT_NOT_SEMANTICALLY_EQUIVALENT", "PRODUCTION_TRACKING_SAFETY_MAPPING_MISMATCH", "PRODUCTION_TRACKING_FALSE_POSITIVE_REMAINS", "PRODUCTION_TRACKING_FALSE_NEGATIVE", "PRODUCTION_SAFETY_REASON_RETENTION_FAIL", "PRODUCTION_COMMAND_OWNERSHIP_VIOLATION", "PRODUCTION_PORT_REQUIRES_UNREGISTERED_TRACKING_PARAMETER", "PRODUCTION_SAFETY_PORT_THERMAL_REGRESSION", "UNRELATED_SAFETY_CHANNEL_REGRESSION"],
+  "candidate_only": true,
+  "commit_or_push_authorized": false
+}

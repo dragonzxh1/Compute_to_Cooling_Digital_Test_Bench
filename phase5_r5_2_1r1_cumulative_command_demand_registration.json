@@ -1,0 +1,71 @@
+{
+  "schema": "phase5-r5-2-1r1-registration-v1",
+  "scope": "OFFLINE_SPECIFICATION_AND_VALIDATION_ONLY",
+  "prior_gate": "TRACKING_EPOCH_SEMANTICS_CAN_MASK_SILENT_FAULT",
+  "source_sha256": {
+    "phase5_r5_directional_pi_evidence.json": "1707b3b854291e5eeb29a5ec10ad665ddc81dbc3f9f42a9ec8dededc84efc171",
+    "phase5_r5_1_safety_handoff_audit_evidence.json": "624d082f1ae19ca5433a365b68a16049091989caa7fb79ddbfe535676b3648f7",
+    "phase5_r5_2_silent_tracking_fault_registration.json": "ff23daf0708e54235a4127b4b0559115f63e839b8f61ebb43de7034bc99d8878",
+    "phase5_r5_2_silent_tracking_fault_evidence.json": "02c3dd6098dcc241f5fed578d3b0f35f7e0cb8dfe714a83b36cb5f59f7d300b3",
+    "phase5_r5_2_1_continuous_tracking_semantics_registration.json": "5194b76256d74a2b37db606c5e952bb15462e7b5703dbd0f6ce24716e0937d48",
+    "phase5_r5_2_1_continuous_tracking_semantics_spec.json": "7b91ecbd0f0549ba9e241430a6fc991865b6cf4d9270f5cf501ac7f6f27bb553",
+    "phase5_r5_2_1_continuous_tracking_semantics_evidence.json": "c44e1d9efe4f3efdb3290c86ec5fbdf38afff5cfe7b66b5cf48bcd2acef7f9c5",
+    "phase5_r5_2_2_tracking_calibration_registration.json": "3f847abbe78f1705d4a23b18f13f4655701e99e4179ff30b806e538753aa24fc",
+    "phase5_r5_2_2_tracking_calibration_evidence.json": "9fa7a6a9d395a3860632b0796296c0e6d833d43054119cf372640f5d05683b4c",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "phase5_r5_2_1r_continuous_tracking_semantics_registration.json": "a5ccc13dc8a7ecc7a2aa5205a11a6c2635f78c1bba51d564cb72aceb156731ca",
+    "phase5_r5_2_1r_continuous_tracking_semantics_spec.json": "34898bd1ed3e53ae596cdddea22735e0aca3531a31f2157c3100d6bc50718c16",
+    "phase5_r5_2_1r_continuous_tracking_semantics_evidence.json": "5883255711e45837605f63c33aa0a94eaae8ff31162c78e6c7a5b01115416f91",
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": "40b207b5faa3c7b92f8cabb9ad56cef1f31936f335e89479f1f4004f921f309f",
+    "v0_2/examples/phase5_r5_2_1r_validation.py": "edce1b8aded0a7cbdcc3e60e71497e4cb932f0c6c2e86f8529f9cf8728fe670e"
+  },
+  "frozen_production_sha256": {
+    "v0_2/safety/supervisor.py": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "v0_2/control/directional_outer.py": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "v0_2/control/outer_feedback.py": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+    "v0_2/control/inner_loop.py": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+    "v0_2/control/pid.py": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+    "v0_2/actuators/pump.py": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "v0_2/measurement/local_sensor.py": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+    "v0_2/plant/controlled_loop.py": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8"
+  },
+  "frozen_controller": {"Kp": 4500, "Ki_hot": 110, "Ki_cold": 130, "Kd": 0, "blend_halfwidth_k": 0.1},
+  "rules": {
+    "anchor_definition": "Last PLC command whose corresponding tracking obligation was qualified and successfully resolved; never alias immediately previous PLC command.",
+    "initialization": "At first valid released measurement, if first observed PLC command is already within frozen tracking tolerance of released speed and no unresolved obligation exists, establish a directly observed qualified steady baseline; otherwise leave anchor absent and retain R5.2.1R startup behavior. Never infer historical PLC command from open-loop preparation speed.",
+    "advancement": "Advance only on valid STEADY_TRACKING after qualified progress and successful epoch resolution; record prior/new value, epoch id, timestamp and reason. No advance on issued command, partial progress, timer, reversal or invalid sample.",
+    "net_demand": "current_plc_command - qualified_command_anchor; signed net displacement; never sum absolute path length.",
+    "observable_cumulative": "When anchor exists and no active unresolved epoch, classify current net magnitude with frozen material_command_delta and profile-derived response observability. Trigger at first qualifying command timestamp, not prior subthreshold timestamps.",
+    "active_epoch": "Keep qualified command anchor fixed. Same-direction updates retain epoch/watch age and suspicion and update latest command/envelope. Updated opportunity cannot be later than an already-open opportunity.",
+    "cancellation_before_epoch": "Net demand returning to anchor before qualification creates no epoch, no watch and no fault evidence.",
+    "return_after_epoch": "Never erase epoch/watch/valid deficit solely on command return; preserve existing unresolved-motion and reversal semantics.",
+    "reversal": "On material reversal close/reanchor directional epoch; unresolved watch carries age and evidence if qualified motion absent. Anchor never jumps to reversal command.",
+    "sensor_invalid": "Display INSUFFICIENT_MEASUREMENT, retain anchor and unresolved demand; invalid samples provide no motion or confirm evidence. On first valid recovery evaluate preserved causal context without new grace.",
+    "progress_suspect_confirm_recovery": "Exactly frozen R5.2.1R rules and R5.2 numerical parameters; no new threshold/timer or top-level Safety reset authority."
+  },
+  "cases": {
+    "C1": "qualified 0.5 baseline; stuck 0.5; commands 0.6/0.7/0.8 at 0.2/0.4/0.6 s; hold to 3 s; epoch then suspect then confirm",
+    "C2": "same commands; normal frozen-profile actuator; qualified progress, no confirm, resolved anchor 0.8",
+    "C3": "qualified 0.8 baseline; commands 0.7/0.6/0.5; normal and stuck variants; symmetric detection",
+    "C4": "qualified 0.5; alternating 0.6/0.5 each 0.2 s through 3 s; no epoch or fault",
+    "C5": "qualified 0.5; 0.6 then 0.7 at 0.2/0.4 s; stuck; first epoch exactly 0.4 s",
+    "C6": "qualified 0.5; 0.6 then 0.5 at 0.2/0.4 s; no epoch/fault/anchor change",
+    "C7": "qualified 0.5; 0.6/0.7 at 0.2/0.4 s; stuck; return 0.5 at 1.6 s after response opportunity; watch/evidence retained",
+    "C8": "qualified 0.5; 0.6/0.7 then 0.3 at 0.2/0.4/0.8 s; normal and stuck; directional replacement without watch reset",
+    "C9": "qualified 0.5; 0.6/0.7/0.8 at 0.2/0.4/0.6 s; normal resolves; then 0.9/1.0 at 3.0/3.2 s relative to new 0.8 anchor",
+    "C10": "qualified 0.5; 0.6/0.7 at 0.2/0.4 s; partial released speed progress at 0.8 s; command 0.8 at 1.0 s; anchor stays 0.5 before resolution",
+    "C11": "qualified 0.5; 0.6/0.7 at 0.2/0.4 s; speed invalid 0.4-1.2 s; stuck after recovery; anchor 0.5 retained and no new grace",
+    "C12": "qualified 0.5; 0.6/0.5/0.6/0.7/0.8 at 0.2/0.4/0.6/0.8/1.0 s; stuck; cumulative qualifying net demand eventually confirms"
+  },
+  "added_invariants": {
+    "9": "observable net demand from subthreshold increments cannot remain without tracking obligation",
+    "10": "oscillatory absolute command travel cannot become false net demand",
+    "11": "anchor does not advance until qualified obligation resolves",
+    "12": "command return/reversal cannot erase accrued valid non-response evidence"
+  },
+  "regression": "Rerun unchanged S1-S16 and S16_variant; original invariants 1-8; prefix causality on all historical and C cases; all v0_2/tests, Ruff, git diff --check, frozen hashes.",
+  "stop_conditions": ["profile or source hash mismatch", "any C1-C12 or historical sequence fails", "any invariant fails", "prefix causality fails", "new numeric parameter needed", "production hash changes", "forbidden information required"],
+  "production_safety_change_authorized": false,
+  "phase5_r5_3r_before_review_authorized": false,
+  "phase6_authorized": false
+}

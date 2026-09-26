@@ -1,0 +1,95 @@
+{
+  "schema": "phase5-r5-2-1-continuous-tracking-semantics-evidence-v1",
+  "registration_sha256": "5194b76256d74a2b37db606c5e952bb15462e7b5703dbd0f6ce24716e0937d48",
+  "machine_spec_sha256": "7b91ecbd0f0549ba9e241430a6fc991865b6cf4d9270f5cf501ac7f6f27bb553",
+  "source_evidence_sha256": {
+    "r5": "1707b3b854291e5eeb29a5ec10ad665ddc81dbc3f9f42a9ec8dededc84efc171",
+    "r5_1": "624d082f1ae19ca5433a365b68a16049091989caa7fb79ddbfe535676b3648f7",
+    "r5_2": "02c3dd6098dcc241f5fed578d3b0f35f7e0cb8dfe714a83b36cb5f59f7d300b3"
+  },
+  "blocked_r5_3_source_status": "R5_2_TRACKING_RULE_INSUFFICIENTLY_SPECIFIED_FOR_PRODUCTION_PORT; no production edit",
+  "validation_stage": "PRE_VALIDATION_STOP",
+  "pre_validation_audit": {
+    "typed_actuator_delay_lag_ramp_present": true,
+    "typed_sensor_sample_release_age_present": true,
+    "typed_measured_speed_resolution_or_noise_bound_present": false,
+    "r5_2_continuous_progress_loss_guard_present": false,
+    "r5_2_steady_completion_guard_present": false,
+    "r5_2_reversal_anti_mask_rule_present": false,
+    "r5_2_telemetry_recovery_reanchor_rule_present": false,
+    "r5_2_classifier_initial_handoff_only": true,
+    "r5_2_progress_state_latched_for_initial_handoff": true
+  },
+  "synthetic_sequence_definitions": {
+    "S1": "normal startup: pending, progress, eventual steady",
+    "S2": "silent stuck startup: pending, suspected, confirmed without fault bit",
+    "S3": "0.6-s delay: suspicion can recover with qualified progress",
+    "S4": "1.0-s delay: classification consistent with frozen R5.2 fixture",
+    "S5": "successful startup, later material command, silent stuck",
+    "S6": "silent stuck while same-direction PLC commands continue changing",
+    "S7": "small same-direction chatter below material threshold",
+    "S8": "several material same-direction updates before settling",
+    "S9": "material directional reversal during an active epoch",
+    "S10": "invalid pump-speed measurement during handoff",
+    "S11": "invalid measurement after suspicious evidence",
+    "S12": "measurement recovery without new unlimited grace",
+    "S13": "normal responses to several commands, then silent failure",
+    "S14": "suspicion followed by qualified measured recovery",
+    "S15": "confirmed tracking fault followed by apparent measured recovery",
+    "S16": "repeated material reversals designed to reset a stuck-fault timer"
+  },
+  "synthetic_sequence_results": {
+    "S1": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S2": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S3": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S4": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S5": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S6": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S7": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S8": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S9": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S10": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S11": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S12": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S13": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S14": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S15": "NOT_RUN_PRE_VALIDATION_STOP",
+    "S16": "NOT_RUN_PRE_VALIDATION_STOP"
+  },
+  "historical_not_new_validation": {
+    "R5_2_nominal_initial_handoff": "HANDOFF_PENDING_TO_TRACKING_PROGRESS",
+    "R5_2_silent_stuck_initial_handoff": "HANDOFF_PENDING_TO_SUSPECTED_TO_CONFIRMED",
+    "R5_2_delay_0_6_s": "SUSPECTED_THEN_PROGRESS_NO_CONFIRMATION",
+    "R5_2_delay_1_0_s": "CONFIRMED_IN_GENERIC_FIXTURE"
+  },
+  "invariants": {
+    "1_small_updates_no_timer_reset": "SPEC_CONSTRAINT_ONLY_NOT_VALIDATED",
+    "2_same_direction_updates_cannot_mask_stuck": "NOT_VALIDATED",
+    "3_progress_not_permanent_immunity": "NOT_VALIDATED",
+    "4_no_raw_actual_fallback": "INFORMATION_BOUNDARY_SPECIFIED_NOT_RUNTIME_VALIDATED",
+    "5_no_automatic_fault_clear": "EXISTING_SAFETY_AUTHORITY_PRESERVED_NOT_RUNTIME_VALIDATED",
+    "6_reversal_deterministic": "NOT_VALIDATED",
+    "7_prefix_causal": "NOT_VALIDATED",
+    "8_no_actuator_command_output": "OWNERSHIP_BOUNDARY_SPECIFIED_NOT_RUNTIME_VALIDATED"
+  },
+  "causality_result": "NOT_RUN_PRE_VALIDATION_STOP",
+  "timer_epoch_reset_audit": "UNRESOLVED_REVERSAL_ANTI_MASK_RULE; no claim of prevention",
+  "parameter_source_audit": {
+    "generic_fixture_delay_lag_ramp_sampling": "TYPED_BUT_UNVALIDATED",
+    "measured_speed_resolution_noise": "CALIBRATION_REQUIRED",
+    "steady_completion_and_progress_loss": "QUALIFICATION_REQUIRED",
+    "reversal_persistent_demand_observability": "QUALIFICATION_REQUIRED",
+    "telemetry_recovery_reanchor": "QUALIFICATION_REQUIRED"
+  },
+  "unresolved_requirements": [
+    "qualified measured-speed resolution and noise bound",
+    "continuous command-trajectory progress-loss and steady-completion guards",
+    "persistent-demand/reversal observability rule resistant to reset masking",
+    "deterministic evidence retention and re-anchor after telemetry outage"
+  ],
+  "production_source_changed": false,
+  "r5_3_restarted": false,
+  "final_feedback_baseline_frozen": false,
+  "phase6_started": false,
+  "status": "TRACKING_SEMANTICS_REQUIRE_CALIBRATION_PARAMETERS"
+}

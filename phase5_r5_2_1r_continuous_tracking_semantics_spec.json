@@ -1,0 +1,53 @@
+{
+  "schema": "phase5-r5-2-1r-continuous-tracking-semantics-spec-v1",
+  "scope": "OFFLINE_SPECIFICATION_VALIDATION_ONLY",
+  "registration": "phase5_r5_2_1r_continuous_tracking_semantics_registration.json",
+  "fixture_profile_sha256": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+  "source_hashes": "Use source_sha256 and frozen_production_sha256 in the preregistration; validation verifies every entry before executing cases.",
+  "states": {
+    "STEADY_TRACKING": "No unresolved observable motion obligation; valid speed and completed demand within profile tracking tolerance.",
+    "HANDOFF_PENDING": "Unresolved observable demand, valid measurement, but profile-derived opportunity or expected-progress threshold not yet reached.",
+    "TRACKING_PROGRESS": "Released valid speed shows directional movement above profile floor and frozen R5.2 recovery ratio; later demands remain monitored.",
+    "TRACKING_FAULT_SUSPECTED": "Response opportunity open; expected progress reaches frozen R5.2 suspect minimum without qualified directional progress.",
+    "TRACKING_FAULT_CONFIRMED": "Frozen R5.2 deficit and consecutive qualified-sample rule met; qualifier evidence latches, not a new top-level SafetyState.",
+    "INSUFFICIENT_MEASUREMENT": "Released measurement invalid, stale or missing; epoch/watch context retained; no invalid sample confirms fault."
+  },
+  "events": ["OBSERVABLE_MATERIAL_DEMAND", "IMMATERIAL_UPDATE", "NOT_OBSERVABLE_FOR_TRACKING_QUALIFICATION", "MATERIAL_REVERSAL", "QUALIFIED_DIRECTIONAL_PROGRESS", "RESPONSE_OPPORTUNITY_OPEN", "QUALIFIED_DEFICIT", "STEADY_TOLERANCE_MET", "MEASUREMENT_INVALID", "MEASUREMENT_RECOVERED", "MOTION_RESTORED_AFTER_CONFIRMATION"],
+  "guards": {
+    "valid": "released measured speed present, quality VALID, released no later than now, and measurement age within frozen profile validity limit",
+    "material": "absolute command delta reaches frozen profile material_command_delta and profile predicts observable released response",
+    "progress": "directional released displacement reaches frozen minimum_observable_speed_change and observed/expected progress reaches frozen R5.2 suspect recovery ratio",
+    "suspect": "watch response is open and expected progress reaches frozen R5.2 suspect minimum without qualified progress",
+    "confirm": "expected progress reaches frozen R5.2 confirm minimum and progress ratio is below frozen confirm threshold on frozen consecutive qualified valid samples",
+    "steady": "after qualified progress, absolute current-command versus released-speed error is at most frozen tracking_error_tolerance"
+  },
+  "transitions": [
+    {"from": "STEADY_TRACKING", "event": "OBSERVABLE_MATERIAL_DEMAND", "to": "HANDOFF_PENDING"},
+    {"from": "HANDOFF_PENDING", "event": "QUALIFIED_DIRECTIONAL_PROGRESS", "to": "TRACKING_PROGRESS"},
+    {"from": "HANDOFF_PENDING", "event": "RESPONSE_OPPORTUNITY_OPEN_WITH_DEFICIT", "to": "TRACKING_FAULT_SUSPECTED"},
+    {"from": "TRACKING_FAULT_SUSPECTED", "event": "QUALIFIED_DIRECTIONAL_PROGRESS_BEFORE_CONFIRMATION", "to": "TRACKING_PROGRESS"},
+    {"from": "TRACKING_FAULT_SUSPECTED", "event": "FROZEN_CONSECUTIVE_QUALIFIED_DEFICIT", "to": "TRACKING_FAULT_CONFIRMED"},
+    {"from": "TRACKING_PROGRESS", "event": "STEADY_TOLERANCE_MET", "to": "STEADY_TRACKING"},
+    {"from": "TRACKING_PROGRESS", "event": "NEW_OBSERVABLE_MATERIAL_DEMAND", "to": "HANDOFF_PENDING"},
+    {"from": "STEADY_TRACKING|HANDOFF_PENDING|TRACKING_PROGRESS|TRACKING_FAULT_SUSPECTED", "event": "MEASUREMENT_INVALID", "to": "INSUFFICIENT_MEASUREMENT"},
+    {"from": "INSUFFICIENT_MEASUREMENT", "event": "MEASUREMENT_RECOVERED", "to": "RE_EVALUATE_PRESERVED_EPOCH_AND_WATCH"},
+    {"from": "TRACKING_FAULT_CONFIRMED", "event": "MOTION_RESTORED_AFTER_CONFIRMATION", "to": "TRACKING_FAULT_CONFIRMED"}
+  ],
+  "epoch_fields": ["tracking_epoch_id", "epoch_start_ns", "anchor_command", "latest_command", "anchor_measured_speed", "expected_direction", "oldest_unresolved_demand_ns", "response_open_ns", "tracking_status", "qualified_progress_seen", "suspected_since_ns", "confirmed_since_ns", "measurement_record_id", "completion_reason"],
+  "epoch_lifecycle": ["START_ON_OBSERVABLE_DEMAND", "KEEP_AGE_ON_SAME_DIRECTION_UPDATE", "CLOSE_AND_REANCHOR_ON_MATERIAL_REVERSAL", "CLOSE_ON_QUALIFIED_STEADY_OR_CONFIRMATION"],
+  "unresolved_watch_fields": ["watch_id", "watch_start_ns", "anchor_measured_speed", "cumulative_observable_demand", "qualified_motion_seen", "last_valid_measurement_ns", "carried_suspicion_evidence", "resolved_reason"],
+  "watch_lifecycle": ["START_WITH_FIRST_UNRESOLVED_OBSERVABLE_DEMAND", "CARRY_ACROSS_SAME_DIRECTION_UPDATES", "CARRY_ACROSS_REVERSALS_WITHOUT_QUALIFIED_MOTION", "RESOLVE_ONLY_ON_QUALIFIED_MEASURED_MOTION"],
+  "demand_classifications": ["IMMATERIAL_UPDATE", "OBSERVABLE_MATERIAL_DEMAND", "NOT_OBSERVABLE_FOR_TRACKING_QUALIFICATION", "MATERIAL_REVERSAL"],
+  "response_opening": "First profile-scheduled released sample at which command-delay, rate-limit and lag model predict the frozen minimum observable displacement; no universal fixed grace.",
+  "profile_field_references": ["ActuatorTrackingProfile.command_delay_s", "ActuatorTrackingProfile.lag_time_constant_s", "ActuatorTrackingProfile.speed_rate_limit_per_s", "SensorObservationProfile.measurement_period_s", "SensorObservationProfile.measurement_release_delay_s", "SensorObservationProfile.measurement_validity_limit_s", "TrackingQualificationProfile.material_command_delta", "TrackingQualificationProfile.minimum_observable_speed_change", "TrackingQualificationProfile.tracking_error_tolerance", "TrackingQualificationProfile.suspected_rule_parameters", "TrackingQualificationProfile.confirmed_rule_parameters"],
+  "sensor_invalid_rule": "Display INSUFFICIENT_MEASUREMENT; preserve epoch/watch identity, oldest causal age and prior valid suspicion; invalid samples never increment confirmation.",
+  "sensor_recovery_rule": "Evaluate first valid released measurement against preserved directional anchor, command and watch age; no fresh handoff grace.",
+  "reversal_rule": "Re-anchor directional epoch on material reversal; retain unresolved watch and suspicion if prior qualified motion absent.",
+  "confirmed_recovery_authority": "Restored motion is audit evidence only; existing top-level Safety reset authority controls FAULT clearing.",
+  "invariants": ["small updates preserve age", "same-direction updates cannot mask stuck", "progress is not permanent immunity", "no raw ACTUAL fallback", "no automatic confirmed-fault clearing", "reversal retains unresolved non-response", "prefix causality", "no ActuatorCommand output"],
+  "validation_evidence": "phase5_r5_2_1r_continuous_tracking_semantics_evidence.json",
+  "hardware_portability": "State-machine concepts are generic; every numeric threshold/timing comes from the fixture profile and must be recalibrated for real equipment.",
+  "production_safety_change": false,
+  "gate_status": "TRACKING_EPOCH_SEMANTICS_CAN_MASK_SILENT_FAULT",
+  "blocking_issue": "Cumulative same-direction command changes individually below the material threshold are compared only with the immediately previous command; an observable cumulative demand can remain unqualified. Do not port to production Safety before a new registered revision."
+}

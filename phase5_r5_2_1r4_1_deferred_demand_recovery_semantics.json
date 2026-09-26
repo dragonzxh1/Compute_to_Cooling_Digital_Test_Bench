@@ -1,0 +1,19 @@
+{
+  "schema": "phase5-r5-2-1r4-1-deferred-demand-recovery-semantics-v1",
+  "status": "MEASUREMENT_RECOVERY_STILL_MASKS_SILENT_FAULT",
+  "registration_sha256": "c70aa5e13fc1d4138f468b852d27a98b1536c7bc66982463dabe8732fb01b5bb",
+  "candidate_engine_sha256": "0dfbee95c9fd288074fe095475516c6e893111aaf3834fd2a09f1b5973ca7438",
+  "frozen_profile_sha256": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+  "contract_15a_sha256": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+  "deferred_demand_schema": ["deferred_demand_active", "deferred_demand_id", "first_observable_demand_ns", "latest_command", "resolved_anchor_pair_id", "resolved_command_anchor", "resolved_measurement_anchor", "net_command_demand", "expected_direction", "measurement_unavailable_since_ns", "prior_valid_tracking_state", "prior_valid_suspicion_evidence", "prior_watch_id", "source_command_record_id", "cancellation_reason", "recovery_reevaluated"],
+  "creation_rule": "An invalid-measurement tick with current released command minus resolved command anchor crossing the frozen material and response-open criteria creates deferred command demand but no fault evidence.",
+  "preservation_rule": "Same-direction updates preserve first observable time; invalid rows never advance pairs or fault evidence.",
+  "cancellation_rule": "If current net demand becomes nonmaterial before any valid unresolved non-response evidence, cancel deferred-only demand. Preserve prior valid watch/suspicion where present.",
+  "recovery_rule": "First valid measurement reevaluates deferred demand without new command, using the first observable demand time for old age. Evaluate motion against preserved matched pair before any checkpoint update.",
+  "paired_references": "Inherited R4 resolved-anchor and progress-checkpoint pairs remain atomic and separate; no recovery-only measurement baseline reset.",
+  "watch_timing": "Invalid rows preserve causal demand age but do not earn non-response samples. Recovery does not reset the first observable timestamp or prior valid suspicion.",
+  "reversal_rule": "During invalidity, update directional deferred context from current signed net demand; do not credit progress or clear valid prior suspicion; reevaluate current direction on valid recovery.",
+  "states": ["STEADY_TRACKING", "HANDOFF_PENDING", "TRACKING_PROGRESS", "TRACKING_FAULT_SUSPECTED", "TRACKING_FAULT_CONFIRMED", "INSUFFICIENT_MEASUREMENT"],
+  "new_invariants": ["DEFERRED_DEMAND_PRESERVATION_INVARIANT", "RECOVERY_REEVALUATION_INVARIANT", "NO_INVALID_SAMPLE_FAULT_EVIDENCE_INVARIANT", "NO_FRESH_GRACE_ON_RECOVERY_INVARIANT", "RECOVERY_MOTION_CREDIT_INVARIANT", "NO_RECOVERY_BASELINE_RESET_INVARIANT", "CANCELLATION_WITHOUT_EVIDENCE_INVARIANT", "PRIOR_VALID_EVIDENCE_RETENTION_INVARIANT"],
+  "limitation": "R41-7 mini-suite fails: a reversal during invalid measurement is logged as deferred bookkeeping but the pre-loss positive-direction epoch survives recovery, so the negative-direction stuck demand is never evaluated. Full R4 validation is prohibited. An exploratory C9R comparison also found inherited R4 anchor-timing differences; this is not a formal full regression result."
+}

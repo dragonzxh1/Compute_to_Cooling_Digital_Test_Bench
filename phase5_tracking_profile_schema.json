@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/c2c-dtb/phase5-tracking-profile-schema-v1",
+  "title": "Actuator tracking profile interface (not a production loader)",
+  "description": "Generic parameter interface. Fixture values and hardware calibration are separate; no default hardware values.",
+  "type": "object",
+  "required": ["classification", "ActuatorTrackingProfile", "SensorObservationProfile", "TrackingQualificationProfile"],
+  "properties": {
+    "classification": {"type": "array", "items": {"type": "string"}},
+    "ActuatorTrackingProfile": {
+      "type": "object",
+      "required": ["command_delay_s", "speed_min", "speed_max", "speed_rate_limit_per_s", "lag_time_constant_s", "command_resolution", "directional_symmetry"],
+      "additionalProperties": {"$ref": "#/$defs/parameter"}
+    },
+    "SensorObservationProfile": {
+      "type": "object",
+      "required": ["measurement_period_s", "measurement_release_delay_s", "measurement_validity_limit_s", "speed_measurement_resolution", "speed_measurement_noise_bound", "speed_measurement_stationary_variation", "timestamp_resolution_s", "quality_semantics"],
+      "additionalProperties": {"$ref": "#/$defs/parameter"}
+    },
+    "TrackingQualificationProfile": {
+      "type": "object",
+      "required": ["material_command_delta", "minimum_observable_speed_change", "minimum_progress_margin", "tracking_error_tolerance", "response_opening_rule", "progress_rule", "suspected_rule_parameters", "confirmed_rule_parameters", "measurement_quality_requirements", "reversal_observability_rule", "sensor_recovery_rule"],
+      "additionalProperties": {"$ref": "#/$defs/parameter"}
+    }
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "required": ["value", "unit", "source_type", "source_ref", "method", "valid_range", "calibration_status"],
+      "properties": {
+        "value": {"type": ["number", "string", "boolean", "null", "object"]},
+        "unit": {"type": "string"},
+        "source_type": {"enum": ["MODEL_CONFIG", "DERIVED_FROM_MODEL", "FIXTURE_CALIBRATION", "ENGINEERING_ASSUMPTION", "CALIBRATION_REQUIRED", "NOT_MODELED"]},
+        "source_ref": {"type": "string"},
+        "method": {"type": "string"},
+        "valid_range": {"type": "string"},
+        "calibration_status": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

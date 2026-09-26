@@ -1,0 +1,37 @@
+{
+  "schema": "phase5-r5-3r-a-tune01-root-cause-registration-v1",
+  "scope": "FORENSIC_DIAGNOSTIC_ONLY_NO_PRODUCTION_OR_SEMANTIC_CHANGE",
+  "required_failed_gate": "PRODUCTION_TRACKING_FALSE_POSITIVE_REMAINS",
+  "scenario_id": "TUNE-01-load",
+  "scenario_source": "v0_2/examples/phase5_validation.py:run_scenario('TUNE-01-load')",
+  "expectation_source": "v0_2/tests/control/test_phase5_feedback.py:test_closed_loop_load_and_conservation",
+  "source_sha256": {
+    "phase5_r5_3r_production_safety_tracking_port_registration.json": "4ff6a7df8228400c9a2f3d8d584a94208c17e995ceef644deabc41dd971d1b7c",
+    "phase5_r5_3r_production_safety_tracking_evidence.json": "28f4a168c4adfed7a7d8db46b688739de66b9a353c4aae812d77292492a6cfe8",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "contracts/15A_tracking_safety_policy_amendment.md": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_registration.json": "c29b911a7dd5e9320d13991a1f17236191c8ffc5433dd2025d388b756a7e0aa5",
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": "40b207b5faa3c7b92f8cabb9ad56cef1f31936f335e89479f1f4004f921f309f",
+    "v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py": "e9bb0de5c15c10a9ccbdbe899c3fd1cb1f5e05145af79c2e142b9990cd7020ef",
+    "v0_2/examples/phase5_validation.py": "ce53ce7e56ff307c8da0591aed5cd600517478e92e2811714b786055a5f2892c",
+    "v0_2/tests/control/test_phase5_feedback.py": "97ade19681d93ee85cb0cdc6c82f7a6a0d3b6307831594a7f082cc457cb8ffde"
+  },
+  "reverted_production_sha256": {
+    "v0_2/safety/supervisor.py": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "v0_2/plant/controlled_loop.py": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+    "v0_2/control/directional_outer.py": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "v0_2/actuators/pump.py": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "v0_2/measurement/local_sensor.py": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe"
+  },
+  "trace_extraction": "Re-run exact frozen TUNE-01-load; at each Safety tick use most recent already-issued PLC ActuatorCommand before tick and latest released MeasuredSnapshot. Restrict causal root-cause comparison to pre-first-FAULT prefix, since failed post-FAULT command lineage was not persisted. Store source command ID/value/created_ns, measurement ID/sample_ns/available_ns/quality/age and existing Safety state. Raw ACTUAL and plant truth only in separate forensic artifact, never qualifier input.",
+  "trace_fields": ["time_ns", "time_s", "plc_command", "plc_command_id", "command_timestamp_ns", "measured_speed", "measurement_record_id", "sample_ns", "release_ns", "measurement_age_ns", "quality", "sensor_status", "released_dp_pa", "released_flow_kg_s", "baseline_safety_state", "legacy_tracking_branch_active"],
+  "offline_replay": "Feed immutable trace rows as ReleasedObservation to frozen CumulativeTrackingQualifier(profile,R5.2 classifier) with no interpolation or resampling; compare state/epoch/watch/anchor/net demand/response-open/progress/suspicion/confirmation at every row.",
+  "production_reconstruction": "Use failed-trial evidence, recorded previous-turn patch and frozen source; if exact failed source or exact released trace cannot be established, mark missing pieces and do not infer equivalence from a conceptual copy.",
+  "first_divergence": "Find earliest unequal comparable field on exact common-prefix ticks; report time, field, offline and production values with a ±2.0s bounded window. If production tick records unavailable, first divergence is UNDETERMINED rather than guessed.",
+  "domain_checks": ["command and released measured speed within frozen speed_min/speed_max", "actuator delay/lag/ramp equal frozen profile", "sensor period/release delay/max age equal frozen profile", "command magnitude assumptions", "sample/release/quality causal validity", "any explicit profile applicability bound"],
+  "root_classes": ["PRODUCTION_PORT_INPUT_MISMATCH", "PRODUCTION_PORT_STATE_MACHINE_MISMATCH", "FROZEN_SEMANTICS_FALSE_POSITIVE_ON_VALID_IN_DOMAIN_TRACE", "TRACE_OUTSIDE_FROZEN_PROFILE_DOMAIN", "INSUFFICIENT_EVIDENCE"],
+  "stops": ["POST_R5_3R_REVERT_HASH_MISMATCH", "TRACE_OUTSIDE_FROZEN_PROFILE_DOMAIN before semantic blame", "TUNE01_FALSE_POSITIVE_AUDIT_INSUFFICIENT_EVIDENCE if exact production-port reconstruction unavailable", "No parameter search/fix/retune/recalibration/production edit"],
+  "repeatability": "At least 10 identical offline replays of same trace; compare state/epoch/watch/anchor/timestamps/result SHA",
+  "prefix_causality": "Every prefix replay equals the corresponding prefix of full replay; future observations cannot affect past outputs",
+  "commit_or_push_authorized": false
+}

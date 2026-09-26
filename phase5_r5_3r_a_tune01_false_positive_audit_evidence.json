@@ -1,0 +1,653 @@
+{
+  "schema": "phase5-r5-3r-a-root-cause-evidence-v1",
+  "registration_sha256": "dc5475f5bee91efda39a1ea42f44e2a110233368ca3362dba478bd270429cd24",
+  "source_hash_checks": {
+    "phase5_r5_3r_production_safety_tracking_port_registration.json": true,
+    "phase5_r5_3r_production_safety_tracking_evidence.json": true,
+    "phase5_r5_2_2_fixture_tracking_profile.json": true,
+    "contracts/15A_tracking_safety_policy_amendment.md": true,
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_registration.json": true,
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": true,
+    "v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py": true,
+    "v0_2/examples/phase5_validation.py": true,
+    "v0_2/tests/control/test_phase5_feedback.py": true,
+    "v0_2/safety/supervisor.py": true,
+    "v0_2/plant/controlled_loop.py": true,
+    "v0_2/control/directional_outer.py": true,
+    "v0_2/actuators/pump.py": true,
+    "v0_2/measurement/local_sensor.py": true,
+    "failed_gate": true,
+    "r2r_gate": true
+  },
+  "source_sha256": {
+    "phase5_r5_3r_production_safety_tracking_port_registration.json": "4ff6a7df8228400c9a2f3d8d584a94208c17e995ceef644deabc41dd971d1b7c",
+    "phase5_r5_3r_production_safety_tracking_evidence.json": "28f4a168c4adfed7a7d8db46b688739de66b9a353c4aae812d77292492a6cfe8",
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "contracts/15A_tracking_safety_policy_amendment.md": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+    "phase5_r5_2_1r2r_tracking_to_safety_mapping_registration.json": "c29b911a7dd5e9320d13991a1f17236191c8ffc5433dd2025d388b756a7e0aa5",
+    "v0_2/examples/phase5_r5_2_1r_semantic_engine.py": "40b207b5faa3c7b92f8cabb9ad56cef1f31936f335e89479f1f4004f921f309f",
+    "v0_2/examples/phase5_r5_2_1r1_cumulative_engine.py": "e9bb0de5c15c10a9ccbdbe899c3fd1cb1f5e05145af79c2e142b9990cd7020ef",
+    "v0_2/examples/phase5_validation.py": "ce53ce7e56ff307c8da0591aed5cd600517478e92e2811714b786055a5f2892c",
+    "v0_2/tests/control/test_phase5_feedback.py": "97ade19681d93ee85cb0cdc6c82f7a6a0d3b6307831594a7f082cc457cb8ffde"
+  },
+  "reverted_production_sha256": {
+    "v0_2/safety/supervisor.py": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+    "v0_2/plant/controlled_loop.py": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+    "v0_2/control/directional_outer.py": "bb7dcf2d926fec54fc6049aa9cfa7fc346502a8ef6e48b86d77cecc219221774",
+    "v0_2/actuators/pump.py": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+    "v0_2/measurement/local_sensor.py": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe"
+  },
+  "trace_sha256": "a63c5a413e3a3b02d3f86a4f6c6d52bad615272916f664722a452ff5be25fd61",
+  "trace_provenance": "UNCHANGED_BASELINE_RECONSTRUCTION_NOT_ORIGINAL_FAILED_TRIAL_CAPTURE",
+  "trace_full_failed_run_capture": false,
+  "failed_trial_prefix_equivalence_basis": "Before first trial FAULT, Contract15A DEGRADED added no envelope restriction. Existing PLC consumes bounds/accepted DP, not reason/state for non-emergency command value. Same frozen scenario and sparse recorded trial command/measured values at 29.6s/31.0s; command/measurement IDs from baseline reconstruction may differ and are not qualifier inputs.",
+  "domain_validity": {
+    "items": {
+      "command_range": "IN_DOMAIN",
+      "measured_range": "IN_DOMAIN",
+      "actuator_delay": "IN_DOMAIN",
+      "actuator_lag": "IN_DOMAIN",
+      "actuator_ramp": "IN_DOMAIN",
+      "sensor_period": "IN_DOMAIN",
+      "sensor_release_delay": "IN_DOMAIN",
+      "sensor_max_age": "IN_DOMAIN",
+      "sample_release_causal": "IN_DOMAIN",
+      "continuous_command_applicability": "NOT_SPECIFIED",
+      "command_magnitude_upper_bound": "NOT_SPECIFIED"
+    },
+    "required_explicit_bounds_pass": true,
+    "command_min_max": [
+      0.7,
+      0.8602326194354027
+    ],
+    "measured_min_max": [
+      0.7,
+      0.8545016311066375
+    ]
+  },
+  "offline_replay": {
+    "first_suspected_ns": 29600000000,
+    "first_confirmed_ns": 31000000000,
+    "transitions": [
+      {
+        "time_ns": 29200000000,
+        "from": "STEADY_TRACKING",
+        "to": "HANDOFF_PENDING",
+        "measurement_record_id": "measurement:29200000000:147"
+      },
+      {
+        "time_ns": 29600000000,
+        "from": "HANDOFF_PENDING",
+        "to": "TRACKING_FAULT_SUSPECTED",
+        "measurement_record_id": "measurement:29600000000:149"
+      },
+      {
+        "time_ns": 31000000000,
+        "from": "TRACKING_FAULT_SUSPECTED",
+        "to": "TRACKING_FAULT_CONFIRMED",
+        "measurement_record_id": "measurement:31000000000:156"
+      }
+    ],
+    "anchor_events": [
+      {
+        "time_ns": 200000000,
+        "anchor_update_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE",
+        "previous_anchor": null,
+        "new_anchor": 0.7,
+        "anchor_source_epoch_id": null
+      }
+    ],
+    "epoch_events": [
+      {
+        "time_ns": 29200000000,
+        "event": "START",
+        "reason": "MATERIAL_DEMAND",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000,
+        "expected_direction": 1
+      },
+      {
+        "time_ns": 29400000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 29600000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 29800000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 30000000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 30200000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 30400000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 30600000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 30800000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 31000000000,
+        "event": "SAME_DIRECTION_UPDATE",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 29000000000
+      },
+      {
+        "time_ns": 31000000000,
+        "event": "CLOSE",
+        "epoch_id": "tracking-epoch:1",
+        "reason": "QUALIFIED_NO_MOTION_CONFIRMED"
+      }
+    ],
+    "watch_events": [
+      {
+        "time_ns": 29200000000,
+        "event": "START",
+        "watch_id": "motion-watch:1",
+        "watch_start_ns": 29000000000
+      }
+    ]
+  },
+  "production_reconstruction": {
+    "method": "In-memory mechanical source transform recorded in previous R5.3R trial; deleted production file unavailable for bytewise hash comparison",
+    "completeness": "FUNCTIONAL_QUALIFIER_LOGIC_RECONSTRUCTED_INPUT_PREFIX_INFERRED_NOT_FULL_FAILED_TRACE",
+    "algorithm_sha256": "2786c960edf3d49ce9beb8f24aa561aa375a266f5bc0edcfb275ee02e66bd0d5",
+    "first_suspected_ns": 29600000000,
+    "first_confirmed_ns": 31000000000,
+    "observed_trial_safety": {
+      "DEGRADED": 29600000000,
+      "FAULT": 31000000000
+    }
+  },
+  "tick_comparison_fields": [
+    "state",
+    "epoch_id",
+    "epoch_start_ns",
+    "watch_id",
+    "watch_start_ns",
+    "qualified_command_anchor",
+    "qualified_command_anchor_ns",
+    "qualified_measurement_anchor",
+    "anchor_source_epoch_id",
+    "net_command_demand",
+    "net_demand_classification",
+    "expected_direction",
+    "response_open_ns",
+    "response_open",
+    "qualified_progress_decision",
+    "suspected_since_ns",
+    "confirmed_since_ns",
+    "valid"
+  ],
+  "tick_comparison_count": 155,
+  "tick_mismatch_count": 0,
+  "tick_mismatches": [],
+  "first_divergence": null,
+  "first_divergence_window": [
+    {
+      "time_ns": 27600000000,
+      "released_cmd": 0.838164989154897,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.13816498915489706,
+      "measured_speed": 0.8324682645115424,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 27800000000,
+      "released_cmd": 0.8385362695497623,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.1385362695497624,
+      "measured_speed": 0.8335009054975654,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 28000000000,
+      "released_cmd": 0.8399678317039484,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.13996783170394844,
+      "measured_speed": 0.8344136621472853,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 28200000000,
+      "released_cmd": 0.8490683126076246,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.14906831260762465,
+      "measured_speed": 0.8354204622800988,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 28400000000,
+      "released_cmd": 0.8473281049408232,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.14732810494082327,
+      "measured_speed": 0.8378943978310738,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 28600000000,
+      "released_cmd": 0.8453606913716536,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.14536069137165364,
+      "measured_speed": 0.8396044388145409,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 28800000000,
+      "released_cmd": 0.8457502020290247,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.14575020202902478,
+      "measured_speed": 0.8406478703806617,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 29000000000,
+      "released_cmd": 0.8471932502073746,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.14719325020737462,
+      "measured_speed": 0.8415727661961069,
+      "measurement_valid": true,
+      "offline_state": "STEADY_TRACKING",
+      "production_reconstructed_state": "STEADY_TRACKING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 29200000000,
+      "released_cmd": 0.8562119637137616,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.15621196371376167,
+      "measured_speed": 0.8425915871001666,
+      "measurement_valid": true,
+      "offline_state": "HANDOFF_PENDING",
+      "production_reconstructed_state": "HANDOFF_PENDING",
+      "offline_response_open": false,
+      "production_response_open": false,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 29400000000,
+      "released_cmd": 0.8545145131589575,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.1545145131589576,
+      "measured_speed": 0.8450605425117073,
+      "measurement_valid": true,
+      "offline_state": "HANDOFF_PENDING",
+      "production_reconstructed_state": "HANDOFF_PENDING",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 29600000000,
+      "released_cmd": 0.8525808281840433,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.1525808281840434,
+      "measured_speed": 0.8467742566513572,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 29800000000,
+      "released_cmd": 0.8529860916051749,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.15298609160517496,
+      "measured_speed": 0.847826809500286,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 30000000000,
+      "released_cmd": 0.8544395731877347,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.1544395731877347,
+      "measured_speed": 0.8487620286820975,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 30200000000,
+      "released_cmd": 0.8574937617261006,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.15749376172610063,
+      "measured_speed": 0.8497911928990006,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 30400000000,
+      "released_cmd": 0.8579549845475335,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.15795498454753354,
+      "measured_speed": 0.851187431749654,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 30600000000,
+      "released_cmd": 0.8582775608550883,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.15827756085508837,
+      "measured_speed": 0.8524141809488307,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 30800000000,
+      "released_cmd": 0.8591293950346753,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.15912939503467538,
+      "measured_speed": 0.8534770314088557,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_SUSPECTED",
+      "production_reconstructed_state": "TRACKING_FAULT_SUSPECTED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    },
+    {
+      "time_ns": 31000000000,
+      "released_cmd": 0.8602326194354027,
+      "qualified_anchor": 0.7,
+      "net_demand": 0.1602326194354028,
+      "measured_speed": 0.8545016311066375,
+      "measurement_valid": true,
+      "offline_state": "TRACKING_FAULT_CONFIRMED",
+      "production_reconstructed_state": "TRACKING_FAULT_CONFIRMED",
+      "offline_response_open": true,
+      "production_response_open": true,
+      "offline_progress": false,
+      "production_progress": false
+    }
+  ],
+  "critical_progress": {
+    "29200000000": {
+      "qualified_command_anchor": 0.7,
+      "net_command_demand": 0.15621196371376167,
+      "epoch_anchor_command": 0.7,
+      "epoch_anchor_measured_speed": 0.8425915871001666,
+      "watch_anchor_measured_speed": 0.8425915871001666,
+      "epoch_expected_displacement": 0.0,
+      "epoch_measured_directed_progress": 0.0,
+      "epoch_progress_ratio": null,
+      "command_measured_gap": 0.013620376613595053,
+      "response_open": false,
+      "qualified_progress_decision": false,
+      "state": "HANDOFF_PENDING"
+    },
+    "29600000000": {
+      "qualified_command_anchor": 0.7,
+      "net_command_demand": 0.1525808281840434,
+      "epoch_anchor_command": 0.7,
+      "epoch_anchor_measured_speed": 0.8425915871001666,
+      "watch_anchor_measured_speed": 0.8425915871001666,
+      "epoch_expected_displacement": 0.050302840411559455,
+      "epoch_measured_directed_progress": 0.004182669551190621,
+      "epoch_progress_ratio": 0.08314976881960437,
+      "command_measured_gap": 0.0058065715326861556,
+      "response_open": true,
+      "qualified_progress_decision": false,
+      "state": "TRACKING_FAULT_SUSPECTED"
+    },
+    "30800000000": {
+      "qualified_command_anchor": 0.7,
+      "net_command_demand": 0.15912939503467538,
+      "epoch_anchor_command": 0.7,
+      "epoch_anchor_measured_speed": 0.8425915871001666,
+      "watch_anchor_measured_speed": 0.8425915871001666,
+      "epoch_expected_displacement": 0.1270017242665784,
+      "epoch_measured_directed_progress": 0.010885444308689096,
+      "epoch_progress_ratio": 0.08571099622112528,
+      "command_measured_gap": 0.0056523636258196674,
+      "response_open": true,
+      "qualified_progress_decision": false,
+      "state": "TRACKING_FAULT_SUSPECTED"
+    },
+    "31000000000": {
+      "qualified_command_anchor": 0.7,
+      "net_command_demand": 0.1602326194354028,
+      "epoch_anchor_command": 0.7,
+      "epoch_anchor_measured_speed": 0.8425915871001666,
+      "watch_anchor_measured_speed": 0.8425915871001666,
+      "epoch_expected_displacement": 0.13374634558589812,
+      "epoch_measured_directed_progress": 0.011910044006470888,
+      "epoch_progress_ratio": 0.08904949106681725,
+      "command_measured_gap": 0.005730988328765285,
+      "response_open": true,
+      "qualified_progress_decision": false,
+      "state": "TRACKING_FAULT_CONFIRMED"
+    }
+  },
+  "command_provenance": {
+    "source": "prior issued PLC ActuatorCommand.applied_command_before_actuator_dynamics bounded by frozen actuator bounds",
+    "timestamp": "same command.created_ns",
+    "pre_plc_takeover_skipped": true,
+    "trial_exact_command_ids_available": false,
+    "wrong_requested_target_or_raw_actual_used": false
+  },
+  "measurement_provenance": {
+    "source": "latest released MeasuredSnapshot.pump_speed",
+    "sample_release_quality_from_same_record": true,
+    "trial_exact_measurement_ids_available": false
+  },
+  "anchor_comparison": "No functional mismatch on reconstructed prefix; qualified command anchor remained 0.7 from 0.2s to 31.0s",
+  "watch_epoch_comparison": "No functional mismatch; epoch/watch started 29.2s, watch_start_ns=29.0s, never resolved before confirmation",
+  "response_window_comparison": "No functional mismatch; response_open_ns=29.4s for first epoch",
+  "progress_comparison": "No functional mismatch; measured progress grew but remained below frozen expected-displacement ratio because command anchor 0.7 and epoch measurement anchor ~0.8426 have different reference epochs",
+  "legacy_path_audit": "Recorded failed trial removed old raw 0.15 branch authority. Around suspicion command-measured gap ~0.0058, far below historical 0.15 predicate; old path cannot explain this event.",
+  "safety_mapping_audit": "Offline suspected and confirmed at same observed trial Safety transition times; Contract15A DEGRADED and FAULT mappings agree. No mapping-only mismatch identified.",
+  "forensic_physical_response": {
+    "label": "FORENSIC_NON_CAUSAL_VIEW_NOT_QUALIFIER_INPUT",
+    "window_ns": [
+      29200000000,
+      31000000000
+    ],
+    "actual_speed_change": 0.011910044006470888,
+    "released_measured_speed_change": 0.011910044006470888,
+    "flow_change_kg_s": 0.0032616998816116793,
+    "released_dp_change_pa": 1061.1538828761404,
+    "rows": [
+      {
+        "time_ns": 29200000000,
+        "command": 0.8545145131589575,
+        "actual_speed": 0.8425915871001666,
+        "released_measured_speed": 0.8425915871001666,
+        "flow_kg_s": 0.23075320950942008,
+        "released_dp_pa": 37272.93058922882
+      },
+      {
+        "time_ns": 29400000000,
+        "command": 0.8525808281840433,
+        "actual_speed": 0.8450605425117073,
+        "released_measured_speed": 0.8450605425117073,
+        "flow_kg_s": 0.23142936079560772,
+        "released_dp_pa": 37491.6843267845
+      },
+      {
+        "time_ns": 29600000000,
+        "command": 0.8529860916051749,
+        "actual_speed": 0.8467742566513572,
+        "released_measured_speed": 0.8467742566513572,
+        "flow_kg_s": 0.23189868074130865,
+        "released_dp_pa": 37643.898690691574
+      },
+      {
+        "time_ns": 29800000000,
+        "command": 0.8544395731877347,
+        "actual_speed": 0.847826809500286,
+        "released_measured_speed": 0.847826809500286,
+        "flow_kg_s": 0.23218693421047096,
+        "released_dp_pa": 37737.540692640294
+      },
+      {
+        "time_ns": 30000000000,
+        "command": 0.8574937617261006,
+        "actual_speed": 0.8487620286820975,
+        "released_measured_speed": 0.8487620286820975,
+        "flow_kg_s": 0.23244305453151579,
+        "released_dp_pa": 37820.84151995886
+      },
+      {
+        "time_ns": 30200000000,
+        "command": 0.8579549845475335,
+        "actual_speed": 0.8497911928990006,
+        "released_measured_speed": 0.8497911928990006,
+        "flow_kg_s": 0.23272490276000327,
+        "released_dp_pa": 37912.61625525709
+      },
+      {
+        "time_ns": 30400000000,
+        "command": 0.8582775608550883,
+        "actual_speed": 0.851187431749654,
+        "released_measured_speed": 0.851187431749654,
+        "flow_kg_s": 0.23310727851708726,
+        "released_dp_pa": 38037.30230835002
+      },
+      {
+        "time_ns": 30600000000,
+        "command": 0.8591293950346753,
+        "actual_speed": 0.8524141809488307,
+        "released_measured_speed": 0.8524141809488307,
+        "flow_kg_s": 0.2334432376214825,
+        "released_dp_pa": 38147.021633839955
+      },
+      {
+        "time_ns": 30800000000,
+        "command": 0.8602326194354027,
+        "actual_speed": 0.8534770314088557,
+        "released_measured_speed": 0.8534770314088557,
+        "flow_kg_s": 0.23373431120758772,
+        "released_dp_pa": 38242.20976497983
+      },
+      {
+        "time_ns": 31000000000,
+        "command": 0.8613147532475407,
+        "actual_speed": 0.8545016311066375,
+        "released_measured_speed": 0.8545016311066375,
+        "flow_kg_s": 0.23401490939103176,
+        "released_dp_pa": 38334.08447210496
+      }
+    ]
+  },
+  "repeatability": {
+    "replays": 10,
+    "identical": true,
+    "result_sha256": "f75ca4c7966acb787f0c23aae525ca6f2ff737b5cdcf8a249529467237418cab"
+  },
+  "prefix_causality": {
+    "prefixes": 155,
+    "all_equal": true
+  },
+  "root_cause_class": "FROZEN_SEMANTICS_FALSE_POSITIVE_ON_VALID_IN_DOMAIN_TRACE",
+  "status": "TUNE01_FALSE_POSITIVE_ROOT_CAUSE_IDENTIFIED",
+  "limitations": [
+    "Original failed production source was deleted and not saved in Git; functional reconstruction uses recorded mechanical-copy transformation.",
+    "Original failed full released input trace was not captured; immutable artifact is baseline reconstruction through first FAULT. Trial command IDs may differ because DEGRADED changes Safety envelope ID, but qualifier does not consume IDs.",
+    "Post-FAULT input stream cannot be reconstructed from baseline because FAULT fallback changes PLC commands."
+  ]
+}

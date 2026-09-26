@@ -13,6 +13,12 @@
 *.ini          text eol=lf
 *.txt          text eol=lf
 *.json         text eol=lf
+# These later hash-backed fixtures/evidence were frozen with their original
+# on-disk bytes. Preserve those bytes rather than normalizing CRLF during add.
+phase5_r5_2_1*.json -text -eol
+phase5_r5_2_2*.json -text -eol
+phase5_r5_3r*.json -text -eol
+v0_2/tests/data/tracking_history/*.json -text -eol
 *.csv          text eol=lf
 *.yml          text eol=lf
 *.yaml         text eol=lf

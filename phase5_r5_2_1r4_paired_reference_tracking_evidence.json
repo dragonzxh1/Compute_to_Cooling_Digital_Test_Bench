@@ -1,0 +1,36 @@
+{
+  "schema": "phase5-r5-2-1r4-paired-reference-early-stop-evidence-v1",
+  "registration_sha256": "541433aeb903fca820bcdc4f5992563c90cd746c72fcf5a936c0b620be4f3785",
+  "candidate_semantic_engine_sha256": "ecf473f703ac6d11b49b83de6b7684c6653a9ad42e5eada66034178e4e668334",
+  "frozen_profile_sha256": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+  "contract_15a_sha256": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+  "audit_trace_sha256": "a63c5a413e3a3b02d3f86a4f6c6d52bad615272916f664722a452ff5be25fd61",
+  "source_and_production_hash_checks": "PASS: all 21 preregistered source and production hashes matched before R4 candidate execution",
+  "baseline_tests": "PASS: 22 focused historical tests before R4 candidate changes",
+  "tune01": {
+    "trace_provenance": "RECONSTRUCTED_DEVELOPMENT_REGRESSION_NOT_ORIGINAL_FAILED_PRODUCTION_CAPTURE",
+    "old_first_suspected_s": 29.6,
+    "old_first_confirmed_s": 31.0,
+    "candidate_first_suspected_s": null,
+    "candidate_first_confirmed_s": null,
+    "historical_no_confirmed_criterion": true
+  },
+  "first_blocking_historical_case": {
+    "case": "C11_SENSOR_INVALID_RECOVERY_SILENT_STUCK",
+    "old_first_suspected_s": 1.2,
+    "old_first_confirmed_s": 1.8,
+    "candidate_first_suspected_s": null,
+    "candidate_first_confirmed_s": null,
+    "root_cause": "Candidate only opens a cumulative-demand epoch on a command event with valid measurement. The material command arrives while measurement is MISSING at 0.4 s; valid measurement returns at 1.2 s without a new command event, so no epoch/watch is created and the silent stuck is never assessed.",
+    "required_sensor_recovery_rule": "Preserve unresolved command demand and watch context through invalid measurement, then evaluate the recovered valid sample without requiring a fresh command event.",
+    "historical_regression": "FAIL"
+  },
+  "case_matrix_executed_before_stop": ["TUNE-01-load", "C1", "C2", "C3_normal", "C3_stuck", "C4", "C5", "C6", "C7", "C8_normal", "C8_stuck", "C9_INVALID_HISTORICAL_EXPLORATORY_ONLY", "C10", "C11", "C12"],
+  "case_matrix_not_executed_due_stop": ["P1-P20", "S1-S16", "S16_variant", "C9R", "full_C_assessment", "full_v0_2_tests", "ruff", "prefix_causality", "repeatability", "figure"],
+  "production_safety_changed": false,
+  "profile_recalibrated": false,
+  "contract_15a_changed": false,
+  "git_commit_or_push": false,
+  "PHASE5_R5_2_1R4_GATE_STATUS": "PAIRED_REFERENCE_REVISION_MASKS_SILENT_FAULT",
+  "disposition": "STOP_FOR_USER_REVIEW_NO_POST_RESULT_SEMANTIC_RULE_CHANGE"
+}

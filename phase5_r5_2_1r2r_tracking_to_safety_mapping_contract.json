@@ -1,0 +1,57 @@
+{
+  "schema": "phase5-r5-2-1r2r-mapping-contract-v1",
+  "registration_sha256": "c29b911a7dd5e9320d13991a1f17236191c8ffc5433dd2025d388b756a7e0aa5",
+  "contract14_sha256": "efd8d325753163b91170578ceeb3de02dafafbf8fb0a208a279c76c964d7b144",
+  "contract15_sha256": "1e93c50037e2b211494e98b30f951e638399e041d1c07b9c0daa2426fb00e073",
+  "contract15a_sha256": "b741a05925a043706dbdc93351faf37fdbd6f1d41ad22360143c8184dd08e280",
+  "r3_contract_sha256": "2d94871405e1b8ca62793d7511392903cf946aea5c8ffeea6b07421ef5fa625e",
+  "scope": "OFFLINE_MAPPING_REVALIDATION_NOT_PRODUCTION_SAFETY",
+  "hierarchy_low_to_high": ["NORMAL", "FF_DISABLED", "DEGRADED", "DERATE_REQUESTED", "PROTECTED", "FAULT"],
+  "tracking_contribution_fields": ["internal_tracking_state", "severity_contribution", "reason_codes", "restriction_contribution", "latched", "recovery_authority", "tracking_epoch_id", "tracking_evidence_id", "measurement_quality_dependency"],
+  "tracking_states": {
+    "STEADY_TRACKING": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "QUALIFIER_ON_LATER_DEMAND"},
+    "HANDOFF_PENDING": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "QUALIFIER_ON_RESPONSE_OPPORTUNITY"},
+    "TRACKING_PROGRESS": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "QUALIFIER_ON_LATER_DEMAND"},
+    "TRACKING_FAULT_SUSPECTED": {"severity": "DEGRADED", "reason_codes": ["ACTUATOR_TRACKING_SUSPECTED"], "restriction": "NONE", "latched": false, "recovery_authority": "FROZEN_QUALIFIED_PROGRESS_BEFORE_CONFIRMATION"},
+    "TRACKING_FAULT_CONFIRMED": {"severity": "FAULT", "reason_codes": ["ACTUATOR_TRACKING_CONFIRMED"], "restriction": "EXISTING_GENERIC_FAULT", "latched": true, "recovery_authority": "EXPLICIT_SAFETY_FAULT_RESET_AND_QUALIFIED_RECOVERY"},
+    "INSUFFICIENT_MEASUREMENT": {"severity": "NORMAL", "reason_codes": [], "restriction": "NONE", "latched": false, "recovery_authority": "SENSOR_CHANNEL_AND_PRESERVED_QUALIFIER_CONTEXT"}
+  },
+  "reason_definitions": {
+    "ACTUATOR_TRACKING_PENDING": {"status": "HISTORICAL_ONLY", "channel": "ACTUATOR_TRACKING", "new_mapping_use": false},
+    "ACTUATOR_TRACKING_SUSPECTED": {"status": "NEW", "severity": "DEGRADED", "channel": "ACTUATOR_TRACKING", "meaning": "Valid measured non-progress after qualified response opportunity, before confirmation", "recovery": "QUALIFIED_PROGRESS"},
+    "ACTUATOR_TRACKING_CONFIRMED": {"status": "NEW", "severity": "FAULT", "channel": "ACTUATOR_TRACKING", "meaning": "Frozen measured confirmed non-response", "recovery": "EXPLICIT_SAFETY_FAULT_RESET"}
+  },
+  "reason_coexistence": "SafetyDecision.reasons and SafetyEnvelope.reason_codes are tuple[str,...] and must retain all simultaneous active channel reasons; no primary-reason field is required.",
+  "reducer": "Maximum active severity under hierarchy_low_to_high; lower tracking cannot downgrade stronger channel; retain all reasons.",
+  "envelope": "Suspected adds no tracking-specific restriction; confirmed uses existing generic FAULT fallback_dp and fault_speed; pressure-over-thermal priority unchanged; Safety owns restriction and PLC owns final ActuatorCommand.",
+  "recovery": "Suspected may clear on frozen qualified progress before confirmation; confirmed is latched until explicit Safety reset and qualification; sensor invalid cannot fabricate confirmation or erase prior valid evidence.",
+  "channels": ["THERMAL", "PRESSURE", "SENSOR_QUALITY", "ACTUATOR_TRACKING", "FF", "DERATE_PROTECTION"],
+  "cases": {
+    "M1": {"tracking": "STEADY_TRACKING", "channels": [], "expected": "NORMAL"},
+    "M2": {"tracking": "HANDOFF_PENDING", "channels": [], "expected": "NORMAL"},
+    "M3": {"tracking": "TRACKING_PROGRESS", "channels": [], "expected": "NORMAL"},
+    "M4": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": [], "expected": "DEGRADED"},
+    "M5": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": [], "expected": "FAULT"},
+    "M6": {"tracking": "INSUFFICIENT_MEASUREMENT", "channels": ["SENSOR_INVALID"], "expected": "FAULT"},
+    "M7": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": ["PRESSURE_FAULT"], "expected": "FAULT"},
+    "M8": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": ["PRESSURE_FAULT"], "expected": "FAULT"},
+    "M9": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": ["THERMAL_PROTECTED"], "expected": "PROTECTED"},
+    "M10": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": ["THERMAL_PROTECTED"], "expected": "FAULT"},
+    "M11": {"tracking": "TRACKING_FAULT_SUSPECTED", "channels": ["DERATE_REQUESTED"], "expected": "DERATE_REQUESTED"},
+    "M12": {"tracking": "TRACKING_FAULT_CONFIRMED", "channels": ["DERATE_REQUESTED"], "expected": "FAULT"},
+    "M13": {"tracking": "INSUFFICIENT_MEASUREMENT", "prior_suspected": true, "channels": ["SENSOR_INVALID"], "expected": "FAULT"},
+    "M14": {"tracking": "INSUFFICIENT_MEASUREMENT", "prior_confirmed": true, "channels": ["SENSOR_INVALID"], "expected": "FAULT"},
+    "M15": {"tracking": "TRACKING_PROGRESS", "channels": ["FF_DISABLED"], "expected": "FF_DISABLED"},
+    "M16": {"tracking": "TRACKING_FAULT_CONFIRMED", "restored_motion": true, "channels": [], "expected": "FAULT"}
+  },
+  "implementation_readiness": {
+    "multiple_reasons_type_supported": true,
+    "all_reasons_currently_populated": false,
+    "envelope_type_supported": true,
+    "fault_latch_reset_supported": true,
+    "tracking_provenance": "Existing envelope/measurement IDs plus separately linked qualifier evidence by envelope_id; do not overload reason strings or measurement IDs with epoch IDs",
+    "schema_revision_required": false,
+    "r5_3r_changes": ["replace old raw mismatch tracking branch with validated qualifier mapping", "reduce all active channels and populate existing reasons tuples", "preserve pressure and thermal authority and existing FAULT restriction", "link qualifier epoch/evidence provenance in auditable evidence record", "test same-tick Safety-before-PLC and explicit FAULT reset"]
+  },
+  "production_change_authorized": false
+}

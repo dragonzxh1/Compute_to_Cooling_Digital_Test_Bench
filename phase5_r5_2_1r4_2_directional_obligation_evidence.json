@@ -1,0 +1,1382 @@
+{
+  "status": "BLOCKED_INHERITED_STARTUP_BASELINE_GAP",
+  "scope": "Offline numerical fixture; not production or hardware validation",
+  "r41_7_input": [
+    {
+      "time_ns": 0,
+      "plc_command": 0.5,
+      "command_timestamp_ns": 0,
+      "measured_speed": 0.5,
+      "sample_ns": 0,
+      "release_ns": 0,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:0"
+    },
+    {
+      "time_ns": 200000000,
+      "plc_command": 0.7,
+      "command_timestamp_ns": 200000000,
+      "measured_speed": 0.5,
+      "sample_ns": 200000000,
+      "release_ns": 200000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:200000000"
+    },
+    {
+      "time_ns": 400000000,
+      "plc_command": 0.7,
+      "command_timestamp_ns": 200000000,
+      "measured_speed": null,
+      "sample_ns": 400000000,
+      "release_ns": 400000000,
+      "quality": "MISSING",
+      "measurement_record_id": "synthetic-measurement:400000000"
+    },
+    {
+      "time_ns": 600000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": null,
+      "sample_ns": 600000000,
+      "release_ns": 600000000,
+      "quality": "MISSING",
+      "measurement_record_id": "synthetic-measurement:600000000"
+    },
+    {
+      "time_ns": 800000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": null,
+      "sample_ns": 800000000,
+      "release_ns": 800000000,
+      "quality": "MISSING",
+      "measurement_record_id": "synthetic-measurement:800000000"
+    },
+    {
+      "time_ns": 1000000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": null,
+      "sample_ns": 1000000000,
+      "release_ns": 1000000000,
+      "quality": "MISSING",
+      "measurement_record_id": "synthetic-measurement:1000000000"
+    },
+    {
+      "time_ns": 1200000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 1200000000,
+      "release_ns": 1200000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:1200000000"
+    },
+    {
+      "time_ns": 1400000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 1400000000,
+      "release_ns": 1400000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:1400000000"
+    },
+    {
+      "time_ns": 1600000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 1600000000,
+      "release_ns": 1600000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:1600000000"
+    },
+    {
+      "time_ns": 1800000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 1800000000,
+      "release_ns": 1800000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:1800000000"
+    },
+    {
+      "time_ns": 2000000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 2000000000,
+      "release_ns": 2000000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:2000000000"
+    },
+    {
+      "time_ns": 2200000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 2200000000,
+      "release_ns": 2200000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:2200000000"
+    },
+    {
+      "time_ns": 2400000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 2400000000,
+      "release_ns": 2400000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:2400000000"
+    },
+    {
+      "time_ns": 2600000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 2600000000,
+      "release_ns": 2600000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:2600000000"
+    },
+    {
+      "time_ns": 2800000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 2800000000,
+      "release_ns": 2800000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:2800000000"
+    },
+    {
+      "time_ns": 3000000000,
+      "plc_command": 0.3,
+      "command_timestamp_ns": 600000000,
+      "measured_speed": 0.5,
+      "sample_ns": 3000000000,
+      "release_ns": 3000000000,
+      "quality": "VALID",
+      "measurement_record_id": "synthetic-measurement:3000000000"
+    }
+  ],
+  "r41_7_candidate": {
+    "state": "TRACKING_FAULT_CONFIRMED",
+    "records": [
+      {
+        "time_ns": 0,
+        "state": "STEADY_TRACKING",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.5,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:0",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": null,
+        "progress_command_reference": null,
+        "progress_measurement_reference": null,
+        "gross_command_demand": 0.0,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": null,
+        "watch_id": null,
+        "oldest_unresolved_demand_ns": null,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": false,
+        "deferred_demand_id": null,
+        "first_observable_demand_ns": null,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": null,
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": null,
+        "epoch_expected_direction": null
+      },
+      {
+        "time_ns": 200000000,
+        "state": "HANDOFF_PENDING",
+        "demand_class": "OBSERVABLE_MATERIAL_DEMAND",
+        "valid": true,
+        "plc_command": 0.7,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:200000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": 0.19999999999999996,
+        "checkpoint_command_displacement": 0.19999999999999996,
+        "checkpoint_measured_displacement": 0.0,
+        "expected_motion": 0.0,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:1",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": false,
+        "deferred_demand_id": null,
+        "first_observable_demand_ns": null,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": null,
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": null,
+        "epoch_expected_direction": 1
+      },
+      {
+        "time_ns": 400000000,
+        "state": "INSUFFICIENT_MEASUREMENT",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": false,
+        "plc_command": 0.7,
+        "measured_speed": null,
+        "measurement_record_id": "synthetic-measurement:400000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": 0.19999999999999996,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:1",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": true,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": 400000000,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": null,
+        "epoch_expected_direction": 1
+      },
+      {
+        "time_ns": 600000000,
+        "state": "INSUFFICIENT_MEASUREMENT",
+        "demand_class": "NOT_OBSERVABLE_FOR_TRACKING_QUALIFICATION",
+        "valid": false,
+        "plc_command": 0.3,
+        "measured_speed": null,
+        "measurement_record_id": "synthetic-measurement:600000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:1",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": true,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": 400000000,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": 1
+      },
+      {
+        "time_ns": 800000000,
+        "state": "INSUFFICIENT_MEASUREMENT",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": false,
+        "plc_command": 0.3,
+        "measured_speed": null,
+        "measurement_record_id": "synthetic-measurement:800000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:1",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": true,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": 400000000,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": 1
+      },
+      {
+        "time_ns": 1000000000,
+        "state": "INSUFFICIENT_MEASUREMENT",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": false,
+        "plc_command": 0.3,
+        "measured_speed": null,
+        "measurement_record_id": "synthetic-measurement:1000000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:1",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": true,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": 400000000,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": 1
+      },
+      {
+        "time_ns": 1200000000,
+        "state": "TRACKING_FAULT_SUSPECTED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:1200000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": 0.2,
+        "checkpoint_measured_displacement": -0.0,
+        "expected_motion": 0.06593599079287214,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": true,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 1400000000,
+        "state": "TRACKING_FAULT_SUSPECTED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:1400000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": 0.2,
+        "checkpoint_measured_displacement": -0.0,
+        "expected_motion": 0.09023767278119471,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 1600000000,
+        "state": "TRACKING_FAULT_SUSPECTED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:1600000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": 0.2,
+        "checkpoint_measured_displacement": -0.0,
+        "expected_motion": 0.1101342071765557,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0,
+        "confirmed_latched": false,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 1800000000,
+        "state": "TRACKING_FAULT_SUSPECTED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:1800000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": 0.2,
+        "checkpoint_measured_displacement": -0.0,
+        "expected_motion": 0.12642411176571153,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 1,
+        "confirmed_latched": false,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 0,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 2000000000,
+        "state": "TRACKING_FAULT_CONFIRMED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:2000000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": 0.2,
+        "checkpoint_measured_displacement": -0.0,
+        "expected_motion": 0.13976115761755956,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 2,
+        "confirmed_latched": true,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 1,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 2200000000,
+        "state": "TRACKING_FAULT_CONFIRMED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:2200000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 2,
+        "confirmed_latched": true,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 2,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 2400000000,
+        "state": "TRACKING_FAULT_CONFIRMED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:2400000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 2,
+        "confirmed_latched": true,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 2,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 2600000000,
+        "state": "TRACKING_FAULT_CONFIRMED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:2600000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 2,
+        "confirmed_latched": true,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 2,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 2800000000,
+        "state": "TRACKING_FAULT_CONFIRMED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:2800000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 2,
+        "confirmed_latched": true,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 2,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      },
+      {
+        "time_ns": 3000000000,
+        "state": "TRACKING_FAULT_CONFIRMED",
+        "demand_class": "IMMATERIAL_UPDATE",
+        "valid": true,
+        "plc_command": 0.3,
+        "measured_speed": 0.5,
+        "measurement_record_id": "synthetic-measurement:3000000000",
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "progress_pair_id": "progress-pair:1",
+        "progress_command_reference": 0.5,
+        "progress_measurement_reference": 0.5,
+        "gross_command_demand": -0.2,
+        "checkpoint_command_displacement": null,
+        "checkpoint_measured_displacement": null,
+        "expected_motion": null,
+        "qualified_progress": false,
+        "credited_motion": 0.0,
+        "epoch_id": "tracking-epoch:2",
+        "watch_id": "motion-watch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 2,
+        "confirmed_latched": true,
+        "deferred_demand_active": false,
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "measurement_unavailable_since_ns": null,
+        "recovery_reevaluated": false,
+        "progress_pair_id_before_evaluation": "progress-pair:1",
+        "fault_evidence_before_evaluation": 2,
+        "directional_obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "epoch_expected_direction": -1
+      }
+    ],
+    "transitions": [
+      {
+        "time_ns": 200000000,
+        "from": "STEADY_TRACKING",
+        "to": "HANDOFF_PENDING",
+        "measurement_record_id": "synthetic-measurement:200000000"
+      },
+      {
+        "time_ns": 400000000,
+        "from": "HANDOFF_PENDING",
+        "to": "INSUFFICIENT_MEASUREMENT",
+        "measurement_record_id": "synthetic-measurement:400000000"
+      },
+      {
+        "time_ns": 1200000000,
+        "from": "INSUFFICIENT_MEASUREMENT",
+        "to": "TRACKING_FAULT_SUSPECTED",
+        "measurement_record_id": "synthetic-measurement:1200000000"
+      },
+      {
+        "time_ns": 2000000000,
+        "from": "TRACKING_FAULT_SUSPECTED",
+        "to": "TRACKING_FAULT_CONFIRMED",
+        "measurement_record_id": "synthetic-measurement:2000000000"
+      }
+    ],
+    "epoch_events": [
+      {
+        "time_ns": 200000000,
+        "event": "START",
+        "reason": "OBSERVABLE_MATERIAL_DEMAND",
+        "epoch_id": "tracking-epoch:1",
+        "oldest_unresolved_demand_ns": 200000000,
+        "expected_direction": 1
+      },
+      {
+        "time_ns": 600000000,
+        "event": "CLOSE",
+        "epoch_id": "tracking-epoch:1",
+        "reason": "OUTAGE_DIRECTION_SUPERSEDED"
+      },
+      {
+        "time_ns": 1200000000,
+        "event": "START",
+        "reason": "OUTAGE_DIRECTION_RECOVERY",
+        "epoch_id": "tracking-epoch:2",
+        "oldest_unresolved_demand_ns": 200000000,
+        "expected_direction": -1
+      },
+      {
+        "time_ns": 2000000000,
+        "event": "CLOSE",
+        "epoch_id": "tracking-epoch:2",
+        "reason": "QUALIFIED_NO_MOTION_CONFIRMED"
+      }
+    ],
+    "watch_events": [
+      {
+        "time_ns": 200000000,
+        "event": "START",
+        "watch_id": "motion-watch:1",
+        "watch_start_ns": 200000000
+      }
+    ],
+    "resolved_pair_events": [
+      {
+        "time_ns": 0,
+        "previous": null,
+        "new": {
+          "resolved_command_anchor": 0.5,
+          "resolved_measurement_anchor": 0.5,
+          "resolved_anchor_pair_id": "resolved-pair:1",
+          "resolved_anchor_ns": 0,
+          "source_obligation_id": null,
+          "source_epoch_id": null,
+          "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+        },
+        "reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      }
+    ],
+    "progress_pair_events": [
+      {
+        "time_ns": 200000000,
+        "previous": null,
+        "new": {
+          "progress_command_reference": 0.5,
+          "progress_measurement_reference": 0.5,
+          "progress_pair_id": "progress-pair:1",
+          "progress_pair_ns": 0,
+          "source_epoch_id": "tracking-epoch:1",
+          "source_measurement_record_id": "resolved:resolved-pair:1",
+          "source_command_record_id": "resolved:resolved-pair:1",
+          "update_reason": "OBSERVABLE_MATERIAL_DEMAND"
+        },
+        "reason": "OBSERVABLE_MATERIAL_DEMAND",
+        "oldest_unresolved_demand_ns": 200000000
+      }
+    ],
+    "resolved_pair": {
+      "resolved_command_anchor": 0.5,
+      "resolved_measurement_anchor": 0.5,
+      "resolved_anchor_pair_id": "resolved-pair:1",
+      "resolved_anchor_ns": 0,
+      "source_obligation_id": null,
+      "source_epoch_id": null,
+      "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+    },
+    "progress_pair": {
+      "progress_command_reference": 0.5,
+      "progress_measurement_reference": 0.5,
+      "progress_pair_id": "progress-pair:1",
+      "progress_pair_ns": 0,
+      "source_epoch_id": "tracking-epoch:1",
+      "source_measurement_record_id": "resolved:resolved-pair:1",
+      "source_command_record_id": "resolved:resolved-pair:1",
+      "update_reason": "OBSERVABLE_MATERIAL_DEMAND"
+    },
+    "confirmed_latched": true,
+    "deferred_demand": {
+      "deferred_demand_active": false,
+      "deferred_demand_id": "deferred-demand:1",
+      "first_observable_demand_ns": 200000000,
+      "latest_command": 0.3,
+      "resolved_anchor_pair_id": "resolved-pair:1",
+      "resolved_command_anchor": 0.5,
+      "resolved_measurement_anchor": 0.5,
+      "net_command_demand": -0.2,
+      "expected_direction": -1,
+      "measurement_unavailable_since_ns": 400000000,
+      "prior_valid_tracking_state": "HANDOFF_PENDING",
+      "prior_valid_suspicion_evidence": 0,
+      "prior_watch_id": "motion-watch:1",
+      "source_command_record_id": "released-command:200000000",
+      "cancellation_reason": null,
+      "recovery_reevaluated": true
+    },
+    "deferred_events": [
+      {
+        "time_ns": 400000000,
+        "event": "CREATE",
+        "deferred_demand": {
+          "deferred_demand_active": true,
+          "deferred_demand_id": "deferred-demand:1",
+          "first_observable_demand_ns": 200000000,
+          "latest_command": 0.7,
+          "resolved_anchor_pair_id": "resolved-pair:1",
+          "resolved_command_anchor": 0.5,
+          "resolved_measurement_anchor": 0.5,
+          "net_command_demand": 0.19999999999999996,
+          "expected_direction": 1,
+          "measurement_unavailable_since_ns": 400000000,
+          "prior_valid_tracking_state": "HANDOFF_PENDING",
+          "prior_valid_suspicion_evidence": 0,
+          "prior_watch_id": "motion-watch:1",
+          "source_command_record_id": "released-command:200000000",
+          "cancellation_reason": null,
+          "recovery_reevaluated": false
+        }
+      },
+      {
+        "time_ns": 600000000,
+        "event": "REVERSAL",
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000
+      },
+      {
+        "time_ns": 800000000,
+        "event": "UPDATE",
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "net_command_demand": -0.2
+      },
+      {
+        "time_ns": 1000000000,
+        "event": "UPDATE",
+        "deferred_demand_id": "deferred-demand:1",
+        "first_observable_demand_ns": 200000000,
+        "net_command_demand": -0.2
+      },
+      {
+        "time_ns": 1200000000,
+        "event": "RECOVERY_REEVALUATION",
+        "deferred_demand_id": "deferred-demand:1",
+        "new_command_required": false,
+        "first_observable_demand_ns": 200000000,
+        "oldest_unresolved_demand_ns": 200000000,
+        "measurement_record_id": "synthetic-measurement:1200000000",
+        "progress_pair_id_before_evaluation": "progress-pair:1"
+      },
+      {
+        "time_ns": 1200000000,
+        "event": "RECOVERY_CONSUMED",
+        "deferred_demand_id": "deferred-demand:1",
+        "qualified_progress": false,
+        "fault_evidence_after": 0
+      }
+    ],
+    "direction_events": [
+      {
+        "time_ns": 600000000,
+        "event": "SUPERSEDE",
+        "prior_direction": 1,
+        "obligation": {
+          "direction": -1,
+          "established_ns": 600000000,
+          "command": 0.3,
+          "resolved_pair_id": "resolved-pair:1",
+          "progress_pair_id": "progress-pair:1"
+        },
+        "oldest_unresolved_demand_ns": 200000000,
+        "carried_suspicion_evidence": 0
+      }
+    ]
+  },
+  "historical_state_comparison": {
+    "S1": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7543292138852679,
+        "resolved_measurement_anchor": 0.8215709196525322,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 600000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "d62140154744b7829187aa9bff6aa7755dc3a83178a4e5b8538cabb938f65028"
+    },
+    "S2": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "d92f50fee611d87f01251aa6c3c86419deda135234cfca0087d6458d6148cfd6"
+    },
+    "S3": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7527771555663241,
+        "resolved_measurement_anchor": 0.8215709196525322,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 1000000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "59698d1fce9b0406f54a0d58a6743762b6f438fd52bf2d07b93331446b543ff6"
+    },
+    "S4": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7527771428685732,
+        "resolved_measurement_anchor": 0.8215709196525322,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 1400000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "228aedea1a24fc8132188f0f9eb349ba491682d7a3dfd93426824f5b85ab7be2"
+    },
+    "S14": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7527771555663241,
+        "resolved_measurement_anchor": 0.8215709196525322,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 1000000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "59698d1fce9b0406f54a0d58a6743762b6f438fd52bf2d07b93331446b543ff6"
+    },
+    "S5": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_FAULT_CONFIRMED"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_FAULT_CONFIRMED"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7,
+        "resolved_measurement_anchor": 0.565935990792872,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 600000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "2a9cffee91e33177ebe7f6f02ac5ae0c24de066844000a86bbf66769ad25e10c"
+    },
+    "S6": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "9b217fb1c57810b70cc1f898333a9e0de624a0889b74bd3cfc856f485405e1d0"
+    },
+    "S7": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.5,
+        "resolved_measurement_anchor": 0.5,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 0,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "e397d77eaf743d60b933dfbead90cca74a1653e63c130323ce7c91f6681402ce"
+    },
+    "S8_normal": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.9,
+        "resolved_measurement_anchor": 0.7565086034937047,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 2600000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "25e7ffe0bc438c2814ef8495e8f3eccdb64ffef69820791534a4ddd8faf85278"
+    },
+    "S8_stuck": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "769e32b96d76a6ae0452e24cdf448fc92b3177c83898d31bfcf444e7edccbeca"
+    },
+    "S9_up_down": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.3,
+        "resolved_measurement_anchor": 0.39275233230850465,
+        "resolved_anchor_pair_id": "resolved-pair:2",
+        "resolved_anchor_ns": 2600000000,
+        "source_obligation_id": "tracking-epoch:1",
+        "source_epoch_id": "tracking-epoch:1",
+        "establishment_reason": "QUALIFIED_EPOCH_RESOLVED_TO_STEADY"
+      },
+      "input_sha256": "8be6509085bfaac83e6ce74e6a3dc0d08f18094e0c5a36655ac36ecfb737ef9d"
+    },
+    "S9_down_up": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7,
+        "resolved_measurement_anchor": 0.6072476676914953,
+        "resolved_anchor_pair_id": "resolved-pair:2",
+        "resolved_anchor_ns": 2600000000,
+        "source_obligation_id": "tracking-epoch:1",
+        "source_epoch_id": "tracking-epoch:1",
+        "establishment_reason": "QUALIFIED_EPOCH_RESOLVED_TO_STEADY"
+      },
+      "input_sha256": "1f97b6b5529bd7e2506bea82f566a3903006502d562f64925c9af014a5bb7f3d"
+    },
+    "S10": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "INSUFFICIENT_MEASUREMENT",
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "INSUFFICIENT_MEASUREMENT",
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7,
+        "resolved_measurement_anchor": 0.6264241117657114,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 1200000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "1be48e926314e724f9fe41afb996531d7ac3f8a4232bcbc3be99a770c11c6795"
+    },
+    "S11": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "INSUFFICIENT_MEASUREMENT"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "INSUFFICIENT_MEASUREMENT"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "31b50d079ff833309e1ffae5639c186f35f6df361461a89c0b60d4049541d041"
+    },
+    "S12": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "INSUFFICIENT_MEASUREMENT",
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "INSUFFICIENT_MEASUREMENT",
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "3a7216ddfe7840496fa8bc5b93dd485580c97f9635744a11b777f046bac5a87d"
+    },
+    "S13": {
+      "r41_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_FAULT_CONFIRMED"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "STEADY_TRACKING",
+        "HANDOFF_PENDING",
+        "TRACKING_PROGRESS",
+        "TRACKING_FAULT_SUSPECTED",
+        "TRACKING_FAULT_CONFIRMED"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7,
+        "resolved_measurement_anchor": 0.5900295065524891,
+        "resolved_anchor_pair_id": "resolved-pair:2",
+        "resolved_anchor_ns": 2600000000,
+        "source_obligation_id": "tracking-epoch:1",
+        "source_epoch_id": "tracking-epoch:1",
+        "establishment_reason": "QUALIFIED_EPOCH_RESOLVED_TO_STEADY"
+      },
+      "input_sha256": "4f689a65980aba8124ab6d891c536f740b697ade96eda9655b0d0b41fa7785f6"
+    },
+    "S15": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": {
+        "resolved_command_anchor": 0.7,
+        "resolved_measurement_anchor": 0.58,
+        "resolved_anchor_pair_id": "resolved-pair:1",
+        "resolved_anchor_ns": 2000000000,
+        "source_obligation_id": null,
+        "source_epoch_id": null,
+        "establishment_reason": "DIRECTLY_OBSERVED_INITIAL_STEADY_BASELINE"
+      },
+      "input_sha256": "fde5a6a6d9ea69be68d47ded26fbd3ba43ce01957f1b1bbb49523d2d3d8d0b26"
+    },
+    "S16": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "330f6dfd0525f16ade54a563bb6ef3c47c9b28f304ac6f92cb9ac6b1ef210d17"
+    },
+    "S16_variant": {
+      "r41_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_states": [
+        "STEADY_TRACKING"
+      ],
+      "r42_resolved_pair": null,
+      "input_sha256": "210ee26ba706f8d9a921a3ad8b491eae9cc6453492a28edaf98c0a9456151f41"
+    }
+  },
+  "mandatory_confirmation_missing": [
+    "S2",
+    "S4",
+    "S6",
+    "S8_stuck",
+    "S12",
+    "S15",
+    "S16",
+    "S16_variant"
+  ],
+  "source_sha256": {
+    "phase5_r5_2_2_fixture_tracking_profile.json": "9064b95358fb1166b0c3a2e6653e81497f56bec92fdafca5d925eabe895eb9d8",
+    "v0_2/examples/phase5_r5_2_1r4_paired_engine.py": "ecf473f703ac6d11b49b83de6b7684c6653a9ad42e5eada66034178e4e668334",
+    "v0_2/examples/phase5_r5_2_1r4_1_deferred_engine.py": "0dfbee95c9fd288074fe095475516c6e893111aaf3834fd2a09f1b5973ca7438",
+    "v0_2/examples/phase5_r5_2_1r4_2_directional_engine.py": "3b800497cf464febb1f200a60a8657a7d5dac87287dc209b82a1eac3103d0a77"
+  },
+  "full_historical_acceptance_completed": false,
+  "production_port_performed": false
+}
