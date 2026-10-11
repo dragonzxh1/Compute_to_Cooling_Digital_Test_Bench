@@ -1,0 +1,35 @@
+{
+  "version": "M1-COMPATIBILITY-SCOPE-v1-development",
+  "status": "CANDIDATE_FOR_INDEPENDENT_FREEZE_REVIEW",
+  "user_development_policy": "AUTHORIZED_BY_2026_10_11_MASTER_PROMPT",
+  "synchronous_mode": "SYNCHRONOUS_VERIFIED_PLC_ISSUE",
+  "synchronous_requirements": [
+    "PRE old-command and released-measurement only",
+    "immutable PRE evidence and Safety decision",
+    "authenticated current simulated PLC output after Safety",
+    "POST context only with separately bound M1-SEM01 legacy history projection",
+    "exact original 56 fields and all 18 CMP rules"
+  ],
+  "historical_mode": "LEGACY_ASYNCHRONOUS_OBSERVATION_REPLAY",
+  "historical_status_without_issue_proof": "UNVERIFIED_HISTORICAL_ISSUE",
+  "historical_Lane_B": "INCOMPLETE",
+  "historical_Lane_C": "INCOMPLETE",
+  "historical_permitted": [
+    "read unchanged raw rows and reported issue-time metadata",
+    "replay unchanged qualified legacy algorithm for compatibility only",
+    "record exact input identity and scope separately"
+  ],
+  "historical_forbidden": [
+    "invent historical PLC receipt or Safety decision",
+    "retime observations or reported command timestamps",
+    "promote legacy compatibility to P1 causal PASS"
+  ],
+  "malformed_packet_mode": "LEGACY_INVALID_PACKET_REJECTION",
+  "malformed_packet_status": "INCOMPLETE_QUARANTINED_INPUT",
+  "malformed_packet_policy": "no invalid/unreleased/nonfinite payload enters PRE; preserve original legacy rejection assertions and typed IEEE diagnostic identity",
+  "full_scope_acceptance": "INCOMPLETE whenever any mandatory input lacks qualified causal evidence",
+  "C3_A_original_modified": false,
+  "formal_execution_authorized": false,
+  "production_authorized": false
+}
+

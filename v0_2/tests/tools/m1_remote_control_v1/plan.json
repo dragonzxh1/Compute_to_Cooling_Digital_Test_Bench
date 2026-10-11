@@ -1,0 +1,30 @@
+{
+  "scope": "M1_REMOTE_DEVELOPMENT_PILOT_NOT_FORMAL_QUALIFICATION",
+  "source_inventory_count": 101,
+  "observer_attributes": 56,
+  "local_python": "HOLD",
+  "initial_pilot_stage_ids": [
+    "ENVIRONMENT", "INPUT_INTEGRITY", "CORE_SELF_CHECK", "CMP_NEGATIVE",
+    "CASE-001-REFERENCE", "CASE-001-SELECT", "CASE-001-SPLIT",
+    "CASE-001-PREFIX_ONE-1", "CASE-001-PREFIX_ONE-2", "CASE-001-PREFIX_ONE-3"
+  ],
+  "pilot_case": {"descriptor_index": 1, "stage_id": "ST-01", "row_count": 3},
+  "frozen_rules": "Original case expectations, full 56 fields and all PRE/Safety/PLC/POST records, exact causal prefix equality, original deterministic repeats; no field wildcard",
+  "isolated_prefix_rule": "Each selected prefix runs from t0 in full in a new owned child; no within-prefix segmentation",
+  "future_long_targets": [65, 66, 92],
+  "long_prefix_status": "NOT_STARTED_REQUIRE_PILOT_PASS_AND_FRESH_REFERENCE_SELECTION",
+  "full_campaign_status": "NOT_STARTED_REQUIRE_LONG_PREFIX_VALIDATION_AND_COMPLETE_EXECUTION_ADAPTER",
+  "old_full_scope_readiness": "NOT_PROMOTED",
+  "known_limits": ["PF06 source extension not silently accepted", "historical asynchronous P1 source gaps remain explicit", "T09 IMPLEMENTATION_HOLD", "FULL_P_HISTORY_VALIDATION_AVAILABLE=NO"],
+  "resource_policy": {"cpu_rate_per_10000": 100, "process_mb": 256, "job_mb": 512, "stage_wall_seconds": 120, "progress_file_bytes": 33554432},
+  "resource_limits_are_tracking_calibration": false,
+  "no_boolean_pressure_prerequisite": true,
+  "source_guard": "New separately registered remote environment and exact-byte external path aliases; sealed local guards unchanged",
+  "full_input_validation": "101 materialized inputs, 23/51 ITQ input definitions; old result files used only for input extraction/provenance, not grades or output goldens",
+  "success_status": "M1_FULL_INPUT_PREPARATION_AND_SHORT_PREFIX_PILOT_PASS_NOT_FULL_CAMPAIGN",
+  "first_failure_stop": true,
+  "same_run_repair_retry": false,
+  "formal_c3_c": false,
+  "production": false,
+  "phase6": false
+}
