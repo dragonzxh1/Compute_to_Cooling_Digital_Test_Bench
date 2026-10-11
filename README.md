@@ -16,6 +16,11 @@ and [preparation evidence report](LIQUID_COOLING_RECOVERY_V1_REPORT_20261012.md)
 See [the verified result](REMOTE_LIQUID_RECOVERY_RESULT_20261012.md).
 原首轮日志类型适配失败保留；长 prefix、完整 campaign 和本机稳定性仍未验证。
 
+The recovery baseline is now merged into main. A fresh main run again passed
+20/20 liquid-cooling tests, 11/11 adapter tests and the physical probe.
+See [main post-merge verification](MAIN_RECOVERY_BASELINE_VERIFICATION_20261012.md).
+恢复基线已合并主线并完成独立新鲜复验；完整 M1 仍需另行准备。
+
 Compute-to-Cooling Digital Test Bench is a physics-based rack liquid-cooling digital twin and control-research platform. It connects IT power, device thermal storage, flow-dependent coldplates, solved branch hydraulics, finite coolant transport, CDU/HX/FWS heat rejection, measured-state feedback, PLC logic and actuator dynamics.
 
 V0.1 is a local engineering model, not CFD, SCADA, a production PLC, or an OEM/NVIDIA performance claim. All GB300-class and CDU values are labeled assumptions until replaced by measured, OEM, literature, or calibrated data.
