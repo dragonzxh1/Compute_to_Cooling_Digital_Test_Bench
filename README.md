@@ -11,6 +11,11 @@ and [preparation evidence report](LIQUID_COOLING_RECOVERY_V1_REPORT_20261012.md)
 恢复测试包只在独立登记的远端 Windows 环境跑液冷小案例。它不代表完整 M1、正式资格、
 硬件或生产验证；本机继续暂停 Python workload。运行结果单独记录，不拼接旧成绩。
 
+2026-10-12 fresh hosted-Windows smoke: **20/20 original liquid-cooling tests**,
+**11/11 diagnostic-adapter tests**, and the 50-step physical ledger probe passed.
+See [the verified result](REMOTE_LIQUID_RECOVERY_RESULT_20261012.md).
+原首轮日志类型适配失败保留；长 prefix、完整 campaign 和本机稳定性仍未验证。
+
 Compute-to-Cooling Digital Test Bench is a physics-based rack liquid-cooling digital twin and control-research platform. It connects IT power, device thermal storage, flow-dependent coldplates, solved branch hydraulics, finite coolant transport, CDU/HX/FWS heat rejection, measured-state feedback, PLC logic and actuator dynamics.
 
 V0.1 is a local engineering model, not CFD, SCADA, a production PLC, or an OEM/NVIDIA performance claim. All GB300-class and CDU values are labeled assumptions until replaced by measured, OEM, literature, or calibrated data.
