@@ -1,0 +1,81 @@
+{
+  "version": "liquid-recovery-v1-prepared",
+  "status": "PREPARED_NOT_BEHAVIORALLY_EXECUTED",
+  "local_host_workload_hold": "HIPPO",
+  "scope": "DEVELOPMENT_ONLY_NOT_QUALIFICATION",
+  "independent_environment_status": "NOT_REGISTERED",
+  "external_publication_dispatch_authorized": false,
+  "boolean_pressure_prerequisite": false,
+  "smoke_stages": [
+    {
+      "stage_id": "THERMAL",
+      "pytest_node_ids": [
+        "v0_2/tests/thermal/test_single_node.py::test_zero_input_equilibrium",
+        "v0_2/tests/thermal/test_single_node.py::test_insulated_constant_power_analytic"
+      ],
+      "expected_result": "EXISTING_TEST_ASSERTIONS_PASS_WITH_COMPLETE_COLLECTION",
+      "input_source": "Existing 1 s equilibrium and 10 s constant-power fixtures; all three existing Method values"
+    },
+    {
+      "stage_id": "HYDRAULICS_TRANSPORT_CDU",
+      "pytest_node_ids": [
+        "v0_2/tests/plant/test_hydraulics.py::test_equal_parallel_branches_share_pressure_and_close_mass",
+        "v0_2/tests/plant/test_hydraulics.py::test_pump_curve_intersection_and_speed_trend",
+        "v0_2/tests/plant/test_hydraulics.py::test_pump_energy_contract_100w_example_and_no_hydraulic_double_heat",
+        "v0_2/tests/plant/test_coolant_transport.py::test_single_volume_exponential_and_energy",
+        "v0_2/tests/plant/test_coolant_transport.py::test_single_volume_mesh_converges_to_independent_exponential",
+        "v0_2/tests/plant/test_cdu_hx.py::test_counterflow_equal_capacity_independent_reference",
+        "v0_2/tests/plant/test_physical_loop.py::test_full_secondary_loop_mass_energy_and_storage"
+      ],
+      "expected_result": "EXISTING_TEST_ASSERTIONS_PASS_WITH_COMPLETE_COLLECTION",
+      "instrumented_extra": "physical_probe: existing branch=2, 5 s, dt=0.1 s; energy/mass policy inherited; equivalence is instrumentation diagnostic only"
+    },
+    {
+      "stage_id": "SHORT_FEEDBACK",
+      "pytest_node_ids": [
+        "v0_2/tests/control/test_phase5_feedback.py::test_actuator_analytic_lag_without_ramp",
+        "v0_2/tests/control/test_phase5_feedback.py::test_measurement_release_and_controller_no_truth_reference",
+        "v0_2/tests/control/test_phase5_feedback.py::test_unreleased_future_disturbance_cannot_change_current_command"
+      ],
+      "expected_result": "EXISTING_TEST_ASSERTIONS_PASS_WITH_COMPLETE_COLLECTION",
+      "input_source": "Unchanged actuator/measurement fixtures; existing two 5 s feedback runs with load event at 4 s"
+    }
+  ],
+  "expected_collection_counts": {
+    "v0_2/tests/thermal/test_single_node.py::test_zero_input_equilibrium": 3,
+    "v0_2/tests/thermal/test_single_node.py::test_insulated_constant_power_analytic": 3,
+    "v0_2/tests/plant/test_hydraulics.py::test_equal_parallel_branches_share_pressure_and_close_mass": 3,
+    "v0_2/tests/plant/test_hydraulics.py::test_pump_curve_intersection_and_speed_trend": 1,
+    "v0_2/tests/plant/test_hydraulics.py::test_pump_energy_contract_100w_example_and_no_hydraulic_double_heat": 1,
+    "v0_2/tests/plant/test_coolant_transport.py::test_single_volume_exponential_and_energy": 1,
+    "v0_2/tests/plant/test_coolant_transport.py::test_single_volume_mesh_converges_to_independent_exponential": 1,
+    "v0_2/tests/plant/test_cdu_hx.py::test_counterflow_equal_capacity_independent_reference": 1,
+    "v0_2/tests/plant/test_physical_loop.py::test_full_secondary_loop_mass_energy_and_storage": 3,
+    "v0_2/tests/control/test_phase5_feedback.py::test_actuator_analytic_lag_without_ramp": 1,
+    "v0_2/tests/control/test_phase5_feedback.py::test_measurement_release_and_controller_no_truth_reference": 1,
+    "v0_2/tests/control/test_phase5_feedback.py::test_unreleased_future_disturbance_cannot_change_current_command": 1
+  },
+  "target_prefix_plan": {
+    "status": "BLOCKED_PENDING_INDEPENDENT_M1_ENVIRONMENT_AND_ADAPTER",
+    "descriptor_indices": [65, 66, 92],
+    "oracle_spec": "phase5_r5_2_1r4_7_c3_a_reference_oracle_spec.json",
+    "ordering": ["FRESH_REFERENCE", "FROZEN_SELECT", "FULL_SPLIT", "SHORT_SELECTED_PREFIX", "ALL_SELECTED_PREFIXES", "FROZEN_REPEATS"],
+    "selection_policy": "Use frozen conditional ITQ selector; support retains frozen all-prefix policy",
+    "isolation": "Every selected prefix replays from t0 in full; per-prefix child isolation may change execution adapter, never semantic timeline",
+    "no_old_pass_reuse": true
+  },
+  "campaign_plan": {
+    "status": "BLOCKED_PENDING_PREFIX_PASS_AND_INDEPENDENT_M1_ENVIRONMENT",
+    "fresh_full_inventory_required": true,
+    "include": ["REFERENCE_SELECT_SPLIT_PREFIX", "Startup original and versioned results separately", "C", "S", "P15", "prefix causality", "deterministic repeats", "PF and input eligibility scope checks"],
+    "scope_exclusions_cannot_be_hidden_as_pass": true,
+    "full_p_history_available": false,
+    "formal_c3_c": false,
+    "production": false,
+    "phase6": false
+  },
+  "stop_policy": "First crash, nonzero exit, FAIL, INVALID, INCOMPLETE, drift, primitive inconsistency, persistence failure or failed cleanup stops batch; no same-run repair/retry",
+  "diagnostic_limits": {"progress_file_bytes": 2097152, "record_bytes": 8192},
+  "numerical_threshold_changes": false,
+  "notes": "Logging budgets are execution diagnostics, not physical/tracking criteria. No approved remote registration or execution entry is included. Old v014.1 drivers must not be used."
+}

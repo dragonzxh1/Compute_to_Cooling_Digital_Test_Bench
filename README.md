@@ -1,5 +1,16 @@
 # C2C-DTB / 算力到冷却数字测试台
 
+## Independent recovery testing / 独立环境恢复测试
+
+The 2026-10-12 recovery package runs only generic liquid-cooling smoke on a separately
+registered GitHub-hosted Windows environment. It is not M1/full qualification or a
+production deployment. Local Python workloads remain on hold after host hard hangs.
+See [remote recovery instructions](v0_2/tests/tools/liquid_recovery_remote_v1/README.md)
+and [preparation evidence report](LIQUID_COOLING_RECOVERY_V1_REPORT_20261012.md).
+
+恢复测试包只在独立登记的远端 Windows 环境跑液冷小案例。它不代表完整 M1、正式资格、
+硬件或生产验证；本机继续暂停 Python workload。运行结果单独记录，不拼接旧成绩。
+
 Compute-to-Cooling Digital Test Bench is a physics-based rack liquid-cooling digital twin and control-research platform. It connects IT power, device thermal storage, flow-dependent coldplates, solved branch hydraulics, finite coolant transport, CDU/HX/FWS heat rejection, measured-state feedback, PLC logic and actuator dynamics.
 
 V0.1 is a local engineering model, not CFD, SCADA, a production PLC, or an OEM/NVIDIA performance claim. All GB300-class and CDU values are labeled assumptions until replaced by measured, OEM, literature, or calibrated data.
