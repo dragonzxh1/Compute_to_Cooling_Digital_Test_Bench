@@ -5,7 +5,7 @@
 The 2026-10-12 recovery package runs only generic liquid-cooling smoke on a separately
 registered GitHub-hosted Windows environment. It is not M1/full qualification or a
 production deployment. Local Python workloads remain on hold after host hard hangs.
-See [remote recovery instructions](v0_2/tests/tools/liquid_recovery_remote_v1/README.md)
+See [remote recovery instructions](v0_2/tests/tools/liquid_recovery_remote_v1_1/README.md)
 and [preparation evidence report](LIQUID_COOLING_RECOVERY_V1_REPORT_20261012.md).
 
 恢复测试包只在独立登记的远端 Windows 环境跑液冷小案例。它不代表完整 M1、正式资格、

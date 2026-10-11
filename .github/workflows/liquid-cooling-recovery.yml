@@ -51,7 +51,7 @@ jobs:
              $env:EXPECTED_SOURCE_COMMIT -notmatch '^[a-f0-9]{40}$' -or
              $env:EXECUTION_MANIFEST_SHA256 -notmatch '^[a-f0-9]{64}$' -or
              $env:RUNNER_SCRIPT_SHA256 -notmatch '^[a-f0-9]{64}$') {throw 'DISPATCH_IDENTITY_REJECTED'}
-          $p='v0_2/tests/tools/liquid_recovery_remote_v1/run.ps1'
+          $p='v0_2/tests/tools/liquid_recovery_remote_v1_1/run.ps1'
           if((Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256) {throw 'RUNNER_SCRIPT_DRIFT'}
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
@@ -64,7 +64,7 @@ jobs:
       - name: Run only environment preflight and generic liquid-cooling smoke
         run: |
           $python=(Get-Command python).Source
-          & ./v0_2/tests/tools/liquid_recovery_remote_v1/run.ps1 -Python $python -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
+          & ./v0_2/tests/tools/liquid_recovery_remote_v1_1/run.ps1 -Python $python -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
       - name: Preserve local authoritative evidence even on failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
