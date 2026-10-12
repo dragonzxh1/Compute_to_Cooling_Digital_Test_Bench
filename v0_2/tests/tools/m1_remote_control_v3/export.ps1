@@ -6,8 +6,14 @@ $taskRun='stream-'+$env:GITHUB_RUN_ID+'-'+$env:GITHUB_RUN_ATTEMPT
 $taskExport=Join-Path $taskRepo ('artifacts/export/'+$JobKey)
 if(Test-Path -LiteralPath $taskExport){throw 'FRESH_EXPORT_REQUIRED'}
 New-Item -ItemType Directory -Path $taskExport|Out-Null
-$taskPaths=@('liquid-recovery-v1/'+$taskRun+'/'+$JobKey,'m1-autonomous-development/'+$taskRun+'/jobs/'+$JobKey)
-if($All){$taskPaths=@('liquid-recovery-v1/'+$taskRun,'m1-autonomous-development/'+$taskRun)}
+$taskPaths=@(
+    ('liquid-recovery-v1/'+$taskRun+'/'+$JobKey)
+    ('m1-autonomous-development/'+$taskRun+'/jobs/'+$JobKey)
+)
+if($All){$taskPaths=@(
+    ('liquid-recovery-v1/'+$taskRun)
+    ('m1-autonomous-development/'+$taskRun)
+)}
 elseif($IndicesCsv){foreach($i in $IndicesCsv.Split(',')){$taskPaths+=('m1-autonomous-development/'+$taskRun+('/cases/{0:d3}' -f [int]$i))}}
 foreach($p in @('startup_inventory.json','prefix_plan.json')){
     $taskPaths+=('m1-autonomous-development/'+$taskRun+'/'+$p)
@@ -23,4 +29,8 @@ foreach($p in ($taskPaths|Select-Object -Unique)){
     $taskDest=Join-Path $taskExport $p
     New-Item -ItemType Directory -Path (Split-Path $taskDest) -Force|Out-Null
     Copy-Item -LiteralPath $taskSource -Destination $taskDest -Recurse
+}
+if(-not(Test-Path -LiteralPath (Join-Path $taskExport ('liquid-recovery-v1/'+$taskRun+'/'+$JobKey)))){
+    # Pure planning job has no native child; every real execution job must export it.
+    if($JobKey -cne 'plan'){throw 'NATIVE_EVIDENCE_EXPORT_MISSING'}
 }

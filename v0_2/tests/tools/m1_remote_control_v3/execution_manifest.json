@@ -1,5 +1,5 @@
 {
-  "version": "M1_STREAM_V3_UNSEALED_BUILD_003A_FULL_CAMPAIGN",
+  "version": "M1_STREAM_V3_UNSEALED_BUILD_004_EXPORT_REPAIR",
   "scope": "M1_REMOTE_DEVELOPMENT_ONLY",
   "status": "UNSEALED_DEVELOPMENT_SOURCE_SNAPSHOT",
   "user_authorization": "CONTINUE_UNTIL_COMPLETE_LONG_PREFIX_AND_DEVELOPMENT_CAMPAIGN_20261012",
@@ -652,7 +652,7 @@
     "v0_2/tests/tools/m1_remote_control_v3/remote_worker.py": "0ad40114e5a584079b7938f6bab39e7ca397bfddb9449c7420e32fada0b6a46a",
     "v0_2/tests/tools/m1_remote_control_v3/README.md": "c6e4e7901d86c56f60b370426f0bd0442727363bd3f5bf5e94b58776c2c51d8a",
     "v0_2/tests/tools/m1_remote_control_v3/progress.py": "380211250fea1c30dd31ed6f715116335faea5018622c3160e60d0c88fbefa6f",
-    "v0_2/tests/tools/m1_remote_control_v3/export.ps1": "6f950519c3469da4a10b820ab546308eb3d80b93e512bc1eca23a307f6192c01",
+    "v0_2/tests/tools/m1_remote_control_v3/export.ps1": "5c26189982d8066f59f70cb4b67cbeab1ff5f271466c653a2efa8da8ff8c48fa",
     "v0_2/tests/tools/m1_remote_control_v3/campaign_plan.ps1": "13d136be98f4b13a21f4bb18d840bc7f23114329d759bde6f710ee6ac641a5d5",
     "v0_2/tests/tools/m1_remote_control_v3/admission.py": "dc57bda2a0cf1acca31fa334b24db56beec1e6179227f90a702123f09243a205",
     "v0_2/tests/tools/m1_remote_executor_v1/VerifyTarget.cs": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8",
@@ -660,7 +660,8 @@
     "v0_2/tests/tools/m1_remote_executor_v1/build.ps1": "5b9363ee1e809b4d8dcd688d38c20906169898848c423854a8a20d75ad04d55f",
     ".github/actions/m1-runtime/action.yml": "4cffb39d8ee2e125d9c6ac6258aa6b3f00e07c53b5d95c6a6149d892987a043f",
     ".github/workflows/m1-remote-stream-development.yml": "d3fb997c335dfadd5645caef6c3d95a38cf538d241869f61cc4d312b9232b25a",
-    ".github/workflows/m1-full-stream-campaign.yml": "b9e22c8501747ed431e2153257106cb5574d9fc01fbf255b14a78c4ff016f194"
+    ".github/workflows/m1-full-stream-campaign.yml": "b9e22c8501747ed431e2153257106cb5574d9fc01fbf255b14a78c4ff016f194",
+    "v0_2/tests/tools/m1_remote_control_v3/verify_export.ps1": "6ce83387a67312c0fb2a48c5cae532fa6f1d0aa4bfe26f4f68cab07dbc4e75da"
   },
   "original_source_inventory_raw_sha256": "02d336b2c5217ef279ced4f9ebefafc7ec2b9110ec567da7341052f0b073fa39",
   "check_stage_ids": [
@@ -774,5 +775,11 @@
     "strict_process_mb": 256,
     "strict_job_mb": 512,
     "full_campaign_scores_borrowed": false
+  },
+  "invalid_execution_preserved": {
+    "run_id": 38261504716,
+    "status": "INVALID_EVIDENCE_EXPORT_STOPPED_BEFORE_FULL_ADJUDICATION",
+    "cause": "POWERSHELL_ARRAY_CONCATENATION_COLLAPSED_TWO_EXPORT_PATHS",
+    "old_scores_borrowed": false
   }
 }
