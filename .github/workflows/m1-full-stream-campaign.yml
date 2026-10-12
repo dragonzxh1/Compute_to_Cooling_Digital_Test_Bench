@@ -39,7 +39,7 @@ jobs:
       - name: Controlled CHECKS
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode CHECKS -JobKey "prepare"  -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode CHECKS -JobKey "prepare"  -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -78,7 +78,7 @@ jobs:
       - name: Controlled REFERENCE
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode REFERENCE -JobKey "ref-${{ matrix.group }}" -IndicesCsv "${{ matrix.indices }}" -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode REFERENCE -JobKey "ref-${{ matrix.group }}" -IndicesCsv "${{ matrix.indices }}" -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -118,7 +118,7 @@ jobs:
       - name: Controlled REFERENCE_GATE
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode REFERENCE_GATE -JobKey "reference-gate"  -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode REFERENCE_GATE -JobKey "reference-gate"  -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -162,7 +162,7 @@ jobs:
       - name: Controlled SELECT
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SELECT -JobKey "select-${{ matrix.group }}" -IndicesCsv "${{ matrix.indices }}" -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SELECT -JobKey "select-${{ matrix.group }}" -IndicesCsv "${{ matrix.indices }}" -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -197,7 +197,7 @@ jobs:
       - name: Controlled SPLIT
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SPLIT -JobKey "split-u" -IndicesCsv "0" -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SPLIT -JobKey "split-u" -IndicesCsv "0" -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -241,7 +241,7 @@ jobs:
       - name: Controlled SPLIT
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SPLIT -JobKey "split-${{ matrix.group }}" -IndicesCsv "${{ matrix.indices }}" -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SPLIT -JobKey "split-${{ matrix.group }}" -IndicesCsv "${{ matrix.indices }}" -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -378,12 +378,12 @@ jobs:
       - name: Controlled STARTUP
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode STARTUP -JobKey "startup-${{ matrix.index }}" -IndicesCsv "${{ matrix.index }}" -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode STARTUP -JobKey "startup-${{ matrix.index }}" -IndicesCsv "${{ matrix.index }}" -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/export.ps1 -JobKey "startup-${{ matrix.index }}" 
+          & ./v0_2/tests/tools/m1_remote_control_v3/export.ps1 -JobKey "startup-${{ matrix.index }}"
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -417,7 +417,7 @@ jobs:
       - name: Controlled SCHEMA
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SCHEMA -JobKey "schema-${{ matrix.index }}" -IndicesCsv "${{ matrix.index }}" -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode SCHEMA -JobKey "schema-${{ matrix.index }}" -IndicesCsv "${{ matrix.index }}" -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
@@ -462,7 +462,7 @@ jobs:
       - name: Controlled FINAL
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode FINAL -JobKey "final"  -MemoryProfile CAMPAIGN 
+          & ./v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Python (Get-Command python).Source -ExpectedCommit "${{ inputs.expected_source_commit }}" -ExpectedManifestSha256 "${{ inputs.execution_manifest_sha256 }}" -Mode FINAL -JobKey "final"  -MemoryProfile CAMPAIGN
       - name: Export owned evidence
         if: always()
         shell: pwsh
