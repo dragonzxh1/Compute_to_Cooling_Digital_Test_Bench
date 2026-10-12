@@ -1,0 +1,1040 @@
+{
+  "$defs": {
+    "core": {
+      "additionalProperties": false,
+      "properties": {
+        "_evaluation_allowed": {
+          "$ref": "#/$defs/typed"
+        },
+        "carried_suspicion_evidence": {
+          "$ref": "#/$defs/typed"
+        },
+        "confirm_expected": {
+          "$ref": "#/$defs/typed"
+        },
+        "confirm_ratio": {
+          "$ref": "#/$defs/typed"
+        },
+        "confirm_samples": {
+          "$ref": "#/$defs/typed"
+        },
+        "confirmed_latched": {
+          "$ref": "#/$defs/typed"
+        },
+        "confirmed_since_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "consumed_samples": {
+          "$ref": "#/$defs/typed"
+        },
+        "credited_motion": {
+          "$ref": "#/$defs/typed"
+        },
+        "deferred_demand": {
+          "$ref": "#/$defs/typed"
+        },
+        "deferred_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "delay_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "direction": {
+          "$ref": "#/$defs/typed"
+        },
+        "direction_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "directional_obligation": {
+          "$ref": "#/$defs/typed"
+        },
+        "episode_progress": {
+          "$ref": "#/$defs/typed"
+        },
+        "epoch": {
+          "$ref": "#/$defs/typed"
+        },
+        "epoch_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "epoch_number": {
+          "$ref": "#/$defs/typed"
+        },
+        "last_command": {
+          "$ref": "#/$defs/typed"
+        },
+        "last_measurement_id": {
+          "$ref": "#/$defs/typed"
+        },
+        "last_time_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "last_valid_state": {
+          "$ref": "#/$defs/typed"
+        },
+        "latest_demand": {
+          "$ref": "#/$defs/typed"
+        },
+        "lifecycle_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "material_delta": {
+          "$ref": "#/$defs/typed"
+        },
+        "max_age_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "measurement_unavailable_since_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "minimum_motion": {
+          "$ref": "#/$defs/typed"
+        },
+        "oldest_unresolved_demand_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "previous_observation": {
+          "$ref": "#/$defs/typed"
+        },
+        "progress_pair": {
+          "$ref": "#/$defs/typed"
+        },
+        "progress_pair_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "published_progress_epoch_id": {
+          "$ref": "#/$defs/typed"
+        },
+        "qualified_progress_seen": {
+          "$ref": "#/$defs/typed"
+        },
+        "ramp": {
+          "$ref": "#/$defs/typed"
+        },
+        "records": {
+          "$ref": "#/$defs/typed"
+        },
+        "release_delay_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "resolved_pair": {
+          "$ref": "#/$defs/typed"
+        },
+        "resolved_pair_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "response_history": {
+          "$ref": "#/$defs/typed"
+        },
+        "restored_motion_after_confirmation": {
+          "$ref": "#/$defs/typed"
+        },
+        "sample_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "startup_demand_suspended": {
+          "$ref": "#/$defs/typed"
+        },
+        "startup_observation": {
+          "$ref": "#/$defs/typed"
+        },
+        "startup_outage_direction": {
+          "$ref": "#/$defs/typed"
+        },
+        "state": {
+          "$ref": "#/$defs/typed"
+        },
+        "suspect_expected": {
+          "$ref": "#/$defs/typed"
+        },
+        "suspect_ratio": {
+          "$ref": "#/$defs/typed"
+        },
+        "suspected_since_ns": {
+          "$ref": "#/$defs/typed"
+        },
+        "tau_s": {
+          "$ref": "#/$defs/typed"
+        },
+        "tracking_tolerance": {
+          "$ref": "#/$defs/typed"
+        },
+        "transitions": {
+          "$ref": "#/$defs/typed"
+        },
+        "watch": {
+          "$ref": "#/$defs/typed"
+        },
+        "watch_events": {
+          "$ref": "#/$defs/typed"
+        },
+        "watch_number": {
+          "$ref": "#/$defs/typed"
+        }
+      },
+      "required": [
+        "_evaluation_allowed",
+        "carried_suspicion_evidence",
+        "confirm_expected",
+        "confirm_ratio",
+        "confirm_samples",
+        "confirmed_latched",
+        "confirmed_since_ns",
+        "consumed_samples",
+        "credited_motion",
+        "deferred_demand",
+        "deferred_events",
+        "delay_ns",
+        "direction",
+        "direction_events",
+        "directional_obligation",
+        "episode_progress",
+        "epoch",
+        "epoch_events",
+        "epoch_number",
+        "last_command",
+        "last_measurement_id",
+        "last_time_ns",
+        "last_valid_state",
+        "latest_demand",
+        "lifecycle_events",
+        "material_delta",
+        "max_age_ns",
+        "measurement_unavailable_since_ns",
+        "minimum_motion",
+        "oldest_unresolved_demand_ns",
+        "previous_observation",
+        "progress_pair",
+        "progress_pair_events",
+        "published_progress_epoch_id",
+        "qualified_progress_seen",
+        "ramp",
+        "records",
+        "release_delay_ns",
+        "resolved_pair",
+        "resolved_pair_events",
+        "response_history",
+        "restored_motion_after_confirmation",
+        "sample_ns",
+        "startup_demand_suspended",
+        "startup_observation",
+        "startup_outage_direction",
+        "state",
+        "suspect_expected",
+        "suspect_ratio",
+        "suspected_since_ns",
+        "tau_s",
+        "tracking_tolerance",
+        "transitions",
+        "watch",
+        "watch_events",
+        "watch_number"
+      ],
+      "type": "object"
+    },
+    "frame": {
+      "additionalProperties": false,
+      "properties": {
+        "PLC": {
+          "additionalProperties": false,
+          "properties": {
+            "command": {
+              "type": "number"
+            },
+            "command_id": {
+              "type": "string"
+            },
+            "issue_ns": {
+              "type": "integer"
+            },
+            "numeric_hardware_authorization": {
+              "const": "OUT_OF_SCOPE"
+            },
+            "phase": {
+              "const": "PLC"
+            },
+            "plc_cycle_id": {
+              "type": "string"
+            },
+            "producer": {
+              "const": "SIMULATED_PLC"
+            },
+            "record_id": {
+              "type": "string"
+            },
+            "safety_digest": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "safety_id": {
+              "type": "string"
+            },
+            "scope": {
+              "const": "SIMULATED_PLC_CAUSAL_OWNERSHIP"
+            },
+            "time_ns": {
+              "type": "integer"
+            },
+            "transaction_id": {
+              "type": "string"
+            },
+            "value_scope": {
+              "const": "FIXTURE_EXOGENOUS_COMMAND_VALUE"
+            }
+          },
+          "required": [
+            "phase",
+            "record_id",
+            "transaction_id",
+            "time_ns",
+            "producer",
+            "scope",
+            "value_scope",
+            "numeric_hardware_authorization",
+            "command",
+            "issue_ns",
+            "command_id",
+            "plc_cycle_id",
+            "safety_id",
+            "safety_digest"
+          ],
+          "type": "object"
+        },
+        "POST": {
+          "additionalProperties": false,
+          "properties": {
+            "confirmed_latched": {
+              "type": "boolean"
+            },
+            "enrolled_new_command": {
+              "type": "boolean"
+            },
+            "phase": {
+              "const": "POST"
+            },
+            "plc_id": {
+              "type": "string"
+            },
+            "pre_id": {
+              "type": "string"
+            },
+            "record_id": {
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "STEADY_TRACKING",
+                "HANDOFF_PENDING",
+                "TRACKING_PROGRESS",
+                "TRACKING_FAULT_SUSPECTED",
+                "TRACKING_FAULT_CONFIRMED",
+                "INSUFFICIENT_MEASUREMENT"
+              ]
+            },
+            "time_ns": {
+              "type": "integer"
+            },
+            "transaction_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "phase",
+            "record_id",
+            "transaction_id",
+            "time_ns",
+            "pre_id",
+            "plc_id",
+            "state",
+            "confirmed_latched",
+            "enrolled_new_command"
+          ],
+          "type": "object"
+        },
+        "PRE": {
+          "additionalProperties": false,
+          "properties": {
+            "contribution": {
+              "additionalProperties": false,
+              "properties": {
+                "reason_codes": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "restriction": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "severity": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "severity",
+                "reason_codes",
+                "restriction"
+              ],
+              "type": "object"
+            },
+            "core_digest": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "evidence_commit_id": {
+              "type": "string"
+            },
+            "measurement": {
+              "additionalProperties": false,
+              "properties": {
+                "measured_speed": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "measurement_record_id": {
+                  "type": "string"
+                },
+                "provenance": {
+                  "enum": [
+                    "CERTIFIED_INTERVAL_END",
+                    "POST_COMMAND_EFFECT",
+                    "UNKNOWN"
+                  ]
+                },
+                "quality": {
+                  "type": "string"
+                },
+                "release_ns": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "sample_ns": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "time_ns": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "time_ns",
+                "measured_speed",
+                "sample_ns",
+                "release_ns",
+                "quality",
+                "measurement_record_id",
+                "provenance"
+              ],
+              "type": "object"
+            },
+            "old_command": {
+              "additionalProperties": false,
+              "properties": {
+                "identity": {
+                  "type": "string"
+                },
+                "issue_ns": {
+                  "type": "integer"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "value",
+                "issue_ns",
+                "identity"
+              ],
+              "type": "object"
+            },
+            "old_epoch_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "phase": {
+              "const": "PRE"
+            },
+            "record_id": {
+              "type": "string"
+            },
+            "source_id": {
+              "type": "string"
+            },
+            "state": {
+              "enum": [
+                "STEADY_TRACKING",
+                "HANDOFF_PENDING",
+                "TRACKING_PROGRESS",
+                "TRACKING_FAULT_SUSPECTED",
+                "TRACKING_FAULT_CONFIRMED",
+                "INSUFFICIENT_MEASUREMENT"
+              ]
+            },
+            "time_ns": {
+              "type": "integer"
+            },
+            "transaction_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "phase",
+            "record_id",
+            "transaction_id",
+            "time_ns",
+            "measurement",
+            "old_command",
+            "old_epoch_id",
+            "state",
+            "contribution",
+            "evidence_commit_id",
+            "source_id",
+            "core_digest"
+          ],
+          "type": "object"
+        },
+        "SAFETY": {
+          "additionalProperties": false,
+          "properties": {
+            "independent_channels": {
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "severity": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code",
+                  "severity"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "numeric_envelope_authorization": {
+              "const": "OUT_OF_SCOPE"
+            },
+            "phase": {
+              "const": "SAFETY"
+            },
+            "pre_digest": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "pre_record_id": {
+              "type": "string"
+            },
+            "reason_codes": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "record_id": {
+              "type": "string"
+            },
+            "retained_fault_reasons": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "scope": {
+              "const": "SAFETY_MAPPING_POLICY_ASSERTION"
+            },
+            "severity": {
+              "type": "string"
+            },
+            "time_ns": {
+              "type": "integer"
+            },
+            "transaction_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "phase",
+            "record_id",
+            "transaction_id",
+            "time_ns",
+            "pre_record_id",
+            "pre_digest",
+            "severity",
+            "reason_codes",
+            "independent_channels",
+            "retained_fault_reasons",
+            "scope",
+            "numeric_envelope_authorization"
+          ],
+          "type": "object"
+        },
+        "access_log": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "actor": {
+                "enum": [
+                  "PRE",
+                  "SIMULATED_PLC"
+                ]
+              },
+              "command_id": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "PRIOR_COMMAND_READ",
+                  "MEASUREMENT_READ",
+                  "VERIFIED_OUTPUT_TOKEN",
+                  "DENIED_FUTURE_COMMAND_ACCESS"
+                ]
+              },
+              "name": {
+                "type": "string"
+              },
+              "record_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "actor",
+              "kind"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "after": {
+          "$ref": "#/$defs/core"
+        },
+        "authoritative_after": {
+          "$ref": "#/$defs/core"
+        },
+        "before": {
+          "$ref": "#/$defs/core"
+        },
+        "command_issue_status": {
+          "const": "ISSUED"
+        },
+        "commits": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "immutable_pre_digest": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "immutable_safety_digest": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "legacy_projection_bindings": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "authoritative_entry_digest": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "entry_index": {
+                "type": "integer"
+              },
+              "new_command_id": {
+                "type": "string"
+              },
+              "new_issue_ns": {
+                "type": "integer"
+              },
+              "obligation_id": {
+                "type": "string"
+              },
+              "old_command_id": {
+                "type": "string"
+              },
+              "old_issue_ns": {
+                "type": "integer"
+              },
+              "plc_digest": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "plc_id": {
+                "type": "string"
+              },
+              "policy": {
+                "const": "M1-SEM01-POST-LEGACY-HISTORY-v1"
+              },
+              "pre_core_digest": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "pre_digest": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "pre_id": {
+                "type": "string"
+              },
+              "projected_entry_digest": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "source_id": {
+                "type": "string"
+              },
+              "transaction_id": {
+                "type": "string"
+              },
+              "watch_id": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "policy",
+              "entry_index",
+              "transaction_id",
+              "pre_id",
+              "pre_digest",
+              "pre_core_digest",
+              "plc_id",
+              "plc_digest",
+              "source_id",
+              "watch_id",
+              "obligation_id",
+              "old_command_id",
+              "new_command_id",
+              "old_issue_ns",
+              "new_issue_ns",
+              "authoritative_entry_digest",
+              "projected_entry_digest"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "pre_core": {
+          "$ref": "#/$defs/core"
+        },
+        "status": {
+          "const": "COMPLETE"
+        }
+      },
+      "required": [
+        "before",
+        "pre_core",
+        "after",
+        "authoritative_after",
+        "PRE",
+        "SAFETY",
+        "PLC",
+        "POST",
+        "legacy_projection_bindings",
+        "immutable_pre_digest",
+        "immutable_safety_digest",
+        "access_log",
+        "commits",
+        "status",
+        "command_issue_status"
+      ],
+      "type": "object"
+    },
+    "input": {
+      "additionalProperties": false,
+      "properties": {
+        "command_timestamp_ns": {
+          "type": "integer"
+        },
+        "measured_speed": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "measurement_record_id": {
+          "type": "string"
+        },
+        "plc_command": {
+          "type": "number"
+        },
+        "quality": {
+          "type": "string"
+        },
+        "release_ns": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "sample_ns": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "time_ns": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "time_ns",
+        "plc_command",
+        "command_timestamp_ns",
+        "measured_speed",
+        "sample_ns",
+        "release_ns",
+        "quality",
+        "measurement_record_id"
+      ],
+      "type": "object"
+    },
+    "reference": {
+      "additionalProperties": false,
+      "properties": {
+        "after": {
+          "$ref": "#/$defs/core"
+        },
+        "before": {
+          "$ref": "#/$defs/core"
+        },
+        "derived_pre": {
+          "additionalProperties": false,
+          "properties": {
+            "active": {
+              "type": "boolean"
+            },
+            "core": {
+              "$ref": "#/$defs/core"
+            },
+            "eligible": {
+              "type": "boolean"
+            },
+            "evaluation": {
+              "type": [
+                "object",
+                "null"
+              ]
+            },
+            "kind": {
+              "const": "DERIVED_INDEPENDENT_OLD_INTERVAL_EXPECTATION_NOT_HISTORICAL_GOLDEN"
+            },
+            "old_command": {
+              "additionalProperties": false,
+              "properties": {
+                "identity": {
+                  "type": "string"
+                },
+                "issue_ns": {
+                  "type": "integer"
+                },
+                "value": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "value",
+                "issue_ns",
+                "identity"
+              ],
+              "type": "object"
+            },
+            "source_id": {
+              "type": "string"
+            },
+            "valid": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "kind",
+            "core",
+            "old_command",
+            "valid",
+            "eligible",
+            "active",
+            "source_id",
+            "evaluation"
+          ],
+          "type": "object"
+        },
+        "input_provenance": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "before",
+        "after",
+        "input_provenance",
+        "derived_pre"
+      ],
+      "type": "object"
+    },
+    "typed": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "enum": [
+                "none",
+                "absent"
+              ]
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "bool"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "int"
+            },
+            "value": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "const": "str"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "value"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "bits": {
+              "pattern": "^[0-9a-f]{16}$",
+              "type": "string"
+            },
+            "type": {
+              "const": "float64"
+            }
+          },
+          "required": [
+            "type",
+            "bits"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "items": {
+              "items": {
+                "$ref": "#/$defs/typed"
+              },
+              "type": "array"
+            },
+            "type": {
+              "enum": [
+                "list",
+                "tuple",
+                "set"
+              ]
+            }
+          },
+          "required": [
+            "type",
+            "items"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "fields": {
+              "additionalProperties": {
+                "$ref": "#/$defs/typed"
+              },
+              "type": "object"
+            },
+            "type": {
+              "const": "dict"
+            }
+          },
+          "required": [
+            "type",
+            "fields"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "class": {
+              "type": "string"
+            },
+            "fields": {
+              "additionalProperties": {
+                "$ref": "#/$defs/typed"
+              },
+              "type": "object"
+            },
+            "type": {
+              "const": "dataclass"
+            }
+          },
+          "required": [
+            "type",
+            "class",
+            "fields"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
+
