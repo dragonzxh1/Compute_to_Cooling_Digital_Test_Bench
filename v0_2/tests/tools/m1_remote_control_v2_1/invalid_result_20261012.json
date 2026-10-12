@@ -1,0 +1,288 @@
+{
+  "stages": [
+    {
+      "status": "PASS",
+      "result_raw_sha256": "14389ca20838114613ec8d2fd0c9220e7734a0be6c2a6761b4a79cc4d0ba9ea1",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 1028,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "ENVIRONMENT"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "c8124171cc820e67c898d7d7be623e243c2160fdd1d68e6040be048e81d85151",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 5160,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "INPUT_INTEGRITY"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "c8d688414a30a778f088d426144c31c6d2569ae2e9ab73f5dbfcb02aa40e2500",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 3920,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CORE_IDENTITY"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "9aa25ef08a8aaa2ae883d740bb50d4bf5c5f0503e5cbc0c72abd4d642773ae3d",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 2568,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CORE_UNIT_PROJECTION"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "aabe5b2f45567124ec4c7e9efdbf0cb25706a69d3a48a33998eb62400c837422",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 5444,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CORE_UNIT_STATE_COPY"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "d1d8c28c27badf15089c0ff67eed73246833fa75125f099822a28a1b3424b6e3",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 5572,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CORE_UNIT_INFRASTRUCTURE"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "0d52f836619acc1d30278f319e217e3409c37348b08768defbdc3c5609a33bab",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 1180,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CORE_UNIT_CAMPAIGN_PROTOCOL"
+    },
+    {
+      "status": "PASS",
+      "result_raw_sha256": "b37f41f14b176429d8fcdfe20e1bb7bede94398fa50d932ca6b50fb067613686",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 3028,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CMP_NEGATIVE"
+    },
+    {
+      "status": "INVALID",
+      "result_raw_sha256": "12107b4328f3467de499bd69e8a96b71d09cc571aa6e806d72498c4fb547c279",
+      "native": {
+        "outcome": "EXITED",
+        "child_exitcode": 1,
+        "pid": 7408,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage_id": "CASE-065-REFERENCE"
+    }
+  ],
+  "hashes": {
+    "batch_stop.json": "173244d31784dd8146224758578eab74325b877872fec3776f37d167fcdf9b4c",
+    "CASE-065-REFERENCE/stderr.raw": "8dc0da5a101b41c38d46068057960b9f2e2b9d161b8ecc4aa9aa2839f01d4aef",
+    "CASE-065-REFERENCE/progress.jsonl": "81da0d5c20cf0e49983f538aa0231be00918ce0421239a8e4f91145939f64974",
+    "CASE-065-REFERENCE/native_failure_audit.json": "1d0f5821f483ba59763be8ed5e462cc5f1f9bda05da462232f5812ef9eadf3be"
+  },
+  "fresh_unit_groups": [
+    {
+      "tests": 12,
+      "status": "PASS",
+      "id": "CORE_UNIT_PROJECTION"
+    },
+    {
+      "tests": 3,
+      "status": "PASS",
+      "id": "CORE_UNIT_STATE_COPY"
+    },
+    {
+      "tests": 8,
+      "status": "PASS",
+      "id": "CORE_UNIT_INFRASTRUCTURE"
+    },
+    {
+      "tests": 4,
+      "status": "PASS",
+      "id": "CORE_UNIT_CAMPAIGN_PROTOCOL"
+    }
+  ],
+  "all_planned_stage_states": [
+    {
+      "stage_id": "ENVIRONMENT",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "INPUT_INTEGRITY",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CORE_IDENTITY",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CORE_UNIT_PROJECTION",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CORE_UNIT_STATE_COPY",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CORE_UNIT_INFRASTRUCTURE",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CORE_UNIT_CAMPAIGN_PROTOCOL",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CMP_NEGATIVE",
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "stage_id": "CASE-065-REFERENCE",
+      "status": "INVALID"
+    },
+    {
+      "stage_id": "CASE-065-SELECT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-065-SPLIT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-065-PREFIX_ONE-161",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-REFERENCE",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-SELECT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-SPLIT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-PREFIX_ONE-161",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-REFERENCE",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-SELECT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-SPLIT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-PREFIX_ONE-51",
+      "status": "NOT_RUN"
+    }
+  ],
+  "status": "INVALID_LONG_TRACE_EXECUTION_MEMORY_ERROR_AFTER_FRESH_CORE_PASS",
+  "run_id": 38203955762,
+  "source_commit": "5ba7d238ee1c7dbe5e513714a3323f922ce1ec3f",
+  "engine_manifest_raw_sha256": "e24f4230bfead0c3307d78abf1dfb7ba589fc4ef0c008b37796c8b55c0c25594",
+  "control_manifest_raw_sha256": "0767acfeda3af76c25f431cf97eb7e313bee4aea73182c66d934221c96493960",
+  "raw_receipt_checks": 36,
+  "fresh_total_unit_pass": 27,
+  "fresh_CMP_checks_pass": 18,
+  "failed_stage": "CASE-065-REFERENCE",
+  "exception": "MemoryError",
+  "failure_site": "observer.observe -> codec.encode during derived PRE observation",
+  "last_started_reference_tick_zero_based": 116,
+  "last_started_simulation_time_ns": 23200000000,
+  "process_memory_limit_mib": 256,
+  "job_memory_limit_mib": 512,
+  "peak_commit_measured": false,
+  "retained_full_history_snapshots_cause": "STRUCTURAL_QUADRATIC_GROWTH_FROM_RETAINED_COMPLETE_FRAMES_CODE_ANALYSIS_NOT_PEAK_MEMORY_MEASUREMENT",
+  "candidate_behavioral_adjudication": "NOT_MADE",
+  "long_trace_status": "INCOMPLETE",
+  "long_prefix_status": "NOT_RUN",
+  "full_campaign": "NOT_RUN",
+  "original_host_hard_hang_root_cause": "NOT_PROVEN",
+  "local_python_started": false,
+  "sealed_engine_changed": false,
+  "original_tests_changed": false,
+  "formal_qualification": false,
+  "production": false,
+  "phase6": false,
+  "full_P_history_available": false,
+  "hardware": "CALIBRATION_REQUIRED",
+  "next_action": "VERSIONED_STREAMING_TRACE_STORAGE_WITH_FULL_56_FIELDS_ALL_HISTORY_AND_FRESH_REVALIDATION_NO_MEMORY_LIMIT_INCREASE"
+}
