@@ -1,0 +1,114 @@
+{
+  "status": "INVALID_DEVELOPMENT_EXECUTION_NATIVE_TIMEOUT",
+  "run_id": 38203137214,
+  "tested_source_commit": "d5c484842c2f644619d6999d328cde0d54fae545",
+  "failed_stage": "CORE_SELF_CHECK",
+  "native": {
+    "outcome": "TIMEOUT",
+    "child_exitcode": 0,
+    "pid": 8120,
+    "assigned_before_resume": true,
+    "resumed": true,
+    "cleanup_complete": true,
+    "active_after_cleanup": 0,
+    "error": ""
+  },
+  "stage_states": [
+    {
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED",
+      "stage_id": "ENVIRONMENT"
+    },
+    {
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED",
+      "stage_id": "INPUT_INTEGRITY"
+    },
+    {
+      "status": "INVALID",
+      "stage_id": "CORE_SELF_CHECK"
+    },
+    {
+      "stage_id": "CMP_NEGATIVE",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-065-REFERENCE",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-065-SELECT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-065-SPLIT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-065-PREFIX_ONE-161",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-REFERENCE",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-SELECT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-SPLIT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-066-PREFIX_ONE-161",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-REFERENCE",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-SELECT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-SPLIT",
+      "status": "NOT_RUN"
+    },
+    {
+      "stage_id": "CASE-092-PREFIX_ONE-51",
+      "status": "NOT_RUN"
+    }
+  ],
+  "raw_receipt_checks": 12,
+  "raw_hashes": {
+    "ENVIRONMENT/job_status.json": "b91133feaef6ca3e39e501669851e465c0d893b54c04024d22b6bd2ad27f342b",
+    "ENVIRONMENT/progress.jsonl": "b0744dbb625fd039febe75c4235186c0d623fc4a1a3dbaba393348dcb336bd56",
+    "ENVIRONMENT/raw_evidence_receipts.json": "4ca4f12c42a1b28ea147c17abe142aa0cf461324baaa2f9bded8da5850a93e78",
+    "ENVIRONMENT/stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ENVIRONMENT/external_job_identity.json": "9efa527ba20db430a57eca3717c5b48d5a5855ef12b275e77f40494216313902",
+    "INPUT_INTEGRITY/job_status.json": "4f01b1d4b312b4ae6ae7f0f0b515fc95b4e126eec3f00bbae744c6d2f2df06cb",
+    "INPUT_INTEGRITY/progress.jsonl": "78b88bdcbcef09dd6373b78d0bc181aa71215b95c82423e382226ea367e2bad2",
+    "INPUT_INTEGRITY/raw_evidence_receipts.json": "4ca4f12c42a1b28ea147c17abe142aa0cf461324baaa2f9bded8da5850a93e78",
+    "INPUT_INTEGRITY/stderr.raw": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "INPUT_INTEGRITY/external_job_identity.json": "70e12386ce587b96e11f35cc992c933ce51afb6422f11e015d81593d721bd2cf",
+    "CORE_SELF_CHECK/job_status.json": "7dc7dcc4518440bffb108494ab0cb6473d298e8f7d389b77b565b9a868e07eda",
+    "CORE_SELF_CHECK/progress.jsonl": "0f59039a687a61e6c9ab206ff9e53aff05e831e45bd6c8f46dc7edf803bf6027",
+    "CORE_SELF_CHECK/raw_evidence_receipts.json": "c6b353c22087cad25c98c3c5acac4f85dde3007de6bbbd071c7386dd637c282b",
+    "CORE_SELF_CHECK/stderr.raw": "3bbeb0cb7888a772e7a383ecce941124cfe6f0b98b779e48935165d7bede71bd",
+    "CORE_SELF_CHECK/external_job_identity.json": "105b091f511f6c071c4461479acc4d9d65fb726deb542fef0fc8d8ea6b06e8f8"
+  },
+  "batch_stop_raw_sha256": "59775a7492fb07245735473307c738c81a40eec3ef8ccca40049264b99676a1c",
+  "old_pilot_core_unit_seconds": 107.469,
+  "old_pilot_core_logged_seconds": 116.265,
+  "completed_unit_tests_before_timeout": 26,
+  "candidate_behavioral_adjudication": "NOT_MADE",
+  "long_cases": "NOT_RUN",
+  "full_campaign": "NOT_RUN",
+  "old_evidence_rewritten": false,
+  "local_python_started": false,
+  "formal_qualification": false,
+  "production": false,
+  "phase6": false
+}
