@@ -1,0 +1,33 @@
+{
+  "native_execution_readback": {
+    "local_python_native_model_executed": false,
+    "run_id": 38269665488,
+    "readback": "PASS",
+    "original_pytest_child_fail_preserved_inside_accepted_versioned_worker": true,
+    "full_campaign": "INCOMPLETE",
+    "native_stages_verified": 150,
+    "actual_pid_job_cpu2500_process1024_job2048_cleanup": "PASS",
+    "raw_captures_verified": 600,
+    "original_startup": "49/50",
+    "versioned_compatibility": "PENDING_FINAL_AGGREGATE",
+    "native_batches_verified": 50,
+    "scope": "M1_REMOTE_DEVELOPMENT_ONLY"
+  },
+  "original_startup_readback": {
+    "source_raw_sha256": "6c2e67d2a9f75e5a8f46b0cce1f1741b6ec6ed34bc1323b02779862fa1293f08",
+    "scope": "M1_REMOTE_DEVELOPMENT_ONLY",
+    "source_commit": "9b487ce88143b5bd8f6f537af9f7b2629fa4e27f",
+    "historical_original_result": "49/50",
+    "local_python_native_model_executed": false,
+    "run_id": 38269665488,
+    "nodes_with_legacy_or_quarantine_domain_events": 5,
+    "legacy_failure_identity": "EXACT_MATCH",
+    "phase_reports_verified": 150,
+    "readback": "PASS",
+    "receipt_files_hashed": 200,
+    "versioned_compatibility": "PENDING_FINAL_AGGREGATE",
+    "failed_node": "v0_2/tests/control/test_phase5_r5_2_1r4_3_startup.py::test_startup_demand_with_suspicion_suspends_then_reintroduces",
+    "full_campaign": "INCOMPLETE",
+    "assertion_line": 144
+  }
+}
