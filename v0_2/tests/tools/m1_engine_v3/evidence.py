@@ -35,7 +35,10 @@ def verify(item):
     if actual!=item:raise ValueError('ARTIFACT_INTEGRITY_DRIFT')
     if path.with_suffix('.trace_index.json').exists():
         from .stream_trace import TraceReader
-        frames=TraceReader(path,item);frames.verify_all()
+        # Writer validates every full frame before publishing the receipt; later
+        # uses recheck all bytes/reassembly. Final campaign performs fresh schema
+        # readback per case, avoiding repeated full JSON decoding per PF witness.
+        frames=TraceReader(path,item);frames.verify_headers()
         return {**frames.metadata,'frames':frames}
     return json.loads(path.read_bytes()) if path.suffix=='.json' else path.read_bytes()
 

@@ -1,11 +1,12 @@
 param([Parameter(Mandatory)][string]$Python,
       [Parameter(Mandatory)][string]$ExpectedCommit,
       [Parameter(Mandatory)][string]$ExpectedManifestSha256,
-      [Parameter(Mandatory)][ValidateSet('LONG','CHECKS','REFERENCE','SELECT','SPLIT','PREFIX','STARTUP','FINAL')][string]$Mode,
+      [Parameter(Mandatory)][ValidateSet('LONG','CHECKS','REFERENCE','SELECT','SPLIT','PREFIX','STARTUP','SCHEMA','REFERENCE_GATE','FINAL')][string]$Mode,
       [string]$JobKey='long-pilot',
       [string]$IndicesCsv,
       [string]$RuntimePlanPath,
-      [string]$ExpectedPlanSha256)
+      [string]$ExpectedPlanSha256,
+      [ValidateSet('STRICT','CAMPAIGN')][string]$MemoryProfile='STRICT')
 $ErrorActionPreference='Stop'
 Set-StrictMode -Version Latest
 $taskRepo=(Resolve-Path (Join-Path $PSScriptRoot '../../../..')).Path
@@ -51,6 +52,18 @@ function Verify-RecoverySources {
 }
 Verify-RecoverySources
 . (Join-Path $taskRepo 'v0_2/tests/tools/liquid_recovery_v1/batch.ps1')
+$taskBuildRoot=Join-Path $taskRepo 'artifacts/m1-remote-executor-v1/build'
+if(-not(Test-Path -LiteralPath (Join-Path $taskBuildRoot 'build_identity.json'))){& (Join-Path $taskRepo 'v0_2/tests/tools/m1_remote_executor_v1/build.ps1')}
+$taskBuildIdentity=Get-Content -LiteralPath (Join-Path $taskBuildRoot 'build_identity.json') -Raw|ConvertFrom-Json
+$taskBinaryHashes=[ordered]@{}
+foreach($taskName in @('ControlledJob','VerifyTarget')){
+    $taskExe=Join-Path $taskBuildRoot ($taskName+'.exe')
+    $taskSha=(Get-FileHash -LiteralPath $taskExe -Algorithm SHA256).Hash.ToLowerInvariant()
+    if($taskSha -cne $taskBuildIdentity.source_and_binary_hashes.PSObject.Properties[$taskName].Value.binary_raw_sha256){throw 'REMOTE_EXECUTOR_BINARY_DRIFT'}
+    $taskBinaryHashes['artifacts/m1-remote-executor-v1/build/'+$taskName+'.exe']=$taskSha
+}
+$taskProcessMb=if($MemoryProfile -ceq 'STRICT'){256}else{1024}
+$taskJobMb=if($MemoryProfile -ceq 'STRICT'){512}else{2048}
 $taskRunKey='stream-'+$env:GITHUB_RUN_ID+'-'+$env:GITHUB_RUN_ATTEMPT
 $taskBaseRoot=Join-Path $taskRepo ('artifacts/m1-autonomous-development/'+$taskRunKey+'/cases')
 $env:C2C_M1_REFERENCE_ROOT=$taskBaseRoot
@@ -86,10 +99,13 @@ function Quote-RecoveryArgument([string]$Value) {
     $null=$taskBuilder.Append('\',2*$taskSlashes); $null=$taskBuilder.Append('"')
     return $taskBuilder.ToString()
 }
-$null=Invoke-RecoveryBatch -StageIds $taskStageIds -OutputRoot $taskRoot -Scope INDEPENDENT_DEVELOPMENT -InvokeStage {
+$taskInvokeStage={
     param($Id,$BatchRoot)
     Write-Host ('STAGE_BEGIN '+$Id+' UTC='+[DateTime]::UtcNow.ToString('o'))
     Verify-RecoverySources
+    foreach($taskBinding in $taskBinaryHashes.GetEnumerator()){
+        if((Get-FileHash -LiteralPath (Join-Path $taskRepo $taskBinding.Key) -Algorithm SHA256).Hash.ToLowerInvariant() -cne $taskBinding.Value){throw 'REMOTE_EXECUTOR_BINARY_DRIFT'}
+    }
     foreach($taskBinding in $taskRuntimeInputs.GetEnumerator()) {
         if((Get-FileHash -LiteralPath (Join-Path $taskRepo $taskBinding.Key) -Algorithm SHA256).Hash.ToLowerInvariant() -cne $taskBinding.Value){throw 'FRESH_BASE_EVIDENCE_DRIFT'}
     }
@@ -99,10 +115,11 @@ $null=Invoke-RecoveryBatch -StageIds $taskStageIds -OutputRoot $taskRoot -Scope 
     $taskStart=Join-Path $taskStageRoot 'job_start.json'
     $taskCancel=Join-Path $taskStageRoot 'cancel.request'
     $taskStdout=Join-Path $taskStageRoot 'stdout.raw'; $taskStderr=Join-Path $taskStageRoot 'stderr.raw'
-    $taskArgs=@($taskStatus,$taskStart,$taskCancel,$taskStdout,$taskStderr,'120000','100','256','512',
+    $taskWallMs=[string]($taskManifest.resource_policy.child_wall_seconds*1000)
+    $taskArgs=@($taskStatus,$taskStart,$taskCancel,$taskStdout,$taskStderr,$taskWallMs,'2500',[string]$taskProcessMb,[string]$taskJobMb,
         $Python,'-B','-m','v0_2.tests.tools.m1_remote_control_v3.remote_worker',$Id,$taskStageRoot)
     $taskArgLine=($taskArgs | ForEach-Object {Quote-RecoveryArgument ([string]$_)}) -join ' '
-    $taskProcess=Start-Process -FilePath (Join-Path $taskRepo 'artifacts/executor-safety-v2_1/build/ControlledJob.exe') `
+    $taskProcess=Start-Process -FilePath (Join-Path $taskBuildRoot 'ControlledJob.exe') `
         -ArgumentList $taskArgLine -WindowStyle Hidden -WorkingDirectory $taskRepo `
         -RedirectStandardOutput $taskStdout -RedirectStandardError $taskStderr -PassThru
     $taskVerifier=$null
@@ -115,20 +132,21 @@ $null=Invoke-RecoveryBatch -StageIds $taskStageIds -OutputRoot $taskRoot -Scope 
         $taskReady=Get-Content -LiteralPath (Join-Path $taskStageRoot 'ready.json') -Raw|ConvertFrom-Json
         $taskJob=Get-Content -LiteralPath $taskStart -Raw|ConvertFrom-Json
         $taskProofPath=Join-Path $taskStageRoot 'external_job_identity.json'
-        $taskVerifyArgs=@($taskJob.job_name,[string]$taskReady.pid,'256','512',$taskProofPath)
-        $taskVerifier=Start-Process -FilePath (Join-Path $taskRepo 'artifacts/runtime-isolation-v1/build/VerifyTarget.exe') `
+        $taskVerifyArgs=@($taskJob.job_name,[string]$taskReady.pid,[string]$taskProcessMb,[string]$taskJobMb,$taskProofPath,'2500')
+        $taskVerifier=Start-Process -FilePath (Join-Path $taskBuildRoot 'VerifyTarget.exe') `
             -ArgumentList (($taskVerifyArgs|ForEach-Object {Quote-RecoveryArgument ([string]$_)}) -join ' ') `
             -WindowStyle Hidden -RedirectStandardOutput (Join-Path $taskStageRoot 'verify_stdout.raw') `
             -RedirectStandardError (Join-Path $taskStageRoot 'verify_stderr.raw') -PassThru
         if(-not $taskVerifier.WaitForExit(5000) -or $taskVerifier.ExitCode -ne 0) {throw 'ACTUAL_JOB_IDENTITY_VERIFICATION_FAILED'}
         $taskProof=Get-Content -LiteralPath $taskProofPath -Raw|ConvertFrom-Json
-        if($taskProof.in_target_job -ne $true -or $taskProof.actual_python_pid -ne $taskReady.pid) {throw 'ACTUAL_JOB_IDENTITY_PROOF_MISMATCH'}
+        if($taskProof.in_target_job -ne $true -or $taskProof.actual_python_pid -ne $taskReady.pid -or
+           $taskProof.cpu_rate -ne 2500 -or $taskProof.process_mb -ne $taskProcessMb -or $taskProof.job_mb -ne $taskJobMb){throw 'ACTUAL_JOB_IDENTITY_PROOF_MISMATCH'}
         $null=Write-RecoveryJson (Join-Path $taskStageRoot 'release.json') @{
             actual_python_pid=$taskReady.pid; external_proof_raw_sha256=(Get-FileHash -LiteralPath $taskProofPath -Algorithm SHA256).Hash.ToLowerInvariant()
         }
         $taskSamples=@()
         while(-not $taskProcess.WaitForExit(5000)) {
-            if($taskTimer.ElapsedMilliseconds -gt 135000){throw 'NATIVE_HELPER_TIMEOUT'}
+            if($taskTimer.ElapsedMilliseconds -gt [long]$taskWallMs+15000){throw 'NATIVE_HELPER_TIMEOUT'}
             try {
                 $taskActualProcess=Get-Process -Id $taskReady.pid -ErrorAction Stop
                 $taskSamples+=@{pid=$taskReady.pid;utc=[DateTime]::UtcNow.ToString('o');private_bytes=$taskActualProcess.PrivateMemorySize64;working_set_bytes=$taskActualProcess.WorkingSet64}
@@ -191,6 +209,8 @@ $null=Invoke-RecoveryBatch -StageIds $taskStageIds -OutputRoot $taskRoot -Scope 
             execution_manifest_raw_sha256=$ExpectedManifestSha256
             remote_adapter_version='M1_REMOTE_V3_COMPLETE_STREAMED_EVIDENCE'
             runtime_input_raw_hashes=$taskRuntimeInputs
+            runtime_binary_raw_hashes=$taskBinaryHashes
+            resource_profile=$MemoryProfile;cpu_rate_per_10000=2500;process_mb=$taskProcessMb;job_mb=$taskJobMb
         }
         $env:C2C_M1_REMOTE_ENVIRONMENT_PATH=$taskRegistration
     }
@@ -201,6 +221,33 @@ $null=Invoke-RecoveryBatch -StageIds $taskStageIds -OutputRoot $taskRoot -Scope 
         active_after_cleanup=$taskNative.active_after_cleanup; launcher_exitcode=$taskProcess.ExitCode
         child_exitcode=$taskNative.child_exitcode; native_outcome=$taskNative.outcome
         capture_status='COMPLETE'; result_status=$taskResult.status; passed=($taskResult.status -ceq 'PASS')}
+}
+$null=Invoke-RecoveryBatch -StageIds $taskStageIds -OutputRoot $taskRoot -Scope INDEPENDENT_DEVELOPMENT -InvokeStage $taskInvokeStage
+if($Mode -eq 'PREFIX'){
+    $taskIndex=[int]$IndicesCsv
+    $taskCaseDir=Join-Path $taskBaseRoot ('{0:d3}' -f $taskIndex)
+    $taskInventory=Get-Content -LiteralPath (Join-Path $taskCaseDir 'prefix_inventory.json') -Raw|ConvertFrom-Json
+    $taskSerial=0
+    while($true){
+        $taskRemaining=@($taskInventory.selected_prefix_lengths|Where-Object{-not(Test-Path -LiteralPath (Join-Path $taskCaseDir ('prefix-{0:d6}-result.json' -f $_)))})
+        if(-not $taskRemaining.Count){break}
+        $taskSerial++
+        $taskRequested=@($taskRemaining|Select-Object -First 6)
+        $env:C2C_M1_PREFIX_BATCH_LENGTHS=ConvertTo-Json -InputObject $taskRequested -Compress
+        $taskId='CASE-{0:d3}-PREFIX_BATCH-{1:d3}' -f $taskIndex,$taskSerial
+        $taskBatchRoot=Join-Path $taskRepo ('artifacts/liquid-recovery-v1/'+$taskRunKey+'/'+$JobKey+('-batch-{0:d3}' -f $taskSerial))
+        $null=Invoke-RecoveryBatch -StageIds @($taskId) -OutputRoot $taskBatchRoot -Scope INDEPENDENT_DEVELOPMENT -InvokeStage $taskInvokeStage
+        $taskPayload=(Get-Content -LiteralPath (Join-Path $taskBatchRoot ($taskId+'/result.json')) -Raw|ConvertFrom-Json).payload
+        if(-not @($taskPayload.completed_lengths).Count -or @($taskPayload.completed_lengths|Where-Object{$_ -notin $taskRequested}).Count){throw 'PREFIX_BATCH_COVERAGE_IDENTITY_INVALID'}
+    }
+    foreach($taskLength in $taskInventory.selected_prefix_lengths){
+        $taskResult=Get-Content -LiteralPath (Join-Path $taskCaseDir ('prefix-{0:d6}-result.json' -f $taskLength)) -Raw|ConvertFrom-Json
+        if($taskResult.status -cne 'PASS' -or $taskResult.starts_from_t0 -ne $true -or $taskResult.compared_complete_frames -ne $taskLength -or @($taskResult.replayed_prefix_lengths).Count -ne 1 -or $taskResult.replayed_prefix_lengths[0] -ne $taskLength){throw 'PREFIX_CASE_INCOMPLETE_OR_FAIL'}
+    }
+    $taskInvReceipt=Get-Content -LiteralPath (Join-Path $taskCaseDir 'prefix_inventory_receipt.json') -Raw|ConvertFrom-Json
+    $null=Write-RecoveryJson (Join-Path $taskCaseDir 'prefix_result.json') @{
+        status='PASS';inventory_receipt=$taskInvReceipt;selected_count=@($taskInventory.selected_prefix_lengths).Count;failures=@()
+    }
 }
 Verify-RecoverySources
 Write-Output ('REMOTE_STREAM_DEVELOPMENT_COMPLETE: '+$taskRoot)

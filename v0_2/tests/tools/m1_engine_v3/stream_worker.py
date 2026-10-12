@@ -109,7 +109,7 @@ def execute(kind, index, directory, lock_path, *, prefix_length=None, repeat_ind
         stage = verify(receipt(directory/'stage_result.json'))
         if stage['status']!='PASS':
             raise ValueError('PREFIX_REQUIRES_VALID_STAGE')
-        full_split = TraceReader(directory/'split.json',stage['split_receipt']); full_split.verify_all()
+        full_split = TraceReader(directory/'split.json',stage['split_receipt']); full_split.verify_headers()
         prefix_dir = directory/'prefixes'/('%06d'%prefix_length)
         prefix_dir.mkdir(parents=True,exist_ok=False)
         ref_iter = reference_frames(rows[:prefix_length],profile,classifier,replay_kind=descriptor['replay_kind'])

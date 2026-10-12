@@ -61,11 +61,49 @@ def execute(stage, root):
         if index not in (0,12,15,65):raise ValueError('UNREGISTERED_EQUIVALENCE_INPUT')
         from v0_2.tests.tools.m1_engine_v3.test_stream import equivalence
         return equivalence(index,root/stage)
+    if stage=='STARTUP_COLLECT':
+        from v0_2.tests.tools.m1_engine_v3.startup_execution import collect
+        data=collect(root/'startup_collection')
+        write(Path(os.environ['C2C_M1_REFERENCE_ROOT']).parent/'startup_inventory.json',data)
+        return data
+    if stage.startswith('STARTUP-'):
+        from v0_2.tests.tools.m1_engine_v3.startup_execution import execute as startup_execute
+        inventory=Path(os.environ['C2C_M1_REFERENCE_ROOT']).parent/'startup_inventory.json'
+        return startup_execute(int(stage.split('-')[1]),inventory.parent/'startup'/('%03d'%int(stage.split('-')[1])),inventory)
+    if stage=='REFERENCE_GROUPS':
+        from v0_2.tests.tools.m1_engine_v3.final_validation import groups
+        return {'status':'PASS','groups':groups(os.environ['C2C_M1_REFERENCE_ROOT'],reference=True)}
+    if stage=='FINAL_ACCEPTANCE':
+        from v0_2.tests.tools.m1_engine_v3.final_validation import finalize
+        return finalize(Path(os.environ['C2C_M1_REFERENCE_ROOT']).parent)
     pieces=stage.split('-')
     if len(pieces)<3 or pieces[0]!='CASE':raise ValueError('UNKNOWN_STREAM_CONTROL_STAGE')
     index,kind=int(pieces[1]),pieces[2]
     if not 0<=index<101:raise ValueError('UNREGISTERED_DESCRIPTOR')
     from v0_2.tests.tools.m1_engine_v3.stream_worker import execute as run_stage
+    if kind=='SCHEMA':
+        from v0_2.tests.tools.m1_engine_v3.final_validation import case_schema
+        return case_schema(index,Path(os.environ['C2C_M1_REFERENCE_ROOT'])/('%03d'%index))
+    if kind=='PREFIX_BATCH':
+        import time
+        lengths=json.loads(os.environ['C2C_M1_PREFIX_BATCH_LENGTHS'])
+        if not lengths or len(lengths)!=len(set(lengths)) or any(type(n) is not int for n in lengths):
+            raise ValueError('PREFIX_BATCH_INVENTORY_INVALID')
+        directory=Path(os.environ['C2C_M1_REFERENCE_ROOT'])/('%03d'%index)
+        started=time.monotonic();completed=[]
+        for n in lengths:
+            # This is an external execution budget, NOT a tracking/fixture timer.
+            # Yield only between complete fresh-from-t0 replays, never within one.
+            if completed and time.monotonic()-started>=60:
+                break
+            result=run_stage('PREFIX_ONE',index,directory,root/'source_lock.json',prefix_length=n)
+            if result['status']!='PASS':
+                return {'status':'FAIL','completed_lengths':completed,'failed_prefix':n,'result':result}
+            completed.append(n)
+        if not completed:raise ValueError('PREFIX_BATCH_MADE_NO_PROGRESS')
+        return {'status':'PASS','coverage_status':'COMPLETE_BATCH' if len(completed)==len(lengths) else 'PARTIAL_BATCH_EXPLICIT_REMAINING',
+            'completed_lengths':completed,'remaining_lengths':lengths[len(completed):],
+            'each_replay_new_model_from_t0':True,'individual_result_files_required':True}
     kwargs={}
     if kind=='PREFIX_ONE':kwargs['prefix_length']=int(pieces[3])
     if kind=='REPEAT':kwargs['repeat_index']=int(pieces[3])

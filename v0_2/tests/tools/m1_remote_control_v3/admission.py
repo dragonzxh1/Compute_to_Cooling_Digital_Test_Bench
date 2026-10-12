@@ -47,7 +47,7 @@ def admit():
     data = manifest()
     if record['execution_manifest_raw_sha256'] != os.environ['C2C_M1_EXECUTION_MANIFEST_SHA256']:
         raise ValueError('M1_ENVIRONMENT_SOURCE_MANIFEST_MISMATCH')
-    for name, expected_hash in record.get('runtime_input_raw_hashes', {}).items():
+    for name, expected_hash in {**record.get('runtime_input_raw_hashes', {}), **record.get('runtime_binary_raw_hashes', {})}.items():
         path = (ROOT / name).resolve()
         if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
             raise ValueError('M1_FRESH_BASE_EVIDENCE_DRIFT: ' + name)

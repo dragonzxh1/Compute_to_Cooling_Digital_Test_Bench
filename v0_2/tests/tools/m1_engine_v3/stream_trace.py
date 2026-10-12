@@ -2,6 +2,7 @@
 import hashlib
 import json
 import os
+import zlib
 from collections.abc import Mapping, Sequence
 from pathlib import Path
 from .common import ROOT, Record, canonical, sha
@@ -57,9 +58,10 @@ class CompletedJournal(Mapping):
         if type(key) is not str or type(record) is not Record or key in self.entries:
             raise ValueError('COMPLETED_RECORD_IDENTITY_REQUIRED')
         raw = record.raw + b'\n'
+        stored = zlib.compress(raw, 1)
         offset = self.stream.tell()
-        self.stream.write(raw); self.stream.flush(); os.fsync(self.stream.fileno())
-        row = {'offset': offset, 'bytes': len(raw), 'raw_sha256': sha(raw)}
+        self.stream.write(stored); self.stream.flush(); os.fsync(self.stream.fileno())
+        row = {'offset': offset, 'bytes': len(raw), 'stored_bytes':len(stored), 'compression':'zlib', 'raw_sha256': sha(raw)}
         if read_row(self.path, row) != raw:
             raise IOError('COMPLETED_RECORD_READBACK_FAILED')
         self.entries[key] = row
@@ -80,7 +82,10 @@ class CompletedJournal(Mapping):
 
 def read_row(path, row):
     with Path(path).open('rb') as f:
-        f.seek(row['offset']); raw = f.read(row['bytes'])
+        f.seek(row['offset']); raw = f.read(row.get('stored_bytes',row['bytes']))
+    if row.get('compression') == 'zlib':
+        try:raw = zlib.decompress(raw)
+        except zlib.error as error:raise IOError('COMPRESSED_FRAME_CORRUPT') from error
     if len(raw) != row['bytes'] or not raw.endswith(b'\n') or sha(raw) != row['raw_sha256']:
         raise IOError('STREAM_FRAME_INTEGRITY_DRIFT')
     return raw
@@ -112,7 +117,7 @@ class TraceWriter:
         self.path = scoped(path)
         self.kind = kind
         self.journal = journal
-        self.frames_path = journal.path if journal else self.path.with_suffix('.frames.jsonl')
+        self.frames_path = journal.path if journal else self.path.with_suffix('.frames.zlib')
         self.stream = None if journal else self.frames_path.open('xb')
         self.rows = []
 
@@ -127,8 +132,9 @@ class TraceWriter:
                 raise ValueError('COMPLETED_FRAME_PUBLICATION_DRIFT')
         else:
             raw = canonical(frame) + b'\n'
-            row = {'offset': self.stream.tell(), 'bytes': len(raw), 'raw_sha256': sha(raw)}
-            self.stream.write(raw); self.stream.flush(); os.fsync(self.stream.fileno())
+            stored=zlib.compress(raw,1)
+            row = {'offset': self.stream.tell(), 'bytes': len(raw), 'stored_bytes':len(stored), 'compression':'zlib', 'raw_sha256': sha(raw)}
+            self.stream.write(stored); self.stream.flush(); os.fsync(self.stream.fileno())
             if read_row(self.frames_path, row) != raw:
                 raise IOError('STREAM_FRAME_READBACK_FAILED')
         self.rows.append(row)
@@ -192,7 +198,7 @@ class TraceReader(Sequence):
             if row['offset'] != offset:
                 raise ValueError('STREAM_ROW_GAP_OR_OVERLAP')
             self.raw(i)
-            offset += row['bytes']
+            offset += row.get('stored_bytes',row['bytes'])
         if offset != self.frames_path.stat().st_size:
             raise ValueError('STREAM_UNINDEXED_BYTES')
         h = hashlib.sha256()

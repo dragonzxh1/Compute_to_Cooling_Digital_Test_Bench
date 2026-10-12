@@ -85,6 +85,14 @@ class StartupSplitAdapter:
     """Inject split lifecycle only; original 50 Startup bodies stay unchanged."""
     def __init__(self,profile,classifier):
         self.engine=SplitEngine(profile,classifier)
+        import os
+        if os.environ.get('C2C_STARTUP_NODE_ID'):
+            import uuid
+            from pathlib import Path
+            from .common import ROOT
+            from .stream_trace import CompletedJournal
+            folder=Path(os.environ['C2C_M1_CASE_ROOT'])/'startup_completed'
+            self.engine._completed=CompletedJournal(folder/(uuid.uuid4().hex+'.jsonl'))
         self._profile=profile
         self._classifier=classifier
         self.prior=None
