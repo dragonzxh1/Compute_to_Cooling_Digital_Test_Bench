@@ -1,0 +1,163 @@
+{
+  "status": "M1_FULL_INPUT_PREPARATION_AND_SHORT_PREFIX_PILOT_PASS_NOT_FULL_CAMPAIGN",
+  "run_id": 38201224984,
+  "run_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38201224984",
+  "tested_source_commit": "c3db1418a1b64dc8fd2842b9e5f93d6054da1d09",
+  "main_baseline": "2f26815e71ea8e458d8c0fbd1043a971234df1fa",
+  "stage_count": 10,
+  "stages": [
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 1108,
+      "stage_id": "ENVIRONMENT",
+      "stage_result_raw_sha256": "80f72fffb98f881e41b16d9bd113483d41ef7891d6b53534f5148fa069f6654c"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 6332,
+      "stage_id": "INPUT_INTEGRITY",
+      "stage_result_raw_sha256": "9e1e0d7e41014be9e9e70a3291ff3c4a32b514bb3c0fa7d4560b7ac5cdee09b6"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 6348,
+      "stage_id": "CORE_SELF_CHECK",
+      "stage_result_raw_sha256": "abfd963da0aab1c56c6b3c496369d3a25e9de0ecaaf74cfba9b5c2fb4d79f6e9"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 7204,
+      "stage_id": "CMP_NEGATIVE",
+      "stage_result_raw_sha256": "af60012e08ba1a0050f49f6cec2fedf946b8008c57290afc4a797d1916c31d21"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 7164,
+      "stage_id": "CASE-001-REFERENCE",
+      "stage_result_raw_sha256": "01bfab90762416f3be8215ba3b77607c7dc5dd63984fd573e01c34366328f96d"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 732,
+      "stage_id": "CASE-001-SELECT",
+      "stage_result_raw_sha256": "c0d656b9bd396a3f82ab5ef0f4fc42ea5be16157eaa55266aec11d0326b1c262"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 6660,
+      "stage_id": "CASE-001-SPLIT",
+      "stage_result_raw_sha256": "99af05b3b812b0811555f2886d193523ac71281162b7fba37020faf39dc05758"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 1152,
+      "stage_id": "CASE-001-PREFIX_ONE-1",
+      "stage_result_raw_sha256": "44b6408cc15935755546b6d9ae74204cdeff6887e61a448863ab23a44ac93053"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 2580,
+      "stage_id": "CASE-001-PREFIX_ONE-2",
+      "stage_result_raw_sha256": "94800f85b936da5ae592f99c3af20f3d776e3742e1fc78d5b1f1b22197a648ff"
+    },
+    {
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "actual_python_pid": 1180,
+      "stage_id": "CASE-001-PREFIX_ONE-3",
+      "stage_result_raw_sha256": "654955c9fc9e83663c701ae7b7df1f13ed1b259d193c6e4dd06cf1db328ae4dd"
+    }
+  ],
+  "raw_receipt_checks": 40,
+  "materialized_input_raw_readbacks": 101,
+  "canonical_input_check": "PASS_IN_REMOTE_PINNED_PYTHON",
+  "input_descriptors": 101,
+  "ITQ_fixture_definitions": {
+    "cases": 23,
+    "variants": 51
+  },
+  "ITQ_full_behavioral_run": "NOT_RUN",
+  "core_unit_tests": {
+    "failures": 0,
+    "errors": 0,
+    "tests": 27
+  },
+  "core_byte_identical_files": 9,
+  "CMP_selfchecks": 18,
+  "CMP_evidence_raw_sha256": "7eb1680a746af75335373ebb903c8932734cea340b3af13ca1d7898793bf8d91",
+  "actual_case": {
+    "all_phase_records_and_fields": 56,
+    "replayed_prefix_lengths": [
+      1,
+      2,
+      3
+    ],
+    "stage_id": "ST-01",
+    "comparison": "PASS",
+    "repeat_snapshots": 2,
+    "prefix_policy": "SUPPORT_FROZEN_ALL_PREFIXES",
+    "row_count": 3,
+    "index": 1,
+    "required_prefix_lengths": [
+      1,
+      2,
+      3
+    ]
+  },
+  "environment_identity": {
+    "dependencies": {
+      "Pygments": "2.21.0",
+      "attrs": "26.1.0",
+      "colorama": "0.4.6",
+      "iniconfig": "2.3.1",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "numpy": "2.4.6",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "pytest": "9.1.1",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "typing_extensions": "4.16.0"
+    },
+    "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+    "host": "runnervmtn0fv",
+    "image_os": "win22",
+    "image_version": "20261004.326.1",
+    "machine": "AMD64",
+    "python": "3.11.9",
+    "system": "Windows",
+    "version": "10.0.20348"
+  },
+  "environment_before_after": "IDENTICAL_WITHIN_PILOT",
+  "environment_registration_raw_sha256": "09d6aefdb09c37295888e52c0cb183ed237de54b3ac8c7bb921055ee59ba6452",
+  "batch_complete_raw_sha256": "0e884ec65d2b89f77ed3cf1b2f2cc0c9b63fd2f3503583d56c0afbc19b9bfa5d",
+  "full_reference_stage_raw_sha256": "d5dcf4e3de69314d02a103f3d9db7f432fdeae86f97ddd820ccaf9deff5aca3f",
+  "selected_inventory_raw_sha256": "24de9a11b38c2382e17da4300563ab3f0f5c0264e4c1ebe00e57e539c8c04a21",
+  "old_scores_borrowed": false,
+  "local_python_started": false,
+  "source_or_expectation_retuned": false,
+  "long_targets": [
+    65,
+    66,
+    92
+  ],
+  "long_prefix_status": "NOT_RUN",
+  "full_campaign": "NOT_RUN",
+  "formal_qualification": "NOT_RUN",
+  "production": "NO",
+  "phase6": "NO",
+  "full_P_history_available": false,
+  "hardware": "CALIBRATION_REQUIRED",
+  "T09": "IMPLEMENTATION_HOLD",
+  "original_host_stability": "NOT_PROVEN"
+}
