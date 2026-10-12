@@ -1,5 +1,5 @@
 {
-  "version": "M1_STREAM_V3_UNSEALED_BUILD_002_REMOTE_EXECUTOR",
+  "version": "M1_STREAM_V3_UNSEALED_BUILD_003_FULL_CAMPAIGN",
   "scope": "M1_REMOTE_DEVELOPMENT_ONLY",
   "status": "UNSEALED_DEVELOPMENT_SOURCE_SNAPSHOT",
   "user_authorization": "CONTINUE_UNTIL_COMPLETE_LONG_PREFIX_AND_DEVELOPMENT_CAMPAIGN_20261012",
@@ -637,7 +637,7 @@
     "v0_2/tests/tools/m1_engine_v3/observer.py": "926e6e8c7c8b9270ac58c38cf5f34fb7c48c0176584081072179d2b6ea8d49d1",
     "v0_2/tests/tools/m1_engine_v3/materializer.py": "1fa6564b4a7d473b5528eaa82669efb517d5d75d55663299b0be8b539c678762",
     "v0_2/tests/tools/m1_engine_v3/m1_schemas_v1.json": "27bf3d0dd408e2cced641eed782df24044d0501eb86ce1b2fa7d4df66ce47ea9",
-    "v0_2/tests/tools/m1_engine_v3/final_validation.py": "8fb73c1835067555b5c9322325d8379e460f44246805f64ed4f10f9b58700ee8",
+    "v0_2/tests/tools/m1_engine_v3/final_validation.py": "ae39fab7f8d13196dc3ef2aab72dbddb033f3d87df6e58f36f04b574591eb324",
     "v0_2/tests/tools/m1_engine_v3/evidence.py": "2a53e59215718bcabb8a47dd6bd0053d1b092e72ee09a3e8f447c0cb0b801b1a",
     "v0_2/tests/tools/m1_engine_v3/engine.py": "0da09a98b22a40743e8888075a2b29f12b565ebc05e5cbe7343decb076d99b2f",
     "v0_2/tests/tools/m1_engine_v3/eligibility.py": "cbf568d8bba8b28d65f920820f7fdc1fd7de55e16ae00054b327cdc0e30d9904",
@@ -650,14 +650,17 @@
     "v0_2/tests/tools/m1_remote_control_v3/stage_worker.py": "30e9fb5fb13365481e466a4ad17cb9712b3969b18d91c71b24d40fe40905c925",
     "v0_2/tests/tools/m1_remote_control_v3/run.ps1": "d0966ceee64f61df8b150fc3f50eb58b6c6b629e4ad0f6ec978b1c4c2e3e94f7",
     "v0_2/tests/tools/m1_remote_control_v3/remote_worker.py": "0ad40114e5a584079b7938f6bab39e7ca397bfddb9449c7420e32fada0b6a46a",
-    "v0_2/tests/tools/m1_remote_control_v3/README.md": "aa9edf739f70d483dc465ab394de01931c36e6c350cab8066d8e5dfcc618052e",
+    "v0_2/tests/tools/m1_remote_control_v3/README.md": "c6e4e7901d86c56f60b370426f0bd0442727363bd3f5bf5e94b58776c2c51d8a",
     "v0_2/tests/tools/m1_remote_control_v3/progress.py": "380211250fea1c30dd31ed6f715116335faea5018622c3160e60d0c88fbefa6f",
-    "v0_2/tests/tools/m1_remote_control_v3/campaign_plan.ps1": "5ab74660be080eb86f7bb9710beb273e68d76d748cefde6688d1a8202fa89364",
+    "v0_2/tests/tools/m1_remote_control_v3/export.ps1": "6f950519c3469da4a10b820ab546308eb3d80b93e512bc1eca23a307f6192c01",
+    "v0_2/tests/tools/m1_remote_control_v3/campaign_plan.ps1": "13d136be98f4b13a21f4bb18d840bc7f23114329d759bde6f710ee6ac641a5d5",
     "v0_2/tests/tools/m1_remote_control_v3/admission.py": "dc57bda2a0cf1acca31fa334b24db56beec1e6179227f90a702123f09243a205",
     "v0_2/tests/tools/m1_remote_executor_v1/VerifyTarget.cs": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8",
     "v0_2/tests/tools/m1_remote_executor_v1/ControlledJob.cs": "eb36313d9184971d317b866e493d95afce4b002ee3f06f094d62a91df99de992",
     "v0_2/tests/tools/m1_remote_executor_v1/build.ps1": "5b9363ee1e809b4d8dcd688d38c20906169898848c423854a8a20d75ad04d55f",
-    ".github/workflows/m1-remote-stream-development.yml": "d3fb997c335dfadd5645caef6c3d95a38cf538d241869f61cc4d312b9232b25a"
+    ".github/actions/m1-runtime/action.yml": "4cffb39d8ee2e125d9c6ac6258aa6b3f00e07c53b5d95c6a6149d892987a043f",
+    ".github/workflows/m1-remote-stream-development.yml": "d3fb997c335dfadd5645caef6c3d95a38cf538d241869f61cc4d312b9232b25a",
+    ".github/workflows/m1-full-stream-campaign.yml": "381a73c469d2eeb7590e5c76435e6b0f8785bdd70cd95e255fe422a70134ac8e"
   },
   "original_source_inventory_raw_sha256": "02d336b2c5217ef279ced4f9ebefafc7ec2b9110ec567da7341052f0b073fa39",
   "check_stage_ids": [
@@ -672,7 +675,9 @@
     "STREAM_EQ_000",
     "STREAM_EQ_012",
     "STREAM_EQ_015",
-    "STREAM_EQ_065"
+    "STREAM_EQ_065",
+    "STARTUP_COLLECT",
+    "CASE-000-REFERENCE"
   ],
   "long_stage_ids": [
     "ENVIRONMENT",
@@ -716,7 +721,7 @@
     "CASE-092-PREFIX_ONE-51"
   ],
   "complete_campaign_authorized_by_user": true,
-  "complete_campaign_implemented_in_this_build": false,
+  "complete_campaign_implemented_in_this_build": true,
   "formal_qualification": false,
   "production": false,
   "phase6": false,
@@ -751,5 +756,23 @@
     "source_commit": "e644d60700cfae21966630e69ff6588f04adb832"
   },
   "user_remote_resource_change_authorized": true,
-  "native_executor": "m1_remote_executor_v1_REMOTE_ONLY_ACTUAL_PID_READBACK_REQUIRED"
+  "native_executor": "m1_remote_executor_v1_REMOTE_ONLY_ACTUAL_PID_READBACK_REQUIRED",
+  "campaign_case_count": 101,
+  "campaign_startup_node_count": 50,
+  "reference_wave_before_all_selectors": true,
+  "all_selectors_before_split_wave": true,
+  "all_splits_before_prefix_wave": true,
+  "prefix_batch_policy": "FRESH_MODELS_FROM_T0_RESOURCE_YIELD_ONLY_BETWEEN_COMPLETE_PREFIXES_EXPLICIT_PENDING_SET_FINAL_EXACT_COVERAGE",
+  "long_pilot_completed": {
+    "run_id": 38259509212,
+    "source_commit": "e5d3f031f11d10f79d0df619509ff1741e155138",
+    "stage_count": 39,
+    "status": "PASS",
+    "raw_receipt_checks": 156,
+    "sampled_max_private_bytes": 72318976,
+    "cpu_rate": 2500,
+    "strict_process_mb": 256,
+    "strict_job_mb": 512,
+    "full_campaign_scores_borrowed": false
+  }
 }

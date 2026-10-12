@@ -51,6 +51,16 @@ function Get-CampaignStages {
     } elseif($Mode -eq 'REFERENCE_GATE') {
         $taskStages+=@('REFERENCE_GROUPS')
     } else {throw 'CAMPAIGN_MODE_NOT_ADMITTED'}
+    if($Mode -in @('FINAL','REFERENCE_GATE')){
+        $taskDataRoot=Join-Path $Repo ('artifacts/m1-autonomous-development/'+$RunKey)
+        foreach($taskFile in (Get-ChildItem -LiteralPath $taskDataRoot -Recurse -File|Sort-Object FullName)){
+            $taskHashes[$taskFile.FullName.Substring($Repo.Length+1).Replace('\','/')]=(Get-FileHash -LiteralPath $taskFile.FullName -Algorithm SHA256).Hash.ToLowerInvariant()
+        }
+    }
+    if($Mode -eq 'STARTUP'){
+        $taskInventoryRelative='artifacts/m1-autonomous-development/'+$RunKey+'/startup_inventory.json'
+        $taskHashes[$taskInventoryRelative]=(Get-FileHash -LiteralPath (Join-Path $Repo $taskInventoryRelative) -Algorithm SHA256).Hash.ToLowerInvariant()
+    }
     return @{stages=$taskStages;input_hashes=$taskHashes}
 }
 

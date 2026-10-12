@@ -24,9 +24,10 @@ snapshots and exact full-document hashes. Each selected prefix is a fresh replay
 t0, compares all complete canonical frames to the full traces and persists row hashes
 plus completed split bytes. The frozen conditional/all-prefix policy is unchanged.
 
-Job CPU 1%, process/job memory 256/512 MiB and kill-on-close remain. Build002 uses
+The separate remote-only executor uses CPU 25%, strict process/job memory
+256/512 MiB and campaign memory 1024/2048 MiB. Kill-on-close remains. Build002 uses
 the existing c3b_v11 480s development wall budget rather than the recovery pilot's
-120s cap. This changes no tracking/fixture timer and does not increase CPU/memory.
+120s cap. This changes no tracking/fixture timer; old local native code is unchanged.
 Source/environment guards and actual-Python membership proof precede release; native
 errors/raw captures persist before acceptance. External memory sampling records private
 commit and working set. A failed execution is preserved; repairs get a new source version.

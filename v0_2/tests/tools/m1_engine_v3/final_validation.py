@@ -6,6 +6,44 @@ from .evidence import write, receipt, verify
 from .stream_trace import TraceReader
 
 
+def execution_audit(root):
+    from .common import ROOT, sha
+    native_root=ROOT/'artifacts/liquid-recovery-v1'/Path(root).name
+    batches=list(native_root.rglob('batch_complete.json'))
+    if not batches or list(native_root.rglob('batch_stop.json')):
+        raise ValueError('EXECUTION_BATCH_INCOMPLETE_OR_STOPPED')
+    identities=[];count=0
+    for path in batches:
+        data=json.loads(path.read_bytes())
+        if data['status']!='COMPLETE' or any(s['status']!='PASS' for s in data['stages']):
+            raise ValueError('EXECUTION_BATCH_NOT_PASS')
+        for i,s in enumerate(data['stages']):
+            result_path=path.parent/('stage-%03d-result.json'%i)
+            if sha(result_path.read_bytes())!=data['receipts'][i]['result_raw_sha256']:
+                raise ValueError('EXECUTION_STAGE_RECEIPT_DRIFT')
+            folder=path.parent/s['stage_id']
+            native=json.loads((folder/'job_status.json').read_bytes())
+            proof=json.loads((folder/'external_job_identity.json').read_bytes())
+            if (native['outcome']!='EXITED' or native['child_exitcode']!=0 or not native['cleanup_complete']
+                or native['active_after_cleanup']!=0 or not proof['in_target_job']
+                or proof['actual_python_pid']!=native['pid'] or proof['cpu_rate']!=2500):
+                raise ValueError('EXECUTION_NATIVE_IDENTITY_OR_CLEANUP_INVALID')
+            raw=json.loads((folder/'raw_evidence_receipts.json').read_bytes())
+            for name,item in raw.items():
+                if item['status']!='PERSISTED' or sha((folder/name).read_bytes())!=item['raw_sha256']:
+                    raise ValueError('EXECUTION_RAW_CAPTURE_DRIFT')
+            worker=json.loads((folder/'result.json').read_bytes())
+            if worker['status']!='PASS':raise ValueError('EXECUTION_WORKER_RESULT_NOT_PASS')
+            if s['stage_id']=='ENVIRONMENT':
+                identities.append(worker['runtime_identity'])
+            count+=1
+    if not identities:raise ValueError('NO_REGISTERED_RUNTIME_IDENTITIES')
+    software=[{k:v for k,v in identity.items() if k!='host'} for identity in identities]
+    if any(s!=software[0] for s in software):raise ValueError('DISTRIBUTED_SOFTWARE_ENVIRONMENT_DRIFT')
+    return {'status':'PASS','batches':len(batches),'stages':count,'software_identity':software[0],
+        'host_instances':len(identities),'distributed_environment_not_one_physical_host':True}
+
+
 def groups(case_root, *, reference=False):
     from .adapters import suite_checks
     descriptors=read('phase5_r5_2_1r4_7_c3_a_reference_oracle_spec.json')['input_inventory']
@@ -54,6 +92,7 @@ def finalize(root):
     from .eligibility import evaluate
     from .startup_execution import aggregate
     root=Path(root);case_root=root/'cases'
+    audit=execution_audit(root)
     descriptors=read('phase5_r5_2_1r4_7_c3_a_reference_oracle_spec.json')['input_inventory']
     stages={};selections={};prefixes={}
     for i in range(101):
@@ -71,6 +110,9 @@ def finalize(root):
     eligibility=evaluate(startup)
     write(root/'startup_eligibility.json',eligibility)
     write(root/'PF16_witness_matrix.json',matrix)
+    from .artifact_schemas import validate_run
+    schema_readback=validate_run(root)
+    write(root/'schema_readback_validation.json',schema_readback)
     complete=(len(stages)==101 and all(p['status']=='PASS' for p in prefixes.values())
         and startup['versioned_compatibility']=='PASS' and matrix['original_validated_count']==15
         and matrix['PF06_proposal'] is not None and matrix['PF06_proposal']['PF06_SUPPLEMENTAL_SOURCE']=='DEVELOPMENT_VALIDATED')
@@ -84,5 +126,6 @@ def finalize(root):
         'PF06_original_scope':'INCOMPLETE','PF06_proposal':matrix['PF06_proposal'],'startup_eligibility':eligibility,
         'formal_qualification':False,'production':False,'phase6':False,'T09':'IMPLEMENTATION_HOLD',
         'full_P_history_available':False,'hardware':'CALIBRATION_REQUIRED','old_scores_borrowed':False}
+    result['execution_audit']=audit;result['schema_readback']=schema_readback
     item=write(root/'development_result.json',result)
     return {'status':'PASS' if complete else 'FAIL','result_receipt':item,'engineering_result':result['status']}
