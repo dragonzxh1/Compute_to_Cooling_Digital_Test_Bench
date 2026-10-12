@@ -1,5 +1,21 @@
 # C2C-DTB / 算力到冷却数字测试台
 
+## M1 remote development result / M1 独立环境开发验证结果
+
+2026-10-13: the fresh hosted-Windows Build005 development campaign and independent
+artifact readback completed: 101 cases, 2,281 selected prefixes, 499 fresh snapshots,
+67,575 complete-frame pairs, and 101 schema checks. Original Startup remains 49/50;
+versioned compatibility PASS is reported separately. The complete supplementary native
+audit covers 287 execution jobs, 715 batches, 1,968 stages and 7,872 raw captures.
+See [final report](M1_BUILD005_FINAL_DEVELOPMENT_REPORT_20261013.md) and
+[machine evidence](m1_build005_final_evidence_20261013.json).
+
+本轮完整软件开发执行与证据回读通过，状态是
+`M1_DEVELOPMENT_COMPLETE_FULL_SCOPE_PENDING`，不是正式资格或生产批准。
+PF06原来源缺口、5个历史输入域的strict-P1因果缺口、T09恢复hold、full P history不可用及
+硬件校准要求继续保留。没有测试真实GPU—CDU前馈散热收益；本机Python/native/model仍暂停。
+以下2026-10-12恢复测试记录为历史阶段状态，长prefix与campaign的最新结论以上述报告为准。
+
 ## Independent recovery testing / 独立环境恢复测试
 
 The 2026-10-12 recovery package runs only generic liquid-cooling smoke on a separately

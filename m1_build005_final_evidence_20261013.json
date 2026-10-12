@@ -1,0 +1,155 @@
+{
+  "versioned_startup_compatibility": "PASS",
+  "manifest_raw_sha256": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93",
+  "run_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38269665488",
+  "protected_sources_audited": 655,
+  "protected_source_drift": 0,
+  "T09": "IMPLEMENTATION_HOLD",
+  "official_artifact": {
+    "independently_recomputed": true,
+    "raw_zip_sha256": "abf937de6800172749b9e0c2f46a80e6ad7d8771138501142a4a2b723418b992",
+    "id": 11763322743,
+    "local_original_zip": "D:/Github/c2c-m1-remote-evidence/run-38269665488/final-original.zip",
+    "bytes": 1946410368
+  },
+  "case_readback_raw_sha256": "7a78a69023bb718b0d9f174ab9c480cc9df5ea2860d38e66e035b612b040abd8",
+  "runner_raw_sha256": "d0966ceee64f61df8b150fc3f50eb58b6c6b629e4ad0f6ec978b1c4c2e3e94f7",
+  "hardware": "CALIBRATION_REQUIRED",
+  "original_frozen_full_scope_ready": false,
+  "startup_causal_status": "INCOMPLETE",
+  "version": "M1_BUILD005_FINAL_DEVELOPMENT_EVIDENCE_20261013",
+  "case_readback": {
+    "cases_verified": 101,
+    "selected_prefixes_verified": 2281,
+    "complete_frame_pairs_verified": 67575,
+    "reference_and_split_frames_hashed": 6432,
+    "fresh_snapshots_verified": 499,
+    "prerequisite_source_files_hashed": 2406,
+    "readback": "PASS"
+  },
+  "nonqualified_startup_domains": 5,
+  "PF06_supplemental_source": "DEVELOPMENT_VALIDATED",
+  "PF16_original_validated": 15,
+  "P15": "PASS_FROZEN_RECONSTRUCTED_HISTORICAL_FIXTURE",
+  "original_startup": "49/50",
+  "local_python_native_model_executed": false,
+  "reference_groups": {
+    "C": {
+      "checks": {
+        "C1": true,
+        "C10": true,
+        "C11": true,
+        "C12": true,
+        "C2": true,
+        "C3": true,
+        "C4": true,
+        "C5": true,
+        "C6": true,
+        "C7": true,
+        "C8": true
+      },
+      "status": "PASS"
+    },
+    "S": {
+      "checks": {
+        "S1": true,
+        "S10": true,
+        "S11": true,
+        "S12": true,
+        "S13": true,
+        "S14": true,
+        "S15": true,
+        "S16": true,
+        "S16_variant": true,
+        "S2": true,
+        "S3": true,
+        "S4": true,
+        "S5": true,
+        "S6": true,
+        "S7": true,
+        "S8": true,
+        "S9": true
+      },
+      "status": "PASS"
+    }
+  },
+  "original_startup_failure_identity": "EXACT_MATCH",
+  "full_P_history_available": false,
+  "scope": "M1_REMOTE_DEVELOPMENT_ONLY",
+  "split_groups": {
+    "C": {
+      "checks": {
+        "C1": true,
+        "C10": true,
+        "C11": true,
+        "C12": true,
+        "C2": true,
+        "C3": true,
+        "C4": true,
+        "C5": true,
+        "C6": true,
+        "C7": true,
+        "C8": true
+      },
+      "status": "PASS"
+    },
+    "S": {
+      "checks": {
+        "S1": true,
+        "S10": true,
+        "S11": true,
+        "S12": true,
+        "S13": true,
+        "S14": true,
+        "S15": true,
+        "S16": true,
+        "S16_variant": true,
+        "S2": true,
+        "S3": true,
+        "S4": true,
+        "S5": true,
+        "S6": true,
+        "S7": true,
+        "S8": true,
+        "S9": true
+      },
+      "status": "PASS"
+    }
+  },
+  "old_scores_borrowed": false,
+  "supplemental_owned_artifact_native_union": true,
+  "engineering_execution_gate": "FULL_M1_DEVELOPMENT_CAMPAIGN_EXECUTED_AND_EVIDENCE_VERIFIED",
+  "phase6": false,
+  "formal_qualification": false,
+  "original_result_status": "M1_DEVELOPMENT_COMPLETE_FULL_SCOPE_PENDING",
+  "raw_development_result_sha256": "a4a45ef25db935e5532780dfe57c562eb28f676b38768378e4938ea5f0e959c0",
+  "run_id": 38269665488,
+  "local_git_corruption": "PRESERVED_NOT_REPAIRED_ROOT_CAUSE_UNKNOWN",
+  "native_readback": {
+    "primary_execution_jobs_verified": 287,
+    "pure_plan_jobs": 1,
+    "native_batches_verified": 715,
+    "native_stages_verified": 1968,
+    "raw_captures_verified": 7872,
+    "software_host_registrations": 287,
+    "software_environment_identical": true,
+    "actual_python_pid_job_limits_cleanup": "PASS",
+    "externally_sampled_private_bytes_max": 197644288,
+    "externally_sampled_working_set_bytes_max": 204206080,
+    "memory_samples": 1308,
+    "sampled_max_is_not_exact_peak": true,
+    "readback": "PASS"
+  },
+  "PF06_original_scope": "INCOMPLETE",
+  "production": false,
+  "candidate_raw_sha256": "453f2f1d02c9aaa845d5222b3ef01da8c1a9db6580268c54674d374d76fa9300",
+  "original_embedded_final_audit": {
+    "batches": 152,
+    "stages": 467,
+    "status": "PASS"
+  },
+  "original_final_result_rewritten": false,
+  "source_commit": "9b487ce88143b5bd8f6f537af9f7b2629fa4e27f",
+  "PF06_binding_approval": "PENDING_USER_REVIEW",
+  "native_readback_raw_sha256": "c2f8f6b00a77abeb1cced82542271c213ad9e014b30260593a704f1d51c29459"
+}
