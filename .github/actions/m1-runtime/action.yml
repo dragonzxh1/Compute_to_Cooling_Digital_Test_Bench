@@ -17,8 +17,17 @@ runs:
         EXPECTED_MANIFEST: ${{ inputs.manifest }}
         EXPECTED_RUNNER: ${{ inputs.runner }}
       run: |
+        if($env:GITHUB_ACTIONS -cne 'true' -or $env:RUNNER_ENVIRONMENT -cne 'github-hosted' -or $env:RUNNER_OS -cne 'Windows' -or [Environment]::MachineName -ieq 'HIPPO'){throw 'INDEPENDENT_GITHUB_WINDOWS_REQUIRED'}
         if($env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or $env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:EXPECTED_MANIFEST -notmatch '^[a-f0-9]{64}$'){throw 'SOURCE_DISPATCH_DENIED'}
+        if((git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'EXECUTION_COMMIT_DRIFT'}
         if((Get-FileHash v0_2/tests/tools/m1_remote_control_v3/run.ps1 -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'BOOTSTRAP_SOURCE_DRIFT'}
+        $path='v0_2/tests/tools/m1_remote_control_v3/execution_manifest.json'
+        if((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_MANIFEST){throw 'REMOTE_EXECUTION_MANIFEST_DRIFT'}
+        $manifest=Get-Content -LiteralPath $path -Raw|ConvertFrom-Json
+        $restore='v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1'
+        if((Get-FileHash -LiteralPath $restore -Algorithm SHA256).Hash.ToLowerInvariant() -cne $manifest.remote_source_raw_hashes.PSObject.Properties[$restore].Value){throw 'SNAPSHOT_BOOTSTRAP_SOURCE_DRIFT'}
+        . ./v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1
+        $null=Restore-M1Snapshot -Repo (Get-Location).Path -ExpectedManifestSha256 $env:EXPECTED_MANIFEST
     - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
       with:
         python-version: '3.11.9'

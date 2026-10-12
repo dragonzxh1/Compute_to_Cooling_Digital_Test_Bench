@@ -3,6 +3,12 @@
 No local Python/native workloads. Independent hosted Windows only; formal C3-C,
 production, Phase 6 and hardware qualification are not authorized here.
 
+Build005 restores and hashes all 601 frozen bundle entries in the shared hosted
+runtime bootstrap, including pure PowerShell coordination jobs. Archive inventory,
+every entry hash and safe destination paths are verified before extraction. The
+runner's existing restoration/source guards remain in force. Missing hydration is
+an execution integrity failure, not candidate behavior failure; reruns start fresh.
+
 Nine mathematical core files remain exact frozen v014.1 bytes. Streamed reference
 and split loops retain original ordering and all 56 fields, histories and phase
 records. Complete classic JSON documents still have exactly the original canonical
