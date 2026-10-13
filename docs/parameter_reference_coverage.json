@@ -1,0 +1,564 @@
+{
+  "status": "STATIC_FIELD_NAME_COVERAGE_ONLY_NOT_RUNTIME_VERIFICATION",
+  "class_count": 37,
+  "field_count": 259,
+  "missing": [],
+  "classes": [
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/provenance.py",
+      "class": "ParameterRecord",
+      "raw_sha256": "2dec4b51eff82ea41c18907db6850a4230c00ea5656595b191601688b48e4497",
+      "fields": [
+        "name",
+        "value",
+        "unit",
+        "source_type",
+        "source_ref",
+        "confidence",
+        "date",
+        "valid_range",
+        "calibration_status"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/nodes.py",
+      "class": "ConstantCapacity",
+      "raw_sha256": "6b74275db7a9bdbd275bcbedcbde6901781ad8ebca6fea49dc0c5374ee218ee9",
+      "fields": [
+        "capacitance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/nodes.py",
+      "class": "ThermalNodeState",
+      "raw_sha256": "6b74275db7a9bdbd275bcbedcbde6901781ad8ebca6fea49dc0c5374ee218ee9",
+      "fields": [
+        "node_id",
+        "entity_id",
+        "node_type",
+        "temperature_k",
+        "energy_j",
+        "thermal_capacitance",
+        "reference_temperature_k",
+        "storage_owner_id",
+        "valid_temperature_range",
+        "provenance",
+        "calibration_status",
+        "mass_kg",
+        "specific_heat",
+        "coolant",
+        "adiabatic"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/state.py",
+      "class": "ThermalState",
+      "raw_sha256": "52574b1e73a89b8944d0b75e20bc1799cea163b6d5bf43f6def0a1b24e4706f1",
+      "fields": [
+        "nodes",
+        "time_ns"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/topology.py",
+      "class": "ThermalTopology",
+      "raw_sha256": "805120d1e1900df3d0663cf7fa71a0f0f65a8ac5bafe9da8c7d848c6e8d4d3a6",
+      "fields": [
+        "initial_state",
+        "interfaces",
+        "device_cvs"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/fixtures.py",
+      "class": "Fixture",
+      "raw_sha256": "6de3adab3b835ea66bcc126ba022e9f071d6e5d94f36e610948905ed4b5850f9",
+      "fields": [
+        "topology",
+        "source_map",
+        "sources",
+        "boundaries",
+        "flows"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/interfaces.py",
+      "class": "ThermalInterface",
+      "raw_sha256": "2c55db5f2647b341d096832bc225982c2d0ede82d10a824d1d9b594e1284306b",
+      "fields": [
+        "interface_id",
+        "hot_node_id",
+        "cold_node_id",
+        "external_boundary_id",
+        "resistance_model",
+        "included_layer_ids",
+        "owner_id",
+        "kind",
+        "provenance",
+        "validity",
+        "boundary_medium"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/coldplate.py",
+      "class": "ColdplateDefinition",
+      "raw_sha256": "c385f7317a9f1fb1561ac8f704c43155921ea2fc069c797268859907c5f1eaab",
+      "fields": [
+        "thermal_hot_endpoint_id",
+        "thermal_cold_endpoint_id",
+        "hot_side_temperature_definition",
+        "cold_side_temperature_definition",
+        "rth_definition",
+        "included_layers",
+        "excluded_layers",
+        "manufacturer_rth_definition",
+        "manufacturer_measurement_hot_endpoint",
+        "manufacturer_measurement_cold_endpoint"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/coldplate.py",
+      "class": "FlowInput",
+      "raw_sha256": "c385f7317a9f1fb1561ac8f704c43155921ea2fc069c797268859907c5f1eaab",
+      "fields": [
+        "mass_flow",
+        "coolant"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/coldplate.py",
+      "class": "GenericColdplate",
+      "raw_sha256": "c385f7317a9f1fb1561ac8f704c43155921ea2fc069c797268859907c5f1eaab",
+      "fields": [
+        "definition",
+        "h_ref",
+        "m_ref",
+        "exponent",
+        "conduction_r",
+        "area",
+        "flow_range",
+        "temperature_range",
+        "heat_load_range",
+        "coolant",
+        "provenance",
+        "zero_policy",
+        "no_flow_resistance",
+        "bidirectional"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/coldplate.py",
+      "class": "ManufacturerColdplateSchema",
+      "raw_sha256": "c385f7317a9f1fb1561ac8f704c43155921ea2fc069c797268859907c5f1eaab",
+      "fields": [
+        "definition",
+        "provenance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/source_mapping.py",
+      "class": "PowerLeaf",
+      "raw_sha256": "6ee2b43ab6125e01b5b2f5888a55adc7f09fcb123f05ccac920157c591643e1e",
+      "fields": [
+        "source_id",
+        "component_kind",
+        "power",
+        "component_ids",
+        "included_in",
+        "value_origin",
+        "sample_time_ns"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/thermal/source_mapping.py",
+      "class": "PowerSourceMap",
+      "raw_sha256": "6ee2b43ab6125e01b5b2f5888a55adc7f09fcb123f05ccac920157c591643e1e",
+      "fields": [
+        "assignments"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/fluids/properties.py",
+      "class": "ConstantCpFluid",
+      "raw_sha256": "3e8e6e2e34868462a2ec0b279b66038d9b68297a53255248f12054fab4eb6728",
+      "fields": [
+        "fluid_id",
+        "density",
+        "specific_heat",
+        "reference_temperature",
+        "valid_temperature_k",
+        "provenance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/coolant/volume.py",
+      "class": "CoolantVolumeState",
+      "raw_sha256": "9a188ebd18e286cf82f9588e0061caebea42145c0e57b08e65c6bb37459d7d3c",
+      "fields": [
+        "volume_id",
+        "mass_kg",
+        "specific_enthalpy_j_kg",
+        "temperature_k",
+        "pressure_pa",
+        "coolant_ref",
+        "storage_owner_id",
+        "fluid",
+        "provenance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/coolant/advection.py",
+      "class": "AdvectiveLink",
+      "raw_sha256": "7a34e0e2fdaff50db528c9952e5a97963067049c32ef1c718e1e4abb2bc29ab6",
+      "fields": [
+        "link_id",
+        "from_id",
+        "to_id",
+        "mass_flow_kg_s",
+        "owner_id",
+        "reverse_supported"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/hydraulics/pump.py",
+      "class": "PumpCurve",
+      "raw_sha256": "bb0d5303656b44f9728c5e7e2057ab4eac8218c79de027cd3d3c314080efd2c3",
+      "fields": [
+        "shutoff_head_pa",
+        "curve_k",
+        "speed_range",
+        "flow_range_m3_s",
+        "provenance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/hydraulics/pump.py",
+      "class": "PumpDrive",
+      "raw_sha256": "bb0d5303656b44f9728c5e7e2057ab4eac8218c79de027cd3d3c314080efd2c3",
+      "fields": [
+        "vfd_efficiency",
+        "motor_efficiency",
+        "pump_efficiency",
+        "vfd_liquid_fraction",
+        "motor_liquid_fraction",
+        "internal_liquid_fraction",
+        "liquid_receiver_id",
+        "provenance",
+        "standby_electrical_w"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/hydraulics/graph.py",
+      "class": "PressureNode",
+      "raw_sha256": "3a3c1ea1f72c80a1fc7c3f5b96dd3b9b5e1dce1de8101434bb505f57957edfc8",
+      "fields": [
+        "node_id",
+        "loop_id"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/hydraulics/graph.py",
+      "class": "HydraulicEdge",
+      "raw_sha256": "3a3c1ea1f72c80a1fc7c3f5b96dd3b9b5e1dce1de8101434bb505f57957edfc8",
+      "fields": [
+        "edge_id",
+        "from_node",
+        "to_node",
+        "kind",
+        "coefficient",
+        "valid_q_m3_s",
+        "receiver_id",
+        "liquid_fraction",
+        "provenance",
+        "reverse_supported"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/hydraulics/graph.py",
+      "class": "HydraulicGraph",
+      "raw_sha256": "3a3c1ea1f72c80a1fc7c3f5b96dd3b9b5e1dce1de8101434bb505f57957edfc8",
+      "fields": [
+        "nodes",
+        "return_node",
+        "pump_outlet_node",
+        "supply_manifold",
+        "return_manifold",
+        "supply_series",
+        "branches",
+        "return_series",
+        "pump_edge_id"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/cdu/heat_exchanger.py",
+      "class": "HeatExchanger",
+      "raw_sha256": "bc4b6d379ed08bda3ee1f549f8e3ed799f3c09a8bedeb59f53ca88ee13580765",
+      "fields": [
+        "ua",
+        "arrangement",
+        "secondary_fluid",
+        "primary_fluid",
+        "valid_secondary_flow",
+        "valid_primary_flow",
+        "rated_capacity_w",
+        "provenance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/plant/loop.py",
+      "class": "FluidConnection",
+      "raw_sha256": "170ead4c5161a4fa485f42f31789ccc6fc02eb7b1387cfcfdf19a1e1473c0f15",
+      "fields": [
+        "link_id",
+        "from_volume_id",
+        "to_volume_id",
+        "branch_index"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/plant/loop.py",
+      "class": "PlantState",
+      "raw_sha256": "170ead4c5161a4fa485f42f31789ccc6fc02eb7b1387cfcfdf19a1e1473c0f15",
+      "fields": [
+        "solids",
+        "volumes",
+        "time_ns"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/plant/loop.py",
+      "class": "PhysicalPlant",
+      "raw_sha256": "170ead4c5161a4fa485f42f31789ccc6fc02eb7b1387cfcfdf19a1e1473c0f15",
+      "fields": [
+        "initial_state",
+        "interfaces",
+        "connections",
+        "coldplate_branches",
+        "hydraulic_graph",
+        "pump_curve",
+        "pump_drive",
+        "heat_exchanger",
+        "source_map",
+        "cdu_volume_id",
+        "volume_pressure_nodes",
+        "provenance",
+        "pressure_reference_pa",
+        "legacy_fifo_enabled",
+        "pump_hydraulic_heat_at_pump"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/plant/loop.py",
+      "class": "PlantInput",
+      "raw_sha256": "170ead4c5161a4fa485f42f31789ccc6fc02eb7b1387cfcfdf19a1e1473c0f15",
+      "fields": [
+        "speed_actual",
+        "primary_mass_flow",
+        "fws_inlet_temperature",
+        "ambient_temperature",
+        "electrical_leaves"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/plant/controlled_loop.py",
+      "class": "ControlClocks",
+      "raw_sha256": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+      "fields": [
+        "physics_ns",
+        "outer_ns",
+        "plc_ns",
+        "actuator_ns",
+        "safety_ns"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/plant/controlled_loop.py",
+      "class": "Disturbance",
+      "raw_sha256": "5c5c5ef3cba14f9e51eb469a1a6a65229c1ab082dc0d6fef72de56eaf1776db8",
+      "fields": [
+        "time_ns",
+        "power_each_w",
+        "fws_inlet_k",
+        "primary_flow_kg_s",
+        "branch_zero_k_multiplier",
+        "sensor_failures",
+        "pump_stuck"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/control/pid.py",
+      "class": "PIDConfig",
+      "raw_sha256": "31a8222591ec5b3e3bc3c8fa33443e2c9927a52d7ee4902889e786c5683eacdf",
+      "fields": [
+        "kp",
+        "ki",
+        "kd",
+        "sample_ns",
+        "lower",
+        "upper",
+        "integral_limit",
+        "tracking_gain"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/control/inner_loop.py",
+      "class": "InnerConfig",
+      "raw_sha256": "6dead633179fcc69a5e7b442ce8869be8b31b2b8413cc9d6fba321aec019d5b8",
+      "fields": [
+        "pid"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/control/outer_feedback.py",
+      "class": "OuterConfig",
+      "raw_sha256": "fd5911f6be869d3f9ca889919ebaa340c3cb7ccc0f29c4a38bdbda3225a2a444",
+      "fields": [
+        "pid",
+        "base_dp_pa",
+        "target_k",
+        "mode"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/control/intent.py",
+      "class": "ControlIntent",
+      "raw_sha256": "b71f9cfc381466be9c3725f0fca1d8699f75c00f8760490917af6e68ce1888e1",
+      "fields": [
+        "intent_id",
+        "source",
+        "created_ns",
+        "available_ns",
+        "expires_ns",
+        "requested_dp_pa",
+        "fb_component_pa",
+        "ff_component_pa",
+        "validity",
+        "reason"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/control/intent.py",
+      "class": "AcceptedTarget",
+      "raw_sha256": "b71f9cfc381466be9c3725f0fca1d8699f75c00f8760490917af6e68ce1888e1",
+      "fields": [
+        "accepted_target_id",
+        "created_ns",
+        "requested_dp_pa",
+        "producer_module",
+        "fb_intent_id",
+        "reason",
+        "source_ids"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/actuators/pump.py",
+      "class": "PumpActuatorConfig",
+      "raw_sha256": "7ee33a3e9525a3a8a5cab5bbb18a0ccc409d7bad0fdb15b6db80e252efbc2a3f",
+      "fields": [
+        "minimum",
+        "maximum",
+        "tau_s",
+        "ramp_per_s",
+        "command_delay_ns",
+        "owner_id",
+        "meaning",
+        "source",
+        "provenance"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/measurement/local_sensor.py",
+      "class": "SensorConfig",
+      "raw_sha256": "8f5dd3bc50e5e710a143b8611d3e70d533557b43ec40e4f86a80e4a54e7a6cbe",
+      "fields": [
+        "sample_ns",
+        "local_delay_ns",
+        "max_age_ns",
+        "source"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/safety/supervisor.py",
+      "class": "SafetyPolicy",
+      "raw_sha256": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+      "fields": [
+        "control_target_k",
+        "operating_limit_k",
+        "derate_k",
+        "hard_k",
+        "derate_clear_k",
+        "hard_clear_k",
+        "minimum_flow_kg_s",
+        "maximum_dp_pa",
+        "fallback_dp_pa",
+        "minimum_dp_pa",
+        "maximum_target_dp_pa",
+        "maximum_target_rate_pa_s",
+        "fault_speed",
+        "dwell_ns",
+        "recovery_samples",
+        "source"
+      ],
+      "undocumented_names": []
+    },
+    {
+      "source": "C:/Users/Aiden Zhang/.codex/worktrees/m1-remote-development/Compute_to_Cooling_Digital_Test_Bench/v0_2/safety/supervisor.py",
+      "class": "SafetyEnvelope",
+      "raw_sha256": "370920424bf9d1c1006c7bd800871d24737523004d6664f5b67155ab1948b036",
+      "fields": [
+        "envelope_id",
+        "created_ns",
+        "state",
+        "minimum_dp_pa",
+        "maximum_dp_pa",
+        "minimum_speed_fraction",
+        "maximum_speed_fraction",
+        "fallback_dp_pa",
+        "shutdown_required",
+        "reason_codes",
+        "source_measurement_ids",
+        "request_id",
+        "valid_until_ns",
+        "accepted_target_id",
+        "producer_module"
+      ],
+      "undocumented_names": []
+    }
+  ],
+  "model_or_Python_executions": 0
+}
