@@ -5,8 +5,8 @@
 
 | 要求 | 当前权威事实 | 完成条件 |
 | --- | --- | --- |
-| M1-DEF-POST-001 | 独立run38418429221实际重现3项发布保护断言FAIL、正常完成PASS；v4提交顺序修复已写，待同一测试验证 | 独立runner证明新driver通过；PRE/Safety/PLC真实事实不回滚，无fresh publication |
-| 新版candidate | v3/Build005未改；v4继承原数学与PRE/Safety/PLC，只重排POST提交，尚未验证 | 新driver source身份独立，math/profile/contracts/tests不改 |
+| M1-DEF-POST-001 | 旧版3FAIL/1PASS已重现；v4同一4测试全PASS，原受影响23测试亦PASS；官方ZIP/actualPID/Job/cleanup/环境已独立回读 | 已测软件失败路径关闭；完整新版验收不能靠这27项替代 |
+| 新版candidate | v3/Build005与55冻结运行源码无漂移；v4只重排POST提交，受影响回归27/27 | 需fresh全量development及安装使用验证，不能直接宣布上线 |
 | 完整验证 | Build005旧开发证据有效，但不能用作新修复版PASS | 受影响回归＋fresh完整软件开发campaign；原Startup49/50与versioned结果分开；所有hash/schema/Job/cleanup完整 |
 | 来源/资格缺口 | exact五case causal gap、PF06 original INCOMPLETE、T09 durable hold、fullP history不可用 | 不伪造历史issue，不降低冻结期望；范围登记/正式资格由用户独立裁决，硬件不能靠软件测试消除 |
 | 软件交付 | 现有v0.2 wheel未打包M1 development tools；M1/公共控制说明和物理参数参考已按源码编写，仍是未执行安装验收的草稿 | 干净snapshot/wheel安装与实际入口验证，完整参数意义/单位/限制、示例、故障处理/版本证据齐全 |
@@ -14,4 +14,4 @@
 当前行动：优先完成实际错误的failure witness与修复，不再反复仅写语义中立报告。
 用户于2026-10-13明确授权远端专用分支提交/推送/开发测试；本机仍禁止Python/native/model压力执行。
 
-没有任何新测试PASS；没有代码修复已关闭的声明。全目标仍ACTIVE，当前表是进度/验收依据，不是缩小目标或发布批准。
+已有新开发回归PASS证据见M1_POST_REPAIR_STATUS.md；全目标仍ACTIVE，当前表是进度/验收依据，不是缩小目标或发布批准。

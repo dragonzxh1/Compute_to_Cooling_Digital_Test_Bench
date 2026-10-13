@@ -13,7 +13,21 @@ Original source commit3406da2ff71c119874135dd90016ef2987a2e297 is preserved.
 New v4 driver inherits frozen v3 PRE/Safety/PLC/math. Only POST ordering changes:
 prepare projection/history, serialize complete result, and insert completed store
 before changing public q/publication/history/commit. Earlier genuine facts remain.
-The identical four regression bodies are unchanged. New PASS is not yet claimed.
+The identical four regression bodies are unchanged (RAW SHA256
+d3e7990569fed30424fd66c5d4f21c5b358c4b571be9afaaaf7bc1d5d7850b1f).
+Repair run38419427761:4/4 PASS/0FAIL/0ERROR, official ZIP
+d40201c872f2a0ed85412e34547ee220d62833705ed98fd5177202389da1b807.
+
+Affected run38420108200:27/27 PASS/0FAIL/0ERROR (the four new assertions plus
+23 unchanged projection/state-copy/infrastructure tests). The versioned adapter
+records 16 actual v4 constructor bindings, never changing reference/expectations.
+Source4939b64b29a7434874f19fc0945255789bad575b; control manifest
+8b73d58387fabb3c45e4bca8f32cc6c9e2e421624cc6ae6741803bb749632e66.
+Official ZIP16c79c274d15ec47331738b2f83b97fe1e38b9859c2bd1865ff542d80b82e106
+was independently read back:15 members,4 raw captures, actualPID7384 in bounded
+Job,CPU25%,process/job1024/2048MiB,exit0/cleanup complete/active0; before/after
+environment identities identical. Result RAW SHA256
+173bc73da005ba4665b12d73655d2c4c537c56f8eef893af71d4230ebc2823f7.
 
 Baseline preregistration: exactly four named tests, three specific AssertionError
 failures (projection, serialization, completed-store rejection), one successful
@@ -27,6 +41,9 @@ CPU25%, process/job1024/2048MiB,480s wall budget. All old Build005 source/input
 bindings remain unchanged. Every new revision has a new source/control hash;
 failure evidence is never overwritten or retrospectively upgraded.
 
-Next: execute v4 against the identical assertions, then perform affected and fresh
-full-development validation plus install/use checks. These four tests alone do
-not prove arbitrary OS interruptions or durable crash recovery; T09 remains hold.
+Status: M1-DEF-POST-001 tested failure paths are repaired and affected development
+regression passed. This is not full candidate release acceptance. Next: fresh
+complete-development campaign against v4, installation/package/use verification,
+and final source/input/environment/artifact readback. Do not borrow Build005 PASS.
+No arbitrary OS interruptions/durable crash recovery qualification is claimed;
+T09 remains hold; full P history unavailable; real hardware calibration required.

@@ -1,6 +1,7 @@
 # M1-DEF-POST-001 development repair workspace
 
-Status: BASELINE_DEFECT_REPRODUCED; v4 POST repair implemented, regression pending.
+Status: BASELINE_DEFECT_REPRODUCED; v4 POST repair 4/4 and affected regression27/27
+passed in independently verified hosted Windows runs38419427761/38420108200.
 No candidate freeze, full requalification or production readiness is claimed.
 
 The failure is a transaction state corruption pattern: v3 commits public state
@@ -33,6 +34,6 @@ bound, actual-PID/Job-verified hosted Windows execution. Baseline acceptance is
 BASELINE_DEFECT_REPRODUCED, not a relabelling of the failed assertions as PASS.
 No formal C3-C, hardware or production permission is implied.
 
-Future verification must cover affected comparator/projection tests and a fresh
-complete software development campaign before release delivery. Universal OS
+Future verification must cover a fresh complete software development campaign
+and installation/use checks before release delivery. Universal OS
 crash/hardware transaction atomicity is still not asserted by these software tests.
