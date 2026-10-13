@@ -53,3 +53,11 @@ each executing worker; frozen-V3 parent byte identity is labelled separately.
 
 No arbitrary OS interruptions/durable crash recovery qualification is claimed;
 T09 remains hold; full P history unavailable; real hardware calibration required.
+
+Full fresh development run38423165745 is LIVE, not accepted complete yet.
+Execution source717a98dd89ece8d3b6944a80727b32f20a311b8b;
+control manifesteef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446;
+runner138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef.
+Initial GitHub snapshot: prepare succeeded,9/10 fresh reference groups completed,
+one still running, no failed job. This is progress only; no final PASS claim.
+Continue following this exact run; never restart because an observation expires.
