@@ -1,75 +1,79 @@
-name: Liquid cooling recovery smoke
-
+name: M1 clean offline SDK development install
 on:
   workflow_dispatch:
     inputs:
       expected_source_commit:
-        description: Exact development branch commit; never runs a full campaign
-        required: true
         type: string
+        required: true
       execution_manifest_sha256:
-        description: Approved remote execution manifest RAW SHA-256
-        required: true
         type: string
+        required: true
       runner_script_sha256:
-        description: Remote runner RAW SHA-256 checked before invocation
-        required: true
         type: string
-
+        required: true
 permissions:
   contents: read
-
 concurrency:
-  group: liquid-cooling-recovery-smoke
+  group: m1-sdk-install-development
   cancel-in-progress: false
-
+env:
+  EXPECTED_COMMIT: ${{ inputs.expected_source_commit }}
+  EXPECTED_CONTROL: ${{ inputs.execution_manifest_sha256 }}
+  EXPECTED_RUNNER: ${{ inputs.runner_script_sha256 }}
+  PYTHONDONTWRITEBYTECODE: '1'
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
 jobs:
-  smoke:
+  clean-sdk:
     runs-on: windows-2022
-    timeout-minutes: 25
-    defaults:
-      run:
-        shell: pwsh
-    env:
-      EXPECTED_SOURCE_COMMIT: ${{ inputs.expected_source_commit }}
-      EXECUTION_MANIFEST_SHA256: ${{ inputs.execution_manifest_sha256 }}
-      RUNNER_SCRIPT_SHA256: ${{ inputs.runner_script_sha256 }}
-      PYTHONDONTWRITEBYTECODE: '1'
-      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-      OMP_NUM_THREADS: '1'
-      OPENBLAS_NUM_THREADS: '1'
-      MKL_NUM_THREADS: '1'
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - name: Verify dispatch and script identity before running repository code
+      - name: Check source-bound install tooling
+        shell: pwsh
         run: |
-          $ErrorActionPreference='Stop'
-          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or
-             $env:EXPECTED_SOURCE_COMMIT -notmatch '^[a-f0-9]{40}$' -or
-             $env:EXECUTION_MANIFEST_SHA256 -notmatch '^[a-f0-9]{64}$' -or
-             $env:RUNNER_SCRIPT_SHA256 -notmatch '^[a-f0-9]{64}$') {throw 'DISPATCH_IDENTITY_REJECTED'}
-          $p='v0_2/tests/tools/liquid_recovery_remote_v1_1/run.ps1'
-          if((Get-FileHash -LiteralPath $p -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256) {throw 'RUNNER_SCRIPT_DRIFT'}
+          if($env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or (git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'INSTALL_COMMIT_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_release_v1/delivery_control.json -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'INSTALL_CONTROL_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_release_v1/run_install.ps1 -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'INSTALL_RUNNER_DRIFT'}
+          . ./v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1
+          $null=Restore-M1Snapshot -Repo (Get-Location).Path -ExpectedManifestSha256 '6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93'
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.11.9'
           architecture: x64
-      - name: Install exact declared dependencies in the disposable remote environment
+      - name: Create clean environment and package/unpack outside checkout
+        shell: pwsh
         run: |
-          python -m pip install --disable-pip-version-check -r v0_2/tests/tools/c3b_v14_1/requirements-development.lock
-          if($LASTEXITCODE -ne 0) {throw 'REMOTE_DEPENDENCY_INSTALL_FAILED'}
-      - name: Run only environment preflight and generic liquid-cooling smoke
+          $venv=Join-Path $env:RUNNER_TEMP 'm1-sdk-venv'
+          python -m venv $venv
+          if($LASTEXITCODE -ne 0){throw 'CLEAN_VENV_FAILED'}
+          $py=Join-Path $venv 'Scripts/python.exe'
+          & $py -m pip install --disable-pip-version-check -r v0_2/tests/tools/c3b_v14_1/requirements-development.lock
+          if($LASTEXITCODE -ne 0){throw 'CLEAN_VENV_INSTALL_FAILED'}
+          $package=Join-Path $env:RUNNER_TEMP 'm1-sdk-package'
+          & ./v0_2/tests/tools/m1_release_v1/package.ps1 -Repo (Get-Location).Path -Output $package -SourceCommit $env:EXPECTED_COMMIT -CampaignManifestSha256 'eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446'
+          $sdk=Join-Path $env:RUNNER_TEMP 'm1-sdk-unpacked'
+          Expand-Archive -LiteralPath ($package+'.zip') -DestinationPath $sdk
+          $work=Join-Path $env:RUNNER_TEMP 'm1-sdk-use-workspace'
+          New-Item -ItemType Directory -Path $work|Out-Null
+          [IO.File]::AppendAllText($env:GITHUB_ENV,('C2C_SDK_ROOT='+$sdk+[Environment]::NewLine+'C2C_SDK_WORKSPACE='+$work+[Environment]::NewLine+'C2C_SDK_ZIP='+$package+'.zip'+[Environment]::NewLine+'SDK_PYTHON='+$py+[Environment]::NewLine),[Text.UTF8Encoding]::new($false))
+          New-Item -ItemType Directory -Path artifacts/m1-sdk-delivery|Out-Null
+          Copy-Item -LiteralPath ($package+'.zip') -Destination artifacts/m1-sdk-delivery/source-sdk.zip
+      - name: Verified venv Python Job install/use acceptance
+        shell: pwsh
         run: |
-          $python=(Get-Command python).Source
-          & ./v0_2/tests/tools/liquid_recovery_remote_v1_1/run.ps1 -Python $python -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
-      - name: Preserve local authoritative evidence even on failure
+          & ./v0_2/tests/tools/m1_release_v1/run_install.ps1 -Python $env:SDK_PYTHON -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: liquid-recovery-${{ github.run_id }}-${{ github.run_attempt }}
-          path: artifacts/liquid-recovery-v1/
-          if-no-files-found: warn
-          retention-days: 7
+          name: m1-sdk-install
+          path: |
+            artifacts/m1-sdk-install/
+            artifacts/m1-sdk-delivery/
+            artifacts/m1-remote-executor-v1/build/build_identity.json
+          retention-days: 30
+          if-no-files-found: error
