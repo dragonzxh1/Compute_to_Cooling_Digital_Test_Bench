@@ -1,6 +1,6 @@
 {
   "schema": "m1-post-atomicity-development-control-v1",
-  "version": "POST_REPAIR_BUILD002",
+  "version": "POST_REPAIR_AFFECTED_BUILD003",
   "status": "UNSEALED_DEVELOPMENT_SOURCE_SNAPSHOT",
   "scope": "M1_POST_DEFECT_DEVELOPMENT_ONLY",
   "user_authorization": "Human explicitly authorized dedicated-branch commits/push/development tests 2026-10-13",
@@ -63,10 +63,11 @@
     ".github/workflows/m1-remote-development.yml": "be4524de4abb9b3ca533c1705b3ab67c7e33a55729b2fe41f3e2d28e280a498f",
     "v0_2/tests/tools/m1_engine_v4/__init__.py": "0d65159348f90de713a7186ee70de4ea953d1f21722df9f6f5de69307e3ef004",
     "v0_2/tests/tools/m1_engine_v4/test_post_atomicity.py": "d3e7990569fed30424fd66c5d4f21c5b358c4b571be9afaaaf7bc1d5d7850b1f",
-    "v0_2/tests/tools/m1_engine_v4/atomicity_worker.py": "47cff1fb1ac6a6cde6bcda24c920e45d09144f29bc01d6187036e18b053d8825",
+    "v0_2/tests/tools/m1_engine_v4/atomicity_worker.py": "223a376340f26087743bafedb13ad505e385d462b962fb8a8aca84b115263aa7",
     "v0_2/tests/tools/m1_engine_v4/run_remote.ps1": "2f8ec83582950a1032344370206b1928badc924eff1c06ad565d07c390379cec",
     "v0_2/tests/tools/m1_remote_control_v3/execution_manifest.json": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93",
-    "v0_2/tests/tools/m1_engine_v4/engine.py": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce"
+    "v0_2/tests/tools/m1_engine_v4/engine.py": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "v0_2/tests/tools/m1_engine_v4/integration_bindings.py": "f49daa6a1916521103eb8b3a7b31f0b0154b96b2135ad4ab32b49a567d3952e2"
   },
   "frozen_Build005_manifest_sha256": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93",
   "test_ids": [
@@ -88,9 +89,9 @@
   },
   "baseline_expected_exception": "AssertionError",
   "repair_expected_counts": {
-    "run": 4,
+    "run": 27,
+    "PASS": 27,
     "FAIL": 0,
-    "PASS": 4,
     "ERROR": 0
   },
   "resource_policy": {
@@ -109,5 +110,41 @@
     "source_commit": "3406da2ff71c119874135dd90016ef2987a2e297",
     "official_archive_sha256": "cd4bb522e2752f246b67e3a7c330fffdc633b4e8faeffcd0ade0451ebe639f33",
     "result": "3_FAIL_1_PASS_0_ERROR_NOT_RELABELED"
-  }
+  },
+  "integration_modules": [
+    "v0_2.tests.tools.m1_engine_v3.test_projection",
+    "v0_2.tests.tools.m1_engine_v3.test_state_copy",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure"
+  ],
+  "repair_test_ids": [
+    "v0_2.tests.tools.m1_engine_v4.test_post_atomicity.PostFailureAtomicity.test_projection_rejection_does_not_commit_publication",
+    "v0_2.tests.tools.m1_engine_v4.test_post_atomicity.PostFailureAtomicity.test_completed_result_serialization_failure_does_not_publish",
+    "v0_2.tests.tools.m1_engine_v4.test_post_atomicity.PostFailureAtomicity.test_completed_store_failure_does_not_publish",
+    "v0_2.tests.tools.m1_engine_v4.test_post_atomicity.PostFailureAtomicity.test_success_has_exactly_one_publication_and_idempotent_readback",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_01_same_pre_new_issue_projection",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_02_alternate_verified_receipt_same_pre",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_03_held_command_no_fabrication",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_04_unknown_issue_no_completed_transaction",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_05_not_issued_no_projection",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_06_post_failure_no_second_issue",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_07_wrong_projection_links_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_08_rewritten_pre_core_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_09_independent_safety_reason_erasure_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_10_changed_value_existing_semantics",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_11_duplicate_sample_credit_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_projection.ProjectionAttacks.test_12_exact_reference_history_remains_gate",
+    "v0_2.tests.tools.m1_engine_v3.test_state_copy.StateCopyTests.test_aliases_and_no_sharing",
+    "v0_2.tests.tools.m1_engine_v3.test_state_copy.StateCopyTests.test_qualified_state_exact",
+    "v0_2.tests.tools.m1_engine_v3.test_state_copy.StateCopyTests.test_unknown_type_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_schema_definitions_and_full_phase_frame",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_missing_core_field_and_bad_typed_values_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_fast_typed_validator_matches_standard_schema",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_artifact_exclusive_write_and_corruption_detected",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_formal_entry_denied_before_candidate_import",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_formal_unfrozen_authorization_rejected",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_asynchronous_replay_never_mints_receipts",
+    "v0_2.tests.tools.m1_engine_v3.test_infrastructure.InfrastructureTests.test_malformed_and_nonfinite_samples_not_validated_as_measurements"
+  ],
+  "affected_test_bodies_modified": false,
+  "integration_binding_scope": "Constructor selection to source-bound V4 only, no expectation or reference changes"
 }

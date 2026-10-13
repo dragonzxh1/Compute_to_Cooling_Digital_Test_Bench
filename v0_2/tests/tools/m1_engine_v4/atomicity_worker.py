@@ -8,6 +8,7 @@ import sys
 import time
 import traceback
 import unittest
+from contextlib import nullcontext
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -82,15 +83,26 @@ def main():
     os.environ["M1_POST_TEST_TARGET"] = target
     module = importlib.import_module("v0_2.tests.tools.m1_engine_v4.test_post_atomicity")
     suite = unittest.defaultTestLoader.loadTestsFromModule(module)
-    run = unittest.TextTestRunner(stream=sys.stderr, verbosity=2, resultclass=RecordedResults).run(suite)
+    binding_context = nullcontext([])
+    if target == "v4" and manifest.get("integration_modules"):
+        from .integration_bindings import sut_bindings
+        binding_context = sut_bindings()
+        for name in manifest["integration_modules"]:
+            suite.addTests(unittest.defaultTestLoader.loadTestsFromModule(importlib.import_module(name)))
+    with binding_context as constructed:
+        run = unittest.TextTestRunner(stream=sys.stderr, verbosity=2, resultclass=RecordedResults).run(suite)
     ids = {x["id"] for x in run.records}
     failures = {x["id"] for x in run.records if x["outcome"] == "FAIL"}
     errors = [x for x in run.records if x["outcome"] == "ERROR"]
     expected = manifest["baseline_expected_failure_ids"] if target == "v3" else []
     after = current_identity()
     verify_sources(manifest)
-    valid = (before == after and run.testsRun == 4 and len(run.records) == 4 and len(ids) == 4
-             and ids == set(manifest["test_ids"]) and not errors and not run.skipped
+    expected_ids = manifest["test_ids"] if target == "v3" else manifest.get("repair_test_ids", manifest["test_ids"])
+    binding_valid = (not manifest.get("integration_modules") or target != "v4" or
+                     (bool(constructed) and all(x["class"] == "v0_2.tests.tools.m1_engine_v4.engine.SplitEngine"
+                      and x["post_module"] == "v0_2.tests.tools.m1_engine_v4.engine" for x in constructed)))
+    valid = (before == after and run.testsRun == len(expected_ids) and len(run.records) == len(expected_ids)
+             and len(ids) == len(expected_ids) and ids == set(expected_ids) and binding_valid and not errors and not run.skipped
              and failures == set(expected))
     status = ("BASELINE_DEFECT_REPRODUCED" if target == "v3" else "DEVELOPMENT_REGRESSION_PASS") if valid else "STOP"
     result = {"status": status, "target": target, "tests_run": run.testsRun,
@@ -100,6 +112,7 @@ def main():
               "control_manifest_sha256": expected_manifest, "environment_before": before,
               "environment_after": after, "development_only": True, "formal_qualification": False,
               "baseline_failure_scores_not_relabelled_PASS": True}
+    result["affected_sut_constructors"] = constructed
     write(directory / "result.json", result)
     return 0 if valid else 1
 
