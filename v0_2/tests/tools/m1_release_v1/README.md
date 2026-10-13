@@ -14,7 +14,8 @@ The default CLI describes parameters without running models. `--run` requires an
 explicit opt-in and rejects the known HIPPO hard-hang host. A small prefix example
 does not substitute for the full development campaign or historical qualification.
 
-The planned install check uses a separately created environment and an unpacked
-package outside the repository, with actual Python/Job admission before models.
-It has NOT been executed yet. No source SDK or installation PASS is claimed now.
+The installation check has now run in a separately created environment with the
+unpacked SDK outside checkout and actual Python/Job admission before models.
+Run38458640545 and docs/M1_SDK_INSTALL_READBACK.json establish parameter-query
+and3-row example acceptance, not full campaign or formal release acceptance.
 Existing v0.2 wheel and legacy package remain unchanged and distinct products.
