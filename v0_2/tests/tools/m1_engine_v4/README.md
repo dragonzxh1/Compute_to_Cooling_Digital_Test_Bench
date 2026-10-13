@@ -1,7 +1,7 @@
 # M1-DEF-POST-001 development repair workspace
 
-Status: BASELINE_REGRESSION_PREPARED_NOT_EXECUTED. No v4 engine repair is yet
-claimed validated, frozen or production-ready.
+Status: BASELINE_DEFECT_REPRODUCED; v4 POST repair implemented, regression pending.
+No candidate freeze, full requalification or production readiness is claimed.
 
 The failure is a transaction state corruption pattern: v3 commits public state
 before projection validation, completed-result serialization and completed-store

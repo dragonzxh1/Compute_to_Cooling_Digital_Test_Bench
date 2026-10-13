@@ -1,6 +1,6 @@
 {
   "schema": "m1-post-atomicity-development-control-v1",
-  "version": "RCA_BASELINE_BUILD001",
+  "version": "POST_REPAIR_BUILD002",
   "status": "UNSEALED_DEVELOPMENT_SOURCE_SNAPSHOT",
   "scope": "M1_POST_DEFECT_DEVELOPMENT_ONLY",
   "user_authorization": "Human explicitly authorized dedicated-branch commits/push/development tests 2026-10-13",
@@ -65,7 +65,8 @@
     "v0_2/tests/tools/m1_engine_v4/test_post_atomicity.py": "d3e7990569fed30424fd66c5d4f21c5b358c4b571be9afaaaf7bc1d5d7850b1f",
     "v0_2/tests/tools/m1_engine_v4/atomicity_worker.py": "47cff1fb1ac6a6cde6bcda24c920e45d09144f29bc01d6187036e18b053d8825",
     "v0_2/tests/tools/m1_engine_v4/run_remote.ps1": "2f8ec83582950a1032344370206b1928badc924eff1c06ad565d07c390379cec",
-    "v0_2/tests/tools/m1_remote_control_v3/execution_manifest.json": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93"
+    "v0_2/tests/tools/m1_remote_control_v3/execution_manifest.json": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93",
+    "v0_2/tests/tools/m1_engine_v4/engine.py": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce"
   },
   "frozen_Build005_manifest_sha256": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93",
   "test_ids": [
@@ -102,5 +103,11 @@
   "production": false,
   "hardware": false,
   "phase6": false,
-  "local_model_execution": false
+  "local_model_execution": false,
+  "baseline_evidence": {
+    "run_id": 38418429221,
+    "source_commit": "3406da2ff71c119874135dd90016ef2987a2e297",
+    "official_archive_sha256": "cd4bb522e2752f246b67e3a7c330fffdc633b4e8faeffcd0ade0451ebe639f33",
+    "result": "3_FAIL_1_PASS_0_ERROR_NOT_RELABELED"
+  }
 }
