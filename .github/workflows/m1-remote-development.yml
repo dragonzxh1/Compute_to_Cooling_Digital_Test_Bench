@@ -15,6 +15,10 @@ on:
         type: choice
         options: [v3, v4]
         default: v3
+      run_scope:
+        type: choice
+        options: [atomicity, full]
+        default: atomicity
 permissions:
   contents: read
 concurrency:
@@ -31,7 +35,15 @@ env:
   EXPECTED_RUNNER: ${{ inputs.runner_script_sha256 }}
   ATOMICITY_TARGET: ${{ inputs.target }}
 jobs:
+  full-development:
+    if: inputs.run_scope == 'full'
+    uses: ./.github/workflows/m1-v4-full-development.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      execution_manifest_sha256: ${{ inputs.execution_manifest_sha256 }}
+      runner_script_sha256: ${{ inputs.runner_script_sha256 }}
   controlled-witness:
+    if: inputs.run_scope != 'full'
     runs-on: windows-2022
     timeout-minutes: 15
     steps:

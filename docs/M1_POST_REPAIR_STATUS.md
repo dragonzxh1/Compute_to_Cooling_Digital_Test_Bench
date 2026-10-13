@@ -45,5 +45,11 @@ Status: M1-DEF-POST-001 tested failure paths are repaired and affected developme
 regression passed. This is not full candidate release acceptance. Next: fresh
 complete-development campaign against v4, installation/package/use verification,
 and final source/input/environment/artifact readback. Do not borrow Build005 PASS.
+The fresh full campaign control is now versioned under m1_campaign_v4. Source-
+closure admission retains every old check and additionally binds the V4 driver,
+worker, runtime action and workflow. All reference/split/selector/repeat/Startup/
+schema/final execution is fresh. Actual SUT constructor identity is captured in
+each executing worker; frozen-V3 parent byte identity is labelled separately.
+
 No arbitrary OS interruptions/durable crash recovery qualification is claimed;
 T09 remains hold; full P history unavailable; real hardware calibration required.

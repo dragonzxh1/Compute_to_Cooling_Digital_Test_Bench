@@ -12,7 +12,7 @@ from unittest.mock import patch
 def sut_bindings():
     from .engine import SplitEngine
     modules = [importlib.import_module("v0_2.tests.tools.m1_engine_v3." + name)
-               for name in ("selfcheck", "adapters", "test_projection", "test_state_copy")]
+               for name in ("selfcheck", "adapters", "replay_stream", "test_projection", "test_state_copy")]
     constructed = []
 
     def factory(*args, **kwargs):
