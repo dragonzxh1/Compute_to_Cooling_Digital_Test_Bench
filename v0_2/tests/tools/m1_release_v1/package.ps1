@@ -17,14 +17,31 @@ foreach($relative in @('LICENSE','docs/M1_SOFTWARE_USER_GUIDE_DRAFT.md','docs/V0
 }
 New-Item -ItemType Directory -Path $destination|Out-Null
 $files=@()
+$bundle=Join-Path $root $manifest.bundle_path
+if((Get-FileHash $bundle -Algorithm SHA256).Hash.ToLowerInvariant() -cne $manifest.bundle_raw_sha256){throw 'PACKAGE_FROZEN_BUNDLE_DRIFT'}
+$archive=[IO.Compression.ZipFile]::OpenRead($bundle)
+try {
 foreach($p in $bindings.GetEnumerator()){
     $source=[IO.Path]::GetFullPath((Join-Path $root $p.Key));$target=[IO.Path]::GetFullPath((Join-Path $destination $p.Key))
     if(-not $source.StartsWith($root+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase) -or -not $target.StartsWith($destination+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)){throw 'PACKAGE_PATH_ESCAPE'}
-    if((Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash.ToLowerInvariant() -cne $p.Value){throw ('PACKAGE_SOURCE_DRIFT '+$p.Key)}
     New-Item -ItemType Directory -Path (Split-Path $target) -Force|Out-Null
-    Copy-Item -LiteralPath $source -Destination $target
+    # Frozen dependencies come from the exact original archive, not an assumed
+    # hydrated worktree. Current driver/workflow/docs still use actual source.
+    $member=$archive.GetEntry($p.Key)
+    $runtime=@($manifest.remote_source_raw_hashes.PSObject.Properties.Name) -ccontains $p.Key
+    if($null -ne $member -and -not $runtime){
+        $stream=$member.Open();$hasher=[Security.Cryptography.SHA256]::Create()
+        try{$hash=[Convert]::ToHexString($hasher.ComputeHash($stream)).ToLowerInvariant()}finally{$stream.Dispose();$hasher.Dispose()}
+        if($hash -cne $p.Value){throw ('PACKAGE_BUNDLE_MEMBER_DRIFT '+$p.Key)}
+        [IO.Compression.ZipFileExtensions]::ExtractToFile($member,$target,$false)
+    }else{
+        if((Get-FileHash -LiteralPath $source -Algorithm SHA256).Hash.ToLowerInvariant() -cne $p.Value){throw ('PACKAGE_SOURCE_DRIFT '+$p.Key)}
+        Copy-Item -LiteralPath $source -Destination $target
+    }
+    if((Get-FileHash -LiteralPath $target -Algorithm SHA256).Hash.ToLowerInvariant() -cne $p.Value){throw 'PACKAGE_COPIED_BYTE_DRIFT'}
     $files+=@{path=$p.Key;bytes=(Get-Item -LiteralPath $target).Length;sha256=$p.Value}
 }
+}finally{$archive.Dispose()}
 $cli=Join-Path $PSScriptRoot 'sdk_cli.py';$target=Join-Path $destination 'sdk_cli.py';Copy-Item -LiteralPath $cli -Destination $target
 $files+=@{path='sdk_cli.py';bytes=(Get-Item $target).Length;sha256=(Get-FileHash $target -Algorithm SHA256).Hash.ToLowerInvariant()}
 [IO.File]::WriteAllText((Join-Path $destination 'README-SDK.md'),@'
