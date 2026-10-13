@@ -15,3 +15,13 @@
 用户于2026-10-13明确授权远端专用分支提交/推送/开发测试；本机仍禁止Python/native/model压力执行。
 
 已有新开发回归PASS证据见M1_POST_REPAIR_STATUS.md；全目标仍ACTIVE，当前表是进度/验收依据，不是缩小目标或发布批准。
+
+## 2026-10-14 续跑后的实际进展（优先于上表旧进度）
+
+- V4完整fresh campaign和官方证据独立回读已PASS：101案例、2281prefix、67575帧对、499快照、101schema；原Startup49/50及versioned PASS分列。
+- 完整native union已核验287个执行任务、715批、1969阶段、7876raw captures、2895次真实V4构造身份及每阶段Job/cleanup/环境；没有借Build005分数。
+- SDK在新Python3.11.9 venv、仓库外安装/导入通过；674包内哈希、actualPID2588与Job/cleanup、参数查询和3拍示例独立回读通过。这不是安装后全部长用户工况验收。
+- 使用说明、37类/259字段V0.2参数参考及旧YAML参数说明已提供；旧DRAFT和已验证包字节身份保留。
+
+当前尚须完成：扩展SDK安装后长输入/用户用法验收，准确的限定软件发布签署包及用户冻结/资格范围决定。正式C3-C/production/hardware/Phase6不自动执行，不能通过删掉P1/PF06/T09缺口来宣称全部上线。
+见M1_V4_FULL_DEVELOPMENT_REPORT.md、M1_V4_FULL_DEVELOPMENT_EVIDENCE.json和M1_SOFTWARE_USER_GUIDE.md。

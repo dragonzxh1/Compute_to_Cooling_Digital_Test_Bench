@@ -1,5 +1,20 @@
 # C2C-DTB / 算力到冷却数字测试台
 
+## 最新 V4 软件开发与交付验证（2026-10-14）
+
+POST publication修复版已完成fresh完整开发campaign及独立原始证据回读：
+101案例、2281 selected prefixes、67575完整帧对、499新快照；C11/S17/P15通过。
+原Startup仍49/50，版本化兼容PASS分开报告。另核验287受控任务、1969阶段、
+7876原始日志及实际Python/Job/cleanup；SDK在新venv、仓库外完成小示例安装验证。
+见[完整开发报告](docs/M1_V4_FULL_DEVELOPMENT_REPORT.md)、
+[机器证据](docs/M1_V4_FULL_DEVELOPMENT_EVIDENCE.json)、
+[使用说明与参数](docs/M1_SOFTWARE_USER_GUIDE.md)。
+
+这是离线软件开发证据，不是正式C3-C、生产、真实CDU控制或Phase6批准。
+5项strict-P1历史因果缺口、PF06原INCOMPLETE、T09 hold、fullP不可用与硬件校准
+要求不变。SDK小例子也不代表所有安装后长用法均已验收。下面Build005是原开发历史，
+没有被改写或拿来替代V4新测试结果。
+
 ## M1 remote development result / M1 独立环境开发验证结果
 
 2026-10-13: the fresh hosted-Windows Build005 development campaign and independent

@@ -41,6 +41,14 @@ foreach($batch in $batches){
         $dir=Join-Path $batch.DirectoryName $s.stage_id
         $proof=Get-Content -LiteralPath (Join-Path $dir 'external_job_identity.json') -Raw|ConvertFrom-Json
         $native=Get-Content -LiteralPath (Join-Path $dir 'job_status.json') -Raw|ConvertFrom-Json
+        $ready=Get-Content -LiteralPath (Join-Path $dir 'ready.json') -Raw|ConvertFrom-Json
+        $release=Get-Content -LiteralPath (Join-Path $dir 'release.json') -Raw|ConvertFrom-Json
+        $start=Get-Content -LiteralPath (Join-Path $dir 'job_start.json') -Raw|ConvertFrom-Json
+        if($ready.pid -ne $native.pid -or $release.actual_python_pid -ne $ready.pid -or
+           $proof.target_job_name -cne $start.job_name -or -not $native.assigned_before_resume -or -not $native.resumed -or
+           $start.wall_ms -ne 480000 -or -not $start.kill_on_close -or $proof.cpu_flags -ne 5 -or
+           $proof.max_active_processes -ne 4 -or $proof.modules_before_workload -notcontains 'python.exe' -or
+           (Get-FileHash -LiteralPath (Join-Path $dir 'external_job_identity.json') -Algorithm SHA256).Hash.ToLowerInvariant() -cne $release.external_proof_raw_sha256){throw 'ACTUAL_PID_RELEASE_AND_JOB_LINK_INVALID'}
         if(-not $proof.in_target_job -or $proof.actual_python_pid -ne $native.pid -or $proof.cpu_rate -ne 2500 -or
            $proof.process_mb -ne 1024 -or $proof.job_mb -ne 2048 -or $native.outcome -cne 'EXITED' -or
            $native.child_exitcode -ne 0 -or -not $native.cleanup_complete -or $native.active_after_cleanup -ne 0){throw 'NATIVE_JOB_IDENTITY_LIMIT_OR_CLEANUP_INVALID'}
@@ -61,6 +69,7 @@ foreach($batch in $batches){
             $constructors++
         }
         if((Software-Json $worker.runtime_identity_before) -cne (Software-Json $worker.runtime_identity_after)){throw 'V4_BEFORE_AFTER_DRIFT'}
+        if($ready.executable -cne $worker.runtime_identity_before.executable){throw 'ACTUAL_PYTHON_EXECUTABLE_IDENTITY'}
         if((Software-Json $worker.runtime_identity_after) -cne $softwareExpected){throw 'AFTER_SOFTWARE_ENVIRONMENT_DRIFT'}
         if($s.stage_id -ceq 'ENVIRONMENT'){
             $software=[ordered]@{}
