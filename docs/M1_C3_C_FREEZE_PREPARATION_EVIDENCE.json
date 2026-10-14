@@ -1,0 +1,56 @@
+{
+  "schema": "m1-c3c-final-proposal-readiness-v1",
+  "status": "CANDIDATE_FOR_USER_APPROVED_EXECUTABLE_FREEZE",
+  "control_development": {
+    "run_id": 38562010589,
+    "source_commit": "2d22661ed9bb0658f17eca863d52198b2c462f21",
+    "python_checks": 47,
+    "powershell_checks": 60,
+    "official_artifact_sha256": "dd56ae7e731f7c8f5e7db5820828aa63f439caf8be0eb7bbcd790cc62bf93c4e",
+    "python_result_sha256": "3f315222ed6eab83de276e7e8497b189ca83f5210aabf71e8775533dcc5a8619",
+    "control_result_sha256": "53b1d4dfe279bd7866e3fd85236fb8964c58a665613c99781e3c0cfc36846f97",
+    "actual_python_pid": 3976,
+    "independent_readback": "PASS",
+    "candidate_behavioral_execution": false
+  },
+  "pre_sign_readback": {
+    "run_id": 38564672946,
+    "source_commit": "583c11ba6de302fa6df8b7ad283785fa030ba434",
+    "official_artifact_sha256": "31770c0c75101ad9d2de7db798c0d4c88ce888a3f280f1f9d105e7ad10b0111c",
+    "result_sha256": "072eb8fcb427ff69ea74b26bd83e3580394b4ccbeac770e74f2ec2c3a72a1e91",
+    "actual_python_pid": 7500,
+    "source_bindings": 714,
+    "inputs": 101,
+    "input_rows": 3216,
+    "planned_full_snapshots": 499,
+    "required_static_stages_before_final": 969,
+    "independent_readback": "PASS",
+    "candidate_behavioral_execution": false
+  },
+  "proposal": {
+    "path": "artifacts/m1-c3c-v1-freeze/executable_proposal.json",
+    "raw_sha256": "f5666e87ab3991d665d12cd6f913e3ef09c6c98c05acdb87d6f62d3c6c6c8e45",
+    "canonical_sha256": "7d233befd38c85046bf8b52920660651ea839e41ad4e0070353b3174749e1e35",
+    "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "registration_hashes": {
+      "limited_scope": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
+      "SEM01": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+      "SEM02": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
+      "PF06_supplement": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f"
+    }
+  },
+  "preserved_failures": [38560864137, 38563814212],
+  "git_raw_byte_normalization": "Nested .gitattributes preserves this new proposal's raw JSON; original root attributes/contract bytes unchanged",
+  "PF06_historical_phase_hashes": "NON_NORMATIVE_PROVENANCE_NOT_CANDIDATE_DERIVED_GOLDEN",
+  "formal_qualification_executed": false,
+  "user_freeze_approved": false,
+  "approval_generated": false,
+  "production": false,
+  "hardware": false,
+  "phase6": false,
+  "full_P_history_available": false,
+  "T09": "IMPLEMENTATION_HOLD",
+  "hardware_calibration": "CALIBRATION_REQUIRED",
+  "local_python_native_model_executed": false,
+  "full_goal_complete": false
+}

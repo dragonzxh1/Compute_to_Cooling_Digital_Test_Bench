@@ -36,6 +36,16 @@ source229ea624ec2638494ce28fc0a265bc45a246a6b0提供独立runtime admission、fo
 
 尚须验证PowerShell控制面及完整阶段/graph inventory，完成四项versioned登记文件和最终可执行hash manifest/空白签署页，才能提交确切冻结包。当前代码编译/合成PASS不表示完整formal路径已实际跑通，也不表示可审签包已经完成。正式开考前先把这些基础设施条件关闭，不再重复调tracking算法。
 
+## 最终准备结果（优先于上文阶段性进度）
+
+47项Python静态/合成检查和60项有限PowerShell控制/graph检查通过，并独立核验官方artifact、actual Job与原始日志。旧matrix checker假设及首次package culture-sort失败保留，修订没有改候选/冻结fixture/期待/数值规则。新PF06门禁只用本轮phase bytes自校验与独立预期/冻结CMP，不把历史SUT phase hashes当golden。
+
+签署前[run38564672946](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38564672946)验证714 bindings、101inputs/3216rows、499planned full snapshots、FINAL前969静态stages，原始证据和actualPID7500/cleanup independently PASS。它没有执行候选或正式qualification。
+
+确切提案在 `artifacts/m1-c3c-v1-freeze/`，active scope为limited_scope_v2.json，原scope及失败证据保留。统一签署页USER_APPROVAL_DECISION_SHEET.md列四项决定与所有边界。Proposal RAW=f5666e87ab3991d665d12cd6f913e3ef09c6c98c05acdb87d6f62d3c6c6c8e45；canonical=7d233befd38c85046bf8b52920660651ea839e41ad4e0070353b3174749e1e35。最终用户执行approval必须再绑定交付source commit，不从snapshot_parent_commit猜授权。
+
+当前仅等待用户对该确切包/SEM01/SEM02/PF06补充统一审签并授权fresh正式执行。不自填批准或开考，不自动production/hardware/Phase6；fullP不可用与T09 hold不改变。完整目标仍未完成，下一项是实际C3-C正式fresh执行及最终独立证据审阅。
+
 ```text
 DEVELOPMENT_PREREQUISITE = COMPLETE_WITH_INDEPENDENT_EVIDENCE
 C3_C_EXECUTABLE_PACKAGE = PREPARATION_NOT_FINALIZED
