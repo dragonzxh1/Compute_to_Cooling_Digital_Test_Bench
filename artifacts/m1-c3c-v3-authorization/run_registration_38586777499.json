@@ -1,0 +1,31 @@
+{
+  "schema": "m1-c3c-v3-user-authorized-fresh-run-registration-v1",
+  "status": "DISPATCHED_RESULT_PENDING",
+  "run_id": 38586777499,
+  "run_attempt": 1,
+  "run_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38586777499",
+  "execution_source_commit": "65300d9cae0df4b918c4e2db39fdfd7b9915976f",
+  "delivery_commit": "65300d9cae0df4b918c4e2db39fdfd7b9915976f",
+  "dispatch_ref": "codex/m1-post-atomicity-20261013",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "proposal_raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7",
+  "proposal_canonical_sha256": "d83a7ba989a23d88b3f2ac19eba4b9b74c71f20dab9c81129277577446f8b0f6",
+  "formal_runner_sha256": "69bc209c18fdc3f0a83c47228cae4e51bdbe76b0250104977da19bfe1c77a4e9",
+  "freeze_approval_receipt_raw_sha256": "11c51d1ac729a80cf05d357adabd2f9e4c9a73ab98c0af059c363207616d92c7",
+  "formal_execution_authorization_raw_sha256": "c496f7cd92c6ac788df2a333deefc6b7e8a387a56eaf6dbcd9126dbe4a0dd1aa",
+  "environment_lock_raw_sha256": "4a68d805046b6d7b6946274cabd2ba37b69b44d82587e4865bed89d9d77f6877",
+  "pre_dispatch_verification": {
+    "local_source_files": 751,
+    "exact_frozen_bundle_entries": 4,
+    "source_binding_count": 755,
+    "signature_sheet_and_attestation": "MATCH",
+    "remote_dispatch_branch_matches_approved_source": true
+  },
+  "fresh_from_prepare": true,
+  "prior_pass_credit": false,
+  "behavioral_adjudication": "NOT_MADE",
+  "same_execution_repair_or_retry": false,
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}
