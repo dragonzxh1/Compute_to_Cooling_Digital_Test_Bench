@@ -14,4 +14,4 @@ Proposal RAW=`2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7`�
 
 旧Startup historical49/50与versioned compatibility分开；五项严格P1因果排除仍INCOMPLETE；PF06 original INCOMPLETE、补充需本轮fresh结果；arbitrary POST exception atomicity NOT_PROVEN、T09 IMPLEMENTATION_HOLD、full P history NO、hardware CALIBRATION_REQUIRED。生产、硬件控制和Phase6均未授权。
 
-当前正式成绩：PENDING，behavioral adjudication NOT_MADE。只读闭包通过以及收到执行授权不等于formal C3-C PASS。
+2026-10-15 独立证据审阅更新：run38586777499 已停止，正式分类 `INVALID_C3_C_EXECUTION`，behavioral adjudication `NOT_MADE`。最终 worker 原因是 `C3C_REQUIRED_STAGE_COVERAGE_MISSING`：上游原始执行凭据没有完整汇集到 final；不是环境漂移或 candidate behavioral FAIL。本轮不修改后重跑。详见 [最终失败审阅报告](M1_C3_C_V3_FORMAL_FAILURE_REPORT.md)。只读闭包通过以及收到执行授权不等于formal C3-C PASS。

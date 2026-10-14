@@ -1,0 +1,47 @@
+{
+  "stages": [
+    {
+      "status": "PASS",
+      "stage_id": "ENVIRONMENT",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "status": "PASS",
+      "stage_id": "INPUT_INTEGRITY",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED"
+    },
+    {
+      "status": "INVALID",
+      "stage_id": "FINAL_ACCEPTANCE",
+      "reason": "REJECTED_ENVIRONMENT_VERIFIED"
+    }
+  ],
+  "no_same_run_repair_or_retry": true,
+  "status": "STOPPED_NOT_FULL_PASS",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "receipts": [
+    {
+      "result_raw_sha256": "1a1fe1d8e324a0bae8b2285ef38f3227cd1f6b26c3422a9d77f629af5dbb118c",
+      "stage_id": "ENVIRONMENT"
+    },
+    {
+      "result_raw_sha256": "1c4ee5f809ddbbb3c6a3dea19df42d1bcd2b8dd0844f5f0c1d1a9d463eada824",
+      "stage_id": "INPUT_INTEGRITY"
+    },
+    {
+      "result_raw_sha256": "4fd79409efbc47948b28f4d74ddf5de10e513a4332a0b334fb81340c2c3c2644",
+      "stage_id": "FINAL_ACCEPTANCE"
+    }
+  ],
+  "error_type": "RuntimeException",
+  "failed_stage": "FINAL_ACCEPTANCE",
+  "execution_identity": {
+    "execution_source_commit": "65300d9cae0df4b918c4e2db39fdfd7b9915976f",
+    "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+    "approval_receipt_raw_sha256": "11c51d1ac729a80cf05d357adabd2f9e4c9a73ab98c0af059c363207616d92c7",
+    "authorization_raw_sha256": "c496f7cd92c6ac788df2a333deefc6b7e8a387a56eaf6dbcd9126dbe4a0dd1aa",
+    "package_raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7"
+  },
+  "utc": "2026-10-14T19:14:00.5300851Z"
+}

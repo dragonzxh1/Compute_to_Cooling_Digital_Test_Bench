@@ -1,0 +1,7 @@
+{
+  "status": "INVALID",
+  "stage_id": "FINAL_ACCEPTANCE",
+  "original_result_raw_sha256": "b0bef3a9caa69d981208a21aca942523840e68c84ff221f036edd05b8269e662",
+  "behavioral_adjudication": "NOT_MADE",
+  "exact_runtime_authority_not_earned": true
+}

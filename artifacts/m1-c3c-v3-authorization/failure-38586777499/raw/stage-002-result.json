@@ -1,0 +1,15 @@
+{
+  "source_verified": true,
+  "environment_verified": false,
+  "evidence_verified": true,
+  "stage_id": "FINAL_ACCEPTANCE",
+  "cleanup_complete": true,
+  "child_exitcode": 0,
+  "active_after_cleanup": 0,
+  "capture_status": "COMPLETE",
+  "native_outcome": "EXITED",
+  "launcher_exitcode": 0,
+  "passed": false,
+  "primitive_consistent": true,
+  "result_status": "INVALID"
+}

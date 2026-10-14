@@ -1,0 +1,1 @@
+{"event": "BEGIN", "execution_manifest_raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7", "monotonic_ns": 720531000000, "phase": "C3C_STAGE", "pid": 6776, "sequence": 0, "stage_id": "FINAL_ACCEPTANCE", "sut_version": "v4-c3c", "utc_ns": 1792004988476803000}
