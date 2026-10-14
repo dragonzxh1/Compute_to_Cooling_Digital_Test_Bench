@@ -1,0 +1,11 @@
+{
+  "schema": "m1-c3c-dispatch-transport-evidence-v1",
+  "date": "2026-10-14",
+  "timezone": "Asia/Singapore",
+  "attempted_ref": "bccff042483d4bbb16ad2a92e2d68f35925182c9",
+  "github_http_status": 422,
+  "github_message": "No ref found for: bccff042483d4bbb16ad2a92e2d68f35925182c9",
+  "formal_execution_started": false,
+  "behavioral_adjudication": "NOT_MADE",
+  "resolution": "Dispatch the existing dedicated branch only after independently checking its remote ref equals the approved commit; keep expected_source_commit and all approved hashes unchanged"
+}

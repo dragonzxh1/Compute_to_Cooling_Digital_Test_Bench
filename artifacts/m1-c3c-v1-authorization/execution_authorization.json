@@ -1,0 +1,15 @@
+{
+  "schema": "m1-c3c-execution-authorization-v1",
+  "status": "EXECUTION_AUTHORIZED",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "package_raw_sha256": "f5666e87ab3991d665d12cd6f913e3ef09c6c98c05acdb87d6f62d3c6c6c8e45",
+  "approval_receipt_raw_sha256": "6263bf04f460118725e6427023ab41ded1b9f5c6cf69b4ed2e3d613bbb0d404b",
+  "execution_source_commit": "bccff042483d4bbb16ad2a92e2d68f35925182c9",
+  "environment_lock_raw_sha256": "4bdc48cda7bd75f0123c6fb512eece15b340acf4f8578bb4a22688e78a12bb30",
+  "date": "2026-10-14",
+  "timezone": "Asia/Singapore",
+  "execution_rule": "Fresh full execution from prepare; no prior PASS credit; STOP on preregistered FAIL or integrity failure; no repair/retry inside the same execution",
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}

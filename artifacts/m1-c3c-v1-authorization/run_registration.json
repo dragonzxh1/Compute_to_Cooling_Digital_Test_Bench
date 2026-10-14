@@ -1,0 +1,29 @@
+{
+  "schema": "m1-c3c-formal-run-registration-v1",
+  "status": "DISPATCHED_RESULT_PENDING",
+  "date": "2026-10-14",
+  "timezone": "Asia/Singapore",
+  "github_created_at_utc": "2026-10-14T12:47:19Z",
+  "run_id": 38566504587,
+  "run_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38566504587",
+  "dispatch_ref": "codex/m1-post-atomicity-20261013",
+  "execution_source_commit": "bccff042483d4bbb16ad2a92e2d68f35925182c9",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "package_raw_sha256": "f5666e87ab3991d665d12cd6f913e3ef09c6c98c05acdb87d6f62d3c6c6c8e45",
+  "package_canonical_sha256": "7d233befd38c85046bf8b52920660651ea839e41ad4e0070353b3174749e1e35",
+  "runner_raw_sha256": "7eac489a8ccd4d37a5b1419dd8c0fc6260f3fa998a07575d7bac6fd3e92b0b2d",
+  "approval_receipt_raw_sha256": "6263bf04f460118725e6427023ab41ded1b9f5c6cf69b4ed2e3d613bbb0d404b",
+  "execution_authorization_raw_sha256": "74282d7d758cf23034eac1e90a885d7ea97b2a0308301cd4214976bacd72d1bb",
+  "pre_dispatch_source_verification": {
+    "local_files": 710,
+    "matching_native_source_bundle_entries": 4,
+    "total_source_bindings": 714,
+    "raw_and_canonical_package_hashes": "MATCH",
+    "remote_branch_commit": "MATCH"
+  },
+  "prior_pass_credit": false,
+  "behavioral_adjudication": "NOT_MADE",
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}

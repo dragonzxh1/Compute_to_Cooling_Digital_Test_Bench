@@ -1,0 +1,30 @@
+{
+  "schema": "m1-c3c-user-approval-receipt-v1",
+  "status": "FROZEN_USER_APPROVED",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "package_raw_sha256": "f5666e87ab3991d665d12cd6f913e3ef09c6c98c05acdb87d6f62d3c6c6c8e45",
+  "package_canonical_sha256": "7d233befd38c85046bf8b52920660651ea839e41ad4e0070353b3174749e1e35",
+  "decisions": {
+    "limited_scope": "APPROVED",
+    "SEM01": "APPROVED",
+    "SEM02": "APPROVED",
+    "PF06_supplement": "APPROVED"
+  },
+  "registration_raw_sha256": {
+    "limited_scope": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
+    "SEM01": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+    "SEM02": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
+    "PF06_supplement": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f"
+  },
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "execution_source_commit": "bccff042483d4bbb16ad2a92e2d68f35925182c9",
+  "human_authorization": {
+    "date": "2026-10-14",
+    "timezone": "Asia/Singapore",
+    "source": "Direct human message in this chat following the unified approval page",
+    "verbatim": "批准该页绑定的冻结包及源码，授权全量 fresh C3-C 正式测试"
+  },
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}
