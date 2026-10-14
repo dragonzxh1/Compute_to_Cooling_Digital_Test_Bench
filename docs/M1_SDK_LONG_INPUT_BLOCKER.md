@@ -1,0 +1,11 @@
+# SDK长输入阻塞与修复边界
+
+安装后全101输入的首次扩展检查run38492275799已停止：indices0..64完成，index65的161拍长输入在Record.make结果序列化处MemoryError。官方artifact SHA256=e67bda787922a0be326d23c472d9283a3aed30268df897e00666c5b4fdd757c4。完整失败记录保存在D:/Github/c2c-m1-remote-evidence/sdk-extended-38492275799；详见M1_SDK_EXTENDED_FAILURE.json。
+
+这不是本机死机，也不是480s超时。actual Python7860通过外部Job核验，venv launcher6380单独记录，25%CPU/1024/2048MiB保持，退出码1、cleanup后active0。不能错误地要求venv launcher与实际Python必须同PID；权威证明是实际PID属于同一受控Job及release/proof身份一致。
+
+旧SDK同时保留reference.frames、SUT frames和内存completed结果。长历史逐帧增长，json序列化又产生临时副本；已有完整V4 campaign使用streaming和磁盘immutable journal，SDK小例子没有覆盖这条资源路径。SDK长用法目前NOT_READY；不能拿先前小例子或campaign成绩替代。
+
+新的m1_release_v3只修交付CLI的存储/观察方式：使用已存在的write_reference/write_split、CompletedJournal/TraceReader/OracleBridge，保留全部canonical内容、完整比较、独立预期、observer interference以及逐tick fsync日志，不裁历史、不增CPU/内存/模型timer，不改冻结engine/fixture/Contract15A/Safety。代码尚未执行，不能写PASS。
+
+下一步：准备新package/control/worker身份，按同一101完整输入预登记启动新的独立GitHub安装验证。每次CLI调用应有独立导入/日志上下文，不能把长跑诊断budget的进程全局累计当作数学故障。保留原失败执行，不原地修改取PASS。正式资格、生产、硬件、Phase6均未授权。
