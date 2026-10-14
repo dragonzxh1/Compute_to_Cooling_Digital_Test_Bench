@@ -35,7 +35,7 @@ concurrency:
 jobs:
   assembly-development:
     if: inputs.run_scope == 'development'
-    uses: ./.github/workflows/m1-c3c-v2-assembly.yml
+    uses: ./.github/workflows/m1-c3c-v3-assembly.yml
     with:
       expected_source_commit: ${{ inputs.expected_source_commit }}
       assembly_control_sha256: ${{ inputs.execution_manifest_sha256 }}
