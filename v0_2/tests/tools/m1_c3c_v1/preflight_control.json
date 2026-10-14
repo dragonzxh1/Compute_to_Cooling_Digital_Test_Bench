@@ -12,8 +12,9 @@
     "v0_2/tests/tools/m1_c3c_v1/preflight_worker.py": "5cc36a61e562db7b514d7d5724fd73b6262087874091be14d978d966a303525b",
     "v0_2/tests/tools/m1_c3c_v1/run_preflight.ps1": "5f6ab0c149f46f0ace8241546f56c5b6644968d0079b80f898b1d025c64de465",
     "v0_2/tests/tools/m1_c3c_v1/README.md": "1ea33eafad1dbc1ed1b1fc6c6e0384b88c6b814c478b156e71fc68996a9c6749",
-    ".github/workflows/m1-c3c-preflight.yml": "2c4ed22527e238ad4bb766f44f6c6477f8e5e9a24cec6ffd182e3074ce1045bf",
-    "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446"
+    ".github/workflows/m1-c3c-preflight.yml": "238cda2671b97d119dd1d5c53c4feaff83b6b4e495d09f6331abe65bfeb07e4b",
+    "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446",
+    ".github/workflows/liquid-cooling-recovery.yml": "eb919bdc4e5ee38abb8c9ec36a114cf2757b5312b1ab82963d5322b47ab5817a"
   },
   "protected_parent_manifest_path": "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json",
   "resource_policy": {

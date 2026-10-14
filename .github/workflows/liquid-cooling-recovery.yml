@@ -1,4 +1,4 @@
-name: M1 streaming SDK full-input development
+name: C3-C authority preflight development dispatcher
 on:
   workflow_dispatch:
     inputs:
@@ -13,70 +13,13 @@ on:
         required: true
 permissions:
   contents: read
-  actions: read
 concurrency:
-  group: m1-sdk-streaming-development
+  group: c3c-authority-development-dispatch
   cancel-in-progress: false
-env:
-  EXPECTED_COMMIT: ${{ inputs.expected_source_commit }}
-  EXPECTED_CONTROL: ${{ inputs.execution_manifest_sha256 }}
-  EXPECTED_RUNNER: ${{ inputs.runner_script_sha256 }}
-  PYTHONDONTWRITEBYTECODE: '1'
-  OMP_NUM_THREADS: '1'
-  OPENBLAS_NUM_THREADS: '1'
-  MKL_NUM_THREADS: '1'
 jobs:
-  installed-full-inputs:
-    strategy:
-      fail-fast: false
-      max-parallel: 3
-      matrix:
-        group: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    runs-on: windows-2022
-    timeout-minutes: 20
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          ref: ${{ github.sha }}
-          persist-credentials: false
-      - name: Check versioned extended-install source
-        shell: pwsh
-        run: |
-          if($env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or (git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'EXTENDED_COMMIT_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_release_v3/delivery_control.json -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'EXTENDED_CONTROL_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_release_v3/run_install.ps1 -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'EXTENDED_RUNNER_DRIFT'}
-          . ./v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1
-          $null=Restore-M1Snapshot -Repo (Get-Location).Path -ExpectedManifestSha256 '6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93'
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
-        with:
-          python-version: '3.11.9'
-          architecture: x64
-      - name: Create clean venv and unpack the versioned hash-bound streaming SDK
-        shell: pwsh
-        run: |
-          $venv=Join-Path $env:RUNNER_TEMP 'm1-sdk-streaming-venv'
-          python -m venv $venv
-          if($LASTEXITCODE -ne 0){throw 'EXTENDED_VENV_FAILED'}
-          $py=Join-Path $venv 'Scripts/python.exe'
-          & $py -m pip install --disable-pip-version-check -r v0_2/tests/tools/c3b_v14_1/requirements-development.lock
-          if($LASTEXITCODE -ne 0){throw 'EXTENDED_VENV_INSTALL_FAILED'}
-          $zip=(Resolve-Path 'artifacts/m1-sdk-streaming-v3/source-sdk.zip').Path
-          if((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -cne '820baee49b3170dc07bc7bb6bfa3ffdc9732c9c79492ccc7df43699202e6bf78'){throw 'ORIGINAL_SDK_ZIP_DRIFT'}
-          $sdk=Join-Path $env:RUNNER_TEMP 'm1-sdk-streaming-unpacked'
-          Expand-Archive -LiteralPath $zip -DestinationPath $sdk
-          $work=Join-Path $env:RUNNER_TEMP 'm1-sdk-streaming-use-workspace'
-          New-Item -ItemType Directory -Path $work|Out-Null
-          [IO.File]::AppendAllText($env:GITHUB_ENV,('C2C_SDK_ROOT='+$sdk+[Environment]::NewLine+'C2C_SDK_WORKSPACE='+$work+[Environment]::NewLine+'C2C_SDK_ZIP='+$zip+[Environment]::NewLine+'SDK_PYTHON='+$py+[Environment]::NewLine),[Text.UTF8Encoding]::new($false))
-      - name: Verified Python Job full installed-input acceptance
-        shell: pwsh
-        run: |
-          & ./v0_2/tests/tools/m1_release_v3/run_install.ps1 -Python $env:SDK_PYTHON -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL -Group ${{ matrix.group }}
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        if: always()
-        with:
-          name: m1-sdk-streaming-${{ matrix.group }}
-          path: |
-            artifacts/m1-sdk-streaming/
-            artifacts/m1-remote-executor-v1/build/build_identity.json
-          retention-days: 30
-          if-no-files-found: error
+  preflight:
+    uses: ./.github/workflows/m1-c3c-preflight.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      preflight_control_sha256: ${{ inputs.execution_manifest_sha256 }}
+      preflight_runner_sha256: ${{ inputs.runner_script_sha256 }}
