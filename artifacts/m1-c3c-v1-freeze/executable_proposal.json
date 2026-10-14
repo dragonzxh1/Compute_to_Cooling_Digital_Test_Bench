@@ -683,7 +683,7 @@
     "v0_2/tests/tools/m1_c3c_v1/authority.py": "9d29210aeb3cf87d19b95e7424315c6dc09a452b9854a9b52cfd9856d6ac29bc",
     "v0_2/tests/tools/m1_c3c_v1/batch.ps1": "d238e0a638dffa1f2107b25a323e8e65acd3fdc2f198ac65db7ac51ad68b3e51",
     "v0_2/tests/tools/m1_c3c_v1/bindings.py": "f9b923c51333e2f46d9df184805d53ddb2c57a6ca9d86ecaf011984612bce7e4",
-    "v0_2/tests/tools/m1_c3c_v1/build_proposal.ps1": "eced7a1da97c2769022b9c4a20dc56d1dce0574ec177d103233a6633fcb7608b",
+    "v0_2/tests/tools/m1_c3c_v1/build_proposal.ps1": "55ded9d7c96081340e96f5bd9f4be5428aae06150fd9586bb7a44885c5736060",
     "v0_2/tests/tools/m1_c3c_v1/campaign_plan.ps1": "376a9bbf9e2972c562912cebaf47bfd61825a3d06bf8567676f4eb4a62b31472",
     "v0_2/tests/tools/m1_c3c_v1/environment_lock.json": "4bdc48cda7bd75f0123c6fb512eece15b340acf4f8578bb4a22688e78a12bb30",
     "v0_2/tests/tools/m1_c3c_v1/final_gate.py": "84cb2e5712d6227246489dd99b8627f6985ebf9645335129f834befa323ab851",
@@ -705,7 +705,7 @@
     "v0_2/tests/tools/m1_c3c_v1/test_control_plane_v3.ps1": "50b1b9aa195e701730a03e1addac7a31b5f40c96f9cc7eee55d3884eaf0b0481",
     "v0_2/tests/tools/m1_c3c_v1/test_control_plane.ps1": "55e10e6c562373453ff9f3cb17d8c38aeba3b55f9e280bed33f2e0593ebb2537",
     "v0_2/tests/tools/m1_c3c_v1/worker.py": "f63eb083e4f16a6d203498870886a0408843067a657639b573bf77a98bae7db5",
-    ".github/workflows/liquid-cooling-recovery.yml": "e5327b2e6b31abb1a204a6ef075683530694f239a73d430efa6663449f3d3be8",
+    ".github/workflows/liquid-cooling-recovery.yml": "4f2c4cee98d3eab75c329a414e5263dda85de7bc361cd6ff57fcba12dc93776e",
     ".github/workflows/m1-c3c-full.yml": "21001029353e894a05e525bfb613ea9930b2a462984d10ef1457f2b3ff389e44",
     ".github/actions/m1-c3c-runtime/action.yml": "56a587512f6ec7a421d5c8c79ba45ef21e1aed78b99b3c52e671eff5f30a2546",
     "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446",
@@ -713,6 +713,7 @@
     "docs/V02_PHYSICS_PARAMETER_REFERENCE.md": "45cae0c7decedbeddf0870385c829a0ad40a4394904ec5f96ceee1a48d443aa5",
     "docs/LEGACY_SCENARIO_PARAMETER_REFERENCE.md": "c9cabb12ef5bbb26737d4e337a401c66659e931d7286bc2c3deefa63294e6163",
     "artifacts/m1-c3c-v1-freeze/limited_scope.json": "fa7f4a6bf9fb0048168cda56bb8acbc6f519b9c8e0b1be16c6d5d6e0b77231a8",
+    "artifacts/m1-c3c-v1-freeze/limited_scope_v2.json": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
     "artifacts/m1-c3c-v1-freeze/SEM01_addendum_v3.json": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
     "artifacts/m1-c3c-v1-freeze/SEM02_five_case_registry_v1.json": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
     "artifacts/m1-c3c-v1-freeze/PF06_C8_NORMAL_SUPPLEMENT_v1.json": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f",
@@ -1245,13 +1246,13 @@
   "PF06_supplemental_binding_id": "PF06-C8-NORMAL-SUPPLEMENT-v1",
   "prior_pass_credit": false,
   "registration_paths": {
-    "limited_scope": "artifacts/m1-c3c-v1-freeze/limited_scope.json",
+    "limited_scope": "artifacts/m1-c3c-v1-freeze/limited_scope_v2.json",
     "SEM01": "artifacts/m1-c3c-v1-freeze/SEM01_addendum_v3.json",
     "SEM02": "artifacts/m1-c3c-v1-freeze/SEM02_five_case_registry_v1.json",
     "PF06_supplement": "artifacts/m1-c3c-v1-freeze/PF06_C8_NORMAL_SUPPLEMENT_v1.json"
   },
   "registration_raw_sha256": {
-    "limited_scope": "fa7f4a6bf9fb0048168cda56bb8acbc6f519b9c8e0b1be16c6d5d6e0b77231a8",
+    "limited_scope": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
     "SEM01": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
     "SEM02": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
     "PF06_supplement": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f"

@@ -25,10 +25,12 @@ for($i=0;$i -lt 101;$i++){
 }
 for($i=0;$i -lt 50;$i++){$null=$required.Add('STARTUP-'+$i)}
 $null=$required.Add('REFERENCE_GROUPS')
+$ordinalStages=[string[]]@($required)
+[Array]::Sort($ordinalStages,[StringComparer]::Ordinal)
 $scope=[ordered]@{
     schema='m1-c3c-limited-software-scope-v1';status='PROPOSED_NOT_USER_APPROVED'
     scope='M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN';descriptor_count=101;startup_node_count=50
-    required_static_stage_ids=@($required|Sort-Object)
+    required_static_stage_ids=$ordinalStages
     final_current_stage='FINAL_ACCEPTANCE';final_current_batch_post_cleanup_readback_required=$true
     prefix_scope='Original ITQ conditional selector: mandatory674 plus fresh protected reference progress/confirmed union; support U/ST/C/S/P15 exhaustive prefixes'
     prefix_counts_not_prepopulated_from_previous_run=$true

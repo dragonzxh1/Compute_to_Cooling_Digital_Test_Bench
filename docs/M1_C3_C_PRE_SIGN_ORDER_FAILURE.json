@@ -1,0 +1,18 @@
+{
+  "schema": "m1-c3c-proposal-pre-sign-failure-v1",
+  "run_id": 38563814212,
+  "source_commit": "68b602c0c254db28b176d5a2ae09631f277157cb",
+  "official_artifact_sha256": "160695c51146acf651f39d1ee6067d67a2fe741f6bf2bcb14dea957ab7e506ba",
+  "failure": "STATIC_STAGE_INVENTORY_DRIFT: PowerShell culture sort versus Python ordinal sort",
+  "stage_sets_identical": true,
+  "required_static_stage_count": 969,
+  "original_limited_scope_registry_preserved": true,
+  "corrected_registry": "limited_scope_v2.json",
+  "fix": "Explicit ordinal string sorting, no stage omission or expectation change",
+  "native_child_exitcode": 1,
+  "cleanup_active_processes": 0,
+  "candidate_behavioral_execution": false,
+  "formal_qualification": false,
+  "approval_generated": false,
+  "evidence_location": "D:/Github/c2c-m1-remote-evidence/c3c-pre-sign-38563814212"
+}
