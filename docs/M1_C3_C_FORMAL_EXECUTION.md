@@ -25,4 +25,16 @@ GitHub 绿色不等于最终资格 PASS。结束后仍须独立核验官方 arti
 
 原 Startup historical 49/50 与 versioned compatibility 单列；五项 causal exclusions 不算 strict P1 Lane B/C PASS。PF06 原 scope 仍 INCOMPLETE，获批补充需本轮 fresh 证据。任意 POST exception atomicity 仍 NOT_PROVEN；T09 IMPLEMENTATION_HOLD，full P history 不可用，hardware CALIBRATION_REQUIRED。
 
-当前结果：`PENDING`，`behavioral_adjudication = NOT_MADE`。运行完成并独立回读前不发布资格结论。
+## 本轮停止结果（2026-10-14）
+
+`INVALID_C3_C_EXECUTION`，`behavioral_adjudication = NOT_MADE`。首个 ENVIRONMENT stage 拒绝，后续全部未运行；candidate 行为测试数为 0，不是 candidate FAIL。
+
+已签环境锁为 Windows image `20261004.326.1`，本次 GitHub setup 原始日志显示 image `20261012.333.1`，这一差异足以触发 `QUALIFICATION_ENVIRONMENT_DRIFT`。失败结果未写完整 actual environment snapshot，不能推断其余环境字段全部相同，也不能直接把新 image 代入后重跑。
+
+官方 prepare ZIP（16 文件，6933 bytes）下载 SHA-256 与 GitHub digest 均为 `0708b67bac637c913f2ffdfe8f16a8746974d9848e18ef4eb4a1f342d36b258e`。ZIP 原样归档于 `artifacts/m1-c3c-v1-authorization/failed_run_38566504587_prepare.zip`。原始 workflow log、解包证据完整保存在 `D:/Github/c2c-m1-remote-evidence/c3c-formal-38566504587/`，log SHA-256 为 `e31f3177512145440c3fa6b77eef4cef22f12a47197b00d94f07cdfd6569ba03`。
+
+独立核验 actual Python PID 1340：ready/proof/release 对应同一 PID 和 proof hash；25% CPU、1024/2048 MiB、4 active-process cap；child exit0，cleanup complete、active0；4 raw captures 回读 hash 匹配。空 raw 输出是本次实际结果，不能填造错误日志；结构化 result.json 保留明确环境拒绝。
+
+另外发现一个独立的错误路径缺陷：`run.ps1:197` 在 ENVIRONMENT 失败没有 `runtime_identity_before` 时仍直接访问该字段，batch_stop 因而记录 `PropertyNotFoundException`。这不消除 worker 原本的环境错误，也不构成 candidate 行为失败；本轮不修复。
+
+源码、已签 proposal、环境锁、fixtures 与预期保持原样。本次正式执行已经 STOP，未重试。下一步需单独进行环境重新登记及执行证据错误路径修订；新确切包获批之前不再启动正式测试。机器判定见 `artifacts/m1-c3c-v1-authorization/failed_run_38566504587.json`。

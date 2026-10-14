@@ -1,0 +1,69 @@
+{
+  "schema": "m1-c3c-formal-stop-independent-readback-v1",
+  "date": "2026-10-14",
+  "timezone": "Asia/Singapore",
+  "run_id": 38566504587,
+  "run_attempt": 1,
+  "execution_source_commit": "bccff042483d4bbb16ad2a92e2d68f35925182c9",
+  "package_raw_sha256": "f5666e87ab3991d665d12cd6f913e3ef09c6c98c05acdb87d6f62d3c6c6c8e45",
+  "gate": "INVALID_C3_C_EXECUTION",
+  "behavioral_adjudication": "NOT_MADE",
+  "failed_stage": "ENVIRONMENT",
+  "stage_result": "INVALID",
+  "primary_error": "QUALIFICATION_ENVIRONMENT_DRIFT",
+  "sufficient_proven_identity_mismatch": {
+    "field": "image_version",
+    "approved": "20261004.326.1",
+    "github_setup_log_observed": "20261012.333.1"
+  },
+  "complete_actual_environment_snapshot_available": false,
+  "all_other_environment_fields_proven_identical": false,
+  "candidate_behavioral_tests_executed": 0,
+  "candidate_import_reached": false,
+  "startup_executed": false,
+  "prefix_executed": false,
+  "repeat_executed": false,
+  "official_artifact": {
+    "id": 11896660535,
+    "name": "prepare",
+    "size_in_bytes": 6933,
+    "github_digest_sha256": "0708b67bac637c913f2ffdfe8f16a8746974d9848e18ef4eb4a1f342d36b258e",
+    "independent_download_sha256": "0708b67bac637c913f2ffdfe8f16a8746974d9848e18ef4eb4a1f342d36b258e",
+    "file_count": 16
+  },
+  "workflow_log_sha256": "e31f3177512145440c3fa6b77eef4cef22f12a47197b00d94f07cdfd6569ba03",
+  "stage_result_sha256": "c35b2c9d3b1d2291120e2c60255cb5c510a63d4f1148251de8cd78aabeda201c",
+  "batch_stop_sha256": "4621452f94dfe798e1e5a99009c04274c30eac70e8ee2b1860920811559a0f53",
+  "actual_job_independent_readback": {
+    "actual_python_pid": 1340,
+    "ready_proof_release_pid_match": true,
+    "release_proof_hash_match": true,
+    "external_proof_raw_sha256": "70d14f599a4e5ede81482ae0a746b23868f9aa373ed6e193d8a40bbd606bad1a",
+    "in_target_job": true,
+    "cpu_rate": 2500,
+    "process_mb": 1024,
+    "job_mb": 2048,
+    "max_active_processes": 4,
+    "child_exitcode": 0,
+    "cleanup_complete": true,
+    "active_after_cleanup": 0
+  },
+  "raw_capture_receipt_readback": {
+    "capture_count": 4,
+    "all_match": true,
+    "all_empty": true,
+    "empty_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "secondary_failure_envelope_defect": {
+    "status": "OPEN_NOT_REPAIRED",
+    "batch_stop_error_type": "PropertyNotFoundException",
+    "source": "v0_2/tests/tools/m1_c3c_v1/run.ps1:197",
+    "finding": "ENVIRONMENT failure omits runtime_identity_before; parent accesses that property unconditionally. Original INVALID worker result and raw evidence remain preserved. This is separate from the proven environment rejection, not candidate behavior."
+  },
+  "same_execution_repaired_or_retried": false,
+  "frozen_source_or_environment_lock_modified": false,
+  "next_required_action": "Separate environment re-registration / execution-evidence infrastructure review; obtain exact revised package approval before any new formal run",
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}
