@@ -1,0 +1,11 @@
+{
+  "schema": "m1-streaming-sdk-package-identity-v3",
+  "source_commit": "80fa3e17af9b6e624d2a6f42ecd103d78fa5fa63",
+  "payload_count": 675,
+  "zip_sha256": "820baee49b3170dc07bc7bb6bfa3ffdc9732c9c79492ccc7df43699202e6bf78",
+  "delivery_manifest_raw_sha256": "fb1d086f079a3366045bce88fe38627137e24660c277d4e0cba14d2dd5320dd0",
+  "status": "DEVELOPMENT_DELIVERY_CANDIDATE_NOT_INSTALLATION_VALIDATED",
+  "user_approved_freeze": false,
+  "formal_qualification": false,
+  "hardware": "CALIBRATION_REQUIRED"
+}
