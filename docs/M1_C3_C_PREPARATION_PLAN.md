@@ -28,6 +28,14 @@
 
 仍须完成的新文件：独立formal admission/worker/runner/batch、完整fresh分阶段workflow、exact environment与artifact schema/STOP规则、完整stage inventory和四份版本化scope registrations、最终freeze manifest及空白用户签署页。不能调用旧FINAL把DEVELOPMENT result改名为formal PASS；sealed库的中间记录保留原身份，正式结果须由新受控执行和新独立完整性/范围门禁裁决。
 
+## 后续进展：正式编排代码已组装，未封存
+
+source229ea624ec2638494ce28fc0a265bc45a246a6b0提供独立runtime admission、formal source lock、case driver、stage worker、batch/runner、final gate、环境锁、stage schema/STOP及完整分阶段workflow。旧development-only driver/guard均未修改；新driver只替换授权调用、保留原函数内数学/断言AST及legacy内部artifact metadata，不调用被禁用的development入口取得formal成绩。正式结果由新的签署身份与独立final gate产生，仍须fresh真实执行，不能使用已有development result。
+
+[run38498863117](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38498863117)以development模式执行45/45静态/合成检查，formal job明确skipped。官方ZIP、4raw captures、actualPID7836/Job/cleanup、before/after环境和source身份已独立核验。没有candidate import/行为运行、没有自动审批。证据：[M1_C3_C_ASSEMBLY_EVIDENCE.json](M1_C3_C_ASSEMBLY_EVIDENCE.json)。
+
+尚须验证PowerShell控制面及完整阶段/graph inventory，完成四项versioned登记文件和最终可执行hash manifest/空白签署页，才能提交确切冻结包。当前代码编译/合成PASS不表示完整formal路径已实际跑通，也不表示可审签包已经完成。正式开考前先把这些基础设施条件关闭，不再重复调tracking算法。
+
 ```text
 DEVELOPMENT_PREREQUISITE = COMPLETE_WITH_INDEPENDENT_EVIDENCE
 C3_C_EXECUTABLE_PACKAGE = PREPARATION_NOT_FINALIZED
