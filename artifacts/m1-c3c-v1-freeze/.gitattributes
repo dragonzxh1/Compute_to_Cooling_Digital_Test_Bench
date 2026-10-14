@@ -1,0 +1,3 @@
+# Preserve the exact raw bytes used by this proposal's signed hash bindings.
+# This exception applies only inside this new proposal folder.
+*.json -text -eol
