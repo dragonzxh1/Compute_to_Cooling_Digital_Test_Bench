@@ -1,0 +1,18 @@
+{
+  "schema": "m1-c3c-proposal-pre-sign-development-control-v1",
+  "status": "PREREGISTERED_NOT_EXECUTED",
+  "scope": "DEVELOPMENT_PRE_SIGN_READ_ONLY",
+  "source_hashes": {
+    "v0_2/tests/tools/m1_c3c_v1/pre_sign_worker.py": "1423bd8960a5a782edd011ff88ef9169139c9d0ad3c36fe60a6d6eedca4513d2",
+    "v0_2/tests/tools/m1_c3c_v1/run_pre_sign.ps1": "2ec2d9be44c5bbfaf2f7c388023655ff142bc509d54528e5c7b2a6d9f5e8864d",
+    "v0_2/tests/tools/m1_c3c_v1/verify_proposal.py": "7080dd65736099089c3a4a748571924a4e0990d99a286121e1ff46fa0ead7abc",
+    ".github/workflows/m1-c3c-pre-sign.yml": "e8aaf41304c718ba99bebef4172cf5691434cdec7492180a16507915b71bdab7",
+    ".github/workflows/liquid-cooling-recovery.yml": "e5327b2e6b31abb1a204a6ef075683530694f239a73d430efa6663449f3d3be8",
+    "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446",
+    "artifacts/m1-c3c-v1-freeze/executable_proposal.json": "17d2ad5e357841d5dd775f9735194e8e237a2e57ff0a92fe412741566a7414e5"
+  },
+  "protected_parent_manifest_path": "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json",
+  "proposal_raw_sha256": "17d2ad5e357841d5dd775f9735194e8e237a2e57ff0a92fe412741566a7414e5",
+  "candidate_behavioral_execution": false,
+  "formal_behavior_authorized": false
+}

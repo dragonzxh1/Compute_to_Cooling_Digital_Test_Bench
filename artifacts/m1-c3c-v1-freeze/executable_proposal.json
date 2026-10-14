@@ -705,7 +705,7 @@
     "v0_2/tests/tools/m1_c3c_v1/test_control_plane_v3.ps1": "50b1b9aa195e701730a03e1addac7a31b5f40c96f9cc7eee55d3884eaf0b0481",
     "v0_2/tests/tools/m1_c3c_v1/test_control_plane.ps1": "55e10e6c562373453ff9f3cb17d8c38aeba3b55f9e280bed33f2e0593ebb2537",
     "v0_2/tests/tools/m1_c3c_v1/worker.py": "f63eb083e4f16a6d203498870886a0408843067a657639b573bf77a98bae7db5",
-    ".github/workflows/liquid-cooling-recovery.yml": "260d6bd35db05a9830663c4bd328516e6831ce0ec894a946fc4d3c5d5a050d9a",
+    ".github/workflows/liquid-cooling-recovery.yml": "e5327b2e6b31abb1a204a6ef075683530694f239a73d430efa6663449f3d3be8",
     ".github/workflows/m1-c3c-full.yml": "21001029353e894a05e525bfb613ea9930b2a462984d10ef1457f2b3ff389e44",
     ".github/actions/m1-c3c-runtime/action.yml": "56a587512f6ec7a421d5c8c79ba45ef21e1aed78b99b3c52e671eff5f30a2546",
     "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446",
@@ -715,7 +715,8 @@
     "artifacts/m1-c3c-v1-freeze/limited_scope.json": "fa7f4a6bf9fb0048168cda56bb8acbc6f519b9c8e0b1be16c6d5d6e0b77231a8",
     "artifacts/m1-c3c-v1-freeze/SEM01_addendum_v3.json": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
     "artifacts/m1-c3c-v1-freeze/SEM02_five_case_registry_v1.json": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
-    "artifacts/m1-c3c-v1-freeze/PF06_C8_NORMAL_SUPPLEMENT_v1.json": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f"
+    "artifacts/m1-c3c-v1-freeze/PF06_C8_NORMAL_SUPPLEMENT_v1.json": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f",
+    "artifacts/m1-c3c-v1-freeze/.gitattributes": "cabd5718675099ad29396ef59aadaad843a33e998feb6d11bac6013817648f66"
   },
   "inputs": [
     {
