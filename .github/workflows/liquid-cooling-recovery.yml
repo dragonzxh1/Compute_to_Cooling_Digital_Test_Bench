@@ -1,4 +1,4 @@
-name: C3-C authority preflight development dispatcher
+name: C3-C versioned software validation dispatcher
 on:
   workflow_dispatch:
     inputs:
@@ -11,15 +11,43 @@ on:
       runner_script_sha256:
         type: string
         required: true
+      run_scope:
+        type: choice
+        options: [development, formal]
+        default: development
+      approval_receipt_b64:
+        type: string
+        default: ''
+      approval_receipt_sha256:
+        type: string
+        default: ''
+      execution_authorization_b64:
+        type: string
+        default: ''
+      execution_authorization_sha256:
+        type: string
+        default: ''
 permissions:
   contents: read
 concurrency:
   group: c3c-authority-development-dispatch
   cancel-in-progress: false
 jobs:
-  preflight:
-    uses: ./.github/workflows/m1-c3c-preflight.yml
+  assembly-development:
+    if: inputs.run_scope != 'formal'
+    uses: ./.github/workflows/m1-c3c-assembly.yml
     with:
       expected_source_commit: ${{ inputs.expected_source_commit }}
-      preflight_control_sha256: ${{ inputs.execution_manifest_sha256 }}
-      preflight_runner_sha256: ${{ inputs.runner_script_sha256 }}
+      assembly_control_sha256: ${{ inputs.execution_manifest_sha256 }}
+      assembly_runner_sha256: ${{ inputs.runner_script_sha256 }}
+  formal:
+    if: inputs.run_scope == 'formal'
+    uses: ./.github/workflows/m1-c3c-full.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      execution_manifest_sha256: ${{ inputs.execution_manifest_sha256 }}
+      runner_script_sha256: ${{ inputs.runner_script_sha256 }}
+      approval_receipt_b64: ${{ inputs.approval_receipt_b64 }}
+      approval_receipt_sha256: ${{ inputs.approval_receipt_sha256 }}
+      execution_authorization_b64: ${{ inputs.execution_authorization_b64 }}
+      execution_authorization_sha256: ${{ inputs.execution_authorization_sha256 }}

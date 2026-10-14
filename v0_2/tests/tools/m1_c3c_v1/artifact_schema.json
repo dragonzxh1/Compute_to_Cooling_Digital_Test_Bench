@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:c2c-dtb:m1-c3c-stage-result:v1",
+  "type": "object",
+  "required": ["schema", "stage_id", "status", "behavioral_adjudication", "formal_qualification", "formal_execution_authorized", "github_run_id", "github_run_attempt", "sut"],
+  "properties": {
+    "schema": {"const": "m1-c3c-stage-result-v1"},
+    "stage_id": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+    "status": {"enum": ["PASS", "FAIL", "INCOMPLETE", "INVALID"]},
+    "behavioral_adjudication": {"enum": ["FAIL", "NOT_MADE"]},
+    "formal_qualification": {"const": true},
+    "formal_execution_authorized": {"type": "boolean"},
+    "github_run_id": {"type": "string", "pattern": "^[0-9]+$"},
+    "github_run_attempt": {"type": "string", "pattern": "^[0-9]+$"},
+    "sut": {"const": "v0_2.tests.tools.m1_engine_v4.engine.SplitEngine"},
+    "scope": {"const": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN"},
+    "execution_identity": {"type": "object"},
+    "runtime_identity_before": {"type": "object"},
+    "runtime_identity_after": {"type": "object"},
+    "payload": {"type": "object"},
+    "sut_constructors": {"type": "array"},
+    "error_type": {"type": "string"},
+    "post_failure_integrity_error": {"type": "string"},
+    "error": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"enum": ["PASS", "FAIL", "INCOMPLETE"]}}},
+      "then": {
+        "required": ["scope", "execution_identity", "runtime_identity_before", "runtime_identity_after", "payload", "sut_constructors"],
+        "properties": {"formal_execution_authorized": {"const": true}}
+      }
+    },
+    {
+      "if": {"properties": {"status": {"const": "FAIL"}}},
+      "then": {"properties": {"behavioral_adjudication": {"const": "FAIL"}}},
+      "else": {"properties": {"behavioral_adjudication": {"const": "NOT_MADE"}}}
+    }
+  ],
+  "additionalProperties": false
+}
