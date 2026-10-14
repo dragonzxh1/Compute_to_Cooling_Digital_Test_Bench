@@ -1,0 +1,17 @@
+{
+  "schema": "m1-c3c-control-plane-development-failure-v1",
+  "run_id": 38560864137,
+  "source_commit": "5929a8a81c45efa1f5bebc3f3c3549afe47bd47a",
+  "control_sha256": "736919516455167b36bcb7b9cfaa84395212c0ec770d88576d54bfe263fbf771",
+  "official_artifact_sha256": "98c3a506bb5779ed95c68853c09f91ac8a883d8f8475e914bab43749ca6fe229",
+  "status": "DEVELOPMENT_CONTROL_PLANE_STOP",
+  "python_synthetic_tests": "45/45 PASS; not full control-plane acceptance",
+  "failure": "MatrixIndices assumed every include entry has indices; Startup/schema include entries may use index",
+  "location": "v0_2/tests/tools/m1_c3c_v1/test_control_plane.ps1::MatrixIndices",
+  "fix_scope": "New versioned control checker accepts the two registered matrix shapes and rejects unknown shapes",
+  "original_failed_checker_preserved": true,
+  "candidate_behavioral_execution": false,
+  "formal_qualification": false,
+  "same_execution_repair_or_retry": false,
+  "evidence_location": "D:/Github/c2c-m1-remote-evidence/c3c-control-v2-38560864137"
+}

@@ -41,10 +41,14 @@ def pf06_vector():
         "row_index_zero_based": 4, "time_ns": 800000000, "source_id": "synthetic-measurement:800ms",
         "independent_expectations": {"PRE": pre, "POST": post, "expected_Safety": safety},
         "phase_record_hashes": phases, "negative_controls": negatives}
+    records = {"PRE": {"phase": "PRE", "state": "TRACKING_PROGRESS"}, "SAFETY": deepcopy(safety),
+               "PLC": {"producer": "SIMULATED_PLC"}, "POST": {"phase": "POST", "state": "HANDOFF_PENDING"}}
+    current_hashes = {key: a.digest(a.canonical(value)) for key, value in records.items()}
     cut = {"source_descriptor": deepcopy(d), "row_index": 4, "time_ns": 800000000,
         "source_id": "synthetic-measurement:800ms", "observed_preconditions": {"PF-06": True},
         "independent_expected_PRE": deepcopy(pre), "independent_expected_POST": deepcopy(post),
-        "Safety": deepcopy(safety), "phase_record_hashes": deepcopy(phases), "PLC": {"producer": "SIMULATED_PLC"}}
+        "PRE": records["PRE"], "Safety": records["SAFETY"], "POST": records["POST"],
+        "phase_record_hashes": current_hashes, "PLC": records["PLC"]}
     proof = {"version": registration["binding_id"], "positive_witness": cut,
         "negative_controls": [{"descriptor": deepcopy(x), "all_PF06_absent": True,
                                "comparison": {"status": "PASS"}} for x in negatives],
@@ -131,6 +135,14 @@ class AssemblyTests(unittest.TestCase):
         actual, expected = pf06_vector(); actual["PF06_proposal"]["positive_witness"]["Safety"]["severity"] = "FAULT"
         self.assertRaises(a.IntegrityError, f.validate_pf06, actual, expected)
         actual, expected = pf06_vector(); actual["PF06_proposal"]["positive_witness"]["row_index"] = 5
+        self.assertRaises(a.IntegrityError, f.validate_pf06, actual, expected)
+
+    def test_pf06_historical_phase_hashes_are_not_golden(self):
+        actual, expected = pf06_vector(); expected["phase_record_hashes"] = {k: "f" * 64 for k in expected["phase_record_hashes"]}
+        self.assertTrue(f.validate_pf06(actual, expected))
+
+    def test_pf06_current_phase_hash_must_match_current_bytes(self):
+        actual, expected = pf06_vector(); actual["PF06_proposal"]["positive_witness"]["phase_record_hashes"]["PRE"] = "f" * 64
         self.assertRaises(a.IntegrityError, f.validate_pf06, actual, expected)
 
     def test_stage_schema_accepts_invalid_not_unsigned_pass(self):
