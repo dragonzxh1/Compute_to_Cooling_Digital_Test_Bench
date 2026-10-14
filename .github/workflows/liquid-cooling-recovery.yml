@@ -1,4 +1,4 @@
-name: M1 clean offline SDK development install
+name: M1 unchanged installed SDK full-input development
 on:
   workflow_dispatch:
     inputs:
@@ -13,8 +13,9 @@ on:
         required: true
 permissions:
   contents: read
+  actions: read
 concurrency:
-  group: m1-sdk-install-development
+  group: m1-sdk-extended-development
   cancel-in-progress: false
 env:
   EXPECTED_COMMIT: ${{ inputs.expected_source_commit }}
@@ -25,7 +26,7 @@ env:
   OPENBLAS_NUM_THREADS: '1'
   MKL_NUM_THREADS: '1'
 jobs:
-  clean-sdk:
+  installed-full-inputs:
     runs-on: windows-2022
     timeout-minutes: 20
     steps:
@@ -33,47 +34,50 @@ jobs:
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - name: Check source-bound install tooling
+      - name: Check versioned extended-install source
         shell: pwsh
         run: |
-          if($env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or (git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'INSTALL_COMMIT_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_release_v1/delivery_control.json -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'INSTALL_CONTROL_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_release_v1/run_install.ps1 -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'INSTALL_RUNNER_DRIFT'}
+          if($env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or (git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'EXTENDED_COMMIT_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_release_v2/delivery_control.json -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'EXTENDED_CONTROL_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_release_v2/run_install.ps1 -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'EXTENDED_RUNNER_DRIFT'}
           . ./v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1
           $null=Restore-M1Snapshot -Repo (Get-Location).Path -ExpectedManifestSha256 '6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93'
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.11.9'
           architecture: x64
-      - name: Create clean environment and package/unpack outside checkout
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: m1-sdk-install
+          run-id: '38458640545'
+          github-token: ${{ github.token }}
+          path: original-sdk-artifact
+      - name: Create clean venv and unpack the original verified SDK
         shell: pwsh
         run: |
-          $venv=Join-Path $env:RUNNER_TEMP 'm1-sdk-venv'
+          $venv=Join-Path $env:RUNNER_TEMP 'm1-sdk-extended-venv'
           python -m venv $venv
-          if($LASTEXITCODE -ne 0){throw 'CLEAN_VENV_FAILED'}
+          if($LASTEXITCODE -ne 0){throw 'EXTENDED_VENV_FAILED'}
           $py=Join-Path $venv 'Scripts/python.exe'
           & $py -m pip install --disable-pip-version-check -r v0_2/tests/tools/c3b_v14_1/requirements-development.lock
-          if($LASTEXITCODE -ne 0){throw 'CLEAN_VENV_INSTALL_FAILED'}
-          $package=Join-Path $env:RUNNER_TEMP 'm1-sdk-package'
-          & ./v0_2/tests/tools/m1_release_v1/package.ps1 -Repo (Get-Location).Path -Output $package -SourceCommit $env:EXPECTED_COMMIT -CampaignManifestSha256 'eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446'
-          $sdk=Join-Path $env:RUNNER_TEMP 'm1-sdk-unpacked'
-          Expand-Archive -LiteralPath ($package+'.zip') -DestinationPath $sdk
-          $work=Join-Path $env:RUNNER_TEMP 'm1-sdk-use-workspace'
+          if($LASTEXITCODE -ne 0){throw 'EXTENDED_VENV_INSTALL_FAILED'}
+          $zip=(Resolve-Path 'original-sdk-artifact/m1-sdk-delivery/source-sdk.zip').Path
+          if((Get-FileHash -LiteralPath $zip -Algorithm SHA256).Hash.ToLowerInvariant() -cne '8e5496f21c948284dd262077456e17a96d70011bee098be3668b07861b57384c'){throw 'ORIGINAL_SDK_ZIP_DRIFT'}
+          $sdk=Join-Path $env:RUNNER_TEMP 'm1-sdk-extended-unpacked'
+          Expand-Archive -LiteralPath $zip -DestinationPath $sdk
+          $work=Join-Path $env:RUNNER_TEMP 'm1-sdk-extended-use-workspace'
           New-Item -ItemType Directory -Path $work|Out-Null
-          [IO.File]::AppendAllText($env:GITHUB_ENV,('C2C_SDK_ROOT='+$sdk+[Environment]::NewLine+'C2C_SDK_WORKSPACE='+$work+[Environment]::NewLine+'C2C_SDK_ZIP='+$package+'.zip'+[Environment]::NewLine+'SDK_PYTHON='+$py+[Environment]::NewLine),[Text.UTF8Encoding]::new($false))
-          New-Item -ItemType Directory -Path artifacts/m1-sdk-delivery|Out-Null
-          Copy-Item -LiteralPath ($package+'.zip') -Destination artifacts/m1-sdk-delivery/source-sdk.zip
-      - name: Verified venv Python Job install/use acceptance
+          [IO.File]::AppendAllText($env:GITHUB_ENV,('C2C_SDK_ROOT='+$sdk+[Environment]::NewLine+'C2C_SDK_WORKSPACE='+$work+[Environment]::NewLine+'C2C_SDK_ZIP='+$zip+[Environment]::NewLine+'SDK_PYTHON='+$py+[Environment]::NewLine),[Text.UTF8Encoding]::new($false))
+      - name: Verified Python Job full installed-input acceptance
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_release_v1/run_install.ps1 -Python $env:SDK_PYTHON -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL
+          & ./v0_2/tests/tools/m1_release_v2/run_install.ps1 -Python $env:SDK_PYTHON -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: m1-sdk-install
+          name: m1-sdk-extended
           path: |
-            artifacts/m1-sdk-install/
-            artifacts/m1-sdk-delivery/
+            artifacts/m1-sdk-extended/
             artifacts/m1-remote-executor-v1/build/build_identity.json
           retention-days: 30
           if-no-files-found: error
