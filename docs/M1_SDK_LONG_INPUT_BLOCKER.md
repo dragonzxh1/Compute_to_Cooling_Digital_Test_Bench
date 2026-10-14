@@ -9,3 +9,5 @@
 新的m1_release_v3只修交付CLI的存储/观察方式：使用已存在的write_reference/write_split、CompletedJournal/TraceReader/OracleBridge，保留全部canonical内容、完整比较、独立预期、observer interference以及逐tick fsync日志，不裁历史、不增CPU/内存/模型timer，不改冻结engine/fixture/Contract15A/Safety。代码尚未执行，不能写PASS。
 
 下一步：准备新package/control/worker身份，按同一101完整输入预登记启动新的独立GitHub安装验证。每次CLI调用应有独立导入/日志上下文，不能把长跑诊断budget的进程全局累计当作数学故障。保留原失败执行，不原地修改取PASS。正式资格、生产、硬件、Phase6均未授权。
+
+新v3纯文件打包完成（没有本机Python/native/model执行）：source80fa3e17af9b6e624d2a6f42ecd103d78fa5fa63，675payload文件；ZIP为D:/Github/c2c-m1-remote-evidence/sdk-streaming-v3-build001.zip，SHA256=820baee49b3170dc07bc7bb6bfa3ffdc9732c9c79492ccc7df43699202e6bf78；DELIVERY_MANIFEST RAW SHA256=fb1d086f079a3366045bce88fe38627137e24660c277d4e0cba14d2dd5320dd0。状态仍SOURCE_SDK_PACKAGED_NOT_INSTALLATION_VALIDATED，不宣称MemoryError已被实际验证消除。

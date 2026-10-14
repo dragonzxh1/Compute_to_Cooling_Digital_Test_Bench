@@ -1,5 +1,7 @@
 # C2C-DTB V4 离线软件使用说明与参数解释
 
+最新安装长输入检查发现阻塞：原SDK在index65的161拍输入发生MemoryError，不能宣称长用法可用。先前参数查询/3拍示例和完整V4 campaign证据仍各自有效。新流式SDK包已准备但未执行安装验收，详见[M1_SDK_LONG_INPUT_BLOCKER.md](M1_SDK_LONG_INPUT_BLOCKER.md)。不要在本机增大资源预算尝试复现。
+
 状态：V4 修复受影响回归27/27通过；独立仓库外安装验证及官方包674文件回读通过。完整开发campaign已在GitHub成功退出，原始证据独立回读尚在进行，因此仍不能宣布正式上线、完整资格或生产批准。
 项目用途是离线液冷数字孪生与软件验证，不能把本说明中的数值用于真实 CDU 控制。
 所有 fixture 数值是数值测试假设；真实 GPU/VFD/CDU 参数仍需 CALIBRATION_REQUIRED。

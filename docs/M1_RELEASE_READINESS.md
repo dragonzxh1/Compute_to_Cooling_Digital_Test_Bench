@@ -25,3 +25,5 @@
 
 当前尚须完成：扩展SDK安装后长输入/用户用法验收，准确的限定软件发布签署包及用户冻结/资格范围决定。正式C3-C/production/hardware/Phase6不自动执行，不能通过删掉P1/PF06/T09缺口来宣称全部上线。
 见M1_V4_FULL_DEVELOPMENT_REPORT.md、M1_V4_FULL_DEVELOPMENT_EVIDENCE.json和M1_SOFTWARE_USER_GUIDE.md。
+
+安装后全输入扩展run38492275799已揭示SDK资源阻塞：indices0..64完成，index65/161rows在结果序列化MemoryError；真实Python已在目标Job且cleanup active0。本轮STOP保留，不改试卷或原执行。v3仅改SDK存储为原有流式trace/immutable journal，已纯文件打包，尚待新身份的远端fresh验收。当前SDK长用法NOT_READY，详见M1_SDK_EXTENDED_FAILURE.json与M1_SDK_LONG_INPUT_BLOCKER.md。
