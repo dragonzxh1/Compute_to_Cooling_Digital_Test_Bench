@@ -1,0 +1,59 @@
+name: C3-C authority infrastructure development checks
+on:
+  workflow_dispatch:
+    inputs:
+      expected_source_commit:
+        type: string
+        required: true
+      preflight_control_sha256:
+        type: string
+        required: true
+      preflight_runner_sha256:
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: m1-c3c-synthetic-development
+  cancel-in-progress: false
+env:
+  EXPECTED_COMMIT: ${{ inputs.expected_source_commit }}
+  EXPECTED_CONTROL: ${{ inputs.preflight_control_sha256 }}
+  EXPECTED_RUNNER: ${{ inputs.preflight_runner_sha256 }}
+  PYTHONDONTWRITEBYTECODE: '1'
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+jobs:
+  synthetic-authority-checks:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Verify new preflight identity only
+        shell: pwsh
+        run: |
+          if($env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or (git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'PREFLIGHT_COMMIT_DRIFT'}
+          if($env:EXPECTED_CONTROL -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v1/preflight_control.json).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'PREFLIGHT_CONTROL_DRIFT'}
+          if($env:EXPECTED_RUNNER -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v1/run_preflight.ps1).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'PREFLIGHT_RUNNER_DRIFT'}
+      - uses: ./.github/actions/m1-v4-runtime
+        with:
+          commit: ${{ inputs.expected_source_commit }}
+          manifest: eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446
+          runner: 138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef
+      - name: Actual verified Python Job synthetic checks
+        shell: pwsh
+        run: |
+          & ./v0_2/tests/tools/m1_c3c_v1/run_preflight.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: c3c-synthetic-preflight
+          path: |
+            artifacts/m1-c3c-preflight/
+            artifacts/m1-remote-executor-v1/build/build_identity.json
+          retention-days: 30
+          if-no-files-found: error

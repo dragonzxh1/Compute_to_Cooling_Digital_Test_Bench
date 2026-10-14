@@ -1,0 +1,26 @@
+{
+  "schema": "m1-c3c-synthetic-authority-preflight-v1",
+  "status": "PREREGISTERED_NOT_EXECUTED",
+  "scope": "DEVELOPMENT_INFRASTRUCTURE_ONLY",
+  "synthetic_test_count": 31,
+  "formal_behavior_authorized": false,
+  "candidate_behavioral_execution": false,
+  "source_hashes": {
+    "v0_2/tests/tools/m1_c3c_v1/__init__.py": "d246ab33653a599f949389184f1b31294d48448789a082e051d137786dee3660",
+    "v0_2/tests/tools/m1_c3c_v1/authority.py": "9d29210aeb3cf87d19b95e7424315c6dc09a452b9854a9b52cfd9856d6ac29bc",
+    "v0_2/tests/tools/m1_c3c_v1/test_authority.py": "5a4f29bd5ff0664f09b852e1dcaff81ff66dc85ffd20f9f61ad126362c654844",
+    "v0_2/tests/tools/m1_c3c_v1/preflight_worker.py": "5cc36a61e562db7b514d7d5724fd73b6262087874091be14d978d966a303525b",
+    "v0_2/tests/tools/m1_c3c_v1/run_preflight.ps1": "5f6ab0c149f46f0ace8241546f56c5b6644968d0079b80f898b1d025c64de465",
+    "v0_2/tests/tools/m1_c3c_v1/README.md": "1ea33eafad1dbc1ed1b1fc6c6e0384b88c6b814c478b156e71fc68996a9c6749",
+    ".github/workflows/m1-c3c-preflight.yml": "2c4ed22527e238ad4bb766f44f6c6477f8e5e9a24cec6ffd182e3074ce1045bf",
+    "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446"
+  },
+  "protected_parent_manifest_path": "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json",
+  "resource_policy": {
+    "cpu_rate_per_10000": 2500,
+    "job_mb": 512,
+    "process_mb": 256,
+    "wall_ms": 480000
+  },
+  "local_python_native_model_forbidden": true
+}
