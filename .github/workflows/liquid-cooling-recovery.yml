@@ -42,14 +42,14 @@ jobs:
       assembly_runner_sha256: ${{ inputs.runner_script_sha256 }}
   proposal-readback:
     if: inputs.run_scope == 'proposal'
-    uses: ./.github/workflows/m1-c3c-pre-sign-v2.yml
+    uses: ./.github/workflows/m1-c3c-v3-pre-sign.yml
     with:
       expected_source_commit: ${{ inputs.expected_source_commit }}
       assembly_control_sha256: ${{ inputs.execution_manifest_sha256 }}
       assembly_runner_sha256: ${{ inputs.runner_script_sha256 }}
   formal:
     if: inputs.run_scope == 'formal'
-    uses: ./.github/workflows/m1-c3c-full.yml
+    uses: ./.github/workflows/m1-c3c-full-v3.yml
     with:
       expected_source_commit: ${{ inputs.expected_source_commit }}
       execution_manifest_sha256: ${{ inputs.execution_manifest_sha256 }}

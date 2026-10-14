@@ -1,0 +1,18 @@
+{
+  "protected_parent_manifest_path": "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json",
+  "source_hashes": {
+    "v0_2/tests/tools/m1_c3c_v3/pre_sign_v2_worker.py": "8feafa1bc7ddda01117aaa339ff2abb32f2593281b21fe21893f5ef0a68a58cf",
+    "v0_2/tests/tools/m1_c3c_v3/run_pre_sign_v2.ps1": "b939d09e1d4d9de187e6306073f925bbb623d0b5969cb15d886b44ce96f1651e",
+    "v0_2/tests/tools/m1_c3c_v3/verify_proposal.py": "04813b2c952a11de489d1685d4276319cbc76b8d3bc0f1d04a74e1a2614dd701",
+    ".github/workflows/m1-c3c-v3-pre-sign.yml": "fc17d9a5a25d4e15e27445c5b6c81db83a8bcc25532186f513832371cae8e4d4",
+    ".github/workflows/liquid-cooling-recovery.yml": "a54cab52e790ddaaf0a0f2fbb7af87590361fd84bb98a9af52fe95220c53ea6c",
+    "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446",
+    "artifacts/m1-c3c-v3-freeze/executable_proposal.json": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7"
+  },
+  "formal_behavior_authorized": false,
+  "proposal_raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7",
+  "status": "PREREGISTERED_NOT_EXECUTED",
+  "schema": "m1-c3c-v3-proposal-pre-sign-control",
+  "candidate_behavioral_execution": false,
+  "scope": "DEVELOPMENT_PRE_SIGN_READ_ONLY"
+}

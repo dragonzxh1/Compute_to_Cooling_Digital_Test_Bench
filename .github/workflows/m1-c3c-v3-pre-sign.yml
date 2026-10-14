@@ -48,8 +48,8 @@ jobs:
         shell: pwsh
         run: |
           if($env:EXPECTED_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:EXPECTED_COMMIT -or (git rev-parse HEAD) -cne $env:EXPECTED_COMMIT){throw 'PREFLIGHT_COMMIT_DRIFT'}
-          if($env:EXPECTED_CONTROL -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v1/pre_sign_v2_control.json).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'PREFLIGHT_CONTROL_DRIFT'}
-          if($env:EXPECTED_RUNNER -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v1/run_pre_sign_v2.ps1).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'PREFLIGHT_RUNNER_DRIFT'}
+          if($env:EXPECTED_CONTROL -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v3/pre_sign_v2_control.json).Hash.ToLowerInvariant() -cne $env:EXPECTED_CONTROL){throw 'PREFLIGHT_CONTROL_DRIFT'}
+          if($env:EXPECTED_RUNNER -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v3/run_pre_sign_v2.ps1).Hash.ToLowerInvariant() -cne $env:EXPECTED_RUNNER){throw 'PREFLIGHT_RUNNER_DRIFT'}
       - uses: ./.github/actions/m1-v4-runtime
         with:
           commit: ${{ inputs.expected_source_commit }}
@@ -58,7 +58,7 @@ jobs:
       - name: Actual verified Python Job synthetic checks
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/m1_c3c_v1/run_pre_sign_v2.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL
+          & ./v0_2/tests/tools/m1_c3c_v3/run_pre_sign_v2.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_COMMIT -ExpectedManifestSha256 $env:EXPECTED_CONTROL
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

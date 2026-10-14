@@ -1,0 +1,30 @@
+{
+  "source_hashes": {
+    "v0_2/tests/tools/m1_c3c_v3_closure/__init__.py": "2147d98df579f84c757b1fddc419d06ccb6cbe251769f8e4195b971f795576e2",
+    "v0_2/tests/tools/m1_c3c_v3_closure/.gitattributes": "37e0686698cdaf2fc8a2db26cf72ca9f2c0941ea27c1f2d7c753f58a36821e88",
+    "v0_2/tests/tools/m1_c3c_v3_closure/build_delivery.ps1": "1fcc0315a54257640b7e7821933d584d032f023df0b7f35bac7754c6cf6e2361",
+    "v0_2/tests/tools/m1_c3c_v3_closure/complete_delivery.ps1": "75f5c26c04b5ca9966e13edac44548dd63852197ea70d7ff8694cab5ad780484",
+    "v0_2/tests/tools/m1_c3c_v3_closure/derive_readonly.ps1": "99251aa00e0772e06ecfbd32facba1217984914a8b88a7042310e001d77bae01",
+    "v0_2/tests/tools/m1_c3c_v3_closure/readback_worker.py": "add6d410a5bc5fba09125774cbbe4133071a2a5851b6db87a607e5d364470d00",
+    "v0_2/tests/tools/m1_c3c_v3_closure/run_readback.ps1": "81975cab1a1179cc2e5df7b66f488fd3d4f19bc382c67e2b5b38fe0d89b749d9",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/.gitattributes": "37e0686698cdaf2fc8a2db26cf72ca9f2c0941ea27c1f2d7c753f58a36821e88",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/ENVIRONMENT_DEPENDENCY_LOCK.json": "4a68d805046b6d7b6946274cabd2ba37b69b44d82587e4865bed89d9d77f6877",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/ENVIRONMENT_POLICY_REGISTRATION.json": "8905130cdf298c6bec7d529a08fb2036bbc40714b5667244a12b7b72c71c49d4",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/EXACT_HASH_INVENTORY.json": "d54e1972c67c8281b5b2647ae591c69c36322d6fd90f7f98fcf0f6b895594d12",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/EXECUTABLE_FREEZE_MANIFEST.json": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/OPERATOR_INSTRUCTIONS.md": "58a0c804a5bf697e001dbb4b8ecf6d12aae979dcc5d2793c42b1247d97ae427e",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/SCOPE_SEMANTIC_REGISTRATION_INDEX.json": "80cd06459878b58a5867ca9026dac7a3189fa6ff55b97266a98d3aed3902da9b",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/registrations/limited_scope_v2.json": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/registrations/PF06_C8_NORMAL_SUPPLEMENT_v1.json": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/registrations/SEM01_addendum_v3.json": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+    "C3_C_V3_FINAL_FREEZE_PACKAGE/registrations/SEM02_five_case_registry_v1.json": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
+    ".github/workflows/m1-remote-long-probe-v2-1.yml": "c50f13ed4960cf5d6314163f4bc298fa1bfa47456a19f47759a729f2cfaff8e5"
+  },
+  "protected_parent_manifest_path": "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json",
+  "proposal_canonical_sha256": "d83a7ba989a23d88b3f2ac19eba4b9b74c71f20dab9c81129277577446f8b0f6",
+  "schema": "m1-c3c-v3-complete-delivery-readback-control-v1",
+  "scope": "DEVELOPMENT_PRE_SIGN_READ_ONLY",
+  "formal_behavior_authorized": false,
+  "runtime_must_bind_exact_delivered_commit": true,
+  "proposal_raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7"
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "status": "PROPOSED_NOT_USER_APPROVED",
+  "limitations": {
+    "FULL_P_HISTORY_VALIDATION_AVAILABLE": "NO",
+    "PRODUCTION_IMPLEMENTATION_AUTHORIZED": "NO",
+    "HARDWARE_CONTROL_AUTHORIZED": "NO",
+    "REAL_HARDWARE": "CALIBRATION_REQUIRED",
+    "PF06_ORIGINAL_SCOPE": "INCOMPLETE",
+    "ARBITRARY_POST_EXCEPTION_ATOMICITY": "NOT_PROVEN",
+    "PHASE6": "NO",
+    "T09": "IMPLEMENTATION_HOLD"
+  },
+  "formal_qualification_executed": false,
+  "approval_generated": false,
+  "environment_policy_path": "ENVIRONMENT_POLICY_REGISTRATION.json",
+  "registration_raw_sha256": {
+    "limited_scope": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
+    "SEM01": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+    "SEM02": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
+    "PF06_supplement": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f"
+  },
+  "active_registration_paths": {
+    "limited_scope": "artifacts/m1-c3c-v3-freeze/limited_scope_v2.json",
+    "SEM01": "artifacts/m1-c3c-v3-freeze/SEM01_addendum_v3.json",
+    "SEM02": "artifacts/m1-c3c-v3-freeze/SEM02_five_case_registry_v1.json",
+    "PF06_supplement": "artifacts/m1-c3c-v3-freeze/PF06_C8_NORMAL_SUPPLEMENT_v1.json"
+  },
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "package_version": "C3-C-v3-final-proposal",
+  "schema": "m1-c3c-v3-delivery-semantic-index-v1",
+  "package_registration_paths": {
+    "limited_scope": "registrations/limited_scope_v2.json",
+    "SEM01": "registrations/SEM01_addendum_v3.json",
+    "SEM02": "registrations/SEM02_five_case_registry_v1.json",
+    "PF06_supplement": "registrations/PF06_C8_NORMAL_SUPPLEMENT_v1.json"
+  }
+}
