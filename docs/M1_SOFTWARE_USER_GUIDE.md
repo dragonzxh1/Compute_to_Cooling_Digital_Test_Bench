@@ -1,8 +1,8 @@
 # C2C-DTB V4 离线软件使用说明与参数解释
 
-最新安装长输入检查发现阻塞：原SDK在index65的161拍输入发生MemoryError，不能宣称长用法可用。先前参数查询/3拍示例和完整V4 campaign证据仍各自有效。新流式SDK包已准备但未执行安装验收，详见[M1_SDK_LONG_INPUT_BLOCKER.md](M1_SDK_LONG_INPUT_BLOCKER.md)。不要在本机增大资源预算尝试复现。
+最新验收：流式SDK已在仓库外完成101/101完整登记输入，并独立核验6432完整帧、707trace文件、44raw日志及实际Python Job/cleanup。旧SDK的index65 MemoryError证据保留，新包没有裁历史或增资源来取PASS。详见[M1_SDK_STREAMING_VALIDATION.md](M1_SDK_STREAMING_VALIDATION.md)。不要在已知硬挂机运行模型。
 
-状态：V4 修复受影响回归27/27通过；独立仓库外安装验证及官方包674文件回读通过。完整开发campaign已在GitHub成功退出，原始证据独立回读尚在进行，因此仍不能宣布正式上线、完整资格或生产批准。
+状态：V4完整fresh开发campaign及独立证据回读PASS（101输入、2281prefix、499快照、101schema）；新版流式SDK675文件/101完整输入安装验收及独立回读PASS。正式C3-C尚未执行，可执行冻结包尚未用户审签；不宣称生产/硬件上线。
 项目用途是离线液冷数字孪生与软件验证，不能把本说明中的数值用于真实 CDU 控制。
 所有 fixture 数值是数值测试假设；真实 GPU/VFD/CDU 参数仍需 CALIBRATION_REQUIRED。
 
@@ -134,19 +134,19 @@ PASS：该明确scope判据通过；FAIL：有效输入/证据下违反判据；
 
 ## 8. 当前不能省略的发布条件
 
-`M1-DEF-POST-001` 的新v4失败路径测试需先在v3证明失败，再在修复版证明通过；序列化和completed-store错误也不能产生新成功publication。之后需要新源码identity、受影响回归和fresh完整开发验证，不能拼接Build005分数。
+`M1-DEF-POST-001` 已用同一登记测试在v3证明3FAIL/1PASS、在v4证明4PASS；受影响回归27/27及fresh完整campaign独立PASS。序列化和completed-store错误不能产生新成功publication；任意POST异常/OS中断原子性仍NOT_PROVEN，不能扩大已测切点证明。
 
-独立source SDK的安装和小示例已有实际证据；它不是新版v0.2 wheel，完整campaign证据验收仍待完成。旧v0.2包0.2.0a5仍是alpha，不能仅改版本号就当已上线。正式C3-C/生产/硬件/Phase6权限仍需独立明确授权。
+独立source SDK的安装及101完整输入已有实际证据；它不是新版v0.2 wheel，完整campaign证据验收已完成。旧v0.2包0.2.0a5仍是alpha，不能仅改版本号就当已上线。用户要求接下来推进C3-C；确切formal可执行包须完成并审签后开考。生产/硬件/Phase6仍不授权。
 
-本草稿覆盖M1 tracking与公共feedback配置。热容/热源/冷板/液体焓/输运/水力/泵功耗/CDU/FWS/数值方法/场景/Safety参数见同目录 [v0.2物理参数参考](V02_PHYSICS_PARAMETER_REFERENCE.md)。这些说明按源码静态核对；SDK安装和文档列出的两个CLI用法已在独立host验证；文档不能代替完整campaign及用户发布批准。
+本说明覆盖M1 tracking与公共feedback配置。热容/热源/冷板/液体焓/输运/水力/泵功耗/CDU/FWS/数值方法/场景/Safety参数见同目录 [v0.2物理参数参考](V02_PHYSICS_PARAMETER_REFERENCE.md)。参数说明按源码静态核对，安装后完整登记CLI用法已有独立验证；文档不能代替正式qualification及用户发布批准。
 
 ## 9. 已验证的 source SDK 安装与使用
 
 本节只在另行批准的稳定 Windows 执行机使用。已验证 GitHub Windows2022 + Python3.11.9；没有宣称 Linux、其他Python版本或HIPPO本机通过安装验收。
 
-安装证据：[run38458640545](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38458640545)。源码2f1bbdbb5197a60d1dabac7ce8ca687e0285a932；[独立文件回读](M1_SDK_INSTALL_READBACK.json)。同目录的旧DRAFT文件保持历史身份，本文件是后续操作说明。
+当前包安装证据：[run38493762797](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38493762797)，SDK source80fa3e17af9b6e624d2a6f42ecd103d78fa5fa63，执行source9f0b2e87a7c324a841274bc92303b009fbebbb63；[独立文件回读](M1_SDK_STREAMING_READBACK.json)。原run38458640545及旧DRAFT/ZIP保持历史身份，不推荐旧RAM版长用法。包内随附文档属于打包时点，本页是后续有实际验收证据的操作说明。
 
-1. 从该run下载m1-sdk-install artifact，取其中m1-sdk-delivery/source-sdk.zip。先核对ZIP的SHA256必须是 `8e5496f21c948284dd262077456e17a96d70011bee098be3668b07861b57384c`；不能仅相信包内自己写的manifest。
+1. 从专用分支执行commit9f0b2e87a7c324a841274bc92303b009fbebbb63的 `artifacts/m1-sdk-streaming-v3/source-sdk.zip` 取包。先核对ZIP的SHA256必须是 `820baee49b3170dc07bc7bb6bfa3ffdc9732c9c79492ccc7df43699202e6bf78`；不能仅相信包内自己写的manifest。不要把run的证据artifact ZIP当SDK源码ZIP。
 2. 解压到一个新目录（示例D:/C2C/offline-sdk），不要覆盖历史包或开发仓库。用稳定Windows上的Python3.11.9创建独立venv；安装包内锁定依赖。
 3. 以下命令路径是假设安装位置，不是本机执行指令：
 
@@ -164,12 +164,14 @@ python -m venv D:/C2C/offline-venv
 | SDK参数 | 意义 |
 | --- | --- |
 | --describe | 显示完整冻结数值profile及参数来源；不赋予硬件默认值身份 |
-| --verify | 检查674文件长度/哈希；外部可信ZIP SHA仍必需；CLI默认也核对文件 |
+| --verify | 检查675文件长度/哈希；外部可信ZIP SHA仍必需；CLI默认也核对文件 |
 | --run | 明确授权当前进程执行所选离线示例；无真实PLC/网络设备操作 |
 | --input-index | 登记descriptor索引0..100；不是重新编号/删改历史测试 |
 | --rows | 从t0开始的正整数前缀长度，必须不超过该descriptor的row_count；不是积分dt |
 
 stdout是JSON；comparison.status、compared_rows、final_state、sut、source_commit、verified_files和scope一起检查。不要把这个小例子当作完整ITQ、Startup或campaign替代。这个CLI本身不负责给任意用户Python施加Windows Job限制；GitHub验收由独立受控runner负责。其他机器运行前仍需按现场IT策略限制资源，不能假装源码CLI就是安全认证。
+
+完整长例子：在同一批准的稳定机，将参数换为 `--input-index 65 --rows 161`。该用法及全部101登记输入已在新venv、checkout外独立执行/回读通过；不是任意输入长度或所有平台保证。CLI将完整reference.json、split.json、compressed indexed frames、immutable completed journal及逐tick日志写到SDK目录下 `artifacts/m1-autonomous-development/sdk-<UUID>`；需要写权限和磁盘空间。stdout的complete_trace_directory与两个trace SHA用于定位/核验，已有证据不覆盖写入。UUID不改变模型输入。
 
 常见错误：DELIVERY_FILE_DRIFT说明包内容变了，停止使用并核对正确包；SOURCE_IDENTITY_MISMATCH说明冻结来源不一致，不跳guard；PREFIX_OUT_OF_INPUT_DOMAIN说明rows越界；SDK_PREFIX_DEVELOPMENT_COMPARISON_FAIL说明结果不一致，保留日志，不改预期取PASS。--run在已知硬挂HIPPO主机上被明确拒绝。
 
