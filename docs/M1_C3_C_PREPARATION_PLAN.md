@@ -20,6 +20,14 @@
 
 正式提案必须带source/input/environment完整hash manifest和一次性签署页，不创建一串重复语义审计。当前本文件是实施计划，不是final freeze或签署请求；formal runner bytes尚未完成，不虚构最终package hash。
 
+## 已完成：独立审批/完整性基础层
+
+新namespace `v0_2/tests/tools/m1_c3c_v1/` 已实现严格RAW/canonical审批绑定、四项registration文件绑定、source/input metadata一致性、环境精确一致性及PASS/FAIL/INCOMPLETE/INVALID区分。31项合成开发检查在[run38495915226](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38495915226)全部通过，官方ZIP摘要、4份raw captures、actualPythonPID5260/256与512MiB Job/cleanup active0和before/after环境均独立核验。
+
+该测试没有candidate/reference导入或行为运行；合成的approval对象不是批准记录。它证明新门禁检查路径能拒绝错误身份，不证明完整正式执行链路已经完成。机器证据见[M1_C3_C_PREFLIGHT_EVIDENCE.json](M1_C3_C_PREFLIGHT_EVIDENCE.json)。新workflow不在默认分支时GitHub拒绝dispatch，已通过现有调度入口的专用分支新版本处理；旧SDK执行commit、workflow与artifact身份仍原样留存，未merge main或重跑旧执行。
+
+仍须完成的新文件：独立formal admission/worker/runner/batch、完整fresh分阶段workflow、exact environment与artifact schema/STOP规则、完整stage inventory和四份版本化scope registrations、最终freeze manifest及空白用户签署页。不能调用旧FINAL把DEVELOPMENT result改名为formal PASS；sealed库的中间记录保留原身份，正式结果须由新受控执行和新独立完整性/范围门禁裁决。
+
 ```text
 DEVELOPMENT_PREREQUISITE = COMPLETE_WITH_INDEPENDENT_EVIDENCE
 C3_C_EXECUTABLE_PACKAGE = PREPARATION_NOT_FINALIZED
