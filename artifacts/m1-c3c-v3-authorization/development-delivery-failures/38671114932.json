@@ -1,0 +1,22 @@
+{
+  "schema": "m1-c3c-development-readonly-delivery-failure-v1",
+  "run_id": "38671114932",
+  "source_commit": "d5443edbabbf038a8b3f3805c2f5d39ba5c62048",
+  "control_raw_sha256": "2973e51d3042a54ababfcdc4e85f294de8b10a28a34a335046723eeba7ad6735",
+  "runner_raw_sha256": "1881e5788b8b346cd3b98e4751cde498dc21f89c0629118baca9f340daf4d3f1",
+  "status": "INVALID_READONLY_DELIVERY_PROOF",
+  "failure": "DELIVERY_PROTECTED_SOURCE_DRIFT: v0_2/tests/tools/m1_remote_control_v1/source_inventory.json",
+  "cause": "New read-only bootstrap omitted the existing hash-bound 601-entry runtime snapshot materialization before enforcing the 755 protected runtime-source bindings. Raw checkout inventory differs from frozen snapshot inventory by design. Guard was not bypassed.",
+  "frozen_inventory_sha256": "02d336b2c5217ef279ced4f9ebefafc7ec2b9110ec567da7341052f0b073fa39",
+  "frozen_local_inventory_git_blob": "92b40e50d77eb223ba1b763fd357c6e08c3a10af",
+  "raw_checkout_inventory_git_blob": "7de65b59583db8b118a8f1f2c2d87bca43258985",
+  "raw_job_log_sha256": "c572987cee4b79846b9e40e1b921fe366013387a3789b54c1f33e2e4b1fd479a",
+  "local_raw_log": "D:/Github/c2c-m1-remote-evidence/c3c-delivery-v4-38671114932/job.raw.log",
+  "artifact_upload": "No artifact produced because guard stopped before output-root creation; authoritative raw GitHub job log retained. Subsequent version records preflight failure separately.",
+  "candidate_imported": false,
+  "candidate_executed": false,
+  "historical_results_read": false,
+  "formal_qualification_executed": false,
+  "original_v3_run_reclassified": false,
+  "remedy": "A new unsealed development source snapshot invokes the original frozen/hash-verified Restore-M1Snapshot and exact approved snapshot manifest before re-enforcing all755 bindings. No protected source/expectation is edited and the original failed run is unchanged."
+}

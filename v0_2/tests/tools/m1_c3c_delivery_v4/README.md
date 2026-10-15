@@ -6,6 +6,8 @@
 
 `run_readonly.ps1` 在 GitHub-hosted Windows 上验证 hash-bound 开发源码、原 v3 的755项保护绑定，从已结束且失败的原run读取固定135个官方包：原final及134个原来遗漏的reference/reference-gate/select/split/prefix。原final自身失败目录被明确隔离，不伪装成成功batch。先要求旧包精确复现802缺项，再验证汇集后969静态清单和全部带来的native Job/raw凭据。导出的是独立的只读运输样本，不写回原run。
 
+源码物化必须先于755项检查：沿用冻结且hash匹配的 `Restore-M1Snapshot` 和 `6842d3bd...ffe93` 源snapshot，先逐项核验并恢复601个原始文件，再逐项验证755项。没有安装Python或执行native/model。首次开发probe run38671114932（d5443ed）遗漏这一步，在 `source_inventory.json` 处被门禁正确拒绝、未读取任何成绩；原始日志SHA256 `c572987cee4b79846b9e40e1b921fe366013387a3789b54c1f33e2e4b1fd479a` 已保留。后续修复不改该run、不跳hash检查；失败前置诊断也单独落盘。
+
 `test_native_closure.ps1` 是小型PowerShell ZIP/JSON测试；不启动Python/native/model，不能替代候选行为测试。18项合成门禁覆盖旧导出反例、完整合并、重复、错误哈希、跨run、冲突、raw篡改、越界、错误源码、缺少权威锁、导出身份，以及实际PID/cleanup/镜像/前后环境/资源/外层收据拒绝。
 
 开发验证入口沿用已注册的 `m1-remote-long-probe-v2-1.yml`，但在新commit下明确命名为只读运输验证；755项原formal源码不包含这个辅助入口，原入口身份继续可从65300d9取回。三个dispatch参数分别锁定开发source commit、readonly_control.json RAW和run_readonly.ps1 RAW。GitHub token只需要contents/actions read。

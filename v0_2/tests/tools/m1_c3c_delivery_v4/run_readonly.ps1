@@ -19,6 +19,15 @@ if($control.scope -cne 'DEVELOPMENT_READONLY_EVIDENCE_TRANSPORT' -or $control.ca
 $proposalPath=Join-Path $repo $control.baseline_proposal.path
 if((Get-FileHash -LiteralPath $proposalPath).Hash.ToLowerInvariant() -cne $control.baseline_proposal.raw_sha256){throw 'DELIVERY_BASELINE_PACKAGE_DRIFT'}
 $proposal=Get-Content -Raw -LiteralPath $proposalPath|ConvertFrom-Json -AsHashtable
+# As in every approved formal/development bootstrap: checkout is not the
+# frozen601-file runtime snapshot. Materialize exact original bytes FIRST,
+# then enforce all755 bindings. This never weakens or skips the hash guard.
+$restoreName='v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1'
+$restorePath=Join-Path $repo $restoreName
+if((Get-FileHash -LiteralPath $restorePath).Hash.ToLowerInvariant() -cne $proposal.source_raw_sha256[$restoreName]){throw 'DELIVERY_RESTORE_HELPER_SOURCE_DRIFT'}
+. $restorePath
+$restoredCount=Restore-M1Snapshot -Repo $repo -ExpectedManifestSha256 '6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93'
+if($restoredCount -ne 601){throw 'DELIVERY_SNAPSHOT_ENTRY_COUNT_DRIFT'}
 $bundle=[IO.Compression.ZipFile]::OpenRead((Join-Path $repo $proposal.bundle_path))
 $hashAlgorithm=[Security.Cryptography.SHA256]::Create()
 try{foreach($pair in $proposal.source_raw_sha256.GetEnumerator()) {
@@ -121,6 +130,7 @@ try {
         official_archives_verified=$downloads.Count;native_stage_proofs_verified=$corrected.stage_proofs_verified
         raw_captures_verified=$corrected.raw_captures_verified;native_file_hash_inventory_sha256=$inventoryHash
         protected_source_bindings_verified=$proposal.source_raw_sha256.Count
+        frozen_snapshot_entries_materialized=$restoredCount
         candidate_imported=$false;candidate_executed=$false;python_or_native_child_executed=$false
         formal_execution_authorized=$false;production_hardware_phase6_authorized=$false
         quarantined_original_final_failure=$true;full_frames_schema_repeats_re_adjudicated=$false

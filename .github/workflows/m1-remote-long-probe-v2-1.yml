@@ -43,7 +43,14 @@ jobs:
           if((Get-FileHash v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'DELIVERY_RUNNER_DRIFT'}
       - name: Read official historical evidence only; never execute a candidate
         run: |
-          & ./v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
+          try {
+            & ./v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
+          } catch {
+            $taskFailureRoot='artifacts/m1-c3c-delivery-v4/preflight-'+$env:GITHUB_RUN_ID+'-'+$env:GITHUB_RUN_ATTEMPT
+            New-Item -ItemType Directory -Path $taskFailureRoot -Force | Out-Null
+            [IO.File]::WriteAllText((Join-Path $taskFailureRoot 'failure.json'),(@{status='INVALID_READONLY_DELIVERY_PROOF';error=$_.Exception.Message;source=$env:GITHUB_SHA;candidate_executed=$false;formal_qualification_executed=$false}|ConvertTo-Json),[Text.UTF8Encoding]::new($false))
+            throw
+          }
       - name: Preserve read-only transport evidence and failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
