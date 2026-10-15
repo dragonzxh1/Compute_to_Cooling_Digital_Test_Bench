@@ -31,3 +31,13 @@
 另建 GitHub DEVELOPMENT 检查入口：先比较新旧逐阶段断言的 AST，再用明确标记的临时合成检查器输入，验证正例返回值完全相同、3次包校验降为1次；16类独立损坏必须由两版以相同异常拒绝，包括authority、receipt、TIMEOUT、cleanup、PID、CPU/memory、release、raw、schema、fresh run identity、环境漂移。合成记录不是任何实际Python/PLC执行证据，实际探针Job证明单独保留。
 
 这只能验证检查器变更，不能代替完整真实证据回读、完整FINAL开发复现或新的fresh正式考试。只在这些后续步骤完成后才能提交新的确切包供审签；当前不宣称已上线。
+
+### 检查器执行结果
+
+[run38703112096](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38703112096) 在source `2a337b9107c38ff8421adb73528044b0c49d738b` 上执行，control RAW `64869d023b568465fff51d98b11202dccc7feafaba71ac628581fb122550e0d9`。AST断言列表一致；17/17合成检查通过。三记录正例：原版3次包校验、0.95864秒，新版1次、0.28253秒，返回值完全相同；16项损坏均以相同异常拒绝。
+
+独立回读官方artifact11957221886：8760字节，ZIP SHA-256 `5cce042070bb4088a5315ca89bca6dffe36b76c08eeebeb5e6b8d747de98aced`。20项ZIP文件、4项raw哈希、PID7564的实际Job及cleanup均核验；环境前后相同、镜像20261012.333.1。无candidate导入、无正式结果。原件及独立核验摘要在 `artifacts/m1-c3c-v5-audit-evidence/run-38703112096/`。
+
+保留边界：这不是1969记录的完整真实回读，也没有执行FINAL后续case/schema/aggregate。下一步做新版本的完整只读证据开发复现与分段耗时记录；不能把本次17项检查拼成C3-C PASS。源码与执行基础设施变更仍需形成新的确切包，再请求独立正式冻结/开考授权。
+
+原始计时证据的官方ZIP始终保持原字节；归档后另加Git二进制属性，恢复了三个文本副本被Git自动换行转换的存储问题。原官方ZIP未改，未把归档格式修正描述成任何运行语义修复。

@@ -1,0 +1,9 @@
+{
+  "candidate_behavioral_execution": false,
+  "cleanup_verified": true,
+  "formal_qualification": false,
+  "actual_job_verified": true,
+  "source_commit": "2a337b9107c38ff8421adb73528044b0c49d738b",
+  "control_manifest_sha256": "64869d023b568465fff51d98b11202dccc7feafaba71ac628581fb122550e0d9",
+  "status": "AUDIT_OPTIMIZATION_CHECKS_PASS"
+}

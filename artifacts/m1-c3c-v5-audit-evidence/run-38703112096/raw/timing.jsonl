@@ -1,0 +1,19 @@
+{"event": "ASSERTIONS_AST_IDENTICAL", "monotonic_ns": 233140000000, "pid": 7564, "utc_ns": 1792051526228647600}
+{"event": "POSITIVE_EQUIVALENCE", "legacy_calls": 3, "monotonic_ns": 234687000000, "pid": 7564, "revised_calls": 1, "utc_ns": 1792051527775744100}
+{"event": "REJECTION_EQUIVALENCE", "index": 0, "monotonic_ns": 234953000000, "pid": 7564, "reason": ["IntegrityError", "C3C_BATCH_AUTHORITY_MISMATCH"], "utc_ns": 1792051528041743600}
+{"event": "REJECTION_EQUIVALENCE", "index": 1, "monotonic_ns": 235218000000, "pid": 7564, "reason": ["IntegrityError", "C3C_NONPASS_STAGE_IN_BATCH"], "utc_ns": 1792051528307365800}
+{"event": "REJECTION_EQUIVALENCE", "index": 2, "monotonic_ns": 235468000000, "pid": 7564, "reason": ["IntegrityError", "C3C_STAGE_RECEIPT_DRIFT"], "utc_ns": 1792051528557359500}
+{"event": "REJECTION_EQUIVALENCE", "index": 3, "monotonic_ns": 235718000000, "pid": 7564, "reason": ["IntegrityError", "C3C_ACTUAL_PYTHON_JOB_OR_CLEANUP"], "utc_ns": 1792051528807357000}
+{"event": "REJECTION_EQUIVALENCE", "index": 4, "monotonic_ns": 236000000000, "pid": 7564, "reason": ["IntegrityError", "C3C_ACTUAL_PYTHON_JOB_OR_CLEANUP"], "utc_ns": 1792051529073385500}
+{"event": "REJECTION_EQUIVALENCE", "index": 5, "monotonic_ns": 236250000000, "pid": 7564, "reason": ["IntegrityError", "C3C_ACTUAL_PYTHON_JOB_OR_CLEANUP"], "utc_ns": 1792051529323379300}
+{"event": "REJECTION_EQUIVALENCE", "index": 6, "monotonic_ns": 236500000000, "pid": 7564, "reason": ["IntegrityError", "C3C_ACTUAL_PYTHON_JOB_OR_CLEANUP"], "utc_ns": 1792051529573397800}
+{"event": "REJECTION_EQUIVALENCE", "index": 7, "monotonic_ns": 236750000000, "pid": 7564, "reason": ["IntegrityError", "C3C_RESOURCE_POLICY_DRIFT"], "utc_ns": 1792051529824001800}
+{"event": "REJECTION_EQUIVALENCE", "index": 8, "monotonic_ns": 237046000000, "pid": 7564, "reason": ["IntegrityError", "C3C_RESOURCE_POLICY_DRIFT"], "utc_ns": 1792051530121470900}
+{"event": "REJECTION_EQUIVALENCE", "index": 9, "monotonic_ns": 237296000000, "pid": 7564, "reason": ["IntegrityError", "C3C_RELEASE_PROOF_DRIFT"], "utc_ns": 1792051530371474200}
+{"event": "REJECTION_EQUIVALENCE", "index": 10, "monotonic_ns": 237546000000, "pid": 7564, "reason": ["IntegrityError", "C3C_RAW_LOG_SET"], "utc_ns": 1792051530621537000}
+{"event": "REJECTION_EQUIVALENCE", "index": 11, "monotonic_ns": 237828000000, "pid": 7564, "reason": ["IntegrityError", "C3C_RAW_LOG_HASH"], "utc_ns": 1792051530902731300}
+{"event": "REJECTION_EQUIVALENCE", "index": 12, "monotonic_ns": 238093000000, "pid": 7564, "reason": ["ValidationError", "'m1-c3c-stage-result-v1' was expected\n\nFailed validating 'const' in schema['properties']['schema']:\n    {'const': 'm1-c3c-stage-result-v1'}\n\nOn instance['schema']:\n    'INVALID_SCHEMA'"], "utc_ns": 1792051531168764900}
+{"event": "REJECTION_EQUIVALENCE", "index": 13, "monotonic_ns": 238343000000, "pid": 7564, "reason": ["IntegrityError", "C3C_FRESH_STAGE_IDENTITY"], "utc_ns": 1792051531418743900}
+{"event": "REJECTION_EQUIVALENCE", "index": 14, "monotonic_ns": 238609000000, "pid": 7564, "reason": ["IntegrityError", "C3C_STAGE_ENVIRONMENT_DRIFT"], "utc_ns": 1792051531684383200}
+{"event": "REJECTION_EQUIVALENCE", "index": 15, "monotonic_ns": 239234000000, "pid": 7564, "reason": ["IntegrityError", "QUALIFICATION_ENVIRONMENT_DRIFT"], "utc_ns": 1792051532309610500}
+{"checks": 17, "event": "AUDIT_CHECKER_VALIDATION_COMPLETE", "monotonic_ns": 239562000000, "pid": 7564, "utc_ns": 1792051532638416900}
