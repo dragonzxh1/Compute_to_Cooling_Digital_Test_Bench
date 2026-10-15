@@ -1,0 +1,37 @@
+{
+  "schema": "m1-c3c-v4-sdk-formal-source-crossbinding-v1",
+  "scope": "SOURCE_BYTE_COMPARISON_NOT_SDK_FORMAL_QUALIFICATION",
+  "sdk_zip_sha256": "820baee49b3170dc07bc7bb6bfa3ffdc9732c9c79492ccc7df43699202e6bf78",
+  "sdk_manifest_source_commit": "80fa3e17af9b6e624d2a6f42ecd103d78fa5fa63",
+  "sdk_install_development_run": 38493762797,
+  "sdk_install_execution_source_commit": "9f0b2e87a7c324a841274bc92303b009fbebbb63",
+  "formal_run": 38675166533,
+  "formal_execution_source_commit": "9012d6d9292a44226b0892332879de506812206d",
+  "formal_package_raw_sha256": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357",
+  "sdk_payload_file_hashes_and_sizes_verified": 675,
+  "shared_source_paths": 671,
+  "shared_paths_with_identical_raw_bytes": 670,
+  "shared_runtime_code_conflicts": [],
+  "candidate_raw_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "sdk_candidate_equals_formal_candidate": true,
+  "shared_path_differences": [
+    {
+      "path": "docs/M1_SOFTWARE_USER_GUIDE.md",
+      "sdk_raw_sha256": "2b364cef05cb68ec37a53e9f0e977691ade47995bbb40c0e5b9f533e25f87453",
+      "formal_raw_sha256": "9f605196ab891efaea42764371660b77d31492b875113d153ea6ae97f4dfc6a3",
+      "classification": "PACKAGING_TIME_DOCUMENTATION_SNAPSHOT",
+      "treatment": "Preserve both sealed versions; use versioned current operator entry for current status. Not a code repair or a claim that all ZIP bytes are identical."
+    }
+  ],
+  "sdk_only_paths_not_in_formal_source_closure": [
+    "LICENSE",
+    "docs/parameter_reference_coverage.json",
+    "sdk_cli.py",
+    "README-SDK.md"
+  ],
+  "sdk_cli_formally_qualified_by_this_comparison": false,
+  "prior_development_pass_used_as_formal_result": false,
+  "sealed_sdk_or_formal_sources_modified": false,
+  "local_python_native_or_model_execution": false,
+  "aggregate_formal_verdict": "NOT_MADE_PENDING_FULL_EXECUTION_AND_READBACK"
+}

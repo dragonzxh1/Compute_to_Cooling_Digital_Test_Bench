@@ -24,6 +24,8 @@
 
 SDK 的 `--describe` / `--verify` 用于说明与文件校验；`--run` 才执行离线模型。`--input-index` 是 0..100 登记输入索引，`--rows` 是从起点回放的行数，不是积分步长。CLI 自身不替任意用户进程施加 Windows Job 限制。安装开发验收不自动成为本轮 C3-C 成绩，也不保证任意用户工况。
 
+本轮文件级交付核对记录见 `artifacts/m1-c3c-v4-authorization/sdk_formal_source_crossbinding.json`：675 个 SDK 文件长度/哈希已复核；与 formal 清单共有 671 个路径，其中 670 个原始字节完全相同，唯一差异为打包时的旧使用说明，candidate 与共有代码无差异。SDK 专用的 LICENSE、静态参数覆盖记录、`sdk_cli.py` 和 README-SDK 不在 formal source closure 中，不能据此宣称 SDK CLI 本身获得本轮正式资格。
+
 ## 3. 参数意义在哪里查
 
 | 参数类别 | 说明入口 | 注意 |
