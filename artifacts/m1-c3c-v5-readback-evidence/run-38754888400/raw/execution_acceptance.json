@@ -1,0 +1,9 @@
+{
+  "source_commit": "e2a3e29f64fdf4556d47e9a4940db2fee5020f8f",
+  "actual_job_verified": true,
+  "status": "ARCHIVED_NATIVE_DEVELOPMENT_READBACK_COMPLETE",
+  "control_manifest_sha256": "4ef85d4b6e72388032f43470611a6524c0f54f3967bac2a75af3e517e722880a",
+  "candidate_behavioral_execution": false,
+  "cleanup_verified": true,
+  "formal_qualification": false
+}

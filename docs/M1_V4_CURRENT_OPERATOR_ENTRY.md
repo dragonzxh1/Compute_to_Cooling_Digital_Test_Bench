@@ -12,6 +12,8 @@
 
 后续仅做独立开发修复：[v5耗时定位和检查器验证](M1_C3_C_V5_READONLY_TIMING.md) 已测得重复包校验放大；新审计版本的17项合成检查通过，未改变candidate或判据。完整真实证据/FINAL开发复现仍待完成，新的正式包尚未冻结、未开考。不能将该检查器成绩升级为资格或上线结论。
 
+[完整上游native回读](M1_C3_C_V5_ARCHIVED_NATIVE_READBACK.md) 已完成并独立核对：716批次、1969阶段记录、57107原始文件逐项匹配；失败FINAL仍单独保留。此项关闭了“优化只在小型合成输入上验证”的缺口，但case/Startup/PF/schema等剩余FINAL聚合开发复现还未完成，旧v4仍INVALID。
+
 冻结旧说明中的“尚未审签/尚未授权”是打包时点的历史状态；本轮新授权以 [正式执行记录](M1_C3_C_V4_FORMAL_EXECUTION.md) 和 `artifacts/m1-c3c-v4-authorization/` 的独立收据为准。原件不回写。
 
 ## 2. 安装及示例从哪里开始
