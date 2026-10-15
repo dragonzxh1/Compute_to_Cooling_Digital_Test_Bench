@@ -1,0 +1,81 @@
+{
+  "schema": "m1-c3c-v5-archived-native-readback-control-v1",
+  "scope": "DEVELOPMENT_ARCHIVED_NATIVE_READBACK",
+  "formal_behavior_authorized": false,
+  "reference_package_path": "artifacts/m1-c3c-v4-freeze/executable_proposal.json",
+  "reference_package_raw_sha256": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357",
+  "reference_native_stage_record_count": 1969,
+  "reference_failure_evidence_path": "artifacts/m1-c3c-v4-authorization/failure-38675166533/independent_readback.json",
+  "protected_parent_manifest_path": "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json",
+  "versioned_entry_difference": {
+    "path": ".github/workflows/m1-remote-long-probe-v2-1.yml",
+    "reference_raw_sha256": "8a08ca7d4f5980f52e657ae29b1b929cccbf433052fcb9e0ed82480c03a0df17",
+    "purpose": "Separately versioned read-only DEVELOPMENT routing, not a replacement for sealed v4 formal authority."
+  },
+  "source_hashes": {
+    ".github/workflows/m1-remote-long-probe-v2-1.yml": "9a3cce0a8eba0bba582a729d0c11b36e7c1ba2e2e772534f31c1d1eeb434806e",
+    ".github/actions/m1-v4-runtime/action.yml": "58273ade4c7cb1ea64a642aa9f61bd8dfbc8e7e1d808dd0c0a131d6b50b14a4b",
+    "artifacts/m1-c3c-v4-freeze/executable_proposal.json": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357",
+    "artifacts/m1-c3c-v4-authorization/failure-38675166533/independent_readback.json": "7953edccc1fe069909a48f96f7d563bd5070389dc1b8c7f801fc26c605ce4b19",
+    "v0_2/tests/tools/m1_campaign_v4/execution_manifest.json": "eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446",
+    "v0_2/tests/tools/m1_c3c_v4/environment_lock.json": "4a68d805046b6d7b6946274cabd2ba37b69b44d82587e4865bed89d9d77f6877",
+    "artifacts/m1-c3c-v4-authorization/user_freeze_approval.json": "57ab034c0e1497d0ad67bc573b810dabe6ff62ae431300eda1fcff04dd71e733",
+    "artifacts/m1-c3c-v4-authorization/formal_execution_authorization.json": "f280832e2ef0721d40d3b5076970dc86b0e362c6da2298bff812bd2de55c2b50",
+    "v0_2/tests/tools/m1_c3c_v5_readback/audit.py": "ce9864fdd8b3a2badc70adc4eda3e4e6a1926f2a982069a4b7efff49dce525d9",
+    "v0_2/tests/tools/m1_c3c_v5_readback/readback.py": "65d9957df2b29523f72daf978317cbfd02034012136ecccf099ba14b7d7010d4",
+    "v0_2/tests/tools/m1_c3c_v5_readback/worker.py": "ccc774aed8dc3b726693bf49cce854cfbc64e87248cf340e5a8cfe755da3cb14",
+    "v0_2/tests/tools/m1_c3c_v5_readback/run.ps1": "caa7b76fb14dabc07d71b12fe0b43a3a2968721d0f590206d853c3e9ecf412d5"
+  },
+  "resource_policy": {
+    "cpu_rate": 2500,
+    "process_mb": 1024,
+    "job_mb": 2048,
+    "wall_ms": 480000,
+    "actual_python_job_verification_required": true,
+    "cleanup_active_processes_required": 0
+  },
+  "candidate_behavioral_execution": false,
+  "qualification_result_authorized": false,
+  "production_authorized": false,
+  "hardware_authorized": false,
+  "phase6": false,
+  "checker_plan": "NATIVE_ALL_RECORDS_OFFICIAL_V4_ARCHIVE_V1",
+  "optimization_boundary": {
+    "invocation_local_invariants_only": true,
+    "per_stage_assertions_unchanged": true,
+    "source_bytes_checked_before_and_after": true,
+    "global_cache": false,
+    "full_final_reproduction": false,
+    "old_formal_grant_must_reject_new_commit": true,
+    "historical_source_run_context_explicit": true,
+    "old_invalid_formal_result_never_promoted": true
+  },
+  "archive": {
+    "artifact_id": 11955188632,
+    "run_id": 38675166533,
+    "run_attempt": 1,
+    "local_path": "artifacts/m1-c3c-v5-readback-input/native.official.zip",
+    "bytes": 2011635439,
+    "raw_sha256": "b64e8509e255669328675ab0976eed0e45c6fbef294c4c6280171ff4885e91ad",
+    "entry_count": 96961,
+    "native_prefix": "liquid-recovery-v1/stream-38675166533-1/",
+    "quarantined_final_entry_count": 655,
+    "failed_final_required_raw_sha256": {
+      "batch_stop.json": "3906cc3b14ed90e4210bc99eb49d9366afe27af78d307a578045297a2555cce7",
+      "FINAL_ACCEPTANCE/job_status.json": "5c1e3dcdfd56c68075463c355953e3f7edf701fb9190f501e3e01788b2e9d020"
+    },
+    "upstream_complete_batches": 716,
+    "upstream_stage_records": 1969,
+    "upstream_raw_captures": 7876,
+    "upstream_native_files": 57107,
+    "upstream_native_bytes": 671761951,
+    "execution_identity": {
+      "approval_receipt_raw_sha256": "57ab034c0e1497d0ad67bc573b810dabe6ff62ae431300eda1fcff04dd71e733",
+      "execution_source_commit": "9012d6d9292a44226b0892332879de506812206d",
+      "package_raw_sha256": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357",
+      "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+      "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+      "authorization_raw_sha256": "f280832e2ef0721d40d3b5076970dc86b0e362c6da2298bff812bd2de55c2b50"
+    }
+  }
+}

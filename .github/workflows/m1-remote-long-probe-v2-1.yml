@@ -20,6 +20,7 @@ on:
           - formal_v4
           - readonly_profile_v5
           - audit_checks_v5
+          - archive_readback_v5
       approval_receipt_b64:
         required: false
         type: string
@@ -145,6 +146,64 @@ jobs:
           name: c3c-v5-audit-checks
           path: |
             artifacts/m1-c3c-v5-audit/
+            artifacts/m1-remote-executor-v1/build/build_identity.json
+          retention-days: 30
+          if-no-files-found: error
+  archive-readback-v5:
+    if: inputs.run_scope == 'archive_readback_v5'
+    runs-on: windows-2022
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Verify separately versioned DEVELOPMENT timing entry
+        shell: pwsh
+        env:
+          PROFILE_COMMIT: ${{ inputs.expected_source_commit }}
+          PROFILE_CONTROL: ${{ inputs.execution_manifest_sha256 }}
+          PROFILE_RUNNER: ${{ inputs.runner_script_sha256 }}
+        run: |
+          $ErrorActionPreference='Stop'
+          if($env:PROFILE_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:PROFILE_COMMIT -or (git rev-parse HEAD) -cne $env:PROFILE_COMMIT){throw 'PROFILE_SOURCE_COMMIT_DRIFT'}
+          if($env:PROFILE_CONTROL -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v5_readback/control.json).Hash.ToLowerInvariant() -cne $env:PROFILE_CONTROL){throw 'PROFILE_CONTROL_DRIFT'}
+          if($env:PROFILE_RUNNER -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v5_readback/run.ps1).Hash.ToLowerInvariant() -cne $env:PROFILE_RUNNER){throw 'PROFILE_RUNNER_DRIFT'}
+          $control=Get-Content v0_2/tests/tools/m1_c3c_v5_readback/control.json -Raw|ConvertFrom-Json
+          if($control.scope -cne 'DEVELOPMENT_ARCHIVED_NATIVE_READBACK' -or $control.formal_behavior_authorized -ne $false){throw 'PROFILE_SCOPE_DRIFT'}
+      - uses: ./.github/actions/m1-v4-runtime
+        with:
+          commit: ${{ inputs.expected_source_commit }}
+          manifest: eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446
+          runner: 138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef
+      - name: Download exact original official archive without execution
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference='Stop'
+          $control=Get-Content v0_2/tests/tools/m1_c3c_v5_readback/control.json -Raw|ConvertFrom-Json
+          $archive=$control.archive
+          $meta=gh api ('repos/'+$env:GITHUB_REPOSITORY+'/actions/artifacts/'+$archive.artifact_id)|ConvertFrom-Json
+          if($LASTEXITCODE -ne 0 -or $meta.expired -or $meta.workflow_run.id -ne $archive.run_id -or $meta.workflow_run.head_sha -cne $archive.execution_identity.execution_source_commit -or $meta.size_in_bytes -ne $archive.bytes -or $meta.digest -cne ('sha256:'+$archive.raw_sha256)){throw 'READBACK_OFFICIAL_ARTIFACT_IDENTITY_DRIFT'}
+          New-Item -ItemType Directory -Path (Split-Path $archive.local_path)|Out-Null
+          curl.exe --fail --silent --show-error --location --header ("Authorization: Bearer "+$env:GH_TOKEN) --header 'Accept: application/vnd.github+json' ('https://api.github.com/repos/'+$env:GITHUB_REPOSITORY+'/actions/artifacts/'+$archive.artifact_id+'/zip') --output $archive.local_path
+          if($LASTEXITCODE -ne 0 -or (Get-Item -LiteralPath $archive.local_path).Length -ne $archive.bytes){throw 'READBACK_ARCHIVE_DOWNLOAD_FAILED'}
+      - name: Full archived native evidence audit under actual verified Python Job
+        shell: pwsh
+        run: |
+          & ./v0_2/tests/tools/m1_c3c_v5_readback/run.ps1 -Python (Get-Command python).Source -ExpectedCommit '${{ inputs.expected_source_commit }}' -ExpectedManifestSha256 '${{ inputs.execution_manifest_sha256 }}'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: c3c-v5-native-readback
+          path: |
+            artifacts/m1-c3c-v5-readback/
             artifacts/m1-remote-executor-v1/build/build_identity.json
           retention-days: 30
           if-no-files-found: error
