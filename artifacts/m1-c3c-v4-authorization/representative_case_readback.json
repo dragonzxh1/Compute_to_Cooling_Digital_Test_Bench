@@ -1,0 +1,45 @@
+{
+  "schema": "m1-c3c-v4-representative-case-readback-v1",
+  "run_id": 38675166533,
+  "run_attempt": 1,
+  "scope": "PARTIAL_OFFICIAL_EVIDENCE_READBACK_NOT_AGGREGATE_QUALIFICATION",
+  "execution_source_commit": "9012d6d9292a44226b0892332879de506812206d",
+  "package_raw_sha256": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357",
+  "cases": [
+    {
+      "case_index": 0,
+      "official_artifact_id": 11949571276,
+      "official_artifact_sha256": "12fdab439965b9e18130b1f17cdead29883ed142f1a74220b486ea96209456cd",
+      "selected_prefixes": 21,
+      "row_comparison_receipts_verified": 231,
+      "prefix_union_matches_frozen_selection": true,
+      "all_prefixes_start_from_t0": true,
+      "reference_split_repeat_raw_receipts_match": true,
+      "qualification_verdict": "NOT_MADE"
+    },
+    {
+      "case_index": 65,
+      "official_artifact_id": 11952131677,
+      "official_artifact_bytes": 395248934,
+      "official_artifact_sha256": "8f1edd8ed69105abc1ff5f8b57e15f751f38de5ce53175dd637dbce7fffde066",
+      "input_rows": 161,
+      "selected_prefixes": 152,
+      "row_comparison_receipts_verified": 11637,
+      "prefix_union_matches_this_run_plan": true,
+      "all_prefixes_start_from_t0": true,
+      "reference_split_repeat_raw_receipts_match": true,
+      "completed_native_batches": 28,
+      "actual_python_stage_job_proofs_verified": 29,
+      "raw_captures_sha256_verified": 116,
+      "full_authority_and_environment_lock_match": true,
+      "all_cleanup_complete_and_active_zero": true,
+      "resource_policy_match": true,
+      "qualification_verdict": "NOT_MADE"
+    }
+  ],
+  "reader_diagnostic": "Initial local read-only array inspection did not preserve one-element JSON arrays; explicit no-enumeration parsing was used for the complete receipt readback. No remote execution, fixture, assertion or frozen source was modified or retried.",
+  "remaining_full_review": "All 101 cases, full-frame bytes, native closure, schema, final gate and FINAL post-exit batch remain subject to final independent acceptance.",
+  "local_python_native_or_model_execution": false,
+  "prior_pass_credit": false,
+  "aggregate_qualification_verdict": "NOT_MADE"
+}
