@@ -1,0 +1,9 @@
+{
+  "control_manifest_sha256": "672a039f93bb71f9fde51cf254f5ad97320e79d35d681997fe6e46ba38a40a9d",
+  "candidate_behavioral_execution": false,
+  "cleanup_verified": true,
+  "formal_qualification": false,
+  "status": "AGGREGATION_DEVELOPMENT_REPLAY_COMPLETE",
+  "actual_job_verified": true,
+  "source_commit": "3937ec6f6a345922a0d61df0bd84fef770b64051"
+}

@@ -10,9 +10,9 @@
 
 最新结果优先于上一段开考时点状态：本轮已因 `FINAL_ACCEPTANCE` 受控超时停止，`INVALID_C3_C_EXECUTION / behavioral_adjudication=NOT_MADE`。969项上游静态阶段缺项0，但最终验收没有完成；不改判candidate行为FAIL，不授正式PASS，不自动重跑。详见 [v4正式失败报告](M1_C3_C_V4_FORMAL_FAILURE_REPORT.md)。
 
-后续仅做独立开发修复：[v5耗时定位和检查器验证](M1_C3_C_V5_READONLY_TIMING.md) 已测得重复包校验放大；新审计版本的17项合成检查通过，未改变candidate或判据。完整真实证据/FINAL开发复现仍待完成，新的正式包尚未冻结、未开考。不能将该检查器成绩升级为资格或上线结论。
+后续仅做独立开发修复：[v5耗时定位和检查器验证](M1_C3_C_V5_READONLY_TIMING.md) 已测得重复包校验放大；新审计版本的17项合成检查通过，未改变candidate或判据。完整native和剩余聚合已分别完成开发回读，下一步是新执行包集成及包级验证；新正式包尚未冻结、未开考。
 
-[完整上游native回读](M1_C3_C_V5_ARCHIVED_NATIVE_READBACK.md) 已完成并独立核对：716批次、1969阶段记录、57107原始文件逐项匹配；失败FINAL仍单独保留。此项关闭了“优化只在小型合成输入上验证”的缺口，但case/Startup/PF/schema等剩余FINAL聚合开发复现还未完成，旧v4仍INVALID。
+[完整上游native回读](M1_C3_C_V5_ARCHIVED_NATIVE_READBACK.md) 已独立核对716批次、1969阶段记录、57107文件。[剩余FINAL聚合开发复现](M1_C3_C_V5_FINAL_AGGREGATE_REPLAY.md) 的13阶段约138秒完成，39199个输入文件逐项与原ZIP相同，C/S、Startup、PF及schema检查完成。两者都是旧证据上的开发验证，不是新的fresh C3-C；失败FINAL单独保留，旧v4仍INVALID，不能据此宣布上线。
 
 冻结旧说明中的“尚未审签/尚未授权”是打包时点的历史状态；本轮新授权以 [正式执行记录](M1_C3_C_V4_FORMAL_EXECUTION.md) 和 `artifacts/m1-c3c-v4-authorization/` 的独立收据为准。原件不回写。
 
