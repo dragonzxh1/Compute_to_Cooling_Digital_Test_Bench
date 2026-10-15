@@ -12,6 +12,7 @@ foreach($b in $control.source_hashes.PSObject.Properties){if((Get-FileHash -Lite
 $runRoot=Join-Path $repo ('artifacts/m1-c3c-v4-closure/'+$env:GITHUB_RUN_ID+'-'+$env:GITHUB_RUN_ATTEMPT+'-CHECKS')
 $resultPath=Join-Path $runRoot 'result.json'
 $result=Get-Content -LiteralPath $resultPath -Raw|ConvertFrom-Json
+if($result.refusal_checks.Count -ne $control.expected_refusal_check_count -or @($result.refusal_checks|Where-Object status -cne 'PASS').Count){throw 'DETACHED_REFUSAL_COUNT_OR_STATUS_DRIFT'}
 $accepted=Get-Content -LiteralPath (Join-Path $runRoot 'execution_acceptance.json') -Raw|ConvertFrom-Json
 $native=Get-Content -LiteralPath (Join-Path $runRoot 'job_status.json') -Raw|ConvertFrom-Json
 $proof=Get-Content -LiteralPath (Join-Path $runRoot 'external_job_identity.json') -Raw|ConvertFrom-Json
@@ -82,7 +83,7 @@ Independent readback result RAW：``$resultHash``
 
 完整$($control.expected_source_binding_count)项source bindings、101inputs/3216rows/499计划快照/969static stages+FINAL已核验。Dynamic prefix仍用原mandatory674+fresh progress/confirmed精确union及支持案例完整prefix，不预填旧成绩。Exact hash inventory RAW：``$($result.inventory_raw_sha256)``。
 
-独立只读回读run：[$($env:GITHUB_RUN_ID)](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/$($env:GITHUB_RUN_ID))；七项合成拒绝检查PASS、真实Python Job/四raw captures/cleanup active0核验PASS，没有candidate import或formal qualification。
+独立只读回读run：[$($env:GITHUB_RUN_ID)](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/$($env:GITHUB_RUN_ID))；$($result.refusal_checks.Count)项合成拒绝检查PASS、真实Python Job/四raw captures/cleanup active0核验PASS，没有candidate import或formal qualification。
 
 环境/dependencies见ENVIRONMENT_DEPENDENCY_LOCK.json，RAW：``$($definition.source_raw_sha256.($definition.execution.environment_lock))``。只允许20261004.326.1/20261012.333.1；Python3.11.9/Windows10.0.20348/AMD64/win22及全部依赖精确锁定，每个Job前后完整身份相同。未知第三镜像STOP；不主张每个案例已在两镜像分别执行。
 
