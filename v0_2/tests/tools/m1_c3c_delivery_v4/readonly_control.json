@@ -1,0 +1,41 @@
+{
+  "schema": "m1-c3c-delivery-v4-readonly-control-v1",
+  "status": "DEVELOPMENT_PREREGISTERED_NOT_EXECUTED",
+  "scope": "DEVELOPMENT_READONLY_EVIDENCE_TRANSPORT",
+  "source_hashes": {
+    "v0_2/tests/tools/m1_c3c_delivery_v4/native_closure.ps1": "bdb163e3cf6f62e4b765d980bfb6bb6f7b0ec9cf48d115a19d007790cf8e3ad9",
+    "v0_2/tests/tools/m1_c3c_delivery_v4/test_native_closure.ps1": "59e3f1032764fa95c6a433bbce30e2c2bbc4b82c48ab796047874ca18569e690",
+    "v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1": "1881e5788b8b346cd3b98e4751cde498dc21f89c0629118baca9f340daf4d3f1",
+    "v0_2/tests/tools/m1_c3c_delivery_v4/README.md": "50b0d44685cc4b302c0f2483e607d6365273edbdfc8e301495f75e0b939abc4e",
+    ".github/workflows/m1-remote-long-probe-v2-1.yml": "cf77de877a37efe32e442784e41540e1b65a66d322c3c8ca60b0c0f2e44822c1"
+  },
+  "baseline_run_id": "38586777499",
+  "baseline_source_commit": "65300d9cae0df4b918c4e2db39fdfd7b9915976f",
+  "baseline_proposal": {
+    "path": "artifacts/m1-c3c-v3-freeze/executable_proposal.json",
+    "raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7"
+  },
+  "baseline_final_artifact": {
+    "id": 11921179493,
+    "sha256": "705a0aa91d382aeb2f893fef3ce8157bb7340b3c38bd9403caec0a603f36ed2c"
+  },
+  "baseline_execution_identity": {
+    "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+    "package_raw_sha256": "2828234ca11f2cbe4b1893e43b802bd5144979572cef0df7bbc4dffa115a88e7",
+    "authorization_raw_sha256": "c496f7cd92c6ac788df2a333deefc6b7e8a387a56eaf6dbcd9126dbe4a0dd1aa",
+    "execution_source_commit": "65300d9cae0df4b918c4e2db39fdfd7b9915976f",
+    "approval_receipt_raw_sha256": "11c51d1ac729a80cf05d357adabd2f9e4c9a73ab98c0af059c363207616d92c7"
+  },
+  "planned_synthetic_checks": 18,
+  "planned_archives": 135,
+  "baseline_expected_missing": 802,
+  "corrected_required_missing": 0,
+  "preserve_all_969_required_static_stage_ids": true,
+  "preserve_all_original_prefix_repeat_schema_rules": true,
+  "candidate_execution_authorized": false,
+  "formal_execution_authorized": false,
+  "production_hardware_phase6_authorized": false,
+  "original_run_reclassification_authorized": false,
+  "software_policy_modified": false
+}

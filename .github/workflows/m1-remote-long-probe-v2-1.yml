@@ -1,4 +1,4 @@
-name: C3-C v3 final package independent read-only closure
+name: C3-C delivery v4 DEVELOPMENT read-only evidence transport
 on:
   workflow_dispatch:
     inputs:
@@ -13,13 +13,14 @@ on:
         type: string
 permissions:
   contents: read
+  actions: read
 concurrency:
-  group: c3c-v3-final-readonly-closure
+  group: c3c-delivery-v4-readonly
   cancel-in-progress: false
 jobs:
-  final-package-readback:
+  original-evidence-transport-proof:
     runs-on: windows-2022
-    timeout-minutes: 20
+    timeout-minutes: 60
     defaults:
       run:
         shell: pwsh
@@ -27,44 +28,29 @@ jobs:
       EXPECTED_SOURCE_COMMIT: ${{ inputs.expected_source_commit }}
       EXECUTION_MANIFEST_SHA256: ${{ inputs.execution_manifest_sha256 }}
       RUNNER_SCRIPT_SHA256: ${{ inputs.runner_script_sha256 }}
-      PYTHONDONTWRITEBYTECODE: '1'
-      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
-      OMP_NUM_THREADS: '1'
-      OPENBLAS_NUM_THREADS: '1'
-      MKL_NUM_THREADS: '1'
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - name: Verify exact read-only delivery dispatch
+      - name: Verify exact DEVELOPMENT read-only dispatch
         run: |
           $ErrorActionPreference='Stop'
-          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:EXECUTION_MANIFEST_SHA256 -notmatch '^[a-f0-9]{64}$' -or $env:RUNNER_SCRIPT_SHA256 -notmatch '^[a-f0-9]{64}$'){throw 'M1_DISPATCH_IDENTITY_DENIED'}
-          if((git rev-parse HEAD) -cne $env:EXPECTED_SOURCE_COMMIT){throw 'DELIVERY_COMMIT_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_c3c_v3_closure/control.json).Hash.ToLowerInvariant() -cne $env:EXECUTION_MANIFEST_SHA256){throw 'READBACK_CONTROL_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_c3c_v3_closure/run_readback.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'READONLY_LAUNCHER_DRIFT'}
-      - uses: ./.github/actions/m1-v4-runtime
-        with:
-          commit: ${{ inputs.expected_source_commit }}
-          manifest: eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446
-          runner: 138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef
-      - name: Independent actual-Job read-only full package review
+          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -cnotmatch '^[a-f0-9]{40}$'){throw 'DELIVERY_DISPATCH_COMMIT_DRIFT'}
+          if((git rev-parse HEAD) -cne $env:EXPECTED_SOURCE_COMMIT){throw 'DELIVERY_CHECKOUT_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_c3c_delivery_v4/readonly_control.json).Hash.ToLowerInvariant() -cne $env:EXECUTION_MANIFEST_SHA256){throw 'DELIVERY_CONTROL_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'DELIVERY_RUNNER_DRIFT'}
+      - name: Read official historical evidence only; never execute a candidate
         run: |
-          & ./v0_2/tests/tools/m1_c3c_v3_closure/run_readback.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
-      - name: Detached post-cleanup attestation and blank signature sheet
-        run: |
-          & ./v0_2/tests/tools/m1_c3c_v3_closure/complete_delivery.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
-      - name: Preserve exact package and read-only evidence
+          & ./v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
+      - name: Preserve read-only transport evidence and failure
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: C3-C-V3-FINAL-FREEZE-PACKAGE
-          path: |
-            artifacts/m1-c3c-v3-final-delivery/
-            artifacts/m1-c3c-v3-closure/
-            artifacts/m1-c3c-pre-sign/
-            artifacts/m1-remote-executor-v1/build/build_identity.json
+          name: C3-C-DELIVERY-V4-READONLY-PROOF
+          path: artifacts/m1-c3c-delivery-v4/
           if-no-files-found: error
           retention-days: 30
           include-hidden-files: true
+          compression-level: 6
