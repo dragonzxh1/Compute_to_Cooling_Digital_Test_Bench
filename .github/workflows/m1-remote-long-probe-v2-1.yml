@@ -18,6 +18,7 @@ on:
         options:
           - assembly_v4
           - formal_v4
+          - readonly_profile_v5
       approval_receipt_b64:
         required: false
         type: string
@@ -56,3 +57,48 @@ jobs:
       approval_receipt_sha256: ${{ inputs.approval_receipt_sha256 }}
       execution_authorization_b64: ${{ inputs.execution_authorization_b64 }}
       execution_authorization_sha256: ${{ inputs.execution_authorization_sha256 }}
+  readonly-profile-v5:
+    if: inputs.run_scope == 'readonly_profile_v5'
+    runs-on: windows-2022
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - name: Verify separately versioned DEVELOPMENT timing entry
+        shell: pwsh
+        env:
+          PROFILE_COMMIT: ${{ inputs.expected_source_commit }}
+          PROFILE_CONTROL: ${{ inputs.execution_manifest_sha256 }}
+          PROFILE_RUNNER: ${{ inputs.runner_script_sha256 }}
+        run: |
+          $ErrorActionPreference='Stop'
+          if($env:PROFILE_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:GITHUB_SHA -cne $env:PROFILE_COMMIT -or (git rev-parse HEAD) -cne $env:PROFILE_COMMIT){throw 'PROFILE_SOURCE_COMMIT_DRIFT'}
+          if($env:PROFILE_CONTROL -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v5_profile/control.json).Hash.ToLowerInvariant() -cne $env:PROFILE_CONTROL){throw 'PROFILE_CONTROL_DRIFT'}
+          if($env:PROFILE_RUNNER -notmatch '^[a-f0-9]{64}$' -or (Get-FileHash v0_2/tests/tools/m1_c3c_v5_profile/run.ps1).Hash.ToLowerInvariant() -cne $env:PROFILE_RUNNER){throw 'PROFILE_RUNNER_DRIFT'}
+          $control=Get-Content v0_2/tests/tools/m1_c3c_v5_profile/control.json -Raw|ConvertFrom-Json
+          if($control.scope -cne 'DEVELOPMENT_READ_ONLY_FINAL_TIMING' -or $control.formal_behavior_authorized -ne $false){throw 'PROFILE_SCOPE_DRIFT'}
+      - uses: ./.github/actions/m1-v4-runtime
+        with:
+          commit: ${{ inputs.expected_source_commit }}
+          manifest: eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446
+          runner: 138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef
+      - name: Finite read-only package timing under actual verified Python Job
+        shell: pwsh
+        run: |
+          & ./v0_2/tests/tools/m1_c3c_v5_profile/run.ps1 -Python (Get-Command python).Source -ExpectedCommit '${{ inputs.expected_source_commit }}' -ExpectedManifestSha256 '${{ inputs.execution_manifest_sha256 }}'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: c3c-v5-readonly-timing
+          path: |
+            artifacts/m1-c3c-v5-profile/
+            artifacts/m1-remote-executor-v1/build/build_identity.json
+          retention-days: 30
+          if-no-files-found: error
