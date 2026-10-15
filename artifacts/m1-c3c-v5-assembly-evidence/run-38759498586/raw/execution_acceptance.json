@@ -1,0 +1,9 @@
+{
+  "formal_qualification": false,
+  "candidate_behavioral_execution": false,
+  "actual_job_verified": true,
+  "cleanup_verified": true,
+  "status": "C3C_ASSEMBLY_V5_SYNTHETIC_PASS",
+  "control_manifest_sha256": "8f7472bc3bc63fd5c8f87f19e4908f72d93774ab693139ff0b5d74e9f4e24059",
+  "source_commit": "c5d9aa550d95357d8314a49d7a64017c229339a3"
+}

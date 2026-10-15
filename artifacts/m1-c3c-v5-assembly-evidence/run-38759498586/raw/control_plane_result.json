@@ -1,0 +1,260 @@
+{
+  "status": "PASS",
+  "formal_qualification": false,
+  "parsed_ps_files": 7,
+  "check_count": 62,
+  "candidate_behavioral_execution": false,
+  "checks": [
+    {
+      "id": "CP-01",
+      "passed": true
+    },
+    {
+      "id": "CP-02",
+      "passed": true
+    },
+    {
+      "id": "CP-03",
+      "passed": true
+    },
+    {
+      "id": "CP-04",
+      "passed": true
+    },
+    {
+      "id": "CP-05",
+      "passed": true
+    },
+    {
+      "id": "CP-06",
+      "passed": true
+    },
+    {
+      "id": "CP-07",
+      "passed": true
+    },
+    {
+      "id": "CP-08",
+      "passed": true
+    },
+    {
+      "id": "CP-09-batch.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-09-build_draft.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-09-campaign_plan.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-09-derive_v5.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-09-run_assembly_v5.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-09-run.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-09-test_control_plane_v5.ps1",
+      "passed": true
+    },
+    {
+      "id": "CP-10",
+      "passed": true
+    },
+    {
+      "id": "CP-11-schema",
+      "passed": true
+    },
+    {
+      "id": "CP-11-split",
+      "passed": true
+    },
+    {
+      "id": "CP-11-startup",
+      "passed": true
+    },
+    {
+      "id": "CP-11-reference_gate",
+      "passed": true
+    },
+    {
+      "id": "CP-11-prefixes",
+      "passed": true
+    },
+    {
+      "id": "CP-11-select",
+      "passed": true
+    },
+    {
+      "id": "CP-11-split_u",
+      "passed": true
+    },
+    {
+      "id": "CP-11-final",
+      "passed": true
+    },
+    {
+      "id": "CP-11-plan",
+      "passed": true
+    },
+    {
+      "id": "CP-11-references",
+      "passed": true
+    },
+    {
+      "id": "CP-11-final-startup",
+      "passed": true
+    },
+    {
+      "id": "CP-12-references",
+      "passed": true
+    },
+    {
+      "id": "CP-12-split",
+      "passed": true
+    },
+    {
+      "id": "CP-12-select",
+      "passed": true
+    },
+    {
+      "id": "CP-12-prefixes",
+      "passed": true
+    },
+    {
+      "id": "CP-12-schema",
+      "passed": true
+    },
+    {
+      "id": "CP-12-startup",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-33",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-34",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-35",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-36",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-37",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-38",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-39",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-40",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-41",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-42",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-43",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-44",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-45",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-46",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-47",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-48",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-49",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-50",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-51",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-52",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-53",
+      "passed": true
+    },
+    {
+      "id": "CP-13-inline-54",
+      "passed": true
+    },
+    {
+      "id": "CP-14",
+      "passed": true
+    },
+    {
+      "id": "CP-15",
+      "passed": true
+    },
+    {
+      "id": "CP-16",
+      "passed": true
+    },
+    {
+      "id": "CP-17",
+      "passed": true
+    },
+    {
+      "id": "CP-18",
+      "passed": true
+    },
+    {
+      "id": "CP-19",
+      "passed": true
+    },
+    {
+      "id": "CP-20",
+      "passed": true
+    }
+  ],
+  "schema": "m1-c3c-control-plane-synthetic-result-v1",
+  "approval_generated": false,
+  "scope": "DEVELOPMENT_CONTROL_PLANE_ONLY"
+}

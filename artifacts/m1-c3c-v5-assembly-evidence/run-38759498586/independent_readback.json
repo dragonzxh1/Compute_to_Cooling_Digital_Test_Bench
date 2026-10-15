@@ -1,0 +1,22 @@
+{
+  "schema": "m1-c3c-v5-assembly-independent-readback-v1",
+  "run_id": 38759498586,
+  "source_commit": "c5d9aa550d95357d8314a49d7a64017c229339a3",
+  "control_sha256": "8f7472bc3bc63fd5c8f87f19e4908f72d93774ab693139ff0b5d74e9f4e24059",
+  "draft_sha256": "b7fc854301f12dec49496efdfc356888a755a8b22f779e872ae73dd0f564c41e",
+  "source_bindings": 832,
+  "official_artifact_id": 11984019117,
+  "official_artifact_sha256": "6323d9994e8c0276d73850c296d618e49e6875f70a6c2c583930a623a2671ec9",
+  "official_entries_verified": 16,
+  "raw_captures_verified": 4,
+  "actual_python_pid": 7080,
+  "actual_job_and_cleanup_verified": true,
+  "environment_before_after_equal": true,
+  "image_version": "20261012.333.1",
+  "unit_checks_passed": 57,
+  "control_plane_checks_passed": 62,
+  "candidate_imported": false,
+  "formal_qualification": false,
+  "approval_generated": false,
+  "status": "V5_PACKAGE_DEVELOPMENT_ASSEMBLY_VERIFIED"
+}

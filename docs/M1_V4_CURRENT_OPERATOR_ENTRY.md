@@ -14,6 +14,8 @@
 
 [完整上游native回读](M1_C3_C_V5_ARCHIVED_NATIVE_READBACK.md) 已独立核对716批次、1969阶段记录、57107文件。[剩余FINAL聚合开发复现](M1_C3_C_V5_FINAL_AGGREGATE_REPLAY.md) 的13阶段约138秒完成，39199个输入文件逐项与原ZIP相同，C/S、Startup、PF及schema检查完成。两者都是旧证据上的开发验证，不是新的fresh C3-C；失败FINAL单独保留，旧v4仍INVALID，不能据此宣布上线。
 
+[新v5执行包集成](M1_C3_C_V5_EXECUTION_PACKAGE_DEVELOPMENT.md) 已完成57/57合成单元检查、62/62控制平面检查，并独立核验Job/raw/环境。候选及原冻结判据不变；当前仅有未最终封包的draft，新的exact executable freeze及fresh formal执行仍未获批准。
+
 冻结旧说明中的“尚未审签/尚未授权”是打包时点的历史状态；本轮新授权以 [正式执行记录](M1_C3_C_V4_FORMAL_EXECUTION.md) 和 `artifacts/m1-c3c-v4-authorization/` 的独立收据为准。原件不回写。
 
 ## 2. 安装及示例从哪里开始
