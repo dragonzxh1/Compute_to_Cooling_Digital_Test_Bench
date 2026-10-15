@@ -1,4 +1,4 @@
-name: C3-C delivery v4 DEVELOPMENT read-only evidence transport
+name: C3-C v4 development / separately authorized formal entry
 on:
   workflow_dispatch:
     inputs:
@@ -11,53 +11,48 @@ on:
       runner_script_sha256:
         required: true
         type: string
+      run_scope:
+        required: true
+        type: choice
+        default: assembly_v4
+        options:
+          - assembly_v4
+          - formal_v4
+      approval_receipt_b64:
+        required: false
+        type: string
+        default: ''
+      approval_receipt_sha256:
+        required: false
+        type: string
+        default: ''
+      execution_authorization_b64:
+        required: false
+        type: string
+        default: ''
+      execution_authorization_sha256:
+        required: false
+        type: string
+        default: ''
 permissions:
   contents: read
   actions: read
-concurrency:
-  group: c3c-delivery-v4-readonly
-  cancel-in-progress: false
 jobs:
-  original-evidence-transport-proof:
-    runs-on: windows-2022
-    timeout-minutes: 60
-    defaults:
-      run:
-        shell: pwsh
-    env:
-      EXPECTED_SOURCE_COMMIT: ${{ inputs.expected_source_commit }}
-      EXECUTION_MANIFEST_SHA256: ${{ inputs.execution_manifest_sha256 }}
-      RUNNER_SCRIPT_SHA256: ${{ inputs.runner_script_sha256 }}
-      GH_TOKEN: ${{ github.token }}
-    steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          ref: ${{ github.sha }}
-          persist-credentials: false
-      - name: Verify exact DEVELOPMENT read-only dispatch
-        run: |
-          $ErrorActionPreference='Stop'
-          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -cnotmatch '^[a-f0-9]{40}$'){throw 'DELIVERY_DISPATCH_COMMIT_DRIFT'}
-          if((git rev-parse HEAD) -cne $env:EXPECTED_SOURCE_COMMIT){throw 'DELIVERY_CHECKOUT_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_c3c_delivery_v4/readonly_control.json).Hash.ToLowerInvariant() -cne $env:EXECUTION_MANIFEST_SHA256){throw 'DELIVERY_CONTROL_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'DELIVERY_RUNNER_DRIFT'}
-      - name: Read official historical evidence only; never execute a candidate
-        run: |
-          try {
-            & ./v0_2/tests/tools/m1_c3c_delivery_v4/run_readonly.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
-          } catch {
-            $taskFailureRoot='artifacts/m1-c3c-delivery-v4/preflight-'+$env:GITHUB_RUN_ID+'-'+$env:GITHUB_RUN_ATTEMPT
-            New-Item -ItemType Directory -Path $taskFailureRoot -Force | Out-Null
-            [IO.File]::WriteAllText((Join-Path $taskFailureRoot 'failure.json'),(@{status='INVALID_READONLY_DELIVERY_PROOF';error=$_.Exception.Message;source=$env:GITHUB_SHA;candidate_executed=$false;formal_qualification_executed=$false}|ConvertTo-Json),[Text.UTF8Encoding]::new($false))
-            throw
-          }
-      - name: Preserve read-only transport evidence and failure
-        if: always()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: C3-C-DELIVERY-V4-READONLY-PROOF
-          path: artifacts/m1-c3c-delivery-v4/
-          if-no-files-found: error
-          retention-days: 30
-          include-hidden-files: true
-          compression-level: 6
+  assembly-development:
+    if: inputs.run_scope == 'assembly_v4'
+    uses: ./.github/workflows/m1-c3c-v4-assembly.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      assembly_control_sha256: ${{ inputs.execution_manifest_sha256 }}
+      assembly_runner_sha256: ${{ inputs.runner_script_sha256 }}
+  formal:
+    if: inputs.run_scope == 'formal_v4'
+    uses: ./.github/workflows/m1-c3c-full-v4.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      execution_manifest_sha256: ${{ inputs.execution_manifest_sha256 }}
+      runner_script_sha256: ${{ inputs.runner_script_sha256 }}
+      approval_receipt_b64: ${{ inputs.approval_receipt_b64 }}
+      approval_receipt_sha256: ${{ inputs.approval_receipt_sha256 }}
+      execution_authorization_b64: ${{ inputs.execution_authorization_b64 }}
+      execution_authorization_sha256: ${{ inputs.execution_authorization_sha256 }}

@@ -75,7 +75,7 @@ jobs:
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: c3c-synthetic-control-v3
+          name: c3c-synthetic-control-v4
           path: |
             artifacts/m1-c3c-v4-assembly/
             artifacts/m1-remote-executor-v1/build/build_identity.json

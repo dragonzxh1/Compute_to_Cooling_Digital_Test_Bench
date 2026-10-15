@@ -1,4 +1,5 @@
 # Pure-file draft/controls. Creates neither approval nor executable freeze.
+param([string]$ExpectedPriorDraftSha256,[string]$ExpectedPriorControlSha256)
 $ErrorActionPreference='Stop'
 $repo=(Resolve-Path (Join-Path $PSScriptRoot '../../../..')).Path
 $priorPath=Join-Path $repo 'artifacts/m1-c3c-v3-freeze/executable_proposal.json'
@@ -12,8 +13,15 @@ try{foreach($pair in $p.source_raw_sha256.GetEnumerator()) {
     if($got -cne $pair.Value){throw ('V4_ORIGINAL_PROTECTED_SOURCE_DRIFT: '+$pair.Key)}
 }}finally{$archive.Dispose();$sha.Dispose()}
 $dest=Join-Path $repo 'artifacts/m1-c3c-v4-draft'
-if(Test-Path -LiteralPath $dest){throw 'V4_FRESH_DRAFT_REQUIRED'}
-New-Item -ItemType Directory -Path $dest|Out-Null
+if(Test-Path -LiteralPath $dest) {
+    $priorDraft=Join-Path $dest 'executable_proposal.json'
+    $priorControl=Join-Path $PSScriptRoot 'assembly_v4_control.json'
+    if($ExpectedPriorDraftSha256 -cnotmatch '^[a-f0-9]{64}$' -or $ExpectedPriorControlSha256 -cnotmatch '^[a-f0-9]{64}$' -or
+       (Get-FileHash -LiteralPath $priorDraft).Hash.ToLowerInvariant() -cne $ExpectedPriorDraftSha256 -or
+       (Get-FileHash -LiteralPath $priorControl).Hash.ToLowerInvariant() -cne $ExpectedPriorControlSha256){throw 'V4_UNSEALED_REFRESH_IDENTITY_REQUIRED'}
+    $previous=Get-Content -Raw -LiteralPath $priorDraft|ConvertFrom-Json -AsHashtable
+    if($previous.status -cne 'PREPARATION_NOT_FINALIZED' -or $previous.approval_generated -or $previous.formal_execution_started){throw 'V4_SEALED_DRAFT_REFRESH_DENIED'}
+} else {New-Item -ItemType Directory -Path $dest|Out-Null}
 [IO.File]::WriteAllText((Join-Path $dest '.gitattributes'),"*.json -text -eol`n",[Text.UTF8Encoding]::new($false))
 foreach($name in @('limited_scope','SEM01','SEM02','PF06_supplement')) {
     $source=Join-Path $repo $p.registration_paths[$name]
@@ -29,7 +37,7 @@ foreach($file in Get-ChildItem -LiteralPath $PSScriptRoot -File) {
     $path='v0_2/tests/tools/m1_c3c_v4/'+$file.Name
     $p.source_raw_sha256[$path]=(Get-FileHash -LiteralPath $file.FullName).Hash.ToLowerInvariant()
 }
-foreach($path in @('.github/workflows/m1-c3c-full-v4.yml','.github/workflows/m1-c3c-v4-assembly.yml','.github/actions/m1-c3c-runtime-v4/action.yml','v0_2/tests/tools/m1_c3c_delivery_v4/native_closure.ps1','v0_2/tests/tools/m1_c3c_delivery_v4/test_native_closure.ps1')) {
+foreach($path in @('.github/workflows/m1-c3c-full-v4.yml','.github/workflows/m1-c3c-v4-assembly.yml','.github/workflows/m1-remote-long-probe-v2-1.yml','.github/actions/m1-c3c-runtime-v4/action.yml','v0_2/tests/tools/m1_c3c_delivery_v4/native_closure.ps1','v0_2/tests/tools/m1_c3c_delivery_v4/test_native_closure.ps1')) {
     $p.source_raw_sha256[$path]=(Get-FileHash -LiteralPath (Join-Path $repo $path)).Hash.ToLowerInvariant()
 }
 foreach($key in @('runner','worker','environment_lock','artifact_schema','stop_rules')){$p.execution[$key]=$p.execution[$key].Replace('m1_c3c_v3','m1_c3c_v4')}
@@ -45,6 +53,6 @@ $raw=ConvertTo-C3DeliveryCanonical $p
 [IO.File]::WriteAllText((Join-Path $dest 'executable_proposal.json'),$raw+"`n",[Text.UTF8Encoding]::new($false))
 $control=@{schema='m1-c3c-v4-assembly-control';scope='DEVELOPMENT_INFRASTRUCTURE_ONLY';synthetic_test_count=53;formal_behavior_authorized=$false;protected_parent_manifest_path='v0_2/tests/tools/m1_campaign_v4/execution_manifest.json';source_hashes=$p.source_raw_sha256}
 $controlPath=Join-Path $PSScriptRoot 'assembly_v4_control.json'
-if(Test-Path -LiteralPath $controlPath){throw 'V4_NO_ASSEMBLY_CONTROL_OVERWRITE'}
+if((Test-Path -LiteralPath $controlPath) -and !$ExpectedPriorControlSha256){throw 'V4_NO_ASSEMBLY_CONTROL_OVERWRITE'}
 [IO.File]::WriteAllText($controlPath,(ConvertTo-C3DeliveryCanonical $control)+"`n",[Text.UTF8Encoding]::new($false))
 [pscustomobject]@{status='PREPARATION_NOT_FINALIZED';draft_raw=(Get-FileHash -LiteralPath (Join-Path $dest 'executable_proposal.json')).Hash.ToLowerInvariant();source_binding_count=$p.source_raw_sha256.Count;assembly_control=(Get-FileHash -LiteralPath $controlPath).Hash.ToLowerInvariant();formal_execution_authorized=$false}|ConvertTo-Json

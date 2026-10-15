@@ -16,7 +16,7 @@
 
 `m1_c3c_v4` 是独立机械派生版本，不覆盖v3。新full workflow的final在schema/startup/prepare基础上，显式下载ref、reference-gate、select、split、prefix和plan。去掉新增下载并还原namespace后，与v3原workflow逐字一致；15项核心runtime/gate/schema/environment文件同样逐字一致。candidate仍70bba3...348ce，969项原阶段、原prefix/repeat/schema/门禁规则不变。
 
-当前草案 `artifacts/m1-c3c-v4-draft/executable_proposal.json` 包含792项绑定，四份规范登记bytes不变。它没有获得新可执行包冻结批准，也没有正式执行许可。不能拿本次运输PASS代替C3-C PASS。
+当前草案 `artifacts/m1-c3c-v4-draft/executable_proposal.json` 包含793项绑定（初稿792项另增加确切注册入口绑定），四份规范登记bytes不变。它没有获得新可执行包冻结批准，也没有正式执行许可。不能拿本次运输PASS代替C3-C PASS。
 
 ## 剩余步骤
 
