@@ -1,6 +1,6 @@
 # C3-C v4：证据运输修复开发结果
 
-运输修复已通过独立只读验证，v4基础设施开发检查已通过；最终提案已组装为 `FINALIZED_AWAITING_USER_APPROVAL`，尚待独立最终回读与用户审签。原v3 run38586777499保持 `INVALID_C3_C_EXECUTION / NOT_MADE`，未改判、未重跑。
+运输修复、v4基础设施开发检查和最终独立回读已完成；当前为 `READY_FOR_USER_SIGNATURE`，尚待新包用户审签及单独正式执行授权。原v3 run38586777499保持 `INVALID_C3_C_EXECUTION / NOT_MADE`，未改判、未重跑。唯一当前审签身份和原件核验见 [最终准备状态](M1_C3_C_V4_FINAL_READINESS.md)。
 
 ## 已验证
 
@@ -30,8 +30,8 @@
 
 ## 剩余步骤
 
-1. 完成一个确切新包的source/input/environment/拒绝门禁回读及统一审签页，明确执行commit与hash。
-2. 用户单独批准新包冻结和新正式执行后，才从prepare开始fresh C3-C；旧v3无效记录保留、不借旧PASS。
+1. 用户审签已独立回读的新包及确切执行源码，另行授权新正式执行。
+2. 获批后从prepare开始fresh C3-C，最后独立审阅全部行为/执行证据；旧v3无效记录保留、不借旧PASS。
 
 原Startup历史49/50和versioned compatibility分开；SEM02五项严格P1排除、PF06 original INCOMPLETE、ARBITRARY_POST_EXCEPTION_ATOMICITY NOT_PROVEN、T09 HOLD、fullP不可用、hardware CALIBRATION_REQUIRED以及production/Phase6不授权均保持。
 
