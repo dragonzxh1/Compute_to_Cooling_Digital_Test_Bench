@@ -1,0 +1,3 @@
+*.py -text -eol
+*.json -text -eol
+*.ps1 -text -eol

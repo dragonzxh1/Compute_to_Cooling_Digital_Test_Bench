@@ -17,6 +17,8 @@ on:
         default: assembly_v4
         options:
           - assembly_v4
+          - assembly_v5
+          - formal_v5
           - formal_v4
           - readonly_profile_v5
           - audit_checks_v5
@@ -49,6 +51,24 @@ jobs:
       expected_source_commit: ${{ inputs.expected_source_commit }}
       assembly_control_sha256: ${{ inputs.execution_manifest_sha256 }}
       assembly_runner_sha256: ${{ inputs.runner_script_sha256 }}
+  assembly-v5-development:
+    if: inputs.run_scope == 'assembly_v5'
+    uses: ./.github/workflows/m1-c3c-v5-assembly.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      assembly_control_sha256: ${{ inputs.execution_manifest_sha256 }}
+      assembly_runner_sha256: ${{ inputs.runner_script_sha256 }}
+  formal-v5:
+    if: inputs.run_scope == 'formal_v5'
+    uses: ./.github/workflows/m1-c3c-full-v5.yml
+    with:
+      expected_source_commit: ${{ inputs.expected_source_commit }}
+      execution_manifest_sha256: ${{ inputs.execution_manifest_sha256 }}
+      runner_script_sha256: ${{ inputs.runner_script_sha256 }}
+      approval_receipt_b64: ${{ inputs.approval_receipt_b64 }}
+      approval_receipt_sha256: ${{ inputs.approval_receipt_sha256 }}
+      execution_authorization_b64: ${{ inputs.execution_authorization_b64 }}
+      execution_authorization_sha256: ${{ inputs.execution_authorization_sha256 }}
   formal:
     if: inputs.run_scope == 'formal_v4'
     uses: ./.github/workflows/m1-c3c-full-v4.yml

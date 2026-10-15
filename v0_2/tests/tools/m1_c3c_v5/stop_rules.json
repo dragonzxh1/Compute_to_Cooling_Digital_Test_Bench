@@ -1,0 +1,23 @@
+{
+  "schema": "m1-c3c-stop-rules-v1",
+  "status": "PROPOSED_NOT_USER_APPROVED",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "stop_immediately": [
+    "Missing or mismatched exact user approval/execution authorization",
+    "Package/source/input/expectation/registration/environment drift",
+    "Raw evidence persistence or hash readback failure",
+    "Missing actual Python target-Job proof or incomplete cleanup",
+    "Unexpected Startup failure identity or missing fresh U/v2 compatibility evidence",
+    "Invalid/non-deterministic selected inventory, missing mandatory prefix, prefix mismatch or repeat mismatch",
+    "Any valid preregistered behavioral assertion FAIL",
+    "Unexpected exception, incomplete parser/result, or illegal stage/batch completion",
+    "PRE future-command access, fabricated PLC receipts/evidence, protected semantics change"
+  ],
+  "same_execution_repair_or_retry": false,
+  "old_pass_credit": false,
+  "automatic_production_hardware_phase6": false,
+  "valid_fail_requires": "Complete source/environment/Job/raw evidence and an explicit registered predicate result",
+  "valid_behavioral_exception_names": ["REPEAT_NONDETERMINISTIC"],
+  "unexpected_exception": "INVALID_C3_C_EXECUTION; behavioral adjudication NOT_MADE, preserve full failure",
+  "scoped_incomplete_hidden_in_aggregate_pass": false
+}
