@@ -1,6 +1,6 @@
 # C3-C v4：证据运输修复开发结果
 
-运输修复已通过独立只读验证；新正式包仍 `PREPARATION_NOT_FINALIZED`。原v3 run38586777499保持 `INVALID_C3_C_EXECUTION / NOT_MADE`，未改判、未重跑。
+运输修复已通过独立只读验证，v4基础设施开发检查已通过；最终提案已组装为 `FINALIZED_AWAITING_USER_APPROVAL`，尚待独立最终回读与用户审签。原v3 run38586777499保持 `INVALID_C3_C_EXECUTION / NOT_MADE`，未改判、未重跑。
 
 ## 已验证
 
@@ -18,11 +18,20 @@
 
 当前草案 `artifacts/m1-c3c-v4-draft/executable_proposal.json` 包含793项绑定（初稿792项另增加确切注册入口绑定），四份规范登记bytes不变。它没有获得新可执行包冻结批准，也没有正式执行许可。不能拿本次运输PASS代替C3-C PASS。
 
+## 基础设施开发检查
+
+[run38672641883](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38672641883)，source `cbef1d0851db03ea198c352fda19e6cf9c0a8bdb`：53/53 Python合成检查、63/63 PowerShell控制/完整graph检查通过，没有导入candidate或运行任何模型。官方artifact SHA `fecf2ea7f3ab36f7379651c9d589b7972c6f6d9a933205630b93f6d1f6ac4612` 已独立复算；实际Python PID8008位于目标Job、CPU25%、256/512MiB，四raw capture哈希匹配、cleanup active0，完整环境before/after一致（批准镜像20261012.333.1）。机器审阅记录在同一development-delivery-failures目录的38672641883_review.json。
+
+## 唯一最终提案
+
+`artifacts/m1-c3c-v4-freeze/executable_proposal.json` RAW=`759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357`，canonical=`91686c8394e7f3b085b9e9209fcc00381d55414edc9ba6a276a27affa35da41b`；797项绑定，包括793项已检查绑定及4份新路径下、字节完全相同的规范登记。candidate不变；formal runner RAW=`8b75b2a2ba4c391f219984497ac386bd986a9721711368637719b5f05493acdd`。
+
+静态交付目录 `C3_C_V4_FINAL_FREEZE_PACKAGE/` 为11个确切文件。独立只读回读将核验全部797bindings、101inputs/3216rows/499计划快照/969静态stages、原登记及9项拒绝检查（含缺reference/prefix原始凭据的反例），在精确commit固定后另生成统一签署页和source/delivery attestation。不会代用户签署，也不会自动启动formal。
+
 ## 剩余步骤
 
-1. 在实际受限Python Job中执行新v4基础设施合成/静态检查，不运行candidate。
-2. 完成一个确切新包的source/input/environment/拒绝门禁回读及统一审签页，明确执行commit与hash。
-3. 用户单独批准新包冻结和新正式执行后，才从prepare开始fresh C3-C；旧v3无效记录保留、不借旧PASS。
+1. 完成一个确切新包的source/input/environment/拒绝门禁回读及统一审签页，明确执行commit与hash。
+2. 用户单独批准新包冻结和新正式执行后，才从prepare开始fresh C3-C；旧v3无效记录保留、不借旧PASS。
 
 原Startup历史49/50和versioned compatibility分开；SEM02五项严格P1排除、PF06 original INCOMPLETE、ARBITRARY_POST_EXCEPTION_ATOMICITY NOT_PROVEN、T09 HOLD、fullP不可用、hardware CALIBRATION_REQUIRED以及production/Phase6不授权均保持。
 

@@ -1,4 +1,4 @@
-name: M1 remote long-prefix development probe
+name: C3-C v4 final package independent read-only closure
 on:
   workflow_dispatch:
     inputs:
@@ -14,12 +14,12 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: m1-remote-long-prefix-development
+  group: c3c-v4-final-readonly-closure
   cancel-in-progress: false
 jobs:
-  long-probe:
+  final-package-readback:
     runs-on: windows-2022
-    timeout-minutes: 40
+    timeout-minutes: 20
     defaults:
       run:
         shell: pwsh
@@ -37,28 +37,34 @@ jobs:
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
-      - name: Verify bootstrap and dispatch identity
+      - name: Verify exact read-only delivery dispatch
         run: |
           $ErrorActionPreference='Stop'
-          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -notmatch '^[a-f0-9]{40}$' -or $env:EXECUTION_MANIFEST_SHA256 -notmatch '^[a-f0-9]{64}$' -or $env:RUNNER_SCRIPT_SHA256 -notmatch '^[a-f0-9]{64}$'){throw 'M1_DISPATCH_IDENTITY_DENIED'}
-          if((Get-FileHash -LiteralPath 'v0_2/tests/tools/m1_remote_control_v2/run.ps1' -Algorithm SHA256).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'M1_BOOTSTRAP_SOURCE_DRIFT'}
-      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -cnotmatch '^[a-f0-9]{40}$' -or $env:EXECUTION_MANIFEST_SHA256 -cnotmatch '^[a-f0-9]{64}$' -or $env:RUNNER_SCRIPT_SHA256 -cnotmatch '^[a-f0-9]{64}$'){throw 'V4_READBACK_DISPATCH_IDENTITY_DENIED'}
+          if((git rev-parse HEAD) -cne $env:EXPECTED_SOURCE_COMMIT){throw 'V4_DELIVERY_COMMIT_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_c3c_v4_closure/control.json).Hash.ToLowerInvariant() -cne $env:EXECUTION_MANIFEST_SHA256){throw 'V4_READBACK_CONTROL_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_c3c_v4_closure/run_readback.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'V4_READONLY_LAUNCHER_DRIFT'}
+      - uses: ./.github/actions/m1-v4-runtime
         with:
-          python-version: '3.11.9'
-          architecture: x64
-      - name: Install unchanged exact dependency lock remotely
+          commit: ${{ inputs.expected_source_commit }}
+          manifest: eef95f5ace0e33e862b098087cc7030718f73c2099b60695251f8feaf4682446
+          runner: 138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef
+      - name: Independent actual-Job read-only full package review
         run: |
-          python -m pip install --disable-pip-version-check -r v0_2/tests/tools/c3b_v14_1/requirements-development.lock
-          if($LASTEXITCODE -ne 0){throw 'M1_DEPENDENCY_INSTALL_FAILED'}
-      - name: Fresh long traces, original repeats and terminal prefixes only
-        id: base
+          & ./v0_2/tests/tools/m1_c3c_v4_closure/run_readback.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
+      - name: Detached post-cleanup attestation and blank signature sheet
         run: |
-          & ./v0_2/tests/tools/m1_remote_control_v2/run.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256 -Mode BASE
-      - name: Preserve raw evidence, fresh selection and STOP records
+          & ./v0_2/tests/tools/m1_c3c_v4_closure/complete_delivery.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
+      - name: Preserve exact package and read-only evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: m1-long-probe-${{ github.run_id }}-${{ github.run_attempt }}
-          path: artifacts/
-          if-no-files-found: warn
-          retention-days: 7
+          name: C3-C-V4-FINAL-FREEZE-PACKAGE
+          path: |
+            artifacts/m1-c3c-v4-final-delivery/
+            artifacts/m1-c3c-v4-closure/
+            artifacts/m1-c3c-pre-sign/
+            artifacts/m1-remote-executor-v1/build/build_identity.json
+          if-no-files-found: error
+          retention-days: 30
+          include-hidden-files: true

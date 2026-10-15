@@ -1,0 +1,30 @@
+{
+  "schema": "m1-c3c-sem01-detached-post-addendum-v3",
+  "status": "PROPOSED_NOT_USER_APPROVED",
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "policy": "Detached POST legacy projection; actual immutable old-obligation PRE and Safety facts precede PLC-only issue; POST no additional source-sample credit",
+  "complete_only_publication_required": true,
+  "registered_failure_cuts": [
+    "explicit before-publication failure",
+    "projection preparation failure",
+    "result Record serialization failure",
+    "completed-store insertion failure"
+  ],
+  "required_fresh_stage": "V4_ATOMICITY_UNIT",
+  "required_test_count": 4,
+  "defect_identity": "M1-DEF-POST-001",
+  "prior_V3_failure_evidence_not_erased": true,
+  "publication_before_projection_risk": "Closed only for tested V4 prepare-before-publication paths; original Build005/V3 defect remains in historical evidence",
+  "ARBITRARY_POST_EXCEPTION_ATOMICITY": "NOT_PROVEN",
+  "T09": "IMPLEMENTATION_HOLD",
+  "mandatory_source_locations": [
+    "contracts/14_control_input_permission_contract.md",
+    "contracts/15_safety_supervisor_contract.md",
+    "contracts/15A_tracking_safety_policy_amendment.md",
+    "PHASE5_R5_2_1R4_7_C2_R1_CONTRACT15A_PUBLICATION_TIMING_CLARIFICATION_V1.md",
+    "phase5_r5_2_1r4_7_c3_a_split_interface_spec.json",
+    "phase5_r5_2_1r4_7_c3_a_comparator_registration.json"
+  ],
+  "scoped_claim": "Exactly preregistered offline software fixture behavior and explicit registered failure cuts, not full external runtime durability or arbitrary asynchronous exception atomicity",
+  "unfulfilled_mandatory_requirement_is_not_waived": true
+}
