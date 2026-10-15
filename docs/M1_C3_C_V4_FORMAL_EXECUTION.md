@@ -21,3 +21,7 @@
 原 Startup 历史 49/50 与 versioned compatibility 分开；SEM02 五项严格 P1 B/C 仍 INCOMPLETE；PF06 original INCOMPLETE，补充单独判分；任意 POST 异常/OS crash/power loss 原子性 NOT_PROVEN；T09 IMPLEMENTATION_HOLD、full P history 不可用、hardware CALIBRATION_REQUIRED。原 v3 INVALID 不改判。生产/硬件/Phase6 均未授权。
 
 大白话：用户已经批准了这份确切试卷和考试程序，现在重新正式开考。考试运行中不等于通过；还要收齐原始答卷和监考凭据再判定。
+
+## 本轮终态（后续登记，不回写批准收据）
+
+run38675166533已停止：`FINAL_ACCEPTANCE` native TIMEOUT / launcher124 / 480000ms，cleanup complete、active0。最终结果为 `INVALID_C3_C_EXECUTION`、行为判定 `NOT_MADE`；上游PASS不能替代未完成的最终资格验收，未在同轮修复或重跑。官方artifact、全部上游native覆盖和失败诊断已独立回读；见 [正式失败报告](M1_C3_C_V4_FORMAL_FAILURE_REPORT.md)。

@@ -8,6 +8,8 @@
 
 用户已批准 v4 确切包冻结及独立 fresh formal 执行。[本轮 run 38675166533](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38675166533) 的最终资格结果尚待完整证据验收。不能把“已开考”、开发 PASS 或 GitHub job 绿色写成正式通过，更不能据此宣布生产上线。
 
+最新结果优先于上一段开考时点状态：本轮已因 `FINAL_ACCEPTANCE` 受控超时停止，`INVALID_C3_C_EXECUTION / behavioral_adjudication=NOT_MADE`。969项上游静态阶段缺项0，但最终验收没有完成；不改判candidate行为FAIL，不授正式PASS，不自动重跑。详见 [v4正式失败报告](M1_C3_C_V4_FORMAL_FAILURE_REPORT.md)。
+
 冻结旧说明中的“尚未审签/尚未授权”是打包时点的历史状态；本轮新授权以 [正式执行记录](M1_C3_C_V4_FORMAL_EXECUTION.md) 和 `artifacts/m1-c3c-v4-authorization/` 的独立收据为准。原件不回写。
 
 ## 2. 安装及示例从哪里开始

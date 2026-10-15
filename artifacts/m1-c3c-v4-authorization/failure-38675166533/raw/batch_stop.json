@@ -1,0 +1,42 @@
+{
+  "receipts": [
+    {
+      "stage_id": "ENVIRONMENT",
+      "result_raw_sha256": "89a9755e47bd32be16fe40dd7d6ae9bbacff4f7b65fc5c8d32c7988419519965"
+    },
+    {
+      "stage_id": "INPUT_INTEGRITY",
+      "result_raw_sha256": "6dc8a09d934496423a44bd50b14d90e58daf57261a6edf8bd93a210571a61f69"
+    }
+  ],
+  "status": "STOPPED_NOT_FULL_PASS",
+  "stages": [
+    {
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED",
+      "stage_id": "ENVIRONMENT"
+    },
+    {
+      "status": "PASS",
+      "reason": "ALL_REQUIRED_FIELDS_ACCEPTED",
+      "stage_id": "INPUT_INTEGRITY"
+    },
+    {
+      "status": "INVALID",
+      "stage_id": "FINAL_ACCEPTANCE"
+    }
+  ],
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "failed_stage": "FINAL_ACCEPTANCE",
+  "utc": "2026-10-15T07:19:01.5625050Z",
+  "error_type": "RuntimeException",
+  "execution_identity": {
+    "approval_receipt_raw_sha256": "57ab034c0e1497d0ad67bc573b810dabe6ff62ae431300eda1fcff04dd71e733",
+    "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "package_raw_sha256": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357",
+    "execution_source_commit": "9012d6d9292a44226b0892332879de506812206d",
+    "authorization_raw_sha256": "f280832e2ef0721d40d3b5076970dc86b0e362c6da2298bff812bd2de55c2b50",
+    "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN"
+  },
+  "no_same_run_repair_or_retry": true
+}

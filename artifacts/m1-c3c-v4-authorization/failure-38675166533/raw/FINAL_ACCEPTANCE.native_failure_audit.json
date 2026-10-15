@@ -1,0 +1,17 @@
+{
+  "launcher_exitcode": 124,
+  "reason": "NATIVE_EXECUTION_NOT_COMPLETE",
+  "stage_id": "FINAL_ACCEPTANCE",
+  "native": {
+    "outcome": "TIMEOUT",
+    "child_exitcode": 0,
+    "pid": 4792,
+    "assigned_before_resume": true,
+    "resumed": true,
+    "cleanup_complete": true,
+    "active_after_cleanup": 0,
+    "error": ""
+  },
+  "behavioral_adjudication": "NOT_MADE",
+  "control_manifest_raw_sha256": "759cfca7b7b600f4a7c3faeb15a206f0c0c8188243ff15747e33a6457e76c357"
+}
