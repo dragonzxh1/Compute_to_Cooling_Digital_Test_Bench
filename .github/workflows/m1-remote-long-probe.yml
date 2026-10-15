@@ -1,4 +1,4 @@
-name: C3-C v4 final package independent read-only closure
+name: C3-C v5 final package independent read-only closure
 on:
   workflow_dispatch:
     inputs:
@@ -14,7 +14,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: c3c-v4-final-readonly-closure
+  group: c3c-v5-final-readonly-closure
   cancel-in-progress: false
 jobs:
   final-package-readback:
@@ -40,10 +40,10 @@ jobs:
       - name: Verify exact read-only delivery dispatch
         run: |
           $ErrorActionPreference='Stop'
-          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -cnotmatch '^[a-f0-9]{40}$' -or $env:EXECUTION_MANIFEST_SHA256 -cnotmatch '^[a-f0-9]{64}$' -or $env:RUNNER_SCRIPT_SHA256 -cnotmatch '^[a-f0-9]{64}$'){throw 'V4_READBACK_DISPATCH_IDENTITY_DENIED'}
-          if((git rev-parse HEAD) -cne $env:EXPECTED_SOURCE_COMMIT){throw 'V4_DELIVERY_COMMIT_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_c3c_v4_closure/control.json).Hash.ToLowerInvariant() -cne $env:EXECUTION_MANIFEST_SHA256){throw 'V4_READBACK_CONTROL_DRIFT'}
-          if((Get-FileHash v0_2/tests/tools/m1_c3c_v4_closure/run_readback.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'V4_READONLY_LAUNCHER_DRIFT'}
+          if($env:GITHUB_SHA -cne $env:EXPECTED_SOURCE_COMMIT -or $env:EXPECTED_SOURCE_COMMIT -cnotmatch '^[a-f0-9]{40}$' -or $env:EXECUTION_MANIFEST_SHA256 -cnotmatch '^[a-f0-9]{64}$' -or $env:RUNNER_SCRIPT_SHA256 -cnotmatch '^[a-f0-9]{64}$'){throw 'V5_READBACK_DISPATCH_IDENTITY_DENIED'}
+          if((git rev-parse HEAD) -cne $env:EXPECTED_SOURCE_COMMIT){throw 'V5_DELIVERY_COMMIT_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_c3c_v5_closure/control.json).Hash.ToLowerInvariant() -cne $env:EXECUTION_MANIFEST_SHA256){throw 'V5_READBACK_CONTROL_DRIFT'}
+          if((Get-FileHash v0_2/tests/tools/m1_c3c_v5_closure/run_readback.ps1).Hash.ToLowerInvariant() -cne $env:RUNNER_SCRIPT_SHA256){throw 'V5_READONLY_LAUNCHER_DRIFT'}
       - uses: ./.github/actions/m1-v4-runtime
         with:
           commit: ${{ inputs.expected_source_commit }}
@@ -51,18 +51,18 @@ jobs:
           runner: 138ad299058888d59500416150f7ff0228f04944e7830f35f5db8d0b4e774aef
       - name: Independent actual-Job read-only full package review
         run: |
-          & ./v0_2/tests/tools/m1_c3c_v4_closure/run_readback.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
+          & ./v0_2/tests/tools/m1_c3c_v5_closure/run_readback.ps1 -Python (Get-Command python).Source -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedManifestSha256 $env:EXECUTION_MANIFEST_SHA256
       - name: Detached post-cleanup attestation and blank signature sheet
         run: |
-          & ./v0_2/tests/tools/m1_c3c_v4_closure/complete_delivery.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
+          & ./v0_2/tests/tools/m1_c3c_v5_closure/complete_delivery.ps1 -ExpectedCommit $env:EXPECTED_SOURCE_COMMIT -ExpectedControlSha256 $env:EXECUTION_MANIFEST_SHA256
       - name: Preserve exact package and read-only evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: C3-C-V4-FINAL-FREEZE-PACKAGE
+          name: C3-C-V5-FINAL-FREEZE-PACKAGE
           path: |
-            artifacts/m1-c3c-v4-final-delivery/
-            artifacts/m1-c3c-v4-closure/
+            artifacts/m1-c3c-v5-final-delivery/
+            artifacts/m1-c3c-v5-closure/
             artifacts/m1-c3c-pre-sign/
             artifacts/m1-remote-executor-v1/build/build_identity.json
           if-no-files-found: error
