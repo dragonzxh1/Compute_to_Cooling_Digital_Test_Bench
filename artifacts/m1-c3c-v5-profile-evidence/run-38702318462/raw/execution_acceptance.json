@@ -1,0 +1,9 @@
+{
+  "formal_qualification": false,
+  "source_commit": "10ae80369bb5a86aa5186b9a6d199a5f780e59b6",
+  "candidate_behavioral_execution": false,
+  "status": "TIMING_OBSERVATIONS_CAPTURED",
+  "actual_job_verified": true,
+  "cleanup_verified": true,
+  "control_manifest_sha256": "a61b0bb77b3a5e00ca333f34586008283c1ede49678e4f376d525c3db4206a24"
+}

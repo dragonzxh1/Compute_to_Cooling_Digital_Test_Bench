@@ -1,0 +1,23 @@
+{"event": "COUNTED_PACKAGE_BEGIN", "monotonic_ns": 469796000000, "pid": 6720, "utc_ns": 1792051115067838800}
+{"event": "COUNTED_PACKAGE_END", "monotonic_ns": 470281000000, "path_calls": 797, "path_wall_s": 0.4816146999997386, "pid": 6720, "utc_ns": 1792051115553892000, "wall_s": 0.49538999999998623}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 0, "monotonic_ns": 470281000000, "pid": 6720, "utc_ns": 1792051115553892000}
+{"event": "PACKAGE_SAMPLE_END", "index": 0, "monotonic_ns": 470656000000, "pid": 6720, "utc_ns": 1792051115928828500, "wall_s": 0.36985590000000457}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 1, "monotonic_ns": 470656000000, "pid": 6720, "utc_ns": 1792051115928828500}
+{"event": "PACKAGE_SAMPLE_END", "index": 1, "monotonic_ns": 471000000000, "pid": 6720, "utc_ns": 1792051116272790400, "wall_s": 0.3428739999999948}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 2, "monotonic_ns": 471000000000, "pid": 6720, "utc_ns": 1792051116272790400}
+{"event": "PACKAGE_SAMPLE_END", "index": 2, "monotonic_ns": 471359000000, "pid": 6720, "utc_ns": 1792051116632499800, "wall_s": 0.3620540999999662}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 3, "monotonic_ns": 471359000000, "pid": 6720, "utc_ns": 1792051116632499800}
+{"event": "PACKAGE_SAMPLE_END", "index": 3, "monotonic_ns": 471703000000, "pid": 6720, "utc_ns": 1792051116976268600, "wall_s": 0.34043730000001915}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 4, "monotonic_ns": 471703000000, "pid": 6720, "utc_ns": 1792051116976268600}
+{"event": "PACKAGE_SAMPLE_END", "index": 4, "monotonic_ns": 472062000000, "pid": 6720, "utc_ns": 1792051117336823400, "wall_s": 0.3513055999999892}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 5, "monotonic_ns": 472062000000, "pid": 6720, "utc_ns": 1792051117336823400}
+{"event": "PACKAGE_SAMPLE_END", "index": 5, "monotonic_ns": 472406000000, "pid": 6720, "utc_ns": 1792051117680580500, "wall_s": 0.3454841000000215}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 6, "monotonic_ns": 472406000000, "pid": 6720, "utc_ns": 1792051117680580500}
+{"event": "PACKAGE_SAMPLE_END", "index": 6, "monotonic_ns": 472750000000, "pid": 6720, "utc_ns": 1792051118024327100, "wall_s": 0.34099270000001525}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 7, "monotonic_ns": 472750000000, "pid": 6720, "utc_ns": 1792051118024327100}
+{"event": "PACKAGE_SAMPLE_END", "index": 7, "monotonic_ns": 473093000000, "pid": 6720, "utc_ns": 1792051118368603300, "wall_s": 0.3411724000000049}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 8, "monotonic_ns": 473093000000, "pid": 6720, "utc_ns": 1792051118368603300}
+{"event": "PACKAGE_SAMPLE_END", "index": 8, "monotonic_ns": 473453000000, "pid": 6720, "utc_ns": 1792051118727952700, "wall_s": 0.3626431999999795}
+{"event": "PACKAGE_SAMPLE_BEGIN", "index": 9, "monotonic_ns": 473453000000, "pid": 6720, "utc_ns": 1792051118727952700}
+{"event": "PACKAGE_SAMPLE_END", "index": 9, "monotonic_ns": 473812000000, "pid": 6720, "utc_ns": 1792051119087349200, "wall_s": 0.35714949999999135}
+{"event": "PROFILE_COMPLETE", "monotonic_ns": 474218000000, "pid": 6720, "projected_repeated_package_wall_seconds": 691.9004567199974, "utc_ns": 1792051119493940100}
