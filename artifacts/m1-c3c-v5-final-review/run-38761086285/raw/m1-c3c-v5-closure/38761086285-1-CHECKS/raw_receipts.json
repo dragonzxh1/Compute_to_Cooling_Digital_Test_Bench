@@ -1,0 +1,22 @@
+{
+  "stdout.raw": {
+    "status": "PERSISTED",
+    "bytes": 1290,
+    "raw_sha256": "f2568cc0f4facc9901967572e894fcb998f6cafc7e64bf13accef3fc263a511b"
+  },
+  "stderr.raw": {
+    "status": "PERSISTED",
+    "bytes": 0,
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "verify_stdout.raw": {
+    "status": "PERSISTED",
+    "bytes": 0,
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "verify_stderr.raw": {
+    "status": "PERSISTED",
+    "bytes": 0,
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

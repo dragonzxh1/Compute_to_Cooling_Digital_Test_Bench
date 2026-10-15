@@ -1,0 +1,9 @@
+{
+  "formal_qualification": false,
+  "status": "C3C_V5_FINAL_PACKAGE_READBACK_PASS",
+  "cleanup_verified": true,
+  "actual_job_verified": true,
+  "control_manifest_sha256": "8b5549fabaded88d00efcebf38c96071dade0265ac09a1fd7e6dccb4d58b8841",
+  "source_commit": "9ad4b9d1fdab261db9be09b91f261a927d529970",
+  "candidate_behavioral_execution": false
+}

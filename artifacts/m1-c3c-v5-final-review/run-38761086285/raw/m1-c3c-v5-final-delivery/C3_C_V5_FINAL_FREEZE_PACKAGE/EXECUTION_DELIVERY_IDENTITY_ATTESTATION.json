@@ -1,0 +1,126 @@
+{
+  "identity_origin": "Exact GitHub checkout and dispatch after immutable commit; not latest branch HEAD",
+  "control_raw_sha256": "8b5549fabaded88d00efcebf38c96071dade0265ac09a1fd7e6dccb4d58b8841",
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "delivery_commit": "9ad4b9d1fdab261db9be09b91f261a927d529970",
+  "source_closure_materialization": "Exact checkout plus hash-bound frozen source ZIP; all836 source bytes verified",
+  "production_or_hardware_or_phase6_authorized": false,
+  "executable_freeze_user_approved": false,
+  "proposal_canonical_sha256": "74bafde655de214ee02b39b1a9c9d23acd0219ce30309afb9ca810c58447246d",
+  "environment_after": {
+    "dependencies": {
+      "Pygments": "2.21.0",
+      "attrs": "26.1.0",
+      "colorama": "0.4.6",
+      "iniconfig": "2.3.1",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "numpy": "2.4.6",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "pytest": "9.1.1",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "typing_extensions": "4.16.0"
+    },
+    "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+    "host": "runnervmtn0fv",
+    "image_os": "win22",
+    "image_version": "20261004.326.1",
+    "machine": "AMD64",
+    "python": "3.11.9",
+    "system": "Windows",
+    "version": "10.0.20348"
+  },
+  "formal_execution_authorized": false,
+  "status": "READY_FOR_USER_SIGNATURE",
+  "raw_capture_receipts": {
+    "stdout.raw": {
+      "status": "PERSISTED",
+      "bytes": 1290,
+      "raw_sha256": "f2568cc0f4facc9901967572e894fcb998f6cafc7e64bf13accef3fc263a511b"
+    },
+    "stderr.raw": {
+      "status": "PERSISTED",
+      "bytes": 0,
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verify_stdout.raw": {
+      "status": "PERSISTED",
+      "bytes": 0,
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "verify_stderr.raw": {
+      "status": "PERSISTED",
+      "bytes": 0,
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "same_commit_distinct_roles": true,
+  "readback_run_id": "38761086285",
+  "environment_lock_raw_sha256": "4a68d805046b6d7b6946274cabd2ba37b69b44d82587e4865bed89d9d77f6877",
+  "independently_verified_content_raw_sha256": {
+    ".gitattributes": "7db6a4594ca028c9756c1c6f838e247424a086289bc4516147589efdaf27380c",
+    "ENVIRONMENT_DEPENDENCY_LOCK.json": "4a68d805046b6d7b6946274cabd2ba37b69b44d82587e4865bed89d9d77f6877",
+    "ENVIRONMENT_POLICY_REGISTRATION.json": "8905130cdf298c6bec7d529a08fb2036bbc40714b5667244a12b7b72c71c49d4",
+    "EXACT_HASH_INVENTORY.json": "9dfee9eeb85369f5a754f0074e04244fbf333d4d6f513c314c0c8620939bc6b6",
+    "EXECUTABLE_FREEZE_MANIFEST.json": "18d54940b672e4ec06b0c0c0a6691cf15219ee96e01b7864b31fe00a1adf23c8",
+    "INDEPENDENT_READBACK_RESULT.json": "0c815fe72f66de43c3db60ba1d75921e5cfe2d0924e177698f3b72804b2b2178",
+    "OPERATOR_INSTRUCTIONS.md": "08d47052d5abc1582147a71e7d41d9544d056b043765a571604c27ace8782388",
+    "SCOPE_SEMANTIC_REGISTRATION_INDEX.json": "6daedcf9dabc098ccd0e9185edcf36d734e32fc28126cc02ea80ffa884b56c6d",
+    "registrations/limited_scope_v2.json": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
+    "registrations/PF06_C8_NORMAL_SUPPLEMENT_v1.json": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f",
+    "registrations/SEM01_addendum_v3.json": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+    "registrations/SEM02_five_case_registry_v1.json": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd"
+  },
+  "environment_before": {
+    "dependencies": {
+      "Pygments": "2.21.0",
+      "attrs": "26.1.0",
+      "colorama": "0.4.6",
+      "iniconfig": "2.3.1",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "numpy": "2.4.6",
+      "packaging": "26.3",
+      "pluggy": "1.6.0",
+      "pytest": "9.1.1",
+      "referencing": "0.37.0",
+      "rpds-py": "2026.9.1",
+      "typing_extensions": "4.16.0"
+    },
+    "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+    "host": "runnervmtn0fv",
+    "image_os": "win22",
+    "image_version": "20261004.326.1",
+    "machine": "AMD64",
+    "python": "3.11.9",
+    "system": "Windows",
+    "version": "10.0.20348"
+  },
+  "execution_source_commit": "9ad4b9d1fdab261db9be09b91f261a927d529970",
+  "formal_qualification_executed": false,
+  "schema": "m1-c3c-v5-detached-post-commit-attestation-v1",
+  "inventory_raw_sha256": "9dfee9eeb85369f5a754f0074e04244fbf333d4d6f513c314c0c8620939bc6b6",
+  "actual_job": {
+    "cpu_rate": 2500,
+    "proof_raw_sha256": "ef627c28a4abc33e84180e68f544be40b4c567f1a34ae684d4b1fb2bcb54d345",
+    "process_mb": 256,
+    "active_after_cleanup": 0,
+    "cleanup_complete": true,
+    "job_mb": 512,
+    "pid": 5812
+  },
+  "proposal_raw_sha256": "18d54940b672e4ec06b0c0c0a6691cf15219ee96e01b7864b31fe00a1adf23c8",
+  "registration_raw_sha256": {
+    "PF06_supplement": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f",
+    "SEM01": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+    "SEM02": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
+    "limited_scope": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd"
+  },
+  "readback_result_raw_sha256": "0c815fe72f66de43c3db60ba1d75921e5cfe2d0924e177698f3b72804b2b2178",
+  "formal_runner_raw_sha256": "78749fe78a6701ef2fb9157aa648f966bf088615bb39ab8ffb40f4dc02e51363",
+  "detached_output_not_inside_its_own_commit": true,
+  "self_and_signature_sheet_hash_excluded_to_avoid_circular_reference": true,
+  "readback_run_attempt": "1"
+}
