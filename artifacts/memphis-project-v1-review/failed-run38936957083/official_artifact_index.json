@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 12062040122,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MjA0MDEyMg==",
+      "name": "memphis-raw-baseline-38936957083",
+      "size_in_bytes": 16592,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12062040122",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12062040122/zip",
+      "expired": false,
+      "digest": "sha256:ea461fca2e9ee7700200d50fa9b25fef69f54d4b7b45322cfadfc8a7ff042754",
+      "created_at": "2026-10-16T17:05:54Z",
+      "updated_at": "2026-10-16T17:05:54Z",
+      "expires_at": "2026-11-15T17:05:54Z",
+      "workflow_run": {
+        "id": 38936957083,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "08bbb05f8536e94fda4b26a4a886bc4c2002484d"
+      }
+    }
+  ]
+}

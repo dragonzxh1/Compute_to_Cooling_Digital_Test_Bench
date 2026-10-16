@@ -1,0 +1,91 @@
+{
+  "schema": "MEMPHIS-PROJECT-V1-DEVELOPMENT-DELIVERY-HASHES",
+  "execution_commit": "3efa74279b4d9887c19a4b6c383b9fcc22dd0a32",
+  "branch": "codex/memphis-project-v1",
+  "run_id": 38938235592,
+  "authority": "BRANCH_PUBLICATION_AND_BOUNDED_REMOTE_DEVELOPMENT_ONLY",
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "source_raw_manifest_sha256": "4feddfa82ca0af660016e6b04d1844fd662dc6ad7c9fd5777aadef2c5c906cca",
+  "raw_sha256": {
+    "docs/MEMPHIS_PROJECT_V1_RESULTS_20261017.md": "8be8e94969da8992a735228721abcbcc258f2e78adc86285943e86e8bd67eade",
+    "v0_2/tests/tools/memphis_project_v1/README.md": "a1b8aa7fa1fd1b6e923c23c571b54d93d84fbc07fab4960d1d7b5056e9711fff",
+    "v0_2/tests/tools/memphis_project_v1/registration.json": "65409a300d9a2dac82bf4985d436fb77b3fda2c62dc8e6125c8a98162511350d",
+    "v0_2/tests/tools/memphis_project_v1/source_manifest.json": "4feddfa82ca0af660016e6b04d1844fd662dc6ad7c9fd5777aadef2c5c906cca",
+    "v0_2/tests/tools/memphis_project_v1/upstream/project.json": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf",
+    "v0_2/tests/tools/m1_engine_v4/engine.py": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "artifacts/memphis-project-v1-review/.gitattributes": "7db6a4594ca028c9756c1c6f838e247424a086289bc4516147589efdaf27380c",
+    "artifacts/memphis-project-v1-review/verify_official.ps1": "7a5bf7b41b00beb92cd1e373faa0c713ffd2b2a27d23f32173cf0f64ba17c783",
+    "artifacts/memphis-project-v1-review/reflow_report.ps1": "27df55d89bc86677b5f209338c125ac08423447e67528fe8d5b04b04295c09a5",
+    "artifacts/memphis-project-v1-review/run38938235592/report/consolidated_report.json": "d637afddc33b3c332027bfb41e64f3360536fb0f45027dd279be5095ac78b824",
+    "artifacts/memphis-project-v1-review/run38938235592/report/engineering_report.html": "67a8347483c6fd57ac384fd4be9c79031daab1b91364e802613481f08c3f1559",
+    "artifacts/memphis-project-v1-review/run38938235592/engineering_report.delivery.html": "fd233d5f4647df88c959863198771bd505519128bf0a4a3830661dbb2fa574d6",
+    "artifacts/memphis-project-v1-review/run38938235592/independent_verification.json": "32aa632b2a00dfb9a6ca4631fbc0b2b5b2c315806c713005f1c7430f1b2aa8e1",
+    "artifacts/memphis-project-v1-review/run38938235592/run_metadata.json": "31eeffa364dafb0207aa19a971ab7b2e34869312709c12fdb5e5c3923b96b941",
+    "artifacts/memphis-project-v1-review/run38938235592/official_artifact_index.json": "2923d88289f80adc8fdf42b0c4dcd871fef88982f0c81d80d5120bd803eac241",
+    "artifacts/memphis-project-v1-review/run38938235592/raw_logs.zip": "909537ada984484479a32ba6d90e50bd7e6b12d85d06c6218b83fb98950bd66d"
+  },
+  "official_zip_sha256": [
+    {
+      "name": "memphis-compact-plant-a-38938235592",
+      "digest": "sha256:36c9083a253911e225e0ab777f1921b0020c9a5d41f28da338a5346c88a5909c",
+      "size_in_bytes": 8503446
+    },
+    {
+      "name": "memphis-raw-plant-a-38938235592",
+      "digest": "sha256:b7f73b78e353f4f7a303789a91febdad376873a13e2c25355e4460d194b20591",
+      "size_in_bytes": 15585567
+    },
+    {
+      "name": "memphis-compact-plant-b-38938235592",
+      "digest": "sha256:f609b09307ff377dbadf7a07d2eb1272a30ef70108e4ddad9b6484354b9cb651",
+      "size_in_bytes": 13467837
+    },
+    {
+      "name": "memphis-compact-baseline-38938235592",
+      "digest": "sha256:00d1155dd7a9a51bd304171e65394d834ffd313a6f2c6b8a20535108956bf3a6",
+      "size_in_bytes": 981776
+    },
+    {
+      "name": "memphis-raw-recharge-38938235592",
+      "digest": "sha256:08b9f30d91598ba2f3a2e98e6d6a7bbc07b50bcdabf30f4490d0c36e10db217c",
+      "size_in_bytes": 35711663
+    },
+    {
+      "name": "memphis-consolidated-report-38938235592",
+      "digest": "sha256:42d337a1deb98feea61755de05e42033ec586a76b3bc35f9a7dbe52e44ef9cef",
+      "size_in_bytes": 41866691
+    },
+    {
+      "name": "memphis-compact-recharge-38938235592",
+      "digest": "sha256:5f99d1ce06bc8d44f5f5f3d1d1ae3fc62a13ba550680d6312ebd2f26f02583a5",
+      "size_in_bytes": 15887571
+    },
+    {
+      "name": "memphis-compact-six-38938235592",
+      "digest": "sha256:1b07dd80d2a6f507fcbc828ffac9c19311e4884847dd4cd5de792534626bc434",
+      "size_in_bytes": 2943098
+    },
+    {
+      "name": "memphis-raw-plant-b-38938235592",
+      "digest": "sha256:606a3a929b0924f64ca20c3d7c424ce55ccd1f38c5eab40e25e340f206258590",
+      "size_in_bytes": 22686370
+    },
+    {
+      "name": "memphis-raw-baseline-38938235592",
+      "digest": "sha256:5d7ed27bbd6918c83bfb59ea51c3652c0b656aae00ee4df0192f9779403eaa06",
+      "size_in_bytes": 86579144
+    },
+    {
+      "name": "memphis-raw-six-38938235592",
+      "digest": "sha256:7401b7a1ae4b0617179afec10860a44e8c9c79d0eb199dbcf56fd2e64f5606d2",
+      "size_in_bytes": 11887740
+    }
+  ],
+  "original_V1_V2_and_836_frozen_sources": "UNCHANGED",
+  "formal_C3_C": "NOT_RUN",
+  "production": false,
+  "hardware_control": false,
+  "phase6": false,
+  "source_selection": null,
+  "recharge_selection": null
+}

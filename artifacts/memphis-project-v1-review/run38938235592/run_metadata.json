@@ -1,0 +1,576 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-10-16T17:15:05Z",
+  "event": "push",
+  "headBranch": "codex/memphis-project-v1",
+  "headSha": "3efa74279b4d9887c19a4b6c383b9fcc22dd0a32",
+  "jobs": [
+    {
+      "completedAt": "2026-10-16T17:18:40Z",
+      "conclusion": "success",
+      "databaseId": 117099024802,
+      "name": "baseline / integration",
+      "startedAt": "2026-10-16T17:15:08Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T17:15:10Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T17:15:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:15:18Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-16T17:15:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:15:22Z",
+          "conclusion": "success",
+          "name": "Hash-bound source hydration only",
+          "number": 3,
+          "startedAt": "2026-10-16T17:15:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:15:22Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 4,
+          "startedAt": "2026-10-16T17:15:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:15:47Z",
+          "conclusion": "success",
+          "name": "Install exact development dependencies",
+          "number": 5,
+          "startedAt": "2026-10-16T17:15:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:27Z",
+          "conclusion": "success",
+          "name": "Bounded Memphis V1 group",
+          "number": 6,
+          "startedAt": "2026-10-16T17:15:47Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:33Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 7,
+          "startedAt": "2026-10-16T17:18:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:35Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 8,
+          "startedAt": "2026-10-16T17:18:33Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:36Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 15,
+          "startedAt": "2026-10-16T17:18:35Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:38Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 16,
+          "startedAt": "2026-10-16T17:18:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:38Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-16T17:18:38Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592/job/117099024802"
+    },
+    {
+      "completedAt": "2026-10-16T17:20:07Z",
+      "conclusion": "success",
+      "databaseId": 117100585932,
+      "name": "study (plant-a) / integration",
+      "startedAt": "2026-10-16T17:18:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T17:18:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T17:18:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:51Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-16T17:18:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:55Z",
+          "conclusion": "success",
+          "name": "Hash-bound source hydration only",
+          "number": 3,
+          "startedAt": "2026-10-16T17:18:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:55Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 4,
+          "startedAt": "2026-10-16T17:18:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:09Z",
+          "conclusion": "success",
+          "name": "Install exact development dependencies",
+          "number": 5,
+          "startedAt": "2026-10-16T17:18:55Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:58Z",
+          "conclusion": "success",
+          "name": "Bounded Memphis V1 group",
+          "number": 6,
+          "startedAt": "2026-10-16T17:19:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:01Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 7,
+          "startedAt": "2026-10-16T17:19:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:04Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 8,
+          "startedAt": "2026-10-16T17:20:01Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:04Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 15,
+          "startedAt": "2026-10-16T17:20:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:06Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 16,
+          "startedAt": "2026-10-16T17:20:04Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:06Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-16T17:20:06Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592/job/117100585932"
+    },
+    {
+      "completedAt": "2026-10-16T17:19:56Z",
+      "conclusion": "success",
+      "databaseId": 117100586134,
+      "name": "study (six) / integration",
+      "startedAt": "2026-10-16T17:18:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T17:18:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T17:18:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:53Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-16T17:18:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:56Z",
+          "conclusion": "success",
+          "name": "Hash-bound source hydration only",
+          "number": 3,
+          "startedAt": "2026-10-16T17:18:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:56Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 4,
+          "startedAt": "2026-10-16T17:18:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:12Z",
+          "conclusion": "success",
+          "name": "Install exact development dependencies",
+          "number": 5,
+          "startedAt": "2026-10-16T17:18:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:48Z",
+          "conclusion": "success",
+          "name": "Bounded Memphis V1 group",
+          "number": 6,
+          "startedAt": "2026-10-16T17:19:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:51Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 7,
+          "startedAt": "2026-10-16T17:19:48Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:52Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 8,
+          "startedAt": "2026-10-16T17:19:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:53Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 15,
+          "startedAt": "2026-10-16T17:19:52Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:55Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 16,
+          "startedAt": "2026-10-16T17:19:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:55Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-16T17:19:55Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592/job/117100586134"
+    },
+    {
+      "completedAt": "2026-10-16T17:20:46Z",
+      "conclusion": "success",
+      "databaseId": 117100586350,
+      "name": "study (plant-b) / integration",
+      "startedAt": "2026-10-16T17:18:42Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T17:18:44Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T17:18:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:18:56Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-16T17:18:44Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:00Z",
+          "conclusion": "success",
+          "name": "Hash-bound source hydration only",
+          "number": 3,
+          "startedAt": "2026-10-16T17:18:56Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:00Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 4,
+          "startedAt": "2026-10-16T17:19:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:19:21Z",
+          "conclusion": "success",
+          "name": "Install exact development dependencies",
+          "number": 5,
+          "startedAt": "2026-10-16T17:19:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:36Z",
+          "conclusion": "success",
+          "name": "Bounded Memphis V1 group",
+          "number": 6,
+          "startedAt": "2026-10-16T17:19:21Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:39Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 7,
+          "startedAt": "2026-10-16T17:20:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:43Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 8,
+          "startedAt": "2026-10-16T17:20:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:43Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 15,
+          "startedAt": "2026-10-16T17:20:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:45Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 16,
+          "startedAt": "2026-10-16T17:20:43Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:45Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-16T17:20:45Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592/job/117100586350"
+    },
+    {
+      "completedAt": "2026-10-16T17:22:27Z",
+      "conclusion": "success",
+      "databaseId": 117101061593,
+      "name": "study (recharge) / integration",
+      "startedAt": "2026-10-16T17:19:58Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T17:20:00Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T17:19:59Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:09Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-16T17:20:00Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:12Z",
+          "conclusion": "success",
+          "name": "Hash-bound source hydration only",
+          "number": 3,
+          "startedAt": "2026-10-16T17:20:09Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:13Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 4,
+          "startedAt": "2026-10-16T17:20:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:20:29Z",
+          "conclusion": "success",
+          "name": "Install exact development dependencies",
+          "number": 5,
+          "startedAt": "2026-10-16T17:20:13Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:15Z",
+          "conclusion": "success",
+          "name": "Bounded Memphis V1 group",
+          "number": 6,
+          "startedAt": "2026-10-16T17:20:29Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:20Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 7,
+          "startedAt": "2026-10-16T17:22:15Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:23Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 8,
+          "startedAt": "2026-10-16T17:22:20Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "number": 15,
+          "startedAt": "2026-10-16T17:22:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:25Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 16,
+          "startedAt": "2026-10-16T17:22:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:25Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-16T17:22:25Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592/job/117101061593"
+    },
+    {
+      "completedAt": "2026-10-16T17:23:01Z",
+      "conclusion": "success",
+      "databaseId": 117102202239,
+      "name": "report",
+      "startedAt": "2026-10-16T17:22:29Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T17:22:31Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T17:22:30Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:39Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 2,
+          "startedAt": "2026-10-16T17:22:31Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:42Z",
+          "conclusion": "success",
+          "name": "Run actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+          "number": 3,
+          "startedAt": "2026-10-16T17:22:39Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:50Z",
+          "conclusion": "success",
+          "name": "Consolidated report from independent equation audits",
+          "number": 4,
+          "startedAt": "2026-10-16T17:22:42Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:22:58Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "number": 5,
+          "startedAt": "2026-10-16T17:22:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:23:00Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "number": 10,
+          "startedAt": "2026-10-16T17:22:58Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T17:23:00Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 11,
+          "startedAt": "2026-10-16T17:23:00Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592/job/117102202239"
+    }
+  ],
+  "number": 3,
+  "status": "completed",
+  "updatedAt": "2026-10-16T17:23:02Z",
+  "url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38938235592",
+  "workflowName": "Memphis V1 physical credibility DEVELOPMENT"
+}

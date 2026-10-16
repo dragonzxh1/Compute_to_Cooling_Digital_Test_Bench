@@ -1,0 +1,12 @@
+{
+ "status":"OFFICIAL_PERSISTED_EVIDENCE_VERIFIED_NOT_EQUIPMENT_QUALIFICATION",
+ "execution_commit":"3efa74279b4d9887c19a4b6c383b9fcc22dd0a32",
+ "official_zip_count":11,"raw_files_verified":1002,"stages":28,"model_cases":22,
+ "phase_transactions":5172,"source_transactions":26100,
+ "all_completed_journal_frames_decompressed_hash_verified":5172,
+ "actual_python_jobs_verified":28,"actual_node_job":{"pid":6852,"parent_pid":3276,"version":"v22.23.3","executable":"C:\\Program Files\\nodejs\\node.exe"},
+ "cleanup_complete_all":true,"active_after_cleanup_all":0,
+ "repeat":"PHYSICS_AND_SERIES_BYTE_IDENTICAL","V1_V2":"FRESH8_FILES_EACH_IDENTICAL",
+ "CPU_percent":25,"process_MiB":1024,"job_MiB":2048,"stage_wall_budget_s":480,
+ "local_model_execution":false,"no_equipment_or_OEM_or_C3C_or_production_or_hardware_or_Phase6_approval":true
+}

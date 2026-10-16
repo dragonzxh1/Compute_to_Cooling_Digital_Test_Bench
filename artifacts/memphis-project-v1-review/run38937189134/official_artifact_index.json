@@ -1,0 +1,185 @@
+{
+  "total_count": 9,
+  "artifacts": [
+    {
+      "id": 12062145649,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MjE0NTY0OQ==",
+      "name": "memphis-raw-recharge-38937189134",
+      "size_in_bytes": 17056837,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12062145649",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12062145649/zip",
+      "expired": false,
+      "digest": "sha256:d85e339a47091476f215691a5e9a963008bb8e0f11d9122394fcf67cc07a9d5b",
+      "created_at": "2026-10-16T17:11:53Z",
+      "updated_at": "2026-10-16T17:11:53Z",
+      "expires_at": "2026-11-15T17:11:49Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12062115660,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MjExNTY2MA==",
+      "name": "memphis-compact-plant-b-38937189134",
+      "size_in_bytes": 13062170,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12062115660",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12062115660/zip",
+      "expired": false,
+      "digest": "sha256:82d9b9d6bbe4bd3c98f720056d97b12a8b4d153c86b054a1f97d9ffe1de2db8e",
+      "created_at": "2026-10-16T17:11:01Z",
+      "updated_at": "2026-10-16T17:11:01Z",
+      "expires_at": "2026-11-15T17:10:57Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12061732400,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MTczMjQwMA==",
+      "name": "memphis-compact-six-38937189134",
+      "size_in_bytes": 2936151,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12061732400",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12061732400/zip",
+      "expired": false,
+      "digest": "sha256:227ca94d630a68dafe1dad3013438b0b31c9007159b4b212632f44bc8f918f9d",
+      "created_at": "2026-10-16T17:10:25Z",
+      "updated_at": "2026-10-16T17:10:25Z",
+      "expires_at": "2026-11-15T17:10:23Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12061708064,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MTcwODA2NA==",
+      "name": "memphis-raw-baseline-38937189134",
+      "size_in_bytes": 86552702,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12061708064",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12061708064/zip",
+      "expired": false,
+      "digest": "sha256:27f2d3643629fcdcae65fc5f67144a5674ed7abb503413d8b56f737b5acfda0a",
+      "created_at": "2026-10-16T17:09:10Z",
+      "updated_at": "2026-10-16T17:09:10Z",
+      "expires_at": "2026-11-15T17:09:07Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12061542756,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MTU0Mjc1Ng==",
+      "name": "memphis-compact-baseline-38937189134",
+      "size_in_bytes": 962158,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12061542756",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12061542756/zip",
+      "expired": false,
+      "digest": "sha256:7be0b9e57e2976ef73b6034322036f4ed9b5a80930ea68e3a723c0a68ca805fc",
+      "created_at": "2026-10-16T17:09:12Z",
+      "updated_at": "2026-10-16T17:09:12Z",
+      "expires_at": "2026-11-15T17:09:11Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12060953646,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MDk1MzY0Ng==",
+      "name": "memphis-raw-plant-b-38937189134",
+      "size_in_bytes": 22280695,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060953646",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060953646/zip",
+      "expired": false,
+      "digest": "sha256:c235869b54a851627c80294afb38aba8e895c6c1cdb862ba154ba599671523f9",
+      "created_at": "2026-10-16T17:10:56Z",
+      "updated_at": "2026-10-16T17:10:56Z",
+      "expires_at": "2026-11-15T17:10:52Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12060599615,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MDU5OTYxNQ==",
+      "name": "memphis-raw-six-38937189134",
+      "size_in_bytes": 11880789,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060599615",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060599615/zip",
+      "expired": false,
+      "digest": "sha256:5bd16ef270f39b317db2c4439ba7fb0b4b48383ad81cde088890351b022d8385",
+      "created_at": "2026-10-16T17:10:23Z",
+      "updated_at": "2026-10-16T17:10:23Z",
+      "expires_at": "2026-11-15T17:10:21Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12060534859,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MDUzNDg1OQ==",
+      "name": "memphis-raw-plant-a-38937189134",
+      "size_in_bytes": 15290481,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060534859",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060534859/zip",
+      "expired": false,
+      "digest": "sha256:54d7ff7c389e3f8da6fd5dbc39ad51e87acaf64ef56b7986554f3b8f32b663be",
+      "created_at": "2026-10-16T17:10:44Z",
+      "updated_at": "2026-10-16T17:10:44Z",
+      "expires_at": "2026-11-15T17:10:42Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    },
+    {
+      "id": 12060499857,
+      "node_id": "MDg6QXJ0aWZhY3QxMjA2MDQ5OTg1Nw==",
+      "name": "memphis-compact-plant-a-38937189134",
+      "size_in_bytes": 8208973,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060499857",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12060499857/zip",
+      "expired": false,
+      "digest": "sha256:a58e7431d4ab9e91332bfbf3f4b35c2f71714a20b961668631bccc277f6a0244",
+      "created_at": "2026-10-16T17:10:47Z",
+      "updated_at": "2026-10-16T17:10:47Z",
+      "expires_at": "2026-11-15T17:10:45Z",
+      "workflow_run": {
+        "id": 38937189134,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-project-v1",
+        "head_sha": "6ae4cbf68ad803467c3e526b23af44c821557ae4"
+      }
+    }
+  ]
+}

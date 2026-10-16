@@ -1,0 +1,25 @@
+MEMPHIS_STAGE_BEGIN RECHARGE_INDEPENDENT
+MEMPHIS_PROGRESS RECHARGE_INDEPENDENT 60.0s
+MEMPHIS_PROGRESS RECHARGE_INDEPENDENT 120.0s
+Traceback (most recent call last):
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\tests\tools\memphis_project_v1\worker.py", line 83, in main
+    payload=run(spec,directory/'case');independent=audit(directory/'case',spec)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\tests\tools\memphis_project_v1\simulation.py", line 57, in run
+    last_record=source.advance(now-dt_ns,now,units,[a.actual for a in actuators],issued)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\tests\tools\memphis_project_v1\sources.py", line 110, in advance
+    command=self.actuate(dt,issued);load,source,recharge,lh,sh,rh=self.flows(command)
+                                                                  ^^^^^^^^^^^^^^^^^^^
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\tests\tools\memphis_project_v1\sources.py", line 105, in flows
+    recharge_h=solve(g,c,self.recharge_speed/.9*nominal,RHO);recharge=recharge_h.total_flow_m3_s
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\hydraulics\solver.py", line 48, in solve
+    curve.head(0.0, speed_actual)
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\hydraulics\pump.py", line 25, in head
+    require(
+  File "D:\a\Compute_to_Cooling_Digital_Test_Bench\Compute_to_Cooling_Digital_Test_Bench\v0_2\thermal\validity.py", line 26, in require
+    raise ThermalError(code, detail, status)
+v0_2.thermal.validity.ThermalError: PUMP_SPEED_OUT_OF_RANGE: 1.0116663762279856
+
+MEMPHIS_STAGE_END RECHARGE_INDEPENDENT FAIL
