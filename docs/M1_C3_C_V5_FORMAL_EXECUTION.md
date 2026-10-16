@@ -30,3 +30,9 @@ FINAL增加11组durable BEGIN/END及batch/case进度；只优化重复包/环境
 [run38833878662](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38833878662)，attempt1；GitHub创建时间2026-10-16T01:12:43Z，即新加坡2026-10-16 09:12:43。API已核对headSha=`9ad4b9d1fdab261db9be09b91f261a927d529970`、固定ref准确，formal-v5/prepare开始。两收据先在说明提交`07ea0bd3d95df6465bbba21355daf383d0075016`保存并推送，再通过base64+独立RAW hash传入冻结workflow；说明提交不改变执行源码身份。
 
 当前仅确认已开考，不宣称环境/prepare已PASS。机器登记为同目录`formal_run_registration.json`；不再dispatch或重跑failed Jobs。后续按已冻结门禁跟进，仅对有意义进展、失败、完成或需用户判断通知。
+
+## Prepare fresh证据回读
+
+后续实际状态：prepare已成功结束，reference分组开始。官方prepare artifact12017563767（2888066字节），ZIP SHA-256 `6093e4a5f3c6f8f7d600de5b95e589d82391f33b524753eaf4972e06adb2654c`独立匹配。335个native文件哈希、16阶段/16实际Python Job证明、64份raw、完整authority身份、ENV前后及锁定依赖、release PID链和全部cleanup active0已通过纯文件核验；镜像20261012.333.1，CPU25%/1024/2048MiB/480000ms不变。新运行authority单元31/31、已登记POST atomicity单元4/4通过，不扩大任意异常原子性证明。
+
+机器记录为`artifacts/m1-c3c-v5-authorization/prepare_independent_readback.json`，原官方ZIP保存在`D:/Github/c2c-m1-remote-evidence/c3c-v5-formal-38833878662/prepare.official.zip`。这些只是prepare阶段和凭据通过，不是全部101案例或formal aggregate通过。已建立本聊天自动跟进`c3-c-v5`；正常运行保持安静，终态独立回读后裁决，不重复开考。
