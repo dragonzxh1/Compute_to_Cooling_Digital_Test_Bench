@@ -1,0 +1,39 @@
+{
+  "schema": "SIX-RACK-V2-SOURCE-MANIFEST",
+  "scope": "BOUNDED_DEVELOPMENT_ONLY",
+  "snapshot_parent_commit": "1c475ab02c23efff056a5fecc30e6a73eba6db9f",
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "source_raw_sha256": {
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/__init__.py": "fcc1cdac980c97e4585c21964038efdbd5c34356b7f33fb10a8e978d73d83e11",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/audit.py": "2d8252aa13b12939f0d5a5b3d7a483b0a785a32a47b95873fb93f9d84625f4c3",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/cases.py": "32b37da0abf293eb6b3e7c9875d36efba5bbf42ed0a791441d20a4fc94d47905",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/extensions.py": "243e0a89c7361cddcea4dcbaf2c1226aa85c10d55f97e7c70fb46350ac75ab74",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/README.md": "04e43d06f220ceab10d279302129e2547580c456a7bc55b46e7161a8a3f8cdc6",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/report.ps1": "0f339e78c0c4af19be179279f23e6afc85ae559e8d2a850d4409bb9f9a46c35f",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/run_remote.ps1": "cf63a055f7f449a52b29ed303b538a7f231209c9a394bb58a0058130ca6bcf8f",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/simulation.py": "f948f92af4794e3b933a4b426010a486d4a4ed96fb3442575fab0fb93d9677a9",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/study.json": "45e297d98f85823920eafeb08d07719c47021f9710922c926e948ac30bb3fa49",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/test_study.py": "a5873709d00fb8c74c2409b3bf7464bd9f989ff8830088dca94f08b71e2a9077",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/v1_regression_hashes.json": "f38de6a5e4ed36251c3a43d0f7aef45911367f9675d17358f9d5b07617bf2cd6",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v2/worker.py": "fc0dcd79343e9ec5ff21006026102f96d68f1f2d9b56ceea1b9e45d2efb60d64",
+    ".github/workflows/gb300-m1-six-rack-v2.yml": "b2b0cd5a2a34fb0812486713720700dbafcc81f2bcdfeb30f3922f0d3d8767a7",
+    ".github/workflows/gb300-m1-six-rack-v2-runner.yml": "5f695880a4e8b1023a1735273562239337c0bfea4011a249f79866bf6bede302",
+    "artifacts/m1-c3c-v5-freeze/executable_proposal.json": "18d54940b672e4ec06b0c0c0a6691cf15219ee96e01b7864b31fe00a1adf23c8"
+  },
+  "v1_source_raw_sha256": {
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/__init__.py": "ae2cf333afa99c04c02c94111279ec6ba9c02b3c26bf614824048ffd0803136f",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/audit_results.ps1": "1d3bd09f2f5918b66655882adf37952826308095f3b677e26e70370b8c812614",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/bound_project.json": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/interfaces.py": "f4df0acd2799cae23d135878aa9b9c0f39b8d86e03e7352faaa2fff7a95085fe",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/parameter_provenance.json": "26e2afd201b554b487d7812999fd3908fcedf087d1e65b36896c08ff0ca8e1f1",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/plant.py": "b03d04f1953253a7b1c4a75cfe421f4917e8d69545f9b49cb139c943855dbbfd",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/README.md": "9b123d8e89cbf493a53af779f3d632f3ead31570710f9154b10475b964f7cf5b",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/run_remote.ps1": "b56cf737e1b4603b349b6302deab1fd8d72bf2109a708b7163ba982710207ef0",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/scenario.json": "2022a57ee7b57a6f932de71e7b6b78d13d7f47c7776d1aece3a6aabeeb853287",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/simulation.py": "9153866405b97a3f946d59fcda09b27bf982455c74e5bfb8329f1775b38b3185",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/source_manifest.json": "b6c3f668f1c9ac68c6e344fdd635f80faf17185855211462ce38bb75cc2ffa8c",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/test_integration.py": "366dbf6253d220afa9e23e65f92bb20554591d377392d79de241df4100f18f65",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/worker.py": "43f80ba3a92609c0d280b26908ac269ba68c9363a6a61a95a8a030658a35b3fc"
+  },
+  "formal_qualification": false
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "SIX-RACK-PHYSICAL-CREDIBILITY-v2",
+  "scope": "BOUNDED_DEVELOPMENT_NOT_OEM_OR_C3_QUALIFICATION",
+  "baseline_source": "048ca4f893ee91cb43cc22e23b246a24f3547bef",
+  "v1_official_zip_sha256": "292197fa4b30259d28228466a7c961778d6f0382332be92d25ab9d36307c1af3",
+  "settings": [
+    {"id":"BASE", "ua_scale":1.0,"pump_head_scale":1.0,"inventory_scale":1.0},
+    {"id":"UA_LOW", "ua_scale":0.5,"pump_head_scale":1.0,"inventory_scale":1.0},
+    {"id":"UA_HIGH", "ua_scale":1.5,"pump_head_scale":1.0,"inventory_scale":1.0},
+    {"id":"PUMP_LOW", "ua_scale":1.0,"pump_head_scale":0.8,"inventory_scale":1.0},
+    {"id":"PUMP_HIGH", "ua_scale":1.0,"pump_head_scale":1.2,"inventory_scale":1.0},
+    {"id":"INVENTORY_LOW", "ua_scale":1.0,"pump_head_scale":1.0,"inventory_scale":0.5},
+    {"id":"INVENTORY_HIGH", "ua_scale":1.0,"pump_head_scale":1.0,"inventory_scale":2.0}
+  ],
+  "faults": [
+    {"id":"SENSOR_LOSS","start_ns":40000000000,"end_ns":45000000000,"kind":"MISSING_QUALITY"},
+    {"id":"STALE_MEASUREMENT","start_ns":40000000000,"end_ns":45000000000,"kind":"STOP_PUBLISHING_SAMPLES"},
+    {"id":"ACTUATOR_SLOW","start_ns":10000000000,"end_ns":120000000000,"kind":"RAMP_0_05_TAU_4"},
+    {"id":"LOW_FLOW","start_ns":40000000000,"end_ns":120000000000,"kind":"NETWORK_RESISTANCE_100X"},
+    {"id":"ACTUATOR_RECOVERY","start_ns":10000000000,"end_ns":45000000000,"kind":"SILENT_STUCK_THEN_RELEASE"}
+  ],
+  "interpretation": {
+    "sensitivity":"One factor at a time. Exploration values, not manufacturer uncertainty bounds or confidence intervals. No joint-factor envelope claim.",
+    "pump":"Scale shutoff head ONLY with fixed curve K and fixed network. Merely varying fitted shutoff factor at the same design point algebraically cancels and is an invariance check, not pump uncertainty coverage.",
+    "faults":"Injected physical/sensor effects never enter controller or M1 views. Slow response may or may not confirm under frozen rules; report observed outcome, never force confirmation.",
+    "recovery":"End of physical fault does not reset Safety FAULT. No operator reset is authorized in these cases.",
+    "return45":"V1 max secondary rack-return control reference45degC is an engineering assumption; customer45degC is RACK_SECONDARY_INLET protection. Customer return45 requirement NOT_REGISTERED. No 45degC return acceptance scoring."
+  },
+  "numerics": {"main_dt_ns":100000000,"control_ns":200000000,"duration_ns":120000000000,"fault_refinement_ns":[50000000,25000000]},
+  "formal_qualification":false,"hardware":"CALIBRATION_REQUIRED","phase6":false
+}

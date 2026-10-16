@@ -1,0 +1,22 @@
+{
+  "LOAD_STEP": {
+    "series.json": "13d4927d9173ba52219e24ad59c3accf288f9f7e363a805788a00d991a400c98",
+    "phases.json": "c668f62d7d08c99d961a8170c97e7dbf5218dbd766b2a3067cba4244d4ab740f",
+    "measurements.json": "f4d563666f882946d9b8b81a860e8a32fd439f05e31b602a995983adcb858e83",
+    "physics_intervals.json": "c7c0c4f5c9fdd04bdf039d62c5d0ffc06aa7f1199c32ee6e73d1a4825a7474de",
+    "events.jsonl": "1a42347c652c513b0606dc70783a17819de09c720a95ba2878860fe0e009d667",
+    "result.json": "8011a920592f63448bd5d93690ed9e3cb7d5652e7cae9875cf662272f07ff3bc",
+    "m1_completed.zlib": "6c9b70b0d7ca172d69afaaaf764afc92806702d9c1f10e7ead9bd70a7198354e",
+    "m1_completed_index.json": "cd50cddee4e7e675e1205965b38f83338202dab4665a5eda100cdbdbad61fae4"
+  },
+  "PUMP_STUCK": {
+    "series.json": "7da09ef264c3e884fcb5bf14ae5267b083997c81dc3e0de4b68acacbab2d0a84",
+    "phases.json": "7db51ef79d62089aa75a4d5a344a4b7b9c43eebc69e7b04e2087f2254c8425d0",
+    "measurements.json": "35b1e9ec6f248f2ee2f831097cf90e07241e5dc156af5abba4b9e5018b708ec1",
+    "physics_intervals.json": "ff5117f4a2fc260b60ddf9f564ee02a6f19bfb909751b9bb3bea1d0c240d8c03",
+    "events.jsonl": "1a42347c652c513b0606dc70783a17819de09c720a95ba2878860fe0e009d667",
+    "result.json": "46e5f767a48781b37552610490dd995ca52327888d34d9625f1bf61661aab7e4",
+    "m1_completed.zlib": "5cafcef323fae6f74220f4bad331fb36424161d4eb091b98d38ec68affd26921",
+    "m1_completed_index.json": "d8955ca33ea6c7dd21f8e79981f798963e55e70a68fc78b537181afe89ca1095"
+  }
+}
