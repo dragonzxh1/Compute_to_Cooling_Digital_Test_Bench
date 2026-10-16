@@ -1,0 +1,53 @@
+{
+  "allowed_images_observed": [
+    "20261012.333.1"
+  ],
+  "local_source_bindings": 832,
+  "PF06_supplement": "FORMALLY_VALIDATED_UNDER_SEPARATELY_APPROVED_REGISTRATION",
+  "PF06_negative_controls": 2,
+  "startup_original": "49/50",
+  "versioned_compatibility": "PASS",
+  "source_bindings": 836,
+  "sut_constructors": 2895,
+  "strict_P1_B_C": "INCOMPLETE",
+  "run_id": "38833878662",
+  "sem02_event_inputs_verified": 158,
+  "startup_unique_legacy_failure": [
+    {
+      "nodeid": "v0_2/tests/control/test_phase5_r5_2_1r4_3_startup.py::test_startup_demand_with_suspicion_suspends_then_reintroduces",
+      "call": {
+        "exception_type": "AssertionError",
+        "failure_identity": {
+          "assertion_ast": "Assert(test=Subscript(value=Subscript(value=Name(id='at', ctx=Load()), slice=Constant(value=1400000000), ctx=Load()), slice=Constant(value='startup_demand_suspended'), ctx=Load()))",
+          "assertion_line_1based": 144,
+          "exception_type": "AssertionError",
+          "message": "assert False",
+          "semantic_identifier": "LEGACY_STATE_C_STARTUP_SUSPENDED_TRUE_REPRESENTATION",
+          "source_path": "v0_2/tests/control/test_phase5_r5_2_1r4_3_startup.py",
+          "source_raw_sha256": "6c2e67d2a9f75e5a8f46b0cce1f1741b6ec6ed34bc1323b02779862fa1293f08"
+        },
+        "longrepr": "def test_startup_demand_with_suspicion_suspends_then_reintroduces():\n        source = synthetic(r41.PROFILE, {0: 0.7, 1_400_000_000: 0.5,\n                                        2_600_000_000: 0.7},\n                           duration_ns=4_000_000_000, initial_speed=0.5)\n        result = run(source)\n        at = {row[\"time_ns\"]: row for row in result[\"records\"]}\n        assert at[1_200_000_000][\"carried_suspicion_evidence\"] == 1\n>       assert at[1_400_000_000][\"startup_demand_suspended\"]\nE       assert False\n\nv0_2\\tests\\control\\test_phase5_r5_2_1r4_3_startup.py:144: AssertionError",
+        "nodeid": "v0_2/tests/control/test_phase5_r5_2_1r4_3_startup.py::test_startup_demand_with_suspicion_suspends_then_reintroduces",
+        "outcome": "failed",
+        "wasxfail": null,
+        "when": "call"
+      }
+    }
+  ],
+  "T09": "IMPLEMENTATION_HOLD",
+  "full_P_history_available": false,
+  "candidate_or_model_executed_locally": false,
+  "PF06_original": "INCOMPLETE",
+  "final_worker_elapsed_seconds": 91.281,
+  "bundle_source_bindings": 4,
+  "arbitrary_post_crash_powerloss_atomicity": "NOT_PROVEN",
+  "schema": "m1-c3c-v5-pure-file-semantic-crosscheck-v1",
+  "final_phase_pairs": 11,
+  "status": "INDEPENDENT_SEMANTIC_SCHEMA_SOURCE_READBACK_PASS",
+  "hardware": "CALIBRATION_REQUIRED",
+  "S": 17,
+  "P15": "PASS",
+  "sem02_exact_five_cases_match": true,
+  "C": 11,
+  "outer_stage_schemas": 1970
+}

@@ -1,5 +1,7 @@
 # M1 v4 当前操作入口
 
+2026-10-16最新终态：[v5正式结果及独立回读](M1_C3_C_V5_FORMAL_RESULT.md)已通过，`C3_C_LIMITED_SOFTWARE_QUALIFICATION_PASS`。101案例/3216行、499快照、2281prefix、全部schema/repeat及FINAL退出后Job/cleanup均已核验。原Startup49/50与版本化compatibility PASS分列。以下v4/v5准备或执行中段落保留历史身份；不应再读作当前未开考。生产/硬件/Phase6仍未授权，不等于完整系统可上线。
+
 更新于 2026-10-15。本页是当前状态索引，不修改冻结源码、包内说明或历史证据。
 
 ## 1. 当前能做什么

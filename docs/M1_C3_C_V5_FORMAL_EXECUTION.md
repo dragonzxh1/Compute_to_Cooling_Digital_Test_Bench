@@ -1,5 +1,7 @@
 # C3-C v5：用户批准的 full fresh 正式执行
 
+最新终态：run38833878662已完成，官方证据独立回读通过，`C3_C_LIMITED_SOFTWARE_QUALIFICATION_PASS`。详见[M1_C3_C_V5_FORMAL_RESULT.md](M1_C3_C_V5_FORMAL_RESULT.md)。下文“执行中/尚未裁决”为历史时点记录，不覆盖此终态；原Startup49/50与versioned compatibility PASS继续分开，生产/硬件/Phase6未授权。
+
 用户于2026-10-15（Asia/Singapore）明确批准：“批准冻结 v5 审签页绑定的确切包及执行源码；单独授权该 v5 包进行全量 fresh C3-C 正式测试。”两项决定分别保存为新收据，不修改sealed proposal、原空白审签页或历史证据。登记操作跨至2026-10-16，不回写批准日期。
 
 | 绑定对象 | 身份 |

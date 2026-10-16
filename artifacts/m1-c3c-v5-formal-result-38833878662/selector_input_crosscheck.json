@@ -1,0 +1,11 @@
+{
+  "status": "FROZEN_SELECTOR_INPUT_MANDATORY_SET_MATCH",
+  "cases": 101,
+  "input_rows": 3216,
+  "ITQ_variants": 51,
+  "ITQ_mandatory": 674,
+  "ITQ_eligible_universe": 2298,
+  "input_source_documents_verified": 71,
+  "all_registered_case_checks_true": true,
+  "candidate_executed_locally": false
+}

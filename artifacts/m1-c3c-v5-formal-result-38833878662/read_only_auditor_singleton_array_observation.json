@@ -1,0 +1,6 @@
+{
+  "candidate_executed_locally": false,
+  "location": "at Assert, C:\\Users\\Aiden Zhang\\.codex\\worktrees\\m1-remote-development\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\m1_c3c_v5_review\\read_formal.ps1: line 7\r\nat <ScriptBlock>, C:\\Users\\Aiden Zhang\\.codex\\worktrees\\m1-remote-development\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\m1_c3c_v5_review\\read_formal.ps1: line 125\r\nat <ScriptBlock>, <No file>: line 2",
+  "error": "PREFIX_ROWS_COUNT",
+  "status": "READBACK_STOP"
+}
