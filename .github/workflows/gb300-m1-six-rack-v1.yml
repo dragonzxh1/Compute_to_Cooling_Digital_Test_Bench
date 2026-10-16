@@ -1,5 +1,10 @@
 name: GB300 M1 six-rack integration DEVELOPMENT v1
 on:
+  push:
+    branches: [codex/gb300-m1-six-rack-v1]
+    paths:
+      - 'v0_2/tests/tools/gb300_m1_closed_loop_v1/**'
+      - '.github/workflows/gb300-m1-six-rack-v1.yml'
   workflow_dispatch:
     inputs:
       expected_commit:
@@ -31,7 +36,9 @@ jobs:
       - name: Hash-bound source hydration only
         shell: pwsh
         run: |
-          if($env:GITHUB_SHA -cne '${{ inputs.expected_commit }}'){throw 'COMMIT_DRIFT'}
+          $expected='${{ inputs.expected_commit }}'
+          if($expected -and $env:GITHUB_SHA -cne $expected){throw 'COMMIT_DRIFT'}
+          if((git rev-parse HEAD) -cne $env:GITHUB_SHA){throw 'CHECKOUT_DRIFT'}
           $m=Get-Content 'v0_2/tests/tools/m1_remote_control_v3/execution_manifest.json' -Raw|ConvertFrom-Json
           foreach($b in $m.bundle_entry_raw_hashes.PSObject.Properties){
             if((Test-Path -LiteralPath $b.Name) -and (Get-FileHash -LiteralPath $b.Name -Algorithm SHA256).Hash.ToLowerInvariant() -cne $b.Value){throw ('EXISTING_FROZEN_SOURCE_DRIFT '+$b.Name)}
@@ -50,7 +57,10 @@ jobs:
       - name: Bounded negatives and two fresh closed-loop scenarios
         shell: pwsh
         run: |
-          & ./v0_2/tests/tools/gb300_m1_closed_loop_v1/run_remote.ps1 -ExpectedCommit '${{ inputs.expected_commit }}' -ExpectedManifestSha256 '${{ inputs.manifest_sha256 }}'
+          $manifest=(Get-FileHash 'v0_2/tests/tools/gb300_m1_closed_loop_v1/source_manifest.json' -Algorithm SHA256).Hash.ToLowerInvariant()
+          $expected='${{ inputs.manifest_sha256 }}'
+          if($expected -and $manifest -cne $expected){throw 'DISPATCH_MANIFEST_DRIFT'}
+          & ./v0_2/tests/tools/gb300_m1_closed_loop_v1/run_remote.ps1 -ExpectedCommit $env:GITHUB_SHA -ExpectedManifestSha256 $manifest
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
