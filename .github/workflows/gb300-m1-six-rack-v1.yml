@@ -40,8 +40,17 @@ jobs:
           if($expected -and $env:GITHUB_SHA -cne $expected){throw 'COMMIT_DRIFT'}
           if((git rev-parse HEAD) -cne $env:GITHUB_SHA){throw 'CHECKOUT_DRIFT'}
           $m=Get-Content 'v0_2/tests/tools/m1_remote_control_v3/execution_manifest.json' -Raw|ConvertFrom-Json
+          # This ONE tracked transport file is LF in Git and CRLF in the
+          # historical sealed bundle. Both byte identities are registered;
+          # execution always requires the original sealed CRLF hash after hydration.
+          $transportPath='v0_2/tests/tools/m1_remote_control_v1/source_inventory.json'
+          $transportHash='dd016d1bafd016c6f014520d277ce9ab79024e7a3b224bca5c5d8c7426a2a3f9'
           foreach($b in $m.bundle_entry_raw_hashes.PSObject.Properties){
-            if((Test-Path -LiteralPath $b.Name) -and (Get-FileHash -LiteralPath $b.Name -Algorithm SHA256).Hash.ToLowerInvariant() -cne $b.Value){throw ('EXISTING_FROZEN_SOURCE_DRIFT '+$b.Name)}
+            if(Test-Path -LiteralPath $b.Name){
+              $actual=(Get-FileHash -LiteralPath $b.Name -Algorithm SHA256).Hash.ToLowerInvariant()
+              $transport=($b.Name -ceq $transportPath -and $actual -ceq $transportHash -and $b.Value -ceq '02d336b2c5217ef279ced4f9ebefafc7ec2b9110ec567da7341052f0b073fa39')
+              if($actual -cne $b.Value -and -not $transport){throw ('EXISTING_FROZEN_SOURCE_DRIFT '+$b.Name)}
+            }
           }
           . ./v0_2/tests/tools/m1_remote_control_v3/restore_snapshot.ps1
           $null=Restore-M1Snapshot -Repo (Get-Location).Path -ExpectedManifestSha256 '6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93'
