@@ -1,0 +1,9 @@
+{
+  "scope":"LOCAL_PURE_FILE_REVIEW_ADAPTER_NOT_MODEL_OR_REMOTE_EXECUTION_FAILURE",
+  "error":"INPUT_BINDING at verify_delivery.ps1 line57, BASE__LOAD_STEP",
+  "checker_raw_sha256":"11c6217a463a2cb23fa33eae78fab8d5403dda3d940c95ad613a4df3dabbdb3b",
+  "cause":"Comparing unsorted JSON property order: Python output rack_it_w,time_ns versus source time_ns,rack_it_w; numeric times and all six rack loads are identical.",
+  "repair":"Compare exact event count, integer timestamps and six numeric rack inputs, not arbitrary JSON key order. Original RAW artifact hashing remains unchanged.",
+  "execution_source_or_evidence_modified":false,
+  "remote_rerun_required":false
+}

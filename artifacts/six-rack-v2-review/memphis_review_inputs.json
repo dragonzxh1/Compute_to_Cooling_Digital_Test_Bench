@@ -1,0 +1,110 @@
+{
+  "scope": "MEMPHIS_REPORT_DOCUMENT_REVIEW_NOT_EQUIPMENT_QUALIFICATION",
+  "review_date_singapore": "2026-10-17",
+  "submitted_report_raw_sha256": "aa8a46f58ab821d2bba753f363d12301af622f8da6bd8fcb8f93170fa197a501",
+  "customer_index_raw_sha256": "9ce54cb57c14ffad9035fc25864a6aac19823899b165ae4bb189477dd4f7f08b",
+  "verified_customer_originals": [
+    {
+      "id": "00.docx",
+      "bytes": 3818641,
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7",
+      "matches_archive": true
+    },
+    {
+      "id": "01.docx",
+      "bytes": 155907,
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c",
+      "matches_archive": true
+    },
+    {
+      "id": "02.docx",
+      "bytes": 109684,
+      "raw_sha256": "20a08a966b08772906c6af4c9da4eab4f219ffe0f60abf5fbec1bb080e723b60",
+      "matches_archive": true
+    },
+    {
+      "id": "03.docx",
+      "bytes": 43926,
+      "raw_sha256": "27b01084ba397e578bc37c396aec783cf84207307758e0c8be08ab6652fa3e50",
+      "matches_archive": true
+    },
+    {
+      "id": "04.docx",
+      "bytes": 17194,
+      "raw_sha256": "a7d2f4adb9b9b24fc6c5c9f70cb6a18c2157e83ce2b3597f96742dd2974dc9b0",
+      "matches_archive": true
+    },
+    {
+      "id": "05.docx",
+      "bytes": 15783,
+      "raw_sha256": "37e3472634bc71ab5f81c0a9093cb31b1bc3a12bf0820b551ddb161946d1463b",
+      "matches_archive": true
+    },
+    {
+      "id": "06.docx",
+      "bytes": 15044,
+      "raw_sha256": "a331a13b62c9441466623efd912cf6a637691c7f3030a80a17a7a0ed7fa0ad41",
+      "matches_archive": true
+    },
+    {
+      "id": "07.docx",
+      "bytes": 16347,
+      "raw_sha256": "80ca970b91ee3d732444e44ceb73ba0e9485bdca605fbfc2a0acace39d043895",
+      "matches_archive": true
+    },
+    {
+      "id": "08.docx",
+      "bytes": 18148,
+      "raw_sha256": "0c5b69e7a48647d060668265d57613b7ddd5030b308ccfb8436ce2410e60cc44",
+      "matches_archive": true
+    },
+    {
+      "id": "09.docx",
+      "bytes": 51105,
+      "raw_sha256": "238ac33707de21cc929bca745ba295b519c7a64ed6db23a312b010ff11626c4b",
+      "matches_archive": true
+    },
+    {
+      "id": "10.docx",
+      "bytes": 1451071,
+      "raw_sha256": "7a657a4f80c230e55e2fa2a1527a81955f4fa18fd18bed901dbc23052199a5b5",
+      "matches_archive": true
+    },
+    {
+      "id": "10.pdf",
+      "bytes": 2396608,
+      "raw_sha256": "ed6caa6afe82c1203525216aee1606a67f79c5f05cb15ffaf092458e36fd04de",
+      "matches_archive": true
+    },
+    {
+      "id": "11.pdf",
+      "bytes": 359224,
+      "raw_sha256": "dec37693df02fa8c5e9bf6b13cf7a0332353da3f634f80ed94269e346447515e",
+      "matches_archive": true
+    },
+    {
+      "id": "12.pdf",
+      "bytes": 14125429,
+      "raw_sha256": "4562cb70049bc2fd93ab655a4b5ec7285606c5184c3a33e9fdaf5f10c9c94291",
+      "matches_archive": true
+    }
+  ],
+  "reading_boundary": "Original RAW hashes rechecked; targeted existing extracted text and parameter/source reviews read; not a fresh full visual audit of all drawings",
+  "static_arithmetic": {
+    "guarantee_heat_w": 1100000,
+    "primary_in_c": 41,
+    "primary_flow_m3_h": 110,
+    "secondary_supply_c": 44,
+    "secondary_flow_m3_h": 68.37,
+    "assumed_rho_kg_m3": 1009,
+    "assumed_cp_j_kg_k": 4000,
+    "counterflow_required_ua_kw_k": 209.2839655469606,
+    "mixed10_5_m3_90s_temperature_rise_k": 5.76808721506442,
+    "V1_post_step_IT_w": 883500,
+    "V1_post_step_liquid_w": 839325,
+    "full_design_IT_w": 930000,
+    "full_design_liquid_w": 883500
+  },
+  "candidate_modification": false,
+  "procurement_or_design_selection": false
+}

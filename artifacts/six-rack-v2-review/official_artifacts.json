@@ -1,0 +1,70 @@
+{
+  "run": 38928779126,
+  "source": "c5fac2628a9e4c7ac8cde6583fedce8fba6e13f8",
+  "verification": "ALL9_ZIP_RAW_SHA256_MATCH_GITHUB_API_DIGEST",
+  "artifacts": [
+    {
+      "id": 12058426649,
+      "name": "v2-raw-baseline-38928779126",
+      "bytes": 157778576,
+      "sha256": "c780d0b108a3f57943f87130eb8f451e8f885760c29d5cf2ad80a9aca36a855f",
+      "zip": "raw-baseline.zip"
+    },
+    {
+      "id": 12058261976,
+      "name": "v2-compact-baseline-38928779126",
+      "bytes": 2278393,
+      "sha256": "a96adec5ee8db16899620057951e8110a2368976bed2b842a29f950db9845f42",
+      "zip": "compact-baseline.zip"
+    },
+    {
+      "id": 12058935346,
+      "name": "v2-raw-fault-38928779126",
+      "bytes": 233027890,
+      "sha256": "09287fc96ad638e5962b74581be935fc2a3e8b8c9dcf12f0d2261d033a565ffa",
+      "zip": "raw-fault.zip"
+    },
+    {
+      "id": 12058476561,
+      "name": "v2-compact-fault-38928779126",
+      "bytes": 2340441,
+      "sha256": "d0d72e5bc4be4f9c4e8b310291377b3d15a44f67ad82f4c1c79621fcc9015a90",
+      "zip": "compact-fault.zip"
+    },
+    {
+      "id": 12058481987,
+      "name": "v2-compact-sensitivity-b-38928779126",
+      "bytes": 2857054,
+      "sha256": "6d805e2648f8bde280953c371c1e178fed6279732986529024887f1e1e9b8d36",
+      "zip": "compact-sensitivity-b.zip"
+    },
+    {
+      "id": 12057709597,
+      "name": "v2-raw-sensitivity-b-38928779126",
+      "bytes": 267020116,
+      "sha256": "14c4c3dac66dda199b16478d28508cf89b14a87b85f57ed24fba30773635e0a2",
+      "zip": "raw-sensitivity-b.zip"
+    },
+    {
+      "id": 12058607575,
+      "name": "v2-compact-sensitivity-a-38928779126",
+      "bytes": 2861547,
+      "sha256": "84ea7a42b75eb021cdfaf5a6e84067d723ce3d14bfd21c444906f32805117998",
+      "zip": "compact-sensitivity-a.zip"
+    },
+    {
+      "id": 12058473105,
+      "name": "v2-raw-sensitivity-a-38928779126",
+      "bytes": 270011655,
+      "sha256": "614b33e2adb3d340415c0b768f5c12d3b8b590bb5b00cd2a3eccf38cdd625543",
+      "zip": "raw-sensitivity-a.zip"
+    },
+    {
+      "id": 12057639754,
+      "name": "v2-consolidated-report-38928779126",
+      "bytes": 10623594,
+      "sha256": "1ad579e44fb0e0b5a22d4977f5ee8414719ac6e0134fcacb4e4fe7cba2fd0aab",
+      "zip": "consolidated.zip"
+    }
+  ]
+}

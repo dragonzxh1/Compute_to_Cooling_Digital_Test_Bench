@@ -1,0 +1,3 @@
+# Exact official report bytes are retained; do not normalize CRLF during add.
+engineering_report.html -text -eol -diff
+engineering_report.json -text -eol -diff

@@ -1,0 +1,5082 @@
+{
+  "schema": "SIX-RACK-V2-ENGINEERING-STUDY-RESULT",
+  "status": "V2_DECLARED_MODEL_STUDY_COMPLETED",
+  "source_commit": "c5fac2628a9e4c7ac8cde6583fedce8fba6e13f8",
+  "v1_regression": "FRESH_BYTE_IDENTICAL_8_FILES_EACH",
+  "case_count": 21,
+  "stage_count": 22,
+  "compact_raw_files_verified": 1675,
+  "independent_review": "ALL8_LOCAL_LIQUID_CONTROL_VOLUMES_PLUS_TOTAL_ENERGY_HX_PUMP_AND_MASS",
+  "pump_stuck_convergence": {
+    "final_supply_c": {
+      "coarse_medium_delta": 1.9751267188894417E-05,
+      "shrinks_or_invariant": true,
+      "medium_fine_delta": 9.891377658277634E-06
+    },
+    "final_return_c": {
+      "coarse_medium_delta": 0.001570930181685526,
+      "shrinks_or_invariant": true,
+      "medium_fine_delta": 0.0007850360399288547
+    },
+    "final_flow_m3_h": {
+      "coarse_medium_delta": 7.828824520927924E-05,
+      "shrinks_or_invariant": true,
+      "medium_fine_delta": 3.9115916933951667E-05
+    },
+    "final_dp_kpa": {
+      "coarse_medium_delta": 0.00033065746948324204,
+      "shrinks_or_invariant": true,
+      "medium_fine_delta": 0.00016520924027929595
+    }
+  },
+  "cases": {
+    "BASE__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.7059783624785476,
+        "final_command": 0.7067194402645128,
+        "final_dp_pa": 228780.40707150733,
+        "final_flow_m3_s": 0.01489745081563528,
+        "final_return_c": 51.3168306979299,
+        "final_supply_c": 38.13999745835633,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 30500000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30700000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.1920928955078125E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 65696724.90971325,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 8.731149137020111E-11,
+          "max_mass_residual_kg_s": 7.105427357601002E-15,
+          "max_step_residual_j": 3.6569690564647317E-07,
+          "pump_ambient_j": 88018.8515494195,
+          "pump_electrical_j": 463257.11341799813,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 375238.2618685784,
+          "roundoff_bound_j": 0.030902681644676366,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 29213013.35215521
+        },
+        "max_rack_return_c": 52.13679587652314,
+        "max_supply_c": 38.13999745835633,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:30400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 30500000000
+          },
+          {
+            "measurement_id": "measurement:30600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30700000000
+          },
+          {
+            "measurement_id": "measurement:30800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30900000000
+          },
+          {
+            "measurement_id": "measurement:72400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 72500000000
+          },
+          {
+            "measurement_id": "measurement:72600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 72700000000
+          },
+          {
+            "measurement_id": "measurement:72800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 72900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "baseline/BASE__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.030902681644676366,
+        "final10s_max_return_drift_k_min": 0.8148660390176019,
+        "final10s_return_drift_k_min": 1.1381116323664173,
+        "final10s_supply_drift_k_min": 0.4507123469228418,
+        "final_actual_speed": 0.7059783624785476,
+        "final_command": 0.7067194402645128,
+        "final_dp_kpa": 228.78040707150734,
+        "final_flow_m3_h": 53.630822936287004,
+        "final_return_c": 51.3168306979299,
+        "final_supply_c": 38.13999745835633,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 65696724.909713246,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 88018.8515494195,
+          "pump_electrical_j": 463257.11341799813,
+          "pump_liquid_j": 375238.26186857827
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.2939275368116796E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 52.13679587652314,
+        "max_supply_c": 38.13999745835633,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.49131765041612346,
+            "command": 0.49867203479001887,
+            "dp_kpa": 110.80536274900035,
+            "flow_m3_h": 37.32376417661151,
+            "max_rack_return_c": 47.997321757948725,
+            "return_c": 46.04682128345854,
+            "safety": "NORMAL",
+            "supply_c": 37.209738848516736,
+            "time_s": 30
+          },
+          {
+            "actual": 0.620132485910834,
+            "command": 0.6234830963945683,
+            "dp_kpa": 176.52450915243222,
+            "flow_m3_h": 47.10939784635969,
+            "max_rack_return_c": 50.480513673911105,
+            "return_c": 48.865408882799386,
+            "safety": "NORMAL",
+            "supply_c": 37.45296411332873,
+            "time_s": 60
+          },
+          {
+            "actual": 0.6785305035601469,
+            "command": 0.6800745829153925,
+            "dp_kpa": 211.3366407072845,
+            "flow_m3_h": 51.54570058711916,
+            "max_rack_return_c": 51.606502068545865,
+            "return_c": 50.55370906486348,
+            "safety": "NORMAL",
+            "supply_c": 37.863155666831005,
+            "time_s": 90
+          },
+          {
+            "actual": 0.7059783624785476,
+            "command": 0.7067194402645128,
+            "dp_kpa": 228.78040707150734,
+            "flow_m3_h": 53.630822936287004,
+            "max_rack_return_c": 52.13679587652314,
+            "return_c": 51.3168306979299,
+            "safety": "NORMAL",
+            "supply_c": 38.13999745835633,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 29.213013352155254,
+        "total_fluid_energy_residual_j": -8.195638656616211E-08,
+        "unique_sources": 600
+      },
+      "regression": {
+        "events.jsonl": true,
+        "m1_completed.zlib": true,
+        "m1_completed_index.json": true,
+        "measurements.json": true,
+        "phases.json": true,
+        "physics_intervals.json": true,
+        "result.json": true,
+        "series.json": true
+      },
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "baseline",
+        "id": "BASE__LOAD_STEP",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "BASE__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.34949377677940396,
+        "final_command": 0.9,
+        "final_dp_pa": 56067.98405160544,
+        "final_flow_m3_s": 0.007374965900743164,
+        "final_return_c": 54.82078027547914,
+        "final_supply_c": 37.0518452506455,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28300000000,
+          "TRACKING_FAULT_CONFIRMED": 29900000000,
+          "TRACKING_FAULT_SUSPECTED": 28700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 5.736947059631348E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 43248179.775605984,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.1827872842550278E-11,
+          "max_mass_residual_kg_s": 3.1086244689504383E-15,
+          "max_step_residual_j": 3.4330878406763077E-07,
+          "pump_ambient_j": 17462.754600615914,
+          "pump_electrical_j": 91909.23474008408,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 74446.48013946465,
+          "roundoff_bound_j": 0.03089377692036235,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 51360766.704534054
+        },
+        "max_rack_return_c": 57.938589395785016,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28300000000
+          },
+          {
+            "measurement_id": "measurement:28600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 28700000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 29900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "baseline/BASE__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.03089377692036235,
+        "final10s_max_return_drift_k_min": 4.511935130089569,
+        "final10s_return_drift_k_min": 5.1456694450956775,
+        "final10s_supply_drift_k_min": 0.000499084426905938,
+        "final_actual_speed": 0.34949377677940396,
+        "final_command": 0.9,
+        "final_dp_kpa": 56.06798405160544,
+        "final_flow_m3_h": 26.54987724267539,
+        "final_return_c": 54.82078027547914,
+        "final_supply_c": 37.0518452506455,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 29.9,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 29.9,
+        "first_tracking_suspected_s": 28.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 43248179.775605984,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17462.754600615914,
+          "pump_electrical_j": 91909.23474008408,
+          "pump_liquid_j": 74446.48013946465
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 7.275957614183426E-12,
+        "max_local_energy_residual_j": 2.2915649822152773E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 57.938589395785016,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.9,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 48.30799304104556,
+            "return_c": 45.92594918949703,
+            "safety": "FAULT",
+            "supply_c": 37.182862199734416,
+            "time_s": 30
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.9,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 52.341923182414746,
+            "return_c": 48.912832871745024,
+            "safety": "FAULT",
+            "supply_c": 37.08252688668915,
+            "time_s": 60
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.9,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 55.48418163002384,
+            "return_c": 52.07693270126259,
+            "safety": "FAULT",
+            "supply_c": 37.05533915061716,
+            "time_s": 90
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.9,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 57.938589395785016,
+            "return_c": 54.82078027547914,
+            "safety": "FAULT",
+            "supply_c": 37.0518452506455,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 51.36076670453427,
+        "total_fluid_energy_residual_j": 7.897615432739258E-07,
+        "unique_sources": 600
+      },
+      "regression": {
+        "events.jsonl": true,
+        "m1_completed.zlib": true,
+        "m1_completed_index.json": true,
+        "measurements.json": true,
+        "phases.json": true,
+        "physics_intervals.json": true,
+        "result.json": true,
+        "series.json": true
+      },
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "baseline",
+        "id": "BASE__PUMP_STUCK",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "REFINE_STUCK_25": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3494922313099593,
+        "final_command": 0.9,
+        "final_dp_pa": 56067.48818489568,
+        "final_flow_m3_s": 0.007374933288475901,
+        "final_return_c": 54.81842430925752,
+        "final_supply_c": 37.051874893290346,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28300000000,
+          "TRACKING_FAULT_CONFIRMED": 29900000000,
+          "TRACKING_FAULT_SUSPECTED": 28700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -2.60770320892334E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 43258141.954733476,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.1827872842550278E-11,
+          "max_mass_residual_kg_s": 3.552713678800501E-15,
+          "max_step_residual_j": 4.12709027841629E-07,
+          "pump_ambient_j": 17462.55590969634,
+          "pump_electrical_j": 91908.18899840288,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 74445.63308871473,
+          "roundoff_bound_j": 0.1234979374505097,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 307264,
+          "stored_change_j": 51350803.67835498
+        },
+        "max_rack_return_c": 57.936198055053865,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28300000000
+          },
+          {
+            "measurement_id": "measurement:28600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 28700000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 29900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "baseline/REFINE_STUCK_25",
+      "analysis": {
+        "energy_bound_j": 0.1234979374505097,
+        "final10s_max_return_drift_k_min": 4.511781000285396,
+        "final10s_return_drift_k_min": 5.144438861903382,
+        "final10s_supply_drift_k_min": 0.00042154673769800866,
+        "final_actual_speed": 0.3494922313099593,
+        "final_command": 0.9,
+        "final_dp_kpa": 56.06748818489568,
+        "final_flow_m3_h": 26.549759838513246,
+        "final_return_c": 54.81842430925752,
+        "final_supply_c": 37.051874893290346,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 29.9,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 29.9,
+        "first_tracking_suspected_s": 28.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 43258141.95473347,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17462.55590969634,
+          "pump_electrical_j": 91908.18899840288,
+          "pump_liquid_j": 74445.63308871473
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 1.4551915228366852E-11,
+        "max_local_energy_residual_j": 2.2939161681279074E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 57.936198055053865,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3494922313099593,
+            "command": 0.34939653316733654,
+            "dp_kpa": 56.06748818489568,
+            "flow_m3_h": 26.549759838513246,
+            "max_rack_return_c": 44.98759399406623,
+            "return_c": 45.0014509964663,
+            "safety": "NORMAL",
+            "supply_c": 37.35362899074647,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3494922313099593,
+            "command": 0.9,
+            "dp_kpa": 56.06748818489568,
+            "flow_m3_h": 26.549759838513246,
+            "max_rack_return_c": 48.30701768305266,
+            "return_c": 45.92764685302791,
+            "safety": "FAULT",
+            "supply_c": 37.18310674098166,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3494922313099593,
+            "command": 0.9,
+            "dp_kpa": 56.06748818489568,
+            "flow_m3_h": 26.549759838513246,
+            "max_rack_return_c": 52.340098506473225,
+            "return_c": 48.912953321610814,
+            "safety": "FAULT",
+            "supply_c": 37.082691363305514,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3494922313099593,
+            "command": 0.9,
+            "dp_kpa": 56.06748818489568,
+            "flow_m3_h": 26.549759838513246,
+            "max_rack_return_c": 55.48193742512393,
+            "return_c": 52.07542397292616,
+            "safety": "FAULT",
+            "supply_c": 37.05541827393051,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3494922313099593,
+            "command": 0.9,
+            "dp_kpa": 56.06748818489568,
+            "flow_m3_h": 26.549759838513246,
+            "max_rack_return_c": 57.936198055053865,
+            "return_c": 54.81842430925752,
+            "safety": "FAULT",
+            "supply_c": 37.051874893290346,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 4800,
+        "stored_change_mj": 51.35080367835502,
+        "total_fluid_energy_residual_j": -2.2351741790771484E-07,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "dt_ns": 25000000,
+        "fault": null,
+        "group": "baseline",
+        "id": "REFINE_STUCK_25",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "REFINE_STUCK_50": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3494927462189142,
+        "final_command": 0.9,
+        "final_dp_pa": 56067.65339413596,
+        "final_flow_m3_s": 0.007374944154008384,
+        "final_return_c": 54.81920934529745,
+        "final_supply_c": 37.05186500191269,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28300000000,
+          "TRACKING_FAULT_CONFIRMED": 29900000000,
+          "TRACKING_FAULT_SUSPECTED": 28700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 2.1457672119140625E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 43254821.90604099,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.1827872842550278E-11,
+          "max_mass_residual_kg_s": 2.6645352591003757E-15,
+          "max_step_residual_j": 4.271482794138137E-07,
+          "pump_ambient_j": 17462.6220213866,
+          "pump_electrical_j": 91908.53695466802,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 74445.91493328355,
+          "roundoff_bound_j": 0.06176183042984822,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 153664,
+          "stored_change_j": 51354124.00889444
+        },
+        "max_rack_return_c": 57.93699503797717,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28300000000
+          },
+          {
+            "measurement_id": "measurement:28600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 28700000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 29900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "baseline/REFINE_STUCK_50",
+      "analysis": {
+        "energy_bound_j": 0.06176183042984822,
+        "final10s_max_return_drift_k_min": 4.511832406892836,
+        "final10s_return_drift_k_min": 5.144849083325312,
+        "final10s_supply_drift_k_min": 0.000447393292461129,
+        "final_actual_speed": 0.3494927462189142,
+        "final_command": 0.9,
+        "final_dp_kpa": 56.06765339413596,
+        "final_flow_m3_h": 26.54979895443018,
+        "final_return_c": 54.81920934529745,
+        "final_supply_c": 37.05186500191269,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 29.9,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 29.9,
+        "first_tracking_suspected_s": 28.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 43254821.90604098,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17462.6220213866,
+          "pump_electrical_j": 91908.53695466802,
+          "pump_liquid_j": 74445.91493328355
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 1.4551915228366852E-11,
+        "max_local_energy_residual_j": 2.293805323461129E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 57.93699503797717,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3494927462189142,
+            "command": 0.34939709066561303,
+            "dp_kpa": 56.06765339413596,
+            "flow_m3_h": 26.54979895443018,
+            "max_rack_return_c": 44.987605265688615,
+            "return_c": 45.00145852581642,
+            "safety": "NORMAL",
+            "supply_c": 37.353573165366015,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3494927462189142,
+            "command": 0.9,
+            "dp_kpa": 56.06765339413596,
+            "flow_m3_h": 26.54979895443018,
+            "max_rack_return_c": 48.30734271805693,
+            "return_c": 45.92708171625111,
+            "safety": "FAULT",
+            "supply_c": 37.18302528626742,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3494927462189142,
+            "command": 0.9,
+            "dp_kpa": 56.06765339413596,
+            "flow_m3_h": 26.54979895443018,
+            "max_rack_return_c": 52.34070660029687,
+            "return_c": 48.91291329171872,
+            "safety": "FAULT",
+            "supply_c": 37.082636551089195,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3494927462189142,
+            "command": 0.9,
+            "dp_kpa": 56.06765339413596,
+            "flow_m3_h": 26.54979895443018,
+            "max_rack_return_c": 55.482685352485305,
+            "return_c": 52.0759266418695,
+            "safety": "FAULT",
+            "supply_c": 37.055391891890906,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3494927462189142,
+            "command": 0.9,
+            "dp_kpa": 56.06765339413596,
+            "flow_m3_h": 26.54979895443018,
+            "max_rack_return_c": 57.93699503797717,
+            "return_c": 54.81920934529745,
+            "safety": "FAULT",
+            "supply_c": 37.05186500191269,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 2400,
+        "stored_change_mj": 51.354124008894686,
+        "total_fluid_energy_residual_j": 2.384185791015625E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "dt_ns": 50000000,
+        "fault": null,
+        "group": "baseline",
+        "id": "REFINE_STUCK_50",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "PUMP_LOW__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.7385363811748828,
+        "final_command": 0.7393747817352079,
+        "final_dp_pa": 200294.86822047128,
+        "final_flow_m3_s": 0.013939187412522779,
+        "final_return_c": 51.87849266421756,
+        "final_supply_c": 37.93858319994291,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28900000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 29100000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 2.428889274597168E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 63061610.10357751,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 8.731149137020111E-11,
+          "max_mass_residual_kg_s": 6.217248937900877E-15,
+          "max_step_residual_j": 3.3830292522907257E-07,
+          "pump_ambient_j": 70314.44476808974,
+          "pump_electrical_j": 370076.0250952095,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 299761.58032712,
+          "roundoff_bound_j": 0.03090044721181589,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 31772651.476752043
+        },
+        "max_rack_return_c": 52.79021917790112,
+        "max_supply_c": 37.93858319994291,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28800000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28900000000
+          },
+          {
+            "measurement_id": "measurement:29000000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 29100000000
+          },
+          {
+            "measurement_id": "measurement:29200000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 29300000000
+          },
+          {
+            "measurement_id": "measurement:62400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 62500000000
+          },
+          {
+            "measurement_id": "measurement:62600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 62700000000
+          },
+          {
+            "measurement_id": "measurement:62800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 62900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-a/PUMP_LOW__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.03090044721181589,
+        "final10s_max_return_drift_k_min": 0.9214910044895532,
+        "final10s_return_drift_k_min": 1.3417740116517507,
+        "final10s_supply_drift_k_min": 0.4365346274236117,
+        "final_actual_speed": 0.7385363811748828,
+        "final_command": 0.7393747817352079,
+        "final_dp_kpa": 200.29486822047127,
+        "final_flow_m3_h": 50.181074685082,
+        "final_return_c": 51.87849266421756,
+        "final_supply_c": 37.93858319994291,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 63061610.10357751,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 70314.44476808974,
+          "pump_electrical_j": 370076.0250952095,
+          "pump_liquid_j": 299761.58032711997
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.2935637389309704E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 52.79021917790112,
+        "max_supply_c": 37.93858319994291,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 44.98441975308641,
+            "flow_m3_h": 23.781328296702764,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3521638386710163,
+            "command": 0.35241989331613294,
+            "dp_kpa": 45.54236216034692,
+            "flow_m3_h": 23.928353890464304,
+            "max_rack_return_c": 45.04921759752631,
+            "return_c": 45.01005698337377,
+            "safety": "NORMAL",
+            "supply_c": 37.36243002910737,
+            "time_s": 10
+          },
+          {
+            "actual": 0.5011889800870313,
+            "command": 0.5090504291428062,
+            "dp_kpa": 92.24207437447694,
+            "flow_m3_h": 34.054113354683764,
+            "max_rack_return_c": 48.2065939808121,
+            "return_c": 46.05733015656267,
+            "safety": "NORMAL",
+            "supply_c": 37.19788396468459,
+            "time_s": 30
+          },
+          {
+            "actual": 0.6419187003254156,
+            "command": 0.6456595404123135,
+            "dp_kpa": 151.3164311154883,
+            "flow_m3_h": 43.616226720661345,
+            "max_rack_return_c": 50.92531739852211,
+            "return_c": 49.05222326033112,
+            "safety": "NORMAL",
+            "supply_c": 37.33166640831081,
+            "time_s": 60
+          },
+          {
+            "actual": 0.7075310654644599,
+            "command": 0.7092734230222589,
+            "dp_kpa": 183.8302849961011,
+            "flow_m3_h": 48.074367279789186,
+            "max_rack_return_c": 52.19112291347477,
+            "return_c": 50.98097137521984,
+            "safety": "NORMAL",
+            "supply_c": 37.677127938713,
+            "time_s": 90
+          },
+          {
+            "actual": 0.7385363811748828,
+            "command": 0.7393747817352079,
+            "dp_kpa": 200.29486822047127,
+            "flow_m3_h": 50.181074685082,
+            "max_rack_return_c": 52.79021917790112,
+            "return_c": 51.87849266421756,
+            "safety": "NORMAL",
+            "supply_c": 37.93858319994291,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 31.772651476752156,
+        "total_fluid_energy_residual_j": 2.5406479835510254E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "sensitivity-a",
+        "id": "PUMP_LOW__LOAD_STEP",
+        "setting": {
+          "id": "PUMP_LOW",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 0.8,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "PUMP_LOW__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3521638386710163,
+        "final_command": 0.9,
+        "final_dp_pa": 45542.36216034692,
+        "final_flow_m3_s": 0.006646764969573418,
+        "final_return_c": 55.2630430630893,
+        "final_supply_c": 37.03137006426658,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 27300000000,
+          "TRACKING_FAULT_CONFIRMED": 28900000000,
+          "TRACKING_FAULT_SUSPECTED": 27700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.3113021850585938E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 39346396.69979172,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.4551915228366852E-11,
+          "max_mass_residual_kg_s": 2.6645352591003757E-15,
+          "max_step_residual_j": 3.750392352230847E-07,
+          "pump_ambient_j": 12770.557869824252,
+          "pump_electrical_j": 67213.46247275757,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 54442.90460293552,
+          "roundoff_bound_j": 0.030893184728898782,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 55242546.204809904
+        },
+        "max_rack_return_c": 58.94785688937367,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:27200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 27300000000
+          },
+          {
+            "measurement_id": "measurement:27600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 27700000000
+          },
+          {
+            "measurement_id": "measurement:28800000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 28900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-a/PUMP_LOW__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.030893184728898782,
+        "final10s_max_return_drift_k_min": 5.071889802772716,
+        "final10s_return_drift_k_min": 5.700482504865818,
+        "final10s_supply_drift_k_min": -0.013674517568119882,
+        "final_actual_speed": 0.3521638386710163,
+        "final_command": 0.9,
+        "final_dp_kpa": 45.54236216034692,
+        "final_flow_m3_h": 23.928353890464304,
+        "final_return_c": 55.2630430630893,
+        "final_supply_c": 37.03137006426658,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 28.9,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 28.9,
+        "first_tracking_suspected_s": 27.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 39346396.69979172,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 12770.557869824252,
+          "pump_electrical_j": 67213.46247275757,
+          "pump_liquid_j": 54442.90460293552
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 7.275957614183426E-12,
+        "max_local_energy_residual_j": 2.294065382102417E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 58.94785688937367,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 44.98441975308641,
+            "flow_m3_h": 23.781328296702764,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3521638386710163,
+            "command": 0.35241989331613294,
+            "dp_kpa": 45.54236216034692,
+            "flow_m3_h": 23.928353890464304,
+            "max_rack_return_c": 45.04921759752631,
+            "return_c": 45.01005698337377,
+            "safety": "NORMAL",
+            "supply_c": 37.36243002910737,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3521638386710163,
+            "command": 0.9,
+            "dp_kpa": 45.54236216034692,
+            "flow_m3_h": 23.928353890464304,
+            "max_rack_return_c": 48.50484606622746,
+            "return_c": 45.920883455759736,
+            "safety": "FAULT",
+            "supply_c": 37.192827716509726,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3521638386710163,
+            "command": 0.9,
+            "dp_kpa": 45.54236216034692,
+            "flow_m3_h": 23.928353890464304,
+            "max_rack_return_c": 52.79103642949963,
+            "return_c": 48.9298200436869,
+            "safety": "FAULT",
+            "supply_c": 37.08136684664606,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3521638386710163,
+            "command": 0.9,
+            "dp_kpa": 45.54236216034692,
+            "flow_m3_h": 23.928353890464304,
+            "max_rack_return_c": 56.21167153100072,
+            "return_c": 52.260440944641516,
+            "safety": "FAULT",
+            "supply_c": 37.042961383013846,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3521638386710163,
+            "command": 0.9,
+            "dp_kpa": 45.54236216034692,
+            "flow_m3_h": 23.928353890464304,
+            "max_rack_return_c": 58.94785688937367,
+            "return_c": 55.2630430630893,
+            "safety": "FAULT",
+            "supply_c": 37.03137006426658,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 55.242546204810054,
+        "total_fluid_energy_residual_j": -1.1622905731201172E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "sensitivity-a",
+        "id": "PUMP_LOW__PUMP_STUCK",
+        "setting": {
+          "id": "PUMP_LOW",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 0.8,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "UA_HIGH__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.6923639168789725,
+        "final_command": 0.6929045859442254,
+        "final_dp_pa": 220041.65341057288,
+        "final_flow_m3_s": 0.014610160801547948,
+        "final_return_c": 51.08005435778216,
+        "final_supply_c": 37.38590424441372,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 30500000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30700000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -3.427267074584961E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 67510271.25057052,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 8.731149137020111E-11,
+          "max_mass_residual_kg_s": 6.217248937900877E-15,
+          "max_step_residual_j": 3.7986023926350754E-07,
+          "pump_ambient_j": 85642.89362676382,
+          "pump_electrical_j": 450752.0717198107,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 365109.17809304653,
+          "roundoff_bound_j": 0.030902381780437863,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 27389337.927522182
+        },
+        "max_rack_return_c": 51.85983781997686,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:30400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 30500000000
+          },
+          {
+            "measurement_id": "measurement:30600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30700000000
+          },
+          {
+            "measurement_id": "measurement:30800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30900000000
+          },
+          {
+            "measurement_id": "measurement:75200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 75300000000
+          },
+          {
+            "measurement_id": "measurement:75400000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 75500000000
+          },
+          {
+            "measurement_id": "measurement:75600000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 75700000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-a/UA_HIGH__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.030902381780437863,
+        "final10s_max_return_drift_k_min": 0.6064055666512331,
+        "final10s_return_drift_k_min": 0.9081909351398281,
+        "final10s_supply_drift_k_min": 0.16990428821873138,
+        "final_actual_speed": 0.6923639168789725,
+        "final_command": 0.6929045859442254,
+        "final_dp_kpa": 220.04165341057288,
+        "final_flow_m3_h": 52.59657888557261,
+        "final_return_c": 51.08005435778216,
+        "final_supply_c": 37.38590424441372,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 67510271.25057052,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 85642.89362676379,
+          "pump_electrical_j": 450752.0717198107,
+          "pump_liquid_j": 365109.17809304653
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.2941890165384393E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 51.85983781997686,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3494835142198394,
+            "command": 0.34938527980117723,
+            "dp_kpa": 56.064691331584854,
+            "flow_m3_h": 26.549097630233803,
+            "max_rack_return_c": 44.9873595380497,
+            "return_c": 45.001442573683676,
+            "safety": "NORMAL",
+            "supply_c": 37.34694793879203,
+            "time_s": 10
+          },
+          {
+            "actual": 0.4911339108362738,
+            "command": 0.4984599174530189,
+            "dp_kpa": 110.72250179801098,
+            "flow_m3_h": 37.309806093195604,
+            "max_rack_return_c": 47.992973347038,
+            "return_c": 46.045516399848395,
+            "safety": "NORMAL",
+            "supply_c": 37.154621970913354,
+            "time_s": 30
+          },
+          {
+            "actual": 0.6175937939061884,
+            "command": 0.6207744837250686,
+            "dp_kpa": 175.08215910007888,
+            "flow_m3_h": 46.91654187707345,
+            "max_rack_return_c": 50.42575693883833,
+            "return_c": 48.83583958183954,
+            "safety": "NORMAL",
+            "supply_c": 37.142147547368154,
+            "time_s": 60
+          },
+          {
+            "actual": 0.6705699139984608,
+            "command": 0.6718738850880157,
+            "dp_kpa": 206.40688320304633,
+            "flow_m3_h": 50.9409611334164,
+            "max_rack_return_c": 51.44168658064149,
+            "return_c": 50.43340203957524,
+            "safety": "NORMAL",
+            "supply_c": 37.28089809515552,
+            "time_s": 90
+          },
+          {
+            "actual": 0.6923639168789725,
+            "command": 0.6929045859442254,
+            "dp_kpa": 220.04165341057288,
+            "flow_m3_h": 52.59657888557261,
+            "max_rack_return_c": 51.85983781997686,
+            "return_c": 51.08005435778216,
+            "safety": "NORMAL",
+            "supply_c": 37.38590424441372,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 27.389337927522348,
+        "total_fluid_energy_residual_j": -1.7881393432617188E-07,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "sensitivity-a",
+        "id": "UA_HIGH__LOAD_STEP",
+        "setting": {
+          "id": "UA_HIGH",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.5
+        }
+      }
+    },
+    "UA_HIGH__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3494835142198394,
+        "final_command": 0.9,
+        "final_dp_pa": 56064.69133158485,
+        "final_flow_m3_s": 0.007374749341731612,
+        "final_return_c": 54.809510386607656,
+        "final_supply_c": 37.01193836510595,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28500000000,
+          "TRACKING_FAULT_CONFIRMED": 30100000000,
+          "TRACKING_FAULT_SUSPECTED": 28900000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.996755599975586E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 43346987.05563901,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.1827872842550278E-11,
+          "max_mass_residual_kg_s": 3.1086244689504383E-15,
+          "max_step_residual_j": 3.7986023926350754E-07,
+          "pump_ambient_j": 17461.305309565316,
+          "pump_electrical_j": 91901.60689244978,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 74440.30158288607,
+          "roundoff_bound_j": 0.03089377673745061,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 51261953.24594188
+        },
+        "max_rack_return_c": 57.9227685961622,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28500000000
+          },
+          {
+            "measurement_id": "measurement:28800000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 28900000000
+          },
+          {
+            "measurement_id": "measurement:30000000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 30100000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-a/UA_HIGH__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.03089377673745061,
+        "final10s_max_return_drift_k_min": 4.5005450169605865,
+        "final10s_return_drift_k_min": 5.135683227961863,
+        "final10s_supply_drift_k_min": -0.014823887074271624,
+        "final_actual_speed": 0.3494835142198394,
+        "final_command": 0.9,
+        "final_dp_kpa": 56.064691331584854,
+        "final_flow_m3_h": 26.549097630233803,
+        "final_return_c": 54.809510386607656,
+        "final_supply_c": 37.01193836510595,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 30.1,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 30.1,
+        "first_tracking_suspected_s": 28.9,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 43346987.05563901,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17461.305309565316,
+          "pump_electrical_j": 91901.60689244978,
+          "pump_liquid_j": 74440.30158288607
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 7.275957614183426E-12,
+        "max_local_energy_residual_j": 2.2947787670091202E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 57.9227685961622,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3494835142198394,
+            "command": 0.34938527980117723,
+            "dp_kpa": 56.064691331584854,
+            "flow_m3_h": 26.549097630233803,
+            "max_rack_return_c": 44.9873595380497,
+            "return_c": 45.001442573683676,
+            "safety": "NORMAL",
+            "supply_c": 37.34694793879203,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3494835142198394,
+            "command": 0.5137852548166564,
+            "dp_kpa": 56.064691331584854,
+            "flow_m3_h": 26.549097630233803,
+            "max_rack_return_c": 48.30614779420654,
+            "return_c": 45.92535666353086,
+            "safety": "DEGRADED",
+            "supply_c": 37.16827930427172,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3494835142198394,
+            "command": 0.9,
+            "dp_kpa": 56.064691331584854,
+            "flow_m3_h": 26.549097630233803,
+            "max_rack_return_c": 52.3363659679992,
+            "return_c": 48.90994748682817,
+            "safety": "FAULT",
+            "supply_c": 37.05908113761393,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3494835142198394,
+            "command": 0.9,
+            "dp_kpa": 56.064691331584854,
+            "flow_m3_h": 26.549097630233803,
+            "max_rack_return_c": 55.473866960464534,
+            "return_c": 52.07037064747203,
+            "safety": "FAULT",
+            "supply_c": 37.02338997469906,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3494835142198394,
+            "command": 0.9,
+            "dp_kpa": 56.064691331584854,
+            "flow_m3_h": 26.549097630233803,
+            "max_rack_return_c": 57.9227685961622,
+            "return_c": 54.809510386607656,
+            "safety": "FAULT",
+            "supply_c": 37.01193836510595,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 51.26195324594196,
+        "total_fluid_energy_residual_j": -1.914799213409424E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "sensitivity-a",
+        "id": "UA_HIGH__PUMP_STUCK",
+        "setting": {
+          "id": "UA_HIGH",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.5
+        }
+      }
+    },
+    "UA_LOW__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.7609452322471557,
+        "final_command": 0.7624484535961074,
+        "final_dp_pa": 265792.57696001104,
+        "final_flow_m3_s": 0.01605735355825248,
+        "final_return_c": 52.30311936222205,
+        "final_supply_c": 40.96878997234313,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 30100000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30300000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.3634562492370605E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 58532993.76840863,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.1641532182693481E-10,
+          "max_mass_residual_kg_s": 7.993605777301127E-15,
+          "max_step_residual_j": 3.773275238927454E-07,
+          "pump_ambient_j": 99162.79328139313,
+          "pump_electrical_j": 521909.4383231218,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 422746.6450417283,
+          "roundoff_bound_j": 0.030904088096183537,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 36424252.87663174
+        },
+        "max_rack_return_c": 53.25389960226579,
+        "max_supply_c": 40.96878997234313,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:30000000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 30100000000
+          },
+          {
+            "measurement_id": "measurement:30200000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30300000000
+          },
+          {
+            "measurement_id": "measurement:30400000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30500000000
+          },
+          {
+            "measurement_id": "measurement:64600000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 64700000000
+          },
+          {
+            "measurement_id": "measurement:64800000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 64900000000
+          },
+          {
+            "measurement_id": "measurement:65000000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 65100000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-a/UA_LOW__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.030904088096183537,
+        "final10s_max_return_drift_k_min": 1.597986690099333,
+        "final10s_return_drift_k_min": 1.9940432820538945,
+        "final10s_supply_drift_k_min": 1.5086085459213336,
+        "final_actual_speed": 0.7609452322471557,
+        "final_command": 0.7624484535961074,
+        "final_dp_kpa": 265.79257696001105,
+        "final_flow_m3_h": 57.80647280970892,
+        "final_return_c": 52.30311936222205,
+        "final_supply_c": 40.96878997234313,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 58532993.76840862,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 99162.79328139313,
+          "pump_electrical_j": 521909.4383231218,
+          "pump_liquid_j": 422746.64504172816
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.2937911126064137E-08,
+        "max_node_mass_residual_kg_s": 5.251007961781795E-15,
+        "max_rack_return_c": 53.25389960226579,
+        "max_supply_c": 40.96878997234313,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3496649870031894,
+            "command": 0.3496139252169399,
+            "dp_kpa": 56.12293074317786,
+            "flow_m3_h": 26.562883512675622,
+            "max_rack_return_c": 44.992105259876496,
+            "return_c": 45.001990789955926,
+            "safety": "NORMAL",
+            "supply_c": 37.46229646499427,
+            "time_s": 10
+          },
+          {
+            "actual": 0.4934122706760241,
+            "command": 0.5009965121269715,
+            "dp_kpa": 111.75216325491736,
+            "flow_m3_h": 37.482885495688635,
+            "max_rack_return_c": 48.04463438555018,
+            "return_c": 46.06367715684394,
+            "safety": "NORMAL",
+            "supply_c": 37.66162647949761,
+            "time_s": 30
+          },
+          {
+            "actual": 0.6340080391152931,
+            "command": 0.6380588823188957,
+            "dp_kpa": 184.5124079824355,
+            "flow_m3_h": 48.163477371458434,
+            "max_rack_return_c": 50.77441169251722,
+            "return_c": 49.047672232129116,
+            "safety": "NORMAL",
+            "supply_c": 38.83434613313517,
+            "time_s": 60
+          },
+          {
+            "actual": 0.7127770554146889,
+            "command": 0.7151873152803858,
+            "dp_kpa": 233.20801347542982,
+            "flow_m3_h": 54.14729697633587,
+            "max_rack_return_c": 52.31164688360002,
+            "return_c": 51.10623397585806,
+            "safety": "NORMAL",
+            "supply_c": 40.09018271022228,
+            "time_s": 90
+          },
+          {
+            "actual": 0.7609452322471557,
+            "command": 0.7624484535961074,
+            "dp_kpa": 265.79257696001105,
+            "flow_m3_h": 57.80647280970892,
+            "max_rack_return_c": 53.25389960226579,
+            "return_c": 52.30311936222205,
+            "safety": "NORMAL",
+            "supply_c": 40.96878997234313,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 36.42425287663192,
+        "total_fluid_energy_residual_j": -1.1920928955078125E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "sensitivity-a",
+        "id": "UA_LOW__LOAD_STEP",
+        "setting": {
+          "id": "UA_LOW",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 0.5
+        }
+      }
+    },
+    "UA_LOW__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3496649870031894,
+        "final_command": 0.9,
+        "final_dp_pa": 56122.93074317786,
+        "final_flow_m3_s": 0.007378578753521006,
+        "final_return_c": 55.01065268271907,
+        "final_supply_c": 37.72727674407264,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28300000000,
+          "TRACKING_FAULT_CONFIRMED": 29900000000,
+          "TRACKING_FAULT_SUSPECTED": 28700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 6.183981895446777E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 41579795.658238605,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.1827872842550278E-11,
+          "max_mass_residual_kg_s": 2.6645352591003757E-15,
+          "max_step_residual_j": 3.7168501876294613E-07,
+          "pump_ambient_j": 17486.945185709206,
+          "pump_electrical_j": 92036.55360899429,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 74549.60842328302,
+          "roundoff_bound_j": 0.030893779973401005,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 53029253.9501853
+        },
+        "max_rack_return_c": 58.20546855881713,
+        "max_supply_c": 37.72727674407264,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28300000000
+          },
+          {
+            "measurement_id": "measurement:28600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 28700000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 29900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-a/UA_LOW__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.030893779973401005,
+        "final10s_max_return_drift_k_min": 4.705172454752756,
+        "final10s_return_drift_k_min": 5.314584706626192,
+        "final10s_supply_drift_k_min": 0.26399169793933197,
+        "final_actual_speed": 0.3496649870031894,
+        "final_command": 0.9,
+        "final_dp_kpa": 56.12293074317786,
+        "final_flow_m3_h": 26.562883512675622,
+        "final_return_c": 55.01065268271907,
+        "final_supply_c": 37.72727674407264,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 29.9,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 29.9,
+        "first_tracking_suspected_s": 28.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 41579795.6582386,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17486.945185709206,
+          "pump_electrical_j": 92036.55360899429,
+          "pump_liquid_j": 74549.60842328302
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 7.275957614183426E-12,
+        "max_local_energy_residual_j": 2.2937229005037807E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 58.20546855881713,
+        "max_supply_c": 37.72727674407264,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3496649870031894,
+            "command": 0.3496139252169399,
+            "dp_kpa": 56.12293074317786,
+            "flow_m3_h": 26.562883512675622,
+            "max_rack_return_c": 44.992105259876496,
+            "return_c": 45.001990789955926,
+            "safety": "NORMAL",
+            "supply_c": 37.46229646499427,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3496649870031894,
+            "command": 0.9,
+            "dp_kpa": 56.12293074317786,
+            "flow_m3_h": 26.562883512675622,
+            "max_rack_return_c": 48.338912227370656,
+            "return_c": 45.9358701470274,
+            "safety": "FAULT",
+            "supply_c": 37.42747926075964,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3496649870031894,
+            "command": 0.9,
+            "dp_kpa": 56.12293074317786,
+            "flow_m3_h": 26.562883512675622,
+            "max_rack_return_c": 52.43525701464216,
+            "return_c": 48.96125766812975,
+            "safety": "FAULT",
+            "supply_c": 37.47687136814852,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3496649870031894,
+            "command": 0.9,
+            "dp_kpa": 56.12293074317786,
+            "flow_m3_h": 26.562883512675622,
+            "max_rack_return_c": 55.65778188231633,
+            "return_c": 52.18726725412989,
+            "safety": "FAULT",
+            "supply_c": 37.59433779490308,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3496649870031894,
+            "command": 0.9,
+            "dp_kpa": 56.12293074317786,
+            "flow_m3_h": 26.562883512675622,
+            "max_rack_return_c": 58.20546855881713,
+            "return_c": 55.01065268271907,
+            "safety": "FAULT",
+            "supply_c": 37.72727674407264,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 53.02925395018529,
+        "total_fluid_energy_residual_j": 6.034970283508301E-07,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "sensitivity-a",
+        "id": "UA_LOW__PUMP_STUCK",
+        "setting": {
+          "id": "UA_LOW",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 0.5
+        }
+      }
+    },
+    "INVENTORY_HIGH__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.6343027918665952,
+        "final_command": 0.6357468298849311,
+        "final_dp_pa": 184684.00890409062,
+        "final_flow_m3_s": 0.013384963543184912,
+        "final_return_c": 49.2320745282878,
+        "final_supply_c": 37.53209770070703,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 50500000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 50700000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -2.6226043701171875E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 49782732.90472081,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 8.731149137020111E-11,
+          "max_mass_residual_kg_s": 7.105427357601002E-15,
+          "max_step_residual_j": 8.542965588276275E-07,
+          "pump_ambient_j": 58363.06226751367,
+          "pump_electrical_j": 307174.0119342829,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 248810.94966676933,
+          "roundoff_bound_j": 0.059285429800428446,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 45000578.04494333
+        },
+        "max_rack_return_c": 50.71968624904309,
+        "max_supply_c": 37.53209770070703,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:50400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 50500000000
+          },
+          {
+            "measurement_id": "measurement:50600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 50700000000
+          },
+          {
+            "measurement_id": "measurement:50800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 50900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-b/INVENTORY_HIGH__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.059285429800428446,
+        "final10s_max_return_drift_k_min": 1.520572800145942,
+        "final10s_return_drift_k_min": 2.22728755468313,
+        "final10s_supply_drift_k_min": 0.41366303649749625,
+        "final_actual_speed": 0.6343027918665952,
+        "final_command": 0.6357468298849311,
+        "final_dp_kpa": 184.6840089040906,
+        "final_flow_m3_h": 48.185868755465684,
+        "final_return_c": 49.2320745282878,
+        "final_supply_c": 37.53209770070703,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 49782732.904720806,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 58363.06226751367,
+          "pump_electrical_j": 307174.0119342829,
+          "pump_liquid_j": 248810.9496667693
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 2.9103830456733704E-11,
+        "max_local_energy_residual_j": 4.587218427332118E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 50.71968624904309,
+        "max_supply_c": 37.53209770070703,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 2623.4,
+        "secondary_mass_initial_kg": 2623.4,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3497957960120107,
+            "command": 0.3497599200968096,
+            "dp_kpa": 56.16492956155936,
+            "flow_m3_h": 26.57282063704575,
+            "max_rack_return_c": 44.995072929256025,
+            "return_c": 45.001378332889544,
+            "safety": "NORMAL",
+            "supply_c": 37.42003057302202,
+            "time_s": 10
+          },
+          {
+            "actual": 0.42741878342613326,
+            "command": 0.43195906622833885,
+            "dp_kpa": 83.85775952488414,
+            "flow_m3_h": 32.46958024760526,
+            "max_rack_return_c": 46.65415403758584,
+            "return_c": 45.29680199999484,
+            "safety": "NORMAL",
+            "supply_c": 37.297474150748826,
+            "time_s": 30
+          },
+          {
+            "actual": 0.5237316346839701,
+            "command": 0.5269127410369719,
+            "dp_kpa": 125.90809746418583,
+            "flow_m3_h": 39.7861465148256,
+            "max_rack_return_c": 48.548722449679076,
+            "return_c": 46.531025103615036,
+            "safety": "NORMAL",
+            "supply_c": 37.23943217511152,
+            "time_s": 60
+          },
+          {
+            "actual": 0.5898425799605058,
+            "command": 0.5919903530799786,
+            "dp_kpa": 159.70124000850083,
+            "flow_m3_h": 44.80837465766643,
+            "max_rack_return_c": 49.84686971748448,
+            "return_c": 48.00266507775672,
+            "safety": "NORMAL",
+            "supply_c": 37.34017903849514,
+            "time_s": 90
+          },
+          {
+            "actual": 0.6343027918665952,
+            "command": 0.6357468298849311,
+            "dp_kpa": 184.6840089040906,
+            "flow_m3_h": 48.185868755465684,
+            "max_rack_return_c": 50.71968624904309,
+            "return_c": 49.2320745282878,
+            "safety": "NORMAL",
+            "supply_c": 37.53209770070703,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 45.00057804494338,
+        "total_fluid_energy_residual_j": -2.5779008865356445E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "sensitivity-b",
+        "id": "INVENTORY_HIGH__LOAD_STEP",
+        "setting": {
+          "id": "INVENTORY_HIGH",
+          "inventory_scale": 2.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "INVENTORY_HIGH__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3497957960120107,
+        "final_command": 0.9,
+        "final_dp_pa": 56164.92956155936,
+        "final_flow_m3_s": 0.007381339065846042,
+        "final_return_c": 49.466946900358835,
+        "final_supply_c": 37.08384791477977,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 46300000000,
+          "TRACKING_FAULT_CONFIRMED": 48100000000,
+          "TRACKING_FAULT_SUSPECTED": 46700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 4.410743713378906E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 34367990.01399061,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.4551915228366852E-11,
+          "max_mass_residual_kg_s": 3.1086244689504383E-15,
+          "max_step_residual_j": 8.542965588276275E-07,
+          "pump_ambient_j": 17505.695428493007,
+          "pump_electrical_j": 92135.23909733181,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 74629.54366883865,
+          "roundoff_bound_j": 0.05928027328520684,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 60241139.529682636
+        },
+        "max_rack_return_c": 52.930462698754184,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:46200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 46300000000
+          },
+          {
+            "measurement_id": "measurement:46600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 46700000000
+          },
+          {
+            "measurement_id": "measurement:48000000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 48100000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-b/INVENTORY_HIGH__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.05928027328520684,
+        "final10s_max_return_drift_k_min": 3.4720962761711007,
+        "final10s_return_drift_k_min": 3.2540036124661356,
+        "final10s_supply_drift_k_min": -0.0561682412802611,
+        "final_actual_speed": 0.3497957960120107,
+        "final_command": 0.9,
+        "final_dp_kpa": 56.16492956155936,
+        "final_flow_m3_h": 26.57282063704575,
+        "final_return_c": 49.466946900358835,
+        "final_supply_c": 37.08384791477977,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 48.1,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 48.1,
+        "first_tracking_suspected_s": 46.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 34367990.01399061,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17505.695428493007,
+          "pump_electrical_j": 92135.23909733181,
+          "pump_liquid_j": 74629.54366883865
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 1.4551915228366852E-11,
+        "max_local_energy_residual_j": 4.586274826579029E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 52.930462698754184,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 2623.4,
+        "secondary_mass_initial_kg": 2623.4,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3497957960120107,
+            "command": 0.3497599200968096,
+            "dp_kpa": 56.16492956155936,
+            "flow_m3_h": 26.57282063704575,
+            "max_rack_return_c": 44.995072929256025,
+            "return_c": 45.001378332889544,
+            "safety": "NORMAL",
+            "supply_c": 37.42003057302202,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3497957960120107,
+            "command": 0.43564829243735514,
+            "dp_kpa": 56.16492956155936,
+            "flow_m3_h": 26.57282063704575,
+            "max_rack_return_c": 46.729570181120096,
+            "return_c": 45.27023580658948,
+            "safety": "NORMAL",
+            "supply_c": 37.29839459718983,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3497957960120107,
+            "command": 0.9,
+            "dp_kpa": 56.16492956155936,
+            "flow_m3_h": 26.57282063704575,
+            "max_rack_return_c": 49.06463838917119,
+            "return_c": 46.35980777889853,
+            "safety": "FAULT",
+            "supply_c": 37.18344922499216,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3497957960120107,
+            "command": 0.9,
+            "dp_kpa": 56.16492956155936,
+            "flow_m3_h": 26.57282063704575,
+            "max_rack_return_c": 51.119283754066146,
+            "return_c": 47.84990829672597,
+            "safety": "FAULT",
+            "supply_c": 37.11899978752399,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3497957960120107,
+            "command": 0.9,
+            "dp_kpa": 56.16492956155936,
+            "flow_m3_h": 26.57282063704575,
+            "max_rack_return_c": 52.930462698754184,
+            "return_c": 49.466946900358835,
+            "safety": "FAULT",
+            "supply_c": 37.08384791477977,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 60.24113952968289,
+        "total_fluid_energy_residual_j": 4.664063453674316E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "sensitivity-b",
+        "id": "INVENTORY_HIGH__PUMP_STUCK",
+        "setting": {
+          "id": "INVENTORY_HIGH",
+          "inventory_scale": 2.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "INVENTORY_LOW__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.7300765113044041,
+        "final_command": 0.7301803763139759,
+        "final_dp_pa": 244665.5367555312,
+        "final_flow_m3_s": 0.015405966382062382,
+        "final_return_c": 51.93280882213486,
+        "final_supply_c": 38.412248474932994,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 20300000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 20500000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.4901161193847656E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 79325818.00743613,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 8.731149137020111E-11,
+          "max_mass_residual_kg_s": 7.105427357601002E-15,
+          "max_step_residual_j": 1.9203889678465202E-07,
+          "pump_ambient_j": 115055.08534763455,
+          "pump_electrical_j": 605553.0807770238,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 490497.99542939,
+          "roundoff_bound_j": 0.016712848353482523,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 15699179.987993121
+        },
+        "max_rack_return_c": 52.60393551698115,
+        "max_supply_c": 38.412248474932994,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:20200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 20300000000
+          },
+          {
+            "measurement_id": "measurement:20400000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 20500000000
+          },
+          {
+            "measurement_id": "measurement:20600000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 20700000000
+          },
+          {
+            "measurement_id": "measurement:41200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 41300000000
+          },
+          {
+            "measurement_id": "measurement:41400000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 41500000000
+          },
+          {
+            "measurement_id": "measurement:41600000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 41700000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-b/INVENTORY_LOW__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.016712848353482523,
+        "final10s_max_return_drift_k_min": 0.12600150437435786,
+        "final10s_return_drift_k_min": 0.15891911170024287,
+        "final10s_supply_drift_k_min": 0.07772877780541876,
+        "final_actual_speed": 0.7300765113044041,
+        "final_command": 0.7301803763139759,
+        "final_dp_kpa": 244.6655367555312,
+        "final_flow_m3_h": 55.461478975424576,
+        "final_return_c": 51.93280882213486,
+        "final_supply_c": 38.412248474932994,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 79325818.00743613,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 115055.08534763452,
+          "pump_electrical_j": 605553.0807770237,
+          "pump_liquid_j": 490497.9954293899
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 1.1460315363365225E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 52.60393551698115,
+        "max_supply_c": 38.412248474932994,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 655.85,
+        "secondary_mass_initial_kg": 655.85,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34868144194608974,
+            "command": 0.34842814950544887,
+            "dp_kpa": 55.8076472569344,
+            "flow_m3_h": 26.488166873171284,
+            "max_rack_return_c": 44.967682137011195,
+            "return_c": 44.9973348404842,
+            "safety": "NORMAL",
+            "supply_c": 37.25195906567416,
+            "time_s": 10
+          },
+          {
+            "actual": 0.5839214077824476,
+            "command": 0.5930402090273844,
+            "dp_kpa": 156.51099147357988,
+            "flow_m3_h": 44.35856294453993,
+            "max_rack_return_c": 49.889401663382955,
+            "return_c": 47.998286136566264,
+            "safety": "NORMAL",
+            "supply_c": 37.29987186830516,
+            "time_s": 30
+          },
+          {
+            "actual": 0.6988058346069425,
+            "command": 0.7007180466562943,
+            "dp_kpa": 224.1553413874951,
+            "flow_m3_h": 53.0859499023074,
+            "max_rack_return_c": 52.02039376876303,
+            "return_c": 51.14881138407378,
+            "safety": "NORMAL",
+            "supply_c": 38.06454189539909,
+            "time_s": 60
+          },
+          {
+            "actual": 0.7241600619444866,
+            "command": 0.7246044651858086,
+            "dp_kpa": 240.71612639041317,
+            "flow_m3_h": 55.0120260390495,
+            "max_rack_return_c": 52.49349272084879,
+            "return_c": 51.7919388456595,
+            "safety": "NORMAL",
+            "supply_c": 38.344336619718945,
+            "time_s": 90
+          },
+          {
+            "actual": 0.7300765113044041,
+            "command": 0.7301803763139759,
+            "dp_kpa": 244.6655367555312,
+            "flow_m3_h": 55.461478975424576,
+            "max_rack_return_c": 52.60393551698115,
+            "return_c": 51.93280882213486,
+            "safety": "NORMAL",
+            "supply_c": 38.412248474932994,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 15.699179987993213,
+        "total_fluid_energy_residual_j": -5.960464477539063E-08,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "sensitivity-b",
+        "id": "INVENTORY_LOW__LOAD_STEP",
+        "setting": {
+          "id": "INVENTORY_LOW",
+          "inventory_scale": 0.5,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "INVENTORY_LOW__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.34868144194608974,
+        "final_command": 0.9,
+        "final_dp_pa": 55807.647256934404,
+        "final_flow_m3_s": 0.007357824131436468,
+        "final_return_c": 61.019195556331,
+        "final_supply_c": 37.06604462310543,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 19500000000,
+          "TRACKING_FAULT_CONFIRMED": 21100000000,
+          "TRACKING_FAULT_SUSPECTED": 19900000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.6391277313232422E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 57500213.05227526,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.1827872842550278E-11,
+          "max_mass_residual_kg_s": 3.1086244689504383E-15,
+          "max_step_residual_j": 1.9259823602624238E-07,
+          "pump_ambient_j": 17347.684468462274,
+          "pump_electrical_j": 91303.60246558722,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 73955.91799712839,
+          "roundoff_bound_j": 0.01670051692493284,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 37108242.8657217
+        },
+        "max_rack_return_c": 63.21010242651272,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:19400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 19500000000
+          },
+          {
+            "measurement_id": "measurement:19800000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 19900000000
+          },
+          {
+            "measurement_id": "measurement:21000000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 21100000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-b/INVENTORY_LOW__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.01670051692493284,
+        "final10s_max_return_drift_k_min": 3.854074043809419,
+        "final10s_return_drift_k_min": 4.6019221635502845,
+        "final10s_supply_drift_k_min": 0.015533422966882426,
+        "final_actual_speed": 0.34868144194608974,
+        "final_command": 0.9,
+        "final_dp_kpa": 55.8076472569344,
+        "final_flow_m3_h": 26.488166873171284,
+        "final_return_c": 61.019195556331,
+        "final_supply_c": 37.06604462310543,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 21.1,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 21.1,
+        "first_tracking_suspected_s": 19.9,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 57500213.05227526,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 17347.684468462274,
+          "pump_electrical_j": 91303.60246558722,
+          "pump_liquid_j": 73955.91799712839
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 1.4551915228366852E-11,
+        "max_local_energy_residual_j": 1.1467818694654852E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 63.21010242651272,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 655.85,
+        "secondary_mass_initial_kg": 655.85,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34868144194608974,
+            "command": 0.34842814950544887,
+            "dp_kpa": 55.8076472569344,
+            "flow_m3_h": 26.488166873171284,
+            "max_rack_return_c": 44.967682137011195,
+            "return_c": 44.9973348404842,
+            "safety": "NORMAL",
+            "supply_c": 37.25195906567416,
+            "time_s": 10
+          },
+          {
+            "actual": 0.34868144194608974,
+            "command": 0.9,
+            "dp_kpa": 55.8076472569344,
+            "flow_m3_h": 26.488166873171284,
+            "max_rack_return_c": 51.08908421085317,
+            "return_c": 47.81481166594341,
+            "safety": "FAULT",
+            "supply_c": 37.08013627219998,
+            "time_s": 30
+          },
+          {
+            "actual": 0.34868144194608974,
+            "command": 0.9,
+            "dp_kpa": 55.8076472569344,
+            "flow_m3_h": 26.488166873171284,
+            "max_rack_return_c": 57.18907567053844,
+            "return_c": 53.95046349311593,
+            "safety": "FAULT",
+            "supply_c": 37.048519587815804,
+            "time_s": 60
+          },
+          {
+            "actual": 0.34868144194608974,
+            "command": 0.9,
+            "dp_kpa": 55.8076472569344,
+            "flow_m3_h": 26.488166873171284,
+            "max_rack_return_c": 60.92177374225383,
+            "return_c": 58.29384064007638,
+            "safety": "FAULT",
+            "supply_c": 37.057245254335555,
+            "time_s": 90
+          },
+          {
+            "actual": 0.34868144194608974,
+            "command": 0.9,
+            "dp_kpa": 55.8076472569344,
+            "flow_m3_h": 26.488166873171284,
+            "max_rack_return_c": 63.21010242651272,
+            "return_c": 61.019195556331,
+            "safety": "FAULT",
+            "supply_c": 37.06604462310543,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 37.10824286572176,
+        "total_fluid_energy_residual_j": -1.043081283569336E-07,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "sensitivity-b",
+        "id": "INVENTORY_LOW__PUMP_STUCK",
+        "setting": {
+          "id": "INVENTORY_LOW",
+          "inventory_scale": 0.5,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "PUMP_HIGH__LOAD_STEP": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "feedback_changes_command": true,
+          "heat_sources": true,
+          "hydraulic_response": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "no_false_confirmation": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.6808052294261837,
+        "final_command": 0.6814816857069985,
+        "final_dp_pa": 255307.1980437684,
+        "final_flow_m3_s": 0.015737439578995434,
+        "final_return_c": 50.8763038217171,
+        "final_supply_c": 38.31741668017173,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 32100000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 32300000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 1.1175870895385742E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 67733142.79414254,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.4551915228366852E-10,
+          "max_mass_residual_kg_s": 6.217248937900877E-15,
+          "max_step_residual_j": 3.486929927021265E-07,
+          "pump_ambient_j": 105717.58903981786,
+          "pump_electrical_j": 556408.3633674614,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 450690.7743276445,
+          "roundoff_bound_j": 0.03090491536202858,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 27252047.980186224
+        },
+        "max_rack_return_c": 51.63183076423866,
+        "max_supply_c": 38.31741668017173,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:32000000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 32100000000
+          },
+          {
+            "measurement_id": "measurement:32200000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 32300000000
+          },
+          {
+            "measurement_id": "measurement:32400000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 32500000000
+          },
+          {
+            "measurement_id": "measurement:85600000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 85700000000
+          },
+          {
+            "measurement_id": "measurement:85800000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 85900000000
+          },
+          {
+            "measurement_id": "measurement:86000000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 86100000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-b/PUMP_HIGH__LOAD_STEP",
+      "analysis": {
+        "energy_bound_j": 0.03090491536202858,
+        "final10s_max_return_drift_k_min": 0.7439293330271539,
+        "final10s_return_drift_k_min": 1.006396347213581,
+        "final10s_supply_drift_k_min": 0.45744151785083886,
+        "final_actual_speed": 0.6808052294261837,
+        "final_command": 0.6814816857069985,
+        "final_dp_kpa": 255.3071980437684,
+        "final_flow_m3_h": 56.65478248438356,
+        "final_return_c": 50.8763038217171,
+        "final_supply_c": 38.31741668017173,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 67733142.79414254,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 105717.58903981786,
+          "pump_electrical_j": 556408.3633674614,
+          "pump_liquid_j": 450690.77432764455
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.292836143169552E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 51.63183076423866,
+        "max_supply_c": 38.31741668017173,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 67.47662962962963,
+            "flow_m3_h": 29.12605986626638,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3471135887858688,
+            "command": 0.346709575892342,
+            "dp_kpa": 66.36827422088707,
+            "flow_m3_h": 28.885860478205103,
+            "max_rack_return_c": 44.93284527350704,
+            "return_c": 44.9923953731672,
+            "safety": "NORMAL",
+            "supply_c": 37.34871708464476,
+            "time_s": 10
+          },
+          {
+            "actual": 0.48282506523290986,
+            "command": 0.48976340533663176,
+            "dp_kpa": 128.40942728488534,
+            "flow_m3_h": 40.17940501402202,
+            "max_rack_return_c": 47.817757032087115,
+            "return_c": 46.0266448513384,
+            "safety": "NORMAL",
+            "supply_c": 37.23252863462142,
+            "time_s": 30
+          },
+          {
+            "actual": 0.6024130764380458,
+            "command": 0.6054797897234578,
+            "dp_kpa": 199.89690691415524,
+            "flow_m3_h": 50.131198081589226,
+            "max_rack_return_c": 50.1195236590018,
+            "return_c": 48.69027973558349,
+            "safety": "NORMAL",
+            "supply_c": 37.575309459073026,
+            "time_s": 60
+          },
+          {
+            "actual": 0.6557450160134072,
+            "command": 0.6571544463003335,
+            "dp_kpa": 236.85758132131048,
+            "flow_m3_h": 54.56933883832088,
+            "max_rack_return_c": 51.14766260702373,
+            "return_c": 50.202367615518085,
+            "safety": "NORMAL",
+            "supply_c": 38.03193805387315,
+            "time_s": 90
+          },
+          {
+            "actual": 0.6808052294261837,
+            "command": 0.6814816857069985,
+            "dp_kpa": 255.3071980437684,
+            "flow_m3_h": 56.65478248438356,
+            "max_rack_return_c": 51.63183076423866,
+            "return_c": 50.8763038217171,
+            "safety": "NORMAL",
+            "supply_c": 38.31741668017173,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 27.252047980186305,
+        "total_fluid_energy_residual_j": 1.2069940567016602E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": null,
+        "group": "sensitivity-b",
+        "id": "PUMP_HIGH__LOAD_STEP",
+        "setting": {
+          "id": "PUMP_HIGH",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.2,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "PUMP_HIGH__PUMP_STUCK": {
+      "behavior": {
+        "case": "PUMP_STUCK",
+        "checks": {
+          "commands_observation_bound": true,
+          "eligible_confirmation": true,
+          "energy": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "new_issued_demand": true,
+          "no_explicit_equipment_fault": true,
+          "pump_energy": true,
+          "safety_fault_latched": true,
+          "stuck_flow": true,
+          "stuck_physics": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "final_actual_speed": 0.3471135887858688,
+        "final_command": 0.9,
+        "final_dp_pa": 66368.27422088708,
+        "final_flow_m3_s": 0.008023850132834751,
+        "final_return_c": 54.39292940290818,
+        "final_supply_c": 37.08302607224704,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 29500000000,
+          "TRACKING_FAULT_CONFIRMED": 31100000000,
+          "TRACKING_FAULT_SUSPECTED": 29900000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": 5.811452865600586E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 46521002.56011241,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 2.9103830456733704E-11,
+          "max_mass_residual_kg_s": 3.552713678800501E-15,
+          "max_step_residual_j": 3.6944402381777763E-07,
+          "pump_ambient_j": 22510.95208915486,
+          "pump_electrical_j": 118478.69520608141,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 95967.74311692166,
+          "roundoff_bound_j": 0.030894414041870797,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 48109465.183005095
+        },
+        "max_rack_return_c": 57.10259203092119,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:29400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 29500000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 29900000000
+          },
+          {
+            "measurement_id": "measurement:31000000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 31100000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "sensitivity-b/PUMP_HIGH__PUMP_STUCK",
+      "analysis": {
+        "energy_bound_j": 0.030894414041870797,
+        "final10s_max_return_drift_k_min": 4.068931788271357,
+        "final10s_return_drift_k_min": 4.680804060582091,
+        "final10s_supply_drift_k_min": 0.014988853179943362,
+        "final_actual_speed": 0.3471135887858688,
+        "final_command": 0.9,
+        "final_dp_kpa": 66.36827422088707,
+        "final_flow_m3_h": 28.885860478205103,
+        "final_return_c": 54.39292940290818,
+        "final_supply_c": 37.08302607224704,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 31.1,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 31.1,
+        "first_tracking_suspected_s": 29.9,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 46521002.56011242,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 22510.95208915486,
+          "pump_electrical_j": 118478.69520608141,
+          "pump_liquid_j": 95967.74311692166
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 1.4551915228366852E-11,
+        "max_local_energy_residual_j": 2.293108991580084E-08,
+        "max_node_mass_residual_kg_s": 1.7503359872605984E-15,
+        "max_rack_return_c": 57.10259203092119,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 67.47662962962963,
+            "flow_m3_h": 29.12605986626638,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.3471135887858688,
+            "command": 0.346709575892342,
+            "dp_kpa": 66.36827422088707,
+            "flow_m3_h": 28.885860478205103,
+            "max_rack_return_c": 44.93284527350704,
+            "return_c": 44.9923953731672,
+            "safety": "NORMAL",
+            "supply_c": 37.34871708464476,
+            "time_s": 10
+          },
+          {
+            "actual": 0.3471135887858688,
+            "command": 0.5053684322193334,
+            "dp_kpa": 66.36827422088707,
+            "flow_m3_h": 28.885860478205103,
+            "max_rack_return_c": 48.13653499253053,
+            "return_c": 45.920282909441426,
+            "safety": "DEGRADED",
+            "supply_c": 37.18116864100347,
+            "time_s": 30
+          },
+          {
+            "actual": 0.3471135887858688,
+            "command": 0.9,
+            "dp_kpa": 66.36827422088707,
+            "flow_m3_h": 28.885860478205103,
+            "max_rack_return_c": 51.95842774556354,
+            "return_c": 48.865918981127265,
+            "safety": "FAULT",
+            "supply_c": 37.09381924932313,
+            "time_s": 60
+          },
+          {
+            "actual": 0.3471135887858688,
+            "command": 0.9,
+            "dp_kpa": 66.36827422088707,
+            "flow_m3_h": 28.885860478205103,
+            "max_rack_return_c": 54.87295791404722,
+            "return_c": 51.870995471885124,
+            "safety": "FAULT",
+            "supply_c": 37.07825411359255,
+            "time_s": 90
+          },
+          {
+            "actual": 0.3471135887858688,
+            "command": 0.9,
+            "dp_kpa": 66.36827422088707,
+            "flow_m3_h": 28.885860478205103,
+            "max_rack_return_c": 57.10259203092119,
+            "return_c": 54.39292940290818,
+            "safety": "FAULT",
+            "supply_c": 37.08302607224704,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 48.109465183005156,
+        "total_fluid_energy_residual_j": 6.48200511932373E-07,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "PUMP_STUCK",
+        "fault": null,
+        "group": "sensitivity-b",
+        "id": "PUMP_HIGH__PUMP_STUCK",
+        "setting": {
+          "id": "PUMP_HIGH",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.2,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "ACTUATOR_RECOVERY": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "confirmed_before_physical_recovery": true,
+          "energy": true,
+          "fault_latch_survives_motion_recovery": true,
+          "fault_phases_recorded": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "physical_motion_restored": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "fault_fixture": {
+          "end_ns": 45000000000,
+          "id": "ACTUATOR_RECOVERY",
+          "kind": "SILENT_STUCK_THEN_RELEASE",
+          "start_ns": 10000000000
+        },
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_pa": 371809.99999999953,
+        "final_flow_m3_s": 0.018991666666666657,
+        "final_return_c": 50.02966006746237,
+        "final_supply_c": 39.12047578783995,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 28300000000,
+          "TRACKING_FAULT_CONFIRMED": 29900000000,
+          "TRACKING_FAULT_SUSPECTED": 28700000000,
+          "TRACKING_PROGRESS": null
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -9.08970832824707E-07,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 71833364.99009389,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.7462298274040222E-10,
+          "max_mass_residual_kg_s": 7.993605777301127E-15,
+          "max_step_residual_j": 3.584891601349227E-07,
+          "pump_ambient_j": 188132.57038595085,
+          "pump_electrical_j": 990171.4230839409,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 802038.8526979873,
+          "roundoff_bound_j": 0.03091531676913537,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 23503173.862603188
+        },
+        "max_rack_return_c": 50.587610787320784,
+        "max_supply_c": 39.12047578783995,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:28200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 28300000000
+          },
+          {
+            "measurement_id": "measurement:28600000000",
+            "state": "TRACKING_FAULT_SUSPECTED",
+            "time_ns": 28700000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "TRACKING_FAULT_CONFIRMED",
+            "time_ns": 29900000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "fault/ACTUATOR_RECOVERY",
+      "analysis": {
+        "energy_bound_j": 0.03091531676913537,
+        "final10s_max_return_drift_k_min": 0.2260288162051438,
+        "final10s_return_drift_k_min": 0.19519232963978084,
+        "final10s_supply_drift_k_min": 0.06038503274487539,
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_kpa": 371.80999999999955,
+        "final_flow_m3_h": 68.36999999999996,
+        "final_return_c": 50.02966006746237,
+        "final_supply_c": 39.12047578783995,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 29.9,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": 29.9,
+        "first_tracking_suspected_s": 28.7,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 71833364.99009389,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 188132.57038595085,
+          "pump_electrical_j": 990171.4230839409,
+          "pump_liquid_j": 802038.8526979873
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.2903520857653348E-08,
+        "max_node_mass_residual_kg_s": 7.0013439490423934E-15,
+        "max_rack_return_c": 50.587610787320784,
+        "max_supply_c": 39.12047578783995,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.9,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 48.30799304104556,
+            "return_c": 45.92594918949703,
+            "safety": "FAULT",
+            "supply_c": 37.182862199734416,
+            "time_s": 30
+          },
+          {
+            "actual": 0.8999996474489552,
+            "command": 0.9,
+            "dp_kpa": 371.80970870671484,
+            "flow_m3_h": 68.3699732178723,
+            "max_rack_return_c": 50.34894983925585,
+            "return_c": 49.36323601336687,
+            "safety": "FAULT",
+            "supply_c": 38.399302367296514,
+            "time_s": 60
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 371.80999999999955,
+            "flow_m3_h": 68.36999999999996,
+            "max_rack_return_c": 50.39914075813499,
+            "return_c": 49.91571313864006,
+            "safety": "FAULT",
+            "supply_c": 39.058629397892275,
+            "time_s": 90
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 371.80999999999955,
+            "flow_m3_h": 68.36999999999996,
+            "max_rack_return_c": 50.52821126533911,
+            "return_c": 50.02966006746237,
+            "safety": "FAULT",
+            "supply_c": 39.12047578783995,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 23.503173862603226,
+        "total_fluid_energy_residual_j": -8.791685104370117E-07,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": {
+          "end_ns": 45000000000,
+          "id": "ACTUATOR_RECOVERY",
+          "kind": "SILENT_STUCK_THEN_RELEASE",
+          "start_ns": 10000000000
+        },
+        "group": "fault",
+        "id": "ACTUATOR_RECOVERY",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "ACTUATOR_SLOW": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "fault_phases_recorded": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "pump_energy": true,
+          "registered_physical_degradation_exercised": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "fault_fixture": {
+          "end_ns": 120000000000,
+          "id": "ACTUATOR_SLOW",
+          "kind": "RAMP_0_05_TAU_4",
+          "start_ns": 10000000000
+        },
+        "final_actual_speed": 0.7063616820380266,
+        "final_command": 0.7089913424904324,
+        "final_dp_pa": 229028.91274059226,
+        "final_flow_m3_s": 0.014905539568191323,
+        "final_return_c": 51.37229439907571,
+        "final_supply_c": 38.14544541209506,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 29900000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30100000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.6689300537109375E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 65480007.34525464,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 8.731149137020111E-11,
+          "max_mass_residual_kg_s": 7.105427357601002E-15,
+          "max_step_residual_j": 3.642853698693216E-07,
+          "pump_ambient_j": 86302.5014644025,
+          "pump_electrical_j": 454223.6919179074,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 367921.19045350456,
+          "roundoff_bound_j": 0.030902465028040872,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 29422413.8451972
+        },
+        "max_rack_return_c": 52.18207649068728,
+        "max_supply_c": 38.14544541209506,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "tracking_detection_scope": "NOT_CONFIRMED_FOR_THIS_GRADUAL_FEEDBACK_DEMAND",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:29800000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 29900000000
+          },
+          {
+            "measurement_id": "measurement:30000000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30100000000
+          },
+          {
+            "measurement_id": "measurement:30200000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30300000000
+          },
+          {
+            "measurement_id": "measurement:70000000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 70100000000
+          },
+          {
+            "measurement_id": "measurement:70200000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 70300000000
+          },
+          {
+            "measurement_id": "measurement:70400000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 70500000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "fault/ACTUATOR_SLOW",
+      "analysis": {
+        "energy_bound_j": 0.030902465028040872,
+        "final10s_max_return_drift_k_min": 0.7641984848389711,
+        "final10s_return_drift_k_min": 1.0872828189450274,
+        "final10s_supply_drift_k_min": 0.459817027247027,
+        "final_actual_speed": 0.7063616820380266,
+        "final_command": 0.7089913424904324,
+        "final_dp_kpa": 229.02891274059226,
+        "final_flow_m3_h": 53.65994244548876,
+        "final_return_c": 51.37229439907571,
+        "final_supply_c": 38.14544541209506,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": null,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 65480007.34525464,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 86302.5014644025,
+          "pump_electrical_j": 454223.6919179074,
+          "pump_liquid_j": 367921.1904535045
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.293745637871325E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 52.18207649068728,
+        "max_supply_c": 38.14544541209506,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.47375745403199226,
+            "command": 0.5020153579681932,
+            "dp_kpa": 103.02631336978756,
+            "flow_m3_h": 35.989774591297014,
+            "max_rack_return_c": 48.064903471356104,
+            "return_c": 46.03324711106342,
+            "safety": "NORMAL",
+            "supply_c": 37.200394114083736,
+            "time_s": 30
+          },
+          {
+            "actual": 0.6159234013488615,
+            "command": 0.6286777628735052,
+            "dp_kpa": 174.13635802906356,
+            "flow_m3_h": 46.78964772246851,
+            "max_rack_return_c": 50.584302056403544,
+            "return_c": 48.92613212952631,
+            "safety": "NORMAL",
+            "supply_c": 37.4318405093548,
+            "time_s": 60
+          },
+          {
+            "actual": 0.6781560492069596,
+            "command": 0.6837861122038873,
+            "dp_kpa": 211.10344827546248,
+            "flow_m3_h": 51.51725453808869,
+            "max_rack_return_c": 51.68051105330039,
+            "return_c": 50.6321987232007,
+            "safety": "NORMAL",
+            "supply_c": 37.860164663255375,
+            "time_s": 90
+          },
+          {
+            "actual": 0.7063616820380266,
+            "command": 0.7089913424904324,
+            "dp_kpa": 229.02891274059226,
+            "flow_m3_h": 53.65994244548876,
+            "max_rack_return_c": 52.18207649068728,
+            "return_c": 51.37229439907571,
+            "safety": "NORMAL",
+            "supply_c": 38.14544541209506,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 29.42241384519737,
+        "total_fluid_energy_residual_j": -1.5050172805786133E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": {
+          "end_ns": 120000000000,
+          "id": "ACTUATOR_SLOW",
+          "kind": "RAMP_0_05_TAU_4",
+          "start_ns": 10000000000
+        },
+        "group": "fault",
+        "id": "ACTUATOR_SLOW",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "LOW_FLOW": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "actual_hydraulic_restriction_exercised": true,
+          "commands_observation_bound": true,
+          "energy": true,
+          "fault_phases_recorded": true,
+          "heat_sources": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "measured_low_flow_fault": true,
+          "pump_energy": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "fault_fixture": {
+          "end_ns": 120000000000,
+          "id": "LOW_FLOW",
+          "kind": "NETWORK_RESISTANCE_100X",
+          "start_ns": 40000000000
+        },
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_pa": 463603.49127181986,
+        "final_flow_m3_s": 0.0021206836837458698,
+        "final_return_c": 53.03223994745093,
+        "final_supply_c": 37.11837433068405,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 30500000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30700000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.1436641216278076E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 20872844.939858183,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.7462298274040222E-10,
+          "max_mass_residual_kg_s": 4.440892098500626E-15,
+          "max_step_residual_j": 3.413661033846438E-07,
+          "pump_ambient_j": 38711.11975915268,
+          "pump_electrical_j": 203742.7355744925,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 165031.61581533685,
+          "roundoff_bound_j": 0.030896458628138737,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 73826686.67595601
+        },
+        "max_rack_return_c": 64.76723721398258,
+        "max_supply_c": 37.5,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:30400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 30500000000
+          },
+          {
+            "measurement_id": "measurement:30600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30700000000
+          },
+          {
+            "measurement_id": "measurement:30800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30900000000
+          },
+          {
+            "measurement_id": "measurement:40200000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 40300000000
+          },
+          {
+            "measurement_id": "measurement:40400000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 40500000000
+          },
+          {
+            "measurement_id": "measurement:41400000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 41500000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "fault/LOW_FLOW",
+      "analysis": {
+        "energy_bound_j": 0.030896458628138737,
+        "final10s_max_return_drift_k_min": 10.821783866319606,
+        "final10s_return_drift_k_min": 6.604066230611579,
+        "final10s_supply_drift_k_min": -0.06020815617000608,
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_kpa": 463.60349127181985,
+        "final_flow_m3_h": 7.634461261485131,
+        "final_return_c": 53.03223994745093,
+        "final_supply_c": 37.11837433068405,
+        "first_low_flow_fault_s": 40.1,
+        "first_safety_fault_s": 40.1,
+        "first_sensor_invalid_s": null,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 20872844.93985818,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 38711.11975915268,
+          "pump_electrical_j": 203742.7355744925,
+          "pump_liquid_j": 165031.61581533685
+        },
+        "invalid_phase_count": 0,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.2931999410502613E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 64.76723721398258,
+        "max_supply_c": 37.5,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.49131765041612346,
+            "command": 0.49867203479001887,
+            "dp_kpa": 110.80536274900035,
+            "flow_m3_h": 37.32376417661151,
+            "max_rack_return_c": 47.997321757948725,
+            "return_c": 46.04682128345854,
+            "safety": "NORMAL",
+            "supply_c": 37.209738848516736,
+            "time_s": 30
+          },
+          {
+            "actual": 0.8999999988065844,
+            "command": 0.9,
+            "dp_kpa": 463.60349004232785,
+            "flow_m3_h": 7.634461251361709,
+            "max_rack_return_c": 53.274900147223775,
+            "return_c": 47.755211326122435,
+            "safety": "FAULT",
+            "supply_c": 37.198163768510994,
+            "time_s": 60
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 463.60349127181985,
+            "flow_m3_h": 7.634461261485131,
+            "max_rack_return_c": 59.22550080785396,
+            "return_c": 49.9533618234463,
+            "safety": "FAULT",
+            "supply_c": 37.15197343138391,
+            "time_s": 90
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 463.60349127181985,
+            "flow_m3_h": 7.634461261485131,
+            "max_rack_return_c": 64.76723721398258,
+            "return_c": 53.03223994745093,
+            "safety": "FAULT",
+            "supply_c": 37.11837433068405,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 73.82668667595614,
+        "total_fluid_energy_residual_j": -1.0132789611816406E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": {
+          "end_ns": 120000000000,
+          "id": "LOW_FLOW",
+          "kind": "NETWORK_RESISTANCE_100X",
+          "start_ns": 40000000000
+        },
+        "group": "fault",
+        "id": "LOW_FLOW",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "SENSOR_LOSS": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "fault_phases_recorded": true,
+          "fresh_samples_recover_but_fault_stays_latched": true,
+          "heat_sources": true,
+          "invalid_does_not_confirm_new_tracking": true,
+          "invalid_observation_exercised": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "pump_energy": true,
+          "sensor_fault_not_false_actuator_fault": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "fault_fixture": {
+          "end_ns": 45000000000,
+          "id": "SENSOR_LOSS",
+          "kind": "MISSING_QUALITY",
+          "start_ns": 40000000000
+        },
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_pa": 371809.99999999953,
+        "final_flow_m3_s": 0.018991666666666657,
+        "final_return_c": 49.63178232878704,
+        "final_supply_c": 39.04435588922064,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 30500000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30700000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -2.6971101760864258E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 73493829.44315211,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.7462298274040222E-10,
+          "max_mass_residual_kg_s": 7.993605777301127E-15,
+          "max_step_residual_j": 3.570457920432091E-07,
+          "pump_ambient_j": 207028.0894018789,
+          "pump_electrical_j": 1089621.523167768,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 882593.4337658864,
+          "roundoff_bound_j": 0.03091770152955839,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 21923263.990611076
+        },
+        "max_rack_return_c": 50.19065051370882,
+        "max_supply_c": 39.04435588922064,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:30400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 30500000000
+          },
+          {
+            "measurement_id": "measurement:30600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30700000000
+          },
+          {
+            "measurement_id": "measurement:30800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30900000000
+          },
+          {
+            "measurement_id": "measurement:40000000000",
+            "state": "INSUFFICIENT_MEASUREMENT",
+            "time_ns": 40100000000
+          },
+          {
+            "measurement_id": "measurement:45000000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 45100000000
+          },
+          {
+            "measurement_id": "measurement:45200000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 45300000000
+          }
+        ],
+        "unique_measurements": 600
+      },
+      "directory": "fault/SENSOR_LOSS",
+      "analysis": {
+        "energy_bound_j": 0.03091770152955839,
+        "final10s_max_return_drift_k_min": 0.587188438565363,
+        "final10s_return_drift_k_min": 0.6184594954377189,
+        "final10s_supply_drift_k_min": 0.1284101028356872,
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_kpa": 371.80999999999955,
+        "final_flow_m3_h": 68.36999999999996,
+        "final_return_c": 49.63178232878704,
+        "final_supply_c": 39.04435588922064,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 40.1,
+        "first_sensor_invalid_s": 40.1,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 73493829.44315211,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 207028.0894018789,
+          "pump_electrical_j": 1089621.523167768,
+          "pump_liquid_j": 882593.4337658865
+        },
+        "invalid_phase_count": 25,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.293813849973958E-08,
+        "max_node_mass_residual_kg_s": 3.5006719745211967E-15,
+        "max_rack_return_c": 50.19065051370882,
+        "max_supply_c": 39.04435588922064,
+        "phase_count": 600,
+        "repeated_observations": 0,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.49131765041612346,
+            "command": 0.49867203479001887,
+            "dp_kpa": 110.80536274900035,
+            "flow_m3_h": 37.32376417661151,
+            "max_rack_return_c": 47.997321757948725,
+            "return_c": 46.04682128345854,
+            "safety": "NORMAL",
+            "supply_c": 37.209738848516736,
+            "time_s": 30
+          },
+          {
+            "actual": 0.8999999988065844,
+            "command": 0.9,
+            "dp_kpa": 371.809999013947,
+            "flow_m3_h": 68.3699999093402,
+            "max_rack_return_c": 49.33601644345816,
+            "return_c": 48.636580658993296,
+            "safety": "FAULT",
+            "supply_c": 38.56663539564187,
+            "time_s": 60
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 371.80999999999955,
+            "flow_m3_h": 68.36999999999996,
+            "max_rack_return_c": 49.84263198172613,
+            "return_c": 49.26980156918893,
+            "safety": "FAULT",
+            "supply_c": 38.95825921876366,
+            "time_s": 90
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 371.80999999999955,
+            "flow_m3_h": 68.36999999999996,
+            "max_rack_return_c": 50.19065051370882,
+            "return_c": 49.63178232878704,
+            "safety": "FAULT",
+            "supply_c": 39.04435588922064,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 21.923263990611332,
+        "total_fluid_energy_residual_j": -2.4437904357910156E-06,
+        "unique_sources": 600
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": {
+          "end_ns": 45000000000,
+          "id": "SENSOR_LOSS",
+          "kind": "MISSING_QUALITY",
+          "start_ns": 40000000000
+        },
+        "group": "fault",
+        "id": "SENSOR_LOSS",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    },
+    "STALE_MEASUREMENT": {
+      "behavior": {
+        "case": "LOAD_STEP",
+        "checks": {
+          "commands_observation_bound": true,
+          "energy": true,
+          "fault_phases_recorded": true,
+          "fresh_samples_recover_but_fault_stays_latched": true,
+          "heat_sources": true,
+          "invalid_does_not_confirm_new_tracking": true,
+          "invalid_observation_exercised": true,
+          "load_step_affects_heat": true,
+          "mass": true,
+          "pump_energy": true,
+          "sensor_fault_not_false_actuator_fault": true,
+          "thermal_response": true,
+          "transactions": true
+        },
+        "fault_bit_used": false,
+        "fault_fixture": {
+          "end_ns": 45000000000,
+          "id": "STALE_MEASUREMENT",
+          "kind": "STOP_PUBLISHING_SAMPLES",
+          "start_ns": 40000000000
+        },
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_pa": 371809.99999999953,
+        "final_flow_m3_s": 0.018991666666666657,
+        "final_return_c": 49.645418243370386,
+        "final_supply_c": 39.04695048832605,
+        "first_state_times_ns": {
+          "HANDOFF_PENDING": 30500000000,
+          "TRACKING_FAULT_CONFIRMED": null,
+          "TRACKING_FAULT_SUSPECTED": null,
+          "TRACKING_PROGRESS": 30700000000
+        },
+        "hardware": "CALIBRATION_REQUIRED",
+        "ledger": {
+          "air_load_j": 4975500.0,
+          "energy_closed": true,
+          "fluid_energy_residual_j": -1.5944242477416992E-06,
+          "heat_source_closed": true,
+          "hx_to_primary_j": 73433363.9052277,
+          "it_j": 99510000.0,
+          "liquid_load_j": 94534500.0,
+          "max_hydraulic_residual_pa": 1.7462298274040222E-10,
+          "max_mass_residual_kg_s": 7.993605777301127E-15,
+          "max_step_residual_j": 3.413661033846438E-07,
+          "pump_ambient_j": 205514.08409281023,
+          "pump_electrical_j": 1081653.0741726696,
+          "pump_energy_closed": true,
+          "pump_liquid_j": 876138.9900798572,
+          "roundoff_bound_j": 0.03091751045039628,
+          "roundoff_model": "gamma_n=n*u/(1-n*u), u=2^-53",
+          "roundoff_operations_budget": 76864,
+          "stored_change_j": 21977275.08485055
+        },
+        "max_rack_return_c": 50.202315700219515,
+        "max_supply_c": 39.04695048832605,
+        "new_integrated_system_qualification": false,
+        "phantom_progress_forced": false,
+        "status": "PASS",
+        "transaction_count": 600,
+        "transitions": [
+          {
+            "measurement_id": "measurement:0",
+            "state": "STEADY_TRACKING",
+            "time_ns": 100000000
+          },
+          {
+            "measurement_id": "measurement:30400000000",
+            "state": "HANDOFF_PENDING",
+            "time_ns": 30500000000
+          },
+          {
+            "measurement_id": "measurement:30600000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 30700000000
+          },
+          {
+            "measurement_id": "measurement:30800000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 30900000000
+          },
+          {
+            "measurement_id": "measurement:39800000000",
+            "state": "INSUFFICIENT_MEASUREMENT",
+            "time_ns": 40900000000
+          },
+          {
+            "measurement_id": "measurement:45000000000",
+            "state": "TRACKING_PROGRESS",
+            "time_ns": 45100000000
+          },
+          {
+            "measurement_id": "measurement:45200000000",
+            "state": "STEADY_TRACKING",
+            "time_ns": 45300000000
+          }
+        ],
+        "unique_measurements": 575
+      },
+      "directory": "fault/STALE_MEASUREMENT",
+      "analysis": {
+        "energy_bound_j": 0.03091751045039628,
+        "final10s_max_return_drift_k_min": 0.5746398534504351,
+        "final10s_return_drift_k_min": 0.6036147302912696,
+        "final10s_supply_drift_k_min": 0.1262446617868136,
+        "final_actual_speed": 0.8999999999999995,
+        "final_command": 0.9,
+        "final_dp_kpa": 371.80999999999955,
+        "final_flow_m3_h": 68.36999999999996,
+        "final_return_c": 49.645418243370386,
+        "final_supply_c": 39.04695048832605,
+        "first_low_flow_fault_s": null,
+        "first_safety_fault_s": 40.9,
+        "first_sensor_invalid_s": 40.9,
+        "first_tracking_confirmed_s": null,
+        "first_tracking_suspected_s": null,
+        "independent_integrals": {
+          "air_j": 4975500.0,
+          "hx_j": 73433363.9052277,
+          "it_j": 99510000.0,
+          "liquid_j": 94534500.0,
+          "pump_ambient_j": 205514.08409281023,
+          "pump_electrical_j": 1081653.0741726696,
+          "pump_liquid_j": 876138.9900798572
+        },
+        "invalid_phase_count": 21,
+        "limits": [
+          "Numerical/internal physical consistency only, not OEM calibration.",
+          "No GPU die or coldplate model. Primary inlet prescribed.",
+          "Finite120s horizon, no automatic steady-state/recovery claim."
+        ],
+        "max_hydraulic_error_pa": 5.820766091346741E-11,
+        "max_local_energy_residual_j": 2.293739953529439E-08,
+        "max_node_mass_residual_kg_s": 7.0013439490423934E-15,
+        "max_rack_return_c": 50.202315700219515,
+        "max_supply_c": 39.04695048832605,
+        "phase_count": 600,
+        "repeated_observations": 25,
+        "return45_acceptance": "NOT_REGISTERED_NOT_SCORED",
+        "secondary_mass_final_kg": 1311.7,
+        "secondary_mass_initial_kg": 1311.7,
+        "snapshots": [
+          {
+            "actual": 0.35,
+            "command": 0.35,
+            "dp_kpa": 56.230524691358006,
+            "flow_m3_h": 26.588333333333335,
+            "max_rack_return_c": 45.0,
+            "return_c": 45.0,
+            "safety": "BOOTSTRAP_NO_CONTROL",
+            "supply_c": 37.5,
+            "time_s": 0
+          },
+          {
+            "actual": 0.34949377677940396,
+            "command": 0.3493982062815121,
+            "dp_kpa": 56.06798405160544,
+            "flow_m3_h": 26.54987724267539,
+            "max_rack_return_c": 44.98762782078103,
+            "return_c": 45.00147357701394,
+            "safety": "NORMAL",
+            "supply_c": 37.35346133286674,
+            "time_s": 10
+          },
+          {
+            "actual": 0.49131765041612346,
+            "command": 0.49867203479001887,
+            "dp_kpa": 110.80536274900035,
+            "flow_m3_h": 37.32376417661151,
+            "max_rack_return_c": 47.997321757948725,
+            "return_c": 46.04682128345854,
+            "safety": "NORMAL",
+            "supply_c": 37.209738848516736,
+            "time_s": 30
+          },
+          {
+            "actual": 0.8999999973766464,
+            "command": 0.9,
+            "dp_kpa": 371.8099978324686,
+            "flow_m3_h": 68.36999980071258,
+            "max_rack_return_c": 49.37382845826846,
+            "return_c": 48.66576012968011,
+            "safety": "FAULT",
+            "supply_c": 38.54985911225617,
+            "time_s": 60
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 371.80999999999955,
+            "flow_m3_h": 68.36999999999996,
+            "max_rack_return_c": 49.86197794452869,
+            "return_c": 49.2924727615092,
+            "safety": "FAULT",
+            "supply_c": 38.96126232747554,
+            "time_s": 90
+          },
+          {
+            "actual": 0.8999999999999995,
+            "command": 0.9,
+            "dp_kpa": 371.80999999999955,
+            "flow_m3_h": 68.36999999999996,
+            "max_rack_return_c": 50.202315700219515,
+            "return_c": 49.645418243370386,
+            "safety": "FAULT",
+            "supply_c": 39.04695048832605,
+            "time_s": 120
+          }
+        ],
+        "status": "INDEPENDENT_DECLARED_EQUATIONS_PASS",
+        "step_count": 1200,
+        "stored_change_mj": 21.977275084850618,
+        "total_fluid_energy_residual_j": -1.5348196029663086E-06,
+        "unique_sources": 575
+      },
+      "regression": null,
+      "spec": {
+        "case": "LOAD_STEP",
+        "fault": {
+          "end_ns": 45000000000,
+          "id": "STALE_MEASUREMENT",
+          "kind": "STOP_PUBLISHING_SAMPLES",
+          "start_ns": 40000000000
+        },
+        "group": "fault",
+        "id": "STALE_MEASUREMENT",
+        "setting": {
+          "id": "BASE",
+          "inventory_scale": 1.0,
+          "pump_head_scale": 1.0,
+          "ua_scale": 1.0
+        }
+      }
+    }
+  },
+  "OAT_ranges": {
+    "LOAD_STEP": {
+      "max_supply_c": {
+        "minimum": 37.5,
+        "maximum": 40.96878997234313
+      },
+      "max_rack_return_c": {
+        "minimum": 50.71968624904309,
+        "maximum": 53.25389960226579
+      },
+      "final_return_c": {
+        "minimum": 49.2320745282878,
+        "maximum": 52.30311936222205
+      },
+      "final_flow_m3_h": {
+        "minimum": 48.185868755465684,
+        "maximum": 57.80647280970892
+      },
+      "final_dp_kpa": {
+        "minimum": 184.6840089040906,
+        "maximum": 265.79257696001105
+      },
+      "stored_change_mj": {
+        "minimum": 15.699179987993213,
+        "maximum": 45.00057804494338
+      }
+    },
+    "PUMP_STUCK": {
+      "max_supply_c": {
+        "minimum": 37.5,
+        "maximum": 37.72727674407264
+      },
+      "max_rack_return_c": {
+        "minimum": 52.930462698754184,
+        "maximum": 63.21010242651272
+      },
+      "final_return_c": {
+        "minimum": 49.466946900358835,
+        "maximum": 61.019195556331
+      },
+      "final_flow_m3_h": {
+        "minimum": 23.928353890464304,
+        "maximum": 28.885860478205103
+      },
+      "final_dp_kpa": {
+        "minimum": 45.54236216034692,
+        "maximum": 66.36827422088707
+      },
+      "stored_change_mj": {
+        "minimum": 37.10824286572176,
+        "maximum": 60.24113952968289
+      }
+    }
+  },
+  "robustness": {
+    "scope": "ONLY_REGISTERED_OAT_POINTS_NOT_JOINT_ENVELOPE_OR_PROBABILITY",
+    "stuck_detected_across_7_OAT": true,
+    "normal_no_false_confirmation_across_7_OAT": true
+  },
+  "return45": {
+    "source": "bound_project.parameters.secondary_hard_limit;02.docx B012",
+    "customer45_location": "RACK_SECONDARY_INLET",
+    "status": "NOT_REGISTERED_NOT_SCORED",
+    "customer_reference_return_c": [
+      56.11,
+      55.52,
+      55.67
+    ],
+    "v1_control45_location": "MAX_OF_SIX_MODELED_SECONDARY_RACK_RETURN_OBSERVATIONS",
+    "v1_control45_authority": "ENGINEERING_ASSUMPTION_NOT_CUSTOMER_REQUIREMENT"
+  },
+  "native_stages": [
+    {
+      "stage": "BASE__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 8020,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "BASE__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 1340,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "NEGATIVE",
+      "image": "20261012.333.1",
+      "pid": 3684,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "REFINE_STUCK_25",
+      "image": "20261012.333.1",
+      "pid": 6212,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "REFINE_STUCK_50",
+      "image": "20261012.333.1",
+      "pid": 7624,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "PUMP_LOW__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 1240,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "PUMP_LOW__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 7372,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "UA_HIGH__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 2088,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "UA_HIGH__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 7492,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "UA_LOW__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 6740,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "UA_LOW__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 4980,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "INVENTORY_HIGH__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 6696,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "INVENTORY_HIGH__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 964,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "INVENTORY_LOW__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 6164,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "INVENTORY_LOW__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 7208,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "PUMP_HIGH__LOAD_STEP",
+      "image": "20261012.333.1",
+      "pid": 4756,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "PUMP_HIGH__PUMP_STUCK",
+      "image": "20261012.333.1",
+      "pid": 5148,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "ACTUATOR_RECOVERY",
+      "image": "20261012.333.1",
+      "pid": 4896,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "ACTUATOR_SLOW",
+      "image": "20261012.333.1",
+      "pid": 6504,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "LOW_FLOW",
+      "image": "20261012.333.1",
+      "pid": 6180,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "SENSOR_LOSS",
+      "image": "20261012.333.1",
+      "pid": 3656,
+      "cleanup": true,
+      "active_after": 0
+    },
+    {
+      "stage": "STALE_MEASUREMENT",
+      "image": "20261012.333.1",
+      "pid": 1684,
+      "cleanup": true,
+      "active_after": 0
+    }
+  ],
+  "complete_raw_journals": [
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "BASE__LOAD_STEP/case/m1_completed.zlib",
+      "group": "baseline",
+      "sha256": "6c9b70b0d7ca172d69afaaaf764afc92806702d9c1f10e7ead9bd70a7198354e",
+      "bytes": 60691548
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "BASE__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "baseline",
+      "sha256": "5cafcef323fae6f74220f4bad331fb36424161d4eb091b98d38ec68affd26921",
+      "bytes": 40441302
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "REFINE_STUCK_25/case/m1_completed.zlib",
+      "group": "baseline",
+      "sha256": "a0809eb5cbb659f03456e4513ab037fe5911b552b1e45d2338ce3d01d43975a0",
+      "bytes": 44345434
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "REFINE_STUCK_50/case/m1_completed.zlib",
+      "group": "baseline",
+      "sha256": "cc8ff64d69187332acade30b9f1461ed91bf6e85acec4f7607e337d77d45f4e3",
+      "bytes": 43265309
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "PUMP_LOW__LOAD_STEP/case/m1_completed.zlib",
+      "group": "sensitivity-a",
+      "sha256": "74246ad2ecc4d89dc0510a647dbad651fd74d610e5ef492f87ef2573cc4ff394",
+      "bytes": 61946096
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "PUMP_LOW__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "sensitivity-a",
+      "sha256": "209fba545fa3b06c2f3876f14c74d4cc82ada5cf997532a5139fca6d4ca2751e",
+      "bytes": 44532674
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "UA_HIGH__LOAD_STEP/case/m1_completed.zlib",
+      "group": "sensitivity-a",
+      "sha256": "f8a6be98ae686ddca88925799040e7c7db917c54aec7d506a936add0b8c4a8f4",
+      "bytes": 62448748
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "UA_HIGH__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "sensitivity-a",
+      "sha256": "6fd57ffba20944b1c546a93b4ffc0a66b56175f4c07149558aa03f3c0036c84e",
+      "bytes": 41593559
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "UA_LOW__LOAD_STEP/case/m1_completed.zlib",
+      "group": "sensitivity-a",
+      "sha256": "bdcca050187ca15458cfd3bcc2380e99d9b4787f42876bafcec8c7cf979b79b3",
+      "bytes": 60774204
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "UA_LOW__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "sensitivity-a",
+      "sha256": "cd50e3596b79df9af3601b081d9bc6a0cf2bb3f1afd39e801d73ced93e4fdf0d",
+      "bytes": 41193663
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "INVENTORY_HIGH__LOAD_STEP/case/m1_completed.zlib",
+      "group": "sensitivity-b",
+      "sha256": "029243332a94e3af84e99ba08749c551635042d1eb4eef808cd91b3419736b4c",
+      "bytes": 56001621
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "INVENTORY_HIGH__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "sensitivity-b",
+      "sha256": "a5f14ab73d1983f962ca55d29d78c23935a923da8d5f63cec27a6ebfe0aa1c3d",
+      "bytes": 44783332
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "INVENTORY_LOW__LOAD_STEP/case/m1_completed.zlib",
+      "group": "sensitivity-b",
+      "sha256": "383a75d6530f91d15aca5a6627631443b148b0a3c823f80d36f12295242fbd86",
+      "bytes": 62210559
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "INVENTORY_LOW__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "sensitivity-b",
+      "sha256": "7acaf31ffe96e821ba40fd9126e9f5034cc98c72bbd3827cfaf8365c67036031",
+      "bytes": 42534352
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "PUMP_HIGH__LOAD_STEP/case/m1_completed.zlib",
+      "group": "sensitivity-b",
+      "sha256": "803892f83b687a0abbcd62fcf933964829ae723fdf5589b0627d006bd3825893",
+      "bytes": 60640393
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "PUMP_HIGH__PUMP_STUCK/case/m1_completed.zlib",
+      "group": "sensitivity-b",
+      "sha256": "2195619054725d84eedf1ebf9c3bc59d3e16e993129aa370f6a3d7f76257017d",
+      "bytes": 43358274
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "ACTUATOR_RECOVERY/case/m1_completed.zlib",
+      "group": "fault",
+      "sha256": "14b6e81fc4684b9897a57d0f93652e9add3e4ff48029a946801001f06b602a70",
+      "bytes": 44564517
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "ACTUATOR_SLOW/case/m1_completed.zlib",
+      "group": "fault",
+      "sha256": "bd430cd41ab83d0f0ea6a220e81dafa34a9620c557f5be6bbc04b8a849382ace",
+      "bytes": 61609987
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "LOW_FLOW/case/m1_completed.zlib",
+      "group": "fault",
+      "sha256": "d3f8b83bdaf978dd250b42f0634b7963e6087f8fe8e02b7174c5ecbce726bc27",
+      "bytes": 53259031
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "SENSOR_LOSS/case/m1_completed.zlib",
+      "group": "fault",
+      "sha256": "74287af3fa59151a6966c36e2e48fdde945ced4fe60c17fe2e6f1aa680c28caf",
+      "bytes": 54063885
+    },
+    {
+      "location": "SEPARATE_COMPLETE_RAW_ARTIFACT",
+      "path": "STALE_MEASUREMENT/case/m1_completed.zlib",
+      "group": "fault",
+      "sha256": "3e73aff03e74e7bbb18e7948d877e3cc5ce8980201081c766ad693f2670e1072",
+      "bytes": 53057417
+    }
+  ],
+  "C3_C_V5_RESULT": "PRESERVE",
+  "NEW_INTEGRATED_SYSTEM_QUALIFICATION": "NO",
+  "PRODUCTION": "NO",
+  "HARDWARE": "CALIBRATION_REQUIRED",
+  "PHASE6": "NO"
+}

@@ -1,0 +1,93 @@
+{
+  "schema": "SIX-RACK-V2-DEVELOPMENT-DELIVERY",
+  "execution_commit": "c5fac2628a9e4c7ac8cde6583fedce8fba6e13f8",
+  "github_run": 38928779126,
+  "source_manifest_raw_sha256": "fbbddeb69a34ba2c9a79d165004b542970a21b8852982299f4223cb8f9db2098",
+  "candidate_raw_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "status": "V2_DECLARED_MODEL_STUDY_COMPLETED_AND_INDEPENDENT_FILE_REVIEW_PASS",
+  "scope": "DEVELOPMENT_NOT_EQUIPMENT_QUALIFICATION",
+  "records": [
+    {
+      "path": "artifacts/six-rack-v2-review/.gitattributes",
+      "bytes": 160,
+      "raw_sha256": "2e3b52f02aa76affb972796a6b67b8497088cdd5f4f7b2c16b383e268efda289"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/engineering_report.html",
+      "bytes": 941401,
+      "raw_sha256": "0b07982dfb3271915e12ca2e8e67def3404b437515ec15f82675001c57499690"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/engineering_report.json",
+      "bytes": 185443,
+      "raw_sha256": "e826bdd8d70e0bf245fa6a9166a3b71e6842c12dc91e53720253efcfe54f094c"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/independent_review.json",
+      "bytes": 2051,
+      "raw_sha256": "fd2c45aa00ca873e55dd6e91c3cf80f9af2eca455a874111c5af14fe7b92ba18"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/local-check-failure-01/failure.json",
+      "bytes": 670,
+      "raw_sha256": "3ecab4361b225c6ae078e0d7ec1609e33bdc3341a5ebcf7a3edfc95143454e5e"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/local-check-failure-01/verify_delivery.ps1",
+      "bytes": 8950,
+      "raw_sha256": "11c6217a463a2cb23fa33eae78fab8d5403dda3d940c95ad613a4df3dabbdb3b"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/memphis_review_inputs.json",
+      "bytes": 3574,
+      "raw_sha256": "9bb8cc412de19835318408a2b3c16ec02c2895cb2bc1921c9818ad7a6bbdd51e"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/official_artifacts.json",
+      "bytes": 2250,
+      "raw_sha256": "e069c05d0d40a70f1660727d3c527ad50af72143ca74a8ed191b7a5889506e05"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/official_logs.zip",
+      "bytes": 115364,
+      "raw_sha256": "35ad642efc64c112be13800eeabff02b463f0fa7ca5f251eb35ff8d28e1467f6"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/report-overview.png",
+      "bytes": 79217,
+      "raw_sha256": "e66a62295d36ecec8bf9f353742eca9b63928bf24b7bcb755399ec65aedf66e2"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/report-stuck-curves.png",
+      "bytes": 21918,
+      "raw_sha256": "3ccd450751ca1791f9f5cca44492b0bd07ccc4a1ed75e1460da80b4501b2ca9c"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/run_registration.json",
+      "bytes": 16382,
+      "raw_sha256": "84233be9b1cf9db822d87ebbfbae26d610db26d478161a4bf6674be7407581d9"
+    },
+    {
+      "path": "artifacts/six-rack-v2-review/verify_delivery.ps1",
+      "bytes": 9247,
+      "raw_sha256": "9dd9142fc2a30abb9268cc91e75c2f80ae6f68aa28b8ee4d6afa8f49a6128600"
+    },
+    {
+      "path": "docs/GB300_M1_SIX_RACK_V2.md",
+      "bytes": 7587,
+      "raw_sha256": "b5fdbaf48f6a3499edf161c3ff4d726e60769cbb10532f2ee39d693803eb3808"
+    },
+    {
+      "path": "docs/MEMPHIS_REVIEW_AND_C2C_INTEGRATION_20261017.md",
+      "bytes": 8725,
+      "raw_sha256": "6af610ab13eeffc9a6178189ccda6f37ff1264533d2678984a0807a0e5e129c8"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/source_manifest.json",
+      "bytes": 3968,
+      "raw_sha256": "fbbddeb69a34ba2c9a79d165004b542970a21b8852982299f4223cb8f9db2098"
+    }
+  ],
+  "large_originals": "9 official ZIPs verified; local run38928779126 preserves original archives/extractions; API identities recorded in official_artifacts.json",
+  "automatic_freeze_or_production_approval": false
+}
