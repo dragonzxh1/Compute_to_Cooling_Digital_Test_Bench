@@ -1,0 +1,23 @@
+{
+  "source_raw_sha256": {
+    ".github/workflows/gb300-m1-six-rack-v1.yml": "864d5061a606307b68d6201fc216a109870cbbd65964622d627a7a237ffe87f9",
+    "artifacts/m1-c3c-v5-freeze/executable_proposal.json": "18d54940b672e4ec06b0c0c0a6691cf15219ee96e01b7864b31fe00a1adf23c8",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/__init__.py": "ae2cf333afa99c04c02c94111279ec6ba9c02b3c26bf614824048ffd0803136f",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/audit_results.ps1": "1d3bd09f2f5918b66655882adf37952826308095f3b677e26e70370b8c812614",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/bound_project.json": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/interfaces.py": "f4df0acd2799cae23d135878aa9b9c0f39b8d86e03e7352faaa2fff7a95085fe",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/parameter_provenance.json": "26e2afd201b554b487d7812999fd3908fcedf087d1e65b36896c08ff0ca8e1f1",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/plant.py": "b03d04f1953253a7b1c4a75cfe421f4917e8d69545f9b49cb139c943855dbbfd",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/README.md": "0934537d4fb9470ccacb34a5100ed1cbb446102a4618116c85365a5fc02c6abe",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/run_remote.ps1": "b56cf737e1b4603b349b6302deab1fd8d72bf2109a708b7163ba982710207ef0",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/scenario.json": "2022a57ee7b57a6f932de71e7b6b78d13d7f47c7776d1aece3a6aabeeb853287",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/simulation.py": "9153866405b97a3f946d59fcda09b27bf982455c74e5bfb8329f1775b38b3185",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/test_integration.py": "366dbf6253d220afa9e23e65f92bb20554591d377392d79de241df4100f18f65",
+    "v0_2/tests/tools/gb300_m1_closed_loop_v1/worker.py": "43f80ba3a92609c0d280b26908ac269ba68c9363a6a61a95a8a030658a35b3fc"
+  },
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "schema": "GB300-M1-SIX-RACK-SOURCE-v1",
+  "snapshot_parent_commit": "827d8471c921386f9e71bf3826c8b4a4813a8585",
+  "formal_qualification": false,
+  "scope": "INTEGRATION_DEVELOPMENT_ONLY"
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "SIX-RACK-PARAMETER-PROVENANCE-v1",
+  "bound_project": "bound_project.json (source-bound extraction, not independent customer validation)",
+  "project_fields": {
+    "rack_it_w_upper_bound": "parameters.rack_it_power = 155000 W; 00.docx B020/table2",
+    "liquid_fraction": "parameters.liquid_capture_fraction = 0.95; design assumption, not measurement",
+    "density_kg_m3": "parameters.fluid_density = 1009; PG25 constant estimate",
+    "cp_j_kg_k": "parameters.fluid_specific_heat = 4000; PG25 constant estimate",
+    "primary_inlet_k": "NORMAL primary_cdu_inlet_c = 37 degC, plus 273.15",
+    "primary_flow_m3_s": "parameters.primary_flow_per_cdu = 110/3600",
+    "design_secondary_flow_m3_s": "HOT secondary_m3_h = 68.37/3600",
+    "design_secondary_dp_pa": "HOT loop_dp_kpa = 371.81 *1000; TOTAL pump differential, NOT CDU external pressure or absolute pressure"
+  },
+  "sensitivity_assumptions": {
+    "load_profile": "explicit 25 percent initial load then unequal 90/95/100 percent loads; no measured workload claim",
+    "hx_ua_w_k": "220000; explicit sensitivity also explored by dynamic_v3/v4; NOT vendor UA",
+    "hx_capacity": "no rated_capacity cap; source model range and primary/secondary enthalpy bound apply; no 1100kW guarantee",
+    "hydraulic_curve": "quadratic sensitivity fitted to ONE HOT point at normalized0.9; chosen shutoff factor1.25, series fraction0.5, equal rack resistance; not a vendor curve or real per-rack distribution",
+    "liquid_inventory": "1.3m3/unit from dynamic_v4 assumption, split supply0.2 + racks6*0.15 + return0.2; no measured geometry",
+    "actuator": "unchanged frozen profile: delay0.2s, tau1s, ramp0.2/s, bounds0.3..0.9",
+    "sensor": "0.2s sample period, explicit NEW0.1s transport delay, maxage1s; zero noise assumption. Frozen profile file is NOT edited; its historical zero release delay does not qualify this new integration",
+    "feedback": "measured rack-return proportional request, target45degC, gain0.05 fraction/K, base0.35; not OEM PID or supply control tuning",
+    "safety": "liquid channel only. Operating45/control40/derate44.5/hard45/clear43.5 and44degC; dwell2s and5 distinct samples spanning2s. Hard actionPROTECTED, PERFORMANCE request-only IT action; pressure>600kPa FAULT/reduce0.3, low measured branchflow<0.5kg/s FAULT, sensor invalidFAULT, M1confirmedFAULT. No standby and no automaticreset. Numeric protection assumptions do NOT qualify a real installation.",
+    "pump_energy": "unchanged generic fixture efficiencies: VFD0.9 motor0.8 pump0.75; VFDloss to air, half motorloss to liquid, all internal loss to liquid; hydraulic work dissipates once in network edges",
+    "numerics": "explicit conservative control volumes; dt0.1/0.05/0.025s, advection CFL<=0.25; energy roundoff gamma_n=n*u/(1-n*u), u=2^-53, explicit64 inventory/ledger rounding operations per interval; convergence uses observed refinement without tuned success tolerances"
+  },
+  "scope_exclusions": ["GPU die/coldplate dynamics and safety", "tower and tank source transient", "A/B redundancy or transfer", "production/hardware policy port", "new formal C3-C qualification"],
+  "C3_C_V5_RESULT": "PRESERVE",
+  "NEW_INTEGRATED_SYSTEM_QUALIFICATION": "NO",
+  "REAL_HARDWARE_CONTROL": "NO"
+}
