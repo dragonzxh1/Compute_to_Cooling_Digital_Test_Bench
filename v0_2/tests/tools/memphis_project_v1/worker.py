@@ -31,7 +31,7 @@ def main():
             if code:raise ValueError('DEVELOPMENT_TEST_FAILURE')
             result.update(status='PASS',pytest_exitcode=int(code))
         elif stage=='NODE_PORT':
-            node=subprocess.Popen(['node',str(HERE/'bridge.mjs'),str(directory)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+            node=subprocess.Popen(['node',str(HERE/'bridge.mjs'),str(directory)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf-8',errors='strict')
             deadline=time.monotonic()+25
             while not(directory/'node_ready.json').exists():
                 if node.poll() is not None:raise RuntimeError('NODE_EXITED_BEFORE_JOB_PROOF '+node.stderr.read())

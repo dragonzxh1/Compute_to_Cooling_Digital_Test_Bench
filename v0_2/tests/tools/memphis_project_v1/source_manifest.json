@@ -15,7 +15,7 @@
     "v0_2/tests/tools/memphis_project_v1/sources.py": "01df32f819e40d87d8b1764413b21207f726033f3db7ca07019deb8f1441fc2d",
     "v0_2/tests/tools/memphis_project_v1/tank.py": "f405e80a876024c10ae8b56151a2c78c5183047110def648862d41a6269ddc33",
     "v0_2/tests/tools/memphis_project_v1/test_project.py": "9844b0b33e938b2f4169881b3821ce7f870a4a855f3c9fd0100d7d49e9a04ef1",
-    "v0_2/tests/tools/memphis_project_v1/worker.py": "e6ab73806f077871545df17e8d52797aaed0c3b086d26a73630918f305fe8fe9",
+    "v0_2/tests/tools/memphis_project_v1/worker.py": "313127768c4d927f7a738160ee15a8015d854ff61fa926f02da0e43f7bb087c6",
     "v0_2/tests/tools/memphis_project_v1/upstream/.gitattributes": "8e8d3542416ce4e5b824fe3861d0dd11359434d1e21b49646fdb2ae5cbd1701e",
     "v0_2/tests/tools/memphis_project_v1/upstream/cdu.mjs": "93da7611f3868ca46ef52b1a787c3b0a419bdb80420f3af8c9e8a3cd81062d83",
     "v0_2/tests/tools/memphis_project_v1/upstream/model.mjs": "e16bdff14d9621d8913fdb936d1a94e89617c4d9135731c87a4dfd7b8e699c0f",
@@ -26,7 +26,7 @@
   },
   "schema": "MEMPHIS-PROJECT-V1-SOURCE-MANIFEST",
   "scope": "BOUNDED_REMOTE_DEVELOPMENT_NOT_EQUIPMENT_PASS",
-  "snapshot_parent_commit": "f95dd108dc35acc433d7dca5effb9660d03eda6a",
+  "snapshot_parent_commit": "08bbb05f8536e94fda4b26a4a886bc4c2002484d",
   "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
   "v1_source_raw_sha256": {
     "v0_2/tests/tools/gb300_m1_closed_loop_v1/__init__.py": "ae2cf333afa99c04c02c94111279ec6ba9c02b3c26bf614824048ffd0803136f",
