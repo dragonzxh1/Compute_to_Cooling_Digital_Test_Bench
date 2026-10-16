@@ -36,3 +36,9 @@ FINAL增加11组durable BEGIN/END及batch/case进度；只优化重复包/环境
 后续实际状态：prepare已成功结束，reference分组开始。官方prepare artifact12017563767（2888066字节），ZIP SHA-256 `6093e4a5f3c6f8f7d600de5b95e589d82391f33b524753eaf4972e06adb2654c`独立匹配。335个native文件哈希、16阶段/16实际Python Job证明、64份raw、完整authority身份、ENV前后及锁定依赖、release PID链和全部cleanup active0已通过纯文件核验；镜像20261012.333.1，CPU25%/1024/2048MiB/480000ms不变。新运行authority单元31/31、已登记POST atomicity单元4/4通过，不扩大任意异常原子性证明。
 
 机器记录为`artifacts/m1-c3c-v5-authorization/prepare_independent_readback.json`，原官方ZIP保存在`D:/Github/c2c-m1-remote-evidence/c3c-v5-formal-38833878662/prepare.official.zip`。这些只是prepare阶段和凭据通过，不是全部101案例或formal aggregate通过。已建立本聊天自动跟进`c3-c-v5`；正常运行保持安静，终态独立回读后裁决，不重复开考。
+
+## 参考/选择阶段与State U
+
+10/10 reference分组、reference_gate、11/11 select分组和split_u已成功结束，其余split执行中，尚无完整资格判定。对官方split-u artifact12019018411（1219631字节，SHA-256 `e70a46c8e1dce7eced0cd534d958f31460b3ce7c1d99da5f6f9b3b2434926ac9`）已另行独立核验：100个native文件、5份实际Job/authority/env/cleanup证明、20份raw、21行输入身份、ST12-U-01..12全部true、comparison21行PASS、2份snapshot重复hash相同，reference/split/repeat三份实际原始文件均匹配receipt。不重新执行候选。
+
+机器摘要为`artifacts/m1-c3c-v5-authorization/state_u_independent_readback.json`。旧库内部`DEVELOPMENT_ONLY_NOT_QUALIFICATION`元数据保持原样；本轮formal authority来自新外层收据和执行证明，不篡改旧标签冒充资格。State U已核对不代表全量prefix/Startup/schema/FINAL通过，仍须终态独立组合验收。
