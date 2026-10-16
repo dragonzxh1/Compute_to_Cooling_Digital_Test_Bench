@@ -1,0 +1,22 @@
+{
+  "status": "PURE_FILE_ASSEMBLY_AND_ARCHIVE_READBACK_PASS",
+  "delivery_status": "PREPARED_FOR_USER_DELIVERY_REVIEW",
+  "archive_sha256": "8a268066e4b108da8c30d26778bbcfc619e4d9b6c6a8bcb36610c97498d5b86d",
+  "archive_bytes": 2269187,
+  "release_manifest_sha256": "535536aa9826595c2b35507b66051028fc57ec63dba42584b6b21319c7f1ee32",
+  "payload_files": 40,
+  "sealed_sdk_unchanged": true,
+  "protected_source_bindings_unchanged": 836,
+  "shared_source_paths": 671,
+  "identical_shared_paths": 670,
+  "source_differences": [
+    {
+      "formal_sha256": "9f605196ab891efaea42764371660b77d31492b875113d153ea6ae97f4dfc6a3",
+      "sdk_sha256": "2b364cef05cb68ec37a53e9f0e977691ade47995bbb40c0e5b9f533e25f87453",
+      "path": "docs/M1_SOFTWARE_USER_GUIDE.md"
+    }
+  ],
+  "candidate_or_model_executed": false,
+  "new_development_or_formal_tests_run": false,
+  "user_distribution_approval_generated": false
+}

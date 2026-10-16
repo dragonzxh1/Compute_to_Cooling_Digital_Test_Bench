@@ -1,5 +1,7 @@
 # Offline SDK delivery status
 
+2026-10-16 current entry: the unchanged streaming SDK completed outside-checkout 101-input development validation (run38493762797). v5 formal C3-C separately passed its limited software domain (run38833878662); SDK-only CLI files are not thereby formally qualified. The new [RC1 delivery bundle](../artifacts/m1-offline-delivery-rc1/README_FIRST.zh-CN.md) packages that exact SDK, current verdict, manuals and limits without editing sealed bytes. See [current readiness and remaining blockers](M1_RELEASE_READINESS.md). Older paragraphs below retain their historical build identities.
+
 The original V0.2 wheel does not include the M1 driver/source-bound fixtures.
 The new source SDK is a distinct offline-development delivery, never hardware
 control or formal C3-C. Installation is now independently validated; complete
