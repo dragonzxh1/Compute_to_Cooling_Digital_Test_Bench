@@ -16,6 +16,8 @@
 
 [新v5执行包集成](M1_C3_C_V5_EXECUTION_PACKAGE_DEVELOPMENT.md) 已完成57/57合成单元检查、62/62控制平面检查，并独立核验Job/raw/环境。[最终v5包及独立回读](M1_C3_C_V5_FINAL_PACKAGE_CLOSURE.md) 已达到READY_FOR_USER_SIGNATURE：836项来源、101输入/3216行/499计划快照/969阶段、9项拒绝检查及官方ZIP/raw/实际Job/cleanup通过。确切execution/delivery commit为`9ad4b9d1fdab261db9be09b91f261a927d529970`；不得使用后来的文档HEAD替代。新的exact executable freeze及fresh formal执行仍未获批准；原v4 INVALID不改判。
 
+最新授权状态覆盖上述封包时点状态：用户已分别批准v5确切包/源码冻结及fresh正式执行；2026-10-16 09:12:43（新加坡）已且仅已启动[run38833878662](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38833878662)。[v5正式执行记录](M1_C3_C_V5_FORMAL_EXECUTION.md)和两份新收据为准；原空白审签页/manifest不回写，旧v4不改判。目前是DISPATCHED_NOT_ADJUDICATED，不是正式PASS或上线结论。
+
 冻结旧说明中的“尚未审签/尚未授权”是打包时点的历史状态；本轮新授权以 [正式执行记录](M1_C3_C_V4_FORMAL_EXECUTION.md) 和 `artifacts/m1-c3c-v4-authorization/` 的独立收据为准。原件不回写。
 
 ## 2. 安装及示例从哪里开始

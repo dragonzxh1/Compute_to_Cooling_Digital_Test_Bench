@@ -23,4 +23,10 @@ FINAL增加11组durable BEGIN/END及batch/case进度；只优化重复包/环境
 
 原Startup历史49/50与versioned compatibility分开；SEM02精确五项strict P1 B/C INCOMPLETE，不伪造PLC issue；PF06 original scope INCOMPLETE，C8补充单独判。任意POST异常/OS crash/掉电原子性NOT_PROVEN；T09 IMPLEMENTATION_HOLD、full P history不可用、hardware CALIBRATION_REQUIRED。旧v3/v4 INVALID不改判。生产、硬件、Phase6未授权。
 
-授权收据见 `artifacts/m1-c3c-v5-authorization/`。此页初始登记状态 `AUTHORIZED_PENDING_DISPATCH`，不是正式成绩；成功dispatch后追加唯一run identity。
+授权收据见 `artifacts/m1-c3c-v5-authorization/`。初始登记状态 `AUTHORIZED_PENDING_DISPATCH` 已在下列唯一dispatch后转为 `DISPATCHED_NOT_ADJUDICATED`，不是正式成绩。
+
+## 唯一正式运行
+
+[run38833878662](https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/runs/38833878662)，attempt1；GitHub创建时间2026-10-16T01:12:43Z，即新加坡2026-10-16 09:12:43。API已核对headSha=`9ad4b9d1fdab261db9be09b91f261a927d529970`、固定ref准确，formal-v5/prepare开始。两收据先在说明提交`07ea0bd3d95df6465bbba21355daf383d0075016`保存并推送，再通过base64+独立RAW hash传入冻结workflow；说明提交不改变执行源码身份。
+
+当前仅确认已开考，不宣称环境/prepare已PASS。机器登记为同目录`formal_run_registration.json`；不再dispatch或重跑failed Jobs。后续按已冻结门禁跟进，仅对有意义进展、失败、完成或需用户判断通知。
