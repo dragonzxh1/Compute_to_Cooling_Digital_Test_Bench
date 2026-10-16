@@ -1,0 +1,22 @@
+{
+  "schema": "m1-c3c-execution-authorization-v1",
+  "status": "EXECUTION_AUTHORIZED",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "package_raw_sha256": "18d54940b672e4ec06b0c0c0a6691cf15219ee96e01b7864b31fe00a1adf23c8",
+  "approval_receipt_raw_sha256": "1d5ac4f01fcc6f7a11b35d29c00e0241a31a2feeac038cac92f8abbfb3555def",
+  "execution_source_commit": "9ad4b9d1fdab261db9be09b91f261a927d529970",
+  "environment_lock_raw_sha256": "4a68d805046b6d7b6946274cabd2ba37b69b44d82587e4865bed89d9d77f6877",
+  "human_execution_authorization": {
+    "date": "2026-10-15",
+    "timezone": "Asia/Singapore",
+    "source": "Second independent decision after the semicolon in the direct human message, separate from exact v5 freeze decision",
+    "verbatim": "单独授权该 v5 包进行全量 fresh C3-C 正式测试。"
+  },
+  "fresh_from_prepare": true,
+  "prior_pass_credit": false,
+  "same_execution_repair_or_retry": false,
+  "stop_on_behavioral_fail_or_integrity_failure": true,
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "m1-c3c-user-approval-receipt-v1",
+  "status": "FROZEN_USER_APPROVED",
+  "scope": "M1_C3_C_LIMITED_SOFTWARE_FIXTURE_DOMAIN",
+  "package_raw_sha256": "18d54940b672e4ec06b0c0c0a6691cf15219ee96e01b7864b31fe00a1adf23c8",
+  "package_canonical_sha256": "74bafde655de214ee02b39b1a9c9d23acd0219ce30309afb9ca810c58447246d",
+  "execution_source_commit": "9ad4b9d1fdab261db9be09b91f261a927d529970",
+  "delivery_commit": "9ad4b9d1fdab261db9be09b91f261a927d529970",
+  "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+  "decisions": {
+    "limited_scope": "APPROVED",
+    "SEM01": "APPROVED",
+    "SEM02": "APPROVED",
+    "PF06_supplement": "APPROVED"
+  },
+  "registration_raw_sha256": {
+    "limited_scope": "09472bb1e20a1e3de197d85e865646440e1ffdfd5cf0c29a269609490c56ddfd",
+    "SEM01": "71a4f5e5843ca16dc9f654b71eb88747dd29113b7a2fe75a7bb660b1dbc2a78a",
+    "SEM02": "291b8c2bb15869575f82c75f51628e60101cd6e9dd59673cd7864cef7491f7bd",
+    "PF06_supplement": "76dd0a1138ce17247ae75afd0d078484a24a98c09e1d81184a0149b2d72da62f"
+  },
+  "unchanged_scope_approval_provenance": "Previously approved unchanged limited scope and four normative registrations; direct v5 freeze approval binds the exact final signature sheet and its exclusions. No scope expansion, no inherited v4 execution authorization.",
+  "signature_sheet_raw_sha256": "6eeaa27fb8f01489ee4bc9a5094e5aa1d529cb8e2c80d1523cd5900ce4bb500b",
+  "detached_attestation_raw_sha256": "a4748f75c5d696718384495c47331e38778287be6769854bd9146b5daeae7f71",
+  "human_freeze_authorization": {
+    "date": "2026-10-15",
+    "timezone": "Asia/Singapore",
+    "source": "Direct human message in this chat, first independent decision before the semicolon",
+    "verbatim": "批准冻结 v5 审签页绑定的确切包及执行源码"
+  },
+  "production_implementation_authorized": false,
+  "hardware_control_authorized": false,
+  "phase6_authorized": false
+}
