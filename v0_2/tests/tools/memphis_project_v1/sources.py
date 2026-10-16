@@ -24,6 +24,10 @@ def tower_capacity(path,flow,hot_c,wet_derating=1.,db=46.,wb=30.):
     if flow+1e-12<.018333333333333333:return 0.
     return min(3300000.*wet_derating,c*max(0.,hot_c-35),c*(1-exp(-ratings['wet_ua']/c))*max(0.,hot_c-wb))
 
+def recharge_requested_speed():
+    _,c,_=source_graph('PID',3)
+    return ((120000+c.curve_k.value*(330/3600)**2)/c.shutoff_head_pa.value)**.5
+
 class SourcePlant:
     def __init__(self,spec):
         self.spec=spec;self.variant=spec.get('source_variant','PID')
@@ -68,7 +72,10 @@ class SourcePlant:
             self.source_tank,self.source_path=r['source_tank'],r['source_path']
         self.speed+=max(-.5*dt,min(.5*dt,target-self.speed))
         self.valve+=max(-dt/5,min(dt/5,r['source_valve']-self.valve))
-        self.recharge_speed+=max(-.5*dt,min(.5*dt,(.9 if r['recharge_enable'] else 0.)-self.recharge_speed))
+        # Actual normalized VFD speed saturates at the declared physical1.0.
+        # Required speed>1 remains a sizing shortfall, never raises the guard.
+        recharge_target=min(1.,recharge_requested_speed()) if r['recharge_enable'] else 0.
+        self.recharge_speed+=max(-.5*dt,min(.5*dt,recharge_target-self.recharge_speed))
         self.fan+=max(-.05*dt,min(.05*dt,r['fan']-self.fan))
         self.load_requested=r['load_tank']
         if self.load_requested!=self.load_tank:self.load_switch_phase='CLOSE'
@@ -101,8 +108,7 @@ class SourcePlant:
             g=replace(g,supply_series=tuple(map(e,g.supply_series)),branches=tuple(tuple(map(e,b)) for b in g.branches),return_series=tuple(map(e,g.return_series)))
             # Choose the permitted variable-speed point for the same18m cap,
             # not a fixed imposed flow; pump ramp remains physical.
-            nominal=(120000+c.curve_k.value*(330/3600)**2)**.5/c.shutoff_head_pa.value**.5
-            recharge_h=solve(g,c,self.recharge_speed/.9*nominal,RHO);recharge=recharge_h.total_flow_m3_s
+            recharge_h=solve(g,c,self.recharge_speed,RHO);recharge=recharge_h.total_flow_m3_s
         return load,source,recharge,load_h,source_h,recharge_h
 
     def advance(self,start_ns,end_ns,units,speeds,issued):
@@ -151,6 +157,8 @@ class SourcePlant:
         self.wet_inlet_pressure=None if self.variant=='V9' or self.source_path.startswith('D') else 335890+(dict(sh.pressures_pa)['sm'] if sh is not None else 0.)
         return dict(start_ns=start_ns,end_ns=end_ns,primary_inlet_c=primary-273.15,
             load_flow_m3_h=load*3600,source_flow_m3_h=source*3600,recharge_flow_m3_h=recharge*3600,
+            recharge_actual_speed=self.recharge_speed,recharge_requested_speed_unclipped=recharge_requested_speed(),
+            source_return_k=returned,source_cold_k=cooled,source_inlet_k=inlet,
             source_speed=self.speed,source_valve=self.valve,load_valve=self.load_valve,source_tank=self.source_tank,
             load_tank=self.load_tank,source_path=self.source_path,source_available=dict(self.available),
             fan_actual=self.fan,source_capacity_w=cap,rejected_w=rejected+b_rejected,

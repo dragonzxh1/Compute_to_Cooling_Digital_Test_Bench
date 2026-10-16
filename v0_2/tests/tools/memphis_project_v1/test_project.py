@@ -8,7 +8,7 @@ from .common import REG,CV
 from .plant import ProjectUnit
 from .hydraulics import secondary_graph,source_graph,source_comparison,RHO
 from .tank import Tank,primary_rates,TransportPipe
-from .sources import SourcePlant,tower_capacity
+from .sources import SourcePlant,tower_capacity,recharge_requested_speed
 from .coordination import SourceObservation,ProjectProtection,Coordinator,SourcePLC,record,estimated_cold
 from v0_2.hydraulics.solver import solve
 
@@ -68,3 +68,11 @@ def test_two_roles_rejected():
     with pytest.raises(ValueError,match='TWO_ROLES'):SourcePLC().issue(r,s,o,100000000)
 def test_cold_estimator_not_truth():assert estimated_cold((314,314,314,321))==10
 def test_seven_grades():assert len(REG['grading'])==7 and 'OEM_CALIBRATION_STATUS' in REG['grading']
+def test_recharge_speed_guard_not_raised():
+    assert recharge_requested_speed()>1
+    p=SourcePlant({});o=observation();s=ProjectProtection().evaluate(o,100000000)
+    r=Coordinator().request(o,s,100000000);r['recharge_enable']=True
+    for _ in range(30):p.actuate(.1,record(dict(request=r)))
+    assert p.recharge_speed==1
+    q=p.flows(r)[2]*3600
+    assert 0<q<330

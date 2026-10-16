@@ -103,7 +103,9 @@
     "recharge_stage_s": 60,
     "recharge_restore_cold_m3": 10,
     "backup_ready_cold_m3": 8.25,
-    "recharge_permission_note": "Four-TT conservative10m3 permission, not restoration of initial10.5m3 physical inventory"
+    "recharge_permission_note": "Four-TT conservative10m3 permission, not restoration of initial10.5m3 physical inventory",
+    "independent_recharge_speed_limit": 1,
+    "independent_recharge_target_note": "Required1.011666 exceeds1; actual VFD saturates at1, solved flow shortfall retained; no curve or guard change"
   },
   "source_variants": {
     "V9": {

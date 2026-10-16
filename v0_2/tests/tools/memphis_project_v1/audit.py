@@ -96,7 +96,13 @@ def audit(directory,spec):
     minflow=min(min(u['branch_flows_m3_s'])*3600 for x in series for u in x['units'])
     fault_at=spec.get('fault_at_s');window=[x for x in series if fault_at is not None and fault_at<=x['time_ns']/1e9<=fault_at+90]
     winmax=max((max(u['inlet_k'])-273.15 for x in window for u in x['units']),default=None)
-    returned=result['source_returned_at_ns'];latency=None if returned is None or fault_at is None else returned/1e9-fault_at
+    returned=result['source_returned_at_ns'];ready_latency=None if returned is None or fault_at is None else returned/1e9-fault_at
+    # State-machine readiness is NOT proof that cold water reached the tank.
+    # Check every physical interval's actual available-source flow and return.
+    recovery=next((r['end_ns']/1e9 for r in physics if fault_at is not None and returned is not None
+        and r['start_ns']>=returned and r['source_available'][r['source_path']]
+        and r['source_flow_m3_h']>=.8*330 and r['source_return_k']<=314.5948),None)
+    latency=None if recovery is None or fault_at is None else recovery-fault_at
     # Measured90s window must cover all90s; no continuity credit for no fault.
     continuity='NOT_APPLICABLE_NO_CHANGEOVER'
     if window:
@@ -108,10 +114,17 @@ def audit(directory,spec):
         OEM_CALIBRATION_STATUS='CALIBRATION_REQUIRED')
     return dict(grades=grades,no_aggregate_engineering_pass=True,control_volumes_checked=n,
         independent_energy=dict(initial_j=initial,final_j=final,liquid_j=liquid,pump_j=pump,export_j=rejected,residual_j=residual,bound_j=bound,max_local_residual_j=max_local),
-        maximum_inlet_c=maximum,maximum_return_c=result['maximum_rack_return_c'],minimum_branch_flow_m3_h=minflow,
+        maximum_inlet_c=maximum,secondary44C_target_met=maximum<=44.,maximum_return_c=result['maximum_rack_return_c'],minimum_branch_flow_m3_h=minflow,
         final_primary_inlet_c=series[-1]['primary_inlet_c'],primary_inlet_range_c=[min(s['primary_inlet_c'] for s in series),max(s['primary_inlet_c'] for s in series)],
         transactions=len(phases),source_transactions=len(source),first_fault_s=fault,first_tracking_suspected_s=suspected,first_tracking_confirmed_s=confirmed,
-        changeover_window_maximum_inlet_c=winmax,takeover_latency_s=latency,recharge_done=result['requested_recharge_done'],
+        changeover_window_maximum_inlet_c=winmax,takeover_latency_s=latency,coordinator_ready_latency_s=ready_latency,
+        recovery_definition='FIRST_ACTUAL_AVAILABLE_SOURCE_FLOW_GE264M3H_AND_TANK_RETURN_LE41_4448C_AFTER_STARTUP_READY_NOT_CONTINUOUS_STABILITY_PROOF',
+        maximum_recharge_flow_m3_h=max((r.get('recharge_flow_m3_h',0.) for r in physics),default=0.),
+        maximum_recharge_requested_speed=max((r.get('recharge_requested_speed_unclipped',0.) for r in physics),default=0.),
+        maximum_recharge_actual_speed=max((r.get('recharge_actual_speed',0.) for r in physics),default=0.),
+        final_units=result['final_units'],final_inlet_c=max(max(u['inlet_k'])-273.15 for u in result['final_units']),
+        final_return_c=max(max(u['rack_return_k'])-273.15 for u in result['final_units']),
+        recharge_done=result['requested_recharge_done'],
         source_timeline=result['source_timeline'],final_cold_B_m3=series[-1]['cold_B_m3'],
         actual_equipment_ua=None,npshr=None,design_selections=None,air_heat_w=46500*result['units'],
         limitations=['No OEM calibration or pressure/MAWP/NPSHr guarantee','Finite horizon not steady-state proof','A_LEAK_SIGNAL tests measured isolation logic, not leak-rate or mass-loss physics','Zero-flow motor/deadhead losses not calibrated','Secondary45C is rack inlet, not return or GPU die','Shared source headers remain common cause','M1 period1s/5s is new project scheduling, not inherited formal detection guarantee'])

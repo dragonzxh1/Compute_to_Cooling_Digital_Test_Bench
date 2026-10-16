@@ -32,6 +32,14 @@ isolation logic only; actual fluid loss and refill/pressure dynamics NOT_VERIFIE
 Zero-flow motor/deadhead losses remain uncalibrated. Equal CDU primary branches
 are synthetic reduction, not actual field balancing.
 
+Iteration3 retains the valid overspeed failure from run38937189134. The required
+independent-recharge speed1.011666 exceeds the unchanged physical1.0 curve limit.
+Actual drive now saturates at1.0 and solves the resulting deficient flow; this is
+NOT permission to demand330m³/h or to accept this pump. Startup-state readiness
+and actual cold-water return are separately reported. Cold-return first arrival
+requires available source,actual flow≥264m³/h,return≤41.4448°C; not a stability
+or calibrated recovery guarantee. These observation criteria are assumptions.
+
 ## Execution and evidence
 
 Do not run locally on HIPPO. Authorized branch workflow `memphis-project-v1.yml`
