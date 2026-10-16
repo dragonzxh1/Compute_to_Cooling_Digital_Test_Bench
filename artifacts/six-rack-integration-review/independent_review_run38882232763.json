@@ -1,0 +1,53 @@
+{
+  "cases": {
+    "LOAD_STEP": {
+      "phase_count": 600,
+      "no_truth_controller_input": true,
+      "causal_timing": true,
+      "measurement_count": 601,
+      "command_ownership": true,
+      "actual_hydraulics": true,
+      "independent_heat_ledger": true,
+      "physics_intervals": 1200
+    },
+    "PUMP_STUCK": {
+      "phase_count": 600,
+      "no_truth_controller_input": true,
+      "causal_timing": true,
+      "measurement_count": 601,
+      "command_ownership": true,
+      "actual_hydraulics": true,
+      "independent_heat_ledger": true,
+      "physics_intervals": 1200
+    }
+  },
+  "status": "INDEPENDENT_PURE_FILE_REVIEW_PASS",
+  "source_commit": "048ca4f893ee91cb43cc22e23b246a24f3547bef",
+  "raw_files_verified": 516,
+  "official_artifact": {
+    "id": 12038302964,
+    "bytes": 285489744,
+    "raw_sha256": "292197fa4b30259d28228466a7c961778d6f0382332be92d25ab9d36307c1af3",
+    "github_digest_match": true
+  },
+  "raw_logs_zip_sha256": "601f2f87bcd6c77cade7e40b797c80aab4e31190bc509e4c7a41694b86ba81e3",
+  "runtime": {
+    "python": "3.11.9",
+    "image": "20261012.333.1",
+    "cpu_rate": 2500,
+    "process_mb": 1024,
+    "job_mb": 2048,
+    "all_seven_cleanup_complete": true,
+    "all_seven_active_after": 0
+  },
+  "stage_pids": {
+    "NEGATIVE": 8056,
+    "LOAD_STEP": 6336,
+    "PUMP_STUCK": 2156,
+    "REPEAT_LOAD_STEP": 2088,
+    "REPEAT_PUMP_STUCK": 4296,
+    "REFINE_50": 1060,
+    "REFINE_25": 1084
+  },
+  "integrated_system_qualification": false
+}
