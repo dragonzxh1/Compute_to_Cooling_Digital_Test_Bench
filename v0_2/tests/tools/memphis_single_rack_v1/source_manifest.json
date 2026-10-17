@@ -1,6 +1,6 @@
 {
   "schema": "MEMPHIS-SINGLE-RACK-FIRST-SOURCE-v1",
-  "snapshot_parent_commit": "fc4a4d223bc014710f61edfba6d9fbd0959066ff",
+  "snapshot_parent_commit": "4093b7d9e4fc5cf2761c2c517b6c6644ab6618ca",
   "candidate_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
   "source_raw_sha256": {
     ".github/workflows/memphis-rack-v1-runner.yml": "dd0e50ec9a64f54a95fc82a220f2c6bd3b356c5bb81cde9779f8490549bcfa4d",
@@ -13,12 +13,12 @@
     "v0_2/tests/tools/memphis_single_rack_v1/cases.py": "944d40369a24adea9b43cb22430fb322a72e96bcab8846cf947493dcfb3b2051",
     "v0_2/tests/tools/memphis_single_rack_v1/plant.py": "3db764afa3d8498f252e381f27a9a4c2c10b766e68732200fc774a7c3ded55b7",
     "v0_2/tests/tools/memphis_single_rack_v1/README.md": "e63e906fd191ac826828ef5d161d636764fc321ad6f96545395fa47bcf04de46",
-    "v0_2/tests/tools/memphis_single_rack_v1/registration.json": "fdf953e4a00b718898f6550bfd79607e3d844c3c6a5bd1df0f2539b0a0de912c",
+    "v0_2/tests/tools/memphis_single_rack_v1/registration.json": "1fbf7ad1bde27aee7ad33fff33ec53adf1922b7eafa71cf239c40bec194068e8",
     "v0_2/tests/tools/memphis_single_rack_v1/report.ps1": "dd6719e1e1157ed6b45763040887a703c1c0708e98788c79717e6dfb2510acbc",
     "v0_2/tests/tools/memphis_single_rack_v1/run_remote.ps1": "9c9a0f988da711b0ab058e7705692da6d57c6c525696329e878fdc86026039dc",
     "v0_2/tests/tools/memphis_single_rack_v1/simulation.py": "8b479e257352861466f2fa2c073ff3f2c07b826d4df8959ce47a084f16109cf6",
     "v0_2/tests/tools/memphis_single_rack_v1/test_baseline.py": "fd296c4d1a91034c0671706a73502ae312e3a771a91419d7c4568439a824522b",
-    "v0_2/tests/tools/memphis_single_rack_v1/worker.py": "7fd41a3583461521b7ce60f5339232941fb16e282de83b28974a1e9cbf7e17cb"
+    "v0_2/tests/tools/memphis_single_rack_v1/worker.py": "cc7cc389058affc2c4224b2b963c1a673e925e90292f4c7d6486f05cab212559"
   },
   "v1_source_raw_sha256": {
     "v0_2/tests/tools/memphis_project_v2/__init__.py": "9c88a4790f13f08a64563e8473c9d504039ab1af613bfc9a6fec4f016f99f332",

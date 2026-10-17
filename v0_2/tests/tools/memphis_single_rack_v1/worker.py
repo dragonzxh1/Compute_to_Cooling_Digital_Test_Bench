@@ -45,7 +45,7 @@ def main():
             if code:raise ValueError('NEW_UNIT_REFUSAL_FAIL')
             result.update(status='PASS',pytest_exitcode=code)
         elif stage=='COMPONENT':
-            from math import exp
+            from math import exp,isfinite
             rows=[]
             # Constant-inlet finite rack CV, no HX/closed-loop capacity claim.
             cv=1009*4000;capacity=cv*.05;q=11.395/3600;power=147250.;inlet=44.
@@ -53,7 +53,11 @@ def main():
             for dt in (.1,.05,.025):
                 t=inlet;steps=round(30/dt);ledger=0.
                 for _ in range(steps):
-                    rate=cv*q*(inlet-t)+power;t+=dt*rate;ledger+=dt*rate
+                    rate=cv*q*(inlet-t)+power
+                    # rate is W; temperature increment is energy / J per K.
+                    # This component check is not the production plant solver.
+                    t+=dt*rate/capacity;ledger+=dt*rate
+                    if not isfinite(t) or not isfinite(ledger):raise ValueError('COMPONENT_NONFINITE_STOP')
                 exact=steady+(inlet-steady)*exp(-q*30/.05);error=abs(t-exact);errors.append(error)
                 if abs(capacity*(t-inlet)-ledger)>1e-5:raise ValueError('COMPONENT_ENERGY_CLOSURE')
                 rows.append(dict(dt_s=dt,final_C=t,analytic_C=exact,error_K=error))

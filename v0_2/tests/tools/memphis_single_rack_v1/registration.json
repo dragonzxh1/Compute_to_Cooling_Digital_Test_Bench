@@ -1,5 +1,8 @@
 {
   "schema": "MEMPHIS-SINGLE-THEN-SIX-DEVELOPMENT-v1",
+  "build": 2,
+  "preserved_failed_run": 39009958272,
+  "build_change": "Component-only fixed-inlet Euler check divides energy increment by liquid heat capacity and rejects nonfinite intermediates; no plant equation, final threshold, M1 or expectation relaxed",
   "scope": "SINGLE_RACK_THEN_SIX_CDU_NOT_GROUP18",
   "final_source_authority": "baseline_registration.json final_design_sources;00/01 only",
   "source_precedence": "Final 00/01 override process alternatives; prior runs remain historical, never relabeled",
