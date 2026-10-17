@@ -152,17 +152,22 @@ def audit(directory,spec):
         if prior and (p['source_path'],p['source_tank'])!=(prior['source_path'],prior['source_tank']):
             require(prior['source_speed']<=1e-9 and prior['source_valve']<=1e-9,'PHYSICAL_SOURCE_CHANGE_WITHOUT_PRIOR_CLOSED_ZERO')
         prior=p
-    compound=spec.get('fault')=='W1_LOSS' and spec.get('backup_initial')!='WARM'
+    # MIXED B starts at43.14836C, so four-TT cold permission is zero,
+    # despite nominally having the same total water volume. Requiring its
+    # takeover would demand bypassing the unchanged measured reserve guard.
+    compound=(spec.get('fault')=='W1_LOSS' and spec.get('backup_initial')!='WARM'
+        and spec.get('tank_kind','STRATIFIED')!='MIXED')
     if compound:
         require(len(thermal)==1 and any(x['to']=='B' for x in load_changes),'COMPOUND_TAKEOVER_NOT_COMPLETED')
         require(any(e['reason']=='INDEPENDENT_MEASURED_FAULT' and e['time_ns']<thermal[0]['time_ns'] for e in output['source_timeline']),'SOURCE_THEN_THERMAL_ORDER')
         starts=[e for e in output['source_timeline'] if e['to_state']=='BUILD_COLD']
         require(len(starts)==1,'UNREGISTERED_SECOND_STANDBY_STARTUP')
-    if spec['id']=='WET_LOSS_B_WARM':
+    reserve_negative=spec['id'] in ('WET_LOSS_B_WARM','WET_LOSS_MIXED')
+    if reserve_negative:
         require(not thermal and not load_changes,'WARM_BACKUP_WRONGLY_ACCEPTED')
         require(any(f['request'].get('thermal_blocked_reason')=='B_COLD_RESERVE_NOT_PROVEN' for f in frames),'WARM_RESERVE_REFUSAL_MISSING')
     result['compound_fix']=dict(scope='PROJECT_COORDINATOR_NOT_FROZEN_M1',thermal_takeover_events=thermal,
         actual_load_selector_changes=load_changes,source_then_thermal_required=compound,
-        warm_backup_refusal_required=spec['id']=='WET_LOSS_B_WARM',all_original_equation_checks_preserved=True,
+        warm_backup_refusal_required=reserve_negative,all_original_equation_checks_preserved=True,
         thermal_success_not_assumed=True)
     return result

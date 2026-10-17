@@ -58,6 +58,13 @@ def test_later_proven_cold_backup_can_be_used():
     r,_,_=call(c,56.2,w1_available=False,source_path='W2',maximum_secondary_inlet_c=44.6)
     assert r['load_tank']=='B' and c.thermal_takeover_used
 
+def test_mixed_backup_has_water_but_no_proven_cold_reserve():
+    c=source_first()
+    r,_,_=call(c,56.,w1_available=False,source_path='W2',maximum_secondary_inlet_c=44.6,
+        tank_B_tt_k=(316.29836,)*4)
+    assert not c.thermal_takeover_used and r['load_tank']=='A'
+    assert r['thermal_blocked_reason']=='B_COLD_RESERVE_NOT_PROVEN'
+
 def test_unacknowledged_source_path_cannot_trigger_reserve_transfer():
     c=source_first()
     r,_,_=call(c,56.,w1_available=False,source_path='W1',maximum_secondary_inlet_c=44.6)

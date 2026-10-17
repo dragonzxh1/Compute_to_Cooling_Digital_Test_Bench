@@ -416,6 +416,9 @@
     "parent_run": 38938235592,
     "scope": "Coordinator state ownership only; unchanged physics, M1, thresholds, reserve and timing assumptions",
     "expected_logic": "Measured high inlet after source switch may request one cold-B takeover through existing actual interlocks",
-    "thermal_outcome": "MEASURE_AND_REPORT_NO_FORCED_45C_PASS"
+    "thermal_outcome": "MEASURE_AND_REPORT_NO_FORCED_45C_PASS",
+    "build": 2,
+    "preserved_failed_run": 38991246285,
+    "reserve_expectation": "STRATIFIED cold B requires one takeover; MIXED or WARM without measured reserve must refuse; numeric guards and45C target unchanged"
   }
 }
