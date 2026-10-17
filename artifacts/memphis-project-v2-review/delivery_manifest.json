@@ -1,0 +1,242 @@
+{
+  "schema": "MEMPHIS-V2-REPAIR-DELIVERY-v1",
+  "scope": "BOUNDED_REMOTE_DEVELOPMENT_SOFTWARE_FIX_NOT_THERMAL_QUALIFICATION",
+  "execution_commit": "2f5f5347539df9af8023ae35b5292505bbe1243b",
+  "run_id": 38991705994,
+  "run_attempt": 1,
+  "source_manifest_raw_sha256": "0fae67b3b430f7072030f5338e8ff54512c9e9c0c0eb1f135efabdd088ec21a3",
+  "registration_raw_sha256": "bdec6137490661e4bf843c0c30abc5b42bfe9916a59a0d6a41852d6f2250bbe4",
+  "environment": {
+    "python": "3.11.9",
+    "job_MiB": 2048,
+    "cpu_percent": 25,
+    "pytest": "9.1.1",
+    "process_MiB": 1024,
+    "stage_wall_budget_s": 480,
+    "node": "22.23.3",
+    "image": "20261012.333.1",
+    "jsonschema": "4.26.0",
+    "numpy": "2.4.6"
+  },
+  "result": {
+    "thermal": "CONDITIONAL_45C_EXCEEDED",
+    "equipment": "NOT_VERIFIED",
+    "OEM": "CALIBRATION_REQUIRED",
+    "hardware": false,
+    "global_CI": "FAIL_COLLECTION_CONFIGURATION",
+    "formal_C3C": "NOT_RUN",
+    "phase6": false,
+    "production": false,
+    "software_fix": "DEVELOPMENT_VERIFIED",
+    "continuity": "CONDITIONAL_NOT_MET"
+  },
+  "official_artifact_digests": [
+    {
+      "id": 12085995139,
+      "name": "memphis-compact-recharge-38991705994",
+      "size_in_bytes": 15964073,
+      "digest": "sha256:7cbf43f8339d033b1e3fe6b4ddd52f7057222c72788226b4ab3fcb55fef36c19"
+    },
+    {
+      "id": 12085945046,
+      "name": "memphis-raw-plant-b-38991705994",
+      "size_in_bytes": 25551175,
+      "digest": "sha256:0404e0c982eafddc4ece0627fc0e8155c3b3863037dbe87b6b577c826b55a0f8"
+    },
+    {
+      "id": 12085885110,
+      "name": "memphis-raw-plant-a-38991705994",
+      "size_in_bytes": 18635581,
+      "digest": "sha256:5f2234e52ea24dfb9339cf911f2a16441a2ef2318714b2a6f66e2e514e31a8ef"
+    },
+    {
+      "id": 12085418215,
+      "name": "memphis-consolidated-report-38991705994",
+      "size_in_bytes": 46949821,
+      "digest": "sha256:9c64ed528ca03ef2a6a8af2fc72155713704f235b7675aeee2f994473bbe5d28"
+    },
+    {
+      "id": 12085303389,
+      "name": "memphis-raw-baseline-38991705994",
+      "size_in_bytes": 89384723,
+      "digest": "sha256:8b645cc3f513c55e881d5078b72be1295e74de1f875f79dc6af34b66b839a3dd"
+    },
+    {
+      "id": 12085163886,
+      "name": "memphis-compact-baseline-38991705994",
+      "size_in_bytes": 2549375,
+      "digest": "sha256:f42a8cfd9136c63aa085a91f765c863c9bdbfa8ac621748a4b62b3e7add6386d"
+    },
+    {
+      "id": 12085142651,
+      "name": "memphis-raw-six-38991705994",
+      "size_in_bytes": 11894430,
+      "digest": "sha256:c4c26088ac041ad2f8afb85f99c8a683dec19feb33e83738dd8cac2c32bd4f36"
+    },
+    {
+      "id": 12085043315,
+      "name": "memphis-raw-recharge-38991705994",
+      "size_in_bytes": 35789209,
+      "digest": "sha256:ba971e12d1b9cdb5659d7daf18e3dd1109d466bfe846fdf1d2909608e708853f"
+    },
+    {
+      "id": 12085008156,
+      "name": "memphis-compact-plant-a-38991705994",
+      "size_in_bytes": 10312959,
+      "digest": "sha256:604812f43ccaad194ec074b1d788ffb31623abad43f4a704d1a2edb1c8cfc218"
+    },
+    {
+      "id": 12084724544,
+      "name": "memphis-compact-six-38991705994",
+      "size_in_bytes": 2949231,
+      "digest": "sha256:8eefc549130b6762455027c3dc9fabef43b8f9df4a117001a3bc3a2cab4214d9"
+    },
+    {
+      "id": 12084584845,
+      "name": "memphis-compact-plant-b-38991705994",
+      "size_in_bytes": 15085799,
+      "digest": "sha256:c915d00ca54884796a2902bfbddf890b9f641f84858b575fc2c77fd00460aadf"
+    }
+  ],
+  "official_raw_logs_sha256": "67f04971b9285aa4f954256daad28ce3562a35f61ab75ca57779d77ffbb3e173",
+  "preserved_failed_run": {
+    "id": 38991246285,
+    "official_artifact_digests": [
+      {
+        "id": 12085481879,
+        "name": "memphis-compact-plant-b-38991246285",
+        "size_in_bytes": 15093318,
+        "digest": "sha256:6d5af9801f5e0e8f34a08f450d8f71ce2835b08d0a1cb9acacb926a4b508a8c2"
+      },
+      {
+        "id": 12085422117,
+        "name": "memphis-raw-plant-b-38991246285",
+        "size_in_bytes": 25561624,
+        "digest": "sha256:ace4efd6089d91d19d52218a3437b9ecf45b5a2063cce3c341e42401f71e15a2"
+      },
+      {
+        "id": 12085102330,
+        "name": "memphis-raw-recharge-38991246285",
+        "size_in_bytes": 35771032,
+        "digest": "sha256:f3f5f63e68ff66d0ccd7e5bc79097f67a15bf84bacdf2909dfd692ae7ead5734"
+      },
+      {
+        "id": 12085017564,
+        "name": "memphis-raw-plant-a-38991246285",
+        "size_in_bytes": 9488113,
+        "digest": "sha256:63dd4750ca0e31f032fb6d2178b4e2d05320a9696cd78dcd326607455de63b3d"
+      },
+      {
+        "id": 12084924158,
+        "name": "memphis-raw-six-38991246285",
+        "size_in_bytes": 11893940,
+        "digest": "sha256:e195a4c4a53de989489856b191670a0210d6e2b03212ab24c51cb31fbe57537c"
+      },
+      {
+        "id": 12084809773,
+        "name": "memphis-compact-six-38991246285",
+        "size_in_bytes": 2948741,
+        "digest": "sha256:4b01517e581786b3c61f115330718719249780d36ecf772c59d8d8a2c274f8b3"
+      },
+      {
+        "id": 12084799506,
+        "name": "memphis-compact-baseline-38991246285",
+        "size_in_bytes": 2555015,
+        "digest": "sha256:b84c3638fc33aa0d1962333c4f3f601b3afbe75493b24a42cd91709102697803"
+      },
+      {
+        "id": 12084789757,
+        "name": "memphis-raw-baseline-38991246285",
+        "size_in_bytes": 89392314,
+        "digest": "sha256:268ab4141ceb039413f75632af3da0fb5f3d142557d8728916854ee59024e299"
+      },
+      {
+        "id": 12084554656,
+        "name": "memphis-compact-recharge-38991246285",
+        "size_in_bytes": 15950529,
+        "digest": "sha256:760c77263c286a7c2beda75bc9df97edefec63c404a7e759ab456803bc5d5a07"
+      }
+    ],
+    "raw_logs_sha256": "18453a4b588056f27d8b800e738545714b2392c18f5dd005fe962fe4c9f2bda7",
+    "status": "FAIL_NOT_RELABELED"
+  },
+  "global_CI_log_sha256": "818887a7b2302f853a6285be95e71a861951b9390944d1bab6f66ca002a4f4a2",
+  "files": [
+    {
+      "bytes": 2171,
+      "raw_sha256": "5487d6c5c0aae852ae24fb684bf6d4fd38b8e4783d7f7930a4474540ef240c8d",
+      "path": "docs/MEMPHIS_PROJECT_V2_REPAIR.md"
+    },
+    {
+      "bytes": 6101,
+      "raw_sha256": "3aae1eb78b2f91a913396e9fc4fcbd865938d77b2a448b7f916c89243430dada",
+      "path": "docs/MEMPHIS_PROJECT_V2_RESULTS_20261017.md"
+    },
+    {
+      "bytes": 8,
+      "raw_sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
+      "path": "artifacts/memphis-project-v2-review/.gitattributes"
+    },
+    {
+      "bytes": 1384,
+      "raw_sha256": "9084cb40cc9e208ab0eefdefe7c7fec89c2bc0187d5a9122198eca7ac3c27a71",
+      "path": "artifacts/memphis-project-v2-review/BUILD1_FAILURE.md"
+    },
+    {
+      "bytes": 920,
+      "raw_sha256": "801e234446b137927fa7f7a6fe61a9d4a881bb4ad0fb7b0d0fdcb6f30b7caaf2",
+      "path": "artifacts/memphis-project-v2-review/build2_run_registration.json"
+    },
+    {
+      "bytes": 1810,
+      "raw_sha256": "0730e450a18c83fecb35ed5383747ddef8ff6beb7442e05367127573641e619e",
+      "path": "artifacts/memphis-project-v2-review/download_official.ps1"
+    },
+    {
+      "bytes": 11829,
+      "raw_sha256": "4af3ac228fcc4808628678c4f1cde1df771cbccb6018514c542d0902f3319bdc",
+      "path": "artifacts/memphis-project-v2-review/verify_official.ps1"
+    },
+    {
+      "bytes": 4112,
+      "raw_sha256": "75a41e3d8524442c33994185e440dc0ef3275e79fd2d6c925f3c25d0c2eed750",
+      "path": "artifacts/memphis-project-v2-review/review_logs.ps1"
+    },
+    {
+      "bytes": 4060,
+      "raw_sha256": "dbd7bb99c6785da213a84d8e49952344976f6cd20316d7eac99f1562882dcd34",
+      "path": "artifacts/memphis-project-v2-review/publish_snapshot.ps1"
+    },
+    {
+      "bytes": 2897,
+      "raw_sha256": "6ec72185819d93582dad7c2c01b61c09ed5719e0612826f45cde9187951cdd74",
+      "path": "artifacts/memphis-project-v2-review/build_delivery_manifest.ps1"
+    },
+    {
+      "bytes": 1190,
+      "raw_sha256": "acd6e493f8cd6ffdd45528f94454d3da4e31fc8cffa334f3983ff7f461fe364e",
+      "path": "artifacts/memphis-project-v2-review/independent_verification.json"
+    },
+    {
+      "bytes": 3658,
+      "raw_sha256": "6c25f9aa48ed27659cd2e5029530981091abf9d551f542f5880221b3d774bd40",
+      "path": "artifacts/memphis-project-v2-review/log_report_verification.json"
+    },
+    {
+      "bytes": 1305,
+      "raw_sha256": "51b7e57de779d3a29af7ae3ce3b97d8676b9cb5503c98e431554fa6241de7092",
+      "path": "artifacts/memphis-project-v2-review/publication_receipt_2f5f534.json"
+    },
+    {
+      "bytes": 331888,
+      "raw_sha256": "24667112f1d4122560ade23b83802308b48c723193dd7e8adb715b695343f45f",
+      "path": "artifacts/memphis-project-v2-review/delivered/consolidated_report.json"
+    },
+    {
+      "bytes": 333185,
+      "raw_sha256": "b7eb3d91f77ba993612e6b8ceafb6a7fc51c2cde2cb9f5395dac620ce3260809",
+      "path": "artifacts/memphis-project-v2-review/delivered/engineering_report.html"
+    }
+  ],
+  "self_hash_rule": "This manifest excludes itself and its later Git publication receipt; hash these raw bytes separately."
+}

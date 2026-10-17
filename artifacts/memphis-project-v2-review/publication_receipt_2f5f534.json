@@ -1,0 +1,39 @@
+{
+  "local_corrupt_object_retained": "67b7fe4c2709aeeb8cd7a68519b853a3a5363d9f",
+  "tree": "db11d65859f78b09c4e0f82b2164f661d5babe8e",
+  "local_and_remote_commit": "2f5f5347539df9af8023ae35b5292505bbe1243b",
+  "parent": "c88677ab5a175e8519052e0b6817fae5b1571e3f",
+  "method": "GITHUB_CLI_GIT_DATA_API_NO_LOCAL_PACK_OR_REPAIR",
+  "files": [
+    {
+      "path": "artifacts/memphis-project-v2-review/BUILD1_FAILURE.md",
+      "sha": "c2f5c5f7b76574ceec2215c7f7ec1939ef7447b3",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/audit.py",
+      "sha": "b0c6eeb67b974a7f37d35ac1488555a26d80c4b9",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/registration.json",
+      "sha": "6a0a02468b63182562b9283803ecda5be5dd6d48",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/source_manifest.json",
+      "sha": "58f17a5d78c519087f640238a6e3a598b678230d",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/test_compound.py",
+      "sha": "9663fb5975893f21af535f6a9ef9c43b5b7d5a47",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ]
+}

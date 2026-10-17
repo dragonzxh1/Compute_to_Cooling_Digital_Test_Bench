@@ -1,0 +1,20 @@
+{
+  "scope": "FULL_FRESH_BOUNDED_REMOTE_DEVELOPMENT_ONLY",
+  "build": 2,
+  "run_id": 38991705994,
+  "execution_commit": "2f5f5347539df9af8023ae35b5292505bbe1243b",
+  "branch": "codex/memphis-project-v2",
+  "source_manifest_raw_sha256": "0fae67b3b430f7072030f5338e8ff54512c9e9c0c0eb1f135efabdd088ec21a3",
+  "preserved_failed_run": 38991246285,
+  "parent_execution": "c88677ab5a175e8519052e0b6817fae5b1571e3f",
+  "coordinator_unchanged_from_build1": true,
+  "change": "Correct new audit assumption: MIXED or WARM B without measured cold reserve must refuse; add mixed-B regression",
+  "all_original_numeric_expectations_and_protection_unchanged": true,
+  "planned_stages": 31,
+  "planned_dynamic_cases": 24,
+  "fresh_original_V1_reproduction": true,
+  "old_PASS_borrowed": false,
+  "local_model_python_native_or_stress": false,
+  "formal_C3_C_production_hardware_Phase6": false,
+  "result": "PENDING_INDEPENDENT_REVIEW"
+}

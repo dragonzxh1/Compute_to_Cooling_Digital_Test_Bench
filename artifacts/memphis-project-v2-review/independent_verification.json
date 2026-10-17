@@ -1,0 +1,33 @@
+{
+  "status": "OFFICIAL_PERSISTED_EVIDENCE_VERIFIED_NOT_EQUIPMENT_QUALIFICATION",
+  "execution_commit": "2f5f5347539df9af8023ae35b5292505bbe1243b",
+  "official_zip_count": 11,
+  "raw_files_verified": 1069,
+  "source_bindings_verified": 911,
+  "stages": 31,
+  "model_cases": 25,
+  "phase_transactions": 5604,
+  "source_transactions": 29700,
+  "all_completed_journal_frames_decompressed_hash_verified": 5604,
+  "actual_python_jobs_verified": 31,
+  "actual_node_job": {
+    "executable": "C:\\Program Files\\nodejs\\node.exe",
+    "parent_pid": 6044,
+    "pid": 4196,
+    "version": "v22.23.3"
+  },
+  "cleanup_complete_all": true,
+  "active_after_cleanup_all": 0,
+  "repeat": "PHYSICS_AND_SERIES_BYTE_IDENTICAL",
+  "V1_V2": "FRESH8_FILES_EACH_IDENTICAL",
+  "CPU_percent": 25,
+  "process_MiB": 1024,
+  "job_MiB": 2048,
+  "stage_wall_budget_s": 480,
+  "local_model_execution": false,
+  "compound_fix": "MEASURED_SOURCE_THEN_THERMAL_SINGLE_ACTION_AND_ACTUAL_B_SELECTOR",
+  "warm_B": "REFUSED",
+  "mixed_B": "REFUSED",
+  "fresh_original_project": "FOUR_RAW_FILES_BYTE_IDENTICAL",
+  "no_equipment_or_OEM_or_C3C_or_production_or_hardware_or_Phase6_approval": true
+}

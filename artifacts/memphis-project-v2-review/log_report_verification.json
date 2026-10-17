@@ -1,0 +1,95 @@
+{
+  "status": "RAW_LOG_AND_REPORT_BINDINGS_VERIFIED",
+  "run_id": 38991705994,
+  "run_attempt": 1,
+  "raw_log_entries": [
+    "0_report.txt",
+    "report/system.txt",
+    "1_study (recharge) _ integration.txt",
+    "study (recharge) _ integration/system.txt",
+    "2_study (plant-b) _ integration.txt",
+    "study (plant-b) _ integration/system.txt",
+    "3_study (six) _ integration.txt",
+    "study (six) _ integration/system.txt",
+    "4_study (plant-a) _ integration.txt",
+    "study (plant-a) _ integration/system.txt",
+    "5_baseline _ integration.txt",
+    "baseline _ integration/system.txt"
+  ],
+  "registered_stage_ends_verified": 31,
+  "bounded_pytest_checks_passed": 71,
+  "report_model_analyses_bound_to_raw": 24,
+  "raw_logs_sha256": "67f04971b9285aa4f954256daad28ce3562a35f61ab75ca57779d77ffbb3e173",
+  "report_json_sha256": "24667112f1d4122560ade23b83802308b48c723193dd7e8adb715b695343f45f",
+  "report_html_sha256": "b7eb3d91f77ba993612e6b8ceafb6a7fc51c2cde2cb9f5395dac620ce3260809",
+  "evidence_location": "D:/Github/c2c-evidence-review/memphis-project-v2/run38991705994",
+  "interrupted_C_drive_download_preserved": "memphis-raw-baseline-38991705994.zip.partial-preserved",
+  "official_artifact_digests": [
+    {
+      "id": 12085995139,
+      "name": "memphis-compact-recharge-38991705994",
+      "size_in_bytes": 15964073,
+      "digest": "sha256:7cbf43f8339d033b1e3fe6b4ddd52f7057222c72788226b4ab3fcb55fef36c19"
+    },
+    {
+      "id": 12085945046,
+      "name": "memphis-raw-plant-b-38991705994",
+      "size_in_bytes": 25551175,
+      "digest": "sha256:0404e0c982eafddc4ece0627fc0e8155c3b3863037dbe87b6b577c826b55a0f8"
+    },
+    {
+      "id": 12085885110,
+      "name": "memphis-raw-plant-a-38991705994",
+      "size_in_bytes": 18635581,
+      "digest": "sha256:5f2234e52ea24dfb9339cf911f2a16441a2ef2318714b2a6f66e2e514e31a8ef"
+    },
+    {
+      "id": 12085418215,
+      "name": "memphis-consolidated-report-38991705994",
+      "size_in_bytes": 46949821,
+      "digest": "sha256:9c64ed528ca03ef2a6a8af2fc72155713704f235b7675aeee2f994473bbe5d28"
+    },
+    {
+      "id": 12085303389,
+      "name": "memphis-raw-baseline-38991705994",
+      "size_in_bytes": 89384723,
+      "digest": "sha256:8b645cc3f513c55e881d5078b72be1295e74de1f875f79dc6af34b66b839a3dd"
+    },
+    {
+      "id": 12085163886,
+      "name": "memphis-compact-baseline-38991705994",
+      "size_in_bytes": 2549375,
+      "digest": "sha256:f42a8cfd9136c63aa085a91f765c863c9bdbfa8ac621748a4b62b3e7add6386d"
+    },
+    {
+      "id": 12085142651,
+      "name": "memphis-raw-six-38991705994",
+      "size_in_bytes": 11894430,
+      "digest": "sha256:c4c26088ac041ad2f8afb85f99c8a683dec19feb33e83738dd8cac2c32bd4f36"
+    },
+    {
+      "id": 12085043315,
+      "name": "memphis-raw-recharge-38991705994",
+      "size_in_bytes": 35789209,
+      "digest": "sha256:ba971e12d1b9cdb5659d7daf18e3dd1109d466bfe846fdf1d2909608e708853f"
+    },
+    {
+      "id": 12085008156,
+      "name": "memphis-compact-plant-a-38991705994",
+      "size_in_bytes": 10312959,
+      "digest": "sha256:604812f43ccaad194ec074b1d788ffb31623abad43f4a704d1a2edb1c8cfc218"
+    },
+    {
+      "id": 12084724544,
+      "name": "memphis-compact-six-38991705994",
+      "size_in_bytes": 2949231,
+      "digest": "sha256:8eefc549130b6762455027c3dc9fabef43b8f9df4a117001a3bc3a2cab4214d9"
+    },
+    {
+      "id": 12084584845,
+      "name": "memphis-compact-plant-b-38991705994",
+      "size_in_bytes": 15085799,
+      "digest": "sha256:c915d00ca54884796a2902bfbddf890b9f641f84858b575fc2c77fd00460aadf"
+    }
+  ]
+}
