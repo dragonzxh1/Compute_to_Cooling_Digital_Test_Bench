@@ -1,0 +1,808 @@
+{
+  "status": "OFFICIAL_PERSISTED_EVIDENCE_VERIFIED_NOT_EQUIPMENT_QUALIFICATION",
+  "run": 39010789593,
+  "execution_commit": "fe94f1bd06fbdf4b73955057d12d50cb71fac189",
+  "manifest_raw_sha256": "09963c6b0c3965f1dfd8864275576b1f3326ed325dc0243d778257c2c53b37e4",
+  "official_zips": 9,
+  "raw_files": 1958,
+  "source_bindings": 928,
+  "stages": 25,
+  "actual_python_jobs": 25,
+  "models_including_fresh_old_baselines": 24,
+  "causal_phases": 14400,
+  "decompressed_raw_journal_frames": 14400,
+  "images": [
+    "20261012.333.1"
+  ],
+  "cleanup_complete_all": true,
+  "active_after_cleanup_all": 0,
+  "fresh_original_regression": "8_FILES_EACH_BYTE_IDENTICAL",
+  "repeat": "SINGLE_AND_SIX_PHYSICS_SERIES_BYTE_IDENTICAL",
+  "cases": {
+    "SR_NORMAL": {
+      "final_branch_flow_m3_h": [
+        8.19833333333333
+      ],
+      "final_inlet_C": 38.104491599564426,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.31739341852750086,
+      "first_safety_fault_s": null,
+      "final_hx_W": 147923.9405595156,
+      "final_flow_m3_h": 8.19833333333333,
+      "independent_file_energy_residual_J": 8.940696716308594E-08,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 346.2971100560076,
+      "maximum_inlet_C": 40.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.16850449976994
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.16850449976994,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 56.02079250024411,
+      "initial_flow_m3_h": 8.19833333333333
+    },
+    "SR_HOT": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.238168865300395,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.3179347767882487,
+      "first_safety_fault_s": null,
+      "final_hx_W": 148205.0439551903,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 1.4901161193847656E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.810338017477534,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.52705497508674,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_STEP": {
+      "final_branch_flow_m3_h": [
+        11.394999999999994
+      ],
+      "final_inlet_C": 43.230430222520226,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.31168437871477334,
+      "first_safety_fault_s": null,
+      "final_hx_W": 147832.39454174082,
+      "final_flow_m3_h": 11.394999999999994,
+      "independent_file_energy_residual_J": -1.862645149230957E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735029,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.785274790972096
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.785274790972096,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 54.785274790972096,
+      "initial_flow_m3_h": 4.431388888888889
+    },
+    "SR_STUCK": {
+      "final_branch_flow_m3_h": [
+        5.256277929636124
+      ],
+      "final_inlet_C": 41.20047899089133,
+      "first_tracking_suspected_s": 13.7,
+      "independent_file_energy_bound_J": 0.31150193528236136,
+      "first_safety_fault_s": 14.3,
+      "final_hx_W": 141575.92822639985,
+      "final_flow_m3_h": 5.256277929636124,
+      "independent_file_energy_residual_J": -1.4156103134155273E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 86.81165362320961,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        65.6115709095701
+      ],
+      "first_tracking_confirmed_s": 14.3,
+      "final_return_C": 65.6115709095701,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 65.6115709095701,
+      "initial_flow_m3_h": 4.431388888888889
+    },
+    "SR_MISSING": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.238168865300395,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.3179347767882487,
+      "first_safety_fault_s": 20.1,
+      "final_hx_W": 148205.0439551903,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 1.4901161193847656E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.810338017477534,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.52705497508674,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_STALE": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.238168865300395,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.3179347767882487,
+      "first_safety_fault_s": 20.9,
+      "final_hx_W": 148205.0439551903,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 1.4901161193847656E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.810338017477534,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.52705497508674,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_WARM": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 47.218942505350356,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.31793477678824883,
+      "first_safety_fault_s": null,
+      "final_hx_W": 147279.21237756696,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 2.123415470123291E-07,
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 47.218942505350356,
+      "first_physical_inlet_over45_s": 24.4,
+      "final_rack_return_C": [
+        58.748069623045126
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 58.748069623045126,
+      "first_measured_temperature_protection_s": 24.5,
+      "maximum_return_C": 58.748069623045126,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_UA_LOW": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 47.035405613235355,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.31793477678824833,
+      "first_safety_fault_s": null,
+      "final_hx_W": 147158.53865732465,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": -2.3469328880310059E-07,
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 47.035405613235355,
+      "first_physical_inlet_over45_s": 4.4,
+      "final_rack_return_C": [
+        58.5595908642523
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 58.5595908642523,
+      "first_measured_temperature_protection_s": 4.5,
+      "maximum_return_C": 58.5595908642523,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_INVENTORY_LOW": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.23671082941519,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.18854273793638548,
+      "first_safety_fault_s": null,
+      "final_hx_W": 148134.83487071082,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": -8.940696716308594E-08,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.80561586553489
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.80561586553489,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.52718754511352,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_INVENTORY_HIGH": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.25709902604325,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.5767188544919747,
+      "first_safety_fault_s": null,
+      "final_hx_W": 149115.5902631868,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 4.0978193283081055E-08,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.8717258795088
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.8717258795088,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.5269879502647,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_REPEAT": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.238168865300395,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.3179347767882487,
+      "first_safety_fault_s": null,
+      "final_hx_W": 148205.0439551903,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 1.4901161193847656E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.810338017477534,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.52705497508674,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_REFINE50": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.23817734515961,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 0.6356048292270715,
+      "first_safety_fault_s": null,
+      "final_hx_W": 148205.2966619197,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 9.313225746154785E-08,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.81036548106613
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.81036548106613,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.5269879502647,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SR_REFINE25": {
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_inlet_C": 43.238181594129514,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.2709449361849356,
+      "first_safety_fault_s": null,
+      "final_hx_W": 148205.42303405123,
+      "final_flow_m3_h": 11.395000000000001,
+      "independent_file_energy_residual_J": 3.725290298461914E-09,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 884.4760042735043,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.810379242136094
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.810379242136094,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.52695425572273,
+      "initial_flow_m3_h": 11.395000000000001
+    },
+    "SIX_NORMAL": {
+      "final_branch_flow_m3_h": [
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334
+      ],
+      "final_inlet_C": 38.121633404619104,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.7917589641173775,
+      "first_safety_fault_s": null,
+      "final_hx_W": 889666.4408216504,
+      "final_flow_m3_h": 49.19,
+      "independent_file_energy_residual_J": 1.0579824447631836E-06,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 4619.025085470084,
+      "maximum_inlet_C": 40.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.182808236266794,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 56.02078500367486,
+      "initial_flow_m3_h": 49.19
+    },
+    "SIX_HOT": {
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_inlet_C": 43.27522796806636,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.7951794197971767,
+      "first_safety_fault_s": null,
+      "final_hx_W": 894663.5280124071,
+      "final_flow_m3_h": 68.37,
+      "independent_file_energy_residual_J": 1.1920928955078125E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 10863.525512820512,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.846659666673816,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.526985442809746,
+      "initial_flow_m3_h": 68.37
+    },
+    "SIX_STEP": {
+      "final_branch_flow_m3_h": [
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994
+      ],
+      "final_inlet_C": 43.26897343920973,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.758240579284944,
+      "first_safety_fault_s": null,
+      "final_hx_W": 892765.0510864333,
+      "final_flow_m3_h": 68.36999999999996,
+      "independent_file_energy_residual_J": -3.427267074584961E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 10863.525512820494,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.824310789181595,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 54.824310789181595,
+      "initial_flow_m3_h": 26.58833333333333
+    },
+    "SIX_STUCK": {
+      "final_branch_flow_m3_h": [
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432
+      ],
+      "final_inlet_C": 41.271969978347215,
+      "first_tracking_suspected_s": 13.3,
+      "independent_file_energy_bound_J": 1.7560391836371656,
+      "first_safety_fault_s": 13.9,
+      "final_hx_W": 858669.9861839209,
+      "final_flow_m3_h": 33.357344633150596,
+      "independent_file_energy_residual_J": 8.493661880493164E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 1261.6778093352398,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808
+      ],
+      "first_tracking_confirmed_s": 13.9,
+      "final_return_C": 64.4437280059808,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 64.4437280059808,
+      "initial_flow_m3_h": 26.58833333333333
+    },
+    "SIX_UNBALANCED": {
+      "final_branch_flow_m3_h": [
+        12.897214318682822,
+        11.53561917478337,
+        10.530531394696636,
+        9.749377626496026,
+        12.159610270875815,
+        10.998781326940055
+      ],
+      "final_inlet_C": 43.24703224668076,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.7957281867754975,
+      "first_safety_fault_s": null,
+      "final_hx_W": 894649.9937704785,
+      "final_flow_m3_h": 67.87113411247473,
+      "independent_file_energy_residual_J": 3.8743019104003906E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 10823.4595996279,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        53.47627399894208,
+        54.67901496271645,
+        55.7665971683727,
+        56.76695043760924,
+        54.09435917618856,
+        55.23515528729314
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 56.76695043760924,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 57.472471095779156,
+      "initial_flow_m3_h": 67.87113411247473
+    },
+    "SIX_UA_LOW": {
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_inlet_C": 47.10780078897977,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.7951794197971762,
+      "first_safety_fault_s": null,
+      "final_hx_W": 889662.483488597,
+      "final_flow_m3_h": 68.37,
+      "independent_file_energy_residual_J": -3.427267074584961E-07,
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "final_pump_electrical_W": 10863.525512820512,
+      "maximum_inlet_C": 47.10780078897977,
+      "first_physical_inlet_over45_s": 3.6,
+      "final_rack_return_C": [
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 58.63765263974426,
+      "first_measured_temperature_protection_s": 3.7,
+      "maximum_return_C": 58.63765263974426,
+      "initial_flow_m3_h": 68.37
+    },
+    "SIX_WARM": {
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_inlet_C": 47.26095687840291,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.7951794197971775,
+      "first_safety_fault_s": null,
+      "final_hx_W": 890331.734194998,
+      "final_flow_m3_h": 68.37,
+      "independent_file_energy_residual_J": 8.642673492431641E-07,
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "final_pump_electrical_W": 10863.525512820512,
+      "maximum_inlet_C": 47.26095687840291,
+      "first_physical_inlet_over45_s": 23.6,
+      "final_rack_return_C": [
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 58.795665777691795,
+      "first_measured_temperature_protection_s": 23.7,
+      "maximum_return_C": 58.795665777691795,
+      "initial_flow_m3_h": 68.37
+    },
+    "SIX_REPEAT": {
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_inlet_C": 43.27522796806636,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 1.7951794197971767,
+      "first_safety_fault_s": null,
+      "final_hx_W": 894663.5280124071,
+      "final_flow_m3_h": 68.37,
+      "independent_file_energy_residual_J": 1.1920928955078125E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 10863.525512820512,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.846659666673816,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.526985442809746,
+      "initial_flow_m3_h": 68.37
+    },
+    "SIX_REFINE50": {
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_inlet_C": 43.275234178168546,
+      "first_tracking_suspected_s": null,
+      "independent_file_energy_bound_J": 3.588864106275746,
+      "first_safety_fault_s": null,
+      "final_hx_W": 894664.7232947733,
+      "final_flow_m3_h": 68.37,
+      "independent_file_energy_residual_J": -9.834766387939453E-07,
+      "supply45": "CONDITIONAL_MET",
+      "final_pump_electrical_W": 10863.525512820512,
+      "maximum_inlet_C": 44.0,
+      "first_physical_inlet_over45_s": null,
+      "final_rack_return_C": [
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595
+      ],
+      "first_tracking_confirmed_s": null,
+      "final_return_C": 54.84668185679595,
+      "first_measured_temperature_protection_s": null,
+      "maximum_return_C": 55.526914022119115,
+      "initial_flow_m3_h": 68.37
+    }
+  },
+  "input_bindings": {
+    "SR_NORMAL": {
+      "raw_sha256": "e2dbb2b5506ae454adf58c9952bbb26c0ac7a4a64251ff49a1e242ef157826b3",
+      "bytes": 2910
+    },
+    "SR_HOT": {
+      "raw_sha256": "9fe6b9cbd668205755e5e041b10db814e5330d034da4faa887af43b2815c2bbf",
+      "bytes": 2886
+    },
+    "SR_STEP": {
+      "raw_sha256": "fe7d96963b4f1476e26a71e9ac9f71a146e1f81bc887f9bfc317d97799281bca",
+      "bytes": 2932
+    },
+    "SR_STUCK": {
+      "raw_sha256": "289f3fdf53d9c91a82ba3246ab684d88c1d3b005b4aa36fa1152d39df898cb94",
+      "bytes": 2936
+    },
+    "SR_MISSING": {
+      "raw_sha256": "c276907cf36ff8aed8c9f58c028ad0b71379497e9a292c2150d358309290f0f0",
+      "bytes": 2895
+    },
+    "SR_STALE": {
+      "raw_sha256": "fe6e3c440d7d1aa84bc455c04223542b1989e8059e7cee00f8f08117832d080d",
+      "bytes": 2891
+    },
+    "SR_WARM": {
+      "raw_sha256": "7273bba2c09c31ef4f0b9d4eccf0a416f6b0be859de24331cce71e60106a7027",
+      "bytes": 2897
+    },
+    "SR_UA_LOW": {
+      "raw_sha256": "a7e468a5c9e64b333a68093e3f7d2b7047ccbaca05902ce4b8b54a4faf74ae10",
+      "bytes": 2889
+    },
+    "SR_INVENTORY_LOW": {
+      "raw_sha256": "1ab9df5071225d13eda7b5eee74bcd411c8535a1542a1d58964b63aa88991242",
+      "bytes": 2897
+    },
+    "SR_INVENTORY_HIGH": {
+      "raw_sha256": "8fb714d3c945cc62023aa9def0d0363fe4149d90ed89109556bed5f94d1a5a51",
+      "bytes": 2896
+    },
+    "SR_REPEAT": {
+      "raw_sha256": "93ce27cf0bff6fc786a448f157d52c36a828f15618fa56dd5cf4f03d8ebc215e",
+      "bytes": 2889
+    },
+    "SR_REFINE50": {
+      "raw_sha256": "5d2cc55f9861952726973e3aea66cf1199820a0dab01cc8fd747252e7f1aa541",
+      "bytes": 2890
+    },
+    "SR_REFINE25": {
+      "raw_sha256": "47238c2d006bb104bf8f13674dcbeea7a585ace470ca4401973c3de2168d17e1",
+      "bytes": 2890
+    },
+    "SIX_NORMAL": {
+      "raw_sha256": "cb92aef8538fcd9d576defdf6473f4991c1894c5f864dba5c4337fd6412e17c8",
+      "bytes": 2968
+    },
+    "SIX_HOT": {
+      "raw_sha256": "aa626e098b2421241a4f8e81f22c1dc00b2c66f189b4edb6404300cfa2207569",
+      "bytes": 2955
+    },
+    "SIX_STEP": {
+      "raw_sha256": "d7b50255a4a5e375657979af1f8e206edac0c49bf7845914beca99cd126b756e",
+      "bytes": 3031
+    },
+    "SIX_STUCK": {
+      "raw_sha256": "6f1821e531dfb7b9738730cea56d9700f29819eb2aca6821c0e343174dabda47",
+      "bytes": 3035
+    },
+    "SIX_UNBALANCED": {
+      "raw_sha256": "29c94c16681aa8cd34cb71879bd6f67191b44112482fc004d2474209da1988ec",
+      "bytes": 2960
+    },
+    "SIX_UA_LOW": {
+      "raw_sha256": "214cbc9fcdb44db40fe0f9ade5109cba7a79453e66e901e99cba814f006165e0",
+      "bytes": 2958
+    },
+    "SIX_WARM": {
+      "raw_sha256": "7483e12bd04a85b532de380f6ca4cf57d166f8b7f524921ab2d4ebf7ed23fb30",
+      "bytes": 2966
+    },
+    "SIX_REPEAT": {
+      "raw_sha256": "37f947b482d329fdb81e085f63e94ffa5e88ebff5d7180ddfeab8a0042cdbf49",
+      "bytes": 2958
+    },
+    "SIX_REFINE50": {
+      "raw_sha256": "cf8f331a5e0f872264d7c5770c9f8cfe00973130db5a2f69d86bea861366bc10",
+      "bytes": 2959
+    }
+  },
+  "final_design_document_bindings": [
+    {
+      "id": "00",
+      "filename": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    },
+    {
+      "id": "01",
+      "filename": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    }
+  ],
+  "report_files_raw_sha256": {
+    "consolidated_report.json": "688f8968a4b03785f81982902595ce9d3efda15a609644effb5bda777e504cfa",
+    "engineering_report.md": "e5be8e8cfc21088ac96d7ef294fa4bf3b2fa139d8e480998828aba4d727b6881"
+  },
+  "report_cases_match_official_raw": 22,
+  "raw_logs_sha256": "55d8fbbcbc90e3ca13ccf4290087afd1314f2631add4e33c6fa3f117121f259d",
+  "official_artifacts": [
+    {
+      "id": 12093610272,
+      "name": "memphis-rack-compact-single-39010789593",
+      "size_in_bytes": 5691009,
+      "digest": "sha256:d1cbb44b5806158cb3e346121afefa2178cc1410c2f69a14ffac4372f5b8203c"
+    },
+    {
+      "id": 12093311782,
+      "name": "memphis-rack-report-39010789593",
+      "size_in_bytes": 10701375,
+      "digest": "sha256:9b9c612fe0d5cf7baadbb9326d95ec889a21daeab7e53105cb5b5bab4f87cf36"
+    },
+    {
+      "id": 12093210916,
+      "name": "memphis-rack-raw-component-39010789593",
+      "size_in_bytes": 15995,
+      "digest": "sha256:927485876e6037643046720c57f7faf57d28cdd066e23ef9d49c0d02e95b0733"
+    },
+    {
+      "id": 12093059512,
+      "name": "memphis-rack-compact-six-39010789593",
+      "size_in_bytes": 4065355,
+      "digest": "sha256:0d3e2a989bbe7571bc0e1d507c922f2dc1801038b1c7e1d6ef4dea2d8df1aa47"
+    },
+    {
+      "id": 12093026746,
+      "name": "memphis-rack-compact-baseline-39010789593",
+      "size_in_bytes": 931159,
+      "digest": "sha256:37853dadb14f18a5ff7f9321b5bfa30dd1c3b81f2a08b4757ce2d826f32ff248"
+    },
+    {
+      "id": 12092964891,
+      "name": "memphis-rack-raw-six-39010789593",
+      "size_in_bytes": 204049287,
+      "digest": "sha256:6a99cb005c7e448943de0aed0a7ded9fa339828d87cd7a918579450c430512c1"
+    },
+    {
+      "id": 12092772831,
+      "name": "memphis-rack-raw-baseline-39010789593",
+      "size_in_bytes": 86519472,
+      "digest": "sha256:500802b2b6db36160755bb21905143b1bdc0d6c26ad98e24d2f779b5cb0a3c8e"
+    },
+    {
+      "id": 12092533811,
+      "name": "memphis-rack-raw-single-39010789593",
+      "size_in_bytes": 272481040,
+      "digest": "sha256:a99914a2fb8d0fcfbf5a5863fa4be649461b287ed4cdce1b876e88e0e820f85a"
+    },
+    {
+      "id": 12092389510,
+      "name": "memphis-rack-compact-component-39010789593",
+      "size_in_bytes": 8151,
+      "digest": "sha256:ed026bc7200daf6e19b857c79a21fae311ad66d2e43935fe897230b3a9161791"
+    }
+  ],
+  "formal_C3C": false,
+  "production_hardware_Phase6": false,
+  "local_model_execution": false
+}

@@ -1,0 +1,33 @@
+{
+  "files": [
+    {
+      "sha": "e419d915ea0908bae2e191774c507bb48a03db28",
+      "mode": "100644",
+      "type": "blob",
+      "path": "artifacts/memphis-single-rack-v1-review/BUILD1_FAILURE.md"
+    },
+    {
+      "sha": "95a6f1609cb5d3377504149439142a1f5a92288c",
+      "mode": "100644",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/registration.json"
+    },
+    {
+      "sha": "d6b1a38535612c0f396187e58804d964042fdd47",
+      "mode": "100644",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/source_manifest.json"
+    },
+    {
+      "sha": "022157ca40e2e72d199f28c21cbd0eb5f4919e90",
+      "mode": "100644",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/worker.py"
+    }
+  ],
+  "tree": "59db3ea2543136bd46563c6e54ec06c1f2dd8561",
+  "local_corrupt_object_retained": "67b7fe4c2709aeeb8cd7a68519b853a3a5363d9f",
+  "local_and_remote_commit": "9a5df03a6583428d3292e675c60b2fa0d0c44e54",
+  "method": "GITHUB_CLI_GIT_DATA_API_NO_LOCAL_PACK_OR_REPAIR",
+  "parent": "4093b7d9e4fc5cf2761c2c517b6c6644ab6618ca"
+}

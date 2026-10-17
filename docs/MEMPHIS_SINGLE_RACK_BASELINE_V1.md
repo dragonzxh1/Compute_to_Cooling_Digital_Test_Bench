@@ -1,6 +1,6 @@
 # 孟菲斯单柜基线准备
 
-状态：输入与通过标准已整理，尚未实现或运行新测试，没有新增PASS。当前仅准备单柜基线，不扩大到18柜，不修改已交付的孟菲斯V1/V2或冻结M1。00/01原件已复核哈希；机器可读登记在`v0_2/tests/tools/memphis_single_rack_v1/baseline_registration.json`。
+本文保留最初的单柜基线准备口径；不是最新执行结果。原始 `baseline_registration.json` 的 `NOT_EXECUTED`/无发布标记仅描述当时准备动作，不追溯改写。后续动态假设和25项阶段登记见 `v0_2/tests/tools/memphis_single_rack_v1/registration.json`，执行身份见 `artifacts/memphis-single-rack-v1-review/run_build3.json`；实测结果以独立核验后的交付报告为准。范围不扩大到18柜，不修改已交付的孟菲斯V1/V2或冻结M1。00/01原件已复核哈希。
 
 ## 设计输入与测点
 
@@ -30,7 +30,7 @@ PG25密度1009kg/m³、比热4000J/(kg·K)暂列工程常数假设。按该假�
 
 目前没有最终单柜液体库存/管路几何、冷板热容、GPU die模型、实际Q-Δp图、泵全曲线/效率、换热UA及实际阀泵/仪表动态。不能把六柜液体库存、UA或泵曲线照搬，也不能把组罐15m³按柜数分配后当成已设计库存。GPU die安全和设备适用性保持未验证；对缺参只能登记有界假设作条件性开发分析。
 
-动态测试启动前补齐版本化假设范围、初态、负载/故障时刻、采样、停机界、数值容差和源文件哈希，再在隔离远程runner执行有界开发测试。本机不运行Python/native/model或压力负载。最终交付需fresh全套单柜开发验证、官方原始ZIP与日志、实际Job身份和退出cleanup独立复核；本准备没有dispatch、commit或push。
+动态测试启动前要求补齐版本化假设范围、初态、负载/故障时刻、采样、停机界、数值容差和源文件哈希，再在隔离远程runner执行有界开发测试。本机不运行Python/native/model或压力负载。最终交付需fresh全套单柜开发验证、官方原始ZIP与日志、实际Job身份和退出cleanup独立复核；最初准备动作没有dispatch、commit或push，后续发布与开发执行另有用户授权及版本化记录。
 
 ## 暂不实施但不豁免的组级要求
 

@@ -1,0 +1,22 @@
+{
+  "schema":"MEMPHIS-RACK-FIRST-REMOTE-RUN-v1",
+  "build":2,
+  "run_id":39010286517,
+  "execution_commit":"9a5df03a6583428d3292e675c60b2fa0d0c44e54",
+  "source_manifest_raw_sha256":"459c9e872ea21b0ef6cbe2337f239a6059d3d6cff4ec690e33c2dc2b60eafdc0",
+  "branch":"codex/memphis-single-rack-v1",
+  "preserved_failed_run":39009958272,
+  "change":"Component-only heat-capacity divisor and finite-state stop; dynamic plant, M1 and thresholds unchanged",
+  "ordered_groups":["baseline","component","single","six","report"],
+  "stages":25,
+  "new_dynamic_cases":22,
+  "fresh_prior_dynamic_cases":2,
+  "development_only":true,
+  "formal_C3C":false,
+  "production_hardware_Phase6":false,
+  "local_python_model_native_or_stress":false,
+  "result":"FAIL_PRESERVED_NOT_BORROWED",
+  "failed_stage":"SR_NORMAL / RATE_RECONSTRUCTION",
+  "failure_record":"BUILD2_FAILURE.md",
+  "official_evidence_directory":"D:/Github/c2c-evidence-review/memphis-single-rack-v1/failed-run39010286517"
+}

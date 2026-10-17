@@ -1,0 +1,117 @@
+{
+  "local_corrupt_object_retained": "67b7fe4c2709aeeb8cd7a68519b853a3a5363d9f",
+  "parent": "fc4a4d223bc014710f61edfba6d9fbd0959066ff",
+  "tree": "ba2892f55cc617ccfd7f2d75988a0b2c50c7c2b6",
+  "files": [
+    {
+      "sha": "5176856471ac2edfde9f4dce18a7071f46a8017c",
+      "type": "blob",
+      "path": ".github/workflows/memphis-rack-v1-runner.yml",
+      "mode": "100644"
+    },
+    {
+      "sha": "bfa290fd01f8125427250129514631e0b7b13ab5",
+      "type": "blob",
+      "path": ".github/workflows/memphis-rack-v1.yml",
+      "mode": "100644"
+    },
+    {
+      "sha": "a77ab4cc9d4394526681bef4b415ac1ba8ed4a2b",
+      "type": "blob",
+      "path": "docs/MEMPHIS_SINGLE_RACK_BASELINE_V1.md",
+      "mode": "100644"
+    },
+    {
+      "sha": "fa1385d99a319b43c06f5309d1aae9fdd3adea46",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/.gitattributes",
+      "mode": "100644"
+    },
+    {
+      "sha": "56fc22c5e2da2f09c3e39e4e6c410cc062bb0a39",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/README.md",
+      "mode": "100644"
+    },
+    {
+      "sha": "f9f38583c940b44cd0d26353c102476c3099b471",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/__init__.py",
+      "mode": "100644"
+    },
+    {
+      "sha": "6476c8a424333888c4e9109d0822ddba7126d78b",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/audit.py",
+      "mode": "100644"
+    },
+    {
+      "sha": "e0f2dd18db84435917860e74de92708c8c9e2c15",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/baseline_registration.json",
+      "mode": "100644"
+    },
+    {
+      "sha": "d2d0229d45166103af9936c423be59d49428fc05",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/build_manifest.ps1",
+      "mode": "100644"
+    },
+    {
+      "sha": "0288dc6ed6f252952f812e5c5a5a19b2151470d9",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/cases.py",
+      "mode": "100644"
+    },
+    {
+      "sha": "6722164e66f3bb688bcacb77f0969203a4ca2ac4",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/plant.py",
+      "mode": "100644"
+    },
+    {
+      "sha": "6f39409d7e13d91678cad87e8f44b15f15ef5320",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/registration.json",
+      "mode": "100644"
+    },
+    {
+      "sha": "421bbf0453a9128f38910f50b61057e2b997c4f7",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/report.ps1",
+      "mode": "100644"
+    },
+    {
+      "sha": "7543d9c068d373274a8a5055e6eac5a13dc80bbe",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/run_remote.ps1",
+      "mode": "100644"
+    },
+    {
+      "sha": "20bcf4a8fbdba871502075a283f4118ea785695c",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/simulation.py",
+      "mode": "100644"
+    },
+    {
+      "sha": "336a46910d84dfc0c10a355678255edde179ffa4",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/source_manifest.json",
+      "mode": "100644"
+    },
+    {
+      "sha": "fc5de5b94b45beecaf3b351f95d5c1922ec4c172",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/test_baseline.py",
+      "mode": "100644"
+    },
+    {
+      "sha": "b00d061676d22a9f804bd03aad6886f1650e8272",
+      "type": "blob",
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/worker.py",
+      "mode": "100644"
+    }
+  ],
+  "local_and_remote_commit": "4093b7d9e4fc5cf2761c2c517b6c6644ab6618ca",
+  "method": "GITHUB_CLI_GIT_DATA_API_NO_LOCAL_PACK_OR_REPAIR"
+}

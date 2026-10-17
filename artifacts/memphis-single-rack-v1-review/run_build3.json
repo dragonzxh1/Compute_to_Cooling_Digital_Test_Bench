@@ -1,0 +1,23 @@
+{
+  "schema":"MEMPHIS-RACK-FIRST-REMOTE-RUN-v1",
+  "build":3,
+  "run_id":39010789593,
+  "execution_commit":"fe94f1bd06fbdf4b73955057d12d50cb71fac189",
+  "source_manifest_raw_sha256":"09963c6b0c3965f1dfd8864275576b1f3326ed325dc0243d778257c2c53b37e4",
+  "branch":"codex/memphis-single-rack-v1",
+  "preserved_failed_runs":[39009958272,39010286517],
+  "change":"Operand-scaled rate audit; unchanged physical equations, M1, thermal and full-load gates",
+  "ordered_groups":["baseline","component","single","six","report"],
+  "stages":25,
+  "new_dynamic_cases":22,
+  "fresh_prior_dynamic_cases":2,
+  "development_only":true,
+  "formal_C3C":false,
+  "production_hardware_Phase6":false,
+  "local_python_model_native_or_stress":false,
+  "result":"OFFICIAL_PERSISTED_EVIDENCE_VERIFIED_NOT_EQUIPMENT_QUALIFICATION",
+  "independent_review":"independent_verification.json",
+  "official_evidence_directory":"D:/Github/c2c-evidence-review/memphis-single-rack-v1/run39010789593",
+  "thermal_result":"18_OF_22_ITEMS_WITHIN45C_INCLUDING_REPEATS_AND_REFINEMENT;4_UA_LOW_OR_WARM_ITEMS_EXCEED45C",
+  "original_failed_runs_remain_failed":true
+}

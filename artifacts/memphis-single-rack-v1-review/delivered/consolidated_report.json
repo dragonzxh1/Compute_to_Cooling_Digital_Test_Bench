@@ -1,0 +1,1350 @@
+{
+  "schema": "MEMPHIS-SINGLE-THEN-SIX-RESULT-v1",
+  "status": "CONDITIONAL_DEVELOPMENT_COMPLETED_NOT_EQUIPMENT_QUALIFIED",
+  "execution_commit": "fe94f1bd06fbdf4b73955057d12d50cb71fac189",
+  "stage_count": 25,
+  "dynamic_cases": 22,
+  "raw_nonjournal_files_verified": 1934,
+  "cases": {
+    "SR_HOT": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.238168865300395,
+      "final_rack_inlet_C": [
+        43.238168865300395
+      ],
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "final_return_C": 54.810338017477534,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.3179347767882487,
+      "global_energy_residual_j": 1.341104507446289E-07,
+      "independent_integrals": {
+        "HX": 18037721.266111694,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 5.7302145251014736E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.52705497508674,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_INVENTORY_HIGH": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.25709902604325,
+      "final_rack_inlet_C": [
+        43.25709902604325
+      ],
+      "final_rack_return_C": [
+        54.8717258795088
+      ],
+      "final_return_C": 54.8717258795088,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.5767188544919746,
+      "global_energy_residual_j": 1.1175870895385742E-08,
+      "independent_integrals": {
+        "HX": 18257775.877091456,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 1.1460727478151966E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.5269879502647,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_INVENTORY_LOW": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.23671082941519,
+      "final_rack_inlet_C": [
+        43.23671082941519
+      ],
+      "final_rack_return_C": [
+        54.80561586553489
+      ],
+      "final_return_C": 54.80561586553489,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.18854273793638548,
+      "global_energy_residual_j": -8.940696716308594E-08,
+      "independent_integrals": {
+        "HX": 17907727.92494434,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 2.866613613150548E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.52718754511352,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_MISSING": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.238168865300395,
+      "final_rack_inlet_C": [
+        43.238168865300395
+      ],
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "final_return_C": 54.810338017477534,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": 20.1,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.3179347767882487,
+      "global_energy_residual_j": 1.341104507446289E-07,
+      "independent_integrals": {
+        "HX": 18037721.266111694,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 5.7302145251014736E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.52705497508674,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_NORMAL": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        8.19833333333333
+      ],
+      "final_flow_m3_h": 8.19833333333333,
+      "final_inlet_C": 38.104491599564426,
+      "final_rack_inlet_C": [
+        38.104491599564426
+      ],
+      "final_rack_return_C": [
+        54.16850449976994
+      ],
+      "final_return_C": 54.16850449976994,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.31739341852750086,
+      "global_energy_residual_j": 7.450580596923828E-08,
+      "independent_integrals": {
+        "HX": 18385630.39952928,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 41555.65320672139
+      },
+      "max_local_residual_j": 5.7368936268176185E-09,
+      "maximum_inlet_C": 40.0,
+      "maximum_return_C": 56.02079250024411,
+      "minimum_branch_flow_m3_h": 8.19833333333333,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_REFINE25": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.238181594129514,
+      "final_rack_inlet_C": [
+        43.238181594129514
+      ],
+      "final_rack_return_C": [
+        54.810379242136094
+      ],
+      "final_return_C": 54.810379242136094,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.2709449361849352,
+      "global_energy_residual_j": 3.725290298461914E-09,
+      "independent_integrals": {
+        "HX": 18037707.320142064,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051282916
+      },
+      "max_local_residual_j": 5.734865027307023E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.52695425572273,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 4800,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_REFINE50": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.23817734515961,
+      "final_rack_inlet_C": [
+        43.23817734515961
+      ],
+      "final_rack_return_C": [
+        54.81036548106613
+      ],
+      "final_return_C": 54.81036548106613,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.6356048292270715,
+      "global_energy_residual_j": 1.0803341865539551E-07,
+      "independent_integrals": {
+        "HX": 18037711.97540147,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281688
+      },
+      "max_local_residual_j": 5.7335469705321884E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.5269879502647,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 2400,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_REPEAT": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.238168865300395,
+      "final_rack_inlet_C": [
+        43.238168865300395
+      ],
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "final_return_C": 54.810338017477534,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.3179347767882487,
+      "global_energy_residual_j": 1.341104507446289E-07,
+      "independent_integrals": {
+        "HX": 18037721.266111694,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 5.7302145251014736E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.52705497508674,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_STALE": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 43.238168865300395,
+      "final_rack_inlet_C": [
+        43.238168865300395
+      ],
+      "final_rack_return_C": [
+        54.810338017477534
+      ],
+      "final_return_C": 54.810338017477534,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": 20.9,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.3179347767882487,
+      "global_energy_residual_j": 1.341104507446289E-07,
+      "independent_integrals": {
+        "HX": 18037721.266111694,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 5.7302145251014736E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.52705497508674,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 500,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 100
+    },
+    "SR_STEP": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.394999999999994
+      ],
+      "final_flow_m3_h": 11.394999999999994,
+      "final_inlet_C": 43.230430222520226,
+      "final_rack_inlet_C": [
+        43.230430222520226
+      ],
+      "final_rack_return_C": [
+        54.785274790972096
+      ],
+      "final_return_C": 54.785274790972096,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.3116843787147733,
+      "global_energy_residual_j": -2.0116567611694336E-07,
+      "independent_integrals": {
+        "HX": 15766340.30219887,
+        "IT": 17437500.0,
+        "liquid": 16565625.0,
+        "pump": 93662.57381259518
+      },
+      "max_local_residual_j": 5.734023034165148E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 54.785274790972096,
+      "minimum_branch_flow_m3_h": 4.431388888888889,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_STUCK": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        5.256277929636124
+      ],
+      "final_flow_m3_h": 5.256277929636124,
+      "final_inlet_C": 41.20047899089133,
+      "final_rack_inlet_C": [
+        41.20047899089133
+      ],
+      "final_rack_return_C": [
+        65.6115709095701
+      ],
+      "final_return_C": 65.6115709095701,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": 14.3,
+      "first_tracking_confirmed_s": 14.3,
+      "first_tracking_suspected_s": 13.7,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.31150193528236136,
+      "global_energy_residual_j": -1.2665987014770508E-07,
+      "independent_integrals": {
+        "HX": 12820053.037875561,
+        "IT": 17437500.0,
+        "liquid": 16565625.0,
+        "pump": 10149.386831244336
+      },
+      "max_local_residual_j": 5.714355211239308E-09,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 65.6115709095701,
+      "minimum_branch_flow_m3_h": 4.431388888888889,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_UA_LOW": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 47.035405613235355,
+      "final_rack_inlet_C": [
+        47.035405613235355
+      ],
+      "final_rack_return_C": [
+        58.5595908642523
+      ],
+      "final_return_C": 58.5595908642523,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.31793477678824833,
+      "global_energy_residual_j": -2.3469328880310059E-07,
+      "independent_integrals": {
+        "HX": 16673898.061879182,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 5.735444119636668E-09,
+      "maximum_inlet_C": 47.035405613235355,
+      "maximum_return_C": 58.5595908642523,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_EXCEEDED",
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SR_WARM": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395000000000001
+      ],
+      "final_flow_m3_h": 11.395000000000001,
+      "final_inlet_C": 47.218942505350356,
+      "final_rack_inlet_C": [
+        47.218942505350356
+      ],
+      "final_rack_return_C": [
+        58.748069623045126
+      ],
+      "final_return_C": 58.748069623045126,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 0.31793477678824883,
+      "global_energy_residual_j": 2.123415470123291E-07,
+      "independent_integrals": {
+        "HX": 16605826.150023768,
+        "IT": 18600000.0,
+        "liquid": 17670000.0,
+        "pump": 106137.12051281903
+      },
+      "max_local_residual_j": 5.7302145251014736E-09,
+      "maximum_inlet_C": 47.218942505350356,
+      "maximum_return_C": 58.748069623045126,
+      "minimum_branch_flow_m3_h": 11.395000000000001,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 1,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_EXCEEDED",
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_HOT": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_flow_m3_h": 68.37,
+      "final_inlet_C": 43.27522796806636,
+      "final_rack_inlet_C": [
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636
+      ],
+      "final_rack_return_C": [
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816
+      ],
+      "final_return_C": 54.846659666673816,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.7951794197971764,
+      "global_energy_residual_j": 2.384185791015625E-07,
+      "independent_integrals": {
+        "HX": 108682975.39178433,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 1303623.0615384737
+      },
+      "max_local_residual_j": 1.1467271576748317E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.526985442809746,
+      "minimum_branch_flow_m3_h": 11.395,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_NORMAL": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334,
+        8.198333333333334
+      ],
+      "final_flow_m3_h": 49.19,
+      "final_inlet_C": 38.121633404619104,
+      "final_rack_inlet_C": [
+        38.121633404619104,
+        38.121633404619104,
+        38.121633404619104,
+        38.121633404619104,
+        38.121633404619104,
+        38.121633404619104
+      ],
+      "final_rack_return_C": [
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794,
+        54.182808236266794
+      ],
+      "final_return_C": 54.182808236266794,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.7917589641173772,
+      "global_energy_residual_j": 1.0579824447631836E-06,
+      "independent_integrals": {
+        "HX": 110277578.11987709,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 554283.0102564109
+      },
+      "max_local_residual_j": 1.146800343576615E-08,
+      "maximum_inlet_C": 40.0,
+      "maximum_return_C": 56.02078500367486,
+      "minimum_branch_flow_m3_h": 8.198333333333334,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_REFINE50": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_flow_m3_h": 68.37,
+      "final_inlet_C": 43.275234178168546,
+      "final_rack_inlet_C": [
+        43.275234178168546,
+        43.275234178168546,
+        43.275234178168546,
+        43.275234178168546,
+        43.275234178168546,
+        43.275234178168546
+      ],
+      "final_rack_return_C": [
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595,
+        54.84668185679595
+      ],
+      "final_return_C": 54.84668185679595,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 3.5888641062757456,
+      "global_energy_residual_j": -8.642673492431641E-07,
+      "independent_integrals": {
+        "HX": 108682934.23273252,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 1303623.0615384725
+      },
+      "max_local_residual_j": 1.1468955563032068E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.526914022119115,
+      "minimum_branch_flow_m3_h": 11.395,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 2400,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_REPEAT": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_flow_m3_h": 68.37,
+      "final_inlet_C": 43.27522796806636,
+      "final_rack_inlet_C": [
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636,
+        43.27522796806636
+      ],
+      "final_rack_return_C": [
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816,
+        54.846659666673816
+      ],
+      "final_return_C": 54.846659666673816,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.7951794197971764,
+      "global_energy_residual_j": 2.384185791015625E-07,
+      "independent_integrals": {
+        "HX": 108682975.39178433,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 1303623.0615384737
+      },
+      "max_local_residual_j": 1.1467271576748317E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 55.526985442809746,
+      "minimum_branch_flow_m3_h": 11.395,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_STEP": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994,
+        11.394999999999994
+      ],
+      "final_flow_m3_h": 68.36999999999996,
+      "final_inlet_C": 43.26897343920973,
+      "final_rack_inlet_C": [
+        43.26897343920973,
+        43.26897343920973,
+        43.26897343920973,
+        43.26897343920973,
+        43.26897343920973,
+        43.26897343920973
+      ],
+      "final_rack_return_C": [
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595,
+        54.824310789181595
+      ],
+      "final_return_C": 54.824310789181595,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.7582405792849438,
+      "global_energy_residual_j": -2.384185791015625E-07,
+      "independent_integrals": {
+        "HX": 95303234.22908883,
+        "IT": 104625000.0,
+        "liquid": 99393750.0,
+        "pump": 1154450.339138432
+      },
+      "max_local_residual_j": 1.1467477634141687E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 54.824310789181595,
+      "minimum_branch_flow_m3_h": 4.431388888888888,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_STUCK": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432,
+        5.559557438858432
+      ],
+      "final_flow_m3_h": 33.357344633150596,
+      "final_inlet_C": 41.271969978347215,
+      "final_rack_inlet_C": [
+        41.271969978347215,
+        41.271969978347215,
+        41.271969978347215,
+        41.271969978347215,
+        41.271969978347215,
+        41.271969978347215
+      ],
+      "final_rack_return_C": [
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808,
+        64.4437280059808
+      ],
+      "final_return_C": 64.4437280059808,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": 13.9,
+      "first_tracking_confirmed_s": 13.9,
+      "first_tracking_suspected_s": 13.3,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.7560391836371654,
+      "global_energy_residual_j": 7.301568984985352E-07,
+      "independent_integrals": {
+        "HX": 79684715.27261133,
+        "IT": 104625000.0,
+        "liquid": 99393750.0,
+        "pump": 146765.03130107775
+      },
+      "max_local_residual_j": 1.1470547178760171E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 64.4437280059808,
+      "minimum_branch_flow_m3_h": 4.431388888888888,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_UA_LOW": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_flow_m3_h": 68.37,
+      "final_inlet_C": 47.10780078897977,
+      "final_rack_inlet_C": [
+        47.10780078897977,
+        47.10780078897977,
+        47.10780078897977,
+        47.10780078897977,
+        47.10780078897977,
+        47.10780078897977
+      ],
+      "final_rack_return_C": [
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426,
+        58.63765263974426
+      ],
+      "final_return_C": 58.63765263974426,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.795179419797176,
+      "global_energy_residual_j": -3.427267074584961E-07,
+      "independent_integrals": {
+        "HX": 101022730.34558812,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 1303623.0615384737
+      },
+      "max_local_residual_j": 1.1465346005934407E-08,
+      "maximum_inlet_C": 47.10780078897977,
+      "maximum_return_C": 58.63765263974426,
+      "minimum_branch_flow_m3_h": 11.395,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_EXCEEDED",
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_UNBALANCED": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        12.897214318682822,
+        11.53561917478337,
+        10.530531394696636,
+        9.749377626496026,
+        12.159610270875815,
+        10.998781326940055
+      ],
+      "final_flow_m3_h": 67.87113411247473,
+      "final_inlet_C": 43.24703224668076,
+      "final_rack_inlet_C": [
+        43.24703224668076,
+        43.24703224668076,
+        43.24703224668076,
+        43.24703224668076,
+        43.24703224668076,
+        43.24703224668076
+      ],
+      "final_rack_return_C": [
+        53.47627399894208,
+        54.67901496271645,
+        55.7665971683727,
+        56.76695043760924,
+        54.09435917618856,
+        55.23515528729314
+      ],
+      "final_return_C": 56.76695043760924,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.795728186775497,
+      "global_energy_residual_j": 5.066394805908203E-07,
+      "independent_integrals": {
+        "HX": 108732871.87145963,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 1298815.1519553678
+      },
+      "max_local_residual_j": 1.1464884153156163E-08,
+      "maximum_inlet_C": 44.0,
+      "maximum_return_C": 57.472471095779156,
+      "minimum_branch_flow_m3_h": 9.749377626496026,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_MET",
+      "supply45": "CONDITIONAL_MET",
+      "transactions": 600,
+      "unique_observations": 600
+    },
+    "SIX_WARM": {
+      "OEM": "CALIBRATION_REQUIRED",
+      "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+      "final_branch_flow_m3_h": [
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395,
+        11.395
+      ],
+      "final_flow_m3_h": 68.37,
+      "final_inlet_C": 47.26095687840291,
+      "final_rack_inlet_C": [
+        47.26095687840291,
+        47.26095687840291,
+        47.26095687840291,
+        47.26095687840291,
+        47.26095687840291,
+        47.26095687840291
+      ],
+      "final_rack_return_C": [
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795,
+        58.795665777691795
+      ],
+      "final_return_C": 58.795665777691795,
+      "finite_horizon_only": true,
+      "first_safety_fault_s": null,
+      "first_tracking_confirmed_s": null,
+      "first_tracking_suspected_s": null,
+      "formal_C3C": false,
+      "global_energy_bound_j": 1.795179419797177,
+      "global_energy_residual_j": 8.642673492431641E-07,
+      "independent_integrals": {
+        "HX": 100705560.72455399,
+        "IT": 111600000.0,
+        "liquid": 106020000.0,
+        "pump": 1303623.0615384737
+      },
+      "max_local_residual_j": 1.1468955563032068E-08,
+      "maximum_inlet_C": 47.26095687840291,
+      "maximum_return_C": 58.795665777691795,
+      "minimum_branch_flow_m3_h": 11.395,
+      "no_aggregate_equipment_PASS": true,
+      "rack_count": 6,
+      "repeated_observations": 0,
+      "return45_limit": "NOT_APPLICABLE",
+      "status": "INDEPENDENT_EQUATIONS_AND_REGISTERED_BEHAVIOR_VERIFIED",
+      "steps": 1200,
+      "supply44_target": "CONDITIONAL_EXCEEDED",
+      "supply45": "CONDITIONAL_EXCEEDED",
+      "transactions": 600,
+      "unique_observations": 600
+    }
+  },
+  "refinement": {
+    "SR_REFINE50": {
+      "scope": "OBSERVED_NUMERICAL_SENSITIVITY_NOT_OEM_ERROR_BAR",
+      "final_inlet_delta_K": 8.479859218368802E-06,
+      "basis": "SR_HOT",
+      "maximum_inlet_delta_K": 0.0
+    },
+    "SR_REFINE25": {
+      "scope": "OBSERVED_NUMERICAL_SENSITIVITY_NOT_OEM_ERROR_BAR",
+      "final_inlet_delta_K": 1.2728829119623697E-05,
+      "basis": "SR_HOT",
+      "maximum_inlet_delta_K": 0.0
+    },
+    "SIX_REFINE50": {
+      "scope": "OBSERVED_NUMERICAL_SENSITIVITY_NOT_OEM_ERROR_BAR",
+      "final_inlet_delta_K": 6.210102185377764E-06,
+      "basis": "SIX_HOT",
+      "maximum_inlet_delta_K": 0.0
+    }
+  },
+  "repeat": "SINGLE_AND_SIX_PHYSICS_SERIES_BYTE_IDENTICAL",
+  "jobs": [
+    {
+      "image": "20261012.333.1",
+      "stage": "BASELINE",
+      "pid": 8016,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "COMPONENT",
+      "pid": 7944,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "NEGATIVE",
+      "pid": 4040,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_HOT",
+      "pid": 6240,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_INVENTORY_HIGH",
+      "pid": 5336,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_INVENTORY_LOW",
+      "pid": 3696,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_MISSING",
+      "pid": 7840,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_NORMAL",
+      "pid": 8028,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_REFINE25",
+      "pid": 5436,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_REFINE50",
+      "pid": 8124,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_REPEAT",
+      "pid": 368,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_STALE",
+      "pid": 3004,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_STEP",
+      "pid": 5068,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_STUCK",
+      "pid": 7652,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_UA_LOW",
+      "pid": 5568,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SR_WARM",
+      "pid": 8176,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_HOT",
+      "pid": 2552,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_NORMAL",
+      "pid": 5320,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_REFINE50",
+      "pid": 4488,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_REPEAT",
+      "pid": 1100,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_STEP",
+      "pid": 4388,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_STUCK",
+      "pid": 3972,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_UA_LOW",
+      "pid": 764,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_UNBALANCED",
+      "pid": 5400,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    },
+    {
+      "image": "20261012.333.1",
+      "stage": "SIX_WARM",
+      "pid": 1068,
+      "active_after_cleanup": 0,
+      "cleanup_complete": true
+    }
+  ],
+  "component": {
+    "environment": {
+      "dependencies": {
+        "jsonschema": "4.26.0",
+        "numpy": "2.4.6",
+        "pytest": "9.1.1"
+      },
+      "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+      "image": "20261012.333.1",
+      "job_proof_sha256": "13a6647174b661c353810ad74dd435be4bcc21c8629c7b4c02a3e0d2f7cbd129",
+      "python": "3.11.9",
+      "source_commit": "fe94f1bd06fbdf4b73955057d12d50cb71fac189"
+    },
+    "environment_after": {
+      "dependencies": {
+        "jsonschema": "4.26.0",
+        "numpy": "2.4.6",
+        "pytest": "9.1.1"
+      },
+      "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+      "image": "20261012.333.1",
+      "job_proof_sha256": "13a6647174b661c353810ad74dd435be4bcc21c8629c7b4c02a3e0d2f7cbd129",
+      "python": "3.11.9",
+      "source_commit": "fe94f1bd06fbdf4b73955057d12d50cb71fac189"
+    },
+    "formal_C3C": false,
+    "ideal_return_C": 55.52636364861921,
+    "pid": 7944,
+    "scope": "FIXED_BOUNDARY_COMPONENT_ONLY_NOT_CLOSED_LOOP",
+    "stage": "COMPONENT",
+    "status": "PASS",
+    "step_refinement": [
+      {
+        "analytic_C": 53.800944102353,
+        "dt_s": 0.1,
+        "error_K": 0.010384775811431268,
+        "final_C": 53.81132887816443
+      },
+      {
+        "analytic_C": 53.800944102353,
+        "dt_s": 0.05,
+        "error_K": 0.005189235539582171,
+        "final_C": 53.80613333789258
+      },
+      {
+        "analytic_C": 53.800944102353,
+        "dt_s": 0.025,
+        "error_K": 0.002593830009352871,
+        "final_C": 53.80353793236235
+      }
+    ]
+  },
+  "final_design": "00/01 only; no18rack/source/recharge claims",
+  "equipment": "INCOMPLETE_VENDOR_MAPS_AND_GEOMETRY",
+  "formal_C3C": false,
+  "production": false,
+  "hardware": false,
+  "phase6": false,
+  "load_identity": "single155kW_IT147.25kW_liquid;six930kW_IT883.5kW_liquid_plus_pump_heat_once;1100kW_CDU_selection_not_injected_load",
+  "no_aggregate_equipment_PASS": true,
+  "local_model_execution": false
+}
