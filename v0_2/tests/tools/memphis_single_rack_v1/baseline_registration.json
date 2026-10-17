@@ -1,0 +1,113 @@
+{
+  "schema": "MEMPHIS-SINGLE-RACK-BASELINE-PREPARATION-v1",
+  "status": "INPUTS_AND_ACCEPTANCE_PREPARED_NOT_EXECUTED",
+  "authority": {
+    "task": "Prepare single-rack inputs, boundaries and acceptance before six-rack CDU development",
+    "scope": "OFFLINE_SOFTWARE_DEVELOPMENT_ONLY",
+    "new_test_dispatched": false,
+    "new_test_pass_claimed": false,
+    "git_commit_push_this_preparation": false,
+    "formal_C3_C": false,
+    "production": false,
+    "hardware_control": false,
+    "phase6": false
+  },
+  "final_design_sources": [
+    {
+      "id": "00",
+      "filename": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    },
+    {
+      "id": "01",
+      "filename": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    }
+  ],
+  "source_precedence": "00 and 01 are final. 02 and later are historical/process references only; references inside 00/01 do not blanket-approve their entire contents. Conflict between 00 and 01 must be reported, not silently resolved.",
+  "document_locator_convention": "Bnnn is the 1-based top-level word/document.xml body child used during read-only extraction; not a rendered page number.",
+  "single_rack": {
+    "rack_count": 1,
+    "it_electrical_w": {"value": 155000, "basis": "FINAL_DESIGN", "source": "00 B020;01 B005"},
+    "liquid_fraction": {"value": 0.95, "basis": "FINAL_DESIGN_NOT_OEM_MEASUREMENT", "source": "00 B020;01 B005"},
+    "liquid_load_w": {"value": 147250, "basis": "FINAL_DESIGN_AND_ARITHMETIC", "source": "00 B020;01 B005"},
+    "air_load_w": {"value": 7750, "basis": "155000*(1-0.95)", "scope": "OUTSIDE_LIQUID_MODEL_COUNTED_IN_IT_LEDGER"},
+    "coolant": {"value": "PG25", "basis": "FINAL_DESIGN", "source": "00 B063"},
+    "supply_normal_c": {"value": 40, "basis": "FINAL_DESIGN_RACK_SECONDARY_SUPPLY", "source": "00 B104;01 B020", "condition": "outdoor dry-bulb <=29C"},
+    "supply_hot_target_c": {"value": 44, "basis": "FINAL_DESIGN_RACK_SECONDARY_SUPPLY", "source": "00 B104;01 B020", "condition": "outdoor dry-bulb >=37C"},
+    "supply_hard_max_c": {"value": 45, "basis": "FINAL_DESIGN_RACK_SECONDARY_SUPPLY_NOT_RETURN_OR_GPU_DIE", "source": "00 B104;01 B020"},
+    "supply_intermediate_curve": {"value": "40+0.5*(dry_bulb_c-29)", "condition": "29<dry_bulb_c<37", "source": "00 B104;01 B020"},
+    "hot_flow_reference_m3_h": {"value": 11.395, "basis": "DERIVED_DESIGN_REFERENCE_EQUAL_SHARE_68.37/6_NOT_OEM_CURVE", "source": "00 B129/B160;01 B011"},
+    "normal_flow_reference_m3_h": {"value": 8.198333333333333, "basis": "DERIVED_DESIGN_REFERENCE_EQUAL_SHARE_49.19/6_NOT_OEM_CURVE", "source": "00 B129;01 B011"},
+    "rack_path_hot_dp_reference_pa": {"value": 171630, "basis": "DOCUMENT_PRELIMINARY_BUDGET_NOT_MEASURED_COLDPLATE_CURVE", "source": "00 B163", "location": "design rack path; actual interface and valve split require confirmation"},
+    "rack_return_target_c": {"value": null, "basis": "SOLVE_FROM_ENERGY_FLOW_AND_STORAGE_NOT_SET_TO_45C"}
+  },
+  "preliminary_assumptions_and_missing_data": {
+    "density_kg_m3": {"value": 1009, "basis": "CONSTANT_ENGINEERING_APPROXIMATION_NOT_PRODUCT_CALIBRATION"},
+    "cp_j_kg_k": {"value": 4000, "basis": "CONSTANT_ENGINEERING_APPROXIMATION_NOT_PRODUCT_CALIBRATION"},
+    "viscosity_and_freeze_vapour_curves": null,
+    "rack_Q_dp_map": null,
+    "coldplate_thermal_mass_and_GPU_die_model": null,
+    "rack_and_pipe_liquid_inventory_m3": null,
+    "single_rack_pump_full_curve_and_efficiency": null,
+    "single_rack_conditioner_UA_w_k": null,
+    "actuator_and_sensor_dynamics": null,
+    "required_before_dynamic_dispatch": "Register exact assumed values/ranges, cases, sampling, fault times, numerical tolerances, stop conditions and source hashes. Do not silently copy a six-rack volume, UA, pump head or controller threshold."
+  },
+  "stages": [
+    {
+      "id": "SR-A",
+      "purpose": "Single rack component baseline",
+      "boundary": "Explicit inlet temperature and flow source; finite rack inventory when registered; no CDU/source capacity claim",
+      "checks": ["155000=147250+7750 W", "steady enthalpy limit and transient stored energy", "measured inlet and computed return remain distinct", "mass and pressure continuity if a hydraulic case is enabled"],
+      "result_scope": "COMPONENT_BASELINE_ONLY_NOT_CLOSED_LOOP_OR_CDU_PASS"
+    },
+    {
+      "id": "SR-B",
+      "purpose": "One rack causal dynamic loop",
+      "boundary": "One rack, explicit recirculation and engineering heat-removal boundary, actuator, measurement, unchanged M1, project control/Safety and simulated PLC",
+      "required_cases": ["full-load normal and hot boundaries", "synthetic registered load step", "pump command/actual mismatch", "sensor loss or stale data", "inlet overtemperature and independently checked protection"],
+      "checks": ["Actual actuator state drives hydraulic flow and energy update", "Measurements drive decisions; no future command visible to PRE", "PRE/Safety/PLC/POST immutable bindings and fault latch", "No IT derate used to satisfy full-load cooling", "Supply hard limit failure recorded separately from correct protective response"],
+      "result_scope": "CONDITIONAL_SINGLE_RACK_DEVELOPMENT_NOT_EQUIPMENT_OR_INHERITED_C3C"
+    },
+    {
+      "id": "SIX-CDU",
+      "entry_gate": "SR-A and SR-B evaluated against pre-registered gates; unresolved thermal failures remain explicit and block corresponding thermal readiness",
+      "boundary": "Six racks, common manifolds, actual coupled flows, heat exchanger and primary/secondary pump heat",
+      "it_w": 930000,
+      "IT_liquid_w": 883500,
+      "CDU_selection_w": 1100000,
+      "note": "1100kW is selected CDU capacity, not injected IT heat. Add pump heat once; use an actual or explicitly assumed HX map, not a forced capacity pass."
+    }
+  ],
+  "acceptance_rules": {
+    "numeric": "Independent mass/energy/pressure residuals with pre-registered scale-aware tolerances and step refinement; no tuned tolerance after observing failure",
+    "causality": "No future input; correct actual issuer and immutable PRE/Safety/PLC/POST",
+    "thermal": "Measured/physical rack inlet <=45C throughout claimed full-load acceptance window; target44C assessed separately; a protection latch alone does not make temperature pass",
+    "missing_design_or_OEM_data": "INCOMPLETE for corresponding equipment claim; conditional development can proceed only with labeled registered assumptions",
+    "repeat": "Exact source/input/environment-bound fresh repeats; no old PASS borrowed",
+    "full_development_delivery": "Fresh full registered single-rack development suite in controlled remote runner after implementation; actual Job identity and cleanup, official artifacts and logs independently reviewed",
+    "aggregate_pass": "FORBIDDEN when thermal, causality or equipment evidence remains failed/incomplete"
+  },
+  "final_design_group_requirements_deferred_not_waived": {
+    "complete_source_takeover_max_s": 90,
+    "build_cold_including_detection_s": 60,
+    "displacement_s": 30,
+    "tank_each_m3": 15,
+    "delivered_cold_required_m3": 8.25,
+    "group_primary_load_flow_m3_h": 330,
+    "tank_90s_outlet_rise_max_K": 0.5,
+    "source_pump_candidate": "115m3/h @34m candidate, actual normal about110m3/h each; not the historical PID max18m alternative",
+    "source_operating_pressure_drop_wet_pa": 96520,
+    "source_selection_min_dp_pa": 115820,
+    "recharge": "FINAL_SHARED_SOURCE_SEGMENTED_RECHARGE_WITH_OPTIONAL_FOURTH_SOURCE_PUMP_RECOVERY; no added independent recharge pump; no simultaneous separate A/B wet sources;440m3/h is example only",
+    "scope": "Group-source/tank requirements, NOT single-rack cooling or single-rack fault-detection timer; do not divide a group tank by18 and call it designed rack inventory"
+  },
+  "preservation": {
+    "prior_memphis_execution": "2f5f5347539df9af8023ae35b5292505bbe1243b",
+    "prior_memphis_run": 38991705994,
+    "frozen_M1_sha256": "70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce",
+    "old_results": "Preserve as source-bound historical development results, not relabeled final-design acceptance",
+    "new_scope_inherits_formal_C3C": false
+  }
+}
