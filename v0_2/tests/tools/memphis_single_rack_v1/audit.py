@@ -47,8 +47,12 @@ def audit(directory,spec):
         rates=[cv*q*(old[-1]-old[0])-hx+common/2*q**3]
         rates += [cv*f*(old[0]-t)+.95*w+k*f**3 for f,t,w,k in zip(fl,old[1:-1],loads,bk)]
         rates += [fsum(cv*f*(t-old[-1]) for f,t in zip(fl,old[1:-1]))+electric-head*q+common/2*q**3]
+        # Forward roundoff depends on operands, not a near-zero cancelled net.
+        # Keep the preregistered gamma4096, local stored-energy check and global
+        # ledger. No physical tolerance, thermal limit or frozen check changes.
+        flux_scale=fsum(abs(cv*f*t) for f,t in zip([q,*fl,q],old))+fsum(loads)*.95+abs(hx)+electric
         for x,y,cap,r,recorded in zip(old,new,caps,rates,s['rates_w']):
-            close(r,recorded,'RATE_RECONSTRUCTION');err=(y-x)*cap-dt*r
+            need(abs(r-recorded)<=tol(flux_scale),'RATE_RECONSTRUCTION');err=(y-x)*cap-dt*r
             need(abs(err)<=tol(x*cap,y*cap,dt*r),'LOCAL_CONTROL_VOLUME');max_error=max(max_error,abs(err))
         for k,w in dict(IT=fsum(loads),liquid=.95*fsum(loads),pump=electric,HX=hx).items():ledger[k]+=w*dt
         previous=s

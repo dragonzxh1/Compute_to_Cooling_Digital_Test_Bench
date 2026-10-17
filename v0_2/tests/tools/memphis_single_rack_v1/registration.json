@@ -1,8 +1,8 @@
 {
   "schema": "MEMPHIS-SINGLE-THEN-SIX-DEVELOPMENT-v1",
-  "build": 2,
-  "preserved_failed_run": 39009958272,
-  "build_change": "Component-only fixed-inlet Euler check divides energy increment by liquid heat capacity and rejects nonfinite intermediates; no plant equation, final threshold, M1 or expectation relaxed",
+  "build": 3,
+  "preserved_failed_runs": [39009958272,39010286517],
+  "build_change": "Keep component repair; rate audit gamma4096 uses pre-cancellation flux operands instead of nearly-zero net; add witness and real-error rejection. Physical equations, thermal limits, full loads, local/global energy gates and frozen M1 unchanged",
   "scope": "SINGLE_RACK_THEN_SIX_CDU_NOT_GROUP18",
   "final_source_authority": "baseline_registration.json final_design_sources;00/01 only",
   "source_precedence": "Final 00/01 override process alternatives; prior runs remain historical, never relabeled",

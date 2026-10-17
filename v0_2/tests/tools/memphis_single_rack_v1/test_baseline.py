@@ -53,3 +53,12 @@ def test_pump_and_IT_heat_ownership():
     x=c();p=RackLoop(x);p.advance(0,100000000,.9,[155000],314.15);l=p.ledger()
     assert l['it_j']==15500 and l['liquid_j']==14725 and l['air_j']==775
     assert abs(l['residual_j'])<=l['bound_j']
+
+def test_cancellation_bound_is_operand_scaled_and_rejects_real_error():
+    from .audit import tol
+    # Persisted Build2 near-cancellation witness, not a fitted multiplier.
+    reconstructed=15.128076691681912;recorded=15.128076691710902
+    operands=147437.19189669657+147250.+202.3199733882569
+    assert abs(reconstructed-recorded)>tol(reconstructed,recorded)
+    assert abs(reconstructed-recorded)<=tol(operands)
+    assert .001>tol(operands)  # a genuine1mW accounting error still fails
