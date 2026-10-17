@@ -1,0 +1,1617 @@
+{
+  "version": "US-PROJECT-UNIT6-v1",
+  "scope": "OFFLINE_DESIGN_PARAMETER_AND_ARITHMETIC_ONLY",
+  "authority": {
+    "hardware": "CALIBRATION_REQUIRED",
+    "c3": "NOT_RUN",
+    "production": "NOT_AUTHORIZED"
+  },
+  "sources": [
+    {
+      "id": "00.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    },
+    {
+      "id": "01.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    },
+    {
+      "id": "02.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\02_系统控制方案说明书_v9_客户确定方案_20260926.docx",
+      "sha256": "20a08a966b08772906c6af4c9da4eab4f219ffe0f60abf5fbec1bb080e723b60"
+    },
+    {
+      "id": "03.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\03_管径与冷却液压力设计计算说明书_中文_v9_客户确定方案_20260926.docx",
+      "sha256": "27b01084ba397e578bc37c396aec783cf84207307758e0c8be08ab6652fa3e50"
+    },
+    {
+      "id": "04.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\04_初步设计计算框架_中文_v9_客户确定方案_20260926.docx",
+      "sha256": "a7d2f4adb9b9b24fc6c5c9f70cb6a18c2157e83ce2b3597f96742dd2974dc9b0"
+    },
+    {
+      "id": "05.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\05_可靠性优先优化建议_中文_v9_客户确定方案_20260926.docx",
+      "sha256": "37e3472634bc71ab5f81c0a9093cb31b1bc3a12bf0820b551ddb161946d1463b"
+    },
+    {
+      "id": "06.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\06_修订清单与一致性校核报告_中文_v9_客户确定方案_20260926.docx",
+      "sha256": "a331a13b62c9441466623efd912cf6a637691c7f3030a80a17a7a0ed7fa0ad41"
+    },
+    {
+      "id": "07.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\07_联想GB300液冷技术参数提取表_中文_v9_客户确定方案_20260926.docx",
+      "sha256": "80ca970b91ee3d732444e44ceb73ba0e9485bdca605fbfc2a0acace39d043895"
+    },
+    {
+      "id": "08.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\08_确认清单_v9_客户确定方案_20260926.docx",
+      "sha256": "0c5b69e7a48647d060668265d57613b7ddd5030b308ccfb8436ce2410e60cc44"
+    },
+    {
+      "id": "09.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\09_年度用水用电及成本补充计算说明_v9_客户确定方案_20260926.docx",
+      "sha256": "238ac33707de21cc929bca745ba295b519c7a64ed6db23a312b010ff11626c4b"
+    },
+    {
+      "id": "10.docx",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\10_数据中心液液式CDU原理说明书.docx",
+      "sha256": "7a657a4f80c230e55e2fa2a1527a81955f4fa18fd18bed901dbc23052199a5b5"
+    },
+    {
+      "id": "10.pdf",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\10_数据中心液液式CDU原理说明书.pdf",
+      "sha256": "ed6caa6afe82c1203525216aee1606a67f79c5f05cb15ffaf092458e36fd04de"
+    },
+    {
+      "id": "11.pdf",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\11_冷源方案沟通函_90柜_R4.pdf",
+      "sha256": "dec37693df02fa8c5e9bf6b13cf7a0332353da3f634f80ed94269e346447515e"
+    },
+    {
+      "id": "12.pdf",
+      "path": "C:\\Users\\Aiden Zhang\\Downloads\\26025项目方案文件（含P&amp;amp;ID）20261010\\12_P&ID图纸.pdf",
+      "sha256": "4562cb70049bc2fd93ab655a4b5ec7285606c5184c3a33e9fdaf5f10c9c94291"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "rack_it_power",
+      "value": 155000,
+      "unit": "W",
+      "scope": "RACK",
+      "location": "RACK_IT_ELECTRICAL",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "00.docx",
+        "locator": "B020 / 表2"
+      },
+      "note": ""
+    },
+    {
+      "id": "liquid_capture_fraction",
+      "value": 0.95,
+      "unit": "1",
+      "scope": "RACK",
+      "location": "RACK_IT_TO_LIQUID",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "00.docx",
+        "locator": "B020 / 表2"
+      },
+      "note": "客户口径，非OEM实测比例"
+    },
+    {
+      "id": "racks_per_unit",
+      "value": 6,
+      "unit": "count",
+      "scope": "UNIT6",
+      "location": "TOPOLOGY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "units_per_group",
+      "value": 3,
+      "unit": "count",
+      "scope": "GROUP18",
+      "location": "TOPOLOGY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "groups_per_site",
+      "value": 5,
+      "unit": "count",
+      "scope": "SITE90",
+      "location": "TOPOLOGY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "cdus_per_unit",
+      "value": 2,
+      "unit": "count",
+      "scope": "UNIT6",
+      "location": "INSTALLED_CDU",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "active_cdus_per_unit",
+      "value": 1,
+      "unit": "count",
+      "scope": "UNIT6",
+      "location": "OPERATING_CDU",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "primary_networks_per_group",
+      "value": 2,
+      "unit": "count",
+      "scope": "GROUP18",
+      "location": "A_B_SUPPLY_RETURN_PAIRS",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_networks_per_unit",
+      "value": 2,
+      "unit": "count",
+      "scope": "UNIT6",
+      "location": "A_B_SUPPLY_RETURN_PAIRS",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "dry_units_per_group",
+      "value": 2,
+      "unit": "count",
+      "scope": "GROUP18",
+      "location": "INSTALLED_DRY_UNIT",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "wet_units_per_group",
+      "value": 2,
+      "unit": "count",
+      "scope": "GROUP18",
+      "location": "INSTALLED_WET_UNIT",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "modules_per_dry_unit",
+      "value": 3,
+      "unit": "count",
+      "scope": "DRY_UNIT",
+      "location": "PARALLEL_MODULES",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "modules_per_wet_unit",
+      "value": 5,
+      "unit": "count",
+      "scope": "WET_UNIT",
+      "location": "PARALLEL_MODULES",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B004"
+      },
+      "note": ""
+    },
+    {
+      "id": "fluid_pg_mass_fraction",
+      "value": 0.25,
+      "unit": "kg/kg",
+      "scope": "FLUID",
+      "location": "PROJECT_PG",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "07.docx",
+        "locator": "B009 row04"
+      },
+      "note": "项目采用值；OEM摘录未定义浓度，配方与供货产品待核"
+    },
+    {
+      "id": "fluid_density",
+      "value": 1009,
+      "unit": "kg/m3",
+      "scope": "FLUID",
+      "location": "PG25_INITIAL_DESIGN",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B007"
+      },
+      "note": ""
+    },
+    {
+      "id": "fluid_specific_heat",
+      "value": 4000,
+      "unit": "J/(kg K)",
+      "scope": "FLUID",
+      "location": "PG25_INITIAL_DESIGN",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B007"
+      },
+      "note": ""
+    },
+    {
+      "id": "primary_efficiency_budget",
+      "value": 0.7,
+      "unit": "1",
+      "scope": "GROUP18",
+      "location": "PRIMARY_PUMP_BUDGET",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B028"
+      },
+      "note": "全用电入液保守预算"
+    },
+    {
+      "id": "secondary_efficiency_budget",
+      "value": 0.65,
+      "unit": "1",
+      "scope": "CDU",
+      "location": "SECONDARY_PUMP_BUDGET",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B028"
+      },
+      "note": "全用电入液保守预算"
+    },
+    {
+      "id": "primary_flow_per_cdu",
+      "value": 0.030555555555555555,
+      "unit": "m3/s",
+      "scope": "CDU",
+      "location": "HX_PRIMARY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B010"
+      },
+      "note": ""
+    },
+    {
+      "id": "primary_group_flow",
+      "value": 0.09166666666666666,
+      "unit": "m3/s",
+      "scope": "GROUP18",
+      "location": "PRIMARY_LOAD_CIRCUIT",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B024"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_normal_flow",
+      "value": 0.013663888888888889,
+      "unit": "m3/s",
+      "scope": "UNIT6",
+      "location": "ACTIVE_CDU_SECONDARY",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B013 row02"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_hot_flow",
+      "value": 0.018991666666666667,
+      "unit": "m3/s",
+      "scope": "UNIT6",
+      "location": "ACTIVE_CDU_SECONDARY",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B013 row05"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_normal_loop_dp",
+      "value": 219730,
+      "unit": "Pa",
+      "scope": "UNIT6",
+      "location": "SECONDARY_COMPLETE_RUNNING_PATH",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B021"
+      },
+      "note": "非机柜单支路压差"
+    },
+    {
+      "id": "secondary_hot_loop_dp",
+      "value": 371810,
+      "unit": "Pa",
+      "scope": "UNIT6",
+      "location": "SECONDARY_COMPLETE_RUNNING_PATH",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B021"
+      },
+      "note": ""
+    },
+    {
+      "id": "source_dry_loop_dp",
+      "value": 63210,
+      "unit": "Pa",
+      "scope": "GROUP18",
+      "location": "PRIMARY_SOURCE_CIRCUIT",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B006"
+      },
+      "note": ""
+    },
+    {
+      "id": "source_wet_loop_dp",
+      "value": 96520,
+      "unit": "Pa",
+      "scope": "GROUP18",
+      "location": "PRIMARY_SOURCE_CIRCUIT",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B006"
+      },
+      "note": ""
+    },
+    {
+      "id": "load_loop_dp",
+      "value": 155920,
+      "unit": "Pa",
+      "scope": "GROUP18",
+      "location": "PRIMARY_LOAD_CIRCUIT",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B006"
+      },
+      "note": "与源侧分罐解耦，不合并为一台泵扬程"
+    },
+    {
+      "id": "secondary_internal_combined_dp",
+      "value": 50000,
+      "unit": "Pa",
+      "scope": "CDU",
+      "location": "PIPE_VALVE_FILTER_BUDGET",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B047"
+      },
+      "note": "物理位置待分段，禁止用此总量假造板换入口压"
+    },
+    {
+      "id": "external_path_length",
+      "value": 120,
+      "unit": "m",
+      "scope": "UNIT6",
+      "location": "SECONDARY_EQUIVALENT_PATH",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B006"
+      },
+      "note": "不是施工总长/充液容积长度"
+    },
+    {
+      "id": "secondary_main_inner_diameter",
+      "value": 0.10226,
+      "unit": "m",
+      "scope": "UNIT6",
+      "location": "SECONDARY_MAIN",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B017"
+      },
+      "note": ""
+    },
+    {
+      "id": "path_local_k",
+      "value": 20,
+      "unit": "1",
+      "scope": "UNIT6",
+      "location": "SECONDARY_EQUIVALENT_PATH",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B006"
+      },
+      "note": ""
+    },
+    {
+      "id": "friction_factor_budget",
+      "value": 0.022,
+      "unit": "1",
+      "scope": "UNIT6",
+      "location": "SECONDARY_EQUIVALENT_PATH",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B007"
+      },
+      "note": "实际Re/黏度待核"
+    },
+    {
+      "id": "off_design_dp_factor",
+      "value": 1.15,
+      "unit": "1",
+      "scope": "PROJECT",
+      "location": "HYDRAULIC_SENSITIVITY",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B006"
+      },
+      "note": "不是厂家物性曲线或低温适用保证"
+    },
+    {
+      "id": "cdu_initial_capacity",
+      "value": 1100000,
+      "unit": "W",
+      "scope": "CDU",
+      "location": "HX_CAPACITY",
+      "basis": "INITIAL_SELECTION",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B011"
+      },
+      "note": "不能作为厂家能力保证"
+    },
+    {
+      "id": "primary_pump_heat_group",
+      "value": 33060,
+      "unit": "W",
+      "scope": "GROUP18",
+      "location": "SOURCE_AND_LOAD_TO_FLUID",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B010/B028"
+      },
+      "note": "全年固定最不利包络预算，不是实际逐时功率"
+    },
+    {
+      "id": "secondary_normal_heat_table",
+      "value": 4620,
+      "unit": "W",
+      "scope": "CDU",
+      "location": "SECONDARY_PUMP_TO_FLUID",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B010/B013"
+      },
+      "note": "888120−883500；B028另写4920，冲突登记C03"
+    },
+    {
+      "id": "secondary_hot_heat_table",
+      "value": 10860,
+      "unit": "W",
+      "scope": "CDU",
+      "location": "SECONDARY_PUMP_TO_FLUID",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B010/B013"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_normal_supply",
+      "value": 40,
+      "unit": "degC",
+      "scope": "UNIT6",
+      "location": "RACK_SECONDARY_INLET_TARGET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B005"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_hot_supply",
+      "value": 44,
+      "unit": "degC",
+      "scope": "UNIT6",
+      "location": "RACK_SECONDARY_INLET_TARGET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B005"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_force_takeover",
+      "value": 44.5,
+      "unit": "degC",
+      "scope": "RACK",
+      "location": "RACK_SECONDARY_INLET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B012"
+      },
+      "note": ""
+    },
+    {
+      "id": "secondary_hard_limit",
+      "value": 45,
+      "unit": "degC",
+      "scope": "RACK",
+      "location": "RACK_SECONDARY_INLET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B012"
+      },
+      "note": "独立安全保护目标，触发不算满载连续性合格"
+    },
+    {
+      "id": "primary_normal_supply",
+      "value": 37,
+      "unit": "degC",
+      "scope": "CDU",
+      "location": "CDU_FRONT_PRIMARY_INLET_TARGET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B005"
+      },
+      "note": ""
+    },
+    {
+      "id": "primary_hot_supply",
+      "value": 41,
+      "unit": "degC",
+      "scope": "CDU",
+      "location": "CDU_FRONT_PRIMARY_INLET_TARGET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B005"
+      },
+      "note": ""
+    },
+    {
+      "id": "cold_header_correction",
+      "value": 0.0552,
+      "unit": "K",
+      "scope": "GROUP18",
+      "location": "SOURCE_COLD_HEADER_BEFORE_LOAD_PUMP",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B010"
+      },
+      "note": "低于CDU前目标，补偿负荷泵热"
+    },
+    {
+      "id": "buffer_volume_each",
+      "value": 15,
+      "unit": "m3",
+      "scope": "PRIMARY_NETWORK",
+      "location": "STRATIFIED_TANK",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B017"
+      },
+      "note": ""
+    },
+    {
+      "id": "buffer_effective_fraction",
+      "value": 0.7,
+      "unit": "1",
+      "scope": "PRIMARY_NETWORK",
+      "location": "DELIVERABLE_COLD_VOLUME",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B017"
+      },
+      "note": "理想预算，有效性能待厂家证明"
+    },
+    {
+      "id": "source_takeover_budget",
+      "value": 90,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "ENTIRE_FAULT_EVENT",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B022"
+      },
+      "note": ""
+    },
+    {
+      "id": "source_build_cold_budget",
+      "value": 60,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "INCLUDING_FAULT_DETECTION",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B017"
+      },
+      "note": ""
+    },
+    {
+      "id": "source_displacement_budget",
+      "value": 30,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "COLD_LIQUID_REACHES_LOAD",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B017"
+      },
+      "note": ""
+    },
+    {
+      "id": "fault_detection_budget",
+      "value": 1,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "EVENT_DETECTION_MAX",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B022"
+      },
+      "note": "要求≤此值，实际延迟未知"
+    },
+    {
+      "id": "same_type_overlap_budget",
+      "value": 30,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "TRANSITION_ONLY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B022"
+      },
+      "note": ""
+    },
+    {
+      "id": "buffer_outlet_rise_budget",
+      "value": 0.5,
+      "unit": "K",
+      "scope": "PRIMARY_NETWORK",
+      "location": "STRATIFIED_COLD_OUTLET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B017"
+      },
+      "note": ""
+    },
+    {
+      "id": "dry_exit_approach",
+      "value": 5,
+      "unit": "K",
+      "scope": "GROUP18",
+      "location": "DB_VS_CDU_FRONT_PRIMARY_TARGET",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B011"
+      },
+      "note": "严格大于边界退出，相等可保持"
+    },
+    {
+      "id": "dry_return_hysteresis",
+      "value": 1,
+      "unit": "K",
+      "scope": "GROUP18",
+      "location": "EXIT_DB_BOUNDARY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B011"
+      },
+      "note": ""
+    },
+    {
+      "id": "dry_return_stable_time",
+      "value": 120,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "RETURN_PERMISSION",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B011"
+      },
+      "note": ""
+    },
+    {
+      "id": "minimum_mode_dwell",
+      "value": 300,
+      "unit": "s",
+      "scope": "GROUP18",
+      "location": "NORMAL_MODE_SWITCH",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B011"
+      },
+      "note": "故障或过温退出豁免"
+    },
+    {
+      "id": "wet_minimum_process_flow",
+      "value": 0.018333333333333333,
+      "unit": "m3/s",
+      "scope": "WET_UNIT",
+      "location": "WHOLE_UNIT_PROCESS_MIN_BUDGET",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B014"
+      },
+      "note": "非每个模块最低流量，须供方核实"
+    },
+    {
+      "id": "wet_outlet_floor",
+      "value": 35,
+      "unit": "degC",
+      "scope": "WET_UNIT",
+      "location": "ENGINEERING_THERMAL_MODEL_FLOOR",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B014"
+      },
+      "note": ""
+    },
+    {
+      "id": "dry_rated_capacity",
+      "value": 3200000,
+      "unit": "W",
+      "scope": "DRY_UNIT",
+      "location": "DB29_OUTLET37_FLOW330",
+      "basis": "REPORTED_VENDOR_POINT",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "05.docx",
+        "locator": "B020"
+      },
+      "note": "原厂家附件本目录未提供"
+    },
+    {
+      "id": "wet_rated_capacity",
+      "value": 3300000,
+      "unit": "W",
+      "scope": "WET_UNIT",
+      "location": "WB30_IN43.92_OUT35_FLOW330",
+      "basis": "REPORTED_VENDOR_POINT",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "05.docx",
+        "locator": "B020"
+      },
+      "note": "单点，不当全工况热性能图"
+    },
+    {
+      "id": "water_tank_each",
+      "value": 40,
+      "unit": "m3",
+      "scope": "WET_UNIT",
+      "location": "TREATED_MAKEUP_INVENTORY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B018"
+      },
+      "note": ""
+    },
+    {
+      "id": "water_effective_fraction",
+      "value": 0.85,
+      "unit": "1",
+      "scope": "WET_UNIT",
+      "location": "USABLE_WATER",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B018"
+      },
+      "note": ""
+    },
+    {
+      "id": "water_outage_duration",
+      "value": 7200,
+      "unit": "s",
+      "scope": "WET_UNIT",
+      "location": "MAKEUP_INTERRUPTION",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B018"
+      },
+      "note": ""
+    },
+    {
+      "id": "makeup_max_flow",
+      "value": 0.004125,
+      "unit": "m3/s",
+      "scope": "WET_UNIT",
+      "location": "EXTREME_100_PERCENT_LATENT",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "09.docx",
+        "locator": "B034"
+      },
+      "note": ""
+    },
+    {
+      "id": "water_reserve_margin",
+      "value": 0.1,
+      "unit": "1",
+      "scope": "WET_UNIT",
+      "location": "OUTAGE_SIZING",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "09.docx",
+        "locator": "B034"
+      },
+      "note": ""
+    },
+    {
+      "id": "concentration_cycles",
+      "value": 1.5,
+      "unit": "1",
+      "scope": "WET_UNIT",
+      "location": "WATER_CHEMISTRY_BUDGET",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "09.docx",
+        "locator": "B029"
+      },
+      "note": ""
+    },
+    {
+      "id": "annual_latent_fraction",
+      "value": 0.85,
+      "unit": "1",
+      "scope": "WET_UNIT",
+      "location": "ANNUAL_EVAPORATION_ONLY",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "09.docx",
+        "locator": "B029"
+      },
+      "note": "2h极端储水不套此比例"
+    },
+    {
+      "id": "ups_count",
+      "value": 2,
+      "unit": "count",
+      "scope": "GROUP18",
+      "location": "INDEPENDENT_ELECTRICAL_FEEDS",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B019"
+      },
+      "note": ""
+    },
+    {
+      "id": "ups_capacity_each",
+      "value": 400000,
+      "unit": "W",
+      "scope": "UPS_FEED",
+      "location": "DESIGN_LOAD_CAPACITY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B019"
+      },
+      "note": ""
+    },
+    {
+      "id": "ups_apparent_capacity_each",
+      "value": 500000,
+      "unit": "VA",
+      "scope": "UPS_FEED",
+      "location": "DESIGN_APPARENT_CAPACITY",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B019"
+      },
+      "note": ""
+    },
+    {
+      "id": "ups_backup_time",
+      "value": 600,
+      "unit": "s",
+      "scope": "UPS_FEED",
+      "location": "ELECTRICAL_BACKUP",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B019"
+      },
+      "note": "不能替代热缓冲90s"
+    },
+    {
+      "id": "ups_continuous_load",
+      "value": 231000,
+      "unit": "W",
+      "scope": "UPS_FEED",
+      "location": "APPROVED_BUDGET_LOAD",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B019"
+      },
+      "note": ""
+    },
+    {
+      "id": "ups_overlap_load",
+      "value": 331000,
+      "unit": "W",
+      "scope": "UPS_FEED",
+      "location": "SINGLE_CDU_PAIR_SINGLE_LOAD_PUMP_PAIR",
+      "basis": "ENGINEERING_ESTIMATE",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B019"
+      },
+      "note": ""
+    },
+    {
+      "id": "dewpoint_target_margin",
+      "value": 3,
+      "unit": "K",
+      "scope": "SURFACE",
+      "location": "COLDEST_LOCAL_EXPOSED_OR_INSULATED_SURFACE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B036"
+      },
+      "note": ""
+    },
+    {
+      "id": "dewpoint_warning_margin",
+      "value": 2,
+      "unit": "K",
+      "scope": "SURFACE",
+      "location": "LOCAL_DEWPOINT_MARGIN_STRICT_LESS",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B036"
+      },
+      "note": ""
+    },
+    {
+      "id": "dewpoint_warning_duration",
+      "value": 10,
+      "unit": "s",
+      "scope": "SURFACE",
+      "location": "WARNING_PERSISTENCE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B036"
+      },
+      "note": ""
+    },
+    {
+      "id": "dewpoint_action_margin",
+      "value": 1,
+      "unit": "K",
+      "scope": "SURFACE",
+      "location": "LOCAL_DEWPOINT_MARGIN_LESS_OR_EQUAL",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B036"
+      },
+      "note": ""
+    },
+    {
+      "id": "dewpoint_action_duration",
+      "value": 3,
+      "unit": "s",
+      "scope": "SURFACE",
+      "location": "ACTION_PERSISTENCE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "02.docx",
+        "locator": "B036"
+      },
+      "note": ""
+    },
+    {
+      "id": "pump_suction_min_gauge",
+      "value": 50000,
+      "unit": "Pa(g)",
+      "scope": "PUMP",
+      "location": "ACTUAL_SUCTION_NODE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B047"
+      },
+      "note": "不能替代NPSH验证"
+    },
+    {
+      "id": "hx_inlet_difference_limit",
+      "value": 10000,
+      "unit": "Pa",
+      "scope": "CDU",
+      "location": "ABS_PRIMARY_INLET_GAUGE_MINUS_SECONDARY_INLET_GAUGE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B047"
+      },
+      "note": "非平均压力差、非单侧HX压降"
+    },
+    {
+      "id": "wet_coil_min_gauge",
+      "value": 100000,
+      "unit": "Pa(g)",
+      "scope": "WET_MODULE",
+      "location": "ACTUAL_COIL_RUNNING_NODE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B026"
+      },
+      "note": ""
+    },
+    {
+      "id": "wet_coil_max_gauge",
+      "value": 600000,
+      "unit": "Pa(g)",
+      "scope": "WET_MODULE",
+      "location": "ACTUAL_COIL_RUNNING_NODE",
+      "basis": "CUSTOMER_DESIGN",
+      "evidence_status": "DOCUMENT_ONLY",
+      "source": {
+        "document": "03.docx",
+        "locator": "B026"
+      },
+      "note": "不使用1MPa试压替代运行上限"
+    },
+    {
+      "id": "fluid_product_curve",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "FLUID",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B015 C05"
+      },
+      "note": "μ/ρ/cp/凝固点/蒸气压随温曲线、产品配方"
+    },
+    {
+      "id": "pump_full_curves",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "GROUP18",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B022/B030"
+      },
+      "note": "源/负荷/二次泵全转速Q-H、效率、功率、NPSHr/关死"
+    },
+    {
+      "id": "tower_full_curves",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "GROUP18",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B021"
+      },
+      "note": "全工况热性能及压降、干冷额定进液温度"
+    },
+    {
+      "id": "hx_performance_map",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "CDU",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B015 C04"
+      },
+      "note": "两侧UA/热容量/污垢/压降实际厂家图"
+    },
+    {
+      "id": "stratified_tank_performance",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "PRIMARY_NETWORK",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B013"
+      },
+      "note": "分层交付曲线、初始SOC、布水器及混合性能"
+    },
+    {
+      "id": "actual_geometry",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "GROUP18",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B023"
+      },
+      "note": "管长/标高/支路Kv/分段滤器损失和含液量"
+    },
+    {
+      "id": "actuator_and_sensor_dynamics",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "GROUP18",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B031"
+      },
+      "note": "泵惰转/零速、阀行程、建流、采样误差延迟"
+    },
+    {
+      "id": "secondary_reference_gauge",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "CDU",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "03.docx",
+        "locator": "B031/B033"
+      },
+      "note": "实际二次定压与最低部件MAWP"
+    },
+    {
+      "id": "source_emergency_power_timing",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "GROUP18",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B015 C08"
+      },
+      "note": "源泵/塔/喷淋/补水增压/阀保持能源归属与恢复时间"
+    },
+    {
+      "id": "paired_weather_and_workbook",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "SITE90",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "09.docx",
+        "locator": "B090/B091/B093"
+      },
+      "note": "09引用的CSV/JSON/XLSX及厂家原始附件未随本目录提供"
+    },
+    {
+      "id": "recharge_yearly_events",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "GROUP18",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "09.docx",
+        "locator": "B096"
+      },
+      "note": "事件次数/时长/额外热水电预算"
+    },
+    {
+      "id": "ordered_rack_sku",
+      "value": null,
+      "unit": "DATASET",
+      "scope": "RACK",
+      "location": "TO_BE_BOUND",
+      "basis": "MISSING",
+      "evidence_status": "INCOMPLETE",
+      "source": {
+        "document": "08.docx",
+        "locator": "B015 C06"
+      },
+      "note": "实际BOM、冷板动态及实测功耗，GPU结温预测需补"
+    }
+  ],
+  "topology": {
+    "unit6": {
+      "rack_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06"
+      ],
+      "cdu_pair": [
+        "CDU-A",
+        "CDU-B"
+      ],
+      "active_count": 1,
+      "secondary_networks": [
+        "A",
+        "B"
+      ]
+    },
+    "parent_group18": {
+      "units": [
+        "U01",
+        "U02",
+        "U03"
+      ],
+      "primary_networks": [
+        "A",
+        "B"
+      ],
+      "primary_A_B_interconnection_allowed": false,
+      "source_pumps": {
+        "installed": 4,
+        "normal_active": 3
+      },
+      "load_pumps": {
+        "per_network": 2,
+        "normal_active": 1
+      },
+      "tank": {
+        "per_network": 1,
+        "type": "STRATIFIED"
+      }
+    },
+    "instance_mapping": "LOGICAL_TEMPLATE_NOT_AS_BUILT_DEVICE_ADDRESS_MAP"
+  },
+  "recharge": {
+    "selected_variant": null,
+    "selection_status": "USER_REQUESTED_KEEP_BOTH_UNSELECTED",
+    "user_decision": "先保留两套，暂不选定",
+    "variants": [
+      {
+        "id": "WORD_SEGMENTED",
+        "source": [
+          "02.docx B027-B031",
+          "03.docx B048-B052"
+        ],
+        "additional_pumps_per_group": 0,
+        "source_recovery_active": 4,
+        "recovery_flow_setpoint_m3_s": null,
+        "example_only_m3_s": 0.12222222222222222,
+        "two_wet_units_separate_A_B_allowed": false
+      },
+      {
+        "id": "PID_INDEPENDENT",
+        "source": [
+          "12.pdf PDF_PAGE_16/D616",
+          "12.pdf PDF_PAGE_18"
+        ],
+        "additional_pumps_per_group": 2,
+        "recharge_active": 1,
+        "source_active": 3,
+        "recharge_candidate": {
+          "flow_m3_s": 0.09166666666666666,
+          "dp_pa": 120000,
+          "motor_w": 18500
+        },
+        "max_full_curve_head_m": 18,
+        "backup_restore_target_s": 600,
+        "two_wet_units_separate_A_B_allowed": true,
+        "status": "UNSELECTED_DESIGN_PROPOSAL"
+      }
+    ]
+  },
+  "conflicts": [
+    {
+      "id": "C01",
+      "status": "UNRESOLVED",
+      "subject": "回充拓扑/新增10泵/双湿分网",
+      "word": "02 B027 / 05 B048禁止新增及双湿分网回充",
+      "pid": "12.pdf pp16,18采用独立回充并要求客户确认",
+      "blocks": [
+        "TRANSIENT_RECHARGE",
+        "ANNUAL_RECHARGE"
+      ]
+    },
+    {
+      "id": "C02",
+      "status": "UNRESOLVED",
+      "subject": "源泵选型与定压",
+      "word": "03 B026:115m3/h/34m候选，定压未定",
+      "pid": "12.pdf p17:110m3/h选型≥115.82kPa，全曲线最大扬程≤18m，不直接采用34m；基准335.89kPa(g)、拟定标高+0.600m",
+      "blocks": [
+        "ABSOLUTE_PRESSURE",
+        "PUMP_CURVE_SELECTION"
+      ]
+    },
+    {
+      "id": "C03",
+      "status": "DOCUMENT_ARITHMETIC_FAIL",
+      "subject": "常态二次泵热正文",
+      "word": "03 B028写4.92kW；B010与表热负荷隐含4.62kW",
+      "calculation": "49.19*219.73/(3600*.65)=4.619kW",
+      "blocks": [
+        "USE_4_92_AS_NORMAL_POINT"
+      ]
+    },
+    {
+      "id": "C04",
+      "status": "VERSION_REFERENCE_INCOMPLETE",
+      "subject": "P&ID归档身份",
+      "word": "06 B030/08 B027写新版未归档、R10仅旧参考",
+      "pid": "所给PDF含10月9日新方案核对稿和10月10日审核稿，NTS；不是施工定稿",
+      "blocks": [
+        "AS_BUILT_GEOMETRY",
+        "CLAIM_FULL_DOCUMENT_CONSISTENCY"
+      ]
+    }
+  ],
+  "reported_oem_points": {
+    "source": "07.docx B014转录，原OEM文件本目录未提供",
+    "status": "SECONDARY_TRANSCRIPTION_NOT_REVERIFIED_OEM",
+    "nominal_rack_w": 135000,
+    "liquid_fraction_approx": 0.9,
+    "points": [
+      {
+        "inlet_c": 25,
+        "flow_l_min": 59,
+        "dp_psi": 2.3
+      },
+      {
+        "inlet_c": 30,
+        "flow_l_min": 71,
+        "dp_psi": 3.2
+      },
+      {
+        "inlet_c": 35,
+        "flow_l_min": 89,
+        "dp_psi": 4.9
+      },
+      {
+        "inlet_c": 40,
+        "flow_l_min": 119,
+        "dp_psi": 8.5
+      },
+      {
+        "inlet_c": 45,
+        "flow_l_min": 177,
+        "dp_psi": 18.4
+      }
+    ],
+    "maximum_listed_flow_is_hard_limit": false
+  },
+  "reference_cases": [
+    {
+      "id": "NORMAL",
+      "outdoor_db_c": 29,
+      "primary_cdu_inlet_c": 37,
+      "rack_inlet_target_c": 40,
+      "secondary_m3_h": 49.19,
+      "loop_dp_kpa": 219.73,
+      "hx_w": 888120,
+      "group_reject_w": 2697410,
+      "primary_source_hot_c": 44.24,
+      "secondary_return_c": 56.11
+    },
+    {
+      "id": "MID",
+      "outdoor_db_c": 35,
+      "primary_cdu_inlet_c": 40,
+      "rack_inlet_target_c": 43,
+      "secondary_m3_h": 63.57,
+      "loop_dp_kpa": 332,
+      "hx_w": null,
+      "group_reject_w": 2710620,
+      "primary_source_hot_c": 47.27,
+      "secondary_return_c": 55.52
+    },
+    {
+      "id": "HOT",
+      "outdoor_db_c": 37,
+      "primary_cdu_inlet_c": 41,
+      "rack_inlet_target_c": 44,
+      "secondary_m3_h": 68.37,
+      "loop_dp_kpa": 371.81,
+      "hx_w": 894360,
+      "group_reject_w": 2716150,
+      "primary_source_hot_c": 48.29,
+      "secondary_return_c": 55.67
+    }
+  ],
+  "reference_case_source": "03.docx B013，设计计算值，非独立实测golden waveform",
+  "annual": {
+    "source": "09.docx B019-B026/B090-B096",
+    "raw_records": 138509,
+    "valid_hours": 87564,
+    "missing_db_hours": 108,
+    "substituted_wb_hours": 3323,
+    "wb_fallback": "min(DB,30degC)",
+    "per_year_normalization_hours": 8760,
+    "equal_weight_years": 10,
+    "raw_data_available": false,
+    "reported_normal_water_per_group_m3": 2534.47,
+    "reported_normal_billed_electric_per_group_wh": 469590000,
+    "reported_liquid_cooling_electric_per_group_wh": 768580000,
+    "recharge_increment_wh": null,
+    "seconds_level_switching_simulated": false
+  }
+}

@@ -1,0 +1,66 @@
+name: Memphis V2 physical credibility DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-project-v2]
+    paths:
+      - 'v0_2/tests/tools/memphis_project_v2/**'
+      - '.github/workflows/memphis-project-v2*.yml'
+  workflow_dispatch:
+    inputs:
+      expected_commit:
+        required: true
+        type: string
+      manifest_sha256:
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: memphis-v2-physical-credibility
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-project-v2-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+      manifest_sha256: ${{ inputs.manifest_sha256 || '' }}
+      dispatch_expected_commit: ${{ inputs.expected_commit || '' }}
+  study:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [six, plant-a, plant-b, recharge]
+    uses: ./.github/workflows/memphis-project-v2-runner.yml
+    with:
+      group: ${{ matrix.group }}
+      expected_commit: ${{ github.sha }}
+      manifest_sha256: ${{ inputs.manifest_sha256 || '' }}
+      dispatch_expected_commit: ${{ inputs.expected_commit || '' }}
+  report:
+    needs: [baseline, study]
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: memphis-compact-*
+          path: artifacts/memphis-v2-analysis/
+          merge-multiple: true
+      - name: Consolidated report from independent equation audits
+        shell: pwsh
+        run: |
+          & ./v0_2/tests/tools/memphis_project_v2/report.ps1 -Root ./artifacts/memphis-v2-analysis -ExpectedCommit $env:GITHUB_SHA
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: memphis-consolidated-report-${{ github.run_id }}
+          path: artifacts/memphis-v2-analysis/
+          retention-days: 30
+          if-no-files-found: error
