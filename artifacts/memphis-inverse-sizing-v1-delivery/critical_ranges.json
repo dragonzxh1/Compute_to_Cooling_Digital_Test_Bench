@@ -1,0 +1,92 @@
+[
+  {
+    "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+    "axis": "standby_initial_c",
+    "global_minimum": "NOT_VERIFIED",
+    "kind": "critical",
+    "largest_tested_feasible": 41.6,
+    "layers": 80,
+    "observed_edges": [
+      [
+        41.6,
+        42.0
+      ]
+    ],
+    "smallest_tested_infeasible": 41.7
+  },
+  {
+    "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+    "axis": "standby_initial_c",
+    "global_minimum": "NOT_VERIFIED",
+    "kind": "critical",
+    "largest_tested_feasible": 41.6,
+    "layers": 160,
+    "observed_edges": [
+      [
+        41.6,
+        42.0
+      ]
+    ],
+    "smallest_tested_infeasible": 41.7
+  },
+  {
+    "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+    "axis": "startup_s",
+    "global_minimum": "NOT_VERIFIED",
+    "kind": "critical",
+    "largest_tested_feasible": 75.0,
+    "layers": 80,
+    "observed_edges": [
+      [
+        70.0,
+        80.0
+      ]
+    ],
+    "smallest_tested_infeasible": 77.5
+  },
+  {
+    "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+    "axis": "header_volume_m3",
+    "global_minimum": "NOT_VERIFIED",
+    "kind": "critical",
+    "largest_tested_feasible": 0.3125,
+    "layers": 80,
+    "observed_edges": [
+      [
+        0.25,
+        0.5
+      ]
+    ],
+    "smallest_tested_infeasible": 0.375
+  },
+  {
+    "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+    "axis": "header_volume_m3",
+    "global_minimum": "NOT_VERIFIED",
+    "kind": "critical",
+    "largest_tested_feasible": 0.25,
+    "layers": 160,
+    "observed_edges": [
+      [
+        0.25,
+        0.5
+      ]
+    ],
+    "smallest_tested_infeasible": 0.3125
+  },
+  {
+    "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+    "axis": "valve_s",
+    "global_minimum": "NOT_VERIFIED",
+    "kind": "critical",
+    "largest_tested_feasible": 15.0,
+    "layers": 80,
+    "observed_edges": [
+      [
+        15.0,
+        20.0
+      ]
+    ],
+    "smallest_tested_infeasible": 16.25
+  }
+]

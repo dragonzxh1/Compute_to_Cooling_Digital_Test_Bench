@@ -1,0 +1,5 @@
+# Build001 预检停止并保留
+
+源码fe6d992a329789fae811032555c697b34365f584，manifest de5413a23358ef938abfcacc1c2aeb771c694549d4152df624825c4ed83af5e8，run39134808524。
+
+原始G_WET_LOSS物理/曲线/M1阶段逐字节复现、源码AST及17项见证通过；发现无故障运行可能被新分析标记为FULL_LOAD_RECOVERED，取消并保留已有原始证据，不借其PASS。Build002将该项改为NOT_APPLICABLE_NO_FAULT并增加正反拒绝见证。冻结M1、物理方程、00/01及全部客户硬限无变化。

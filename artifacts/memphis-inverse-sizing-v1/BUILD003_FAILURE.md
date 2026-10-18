@@ -1,0 +1,7 @@
+# Build003 执行失败保留
+
+Source `fb9d5ff550b45e49a68d0839dc06a664f8ce29ce`，manifest `a95ed7cbf5990724f6c41322a85426980bcab204b8e07df8d3de0dff95e8b83b`，run39135290316。
+
+CDU_SCAN十个单元工况合在一个480s受控Job，实际TIMEOUT；cleanup=true/active_after_cleanup=0。ROBUST_B15在1.2s延迟时MeasurementView正确掩码为MISSING/None，旧独立复核误用float-None而失败。WET_MODULE_LOSS在局部接近平衡时复核的残差相对误差界没有计入原始相减项，不能据此跳过能量检查。
+
+Build004仅新工具内修复：十个CDU工况分Job，每个仍480s；按质量和采样年龄独立重建掩码；以原始能量率操作数构建4096次舍入的绝对前向误差界，并加入1W篡改拒绝及过期测量伪VALID拒绝见证。客户硬限、物理演化、冻结M1及历史文件不改。保留官方ZIP和原始日志；本轮不是完整开发PASS，不借部分PASS作为新轮结果。

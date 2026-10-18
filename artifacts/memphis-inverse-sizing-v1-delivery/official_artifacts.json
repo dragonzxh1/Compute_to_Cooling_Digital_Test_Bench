@@ -1,0 +1,405 @@
+{
+  "total_count": 20,
+  "artifacts": [
+    {
+      "id": 12140670409,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDY3MDQwOQ==",
+      "name": "memphis-inverse-compact-precool-39136524640",
+      "size_in_bytes": 88250,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140670409",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140670409/zip",
+      "expired": false,
+      "digest": "sha256:7ee8fe1fbf27797c1d306bc62e869bd6390eaeb4078d2d9d0b829ba042537c46",
+      "created_at": "2026-10-18T14:45:35Z",
+      "updated_at": "2026-10-18T14:45:35Z",
+      "expires_at": "2026-11-17T14:45:34Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140640892,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDY0MDg5Mg==",
+      "name": "memphis-inverse-raw-recharge-39136524640",
+      "size_in_bytes": 60501970,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140640892",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140640892/zip",
+      "expired": false,
+      "digest": "sha256:bd306bcc1c73a4efe1158c356ef04f9b55885f4ac3b44ba1edb4d51c74eeb091",
+      "created_at": "2026-10-18T14:50:13Z",
+      "updated_at": "2026-10-18T14:50:13Z",
+      "expires_at": "2026-11-17T14:50:06Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140516853,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDUxNjg1Mw==",
+      "name": "memphis-inverse-raw-scenarios-39136524640",
+      "size_in_bytes": 33618190,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140516853",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140516853/zip",
+      "expired": false,
+      "digest": "sha256:dfcd87e1da6b2342204b8fb5374797b3a76f3942f715a98a48316ae1809a6a58",
+      "created_at": "2026-10-18T14:47:41Z",
+      "updated_at": "2026-10-18T14:47:41Z",
+      "expires_at": "2026-11-17T14:47:38Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140481814,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDQ4MTgxNA==",
+      "name": "memphis-inverse-compact-robust-39136524640",
+      "size_in_bytes": 636329,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140481814",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140481814/zip",
+      "expired": false,
+      "digest": "sha256:ace63951f42680738ad8ea7c03e507290f8c1762e9549d376e9dab7b3ed9d3fe",
+      "created_at": "2026-10-18T14:45:55Z",
+      "updated_at": "2026-10-18T14:45:55Z",
+      "expires_at": "2026-11-17T14:45:54Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140362569,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDM2MjU2OQ==",
+      "name": "memphis-inverse-raw-inverse-39136524640",
+      "size_in_bytes": 231673434,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140362569",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140362569/zip",
+      "expired": false,
+      "digest": "sha256:3d19f73348aea4c865f8c2e3b23febaac6fdcc2800840830d145c46f52383aee",
+      "created_at": "2026-10-18T14:47:25Z",
+      "updated_at": "2026-10-18T14:47:25Z",
+      "expires_at": "2026-11-17T14:46:54Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140347489,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDM0NzQ4OQ==",
+      "name": "memphis-inverse-compact-scenarios-39136524640",
+      "size_in_bytes": 241287,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140347489",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140347489/zip",
+      "expired": false,
+      "digest": "sha256:5ec2abb834eb09addffba6f26a0c1906519a9a58d5489389ac261c1d86afe3fb",
+      "created_at": "2026-10-18T14:47:43Z",
+      "updated_at": "2026-10-18T14:47:43Z",
+      "expires_at": "2026-11-17T14:47:42Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140257786,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDI1Nzc4Ng==",
+      "name": "memphis-inverse-raw-robust-39136524640",
+      "size_in_bytes": 126261130,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140257786",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140257786/zip",
+      "expired": false,
+      "digest": "sha256:6103ea42e1b0746991c021a95a664fe212805d0e0e654a23da6785fa529f1e55",
+      "created_at": "2026-10-18T14:45:54Z",
+      "updated_at": "2026-10-18T14:45:54Z",
+      "expires_at": "2026-11-17T14:45:41Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140240730,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDI0MDczMA==",
+      "name": "memphis-inverse-raw-baseline-39136524640",
+      "size_in_bytes": 2965057,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140240730",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140240730/zip",
+      "expired": false,
+      "digest": "sha256:64b2a153d3f7f52d6c4084b800a34f0ce119fa3604144a7f76dd68b05f72de8b",
+      "created_at": "2026-10-18T14:34:12Z",
+      "updated_at": "2026-10-18T14:34:12Z",
+      "expires_at": "2026-11-17T14:34:10Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140171724,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDE3MTcyNA==",
+      "name": "memphis-inverse-compact-tanks-b-39136524640",
+      "size_in_bytes": 53754,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140171724",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140171724/zip",
+      "expired": false,
+      "digest": "sha256:742c13d10b47dcf2c6a6fdbdfcc5750c5d3eda6b711414584f94f12eafc59606",
+      "created_at": "2026-10-18T14:35:17Z",
+      "updated_at": "2026-10-18T14:35:17Z",
+      "expires_at": "2026-11-17T14:35:17Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140143384,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDE0MzM4NA==",
+      "name": "memphis-inverse-compact-inverse-39136524640",
+      "size_in_bytes": 1123746,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140143384",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140143384/zip",
+      "expired": false,
+      "digest": "sha256:e5d90d105ab2b0dc7a8c21defb92f98c9ae00b784b8dae743b17547440b9824c",
+      "created_at": "2026-10-18T14:47:26Z",
+      "updated_at": "2026-10-18T14:47:26Z",
+      "expires_at": "2026-11-17T14:47:25Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140096718,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDA5NjcxOA==",
+      "name": "memphis-inverse-raw-tanks-b-39136524640",
+      "size_in_bytes": 5684441,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140096718",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140096718/zip",
+      "expired": false,
+      "digest": "sha256:eff9c4a69a8a3439dc6cf48be1d8e95c5d4ed76e33d4add2700209b0a734eeb3",
+      "created_at": "2026-10-18T14:35:16Z",
+      "updated_at": "2026-10-18T14:35:16Z",
+      "expires_at": "2026-11-17T14:35:15Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12140092483,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE0MDA5MjQ4Mw==",
+      "name": "memphis-inverse-compact-joint-39136524640",
+      "size_in_bytes": 443894,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140092483",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12140092483/zip",
+      "expired": false,
+      "digest": "sha256:81991ba7bdccd99c5067c10e5653b90bdc5f2b71e65ee71d82a049a70c332bae",
+      "created_at": "2026-10-18T14:40:10Z",
+      "updated_at": "2026-10-18T14:40:10Z",
+      "expires_at": "2026-11-17T14:40:09Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139967227,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTk2NzIyNw==",
+      "name": "memphis-inverse-raw-precool-39136524640",
+      "size_in_bytes": 184755752,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139967227",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139967227/zip",
+      "expired": false,
+      "digest": "sha256:054890aad6a954c7206ec89fac336a5f29a92f84bfc8347d7722cdf802da9f03",
+      "created_at": "2026-10-18T14:45:33Z",
+      "updated_at": "2026-10-18T14:45:33Z",
+      "expires_at": "2026-11-17T14:45:22Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139919516,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTkxOTUxNg==",
+      "name": "memphis-inverse-compact-final-39136524640",
+      "size_in_bytes": 1898986,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139919516",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139919516/zip",
+      "expired": false,
+      "digest": "sha256:da16233cdad729ed361c49c843da13de9165121783141b96f3bce1597997153e",
+      "created_at": "2026-10-18T14:51:18Z",
+      "updated_at": "2026-10-18T14:51:18Z",
+      "expires_at": "2026-11-17T14:51:16Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139848304,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTg0ODMwNA==",
+      "name": "memphis-inverse-raw-joint-39136524640",
+      "size_in_bytes": 83603091,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139848304",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139848304/zip",
+      "expired": false,
+      "digest": "sha256:8078ea646021189737469bf06ffd0b349e3d05ca67afd1b1191433b7976ebeb6",
+      "created_at": "2026-10-18T14:40:09Z",
+      "updated_at": "2026-10-18T14:40:09Z",
+      "expires_at": "2026-11-17T14:39:57Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139814684,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTgxNDY4NA==",
+      "name": "memphis-inverse-raw-final-39136524640",
+      "size_in_bytes": 1912784,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139814684",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139814684/zip",
+      "expired": false,
+      "digest": "sha256:2d77e3e09810f299427ac4a8f54503eee7790e4a646b26961b81e64475e71f03",
+      "created_at": "2026-10-18T14:51:16Z",
+      "updated_at": "2026-10-18T14:51:16Z",
+      "expires_at": "2026-11-17T14:51:14Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139589755,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTU4OTc1NQ==",
+      "name": "memphis-inverse-compact-recharge-39136524640",
+      "size_in_bytes": 232587,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139589755",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139589755/zip",
+      "expired": false,
+      "digest": "sha256:c548520ba89d7a787c52f3d328183f865f0c1532b5b05387500e04eb56b5fb76",
+      "created_at": "2026-10-18T14:50:15Z",
+      "updated_at": "2026-10-18T14:50:15Z",
+      "expires_at": "2026-11-17T14:50:14Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139294091,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTI5NDA5MQ==",
+      "name": "memphis-inverse-compact-tanks-a-39136524640",
+      "size_in_bytes": 53843,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139294091",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139294091/zip",
+      "expired": false,
+      "digest": "sha256:21e44ac52b432e9207e0b398441ccc86ac5586b421daa6902fae14050e359917",
+      "created_at": "2026-10-18T14:35:17Z",
+      "updated_at": "2026-10-18T14:35:17Z",
+      "expires_at": "2026-11-17T14:35:16Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12139289111,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzOTI4OTExMQ==",
+      "name": "memphis-inverse-raw-tanks-a-39136524640",
+      "size_in_bytes": 5685829,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139289111",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12139289111/zip",
+      "expired": false,
+      "digest": "sha256:922c92df17ae519a6beffa455ae5b980ad70b7b70c1bbbe96510a1389f87e853",
+      "created_at": "2026-10-18T14:35:16Z",
+      "updated_at": "2026-10-18T14:35:16Z",
+      "expires_at": "2026-11-17T14:35:15Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    },
+    {
+      "id": 12138964759,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzODk2NDc1OQ==",
+      "name": "memphis-inverse-compact-baseline-39136524640",
+      "size_in_bytes": 84256,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12138964759",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12138964759/zip",
+      "expired": false,
+      "digest": "sha256:87fd8a21f47404215f9670d968ddf9cbb4c6e240cd0b2ff9a84d221ac2d14f45",
+      "created_at": "2026-10-18T14:34:13Z",
+      "updated_at": "2026-10-18T14:34:13Z",
+      "expires_at": "2026-11-17T14:34:12Z",
+      "workflow_run": {
+        "id": 39136524640,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-inverse-sizing-v1",
+        "head_sha": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb"
+      }
+    }
+  ]
+}

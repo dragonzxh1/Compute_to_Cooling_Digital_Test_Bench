@@ -1,0 +1,10 @@
+﻿id,supplier_data,required_condition,blocking,OEM_GUARANTEED_VALUE,procurement
+RFI-01,CDU effectiveUA/fouling/PG25/4temperatures/Q-DP,"37/40,41/44;110/49.19/68.37;1100kW guarantee separate",True,,FROZEN
+RFI-02,Tank diffuser/thermocline/short-circuit/wall and initial cold inventory,A and B separately330m3/h90s<=0.5K;TT placement and worst inlet sequence,True,,FROZEN
+RFI-03,Standby preconditioning topology/pipe volume/insulation and measured ready,Temperature/flow/transport history;thermal kW vs COP/fan electric;outage holding time,True,,FROZEN
+RFI-04,Dry actualDB/flow/PG25/outlet map and Nminus1,DB29 supply37;DB46 cannot alone make41;finite airflow/UA/power,True,,FROZEN
+RFI-05,"Wet actualWB/DB/PG25 map, module loss, startup and fan/spray",46DB/30WB at specified inlet/outlet330;water2h includingdrift/blowdown/sump,True,,FROZEN
+RFI-06,Pump full Q-H-eta-NPSHr/shutoff/speed/parallel map,V9 34m andR10<=18m adjudicated separately;source/load/recharge separate,True,,FROZEN
+RFI-07,Static elevations/expansion/relief/weakest MAWP/transient,Suction/gauge references;water hammer;forbiddenAB cross-connection,True,,FROZEN
+RFI-08,Valve Kv/stroke/zero-speed and source-ready measurement,"Actual PLC receipts,release/sample latency,calibration uncertainty and independent fast protection",True,,FROZEN
+RFI-09,Design cost/reliability/uncertainty distributions,"No monetary Pareto weights,probability orROBUST approval without field envelope",True,,FROZEN

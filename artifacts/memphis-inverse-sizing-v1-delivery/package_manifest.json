@@ -1,0 +1,154 @@
+{
+  "schema": "MEMPHIS-INVERSE-SIZING-DELIVERY-v1",
+  "execution_commit": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb",
+  "run": 39136524640,
+  "scope": "Bounded software inverse/forward sizing; finite scans/Pareto/uncertainty, not OEM guarantees",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "manifest_raw_sha256": "33fd9504baaf6bb92c24b07e4a47cfa6d0debd3c985253b132de692a716ad36f",
+  "source_input_environment_manifest_sha256": "e9639462eea25397620be25bdf2b935cbbf32d5bf80adfec2492d5c2b1ef1263",
+  "independent_primary_review_run": 39141542985,
+  "independent_primary_review_commit": "43269d7a01bb8244cad05bfffe38e984e1bd1a2b",
+  "official_html_sha256": "a494d641412e6db9e648d6cdf83c63303d9ef735d1df7c1181722485c40e9216",
+  "official_report_sha256": "46f8209f0b557a3203c92f31895f31c62cbf04fac0dcf6614c66044cf6a69cba",
+  "derivation": "Official HTML/JSON/Markdown unchanged. ENGINEERING_DECISION_ZH adds actual quantitative selection interpretation, separates forward/tank/recharge/normal-temperature targets, records unexcited stuck-valve and post-fault recharge gaps; no new PASS",
+  "files": [
+    {
+      "bytes": 478535,
+      "path": "analytic_requirements.json",
+      "raw_sha256": "ce85d45d03a1b667b1d10532d5a561601dee8ea1af1a39f8b69897235838fff1"
+    },
+    {
+      "bytes": 23453,
+      "path": "buffer_convergence.csv",
+      "raw_sha256": "fe48208313667deb7e6bd129b8a1ccd465842d7347ee18bd59eef1ba697651b8"
+    },
+    {
+      "bytes": 329737,
+      "path": "buffer_trials.json",
+      "raw_sha256": "f18fb61fc2e0d029f1bc858cf5989ee5b1f9f379817f26f12644587ecd4af61b"
+    },
+    {
+      "bytes": 2407,
+      "path": "critical_ranges.json",
+      "raw_sha256": "7b63bbe80b59ea4721d4e02c1c20fc0e98363256bac1af018e69e037ee703ceb"
+    },
+    {
+      "bytes": 94637,
+      "path": "device_feasible_ranges.json",
+      "raw_sha256": "e29fede05641c6bac6a3df6467c1c1e2996619872c73a0689e73d7f347882513"
+    },
+    {
+      "bytes": 40602,
+      "path": "dry_performance_surface.csv",
+      "raw_sha256": "518f47aa13dec7367c5ee7c146258e2886114f02e0c503c4d89433f248af0484"
+    },
+    {
+      "bytes": 13787,
+      "path": "ENGINEERING_DECISION_ZH.md",
+      "raw_sha256": "60f40504851862077a6936fb53ca504ba04a6a87cf93c8e451aca23bce62f4c1"
+    },
+    {
+      "bytes": 15377797,
+      "path": "engineering_report.html",
+      "raw_sha256": "a494d641412e6db9e648d6cdf83c63303d9ef735d1df7c1181722485c40e9216"
+    },
+    {
+      "bytes": 1747,
+      "path": "engineering_verdicts.json",
+      "raw_sha256": "488cb9037afae50b4a40c4da99d79e16c460f9dd21cd4696523383e97170d3c6"
+    },
+    {
+      "bytes": 1073133,
+      "path": "forward_trials.json",
+      "raw_sha256": "6aed075d3b030879f460773c18ce3adc8840f3b35960dbafef9fde759298885c"
+    },
+    {
+      "bytes": 18743,
+      "path": "independent_file_verification.json",
+      "raw_sha256": "1e9969b033ef3422b50dea0fc6b01eacb6eb368ab17e1bd5384878b2048bd4bf"
+    },
+    {
+      "bytes": 68083,
+      "path": "interactive-report.png",
+      "raw_sha256": "1d339fb7b0264c079c2169ad338a374cdfb56f8830aa293b63f8d9cf3a15f731"
+    },
+    {
+      "bytes": 6343,
+      "path": "inverse_sizing_results.json",
+      "raw_sha256": "ee88abf50c0d3cebf04cef4cc575f1014c46065bb7f29a0f33c0e30405ddad36"
+    },
+    {
+      "bytes": 12674,
+      "path": "MEMPHIS_MINIMUM_EQUIPMENT_REQUIREMENTS_ZH.md",
+      "raw_sha256": "46f8209f0b557a3203c92f31895f31c62cbf04fac0dcf6614c66044cf6a69cba"
+    },
+    {
+      "bytes": 7596,
+      "path": "minimum_equipment_parameters.csv",
+      "raw_sha256": "7f8fa326627f695ecb0d859380131d0d317035df53d59ef0cee31ab3a1e7419b"
+    },
+    {
+      "bytes": 19583,
+      "path": "official_artifacts.json",
+      "raw_sha256": "0d438864b70db09d28003581ec137698564bc478ea6843e5de7be56f6943da1f"
+    },
+    {
+      "bytes": 361,
+      "path": "pareto_feasible_region.json",
+      "raw_sha256": "730a007c174aca56e8a95f621cd8caaf9a95dd56683c031beb7a5299dcb11690"
+    },
+    {
+      "bytes": 11943,
+      "path": "precool_energy_bounds.csv",
+      "raw_sha256": "796f69e61573b74d97ed3f3c44413d1544be9b334b7bceaefc84f842a3b57764"
+    },
+    {
+      "bytes": 25111,
+      "path": "precool_results.json",
+      "raw_sha256": "de7a1e62e2a110666a1fa4d41a4894c92ffb2e3a3ca02f706dc3a726f7668cb7"
+    },
+    {
+      "bytes": 8071,
+      "path": "preserved_preflights.json",
+      "raw_sha256": "4dcf06a0e8388f42cd580919004318e49c397417e25a259406921045f0f7dbfc"
+    },
+    {
+      "bytes": 47770,
+      "path": "primary_hydraulic_verification.json",
+      "raw_sha256": "4b3b22e97b73da9ec7aac97b9862d798a69d599293176ed5cbaee0f1e715ebc2"
+    },
+    {
+      "bytes": 62962,
+      "path": "sensitivity_results.csv",
+      "raw_sha256": "814edf4959afc59d605834d20002cc8f3e6433dc617438a8e4747a4aa142c15b"
+    },
+    {
+      "bytes": 149155,
+      "path": "source_input_environment_manifest.json",
+      "raw_sha256": "e9639462eea25397620be25bdf2b935cbbf32d5bf80adfec2492d5c2b1ef1263"
+    },
+    {
+      "bytes": 1466,
+      "path": "supplier_RFI.csv",
+      "raw_sha256": "a2daff977c898d21448652981697ec226650c3ad58d5ed0d4b55276644c0b8fa"
+    },
+    {
+      "bytes": 20031,
+      "path": "unit_results.json",
+      "raw_sha256": "846b51065f2c761b54ac02b988b368f8298aa34f6a8baa2dd06ec0484ff2b94f"
+    },
+    {
+      "bytes": 40802,
+      "path": "wet_performance_surface.csv",
+      "raw_sha256": "9692ac78075601163ea8405d0be6ac94b933368d3dc3e5210608c0f136223140"
+    }
+  ],
+  "raw_zip_count": 20,
+  "raw_files": 5373,
+  "raw_logs_sha256": "9617c8bde02767e2b2a5cf957145ff3cec5ce6d2d56f87c06c5bf9d980531017",
+  "formal": false,
+  "procurement": false,
+  "production": false,
+  "hardware": false,
+  "phase6": false
+}

@@ -1,0 +1,203 @@
+{
+  "OEM_GUARANTEED_VALUE": null,
+  "Pareto_points": [
+    {
+      "capacity_scale": 1.0,
+      "cold_delay_s": 84.5,
+      "id": "JOINT41_5_05",
+      "peak_C": 44.000053841092665,
+      "precool_MJ": 75.36220999999999,
+      "startup_improvement_s": 0,
+      "tank_m3": 15.0
+    }
+  ],
+  "buffer_trials": 460,
+  "critical": [
+    {
+      "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+      "axis": "standby_initial_c",
+      "global_minimum": "NOT_VERIFIED",
+      "kind": "critical",
+      "largest_tested_feasible": 41.6,
+      "layers": 80,
+      "observed_edges": [
+        [
+          41.6,
+          42.0
+        ]
+      ],
+      "smallest_tested_infeasible": 41.7
+    },
+    {
+      "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+      "axis": "standby_initial_c",
+      "global_minimum": "NOT_VERIFIED",
+      "kind": "critical",
+      "largest_tested_feasible": 41.6,
+      "layers": 160,
+      "observed_edges": [
+        [
+          41.6,
+          42.0
+        ]
+      ],
+      "smallest_tested_infeasible": 41.7
+    },
+    {
+      "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+      "axis": "startup_s",
+      "global_minimum": "NOT_VERIFIED",
+      "kind": "critical",
+      "largest_tested_feasible": 75.0,
+      "layers": 80,
+      "observed_edges": [
+        [
+          70.0,
+          80.0
+        ]
+      ],
+      "smallest_tested_infeasible": 77.5
+    },
+    {
+      "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+      "axis": "header_volume_m3",
+      "global_minimum": "NOT_VERIFIED",
+      "kind": "critical",
+      "largest_tested_feasible": 0.3125,
+      "layers": 80,
+      "observed_edges": [
+        [
+          0.25,
+          0.5
+        ]
+      ],
+      "smallest_tested_infeasible": 0.375
+    },
+    {
+      "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+      "axis": "header_volume_m3",
+      "global_minimum": "NOT_VERIFIED",
+      "kind": "critical",
+      "largest_tested_feasible": 0.25,
+      "layers": 160,
+      "observed_edges": [
+        [
+          0.25,
+          0.5
+        ]
+      ],
+      "smallest_tested_infeasible": 0.3125
+    },
+    {
+      "assumption": "No global monotonicity. Finite samples and all observed edge refinements; gaps remain unproven",
+      "axis": "valve_s",
+      "global_minimum": "NOT_VERIFIED",
+      "kind": "critical",
+      "largest_tested_feasible": 15.0,
+      "layers": 80,
+      "observed_edges": [
+        [
+          15.0,
+          20.0
+        ]
+      ],
+      "smallest_tested_infeasible": 16.25
+    }
+  ],
+  "dynamic_trials": 133,
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "formal": false,
+  "hardware": false,
+  "manifest_sha256": "33fd9504baaf6bb92c24b07e4a47cfa6d0debd3c985253b132de692a716ad36f",
+  "model_status": "DEVELOPMENT_CALCULATION_COMPLETED",
+  "official_raw_groups": [
+    {
+      "group": "baseline",
+      "index_sha256": "4abb16cae2f65ce47f82b3a2a8d05cd11376c803310690de401526b9073fae44",
+      "raw_file_count": 64
+    },
+    {
+      "group": "inverse",
+      "index_sha256": "a0b3d4c18ee60df03411bfe01a9c2453fcac084c635d30aeed92e6889eb84a2f",
+      "raw_file_count": 1661
+    },
+    {
+      "group": "joint",
+      "index_sha256": "01d3412d088054d57698a476fe70dd4e44645838a91c742c52d871d06574283d",
+      "raw_file_count": 641
+    },
+    {
+      "group": "precool",
+      "index_sha256": "a70a426452e4f0893fb8d4fbc16e3956adf1033918937d6b9cf6c754a77acddb",
+      "raw_file_count": 854
+    },
+    {
+      "group": "recharge",
+      "index_sha256": "c46ca97a19a3b79b92c69f9cd597b2ce44ab25341322aabd6a614b5dde4555f4",
+      "raw_file_count": 308
+    },
+    {
+      "group": "robust",
+      "index_sha256": "e174b30558258daf00e3007f255de3e0200b8f166b7ec6dac91ddae43483479d",
+      "raw_file_count": 851
+    },
+    {
+      "group": "scenarios",
+      "index_sha256": "f361eadf1150690685c1682c91694ab793e93508250bc25db701b7a3da325978",
+      "raw_file_count": 343
+    },
+    {
+      "group": "tanks-a",
+      "index_sha256": "4e79499d81dfe409766166a781e3d072fce8f10df20c8613a2eb408b17f0de7c",
+      "raw_file_count": 311
+    },
+    {
+      "group": "tanks-b",
+      "index_sha256": "b8bc00a2e6418582e9275ac29c370b11e358f472dc1b288ccce38b9c49407af9",
+      "raw_file_count": 308
+    }
+  ],
+  "phase6": false,
+  "precool_trials": 30,
+  "procurement": false,
+  "production": false,
+  "registration_sha256": "aeaf12cf120d1c8ef24d0067642821122bac0690bbee507a0fe24663858801fd",
+  "robustness": [
+    {
+      "failed": 5,
+      "stage": "ROBUST_B15",
+      "status": "NOT_VERIFIED",
+      "tested": 17
+    },
+    {
+      "failed": 5,
+      "stage": "ROBUST_C20",
+      "status": "NOT_VERIFIED",
+      "tested": 17
+    }
+  ],
+  "source_commit": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb",
+  "tank_bounds": {
+    "A": {
+      "actual_OEM_minimum": null,
+      "condition": "constant48.29C return330m3/h90s, no source flow, stated mixing/wall; coarse diffusion retained; actual dynamic source trials separate",
+      "global_continuous_minimum": "NOT_VERIFIED",
+      "ideal_necessary_cold_m3": 8.25,
+      "ideal_necessary_energy_MJ": 244.5731243999992,
+      "minimum_added_volume_from15_on_tested_grid_m3": 5.0,
+      "smallest_tested_cold_fraction_in15_all_grids": 0.85,
+      "smallest_tested_total_volume_at70pct_all_grids_m3": 20.0
+    },
+    "B": {
+      "actual_OEM_minimum": null,
+      "condition": "constant48.29C return330m3/h90s, no source flow, stated mixing/wall; coarse diffusion retained; actual dynamic source trials separate",
+      "global_continuous_minimum": "NOT_VERIFIED",
+      "ideal_necessary_cold_m3": 8.25,
+      "ideal_necessary_energy_MJ": 244.5731243999992,
+      "minimum_added_volume_from15_on_tested_grid_m3": 5.0,
+      "smallest_tested_cold_fraction_in15_all_grids": 0.85,
+      "smallest_tested_total_volume_at70pct_all_grids_m3": 20.0
+    }
+  },
+  "unit_trials": 10
+}

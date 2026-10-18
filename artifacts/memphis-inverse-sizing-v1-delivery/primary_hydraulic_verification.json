@@ -1,0 +1,1184 @@
+{
+  "status": "INDEPENDENT_PRIMARY_HYDRAULIC_MASS_PUMP_HEAT_FILE_REVIEW_PASS",
+  "model_run": 39136524640,
+  "review_run": 39141542985,
+  "review_commit": "43269d7a01bb8244cad05bfffe38e984e1bd1a2b",
+  "reviewer_sha256": "b49e51b8f7da9d501fa2b9dd8f3dc2fc4402d01c141ed85ca6565ace78ef922b",
+  "stages": [
+    {
+      "job_status_sha256": "f5a1522cd21b4cdde1580a055c7f1f548aa2e6e4897804bbabc85f2c4db3deb5",
+      "pid": 1280,
+      "steps": 2400.0,
+      "stage": "G_WET_LOSS",
+      "active_after_cleanup": 0,
+      "review_sha256": "f912b10d126786d0492c291552cd9d13b01f38a1893de790dd15e8188a87fec7"
+    },
+    {
+      "job_status_sha256": "8b5d426095b28bf49cb378d9c65ca14d429b558248200dee44303bf979c57e3d",
+      "pid": 744,
+      "steps": 21600.0,
+      "stage": "STARTUP80",
+      "active_after_cleanup": 0,
+      "review_sha256": "9beda615e58f97ad20f0285d407e1e3d9b839ddd0076f90e1b34f86cf146528d"
+    },
+    {
+      "job_status_sha256": "443e3269d4063a2e723ecc70f73b7cd76b80714df5391ccd7503a5f4cf3238b2",
+      "pid": 1420,
+      "steps": 31200.0,
+      "stage": "TEMP160",
+      "active_after_cleanup": 0,
+      "review_sha256": "8e2c8d0ac7651fa88b3afff697d2fa12659644fe98c424f2afd0098dec58cce0"
+    },
+    {
+      "job_status_sha256": "4151a93339b3adc41cf7b92a8f1aec5213b60d67c0e060976e241bcc5742f21c",
+      "pid": 4944,
+      "steps": 31200.0,
+      "stage": "TEMP80",
+      "active_after_cleanup": 0,
+      "review_sha256": "a2ac47f6ea238b0e8579119ed42c2aed24b8ad683f8d50cd8081f712d61e06ac"
+    },
+    {
+      "job_status_sha256": "7f825f7bfd02ee555b48ac510f930c4bc141975ad06dc86b2a5330227fd396c3",
+      "pid": 3564,
+      "steps": 21600.0,
+      "stage": "VALVE80",
+      "active_after_cleanup": 0,
+      "review_sha256": "d66acdf6f8335a9d60ca6c307d477df4d95cd25dab25b02ce8ba5c4eca0fcb01"
+    },
+    {
+      "job_status_sha256": "755ef02f89d7b3c783ea350f6e15166187ed2ccae9a7c4aacf20fa17b552ce4e",
+      "pid": 2660,
+      "steps": 19200.0,
+      "stage": "WARM_VOLUME160",
+      "active_after_cleanup": 0,
+      "review_sha256": "cb47a26582b5710934431b17a6b4ccdd216c42d42d2f841099fa2c9bbfb7e72f"
+    },
+    {
+      "job_status_sha256": "a92836766c99571e61ee9933c547f8249f1dfcf4f16cbbe9a6083fcaf08c9e15",
+      "pid": 860,
+      "steps": 19200.0,
+      "stage": "WARM_VOLUME80",
+      "active_after_cleanup": 0,
+      "review_sha256": "3b4b302dbb01ecd882e1ca4b576f7e36055c07829016e548b60c677d6c61bab6"
+    },
+    {
+      "job_status_sha256": "2f82fd61e376ddcea855bc0de30f2846fb91a262ac918f183a0e0a79029e0d9a",
+      "pid": 6124,
+      "steps": 28800.0,
+      "stage": "JOINT40_5",
+      "active_after_cleanup": 0,
+      "review_sha256": "e5f9b702d210ae260f8375a6380a6d94def11b3e4d3ba02ad617f3381a7e784c"
+    },
+    {
+      "job_status_sha256": "119c47d9744cb83a7f69a09d67e7913675cfe3160576dfa50ee294fa9add0d5b",
+      "pid": 2408,
+      "steps": 28800.0,
+      "stage": "JOINT41_5",
+      "active_after_cleanup": 0,
+      "review_sha256": "3c74b77c3dbefed363c36bccd23294c82ec814231d68ecc9a2af399ee421549c"
+    },
+    {
+      "job_status_sha256": "300001766f1fd5a26eb6ea41ceab6c648e4536651c2c27d501c769458d1862d4",
+      "pid": 2180,
+      "steps": 9000.0,
+      "stage": "RECHARGE_INDEPENDENT_PID",
+      "active_after_cleanup": 0,
+      "review_sha256": "1873fcc1ba18a086cbfacd003d41aa75ac77ff24efeec57d15616c533242e7e0"
+    },
+    {
+      "job_status_sha256": "f101c8ea9a71e2a6675daa0c85dd7db724b0d521e170947de3d8281db393d447",
+      "pid": 3932,
+      "steps": 9000.0,
+      "stage": "RECHARGE_LOWER_RESISTANCE",
+      "active_after_cleanup": 0,
+      "review_sha256": "10f5a88a957f4cbb7b0572664d7718c8c21cfc73e718b6f789bb4e51f544bbb1"
+    },
+    {
+      "job_status_sha256": "6b5783f7e7ccbef0392eca00435b7b1d5104f18d96007e301bd3b4e291b82b25",
+      "pid": 536,
+      "steps": 9000.0,
+      "stage": "RECHARGE_SHARED_PID",
+      "active_after_cleanup": 0,
+      "review_sha256": "085d88cd61396ba18815531297987ea957d5cc6b50c7e6749ea7e45e6f4bfd7e"
+    },
+    {
+      "job_status_sha256": "90b42f8a19cc04f2556e586e82ebe74d2b1b60ebcb1e06d6c0975bf0870a7f97",
+      "pid": 3684,
+      "steps": 9000.0,
+      "stage": "RECHARGE_UPGRADED_CURVE",
+      "active_after_cleanup": 0,
+      "review_sha256": "2f6566499e15d036186add44826646ccc4988f9fed29e80905780254c1e42ff1"
+    },
+    {
+      "job_status_sha256": "2a3e509faa1e368fbbc55c538e9ea7c578d76be2fade8d0b3eff7672d8621a13",
+      "pid": 7240,
+      "steps": 43200.0,
+      "stage": "ROBUST_B15",
+      "active_after_cleanup": 0,
+      "review_sha256": "f95ce8b8e4c220216e20114745c8f65295ab905d0cf48505ae7393617fbb2b46"
+    },
+    {
+      "job_status_sha256": "a25294e0e1f401c04fc021e5493508d6e3fc1f03370650689c701e4c4b9fe339",
+      "pid": 6696,
+      "steps": 43200.0,
+      "stage": "ROBUST_C20",
+      "active_after_cleanup": 0,
+      "review_sha256": "448171db4d5894246ac304ae44d5bde685156ab57bdde88c6fab19ea769e0153"
+    },
+    {
+      "job_status_sha256": "f1bf063c355e58a81d950e77b728e6361bdd71a8fb03075f3a27aca1061523f2",
+      "pid": 852,
+      "steps": 2400.0,
+      "stage": "DRY_DB46",
+      "active_after_cleanup": 0,
+      "review_sha256": "236c64d42160308180768b8800e296a70ac401739586b83a0109e5adc32f38da"
+    },
+    {
+      "job_status_sha256": "1a99f8fb167b3eaae368eb9a9d90d8c0caaa75a04c96c3369545022f3ac2df63",
+      "pid": 1936,
+      "steps": 2400.0,
+      "stage": "DRY_FAULT",
+      "active_after_cleanup": 0,
+      "review_sha256": "01368093ec07b63430b0020ecaeb04fab34118e6f4cbb5c76ae0853e6a635db4"
+    },
+    {
+      "job_status_sha256": "193ed68c06cc4bd45922529c124b7c1dc4254cc0391b682eb0bdf87e02e3b2f3",
+      "pid": 7080,
+      "steps": 2400.0,
+      "stage": "DRY_MODULE_LOSS",
+      "active_after_cleanup": 0,
+      "review_sha256": "9ff7affb71016a9d78588d8c9e1a3b23b49c5663279569a9e986c09adbe622b0"
+    },
+    {
+      "job_status_sha256": "3f584fd827eee93f044c555a9197ed4b11c7761efde9c6917937513471cd7a4f",
+      "pid": 3004,
+      "steps": 2400.0,
+      "stage": "DRY_NORMAL",
+      "active_after_cleanup": 0,
+      "review_sha256": "44367c56d10111aaea94b2345a4e2e21c2f2a719e5c366690caab4ba20e568d8"
+    },
+    {
+      "job_status_sha256": "83137841bce4443a55cbd50cd8cbbe50d63001fb22ab6028fd921e01442dbed5",
+      "pid": 332,
+      "steps": 2400.0,
+      "stage": "HYBRID_SERIES",
+      "active_after_cleanup": 0,
+      "review_sha256": "3b6536bfbdd79d00f2a821c69117660196bcd574cf5e6667746b023f824e0df9"
+    },
+    {
+      "job_status_sha256": "3883b92a9b2c3e65cd43fa59357a8ab04a849c2d8d9c132fd6e984b7135800db",
+      "pid": 196,
+      "steps": 2400.0,
+      "stage": "LINE_PRECOOLED",
+      "active_after_cleanup": 0,
+      "review_sha256": "bf0a661a4a4a2d46c61c84483356996756abea359ef2f85159f1148960721ef3"
+    },
+    {
+      "job_status_sha256": "402d977353c0582ccb1f18d4506ba52c3272490f73d70b5864c40067182ae37e",
+      "pid": 2528,
+      "steps": 2400.0,
+      "stage": "LINE_PRECOOL_LOSS2H",
+      "active_after_cleanup": 0,
+      "review_sha256": "911c2cf4902d9a30524b58955b651317fa8d7535853b766eff70ff7d558524b9"
+    },
+    {
+      "job_status_sha256": "1f6d7901da9c11c124bdf893286131d55d150a7344968c37446e93e2ff1f1417",
+      "pid": 5052,
+      "steps": 2400.0,
+      "stage": "WARM_B_NEGATIVE",
+      "active_after_cleanup": 0,
+      "review_sha256": "363239dbcb0dc6d32fbdf1794a05735d7746e92e124a6b24f6ad82e03645f59d"
+    },
+    {
+      "job_status_sha256": "486cfb3be868a4e69c4b09febc059c5fc3836d3585d1eae104c641fb7729dded",
+      "pid": 4692,
+      "steps": 2400.0,
+      "stage": "WET_HOT",
+      "active_after_cleanup": 0,
+      "review_sha256": "c4d8022c1153106ae7c9126f676c179cf9ea2687495f2c104760894e5474a895"
+    },
+    {
+      "job_status_sha256": "1eb060fe5bd1c846eead6d7e8155dd52bec2dff40513cc6cb7cdd2203b71a67d",
+      "pid": 1196,
+      "steps": 2400.0,
+      "stage": "WET_MODULE_LOSS",
+      "active_after_cleanup": 0,
+      "review_sha256": "3708b59a82612a1d11cd5ca603470264da2975f8ff1955ac7d3389a987fac2a2"
+    }
+  ],
+  "cases": [
+    {
+      "id": "G_WET_LOSS",
+      "physics_sha256": "c55bdce76dc998759451332394de070e591a8bb2eb0a816f883746034c7c4a95",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_00",
+      "physics_sha256": "92d6d638e940b6320849d219b1c57a81f75440c4791ebdd684c23a9f854f5c27",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_01",
+      "physics_sha256": "4e0d90218e0e8a9710dc62bbb65f97992cc47e5125001fab4fb5806277fb8ed7",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_02",
+      "physics_sha256": "d8d9b921d0b272b517bf5b9550a9616cd43b7b358802c261bc30e36ce49b7c77",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_03",
+      "physics_sha256": "469c46a7b44518ece2a9d8a2182fd6032de540fa4269a8e472a17e4a9eccd34e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_04",
+      "physics_sha256": "649a85b2ed5b4cf431ebdfd2ba157aa36b5bcd231b9bc850dc38c399bfd683d4",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_05",
+      "physics_sha256": "70e91ec389f8ed966e41b6783733336df2c474f50805b91b05269ee1874d1a7c",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_06",
+      "physics_sha256": "b0c3c85a5f9fc325f1467a6a5cca9e7761049f20f7f4479a0d5236f32979fe50",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_07",
+      "physics_sha256": "5d1e096ad7546a88805fac7dee46b93316512e0f405c01aedc7a77f4b32eac88",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "STARTUP80_08",
+      "physics_sha256": "407923b1b75d1be038e25e8b904f120eb564cffe5601ff1cc1ec98985aa8c2f8",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_00",
+      "physics_sha256": "8d8f70d9e5cad0b024644eb84d24d0b8d8907b447a107695b12ce4dc66a30c1a",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_01",
+      "physics_sha256": "5e0a2cf80251232442c3b294a9a98da3a485aa888720c2fa5ae4c4fcfc84cbb4",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_02",
+      "physics_sha256": "2b21fd683cdcaa56d5c615055a9b61c474fe9aed6cd36072888adc74a1cdd306",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_03",
+      "physics_sha256": "6d748014a0f343017c689e5f5fd51b497415c1063ea55cb2680c21e8918d3b62",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_04",
+      "physics_sha256": "6cd7f72015c3b2ce9ff97de3f5f6b184680e7b79adacfeb560c465a440362ec3",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_05",
+      "physics_sha256": "b431518c3180a95eaced49df62e2639082fc9c08dd74db522000b718d17ec9b3",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_06",
+      "physics_sha256": "afb24d856105de9f0bdc247d0988a84b1845357fa0a55359bd24a99db1da8bd6",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_07",
+      "physics_sha256": "b3e060624e598264f546f2a157f5230c354ec6a18fd6a569aba0ef7b9be7bd4d",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_08",
+      "physics_sha256": "be6dad56e02fa6afc698a25c25ce7b64ea59fcc15e46614a3beef68d9e44ef63",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_09",
+      "physics_sha256": "6fa7220d578959e198ea7cbca91166ff34ce38bdb38a4a2a58c9763e7d93e850",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_10",
+      "physics_sha256": "6935c01258a9ed62d6c8b6480a6b0249b3845930ba5e824a22be7becf7c8bb2d",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_11",
+      "physics_sha256": "192088b50700f388d15f7d9f597eb5c6ec802d8c2a24dcf65a15c050855cdf58",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP160_12",
+      "physics_sha256": "717996916e515812d1ea4b19d613574bde8d36be56a547da78d588d19d738129",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_00",
+      "physics_sha256": "469c46a7b44518ece2a9d8a2182fd6032de540fa4269a8e472a17e4a9eccd34e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_01",
+      "physics_sha256": "63457af122292752388b2148a1e823ef931de4f582505ac585d3180c7249b4a0",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_02",
+      "physics_sha256": "7f7a474a0c1156a41388015e0f4c627cfbfb7406954294e9de74783004037671",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_03",
+      "physics_sha256": "f3cf6f3b282a06e8ac644223318ad69a80f7edb7b138d470b2167431e896ffcd",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_04",
+      "physics_sha256": "6f77f6acc1ba2d36253e75a2e07a23c837fffdaadb1639bd803a96a44808d15a",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_05",
+      "physics_sha256": "fb09ab0df8676306e3a2452c2e0b6fb986867fff913c188c4bda34e0e04c924b",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_06",
+      "physics_sha256": "732a19a0e9836a07f2d0b3058885b2c9784443549b17c21af93a0c5927d6e632",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_07",
+      "physics_sha256": "d949d28d0c324dfa75d834d979b08559d7c2e02308906a57d74705432aa4ad6d",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_08",
+      "physics_sha256": "e062aac357177759e1d8edbf68c5c4eb33e98677b87f298002776e020d052752",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_09",
+      "physics_sha256": "5320bdcf8d207b3212ab0e3f3835be66c508327f7b67f25f93dc387a62f4ca15",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_10",
+      "physics_sha256": "ed29707b0f71a7d760c1ec4fdff3103d28e09ccd88d6eff1a5dab74ec5632f06",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_11",
+      "physics_sha256": "eb3d147aef05eda537c3e60c15ff1482159dc15634cf50202b7409e1fe91d5fe",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "TEMP80_12",
+      "physics_sha256": "3ae28c7bb2979f6a9cce1d15077139f62b2a47ef4b102798b538b6f5f762b200",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_00",
+      "physics_sha256": "adb86d8c4379aa6db8ec518334d6c40d7d1f29ef459d945e764a9b59368be3ba",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_01",
+      "physics_sha256": "b80b5ec222bf0dcf9078a5d8d9f650e6f8360eff579e33b521cda34e21025ac7",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_02",
+      "physics_sha256": "469c46a7b44518ece2a9d8a2182fd6032de540fa4269a8e472a17e4a9eccd34e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_03",
+      "physics_sha256": "68647b3b79b4976899c2f0d38d5555ddf71f27683458a44a27fa005426b725a2",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_04",
+      "physics_sha256": "67f921c7adc208652430e0b0c2d9973bf3708765933a76d74b406ab69eff8c16",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_05",
+      "physics_sha256": "a6ff6d8b13f64fe644e1b003b426d6a441f71c0117e49ca64778f535037835f0",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_06",
+      "physics_sha256": "03aac83f009e401e2f2e21662c9e1cc0e2833b3b651694a26f32aa99e9cd1580",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_07",
+      "physics_sha256": "87ccff1351d06974a0baeb9ed88f64963da28ed38ad29e63f7c4fd0f94490dfa",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "VALVE80_08",
+      "physics_sha256": "7f0ef5ebe5f2fe2ce71a5e1e9a3e6d823f86f64893afc0adb00ac352ca6656e8",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_00",
+      "physics_sha256": "290fdbc5f5e96c37aaade80d3f736139e0a29d6d82b70ce68831ff6d9684268c",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_01",
+      "physics_sha256": "0ff851cec8e63c5f7ae152460d45a7227519a6a64a1fbea6a04d462c331e7b1f",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_02",
+      "physics_sha256": "72f966059172ba2afeb9ef6cfb53bd898fc1c120216f30ca5fe7527cb04983ac",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_03",
+      "physics_sha256": "6fa7220d578959e198ea7cbca91166ff34ce38bdb38a4a2a58c9763e7d93e850",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_04",
+      "physics_sha256": "76b8558aea625fca33537ac8900d622dc6818c45a8ebb5492b59ae57d9c006f1",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_05",
+      "physics_sha256": "1d19b97a24262ed56797b9d82a8ada14c05f331e092b1ca2b08d72ce10153159",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_06",
+      "physics_sha256": "7a7066dc55b04ea609a25401d669879f9feeb1a9c67cd686be0096c2fc4cfe77",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME160_07",
+      "physics_sha256": "97724360c3e5b4f07c5d3c7c2d9bee54067b6a5e3612c42d926c798fa46f3885",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_00",
+      "physics_sha256": "b4a138b78a80504444b1454361d620566ab8841ce087fb427fd2ea1e220473d5",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_01",
+      "physics_sha256": "f17b0f6b14e655c374995e9584212a5b7aa9cc56cdb8bc1ac713fdae00bb2ce1",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_02",
+      "physics_sha256": "356097be0e377c438d6eaac45af65f6b4c9f16f014ff049070b6d3d2b56b5183",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_03",
+      "physics_sha256": "5320bdcf8d207b3212ab0e3f3835be66c508327f7b67f25f93dc387a62f4ca15",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_04",
+      "physics_sha256": "900a187879c0b352a137a0e24d13fd9f06e934b62a4fbc5fe87a6225d4eba8ba",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_05",
+      "physics_sha256": "38c876baaaee93a4d1a38da55ebc08bac0b26dad380c72300b49454cbe980a4d",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_06",
+      "physics_sha256": "4bc2ed551f075dec16a5ff9b0a71fb7329ca028a330c67a9c3ec06ec5c903d54",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_VOLUME80_07",
+      "physics_sha256": "ae695fa5598bbe97b8cddc639c186a8789aa4dc7b338e57b8135de132748c690",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_00",
+      "physics_sha256": "25a03751682874ceb734e7a8967e9c59bbc2658f3ae7df2dd9980e92e42989b7",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_01",
+      "physics_sha256": "4a4be4c897811f836311ab527ba2e2c265c1185d12c1f6d60b9467dc35c93ce1",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_02",
+      "physics_sha256": "15e2d9b8a5a206ee216ced035f0e6da8729881a3e6ec2198dcaa62c1deb71851",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_03",
+      "physics_sha256": "147967724f6c5585113293cb90cba8f0f34d10a584c0f6c485d1c4b211e2df41",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_04",
+      "physics_sha256": "e6b6b24c27eb2664344d1e2e5ccb2c6ae1db40f252f6b8b7e9db64e333150a02",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_05",
+      "physics_sha256": "848551ca3b5d8907fe8e31611f8dc47beeac14c6cb701d67087a47a55a18d92b",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_06",
+      "physics_sha256": "670be79d0fb6a0ffebe3770eb37608141ac987f44e5bd6843702341c299b3cd2",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_07",
+      "physics_sha256": "7dd1d96e68ffe023de8d1ad63bbd2956b3b5345328edb1e9a279e7f39414451a",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_08",
+      "physics_sha256": "3a5c2427fff3035f5f0b695ab2837aa3923cd3a8e4982976af9c111b5751d22e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_09",
+      "physics_sha256": "13d24aed1d290b805834348f13416886c64b23e682c6ce531664f347e75aa7b6",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_10",
+      "physics_sha256": "baee71015bc082d266b0ef707f3f59d991b318325f129c8ba0989285095b0f78",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT40_5_11",
+      "physics_sha256": "645c6b2c128ec6675617f2938ceecf922e1ff636519d8bfcf2057ce2df5cde45",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_00",
+      "physics_sha256": "ee34e48707c0dd820e06c1d03635725886ae1524824e370e0547b95dd1d9e932",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_01",
+      "physics_sha256": "51c61e4c19fcaae9f3d768bab7200e9421b17b59d9d172ee14f22867bd692f2c",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_02",
+      "physics_sha256": "fee5ff07e8c9798a63577d18de56b3d84f1c84a7bb72d42c15dd56f1b21a3172",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_03",
+      "physics_sha256": "3bba4d4c92d3e2af91a0818eb816d81992b6aae8c54b21c49e5e06ee055f76d4",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_04",
+      "physics_sha256": "ef54558a64737ce9199785f41e6d3acb5ce8fb7f8e4b5fb8d3295782488acd34",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_05",
+      "physics_sha256": "8b0b15efb6908c1a8af5fd04658eaddf0a60446dd23638576caa5d8207d93b52",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_06",
+      "physics_sha256": "c23df4ddc0e610d1898a37ed5235b47743da679671403507aaeb706a287dedeb",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_07",
+      "physics_sha256": "5c930040f27364cec74eb35a715aacbeb0ac55b707c8ceb34a2189e1a6cee3fb",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_08",
+      "physics_sha256": "0ff202459b650b963d171b47a8b7bc054b38e4a2abe4d6abdca34a1378950368",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_09",
+      "physics_sha256": "4f0fb156385517eec380f51d6df94daaa3c27435318b1058b1a11308effc989c",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_10",
+      "physics_sha256": "a11c29364d2803a765ceba70a7cacc0d8f44d3a45162084e84e4627fd9c7bde8",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "JOINT41_5_11",
+      "physics_sha256": "6cccf638302db1398c6283873c0c5b224c99361c5d80deaec78f1b0f8a94bfcb",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "RECHARGE_INDEPENDENT_PID",
+      "physics_sha256": "c796555310268052146efc5382825c8a0c7c89d299486143d5a63df39556b730",
+      "primary_peak_electric_W": 48234.505926228325,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 9000
+    },
+    {
+      "id": "RECHARGE_LOWER_RESISTANCE",
+      "physics_sha256": "2b5877c5414510e406540c5958fe84906c7f07fc7d8a72c41e982ceebbbf6b39",
+      "primary_peak_electric_W": 48224.52380952381,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 9000
+    },
+    {
+      "id": "RECHARGE_SHARED_PID",
+      "physics_sha256": "f659a16e46709521768a8e479e8c41c68bc90b670448204db7521dd0d474bbbd",
+      "primary_peak_electric_W": 37181.75476379529,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 9000
+    },
+    {
+      "id": "RECHARGE_UPGRADED_CURVE",
+      "physics_sha256": "07d9965a0f22b56c677a11cbb3118e5744d9034e58608777870819301db0d070",
+      "primary_peak_electric_W": 48922.56270796672,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 9000
+    },
+    {
+      "id": "ROBUST_B15_00",
+      "physics_sha256": "22a72688379015fdc29e47136cbbbd4a2e00322851e95a07e95844410e02957e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_01",
+      "physics_sha256": "89bbedcc4c6f830ab7f039ad14b152841c713839be4ba5a462b69bef50d370cf",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_02",
+      "physics_sha256": "e32cbb08be428c4409aeebedf8eda0c64be687ba6070f20ddbac48a0285a6591",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_03",
+      "physics_sha256": "a103ffb7df61319fb576e3cbf853b19a28bbab0a1bafe9796a0db0a69cfd3b82",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_04",
+      "physics_sha256": "48e72fc97d54f1dbc92780a1988948de57dd383b4cc9456e35f70aeff491f110",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_05",
+      "physics_sha256": "cecb768af6fc3704915b6f40877ac3faae703b9a673348ab65ae5eebdeeda72f",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_06",
+      "physics_sha256": "8fa796dd9d1537a56fe7b25f69fea60b76daed2e11099b79fb55af26ac5902b4",
+      "primary_peak_electric_W": 32493.127888289604,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_07",
+      "physics_sha256": "429e6b9980cecfdcfc60f69466d7a6efa0cde3fdfddbd895550192b5d11a3409",
+      "primary_peak_electric_W": 38567.22222222222,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_08",
+      "physics_sha256": "8123d8a2e7baf8c497c7487f81f9a2d271bea81353732f4e26b6a0cf43885a1a",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_09",
+      "physics_sha256": "4f8eae19986efba1d6de50e8e4a7607cd1a3d8717863e1072d193de233d084d6",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_10",
+      "physics_sha256": "f2e13e2d9d209ad69854f79e9fda9c51a7cfba0a7be08d516b764c8faf1d947b",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_11",
+      "physics_sha256": "64519c4fb1f0c8b92a677bfd944473878752cee942e23e89bb678fd67bf4d697",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_12",
+      "physics_sha256": "ec9a7c52d3f1166627577ccb65c8e43da4a74713549ef57c8834f508d88e3f71",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_13",
+      "physics_sha256": "22a72688379015fdc29e47136cbbbd4a2e00322851e95a07e95844410e02957e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_14",
+      "physics_sha256": "94a83560179763c6c6cc9c316efd4de8b9ae13ee6aa7fe555d63d4abeb630d89",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_B15_15",
+      "physics_sha256": "7b85a077ef897d4cf07faf8c940bd4d559c20596672002bd6be4d3d0eb303951",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 4800
+    },
+    {
+      "id": "ROBUST_B15_16",
+      "physics_sha256": "ec75a0b1845a3ae13a400b930372a841e1fbd0ae7aefdb14750b624369c784d8",
+      "primary_peak_electric_W": 37908.649203004534,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_00",
+      "physics_sha256": "4bd59fae6b32a57999c08227d9f293fdfeaf751befe61e814825a5cc557a9b41",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_01",
+      "physics_sha256": "d2a6a93af1f29d532cd3b94715e5463479228a5c5a5678575b47374a6a1126b3",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_02",
+      "physics_sha256": "52aa0ed4d497a32ef55a42afcf02b136b972e824b73d673bc0c15544725b8e3e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_03",
+      "physics_sha256": "aa1c551654d002f103dcc7739f3711b9a898d7a28690c6991dc1d915d1cdd231",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_04",
+      "physics_sha256": "b7f90c4c59ba697ba6588cc069ab314354caa10438f3f0b910821d227b9bafa6",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_05",
+      "physics_sha256": "2f632f86eb7b6c682943698df474f7e06596cb03142e072240516c49d20d5f02",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_06",
+      "physics_sha256": "ea3bd26ca9230bf3618a77edabea582be4571f84ac2e4fe04acbce2121015e43",
+      "primary_peak_electric_W": 32493.127888289604,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_07",
+      "physics_sha256": "c6bbaa90ed1a22fe1fb9c890fb175a1e220abd7abb712ed04ac7d6a915d3f5ac",
+      "primary_peak_electric_W": 38567.22222222222,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_08",
+      "physics_sha256": "71b606367e50820be2e13475029013085e7931dfaba7ab50ef6e013ee3ccbfdc",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_09",
+      "physics_sha256": "6cee41f915426e18fe04b5aafa23dd780aac28e692f7520f6fc639ced795df6c",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_10",
+      "physics_sha256": "4594d8c8d0aac16f6b1c60b91ad41cd7868a549cd0af67a2227044c03024e14a",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_11",
+      "physics_sha256": "c71318f6058261d067c0e46c4f8dfca25d33fbd3090e2879b198899c2e5c0fd4",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_12",
+      "physics_sha256": "0ab18cb732d8df65d2d5c32a4e6b4826f3b8a2f59f801b3734c72be1ee85c9a2",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_13",
+      "physics_sha256": "4bd59fae6b32a57999c08227d9f293fdfeaf751befe61e814825a5cc557a9b41",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_14",
+      "physics_sha256": "4decaef426f24b47acb977211b70cb999a5d4023e732e203e8b5862e7e40d69e",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "ROBUST_C20_15",
+      "physics_sha256": "6e0d3d099a46b3eeb91e962440c6101977335cc3483e856f8a0c85e3805fffe1",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 4800
+    },
+    {
+      "id": "ROBUST_C20_16",
+      "physics_sha256": "3250f32adcd8bec2b5be9610d97f5e344caf3a07bd3b5c41bb66fdaa2d7b8b55",
+      "primary_peak_electric_W": 37908.649203004534,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "DRY_DB46",
+      "physics_sha256": "09d4d706dcf18b6181b19dc678fb31868554824de7cda9fbc337e9b733a972ca",
+      "primary_peak_electric_W": 32222.59186307147,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "DRY_FAULT",
+      "physics_sha256": "b714720a4907ccf43d3b69f9afad30a258e3639233933f6851e7de3756f728b3",
+      "primary_peak_electric_W": 32222.59186307147,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "DRY_MODULE_LOSS",
+      "physics_sha256": "8bdfeca45b9b98ceb070947d26b61aa14f827da3e581710193a685d371a01e11",
+      "primary_peak_electric_W": 32222.59186307147,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "DRY_NORMAL",
+      "physics_sha256": "5001cb65dd4c00fa86a0fd03747b929c5dba2e3a6788977b0cfc1eaad03fcbe3",
+      "primary_peak_electric_W": 32222.59186307147,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "HYBRID_SERIES",
+      "physics_sha256": "48011dad696710494bcd6cbfebd7226934bf020fae1c0d356f9d066502f893a2",
+      "primary_peak_electric_W": 45977.72430261895,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "LINE_PRECOOLED",
+      "physics_sha256": "8d8f70d9e5cad0b024644eb84d24d0b8d8907b447a107695b12ce4dc66a30c1a",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "LINE_PRECOOL_LOSS2H",
+      "physics_sha256": "8da7ce1919bfe5f4fb591f5ff6ff5cb91c627c89cedcb08f30809c9df1c65bff",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WARM_B_NEGATIVE",
+      "physics_sha256": "0533767884c05791071fd8a70a3707b1344ed589bd1f3da8ae804c138152fc94",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WET_HOT",
+      "physics_sha256": "9b79bee46b65a543112f45fb71f6de736af3996b6b28feb3a5b9b331deea0483",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    },
+    {
+      "id": "WET_MODULE_LOSS",
+      "physics_sha256": "ba8ff0301c1c1eb1cd95936db7522cd5727fbf46b79f63715c73d141b6e1e2ea",
+      "primary_peak_electric_W": 33057.619047619046,
+      "status": "INDEPENDENT_PRIMARY_QH_MASS_AND_PUMP_HEAT_VERIFIED",
+      "steps": 2400
+    }
+  ],
+  "archives": [
+    {
+      "name": "inverse-primary-recharge-39141542985",
+      "digest": "sha256:ff920936f86e24ed454ac45a4aac24d25a9f0aded1c8990fc2b95d5852ae553c",
+      "sha256": "ff920936f86e24ed454ac45a4aac24d25a9f0aded1c8990fc2b95d5852ae553c",
+      "bytes": 15721
+    },
+    {
+      "name": "inverse-primary-baseline-39141542985",
+      "digest": "sha256:30410abc0dca2df19fe1be4e4a62c2fa18bdcf1d89a958fb5aa165fa326e732d",
+      "sha256": "30410abc0dca2df19fe1be4e4a62c2fa18bdcf1d89a958fb5aa165fa326e732d",
+      "bytes": 3839
+    },
+    {
+      "name": "inverse-primary-inverse-39141542985",
+      "digest": "sha256:4d243721521270ae4402da911382230110dc983f4974ce6fe406e53c862022cf",
+      "sha256": "4d243721521270ae4402da911382230110dc983f4974ce6fe406e53c862022cf",
+      "bytes": 34540
+    },
+    {
+      "name": "inverse-primary-scenarios-39141542985",
+      "digest": "sha256:093836f981e3376322e0cfea78d7a9358592586daecf4fd695abdd2c44e4cb4f",
+      "sha256": "093836f981e3376322e0cfea78d7a9358592586daecf4fd695abdd2c44e4cb4f",
+      "bytes": 30395
+    },
+    {
+      "name": "inverse-primary-robust-39141542985",
+      "digest": "sha256:2326e53076d2de73e3b53c62e2de764d3b6a42ed145da5a7d753fedb7c4e352e",
+      "sha256": "2326e53076d2de73e3b53c62e2de764d3b6a42ed145da5a7d753fedb7c4e352e",
+      "bytes": 15876
+    },
+    {
+      "name": "inverse-primary-joint-39141542985",
+      "digest": "sha256:0bef225aeca11e948f68d658a46abfda99ff7d93f7f1e422aadf48561b70ba93",
+      "sha256": "0bef225aeca11e948f68d658a46abfda99ff7d93f7f1e422aadf48561b70ba93",
+      "bytes": 11049
+    }
+  ],
+  "model_not_rerun": true,
+  "scope": "Saved primary source/load/recharge Q-H, tank flow ownership, wire-to-liquid pump heat; not real equipment calibration",
+  "raw_logs_sha256": "1ecec4294280966e8d6804d89a856d5564fdae9941a13f80ddd7d4b01e1092f6",
+  "engineering_approval": false
+}

@@ -1,0 +1,16 @@
+{
+  "cost_quotes": null,
+  "global_optimum": "NOT_VERIFIED",
+  "points": [
+    {
+      "capacity_scale": 1.0,
+      "cold_delay_s": 84.5,
+      "id": "JOINT41_5_05",
+      "peak_C": 44.000053841092665,
+      "precool_MJ": 75.36220999999999,
+      "startup_improvement_s": 0,
+      "tank_m3": 15.0
+    }
+  ],
+  "status": "CONDITIONALLY_FEASIBLE"
+}
