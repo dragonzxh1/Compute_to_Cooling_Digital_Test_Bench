@@ -1,0 +1,33 @@
+name: Memphis failover causal optimization v1 DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-failover-optimization-v1]
+    paths: ['v0_2/tests/tools/memphis_failover_optimization_v1/**', '.github/workflows/memphis-failover-optimization-v1*.yml']
+permissions:
+  contents: read
+concurrency:
+  group: memphis-failover-optimization-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-failover-optimization-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  study:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [control, timing, mesh, failure, recharge]
+    uses: ./.github/workflows/memphis-failover-optimization-v1-runner.yml
+    with:
+      group: ${{ matrix.group }}
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, study]
+    uses: ./.github/workflows/memphis-failover-optimization-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}
