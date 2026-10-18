@@ -22,6 +22,8 @@ def finalize(directory):
     expected=[c for s in json.loads((HERE/'registration.json').read_bytes())['cases'] if s['kind']=='bundle' for c in trials(s['study'])]
     need({r['id'] for r in dynamic}=={'G_WET_LOSS',*[c['id'] for c in expected]},'ALL_EXPANDED_TRIALS_REQUIRED')
     maps={r['id']:r for r in dynamic};save(directory/'dynamic_results.json',dynamic);save(directory/'tank_results.json',tanks)
+    witness=maps['valves__A_demand_stuck']['excitation']
+    need(witness['demand_issued'] and witness['nonresponse'] and witness['qualification']=='ACTUALLY_EXCITED','FINAL_REAL_STUCK_VALVE_REQUIRED')
     save(directory/'original17_traceability.json',prior['records']);save(directory/'original_five_failures.json',prior['failures']);save(directory/'standby_inventory_results.json',standby)
     metric=[dict(id=r['id'],status=r['status'],maximum_inlet_C=r['maximum_inlet_C'],maximum90_inlet_C=r['maximum90_inlet_C'],minimum_load_m3_h=r['minimum_load_m3_h'],cold_return_delay_s=r['cold_return_delay_s'],source_final_m3_h=r['source_final_m3_h'],maximum_primary_return_C=r['maximum_primary_return_C'],grades=json.dumps(r['grades'],sort_keys=True),parameters=json.dumps(r['parameters'],sort_keys=True)) for r in dynamic]
     csvout(directory/'failure_and_candidate_results.csv',metric)

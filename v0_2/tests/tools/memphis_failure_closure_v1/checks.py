@@ -64,18 +64,23 @@ def evaluate(d,c):
     recovery=('PASS' if restored else 'FAIL') if fault_required else 'NOT_APPLICABLE_NO_FAULT'
     reserve='NOT_RUN' if not c.get('recharge') else 'PASS' if out['requested_recharge_done'] and all(series[-1]['cold_'+k+'_m3']>=.85*c.get('tank_volume_m3',15) for k in ('A','B')) else 'FAIL'
     required_reserve=bool(c.get('recharge'))
-    expected_excitation={};events=out['source_timeline']
+    expected_excitation={};events=out['source_timeline'];excitation_complete=True
     if c.get('load_valve_stuck'):
         expected_excitation=dict(demand_issued=any(f['request']['load_tank']=='B' for f in frames),actual_selector_changed=any(r['load_tank']=='B' for r in rows),
             nonresponse=any(f['request']['load_tank']=='B' and f['measurement'].get('load_selector','A')=='A' for f in frames))
-        need(expected_excitation['demand_issued'] and expected_excitation['nonresponse'],'STUCK_VALVE_NOT_EXCITED')
+        excitation_complete=expected_excitation['demand_issued'] and expected_excitation['nonresponse']
+        expected_excitation['qualification']='ACTUALLY_EXCITED' if excitation_complete else 'INCOMPLETE_STUCK_VALVE_NOT_EXCITED'
+        # Keep the dedicated injection test strict. A rejected reserve in a
+        # robustness point is preserved as INCOMPLETE, never a valve PASS.
+        if c['id'].startswith('valves__'):need(excitation_complete,'STUCK_VALVE_NOT_EXCITED')
     if c.get('source_valve_stuck'):need('VALVE_NOT_AT_REQUESTED_TARGET' in codes,'SOURCE_VALVE_FAILURE_NOT_PROTECTED')
     if c.get('valve_feedback_lie'):need('SOURCE_COMMAND_WITHOUT_MEASURED_FLOW' in codes,'FALSE_OPEN_NOT_CHECKED_AGAINST_FLOW')
     if c.get('false_ready_claim') or c.get('precool_sensor_stuck_low') or c.get('ready_extra_age_s'):
         need(all(not f['safety']['data'].get('measured_cold_ready',{}).get('W2',False) for f in frames if fault<=f['time_ns']/1e9<=fault+90),'FALSE_READY_NOT_REJECTED')
     # The safety test may correctly FAIL cooling. Do not relabel that as a
     # thermal/hydraulic PASS. Causal/latched decisions are checked above.
-    safety='MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED';qualified=thermal==hydraulic==continuity=='PASS' and (recovery=='PASS' or not fault_required) and not blocked and (not required_reserve or reserve=='PASS')
+    safety='MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED' if excitation_complete else 'INCOMPLETE_STUCK_VALVE_NOT_EXCITED'
+    qualified=excitation_complete and thermal==hydraulic==continuity=='PASS' and (recovery=='PASS' or not fault_required) and not blocked and (not required_reserve or reserve=='PASS')
     if not fault_required:continuity='NOT_APPLICABLE_NO_FAULT'
     firsts=dict(thermal=first(post,lambda r:temp(r)>45),load_flow=first(post,lambda r:r['load_flow_m3_h']<330-1e-8),
         recovery_deadline=None if cold is not None and cold-fault<=90 else fault+90,
