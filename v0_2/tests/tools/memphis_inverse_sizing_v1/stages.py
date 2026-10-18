@@ -73,6 +73,19 @@ def stage(spec,directory):
         need(full_recovery_label(False,True)=='NOT_APPLICABLE_NO_FAULT','NOFAULT_WRONGLY_QUALIFIED_AS_RECOVERY')
         need(full_recovery_label(True,False)=='NOT_VERIFIED','FAILED_RECOVERY_LABEL')
         out['refusal_and_positive_witnesses']+=2
+        from .group_model.legacy_audit import close_rate,verify_measurement
+        close_rate(0.,1e-8,60000000.)
+        refused=False
+        try:close_rate(0.,1.,60000000.)
+        except ValueError:refused=True
+        need(refused,'ONE_WATT_RATE_CORRUPTION_NOT_REJECTED')
+        o=dict(quality='VALID',sample_ns=0,pump_speed=.9)
+        verify_measurement(o,dict(quality='MISSING',measured_speed=None),1_200_000_000)
+        refused=False
+        try:verify_measurement(o,dict(quality='VALID',measured_speed=.9),1_200_000_000)
+        except ValueError:refused=True
+        need(refused,'STALE_UNMASKED_VIEW_NOT_REJECTED')
+        out['refusal_and_positive_witnesses']+=4
         return out
     if kind=='analytic':
         from .requirements import analytic
@@ -87,7 +100,7 @@ def stage(spec,directory):
         from v0_2.tests.tools.memphis_equipment_validation_v2.unit import run
         from v0_2.tests.tools.memphis_equipment_validation_v2.audit import unit
         results=[]
-        for normal,ua in itertools.product((True,False),(137481.,183295.,209284.,220000.,260000.)):
+        for normal,ua in [(spec['normal'],spec['ua'])]:
             c=dict(id=spec['id']+str(normal)+str(ua),normal=normal,ua=ua)
             d=directory/c['id'];d.mkdir();run(c,d/'case');a=unit(d/'case');a['parameters']=c
             save(d/'unit_result.json',a);results.append(a);gc.collect()

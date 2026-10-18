@@ -12,6 +12,20 @@ def digest(d):return sha256(json.dumps(d,sort_keys=True,separators=(',',':'),all
 def close(a,b,ops=1024):
     g=ops*2**-53/(1-ops*2**-53)
     require(abs(a-b)<=g*max(1.,abs(a)+abs(b)),'INDEPENDENT_EQUATION_DIFFERENCE')
+
+def close_rate(a,b,operand_scale):
+    # Cancellation needs an absolute forward-error bound on the ORIGINAL
+    # operands, not the almost-zero residual. 4096 roundoff operations,
+    # independent of verdict/customer tolerances; a 1 W corruption still fails.
+    g=4096*2**-53/(1-4096*2**-53)
+    require(abs(a-b)<=g*max(1.,operand_scale,abs(a)+abs(b)),
+            'INDEPENDENT_RATE_EQUATION_DIFFERENCE')
+
+def verify_measurement(o,m,now):
+    valid=o['quality']=='VALID' and now-o['sample_ns']<=1_000_000_000
+    require(m['quality']==('VALID' if valid else 'MISSING'),'MEASUREMENT_QUALITY_MASK')
+    if valid:close(o['pump_speed'],m['measured_speed'])
+    else:require(m['measured_speed'] is None,'STALE_MEASUREMENT_NOT_MASKED')
 def stored(s,header_volume=2.75,tank_volume=15.,wall_j_k=0.):
     total=fsum(CV*fsum(v*t for v,t in zip(V,[u['supply_header_k'],*u['inlet_k'],*u['rack_return_k'],u['return_k']])) for u in s['units'])
     if s['tank_A_k'] is not None:
@@ -54,8 +68,9 @@ def _unchanged_physics_audit(directory,spec):
             rates += [CV*f*(old[1+i]-old[7+i])+147250+f*d['rack'+str(i)] for i,f in enumerate(flows)]
             rates += [fsum(CV*f*(old[7+i]-old[-1]) for i,f in enumerate(flows))+u['pump_electrical_w']-u['dp_pa']*q+q*(d['return_filter']+d['return_pipe'])]
             require(u['rack_it_w']==[155000]*6 and u['rack_liquid_w']==[147250]*6,'FULL_LOAD_IDENTITY')
+            operand_scale=CV*q*2*max(map(abs,old))+abs(hx)+u['pump_electrical_w']+883500
             for a,b,v,r,recorded in zip(old,new,V,rates,u['local_rates_w']):
-                close(r,recorded,4096);err=(b-a)*CV*v-dt*r
+                close_rate(r,recorded,operand_scale);err=(b-a)*CV*v-dt*r
                 close(b*CV*v,a*CV*v+dt*r);max_local=max(max_local,abs(err));n+=1
         for t in interval.get('tank_records',{}).values():
             old=t['old_k'];new=t['new_k'];fl=t['load_m3_s'];fs=t['source_m3_s']
@@ -71,7 +86,7 @@ def _unchanged_physics_audit(directory,spec):
         i=f['unit'];pre,safety,plc,post=(f[k] for k in ('PRE','SAFETY','PLC','POST'))
         m=pre['measurement'];o=byid[i,m['measurement_record_id']]
         require(o['sample_ns']==m['sample_ns'] and o['available_ns']==m['release_ns']<=f['time_ns'],'CAUSAL_SAMPLE_RELEASE')
-        close(o['pump_speed'],m['measured_speed'])
+        verify_measurement(o,m,f['time_ns'])
         if i in previous:
             require(pre['old_command']['value']==previous[i]['command'] and pre['old_command']['issue_ns']==previous[i]['issue_ns'],'PRE_FUTURE_COMMAND')
         # Frozen Record uses canonical-json SHA; bindings are audited against
