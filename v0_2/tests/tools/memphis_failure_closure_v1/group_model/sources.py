@@ -173,7 +173,11 @@ class ClosurePlant(LegacyPlant):
             base['release_ns']=now+round(self.spec.get('fast_sensor_delay_s',.1)*1e9);base['record_id']='source-FAST-INDEPENDENT:'+str(now)
         def pair(name):
             if name not in self.pipes:return 99.,99.,0.
-            t=self.pipes[name].t;return t[0]-273.15+bias,t[-1]-273.15+bias,self.last_source_q if name==self.source_path else self.pre_q.get(name,0)
+            t=self.pipes[name].t
+            # Ready is proven by the installed measured preconditioning loop
+            # until actual main flow exists, then by measured main flow.
+            q=self.last_source_q if name==self.source_path and self.last_source_q>1e-9 else self.pre_q.get(name,0)
+            return t[0]-273.15+bias,t[-1]-273.15+bias,q
         near,far,q=pair('W2');a,b,c=pair('W3')
         if self.spec.get('precool_sensor_stuck_low'):near=40.
         if self.feedback_lie:base['source_valve']=1.

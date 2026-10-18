@@ -51,6 +51,9 @@ def stage(spec,directory):
     if kind=='prior':
         from .prior import run
         return run(directory)
+    if kind=='analytic':
+        from .requirements import analytic
+        return dict(kind='analytic',results=analytic(directory))
     if kind=='legacy':
         c=dict(id=spec['id'],scope='GROUP18',ua_w_k=220000.,dt_s=.1,seconds=240.,source_variant='V9',tank_kind='STRATIFIED',fault='W1_LOSS',fault_at_s=30.,recharge_at_s=120.)
         return dict(kind='dynamic',cases=[forward(c,directory,True)])

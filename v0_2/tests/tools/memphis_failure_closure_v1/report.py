@@ -16,6 +16,9 @@ def finalize(directory):
             for r in a['cases']:dynamic.append(r);locations[r['id']]=d/('case' if name=='G_WET_LOSS' else r['id']+'/case')
         if a['kind']=='tank':tanks+=a['cases']
         if a['kind']=='standby':standby=a
+        if a['kind']=='analytic':
+            save(directory/'minimum_performance_requirements.json',a['results'])
+            for p in d.glob('*.csv'):(directory/p.name).write_bytes(p.read_bytes())
     expected=[c for s in json.loads((HERE/'registration.json').read_bytes())['cases'] if s['kind']=='bundle' for c in trials(s['study'])]
     need({r['id'] for r in dynamic}=={'G_WET_LOSS',*[c['id'] for c in expected]},'ALL_EXPANDED_TRIALS_REQUIRED')
     maps={r['id']:r for r in dynamic};save(directory/'dynamic_results.json',dynamic);save(directory/'tank_results.json',tanks)
