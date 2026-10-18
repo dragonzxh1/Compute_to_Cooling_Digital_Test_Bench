@@ -1,0 +1,63 @@
+name: Memphis equipment and failover V2 DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-equipment-validation-v2]
+    paths: ['v0_2/tests/tools/memphis_equipment_validation_v2/**', '.github/workflows/memphis-equipment-v2*.yml']
+  workflow_dispatch:
+    inputs:
+      expected_commit:
+        required: true
+        type: string
+      manifest_sha256:
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: memphis-equipment-validation-v2
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-equipment-v2-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+      manifest_sha256: ${{ inputs.manifest_sha256 || '' }}
+      dispatch_expected_commit: ${{ inputs.expected_commit || '' }}
+  study:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [units-a, units-b, units-c, group-a, group-b, recharge]
+    uses: ./.github/workflows/memphis-equipment-v2-runner.yml
+    with:
+      group: ${{ matrix.group }}
+      expected_commit: ${{ github.sha }}
+      manifest_sha256: ${{ inputs.manifest_sha256 || '' }}
+      dispatch_expected_commit: ${{ inputs.expected_commit || '' }}
+  report:
+    needs: [baseline, study]
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: memphis-equipment-compact-*
+          path: artifacts/memphis-equipment-v2-analysis/
+          merge-multiple: true
+      - name: Persisted evidence consolidation
+        shell: pwsh
+        run: ./v0_2/tests/tools/memphis_equipment_validation_v2/report.ps1 -Root ./artifacts/memphis-equipment-v2-analysis -ExpectedCommit $env:GITHUB_SHA
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: memphis-equipment-report-${{ github.run_id }}
+          path: artifacts/memphis-equipment-v2-analysis/
+          if-no-files-found: error
+          retention-days: 30
