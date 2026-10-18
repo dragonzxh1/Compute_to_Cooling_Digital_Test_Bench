@@ -1,0 +1,38 @@
+name: Memphis inverse independent primary hydraulic FILE review
+on:
+  push:
+    branches: [codex/memphis-inverse-sizing-v1]
+    paths: ['artifacts/memphis-inverse-sizing-v1-review/**', '.github/workflows/memphis-inverse-primary-review.yml']
+permissions:
+  contents: read
+  actions: read
+env:
+  GH_TOKEN: ${{ github.token }}
+  PYTHONDONTWRITEBYTECODE: '1'
+jobs:
+  primary:
+    runs-on: windows-2022
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [baseline, inverse, joint, robust, scenarios, recharge]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+      - shell: pwsh
+        run: ./artifacts/memphis-inverse-sizing-v1-review/run.ps1 -Group '${{ matrix.group }}'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: inverse-primary-${{ matrix.group }}-${{ github.run_id }}
+          path: |
+            hydraulic-review/*/runtime/
+            hydraulic-review/*/download_receipt.json
+          if-no-files-found: error
