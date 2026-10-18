@@ -1,0 +1,34 @@
+name: Memphis failure closure v1 DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-failure-closure-v1]
+    paths: ['v0_2/tests/tools/memphis_failure_closure_v1/**', '.github/workflows/memphis-failure-closure-v1*.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: memphis-failure-closure-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-failure-closure-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  studies:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [tanks-a, tanks-b, precool, inverse, joint, robust, scenarios, recharge]
+    uses: ./.github/workflows/memphis-failure-closure-v1-runner.yml
+    with:
+      group: ${{ matrix.group }}
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, studies]
+    uses: ./.github/workflows/memphis-failure-closure-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}
