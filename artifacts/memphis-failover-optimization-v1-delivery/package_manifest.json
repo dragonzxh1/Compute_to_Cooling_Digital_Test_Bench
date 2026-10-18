@@ -1,0 +1,64 @@
+{
+  "schema": "MEMPHIS-FAILOVER-OPTIMIZATION-DELIVERY-v1.1",
+  "execution_commit": "a07e5fba7d78f34ab907ce209399068f9c92c760",
+  "run": 39129984525,
+  "scope": "26 dynamic comparisons;17 refusal/positive witnesses;FINAL;28 controlled stages",
+  "software": "BOUNDED_SOFTWARE_COMPARISON_COMPLETED",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "manifest_raw_sha256": "715d8d9cd7a5d99ddccff2373754ee6f32e3084e48e3deffecf8b91702421bef",
+  "source_input_environment_manifest_sha256": "09607628edd1726cfa2b3823b461eacafe27fb9469c9ed2d8dba659fa0eef0e8",
+  "official_numeric_json_sha256": "3f4f875a45867e8567606fd233ae03d224e1a1fb637b05a6aa00bd3ec1108a50",
+  "official_html_sha256": "85080865390b37575e61fa1f4a4251c03a4e14154d9d03fd0e4f9418612f83f4",
+  "official_report_sha256": "f740cf0cf381e89b3c0623e2e1bf38edf7478b9ebcbc4175e9a2086b12a03ae6",
+  "derivation": "v1.1 Chinese quantitative interpretation, explicit mesh/preconditioning/recharge confound limits, human-readable event tables; model and numerical JSON unchanged",
+  "files": [
+    {
+      "path": "comparisons.json",
+      "bytes": 207191,
+      "raw_sha256": "3f4f875a45867e8567606fd233ae03d224e1a1fb637b05a6aa00bd3ec1108a50"
+    },
+    {
+      "path": "DESIGN_DECISION_REPORT_ZH.md",
+      "bytes": 9747,
+      "raw_sha256": "f5fd785a2970ea3993c78ee880fccf4c1141a32d842f112da75612920b299401"
+    },
+    {
+      "path": "engineering_report.html",
+      "bytes": 1172075,
+      "raw_sha256": "ee520cae3669847d749fd4fceb826fd6b663eac980bb49258ba60593773d77a3"
+    },
+    {
+      "path": "independent_file_verification.json",
+      "bytes": 11782,
+      "raw_sha256": "e4e287691433f0b0d0fb085337f3e4b6d2269ae4e2feae08c4a86c011455cc36"
+    },
+    {
+      "path": "official_artifacts.json",
+      "bytes": 13826,
+      "raw_sha256": "ae0f636fac28c77419f6baabe90a12734546827460de27d22116fa35160be721"
+    },
+    {
+      "path": "precooled-curves.png",
+      "bytes": 91351,
+      "raw_sha256": "dab64bb6cc810d62f4b8a2b93b235081217aa068890b8de9b8424e58741e5277"
+    },
+    {
+      "path": "report-desktop.png",
+      "bytes": 104785,
+      "raw_sha256": "d4cb302ea1090cc237b55d77b207d590c0bdcb490ccf605d05cd63e7514a31e2"
+    },
+    {
+      "path": "source_input_environment_manifest.json",
+      "bytes": 138397,
+      "raw_sha256": "09607628edd1726cfa2b3823b461eacafe27fb9469c9ed2d8dba659fa0eef0e8"
+    }
+  ],
+  "raw_zip_count": 14,
+  "raw_files": 1028,
+  "raw_logs_sha256": "d59bd9dd7fb76bf80625e2f059bdc823d6d227453c27f5f05108d73e57ec46d6",
+  "formal": false,
+  "procurement": false,
+  "production": false,
+  "hardware": false,
+  "phase6": false
+}

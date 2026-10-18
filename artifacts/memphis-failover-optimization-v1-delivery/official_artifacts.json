@@ -1,0 +1,285 @@
+{
+  "total_count": 14,
+  "artifacts": [
+    {
+      "id": 12138245024,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzODI0NTAyNA==",
+      "name": "memphis-failover-compact-failure-39129984525",
+      "size_in_bytes": 167957,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12138245024",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12138245024/zip",
+      "expired": false,
+      "digest": "sha256:7fd4dee60dfeca002aaab4f67db2b38a9befd38935d6f7f66c8f496c7873aaa1",
+      "created_at": "2026-10-18T13:08:30Z",
+      "updated_at": "2026-10-18T13:08:30Z",
+      "expires_at": "2026-11-17T13:08:29Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12138175493,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzODE3NTQ5Mw==",
+      "name": "memphis-failover-raw-final-39129984525",
+      "size_in_bytes": 284156,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12138175493",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12138175493/zip",
+      "expired": false,
+      "digest": "sha256:090e80f670424d781236e7c0896107f76bae6b9112f5fbb55d2f1ff664f28070",
+      "created_at": "2026-10-18T13:10:12Z",
+      "updated_at": "2026-10-18T13:10:12Z",
+      "expires_at": "2026-11-17T13:10:11Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137786956,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzc4Njk1Ng==",
+      "name": "memphis-failover-raw-control-39129984525",
+      "size_in_bytes": 12583821,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137786956",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137786956/zip",
+      "expired": false,
+      "digest": "sha256:3d30da26467f5363f1d19bb6fa925558dad528ab2507223c52e5112a27f5510d",
+      "created_at": "2026-10-18T13:06:53Z",
+      "updated_at": "2026-10-18T13:06:53Z",
+      "expires_at": "2026-11-17T13:06:51Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137742610,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzc0MjYxMA==",
+      "name": "memphis-failover-compact-final-39129984525",
+      "size_in_bytes": 273966,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137742610",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137742610/zip",
+      "expired": false,
+      "digest": "sha256:3a669c7f744d7d8b168531e316b68fd092bec20fae6fc1998e92c62a8023095a",
+      "created_at": "2026-10-18T13:10:13Z",
+      "updated_at": "2026-10-18T13:10:13Z",
+      "expires_at": "2026-11-17T13:10:12Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137706265,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzcwNjI2NQ==",
+      "name": "memphis-failover-raw-mesh-39129984525",
+      "size_in_bytes": 28443744,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137706265",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137706265/zip",
+      "expired": false,
+      "digest": "sha256:4fc85e63d3da4d713159fef2a0809a40773c957245f090460f0a341656fd4c4a",
+      "created_at": "2026-10-18T13:07:38Z",
+      "updated_at": "2026-10-18T13:07:38Z",
+      "expires_at": "2026-11-17T13:07:34Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137642347,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzY0MjM0Nw==",
+      "name": "memphis-failover-raw-timing-39129984525",
+      "size_in_bytes": 16831393,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137642347",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137642347/zip",
+      "expired": false,
+      "digest": "sha256:3366d2263ab8cbe9d6fb50774441d589bd841bb1a10212e1eaec46ed8eb9d093",
+      "created_at": "2026-10-18T13:07:19Z",
+      "updated_at": "2026-10-18T13:07:19Z",
+      "expires_at": "2026-11-17T13:07:16Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137488236,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzQ4ODIzNg==",
+      "name": "memphis-failover-compact-timing-39129984525",
+      "size_in_bytes": 183108,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137488236",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137488236/zip",
+      "expired": false,
+      "digest": "sha256:bd6bbe5eb3134c45f1003ae7ebe0c6399f6e1b44a08b4217b9f46a1c4effabc0",
+      "created_at": "2026-10-18T13:07:20Z",
+      "updated_at": "2026-10-18T13:07:20Z",
+      "expires_at": "2026-11-17T13:07:19Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137477229,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzQ3NzIyOQ==",
+      "name": "memphis-failover-compact-mesh-39129984525",
+      "size_in_bytes": 204941,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137477229",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137477229/zip",
+      "expired": false,
+      "digest": "sha256:9c0681ef2bfd6927efbea6d6319296988e2bd083aa2bcc70bc40362e6ecd6185",
+      "created_at": "2026-10-18T13:07:39Z",
+      "updated_at": "2026-10-18T13:07:39Z",
+      "expires_at": "2026-11-17T13:07:38Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137324415,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzMyNDQxNQ==",
+      "name": "memphis-failover-raw-failure-39129984525",
+      "size_in_bytes": 20257694,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137324415",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137324415/zip",
+      "expired": false,
+      "digest": "sha256:493e5b91a706795af60aad3d5f4632cf4fef2befd3b08560761c0ad25d74958c",
+      "created_at": "2026-10-18T13:08:29Z",
+      "updated_at": "2026-10-18T13:08:29Z",
+      "expires_at": "2026-11-17T13:08:26Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137317738,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzMxNzczOA==",
+      "name": "memphis-failover-compact-baseline-39129984525",
+      "size_in_bytes": 35184,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137317738",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137317738/zip",
+      "expired": false,
+      "digest": "sha256:c862f21f965fd677a7929e7931317929c79ae6e0f5cd0ac5933ff751a062a3cb",
+      "created_at": "2026-10-18T13:05:44Z",
+      "updated_at": "2026-10-18T13:05:44Z",
+      "expires_at": "2026-11-17T13:05:44Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137294315,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzI5NDMxNQ==",
+      "name": "memphis-failover-compact-control-39129984525",
+      "size_in_bytes": 118271,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137294315",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137294315/zip",
+      "expired": false,
+      "digest": "sha256:461da2fa65e90bf7f30c3b0c4b75df153581f84bb121377609d43ce6bc78ae8e",
+      "created_at": "2026-10-18T13:06:55Z",
+      "updated_at": "2026-10-18T13:06:55Z",
+      "expires_at": "2026-11-17T13:06:54Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137282741,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzI4Mjc0MQ==",
+      "name": "memphis-failover-raw-baseline-39129984525",
+      "size_in_bytes": 2912152,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137282741",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137282741/zip",
+      "expired": false,
+      "digest": "sha256:40b032af7d82f6e72a2d8599336d7bfa43e46d214c740caf9367f2209c0d8a6f",
+      "created_at": "2026-10-18T13:05:43Z",
+      "updated_at": "2026-10-18T13:05:43Z",
+      "expires_at": "2026-11-17T13:05:42Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12137203182,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNzIwMzE4Mg==",
+      "name": "memphis-failover-compact-recharge-39129984525",
+      "size_in_bytes": 130864,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137203182",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12137203182/zip",
+      "expired": false,
+      "digest": "sha256:2296ada10487229d59e465c40919dd6350a796e25f76cd0959e367ea0509d0b9",
+      "created_at": "2026-10-18T13:09:35Z",
+      "updated_at": "2026-10-18T13:09:35Z",
+      "expires_at": "2026-11-17T13:09:35Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    },
+    {
+      "id": 12136909085,
+      "node_id": "MDg6QXJ0aWZhY3QxMjEzNjkwOTA4NQ==",
+      "name": "memphis-failover-raw-recharge-39129984525",
+      "size_in_bytes": 31404029,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12136909085",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12136909085/zip",
+      "expired": false,
+      "digest": "sha256:b7e9510838ff8f3b6e5e1d1613deb826256a97fcd2242bbeedbb41915fe0dbec",
+      "created_at": "2026-10-18T13:09:34Z",
+      "updated_at": "2026-10-18T13:09:34Z",
+      "expires_at": "2026-11-17T13:09:30Z",
+      "workflow_run": {
+        "id": 39129984525,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-failover-optimization-v1",
+        "head_sha": "a07e5fba7d78f34ab907ce209399068f9c92c760"
+      }
+    }
+  ]
+}

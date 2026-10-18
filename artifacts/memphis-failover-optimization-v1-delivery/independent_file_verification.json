@@ -1,0 +1,395 @@
+{
+  "status": "OFFICIAL_ZIP_RAW_AND_RUNTIME_INDEPENDENT_FILE_VERIFICATION_PASS",
+  "run": 39129984525,
+  "source_commit": "a07e5fba7d78f34ab907ce209399068f9c92c760",
+  "manifest_sha256": "715d8d9cd7a5d99ddccff2373754ee6f32e3084e48e3deffecf8b91702421bef",
+  "raw_files": 1028,
+  "stages": [
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 2708,
+      "stage": "G_WET_LOSS",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 5696,
+      "stage": "NEGATIVE",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 6740,
+      "stage": "EARLY43_5",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 2676,
+      "stage": "COORDINATED_B",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 864,
+      "stage": "SOURCE_B_THEN_LOAD44",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 5464,
+      "stage": "COORD_REPEAT",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 3144,
+      "stage": "COORD_WARM",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 2468,
+      "stage": "COORD_STUCK",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 4288,
+      "stage": "COORD_HEADER_LOSS",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 3088,
+      "stage": "COORD_SECOND_FAIL",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 2680,
+      "stage": "COORD_MIXING",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 7432,
+      "stage": "COORD_MIXED",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 5764,
+      "stage": "FINAL",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 6868,
+      "stage": "BASE40",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 1744,
+      "stage": "BASE80",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 1864,
+      "stage": "BASE160",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 7636,
+      "stage": "COORD40",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 7352,
+      "stage": "COORD80",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 4596,
+      "stage": "COORD160",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 6136,
+      "stage": "COORD160_DT05",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 7040,
+      "stage": "RECHARGE_SHARED",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 1452,
+      "stage": "RECHARGE_INDEPENDENT",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 5088,
+      "stage": "STARTUP20",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 6392,
+      "stage": "STARTUP0",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 1704,
+      "stage": "VALVE2",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 1764,
+      "stage": "PRECOOLED_LINE",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 2840,
+      "stage": "HEADER1",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    },
+    {
+      "cpu_rate": 2500,
+      "cleanup_complete": true,
+      "pid": 336,
+      "stage": "COORD_START20_VALVE2",
+      "process_mb": 1024,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "image": "20261012.333.1"
+    }
+  ],
+  "archives": [
+    {
+      "id": 12137317738,
+      "bytes": 35184,
+      "local_sha256": "c862f21f965fd677a7929e7931317929c79ae6e0f5cd0ac5933ff751a062a3cb",
+      "official_digest": "sha256:c862f21f965fd677a7929e7931317929c79ae6e0f5cd0ac5933ff751a062a3cb",
+      "name": "memphis-failover-compact-baseline-39129984525"
+    },
+    {
+      "id": 12137294315,
+      "bytes": 118271,
+      "local_sha256": "461da2fa65e90bf7f30c3b0c4b75df153581f84bb121377609d43ce6bc78ae8e",
+      "official_digest": "sha256:461da2fa65e90bf7f30c3b0c4b75df153581f84bb121377609d43ce6bc78ae8e",
+      "name": "memphis-failover-compact-control-39129984525"
+    },
+    {
+      "id": 12138245024,
+      "bytes": 167957,
+      "local_sha256": "7fd4dee60dfeca002aaab4f67db2b38a9befd38935d6f7f66c8f496c7873aaa1",
+      "official_digest": "sha256:7fd4dee60dfeca002aaab4f67db2b38a9befd38935d6f7f66c8f496c7873aaa1",
+      "name": "memphis-failover-compact-failure-39129984525"
+    },
+    {
+      "id": 12137742610,
+      "bytes": 273966,
+      "local_sha256": "3a669c7f744d7d8b168531e316b68fd092bec20fae6fc1998e92c62a8023095a",
+      "official_digest": "sha256:3a669c7f744d7d8b168531e316b68fd092bec20fae6fc1998e92c62a8023095a",
+      "name": "memphis-failover-compact-final-39129984525"
+    },
+    {
+      "id": 12137477229,
+      "bytes": 204941,
+      "local_sha256": "9c0681ef2bfd6927efbea6d6319296988e2bd083aa2bcc70bc40362e6ecd6185",
+      "official_digest": "sha256:9c0681ef2bfd6927efbea6d6319296988e2bd083aa2bcc70bc40362e6ecd6185",
+      "name": "memphis-failover-compact-mesh-39129984525"
+    },
+    {
+      "id": 12137203182,
+      "bytes": 130864,
+      "local_sha256": "2296ada10487229d59e465c40919dd6350a796e25f76cd0959e367ea0509d0b9",
+      "official_digest": "sha256:2296ada10487229d59e465c40919dd6350a796e25f76cd0959e367ea0509d0b9",
+      "name": "memphis-failover-compact-recharge-39129984525"
+    },
+    {
+      "id": 12137488236,
+      "bytes": 183108,
+      "local_sha256": "bd6bbe5eb3134c45f1003ae7ebe0c6399f6e1b44a08b4217b9f46a1c4effabc0",
+      "official_digest": "sha256:bd6bbe5eb3134c45f1003ae7ebe0c6399f6e1b44a08b4217b9f46a1c4effabc0",
+      "name": "memphis-failover-compact-timing-39129984525"
+    },
+    {
+      "id": 12137282741,
+      "bytes": 2912152,
+      "local_sha256": "40b032af7d82f6e72a2d8599336d7bfa43e46d214c740caf9367f2209c0d8a6f",
+      "official_digest": "sha256:40b032af7d82f6e72a2d8599336d7bfa43e46d214c740caf9367f2209c0d8a6f",
+      "name": "memphis-failover-raw-baseline-39129984525"
+    },
+    {
+      "id": 12137786956,
+      "bytes": 12583821,
+      "local_sha256": "3d30da26467f5363f1d19bb6fa925558dad528ab2507223c52e5112a27f5510d",
+      "official_digest": "sha256:3d30da26467f5363f1d19bb6fa925558dad528ab2507223c52e5112a27f5510d",
+      "name": "memphis-failover-raw-control-39129984525"
+    },
+    {
+      "id": 12137324415,
+      "bytes": 20257694,
+      "local_sha256": "493e5b91a706795af60aad3d5f4632cf4fef2befd3b08560761c0ad25d74958c",
+      "official_digest": "sha256:493e5b91a706795af60aad3d5f4632cf4fef2befd3b08560761c0ad25d74958c",
+      "name": "memphis-failover-raw-failure-39129984525"
+    },
+    {
+      "id": 12138175493,
+      "bytes": 284156,
+      "local_sha256": "090e80f670424d781236e7c0896107f76bae6b9112f5fbb55d2f1ff664f28070",
+      "official_digest": "sha256:090e80f670424d781236e7c0896107f76bae6b9112f5fbb55d2f1ff664f28070",
+      "name": "memphis-failover-raw-final-39129984525"
+    },
+    {
+      "id": 12137706265,
+      "bytes": 28443744,
+      "local_sha256": "4fc85e63d3da4d713159fef2a0809a40773c957245f090460f0a341656fd4c4a",
+      "official_digest": "sha256:4fc85e63d3da4d713159fef2a0809a40773c957245f090460f0a341656fd4c4a",
+      "name": "memphis-failover-raw-mesh-39129984525"
+    },
+    {
+      "id": 12136909085,
+      "bytes": 31404029,
+      "local_sha256": "b7e9510838ff8f3b6e5e1d1613deb826256a97fcd2242bbeedbb41915fe0dbec",
+      "official_digest": "sha256:b7e9510838ff8f3b6e5e1d1613deb826256a97fcd2242bbeedbb41915fe0dbec",
+      "name": "memphis-failover-raw-recharge-39129984525"
+    },
+    {
+      "id": 12137642347,
+      "bytes": 16831393,
+      "local_sha256": "3366d2263ab8cbe9d6fb50774441d589bd841bb1a10212e1eaec46ed8eb9d093",
+      "official_digest": "sha256:3366d2263ab8cbe9d6fb50774441d589bd841bb1a10212e1eaec46ed8eb9d093",
+      "name": "memphis-failover-raw-timing-39129984525"
+    }
+  ],
+  "raw_logs_sha256": "d59bd9dd7fb76bf80625e2f059bdc823d6d227453c27f5f05108d73e57ec46d6",
+  "verification": "PowerShell pure-file streaming SHA256; no local Python or model",
+  "engineering_approval": false,
+  "formal": false,
+  "hardware": false,
+  "phase6": false
+}
