@@ -1,6 +1,8 @@
 {
   "schema":"MEMPHIS-FAILOVER-CAUSAL-OPTIMIZATION-v1",
-  "build":1,
+  "build":2,
+  "preserved_preflight_run":39129788909,
+  "preflight_stop":"Static review found early43.5 trigger could consume B before a fault because initial inlet is44C. Limit new early planning trigger to independently confirmed source fault. Cancelled before study stages; unrelated genericCI39129788765 also cancelled, no PASS inherited.",
   "authority":"OFFLINE_BOUNDED_DEVELOPMENT_ONLY; dedicated branch commit/push/remote tests authorized in this chat",
   "parent_execution":"6031e0ef7d32bec0109f328f85ebd5dfef8fe048",
   "parent_run":39088951176,

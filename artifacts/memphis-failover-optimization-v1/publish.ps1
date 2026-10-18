@@ -8,11 +8,12 @@ function Send([string]$endpoint,$body,[string]$method='POST'){
 }
 $parentObj=gh api ($api+'/git/commits/'+$Parent)|ConvertFrom-Json
 if($LASTEXITCODE -ne 0){throw 'PARENT_UNAVAILABLE'}
-$paths=@(Get-ChildItem -LiteralPath (Join-Path $repo 'v0_2/tests/tools/memphis_failover_optimization_v1') -File -Recurse|ForEach-Object {[IO.Path]::GetRelativePath($repo,$_.FullName).Replace('\','/')})+@('.github/workflows/memphis-failover-optimization-v1.yml','.github/workflows/memphis-failover-optimization-v1-runner.yml','artifacts/memphis-failover-optimization-v1/publish.ps1')
+$paths=@(Get-ChildItem -LiteralPath (Join-Path $repo 'v0_2/tests/tools/memphis_failover_optimization_v1') -File -Recurse|ForEach-Object {[IO.Path]::GetRelativePath($repo,$_.FullName).Replace('\','/')})+@('.github/workflows/memphis-failover-optimization-v1.yml','.github/workflows/memphis-failover-optimization-v1-runner.yml','artifacts/memphis-failover-optimization-v1/publish.ps1','artifacts/memphis-failover-optimization-v1/BUILD001_STOP.md','.github/workflows/ci.yml')
 $entries=@();$count=0
 foreach($path in $paths|Sort-Object){
- if($path -notmatch '^(v0_2/tests/tools/memphis_failover_optimization_v1/|\.github/workflows/memphis-failover-optimization-v1|artifacts/memphis-failover-optimization-v1/)'){throw 'PUBLICATION_SCOPE'}
- $bytes=[IO.File]::ReadAllBytes((Join-Path $repo $path));$blob=Send 'git/blobs' @{encoding='base64';content=[Convert]::ToBase64String($bytes)}
+ if($path -notmatch '^(v0_2/tests/tools/memphis_failover_optimization_v1/|\.github/workflows/memphis-failover-optimization-v1|artifacts/memphis-failover-optimization-v1/)' -and $path -cne '.github/workflows/ci.yml'){throw 'PUBLICATION_SCOPE'}
+ $local=if($path -ceq '.github/workflows/ci.yml'){'v0_2/tests/tools/memphis_failover_optimization_v1/infra/ci-branch-only.yml'}else{$path}
+ $bytes=[IO.File]::ReadAllBytes((Join-Path $repo $local));$blob=Send 'git/blobs' @{encoding='base64';content=[Convert]::ToBase64String($bytes)}
  $header=[Text.Encoding]::ASCII.GetBytes(('blob '+$bytes.Length+[char]0));$expected=[Convert]::ToHexString([Security.Cryptography.SHA1]::HashData([byte[]]($header+$bytes))).ToLowerInvariant()
  if($blob.sha -cne $expected){throw ('REMOTE_BLOB_DRIFT '+$path)}
  $entries+=@{path=$path;mode='100644';type='blob';sha=$blob.sha};$count++;if($count%15 -eq 0){Write-Host ('Exact blobs '+$count+'/'+$paths.Count)}

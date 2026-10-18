@@ -99,7 +99,8 @@ class Coordinator:
             self.startup_required=self.needed_path!=self.path
             self.resume='RUN';self.transition('REVOKE_RECHARGE',now,'INDEPENDENT_MEASURED_FAULT')
         if fault and not obs.w1_available and not obs.w2_available:self.transition('NO_SOURCE',now,'COMMON_FAILURE_NOT_CURED_BY_TOWER_SWITCH')
-        early=(self.strategy=='EARLY_TEMPERATURE' and obs.maximum_secondary_inlet_c>=self.options.get('reserve_trigger_c',43.5))
+        early=(self.strategy=='EARLY_TEMPERATURE' and self.source_fault_handled
+            and obs.maximum_secondary_inlet_c>=self.options.get('reserve_trigger_c',43.5))
         if (('SECONDARY_RACK_INLET_HIGH_REQUIRES_TAKEOVER' in safety['data']['codes'] or early)
             and self.state=='RUN' and not self.thermal_takeover_used and self.load_tank!='B' and self.tank!='B'):
             # Keep measured reserve permission and actual-path acknowledgement.

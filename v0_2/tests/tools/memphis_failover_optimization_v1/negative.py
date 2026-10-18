@@ -20,6 +20,9 @@ def run():
             r=c.request(sample,p.evaluate(sample,now),now)
         return c,r
     c,r=exercise(o);need(c.needed_tank=='B' and r['load_tank']=='B','POSITIVE_MEASURED_TRANSFER');count+=1
+    c=Coordinator(options={'strategy':'EARLY_TEMPERATURE','reserve_trigger_c':43.5})
+    healthy=replace(o,w1_available=True);r=c.request(healthy,ProjectProtection().evaluate(healthy,100000000),100000000)
+    need(r['load_tank']=='A' and not c.thermal_takeover_used,'PREFAULT_EARLY_TRIGGER');count+=1
     for tt in ((321.44,)*4,(314.0948,321.44,321.44,321.44)):
         c,r=exercise(replace(o,tank_B_tt_k=tt));need(c.needed_tank=='A' and r['load_tank']=='A','WARM_RESERVE_ACCEPTED');count+=1
     c,r=exercise(replace(o,w2_available=False));need(r['load_tank']=='A','UNAVAILABLE_BACKUP_ACCEPTED');count+=1
