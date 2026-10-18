@@ -35,6 +35,18 @@ def test_first_recovery_cannot_hide_second_failure():
     assert not terminal_held(rows,lambda r:r['flow']==1)
     assert terminal_held(rows,lambda r:r['time_ns']>=0)
 
+def test_source_selection_pre_cut_can_precede_new_opening():
+    from .audit import source_change_cut
+    source_change_cut({'source_supply_valve':0.,'source_return_valve':0.,'source_speed':0.},
+        {'source_supply_valve':.02,'source_return_valve':.02,'source_speed':0.})
+
+@pytest.mark.parametrize('where,key',[('before','source_supply_valve'),('before','source_return_valve'),('before','source_speed'),('after','source_speed')])
+def test_illegal_source_selection_is_not_excused_by_later_closed_valve(where,key):
+    from .audit import source_change_cut
+    a={'source_supply_valve':0.,'source_return_valve':0.,'source_speed':0.};b=dict(a)
+    (a if where=='before' else b)[key]=.02
+    with pytest.raises(ValueError,match='SOURCE_AB_NOT_ISOLATED'):source_change_cut(a,b)
+
 @pytest.mark.parametrize('change',['producer','permission','future','hash'])
 def test_false_plc_receipts(change):
     p={'data':{'time_ns':10,'measurement_id':'m'},'sha256':'p'}

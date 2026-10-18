@@ -1,6 +1,7 @@
 {
-  "schema":"MEMPHIS-EQUIPMENT-FAILOVER-V2", "build":3,
-  "preserved_runs":[39085647859,39086711213],
+  "schema":"MEMPHIS-EQUIPMENT-FAILOVER-V2", "build":4,
+  "preserved_runs":[39085647859,39086711213,39086928011],
+  "build4_change":"New paired source valve audit checks actual pre-selection closed/zero cut; end-of-step new valve may have begun opening. Add legal and illegal-cut witnesses; plant, controller, limits and numeric tolerances unchanged",
   "terminal_recovery_gate":"Retain first5s recovery timestamps; FAILOVER_RECOVERY and FULL_LOAD_CONTINUITY require final5s flow/pressure/temperature maintained, so later failure cannot be hidden",
   "build_change":"Fix SR_STUCK_BACKUP excitation and independently require frozen original speed, command gap and M1 confirmation; preregister fixed tank mesh/refinement and group UA sensitivity; retain all customer limits",
   "authority":"OFFLINE_DEVELOPMENT_ONLY", "branch":"codex/memphis-equipment-validation-v2",

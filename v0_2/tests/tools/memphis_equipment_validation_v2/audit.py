@@ -51,6 +51,11 @@ def terminal_held(rows,predicate,hold_ns=5_000_000_000):
     last=rows[-1]['time_ns'];tail=[r for r in rows if r['time_ns']>=last-hold_ns]
     return bool(tail) and tail[0]['time_ns']<=last-hold_ns and all(predicate(r) for r in tail)
 
+def source_change_cut(before,after):
+    # Selection happens before the new valve's first opening movement.
+    # Never use a later closed state to excuse an unsafe earlier selection.
+    need(max(before['source_supply_valve'],before['source_return_valve'])<=1e-9 and before['source_speed']<=1e-9 and after['source_speed']<=1e-9,'SOURCE_AB_NOT_ISOLATED')
+
 def unit(directory):
     inp=read(directory/'input.json');c=inp['config'];spec=inp['spec'];rows=read(directory/'series.json');steps=read(directory/'physics.json')
     phases=read(directory/'phases.json');causality=causal(phases,read(directory/'measurements.json'))
@@ -138,7 +143,7 @@ def group(directory,spec):
             need(max(b['load_supply_valve'],b['load_return_valve'])<=1e-9,'LOAD_AB_NOT_ISOLATED')
             switches.append(dict(time_s=b['end_ns']/1e9,from_tank=a['load_tank'],to_tank=b['load_tank']))
         if (a['source_tank'],a['source_path'])!=(b['source_tank'],b['source_path']):
-            need(max(b['source_supply_valve'],b['source_return_valve'])<=1e-9 and b['source_speed']<=1e-9,'SOURCE_AB_NOT_ISOLATED')
+            source_change_cut(a,b)
     allmax=max(max(max(u['new_k'][1:7])-273.15 for u in s['unit_records']) for s in steps)
     recovery=next((r['time_ns']/1e9 for r in rows if r['cold_A_m3']>=10 and r['cold_B_m3']>=8.25 and r['time_ns']/1e9>=120),None)
     recharge=spec.get('recharge')
