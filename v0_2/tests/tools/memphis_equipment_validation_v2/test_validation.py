@@ -13,7 +13,7 @@ def remote_only():
 def test_nonfinite(value):
     with pytest.raises(ValueError,match='NONFINITE'):validate({'ua':value})
 
-@pytest.mark.parametrize('bad',[{'units':{'temperature':'C','flow':'m3/h','pressure':'kPa'}},{'rack_limit_c':46},{'liquid_fraction':.9},{'provenance':'GUESSED'},{'provenance':'OEM_CONFIRMED'},{'ua':0},{'racks':18},{'dt':1},{'loads':[160000]*6}])
+@pytest.mark.parametrize('bad',[{'units':{'temperature':'C','flow':'m3/h','pressure':'kPa'}},{'rack_limit_c':46},{'liquid_fraction':.9},{'provenance':'GUESSED'},{'provenance':'OEM_CONFIRMED'},{'ua':0},{'racks':18},{'dt':1},{'loads':[160000]*6},{'fault':'STUCK'}])
 def test_registered_refusals(bad):
     with pytest.raises(ValueError):validate(bad)
 

@@ -11,12 +11,12 @@ ROOT=HERE.parents[3]
 def buffer(spec,directory):
     from .group_model.tank import Tank
     t=Tank(spec.get('layers',20),'MIXED' if spec.get('mixed') else 'STRATIFIED');initial=t.t[0]
-    records=[];before=t.energy();q=330/3600;net=0.
-    for i in range(900):
-        r=t.advance(.1,q,0.,321.44,314.0948);r['end_s']=(i+1)/10;records.append(r)
-        net+=.1*1009*4000*q*(321.44-r['old_k'][0])
+    records=[];before=t.energy();q=330/3600;net=0.;dt=spec.get('dt',.1)
+    for i in range(round(90/dt)):
+        r=t.advance(dt,q,0.,321.44,314.0948);r['end_s']=(i+1)*dt;records.append(r)
+        net+=dt*1009*4000*q*(321.44-r['old_k'][0])
     from .audit import bound
-    residual=t.energy()-before-net;need(abs(residual)<=bound(before,t.energy(),net,ops=8192*901),'BUFFER_INDEPENDENT_LEDGER')
+    residual=t.energy()-before-net;need(abs(residual)<=bound(before,t.energy(),net,ops=8192*(len(records)+1)),'BUFFER_INDEPENDENT_LEDGER')
     maxrise=max(r['new_k'][0]-initial for r in records)
     write(directory/'buffer_steps.json',records)
     return dict(case_id=spec['id'],kind='buffer',outlet_initial_c=initial-273.15,maximum_outlet_rise_K=maxrise,final_outlet_c=t.t[0]-273.15,
@@ -71,7 +71,7 @@ def stage(spec,directory):
     if kind=='group':
         from .group_model.simulation import run
         from .audit import group
-        c=dict(spec,id=spec['id'],scope='GROUP18',ua_w_k=220000.,dt_s=spec.get('dt',.1),seconds=spec.get('seconds',240),
+        c=dict(spec,id=spec['id'],scope='GROUP18',ua_w_k=spec.get('ua',220000.),dt_s=spec.get('dt',.1),seconds=spec.get('seconds',240),
             tank_kind='STRATIFIED',fault_at_s=30.,recharge_at_s=120.,expect='ENGINEERING_RESULTS_NOT_ASSUMED')
         write(directory/'case_spec.json',c);run(c,directory/'case');return group(directory/'case',c)
     raise ValueError('UNREGISTERED_STAGE')

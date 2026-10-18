@@ -1,4 +1,4 @@
-name: Memphis rack-first V1 controlled group
+name: Memphis equipment V2 controlled group
 on:
   workflow_call:
     inputs:
@@ -65,7 +65,7 @@ jobs:
         run: |
           python -m pip install --disable-pip-version-check -r v0_2/tests/tools/c3b_v14_1/requirements-development.lock
           if($LASTEXITCODE -ne 0){throw 'DEPENDENCY_INSTALL_FAILED'}
-      - name: Bounded Memphis rack-first V1 group
+      - name: Bounded Memphis equipment V2 group
         shell: pwsh
         run: |
           $manifest=(Get-FileHash 'v0_2/tests/tools/memphis_equipment_validation_v2/source_manifest.json' -Algorithm SHA256).Hash.ToLowerInvariant()

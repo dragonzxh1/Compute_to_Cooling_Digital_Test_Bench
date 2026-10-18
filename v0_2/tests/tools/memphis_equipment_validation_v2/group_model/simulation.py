@@ -117,6 +117,7 @@ def run(spec,directory):
                     load_return_valve=None if not group else source.load_return_valve,
                     source_selector=None if not group else source.source_tank,
                     source_path=None if not group else source.source_path,
+                    source_actual_speed=None if not group else source.speed,
                     source_state=coordinator.state if group else 'FIXED_PRIMARY_BOUNDARY_FOR_UNIT_ONLY',
                     cold_A_m3=None if not group else source.tanks['A'].cold_volume(),cold_B_m3=None if not group else source.tanks['B'].cold_volume(),
                     source_flow_m3_h=None if not group else source.last_source_q*3600,

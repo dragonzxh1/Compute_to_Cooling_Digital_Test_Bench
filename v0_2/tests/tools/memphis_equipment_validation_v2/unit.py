@@ -16,6 +16,7 @@ def unit_config(spec):
     c=config(dict(id=spec['id'],rack_count=spec.get('racks',6),boundary='NORMAL' if spec.get('normal') else 'HOT',load_step=spec.get('step',False),unbalanced=spec.get('unbalanced',False),inventory_scale=spec.get('inventory',1)))
     c['hx_ua_w_k']=spec.get('ua',220000)*c['rack_count']/6
     c['dt_ns']=round(spec.get('dt',.1)*1e9)
+    c['fault']=spec.get('fault');c['fault_at_ns']=10_000_000_000
     if spec.get('loads'):c['load_profile'][0]['rack_it_w']=spec['loads']
     return c
 
@@ -121,7 +122,7 @@ def run(spec,directory):
             physical=paths.loop.snapshot(now,effective,'path:'+str(now))
             # Tachometer for original duty pump remains original duty pump after
             # transfer. M1 latch cannot be cleared by relabeling backup speed.
-            measured=replace(physical,actual_speed=actuator.actual)
+            measured=replace(physical,actual_speed=actuator.actual,actuator_state_id=actuator.actuator_state_id)
             if now%c['sensor_period_ns']==0:
                 b=dict(id='backup-sensor:'+str(now),sample_ns=now,release_ns=now+c['sensor_delay_ns'],speed=paths.backup_speed)
                 pending_backup.append(b);backup_samples.append(b)
@@ -150,6 +151,7 @@ def run(spec,directory):
                     immutable_safety_digest=safety.digest,envelope=envelope.data(),actuator_command=asdict(command),
                     fast_permission=permission,backup_PLC=backup,backup_measurement=backup_obs,controller_request=request))
             series.append(dict(**asdict(physical),main_speed=actuator.actual,main_command=actuator.commanded,
+                main_actuator_state_id=actuator.actuator_state_id,
                 backup_speed=paths.backup_speed,backup_command=paths.backup_command,active_cdu=paths.cdu,active_pump=paths.pump,
                 valve_opening=paths.opening,selector_state=paths.state,rack_it_w=list(loads),
                 supply_valve=paths.opening,return_valve=paths.opening,provenance='ENGINEERING_ASSUMPTION'))

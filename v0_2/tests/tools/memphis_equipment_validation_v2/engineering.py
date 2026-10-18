@@ -22,6 +22,7 @@ def equipment():
     candidate('Custom CDU1100',{'Rated capacity':datum('1100kW requirement, not verified rating','CUSTOMER_DESIGN'),
         'Primary flow and DeltaP':datum('110m3/h; complete path budget155.92kPa includes quoted PHE74.714kPa','CUSTOMER_DESIGN'),
         'Secondary flow and DeltaP':datum('49.19--68.37m3/h; hot371.81kPa complete path','CUSTOMER_DESIGN'),
+        'External available head':datum('Required external295.21kPa hot /152.81kPa normal from project budget, NOT supplier available head','DERIVED_REQUIREMENT'),
         'Redundant pumps':datum('2x100% per CDU; paired CDU1+1 per six racks','CUSTOMER_DESIGN')},'CONDITIONALLY_SUITABLE','00/01 hash-bound final sources','Require project thermal guarantee, external head, recovery and pressure proof; no final equipment PASS')
     candidate('Alfa Laval plate HX option',{},'NOT_VERIFIED','https://www.alfalaval.com/en-us/industries/hvac/data-center-cooling/','Component manufacturer/application evidence only; no exact selected model. Cannot inherit Sanhua DeltaP/MAWP')
     candidate('Sanhua S200AL-246H plate HX',{'Primary flow and DeltaP':datum('74.714kPa@110m3/h quoted by customer document','CUSTOMER_DESIGN'),
@@ -30,6 +31,7 @@ def equipment():
     candidate('Vertiv XDU1350',{'Rated capacity':datum('1368kW at4K ATD, catalog condition','OEM_CONFIRMED'),
         'Redundant pumps':datum('N+1 and three-pump N modes distinguished in SL70618','OEM_CONFIRMED'),
         'Secondary flow and DeltaP':datum('Guide thermal graph water1200L/min; not project PG25 guarantee','OEM_CONFIRMED'),
+        'External available head':datum('Catalog dual-pump1200L/min at244kPa external; different project flow/fluid, full curve required','OEM_CONFIRMED'),
         'Control interface':datum('Modbus register appendix in SL70618','OEM_CONFIRMED')},'NOT_VERIFIED','https://www.vertiv.com/48ef40/globalassets/products/thermal-management/high-density-solutions/liebert-xdu1350-coolant-distribution-unit-application-and-planning-guide-sl-70618.pdf','3K/PG25/external head/pump mode must be quoted; 1368kW alone cannot establish project suitability')
     candidate('Motivair MCDU40 / MCDU50 inquiry',{'Rated capacity':datum('Catalog MCDU40 1250kW and MCDU50 1725kW at90F primary,113/149F secondary; different condition from project','OEM_CONFIRMED'),
         'Primary flow and DeltaP':datum('Nominal primary420USgpm; DeltaP not obtained','OEM_CONFIRMED'),
@@ -52,7 +54,7 @@ def equipment():
         ('Shared standby CDU across three units','DESIGN_INFORMATION_INSUFFICIENT','Not implemented customer topology; needs cross-tie manifold/valves, extra loss, failure-domain and maintenance review; no assumed reliability/cost advantage'),
         ('Hybrid dry/wet packaged source','DESIGN_INFORMATION_INSUFFICIENT','Conditional total reject2716.15kW; no actual common-condition map or cost'),
         ('Earlier measured reserve transfer','MODIFICATION_RECOMMENDED','Study new registered trigger/delay only after diagnosing existing trace; current44.5 trigger retained this run')]]
-    return dict(points=points,UA_study=[dict(UA_kW_K=v,operating_margin_kW_K=v-points[1]['required_UA_kW_K'],guarantee_margin_kW_K=v-points[2]['required_UA_kW_K'],provenance='ENGINEERING_ASSUMPTION',OEM_available_UA=None) for v in (110,183.30,209.28,220)],
+    return dict(points=points,external_head_requirement_kpa=dict(hot=295.21,normal=152.81,provenance='DERIVED_REQUIREMENT',basis='complete secondary path minus CDU internal HX/filter losses; never compare catalog external head directly with371.81'),UA_study=[dict(UA_kW_K=v,operating_margin_kW_K=v-points[1]['required_UA_kW_K'],guarantee_margin_kW_K=v-points[2]['required_UA_kW_K'],provenance='ENGINEERING_ASSUMPTION',OEM_available_UA=None) for v in (110,183.30,209.28,220)],
         candidates=candidates,RFI=rfi,options=options,prices=None,CAPEX_OPEX='NOT_VERIFIED_NO_SUPPLIER_PRICE_OR_ANNUAL_CALIBRATED_MAP',
         cost_formula='CAPEX=sum(actual quotes)+installation+spares; OPEX=integral(actual pump/fan kW)*tariff + water_m3*water_sewer_tariff + maintenance; tariffs/annual hours UNKNOWN')
 

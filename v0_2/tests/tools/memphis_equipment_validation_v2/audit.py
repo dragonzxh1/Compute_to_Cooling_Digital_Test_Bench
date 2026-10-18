@@ -50,6 +50,12 @@ def first_held(rows,predicate,start_ns=10_000_000_000,hold_ns=5_000_000_000):
 def unit(directory):
     inp=read(directory/'input.json');c=inp['config'];spec=inp['spec'];rows=read(directory/'series.json');steps=read(directory/'physics.json')
     phases=read(directory/'phases.json');causality=causal(phases,read(directory/'measurements.json'))
+    bytime={r['time_ns']:r for r in rows}
+    for o in read(directory/'measurements.json'):
+        if o['quality']!='VALID':continue
+        r=bytime[o['sample_ns']]
+        need(o['pump_speed']==r['main_speed'] and o['supply_k']==r['supply_k'] and o['rack_return_k']==r['rack_return_k'],'PHYSICAL_MEASUREMENT_BINDING')
+        need(o['source_ids']==[r['main_actuator_state_id'],r['hydraulic_solution_id']],'MEASUREMENT_SOURCE_BINDING')
     cv=c['density_kg_m3']*c['cp_j_kg_k'];caps=[cv*v for v in c['volumes_m3']]
     qd=c['design_flow_m3_s'];n=c['rack_count'];kc=(c['design_dp_pa']-c['branch_dp_pa'])/qd**2
     kb=[c['branch_dp_pa']*f/(qd/n)**2 for f in c['branch_factors']];ke=1/fsum(1/sqrt(k) for k in kb)**2
@@ -93,6 +99,10 @@ def unit(directory):
     pressure=first_held(rows,lambda r:r['dp_pa']>=.99*c['design_dp_pa'] and (r['active_cdu'],r['active_pump'])!=(0,0))
     temp=first_held(rows,lambda r:r['supply_k']<=318.15 and (r['active_cdu'],r['active_pump'])!=(0,0))
     thermal='PASS' if mx<=45 else 'FAIL';hasfault=bool(spec.get('fault'));recover=flow is not None and pressure is not None and temp is not None
+    if spec.get('fault')=='STUCK':
+        frozen=[r for r in rows if r['time_ns']>=10_000_000_000]
+        need(len({r['main_speed'] for r in frozen})==1 and max(r['main_command'] for r in frozen)-frozen[0]['main_speed']>=.15,'INVALID_STUCK_EXCITATION')
+        need(causality['tracking_confirmed_s'] is not None,'STUCK_TRACKING_CONFIRMATION_MISSING')
     full=all(all(w==155000 for w in r['rack_it_w']) for r in rows if r['time_ns']>=10_000_000_000)
     grade=dict(SOFTWARE_EXECUTION_VALIDITY='PASS',PHYSICAL_NUMERICAL_VALIDITY='PASS',CDU_EQUIPMENT_SUITABILITY='NOT_VERIFIED',PUMP_EQUIPMENT_SUITABILITY='NOT_VERIFIED',RACK_THERMAL_COMPLIANCE=thermal,RACK_HYDRAULIC_COMPLIANCE='NOT_VERIFIED',FAILOVER_RECOVERY=('PASS' if recover else 'FAIL') if hasfault else 'INCOMPLETE',FULL_LOAD_CONTINUITY='PASS' if full and thermal=='PASS' and (recover or not hasfault) else 'FAIL',SOURCE_COOLING_ADEQUACY='NOT_VERIFIED',OEM_CALIBRATION_STATUS='NOT_VERIFIED',CUSTOMER_DESIGN_APPROVAL_STATUS='INCOMPLETE',**{'90_SECOND_BUFFER_COMPLIANCE':'INCOMPLETE'})
     return dict(case_id=spec['id'],kind='unit',grades=grade,maximum_inlet_c=mx,final_inlet_c=rows[-1]['supply_k']-273.15,

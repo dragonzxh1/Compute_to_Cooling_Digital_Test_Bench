@@ -16,6 +16,7 @@ def validate(spec):
     if spec.get('provenance')=='OEM_CONFIRMED':need(bool(spec.get('OEM_source')) and bool(spec.get('OEM_hash')),'OEM_EVIDENCE_MISSING')
     if 'loads' in spec:need(len(spec['loads'])==6 and all(0<=w<=155000 for w in spec['loads']),'RACK_LOAD_DOMAIN')
     if 'ua' in spec:need(spec['ua']>0,'UA_REQUIRED')
+    if spec.get('fault')=='STUCK':need(spec.get('step') is True,'INVALID_STUCK_EXCITATION')
     need(spec.get('dt',.1) in (.1,.05,.025),'BOUNDED_TIME_STEP')
     need(spec.get('racks',6) in (1,6),'RACK_DOMAIN')
 
