@@ -35,6 +35,30 @@ def test_first_recovery_cannot_hide_second_failure():
     assert not terminal_held(rows,lambda r:r['flow']==1)
     assert terminal_held(rows,lambda r:r['time_ns']>=0)
 
+def source_step(start,end,available=True,flow=330.,temp=314.):
+    return dict(start_ns=round(start*1e9),end_ns=round(end*1e9),
+        source_available={'W1':available},source_path='W1',
+        source_flow_m3_h=flow,source_return_k=temp)
+
+def test_pre_fault_cold_water_cannot_be_recovery():
+    from .audit import first_post_fault_cold
+    steps=[source_step(29.9,30),source_step(30,30.1,False),
+        source_step(118.9,119)]
+    assert first_post_fault_cold(steps,30,330)==89
+    assert first_post_fault_cold(steps[:2],30,330) is None
+
+@pytest.mark.parametrize('available,flow,temp',[(False,330,314),(True,326.19,314),(True,330,315)])
+def test_return_requires_actual_availability_design_flow_and_cold(available,flow,temp):
+    from .audit import first_post_fault_cold
+    assert first_post_fault_cold([source_step(30,30.1,available,flow,temp)],30,330) is None
+
+def test_source_first_return_cannot_hide_later_failure():
+    from .audit import first_post_fault_cold,terminal_source_ready
+    steps=[source_step(i,i+1,available=i<80) for i in range(120)]
+    assert first_post_fault_cold(steps,30,330)==1
+    assert not terminal_source_ready(steps,330)
+    assert terminal_source_ready([source_step(i,i+1) for i in range(120)],330)
+
 def test_source_selection_pre_cut_can_precede_new_opening():
     from .audit import source_change_cut
     source_change_cut({'source_supply_valve':0.,'source_return_valve':0.,'source_speed':0.},

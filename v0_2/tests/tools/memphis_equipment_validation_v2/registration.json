@@ -1,6 +1,7 @@
 {
-  "schema":"MEMPHIS-EQUIPMENT-FAILOVER-V2", "build":4,
-  "preserved_runs":[39085647859,39086711213,39086928011],
+  "schema":"MEMPHIS-EQUIPMENT-FAILOVER-V2", "build":5,
+  "preserved_runs":[39085647859,39086711213,39086928011,39087966476],
+  "build5_change":"Cold return must use post-fault physical intervals, not the interval ending at the fault timestamp. No-fault case has no failover claim; require final5s actual source availability/design flow/cold return so a second failure cannot hide behind first return. Plant/controller/customer limits unchanged",
   "build4_change":"New paired source valve audit checks actual pre-selection closed/zero cut; end-of-step new valve may have begun opening. Add legal and illegal-cut witnesses; plant, controller, limits and numeric tolerances unchanged",
   "terminal_recovery_gate":"Retain first5s recovery timestamps; FAILOVER_RECOVERY and FULL_LOAD_CONTINUITY require final5s flow/pressure/temperature maintained, so later failure cannot be hidden",
   "build_change":"Fix SR_STUCK_BACKUP excitation and independently require frozen original speed, command gap and M1 confirmation; preregister fixed tank mesh/refinement and group UA sensitivity; retain all customer limits",

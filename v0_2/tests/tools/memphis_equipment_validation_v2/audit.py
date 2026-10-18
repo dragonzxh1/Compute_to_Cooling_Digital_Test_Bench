@@ -127,6 +127,23 @@ def unit(directory):
         liquid_j=heat,pump_j=pump,hx_j=hxsum,global_residual_j=residual,global_bound_j=limit,max_local_residual_j=maxerr,
         causal=causality,steps=len(steps),condition='MODEL_ASSUMPTIONS_ONLY; shared rack inventory; inactive CDU internal inventory unknown',procurement='NOT_RELEASED')
 
+def source_ready(s,threshold):
+    return (s['source_available'][s['source_path']] and
+        s['source_flow_m3_h']>=threshold-1e-8 and s['source_return_k']<=314.5948)
+
+def first_post_fault_cold(steps,fault,threshold):
+    # The interval ending exactly at fault is still pre-fault physics.
+    # Availability alone is not a recovery receipt: require a post-fault
+    # interval, an available selected source, real design flow and cold return.
+    return next((s['end_ns']/1e9-fault for s in steps
+        if s['start_ns']>=round(fault*1e9) and source_ready(s,threshold)),None)
+
+def terminal_source_ready(steps,threshold,hold_s=5.):
+    end=steps[-1]['end_ns'];begin=end-round(hold_s*1e9)
+    window=[s for s in steps if s['end_ns']>begin]
+    return bool(window and window[0]['start_ns']<=begin and
+        all(source_ready(s,threshold) for s in window))
+
 def group(directory,spec):
     # Dedicated group equation audit retained independently of the copied plant.
     from .group_model.legacy_audit import _unchanged_physics_audit as audit
@@ -134,8 +151,10 @@ def group(directory,spec):
     rows=read(directory/'series.json');steps=read(directory/'physics.json');fault=spec.get('fault_at_s',30.)
     window=[s for s in steps if fault< s['end_ns']/1e9<=fault+90]
     maximum=max(max(max(u['new_k'][1:7])-273.15 for u in s['unit_records']) for s in window)
-    first=lambda threshold:next((s['end_ns']/1e9-fault for s in steps if s['end_ns']/1e9>=fault and s['source_available'][s['source_path']] and s['source_flow_m3_h']>=threshold-1e-8 and s['source_return_k']<=314.5948),None)
-    strict=first(330);old=first(264)
+    transfer_required=bool(spec.get('fault'))
+    strict=first_post_fault_cold(steps,fault,330) if transfer_required else None
+    old=first_post_fault_cold(steps,fault,264) if transfer_required else None
+    terminal=terminal_source_ready(steps,330)
     for s in steps:need(s['recharge_flow_m3_h']==0 or spec.get('recharge')=='INDEPENDENT','UNREGISTERED_RECHARGE_PUMP')
     switches=[]
     for a,b in zip(steps,steps[1:]):
@@ -148,11 +167,13 @@ def group(directory,spec):
     recovery=next((r['time_ns']/1e9 for r in rows if r['cold_A_m3']>=10 and r['cold_B_m3']>=8.25 and r['time_ns']/1e9>=120),None)
     recharge=spec.get('recharge')
     recharge_peak=max((s['recharge_flow_m3_h'] if recharge=='INDEPENDENT' else s['source_flow_m3_h'] if s['source_tank']=='B' and s['load_tank']=='A' else 0 for s in steps if s['end_ns']/1e9>=120),default=0.)
-    grades=dict(SOFTWARE_EXECUTION_VALIDITY='PASS',PHYSICAL_NUMERICAL_VALIDITY='PASS',CDU_EQUIPMENT_SUITABILITY='NOT_VERIFIED',PUMP_EQUIPMENT_SUITABILITY='NOT_VERIFIED',RACK_THERMAL_COMPLIANCE='PASS' if allmax<=45 else 'FAIL',RACK_HYDRAULIC_COMPLIANCE='NOT_VERIFIED',FAILOVER_RECOVERY='PASS' if strict is not None and strict<=90 else 'FAIL',FULL_LOAD_CONTINUITY='PASS' if allmax<=45 and strict is not None and strict<=90 else 'FAIL',SOURCE_COOLING_ADEQUACY='NOT_VERIFIED',OEM_CALIBRATION_STATUS='NOT_VERIFIED',CUSTOMER_DESIGN_APPROVAL_STATUS='INCOMPLETE',**{'90_SECOND_BUFFER_COMPLIANCE':'INCOMPLETE'})
+    recovered=strict is not None and strict<=90 and terminal
+    grades=dict(SOFTWARE_EXECUTION_VALIDITY='PASS',PHYSICAL_NUMERICAL_VALIDITY='PASS',CDU_EQUIPMENT_SUITABILITY='NOT_VERIFIED',PUMP_EQUIPMENT_SUITABILITY='NOT_VERIFIED',RACK_THERMAL_COMPLIANCE='PASS' if allmax<=45 else 'FAIL',RACK_HYDRAULIC_COMPLIANCE='NOT_VERIFIED',FAILOVER_RECOVERY=('PASS' if recovered else 'FAIL') if transfer_required else 'INCOMPLETE',FULL_LOAD_CONTINUITY='PASS' if allmax<=45 and terminal and (recovered or not transfer_required) else 'FAIL',SOURCE_COOLING_ADEQUACY='NOT_VERIFIED',OEM_CALIBRATION_STATUS='NOT_VERIFIED',CUSTOMER_DESIGN_APPROVAL_STATUS='INCOMPLETE',**{'90_SECOND_BUFFER_COMPLIANCE':'INCOMPLETE'})
     dt=spec['dt_s'];exceed=fsum(max(0,max(max(u['new_k'][1:7])-273.15 for u in s['unit_records'])-45)*dt for s in steps)
     persecond=[dict(time_s=s['end_ns']/1e9,stored_j=s['stored_j'],rejected_w=s['rejected_w'],pump_w=s['primary_pump_electrical_w']+s['secondary_pump_electrical_w'],tank_A_cold_m3=s['tank_A_cold_m3'],tank_B_cold_m3=s['tank_B_cold_m3'],primary_c=s['primary_inlet_c'],source_m3_h=s['source_flow_m3_h'],load_m3_h=s['load_flow_m3_h']) for s in window if s['end_ns']%1_000_000_000==0]
     return dict(case_id=spec['id'],kind='group',grades=grades,maximum_inlet_c=allmax,first90_maximum_inlet_c=maximum,
         first_cold_return_330_delay_s=strict,historical_264_threshold_delay_s=old,actual_AB_switches=switches,
+        terminal_source_recovery_maintained=terminal,recovery_definition='POST_FAULT_INTERVAL_AVAILABLE_SOURCE_DESIGN_FLOW_COLD_RETURN; FIRST_RETURN_NOT_CONTINUITY; FINAL5S_REQUIRED',
         thermal_exceedance_K_s=exceed,thermal_exceedance_duration_s=sum(max(max(u['new_k'][1:7])-273.15 for u in s['unit_records'])>45 for s in steps)*dt,
         reserve_ready_absolute_s=recovery,minimum_cold_A_m3=min(s['tank_A_cold_m3'] for s in steps),final_cold_A_m3=rows[-1]['cold_A_m3'],final_cold_B_m3=rows[-1]['cold_B_m3'],
         recharge_flow_comparison=dict(required_m3_h=330,maximum_actual_m3_h=recharge_peak,status=('PASS' if recharge_peak>=330-1e-8 else 'FAIL') if recharge else 'INCOMPLETE'),
