@@ -1,0 +1,82 @@
+{
+  "hardware": false,
+  "production": false,
+  "model_rerun_for_review": false,
+  "delivery_manifest_sha256": "b58795df4f7a3a82a615214a6360311ad5086a3f027ade8bb00ef65e47fd3564",
+  "execution_commit": "6031e0ef7d32bec0109f328f85ebd5dfef8fe048",
+  "review_jobs": [
+    {
+      "job_proof_sha256": "1298ce568cfd5693e74367b730d9a2924ee51d67169206c5199cdf6301b844f8",
+      "pid": 6228,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "ef334117c0ad23d506ddfabd51f119981354885a23cb8bbe7a009e35228a2ed5",
+      "stage": "baseline"
+    },
+    {
+      "job_proof_sha256": "955c09e75484c303c25344eb99be55b1861da75c85759f2725e94482bf744cb9",
+      "pid": 4800,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "30f805a68771cf7a31413989e02c4e7e26a2f3a40e6535671afb422b4965f60a",
+      "stage": "group-a"
+    },
+    {
+      "job_proof_sha256": "e3d31cb94d6abe66bd2eb85e92cf5d7f833f6da9b71f21ae875a77a51f47c376",
+      "pid": 2536,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "e42511b2c4ae23ade54e47c55d055ca957fdf9e40deb3cbea5fd525fc1a0e8a6",
+      "stage": "group-b"
+    },
+    {
+      "job_proof_sha256": "90cf3b1a4175d0690c1b2a150902218399c73fb0f8476bf4bf0eee4ad53d5fe6",
+      "pid": 8004,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "f0299644903de28d1209496182ff068388ae0db1c401d271a646e1d6702581fc",
+      "stage": "recharge"
+    },
+    {
+      "job_proof_sha256": "a122bc9fd714cfaa8ff04b5f6d21c5c70cdcb639e6bfe2064703436390f1e5eb",
+      "pid": 2528,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "402d977353c0582ccb1f18d4506ba52c3272490f73d70b5864c40067182ae37e",
+      "stage": "units-a"
+    },
+    {
+      "job_proof_sha256": "89da36bcefcdd38f3234b1c6441d400beb77be03fc4f401dff73871a9a57ad2c",
+      "pid": 3588,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "6ff4e3c12d9bb65cd718db5b3e68a0a374fd86cdd311106295f3efce03e2f1a5",
+      "stage": "units-b"
+    },
+    {
+      "job_proof_sha256": "c70a65199f5837f3c14fbe6d2b8b26a95449d64cead0f73870f71c3d6dc1a4bf",
+      "pid": 5972,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "36b47ac4731fed8b5a1d0e0848ea08f4429e5b86d72a9e340f15ca60d78f9689",
+      "stage": "units-c"
+    },
+    {
+      "job_proof_sha256": "46a29c5c0b3f9620d03e377a518b9eeb79ca2f173991e704b1761fb04956596b",
+      "pid": 6376,
+      "active_after_cleanup": 0,
+      "post_exit_status_sha256": "b182e269516143517dfd07d1dbce41c60650ef82698779fcbff2bfc54ea1dabf",
+      "stage": "FINAL"
+    }
+  ],
+  "review_raw_logs_sha256": "641c5de72da8ea9f8866f85721695f4b587536ea0741c8db9f989a3b7a93b968",
+  "official_review_zip_sha256": "5a55750e34d1f51326e73cb99cf124608b18f71012c65d40fd47c39d8055af39",
+  "review_run_id": 39120606196,
+  "phase6": false,
+  "UI": {
+    "mobile_document_width_px": 390,
+    "mobile_viewport_px": 390,
+    "checks": [
+      "group and unit case selection",
+      "source/secondary flow labels",
+      "temperature/flow/pump/reserve curves",
+      "time slider and causal event filtering",
+      "actual cold return event"
+    ],
+    "console_errors": 0
+  },
+  "status": "HANDOFF_HASH_AND_REVIEW_POST_EXIT_VERIFIED"
+}

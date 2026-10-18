@@ -1,0 +1,559 @@
+{
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "formal": false,
+  "groups": 7,
+  "hardware": "CALIBRATION_REQUIRED",
+  "images": [
+    "20261012.333.1"
+  ],
+  "independent_energy": [
+    {
+      "case": "G_CURRENT",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 44.000053841092665,
+        "pump_j": 15755566.940658757,
+        "rejected_j": 663677015.5220466,
+        "residual_j": -1.7881393432617188e-05,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_WET_LOSS",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 46.792902991525125,
+        "pump_j": 14718762.289784065,
+        "rejected_j": 511277412.32621443,
+        "residual_j": 0.0,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_B_WARM",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 47.90372129532966,
+        "pump_j": 14915989.710137812,
+        "rejected_j": 551481638.6708935,
+        "residual_j": -6.318092346191406e-06,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_VALVE_STUCK",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 50.247889611968674,
+        "pump_j": 14758946.765331116,
+        "rejected_j": 460497767.96133965,
+        "residual_j": -3.635883331298828e-05,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_MIXING",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 47.94801668263915,
+        "pump_j": 14915989.710137812,
+        "rejected_j": 554282576.5198154,
+        "residual_j": -4.5299530029296875e-05,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_WEATHER",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 47.0362224263539,
+        "pump_j": 14718762.289784065,
+        "rejected_j": 411702822.72689277,
+        "residual_j": 1.3053417205810547e-05,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_HEADER_LOSS",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 50.28714867651104,
+        "pump_j": 13101266.940659672,
+        "rejected_j": 81538277.28052343,
+        "residual_j": -2.8759241104125977e-06,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_BACKUP_SOURCE_FAIL",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 50.255633780335245,
+        "pump_j": 13118518.305712692,
+        "rejected_j": 81538277.28052343,
+        "residual_j": -1.2263655662536621e-05,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_R10_COMPARISON",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 46.70330548489602,
+        "pump_j": 14695564.654941417,
+        "rejected_j": 506490673.98553234,
+        "residual_j": 9.238719940185547e-06,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_REFINED",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 46.782293027438186,
+        "pump_j": 14718779.574567745,
+        "rejected_j": 511195223.79138935,
+        "residual_j": -5.155801773071289e-05,
+        "steps": 4800
+      }
+    },
+    {
+      "case": "G_LAYERS40",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 47.55197228777001,
+        "pump_j": 14718762.289784065,
+        "rejected_j": 513390135.83442944,
+        "residual_j": -9.47713851928711e-06,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_LAYERS80",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 47.97874378708525,
+        "pump_j": 14718762.289784065,
+        "rejected_j": 513566019.4150014,
+        "residual_j": -3.933906555175781e-06,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "G_UA18330",
+      "recomputed": {
+        "heat_j": 636120000.0,
+        "maximum": 47.74058062761827,
+        "pump_j": 14718762.289784065,
+        "rejected_j": 511946450.1943825,
+        "residual_j": -3.415346145629883e-05,
+        "steps": 2400
+      }
+    },
+    {
+      "case": "BUFFER20",
+      "recomputed": {
+        "heat_j": 236653790.17580676,
+        "maximum": 1.598068183252849,
+        "pump_j": 0.0,
+        "rejected_j": 0.0,
+        "residual_j": 8.821487426757812e-06,
+        "steps": 900
+      }
+    },
+    {
+      "case": "BUFFER40",
+      "recomputed": {
+        "heat_j": 241854074.69409496,
+        "maximum": 0.8793123786597334,
+        "pump_j": 0.0,
+        "rejected_j": 0.0,
+        "residual_j": -3.159046173095703e-06,
+        "steps": 900
+      }
+    },
+    {
+      "case": "BUFFER80",
+      "recomputed": {
+        "heat_j": 244020767.43082398,
+        "maximum": 0.3047790062980198,
+        "pump_j": 0.0,
+        "rejected_j": 0.0,
+        "residual_j": -2.6404857635498047e-05,
+        "steps": 900
+      }
+    },
+    {
+      "case": "BUFFER160",
+      "recomputed": {
+        "heat_j": 244535255.07267413,
+        "maximum": 0.03871297843522825,
+        "pump_j": 0.0,
+        "rejected_j": 0.0,
+        "residual_j": -8.806586265563965e-05,
+        "steps": 900
+      }
+    },
+    {
+      "case": "BUFFER160_REFINED",
+      "recomputed": {
+        "heat_j": 244523903.9181857,
+        "maximum": 0.0473603865801806,
+        "pump_j": 0.0,
+        "rejected_j": 0.0,
+        "residual_j": -0.00015974044799804688,
+        "steps": 1800
+      }
+    },
+    {
+      "case": "BUFFER_MIXED",
+      "recomputed": {
+        "heat_j": 131715090.23545302,
+        "maximum": 2.175670469696456,
+        "pump_j": 0.0,
+        "rejected_j": 0.0,
+        "residual_j": -3.279745578765869e-05,
+        "steps": 900
+      }
+    },
+    {
+      "case": "RECHARGE_SHARED",
+      "recomputed": {
+        "heat_j": 2385450000.0,
+        "maximum": 44.000053841092665,
+        "pump_j": 61758637.89543625,
+        "rejected_j": 2574711752.9420185,
+        "residual_j": -1.049041748046875e-05,
+        "steps": 9000
+      }
+    },
+    {
+      "case": "RECHARGE_INDEPENDENT",
+      "recomputed": {
+        "heat_j": 2385450000.0,
+        "maximum": 44.000053841092665,
+        "pump_j": 61624024.83316065,
+        "rejected_j": 3012179211.8158917,
+        "residual_j": -3.814697265625e-06,
+        "steps": 9000
+      }
+    },
+    {
+      "case": "SR_HOT",
+      "recomputed": {
+        "heat_j": 17670000.0,
+        "maximum": 44.0,
+        "pump_j": 106137.12051281903,
+        "rejected_j": 18037721.266111694,
+        "residual_j": 1.341104507446289e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SR_STUCK_BACKUP",
+      "recomputed": {
+        "heat_j": 16565625.0,
+        "maximum": 44.0,
+        "pump_j": 85218.30569143314,
+        "rejected_j": 15743846.934453594,
+        "residual_j": -1.5832483768463135e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_NORMAL",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 40.0,
+        "pump_j": 554283.0102564109,
+        "rejected_j": 110277578.11987709,
+        "residual_j": 1.0579824447631836e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_UA110",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 47.12723782010181,
+        "pump_j": 1267068.5715795956,
+        "rejected_j": 100911984.64312662,
+        "residual_j": 1.1920928955078125e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_UA18330",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.02453305390736,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 107175987.65474027,
+        "residual_j": 1.2367963790893555e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_UA20928",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 108301186.54269345,
+        "residual_j": -8.940696716308594e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_UA220",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 108682975.39178433,
+        "residual_j": 2.384185791015625e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_STEP",
+      "recomputed": {
+        "heat_j": 99393750.0,
+        "maximum": 44.0,
+        "pump_j": 1154450.339138432,
+        "rejected_j": 95303234.22908884,
+        "residual_j": -2.2351741790771484e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_STUCK_BACKUP",
+      "recomputed": {
+        "heat_j": 99393750.0,
+        "maximum": 44.0,
+        "pump_j": 1041901.2658798982,
+        "rejected_j": 95101219.29786277,
+        "residual_j": -3.8743019104003906e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_CDU_LOSS",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.04578199573632,
+        "pump_j": 1169649.2698474855,
+        "rejected_j": 108388361.54304354,
+        "residual_j": -2.6673078536987305e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_RESTRICTION",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1238801.7385007464,
+        "rejected_j": 108547455.50241998,
+        "residual_j": -8.344650268554688e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_SENSOR_LOSS",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 108682975.39178433,
+        "residual_j": 2.384185791015625e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_SENSOR_DELAY",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 108682975.39178433,
+        "residual_j": 2.384185791015625e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_BACKUP_FAIL",
+      "recomputed": {
+        "heat_j": 99393750.0,
+        "maximum": 44.0,
+        "pump_j": 146765.03130107775,
+        "rejected_j": 79684715.27261133,
+        "residual_j": 7.301568984985352e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_SECOND_FAILURE",
+      "recomputed": {
+        "heat_j": 99393750.0,
+        "maximum": 44.0,
+        "pump_j": 607360.2453670845,
+        "rejected_j": 59041835.019926935,
+        "residual_j": -8.471310138702393e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_UNBALANCED",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1298815.1519553678,
+        "rejected_j": 108732871.87145963,
+        "residual_j": 5.066394805908203e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_INVENTORY_HALF",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.69287382270119,
+        "pump_j": 1169649.2698474855,
+        "rejected_j": 107870785.32083751,
+        "residual_j": 1.3560056686401367e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_INVENTORY_DOUBLE",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1169649.2698474855,
+        "rejected_j": 108205985.57198294,
+        "residual_j": -1.6838312149047852e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_VALVE_SLOW",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.6812045723334,
+        "pump_j": 1024467.681591691,
+        "rejected_j": 107783197.94233412,
+        "residual_j": -5.125999450683594e-06,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_PUMP_WEAK",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 932796.7304436637,
+        "rejected_j": 107000272.32448359,
+        "residual_j": 9.685754776000977e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_UNEQUAL_LOAD",
+      "recomputed": {
+        "heat_j": 88920000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 92302840.44326775,
+        "residual_j": -2.086162567138672e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_REPEAT",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384737,
+        "rejected_j": 108682975.39178433,
+        "residual_j": 2.384185791015625e-07,
+        "steps": 1200
+      }
+    },
+    {
+      "case": "SIX_REFINED",
+      "recomputed": {
+        "heat_j": 106020000.0,
+        "maximum": 44.0,
+        "pump_j": 1303623.0615384725,
+        "rejected_j": 108682934.23273252,
+        "residual_j": -8.642673492431641e-07,
+        "steps": 2400
+      }
+    }
+  ],
+  "input_raw_hashes": {
+    "GROUP_HISTORY": "d4c933b404e0de66954b073f2efb09f5bd53d9e648dbcf07af1883dbf3b8e627",
+    "G_BACKUP_SOURCE_FAIL": "c3abf728b7a3c1d8362247ca6180397b3d8eea0161fd2939ee715de4409fb14f",
+    "G_B_WARM": "2abf53e369c803b78413fbeaf208fcd8b02add0b3979a3b10c2e30f04440943b",
+    "G_CURRENT": "cc6798a90c2145666897cf2f77c6fe5fdd2cb501da16ffd5c8e1236878d665ec",
+    "G_HEADER_LOSS": "4520336728f12eab5543aa45780c7b3b892b68f314323cffe87a027da1e8df07",
+    "G_LAYERS40": "8c28ed9debd4cbb7978ba88d68870f5f670c714453d9897dd847efb2462b1bfe",
+    "G_LAYERS80": "b50062fc0a0d2dc2a2df9762762afcd52ac8b825e1f42b256a04cb539e3b9c31",
+    "G_MIXING": "4a37ef55d8c344f35862fe1bc74f9c8faf67cfc989c340788369523400f10351",
+    "G_R10_COMPARISON": "7107b8a760e87abc523309cc219e2fbf866514f32f0a8e8f31b00e1f2e8ef7af",
+    "G_REFINED": "2ffd4d932a10de17fbac80ac5ffc4e79d98b6a3b90ae1d664fedec471633caa8",
+    "G_UA18330": "6d484ddb8c7c4098d21622b9228326b520bb3a7675526db94c7ce59a1a90a699",
+    "G_VALVE_STUCK": "1ed2d531a1169a54f13ef4ce2914b1b2a3686150dec9cad5b56e50981f3302e9",
+    "G_WEATHER": "3d02f11131719586994d1e269338feedecb2e355880fb493da7a5660ccc22a03",
+    "G_WET_LOSS": "207af199be51f2d08e578ce669a31087abb4283d774067fc7e2128b53a854ea9",
+    "RECHARGE_INDEPENDENT": "fa438a647a130fbf66322cfbecf36adacecb5a3e7838ff7833581a8a59ef7c71",
+    "RECHARGE_SHARED": "126e695c805ccfde9a9d4019133cdf156bcf44b38eb830ca9c7ad9e476c2e8c0",
+    "SIX_BACKUP_FAIL": "9789eefb66bde23ca67df8f81b3b65304fd7e5c44a7aaa9e7c1ce5aae7d1c3e2",
+    "SIX_CDU_LOSS": "931a5858fd033dcad58ee43ba2e5602ce4793a39bd87f1d8e6cb9b95b4ecb0c7",
+    "SIX_INVENTORY_DOUBLE": "599c0f71ba2bddcb621a2e9934d11a87f88507de3bdbb2339d3e7141834e2811",
+    "SIX_INVENTORY_HALF": "f527be033b89a4926a072b3f5818b15beec97a4c0295dc744801f3eadd90cfd5",
+    "SIX_NORMAL": "afff03d24618a332ff16512dac6bcae85dbe03975309fb0be765a841dfe57d09",
+    "SIX_PUMP_WEAK": "a138efa41afa6051ae6bc72c631edc0a32a076a1031940c8b7dec4baa39d1aa8",
+    "SIX_REFINED": "112bbef5c563173689ce3f2488a19ae587b1ef675b46071b0d3b23e8152f2120",
+    "SIX_REPEAT": "533afea7b08ec377740121ca7fc1e0de599f707c31ba2acddc6911370fbf3da0",
+    "SIX_RESTRICTION": "5b14b7516599e145a6e3279ecc4df777f05cee9c3a13bc01f4e3d0cbf3ca715e",
+    "SIX_SECOND_FAILURE": "b96b6e5a9a652e06271973dbf8721b640af966bd0f66b45ecb0ecbbe46429e61",
+    "SIX_SENSOR_DELAY": "14f4f4afc8e65a183ace73d25a636c56075d95f025dc2119847745fe304350ab",
+    "SIX_SENSOR_LOSS": "cc3252059b61448c080b9dda86fe52b673fe6e66e8e148f117e6dfaa7d158f04",
+    "SIX_STEP": "d77cc70b09869185d212a44a28ebb571f4cd006f1bd13fb5a4fc8a2bb6c8f603",
+    "SIX_STUCK_BACKUP": "b0247bf559fe73ad17c84ee77be92ecef88bf24abf294352668754673a7b9af5",
+    "SIX_UA110": "efac083110350585417c935a5942b396fba5865cb0f465bbc38ba1ab9649daaa",
+    "SIX_UA18330": "287f818149bfab4420e373012454e3f0cefad5d840534bd0401aa92045c6a180",
+    "SIX_UA20928": "175adbd39d7309944fae3b7771c59fd513aa84b40a7f88148ffa5afc53498591",
+    "SIX_UA220": "9631a7ad82a87ae6bce7694493bf69ae18a46b4437e7001cce231c3d131ab81c",
+    "SIX_UNBALANCED": "2cb2dd56be984ddd7fad31c7058c73c7fbe7f3abb0fefd79e6888718708147b7",
+    "SIX_UNEQUAL_LOAD": "2bf5614a3cf48c304af0b5942998c3172a49546fcec541834bf1458d8a5587ad",
+    "SIX_VALVE_SLOW": "a15e41267ce979671ffdba36991ed826d6ff6e4b610c7fbb8de6782891aba94b",
+    "SR_HISTORY": "289f3fdf53d9c91a82ba3246ab684d88c1d3b005b4aa36fa1152d39df898cb94",
+    "SR_HOT": "3120bd0e32cffad5ff0d4c2fe3d929f358cd8573cff998c844dbf027ff1f75b9",
+    "SR_STUCK_BACKUP": "b2ce822d14f90a67ad2b97d183d4c263682423503f1b0845dfbb7a669b678061"
+  },
+  "journal_frames": 18696,
+  "manifest_raw_sha256": "5999a50a2e75af1cb25bc46d7374b5e7ec663ee4696390377fed01b4dab28f16",
+  "official_zips": 15,
+  "phase6": false,
+  "phases": 18696,
+  "pytest_counts": {
+    "BASELINE": 12,
+    "NEGATIVE": 31
+  },
+  "raw_files": 2795,
+  "raw_logs_sha256": "8497180ad5c3e7746fbb3be69fc4e3a65a358dfd5d7471694366fe0b27d8b974",
+  "repeat": "BYTE_IDENTICAL_SERIES_AND_PHYSICS",
+  "report_raw_sha256": "0c7f137876f4be0472b042ac2b1637a1bac403a9cb7c6e468ba3dcfaf09df1bf",
+  "review_execution_commit": "6971c80bfd23fb37ea48ab05b66fc098ae9ead89",
+  "source_bindings": 960,
+  "source_commit": "6031e0ef7d32bec0109f328f85ebd5dfef8fe048",
+  "stage_count": 50,
+  "status": "OFFICIAL_ARTIFACT_AND_PERSISTED_EVIDENCE_VERIFIED",
+  "unchanged_physics_files_vs_build4": 82,
+  "unique_source_files": 960,
+  "verified_plot_points": 7718,
+  "verifier_raw_sha256": "03a9f632a647777617898de11df19264088bb448ffa8df97487d848993ff80ad"
+}

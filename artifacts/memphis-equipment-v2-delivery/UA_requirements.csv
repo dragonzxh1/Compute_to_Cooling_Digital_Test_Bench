@@ -1,0 +1,4 @@
+﻿"LMTD_K","basis","primary_in_c","primary_m3_h","primary_out_c","provenance","q_kw","required_UA_kW_K","secondary_in_c","secondary_m3_h","secondary_out_c"
+"6.459923845740586","constant PG25 design properties, ideal counterflow, no fouling/manufacturing margin","37","110","44.20162176772682","DERIVED_REQUIREMENT","888.12","137.48149687330923","56.10446014332081","49.19","40"
+"4.879343398408297","constant PG25 design properties, ideal counterflow, no fouling/manufacturing margin","41","110","48.25222092080368","DERIVED_REQUIREMENT","894.36","183.2951540758028","55.66804594542057","68.37","44"
+"5.256016614197681","constant PG25 design properties, ideal counterflow, no fouling/manufacturing margin","41","110","49.9197224975223","DERIVED_REQUIREMENT","1100","209.28396554696062","58.35087720824123","68.37","44"

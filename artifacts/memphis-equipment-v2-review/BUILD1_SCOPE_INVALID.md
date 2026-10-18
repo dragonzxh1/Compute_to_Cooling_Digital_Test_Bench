@@ -1,0 +1,9 @@
+# Build1场景激励缺陷，保留原始证据
+
+执行源码69783d9ba4fb32c6b043733645f8973f477c0046，run39085647859，manifest bb0a9c2615ca5c184d14681aeaa23c83109960915cefe9a9041af3daaba88f25。
+
+SR_STUCK_BACKUP遗漏负载阶跃，初始泵速/请求已为0.9，10s冻结实际转速后没有形成命令—实际偏差。因此没有证明静默卡泵、M1检出或备用泵接管，该项为INVALID_SCENARIO_EXCITATION；不能把温控PASS当作接管PASS。模型没有伪造FAULT或PLC故障位，FAILOVER_RECOVERY实际也未取得PASS。
+
+已完成的基线、units-a及units-c保留其原始身份及官方artifact；在发现激励无效后请求取消此构建，避免用无效完整包继续交付。取消不是工程温控判据FAIL，也不抹去已发现UA110温控FAIL。源快照封存在build1-source，后续修复用新commit和fresh完整运行。
+
+Build2补齐该案例阶跃，增加每个STUCK案例必须存在冻结实际转速、至少0.15命令偏差及M1确认的独立判据。同时预登记80/160层罐及160层时间步细化、18柜UA183.30敏感性，以区分原20/40层数值扩散和工程结论；不是调阈值直到PASS。45°C、330m³/h、90s、0.5K、冻结M1和原客户文件均保持不变。

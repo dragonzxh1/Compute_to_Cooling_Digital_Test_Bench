@@ -1,0 +1,7 @@
+# 独立文件核验转移到隔离远端
+
+物理开发运行39088951176已经完成，源码6031e0ef7d32bec0109f328f85ebd5dfef8fe048，原模型不重跑、不修改。
+
+本机PowerShell在大JSON ConvertFrom-Json/Newtonsoft.Json.JsonTextReader.ParseReadNumber中发生System.AccessViolationException。第一次回读没有形成最终核验文件；第二次的启动记录保存在independent_review_attempt2.log，致命栈保留在本聊天工具输出。不能据此认定物理仿真失败或已完成独立核验，也未证明机器故障根因。
+
+停止本机大JSON解析，不继续进行本机Python/native/model试验。新增受控远程纯文件审阅器：只下载既有官方证据、流式解码/散列/解压/核算守恒及核对因果与绘图，不导入或推进任何物理模型。原50阶段实际Python Job和cleanup全部回读；独立审阅本身另有真实PID/Job与退出后batch证据。原始客户文件只在本机散列比对，不上传客户原件。

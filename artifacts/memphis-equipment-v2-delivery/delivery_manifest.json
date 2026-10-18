@@ -1,0 +1,81 @@
+{
+  "presentation_overlay_sha256": "9eaec4d3f76e4ad2767c14647de4fa2cf61ccc2facfdff94f99f998bc38b2e69",
+  "official_report_raw_sha256": "0c7f137876f4be0472b042ac2b1637a1bac403a9cb7c6e468ba3dcfaf09df1bf",
+  "renderer_raw_sha256": "1d5def8f037e03874b3f842265aeb260dc7082d61e9fdb1045bd7c926b5b5360",
+  "run_id": "39088951176",
+  "source_commit": "6031e0ef7d32bec0109f328f85ebd5dfef8fe048",
+  "records": [
+    {
+      "sha256": "d530b0ba7ccecb0e860e05b0d28f57852210a542a8de87c79b01425985a0f98d",
+      "bytes": 3247789,
+      "file": "consolidated_report.json"
+    },
+    {
+      "sha256": "d25d9cab7b5df287dd803e703f95cde56261548f265bf50e48ff57beb6f218b3",
+      "bytes": 26342,
+      "file": "engineering_outcomes.csv"
+    },
+    {
+      "sha256": "105523e7ae570052a26dc942102d2b83c20482f898ef08e5754dd55557e2b849",
+      "bytes": 12889,
+      "file": "ENGINEERING_REPORT_ZH.md"
+    },
+    {
+      "sha256": "48bbc8fdda3e4c60bc03d504ba8625c7e54e15ab0087b670780e7ea911f090ed",
+      "bytes": 1905492,
+      "file": "engineering_report.html"
+    },
+    {
+      "sha256": "8bc2bc68f1cad49c194495846d337e5d55ee60d192c3d5a9c4bd32d230333434",
+      "bytes": 18168,
+      "file": "equipment_selection.csv"
+    },
+    {
+      "sha256": "a93662d8cd490459da6d36ab8ff44a68ea5420b39a11fcb272a03323d2548c31",
+      "bytes": 1576,
+      "file": "failover_timeline.csv"
+    },
+    {
+      "sha256": "28eed36bef6aa11e3d0c6a84ce3069a1e4f05f75c5af0b842efbbcb6bd8d04a5",
+      "bytes": 1839,
+      "file": "independent_review_post_exit_batch.json"
+    },
+    {
+      "sha256": "7ad8d4aba9498b7712920cfba4233d9cee95cd29f8c79ef1f0754f61b8dfae05",
+      "bytes": 17630,
+      "file": "independent_verification.json"
+    },
+    {
+      "sha256": "d383f441031159e59ed47dc21332b30fdf2a97b5c1a6b3cb1bf49c7bf3afa3ea",
+      "bytes": 23657,
+      "file": "pump_conflict_curves.csv"
+    },
+    {
+      "sha256": "670c1d582893f14f0fc9ea12184950992b37fac3747aaf15691a858624fef8b7",
+      "bytes": 8204,
+      "file": "registration.json"
+    },
+    {
+      "sha256": "80c300a5676709f386ec9f3ebb651360238d9a97a8b543f2e41eb3925ae1fe31",
+      "bytes": 190103,
+      "file": "source_input_environment_manifest.json"
+    },
+    {
+      "sha256": "5999a50a2e75af1cb25bc46d7374b5e7ec663ee4696390377fed01b4dab28f16",
+      "bytes": 16729,
+      "file": "source_manifest.json"
+    },
+    {
+      "sha256": "a3bfdac31c16885c9c976d05768b8ef546360282c36eacf37b3104d0388377e5",
+      "bytes": 1200,
+      "file": "supplier_RFI.csv"
+    },
+    {
+      "sha256": "c138af263dc96a464a9981237ad1bf0c2576a34bf27547e8b61a1d0a6ac84eda",
+      "bytes": 823,
+      "file": "UA_requirements.csv"
+    }
+  ],
+  "presentation_revision": "UI-clarity-v1.1: source versus secondary flow labels and actual cold-return event only; verified numerical evidence unchanged",
+  "official_base_delivery_artifact_sha256": "5a55750e34d1f51326e73cb99cf124608b18f71012c65d40fd47c39d8055af39"
+}

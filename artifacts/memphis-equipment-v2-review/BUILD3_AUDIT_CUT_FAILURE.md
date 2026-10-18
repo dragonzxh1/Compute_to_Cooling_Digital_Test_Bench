@@ -1,0 +1,9 @@
+# Build3：新增源侧成对阀审计切点错误
+
+run39086928011，source0e6dc76bcf38ec2150333153af052ed3adb276c2，manifest1efd7c61904da09eab41b5ce18a5b8dde17c95494725c4ae44a228fb9bb8045c。
+
+基线和全部单柜/六柜阶段完成；group-a的G_CURRENT完成。G_WET_LOSS、G_WEATHER、RECHARGE_SHARED在新审计报SOURCE_AB_NOT_ISOLATED，已保留官方raw ZIP和日志，未取得完整包PASS。
+
+原始physics显示37.7s旧W1、源泵0、供回阀均0；37.8s选择W2后供回新阀均0.02、源泵仍0。SourcePlant在修改selector前检查零速及两阀关闭，随后同一物理步允许新阀开始打开。原有独立审计正确检查prior切点；新增检查却要求end切点的新阀也为0，属于检查器的时点错误。
+
+Build4只修新增审计为old/pre切点的两阀关闭及零速，并保持切换后泵仍零速检查；加入合法新阀开始打开、旧供阀/回阀未关、旧泵/新泵非零的正反例。物理模型、控制器、客户硬限、冻结M1及容差均未更改。新source使用fresh完整50阶段，不借本轮PASS交付。

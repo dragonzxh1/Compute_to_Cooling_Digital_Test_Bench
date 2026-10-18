@@ -1,0 +1,214 @@
+{
+  "commit": "0e6dc76bcf38ec2150333153af052ed3adb276c2",
+  "parent": "b762c3267fe0a8655e078501118a558002eec64c",
+  "branch": "codex/memphis-equipment-validation-v2",
+  "tree": "18361de87e3751fd9a7faaa7d2062726cdbde176",
+  "files": [
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "5149502d7d22a4a94918a40d9341bf2cafe316ad",
+      "path": ".github/workflows/memphis-equipment-v2-runner.yml"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a7f766707ce789ea56a4081433ea851de6e3b3b6",
+      "path": ".github/workflows/memphis-equipment-v2.yml"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "0c61099bc652b9c9fc380380dc3ef2d0157ad5d6",
+      "path": "artifacts/memphis-equipment-v2-review/publish.ps1"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "401284fae2b91a215160a88724f6fecd8a7dbd88",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/__init__.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "2174cfcb9b528e752b3a2f3e43c00d3169a6bf96",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/audit.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a3527d7291354036ec38b4b989a24409ce17c88c",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/engineering.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "f72ff9df6c3c40ddeddb6070712dbf6126ed4a96",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/__init__.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "44f7a3623a28ab0dfddb2c72602bf3f86594e8a6",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/common.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b6206553c3713532af307a555873356ecff337e4",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/coordination.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "8b9b75f4ca818d8168b23f0836a85369a8c9fd08",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/hydraulics.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b0c6eeb67b974a7f37d35ac1488555a26d80c4b9",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/legacy_audit.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "2cd767354c6eabc7662317e86040dec4cd02d9fd",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/plant.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "6a0a02468b63182562b9283803ecda5be5dd6d48",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/registration.json"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d7cb2085416b2b08dde7600df0cf44fab95fdb3e",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/simulation.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "0b7eef76c722f1ff7349bbbc16687ebee922e381",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/sources.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "cd19ddb155855b8ff7006cef7ebe8cd394d947d5",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/tank.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "8b7d6a5c5f4bf881ab9317f2d25eacd566dca34c",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/.gitattributes"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "64a3abc31d7b99fab44fde25da74d0706af81ad2",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/cdu.mjs"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "d87d8d69fefb604f566c53c1b0988b77bbee8114",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/model.mjs"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "430323056584f40381b453712426269647da27b2",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/parameters.mjs"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "62b1052374b924242261f60479f27db559e013c9",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/project.json"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "633ec5b5e9603e6f07cb0c67b49a837166b4879e",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/historical_hashes.json"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "2dd9482c44a97395a024e0fe30fa5f5e5f639902",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/prepare_snapshot.ps1"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "551449fa9b64bd34248d161e024ea53758c42f1e",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/README.md"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "be1ca7765181de9bf1bdfab1b4f287449e3f25d4",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/registration.json"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "ee15fd59a4ab427afc4295c385fec661d68da710",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/report.ps1"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "bee588a6542466522b35d86826ef2321caed6abf",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/report.template.html"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "04a7a8c0aad5e04e58ea7491a109e358f7f1fc90",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/run_remote.ps1"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "b4d81fab70acf11febbe9fc6566c180db18a7599",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/source_manifest.json"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "9d1a515fdda2de686d7b4b0083866db23477124d",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/stages.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "a84cc457be0271b83af8441cff0a093040e5d7f4",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/test_validation.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "9524662fca9dbdef95800b33a1eaf9a0def373b8",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/unit.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "19149ca4e7fa05bcc6a8a8313e1d4a9a262bde5f",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/validation.py"
+    },
+    {
+      "type": "blob",
+      "mode": "100644",
+      "sha": "11533108d20f1ea5b713312e3f169870569689f6",
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/worker.py"
+    }
+  ],
+  "manifest_raw_sha256": "1efd7c61904da09eab41b5ce18a5b8dde17c95494725c4ae44a228fb9bb8045c",
+  "method": "GH_CLI_GIT_DATA_API_EXACT_BLOBS_NO_LOCAL_GIT_REPAIR"
+}

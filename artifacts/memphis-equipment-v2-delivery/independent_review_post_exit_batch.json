@@ -1,0 +1,58 @@
+{
+  "phase6": false,
+  "review_commit": "6971c80bfd23fb37ea48ab05b66fc098ae9ead89",
+  "formal": false,
+  "hardware": false,
+  "model_rerun": false,
+  "original_model_commit": "6031e0ef7d32bec0109f328f85ebd5dfef8fe048",
+  "records": [
+    {
+      "stage": "baseline",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "ef334117c0ad23d506ddfabd51f119981354885a23cb8bbe7a009e35228a2ed5",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "group-a",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "30f805a68771cf7a31413989e02c4e7e26a2f3a40e6535671afb422b4965f60a",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "group-b",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "e42511b2c4ae23ade54e47c55d055ca957fdf9e40deb3cbea5fd525fc1a0e8a6",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "recharge",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "f0299644903de28d1209496182ff068388ae0db1c401d271a646e1d6702581fc",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "units-a",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "402d977353c0582ccb1f18d4506ba52c3272490f73d70b5864c40067182ae37e",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "units-b",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "6ff4e3c12d9bb65cd718db5b3e68a0a374fd86cdd311106295f3efce03e2f1a5",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "units-c",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "36b47ac4731fed8b5a1d0e0848ea08f4429e5b86d72a9e340f15ca60d78f9689",
+      "child_exitcode": 0
+    },
+    {
+      "stage": "FINAL",
+      "active_after_cleanup": 0,
+      "job_status_sha256": "b182e269516143517dfd07d1dbce41c60650ef82698779fcbff2bfc54ea1dabf",
+      "child_exitcode": 0
+    }
+  ]
+}

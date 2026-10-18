@@ -1,0 +1,17 @@
+{
+  "originals_uploaded": false,
+  "design_authority": "00/01 FINAL; R10 NOT APPROVED REPLACEMENT",
+  "method": "LOCAL_POWERSHELL_PURE_FILE_SHA256_NO_MODEL",
+  "records": {
+    "01": {
+      "name": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "bytes": 155907,
+      "sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    },
+    "00": {
+      "name": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "bytes": 3818641,
+      "sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    }
+  }
+}

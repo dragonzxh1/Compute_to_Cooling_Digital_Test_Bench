@@ -1,0 +1,140 @@
+{
+  "review_commit": "6971c80bfd23fb37ea48ab05b66fc098ae9ead89",
+  "model_commit": "6031e0ef7d32bec0109f328f85ebd5dfef8fe048",
+  "files": [
+    {
+      "sha": "172b5a4b8798dd82147d4dd2d3a95c0b99c602b1",
+      "type": "blob",
+      "mode": "100644",
+      "path": ".github/workflows/memphis-equipment-v2-evidence-review.yml"
+    },
+    {
+      "sha": "8e3c23eea27f2e912e088e5bfc3371228153b920",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/build_delivery.ps1"
+    },
+    {
+      "sha": "609542595cb6f91e8cd802100a01eae146133b41",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/BUILD1_SCOPE_INVALID.md"
+    },
+    {
+      "sha": "a56a7b930cfd6890018c91d4792a232b2b2e3e5d",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/BUILD2_REVIEW_STOP.md"
+    },
+    {
+      "sha": "6ef0d48620f7e3589b59660313bd4a11b007919c",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/BUILD3_AUDIT_CUT_FAILURE.md"
+    },
+    {
+      "sha": "bcb021bd75a97c65edce697d7004cb2313b4a03b",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/BUILD4_RECOVERY_CUT_FAILURE.md"
+    },
+    {
+      "sha": "8eac5329e6885717988eee51b31537a2801319fd",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/delivery_view.js"
+    },
+    {
+      "sha": "be0daceaa57907d209603a450684377e61d65e77",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/download.ps1"
+    },
+    {
+      "sha": "f0bfa3012df5585b6c9943d32d6acaadf66f7389",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/file_review.py"
+    },
+    {
+      "sha": "cd3aac66e581beb519d67ce7f6df83bdfc7201b4",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/hash_originals.ps1"
+    },
+    {
+      "sha": "9aa445f35383bd810bf4fb57b0fc8e961bde122d",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/local_original_hashes.json"
+    },
+    {
+      "sha": "374d8fbd6c77eb686e8fd866bd475ea20d788918",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/prepare_file_review.ps1"
+    },
+    {
+      "sha": "5c8398f7cc542f0ec03c611be79dec5ee496a5f2",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publication_0e6dc76.json"
+    },
+    {
+      "sha": "6d56c6a871cd6cec95eef12e0b30f84c79cabd72",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publication_4ca82aa.json"
+    },
+    {
+      "sha": "845669c9a36b41548b64d9b4389952095369d6bb",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publication_6031e0e.json"
+    },
+    {
+      "sha": "4625975e68ac50239b21f580ca39b3f3bb0b0e71",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publication_69783d9.json"
+    },
+    {
+      "sha": "fce977d3e91cb3e1e4a6035449c1367afea09625",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publication_b762c32.json"
+    },
+    {
+      "sha": "303da3a3a712b733904e6846520d651e918031ab",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publish_delivery.ps1"
+    },
+    {
+      "sha": "811515ac2a40b9cf81fe1d6da024cf1b7549d0ed",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publish_review.ps1"
+    },
+    {
+      "sha": "0c61099bc652b9c9fc380380dc3ef2d0157ad5d6",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/publish.ps1"
+    },
+    {
+      "sha": "18a569f031414f6c2baeb2f8fcec52a6eb5a0b7d",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/REMOTE_FILE_REVIEW.md"
+    },
+    {
+      "sha": "fc6fd73d66e77a23a196df7fa8c3afbc779ace65",
+      "type": "blob",
+      "mode": "100644",
+      "path": "artifacts/memphis-equipment-v2-review/verify.ps1"
+    }
+  ],
+  "branch": "codex/memphis-equipment-v2-evidence-review",
+  "model_source_changed": false
+}
