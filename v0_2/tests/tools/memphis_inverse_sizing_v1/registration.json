@@ -1,5 +1,6 @@
 {
- "schema":"MEMPHIS-INVERSE-SIZING-v1","build":2,"authority":"User-attached FULL AUTONOMOUS DEVELOPMENT task; dedicated branch commit/push and bounded remote development only",
+ "schema":"MEMPHIS-INVERSE-SIZING-v1","build":3,"authority":"User-attached FULL AUTONOMOUS DEVELOPMENT task; dedicated branch commit/push and bounded remote development only",
+ "preserved_coverage_preflight_run":39134995538,"build3_change":"Coverage closure adds actual warm-pipe volume critical search at80/160 layers and source-valve timing critical scan, rather than inferring volume/timing maxima from temperature alone. Source-bound fresh campaign; preserve both preflights. No original requirements/physics/M1 changes.",
  "preserved_preflight_run":39134808524,"build2_change":"No-fault operating point must not earn FULL_LOAD_RECOVERED. Add two refusal witnesses. Preflight baseline exact raw parity/AST/refusals retained but no prior PASS borrowed; restart source-bound campaign fresh. Physical equations/customer inputs/M1 unchanged.",
  "parent_execution":"a07e5fba7d78f34ab907ce209399068f9c92c760","parent_delivery":"b824a23d25c9fbf79da84dc557a46e1c1a9589cf",
  "branch":"codex/memphis-inverse-sizing-v1",
@@ -27,6 +28,9 @@
   {"id":"TEMP80","group":"inverse","kind":"critical","axis":"standby_initial_c","layers":80},
   {"id":"TEMP160","group":"inverse","kind":"critical","axis":"standby_initial_c","layers":160},
   {"id":"STARTUP80","group":"inverse","kind":"critical","axis":"startup_s","layers":80},
+  {"id":"WARM_VOLUME80","group":"inverse","kind":"critical","axis":"header_volume_m3","layers":80},
+  {"id":"WARM_VOLUME160","group":"inverse","kind":"critical","axis":"header_volume_m3","layers":160},
+  {"id":"VALVE80","group":"inverse","kind":"critical","axis":"valve_s","layers":80},
   {"id":"JOINT40_5","group":"joint","kind":"joint","standby_C":40.5},
   {"id":"JOINT41_5","group":"joint","kind":"joint","standby_C":41.5},
   {"id":"ROBUST_B15","group":"robust","kind":"robust","volume":15},

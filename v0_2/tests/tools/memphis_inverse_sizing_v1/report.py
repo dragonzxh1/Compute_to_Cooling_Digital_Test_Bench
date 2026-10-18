@@ -85,6 +85,7 @@ def finalize(directory):
         p=r['parameters'];return (p.get('tank_volume_m3',15),p.get('capacity_scale',1),CV*2.75*max(0,48.29-p.get('standby_initial_c',48.29))/1e6,max(0,54-p.get('startup_s',54)))
     pareto=[r for r in joint if not any(all(a<=b for a,b in zip(costs(s),costs(r))) and any(a<b for a,b in zip(costs(s),costs(r))) for s in joint)]
     temp=[r for r in critical if r['axis']=='standby_initial_c'];start=[r for r in critical if r['axis']=='startup_s']
+    volume_limits=[r for r in critical if r['axis']=='header_volume_m3'];valve_limits=[r for r in critical if r['axis']=='valve_s']
     feasible_temp=[r['largest_tested_feasible'] for r in temp if r['largest_tested_feasible'] is not None]
     tested_temp=min(feasible_temp) if len(feasible_temp)==2 else None
     req=analytic['recharge'];tank=analytic['tank']
@@ -128,7 +129,7 @@ def finalize(directory):
         'Separate tower-outlet/far-end/tank-cold/rack-inlet TT; flow>=330 and measured ready hold;stroke2/5/10s hypothetical',
         'rack<=45, cold source pipe<=41.4448',None,None,None,'No illegalAB parallel;pipe arrival != valve open;no fabricated PLC issue','bias+/-0.2K,delay0.1/0.4/1.2s,stuck','forward_trials.json;negative witness')
     csvout(directory/'minimum_equipment_parameters.csv',devices)
-    save(directory/'device_feasible_ranges.json',dict(devices=devices,tank=tank_bounds,critical=temp+start,precool=pre,
+    save(directory/'device_feasible_ranges.json',dict(devices=devices,tank=tank_bounds,critical=critical,precool=pre,
         numerical_convergence=convergence,robustness=robust,Pareto_tested_ids=[r['id'] for r in pareto],global_optimum='NOT_VERIFIED',OEM_GUARANTEED_VALUE=None))
     save(directory/'forward_trials.json',dynamic);save(directory/'buffer_trials.json',buffers);save(directory/'unit_results.json',units)
     save(directory/'precool_results.json',pre);save(directory/'critical_ranges.json',critical);save(directory/'analytic_requirements.json',analytic)
@@ -161,7 +162,7 @@ def finalize(directory):
         f"1. A罐：理想必要有效冷液8.25m³；相对48.29°C回水的可用显热{tank['usable_energy_MJ_at_registered_return']:.6f}MJ，预算2716.15kW×90s为{tank['duty90_energy_MJ']:.6f}MJ，两者是不同工况口径，不可相加。模型边界：{json.dumps(tank_bounds['A'],ensure_ascii=False)}。",
         f"2. B罐：相同理想必要量，独立B阶段实际重算；{json.dumps(tank_bounds['B'],ensure_ascii=False)}。对称结果来自相同登记几何和输入，不证明两台真实罐等效。",
         '3. 15m³是否足够：只在具体冷液比例、初温、混合/短路和出口曲线下有条件满足；70%不是OEM事实。最低通过总容积/冷比例为上表有限样本，不是连续全局最小。见buffer_convergence.csv全部网格，不挑选通过层数。',
-        f"4. 备用管最高允许温度：80/160层临界扫描{json.dumps(temp,ensure_ascii=False)}。两网格都得到可行点时共同最大采样值{tested_temp}°C，仅是测试点范围，不保证中间未测区或其他天气。",
+        f"4. 备用管最高允许温度：80/160层临界扫描{json.dumps(temp,ensure_ascii=False)}。两网格都得到可行点时共同最大采样值{tested_temp}°C，仅是测试点范围，不保证中间未测区或其他天气。暖水48.29°C管体积的独立扫描为{json.dumps(volume_limits,ensure_ascii=False)}；阀门时间独立扫描为{json.dumps(valve_limits,ensure_ascii=False)}。不能只从热库存等式推断动态允许体积/时延。",
         '5. 预冷能力：48.29→40.9448°C、2.75m³的必要降热81.524375MJ；120秒理想>=679.37kW且理想至少82.5m³/h置换，900秒理想>=90.58kW且至少11m³/h；真实混合、热增益和泵热增加需求。实际闭式预冷扫描5--90m³/h、25--750kW与UA0/0.5kW/K见precool_results.json。电功率缺COP/风机图谱，不能把热kW当电kW。',
         f"6. 单干冷：至少排出{DUTY if False else 2716.15}kW（须按实际泵热更新）；330m³/h、37°C出液时进液{analytic['dry']['DB29_Tout37_Tin']:.6f}°C，在DB29工况保证。3模块各>=905.383kW；Nminus1剩余2模块各>=1358.075kW。有效流体-环境导热面不等于空气侧真实UA。",
         f"7. 单湿冷：330m³/h下2716.15kW、41°C出液要求进液{analytic['wet']['WB30_Tout41_Tin']:.6f}°C；若要求35°C出液，则进液{analytic['wet']['WB30_Tout35_Tin']:.6f}°C。5模块各>=543.23kW；Nminus1四模块各>=679.0375kW。WB30与PG25实际性能、喷淋和风机未OEM确认。",

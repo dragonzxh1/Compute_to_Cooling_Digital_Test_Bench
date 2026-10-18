@@ -95,8 +95,12 @@ def stage(spec,directory):
     if kind=='group':return dict(kind='group',cases=[forward(dict(spec['parameters'],id=spec['id']),directory,baseline=spec.get('baseline',False))])
     if kind=='critical':
         results=[];layers=spec['layers'];axis=spec['axis']
-        values=([40.9448,41.,41.2,41.4,41.6,42.,43.,44.,46.,48.29] if axis=='standby_initial_c' else [0.,20.,40.,54.,70.,80.])
+        values={'standby_initial_c':[40.9448,41.,41.2,41.4,41.6,42.,43.,44.,46.,48.29],
+            'startup_s':[0.,20.,40.,54.,70.,80.],
+            'header_volume_m3':[.25,.5,1.,2.75,5.],
+            'valve_s':[1.,2.,5.,10.,15.,20.]}[axis]
         fixed=dict(layers=layers,standby_initial_c=40.9448)
+        if axis=='header_volume_m3':fixed['standby_initial_c']=48.29
         def evaluate(v,index):
             options=dict(fixed,**{axis:v},id=spec['id']+f'_{index:02}')
             d=directory/options['id'];d.mkdir();r=forward(options,d);results.append(r);print('INVERSE_TRIAL '+options['id']+' '+r['status'],flush=True);return r
