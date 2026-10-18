@@ -47,6 +47,10 @@ def first_held(rows,predicate,start_ns=10_000_000_000,hold_ns=5_000_000_000):
         else:first=None
     return None
 
+def terminal_held(rows,predicate,hold_ns=5_000_000_000):
+    last=rows[-1]['time_ns'];tail=[r for r in rows if r['time_ns']>=last-hold_ns]
+    return bool(tail) and tail[0]['time_ns']<=last-hold_ns and all(predicate(r) for r in tail)
+
 def unit(directory):
     inp=read(directory/'input.json');c=inp['config'];spec=inp['spec'];rows=read(directory/'series.json');steps=read(directory/'physics.json')
     phases=read(directory/'phases.json');causality=causal(phases,read(directory/'measurements.json'))
@@ -98,18 +102,22 @@ def unit(directory):
     flow=first_held(rows,lambda r:r['flow_m3_s']>=.99*qd and (r['active_cdu'],r['active_pump'])!=(0,0))
     pressure=first_held(rows,lambda r:r['dp_pa']>=.99*c['design_dp_pa'] and (r['active_cdu'],r['active_pump'])!=(0,0))
     temp=first_held(rows,lambda r:r['supply_k']<=318.15 and (r['active_cdu'],r['active_pump'])!=(0,0))
-    thermal='PASS' if mx<=45 else 'FAIL';hasfault=bool(spec.get('fault'));recover=flow is not None and pressure is not None and temp is not None
+    thermal='PASS' if mx<=45 else 'FAIL'
+    transfer_required=spec.get('fault') in ('STUCK','CDU_LOSS','RESTRICTION') or bool(events)
+    terminal=terminal_held(rows,lambda r:r['flow_m3_s']>=.99*qd and r['dp_pa']>=.99*c['design_dp_pa'] and r['supply_k']<=318.15)
+    recover=flow is not None and pressure is not None and temp is not None and terminal
     if spec.get('fault')=='STUCK':
         frozen=[r for r in rows if r['time_ns']>=10_000_000_000]
         need(len({r['main_speed'] for r in frozen})==1 and max(r['main_command'] for r in frozen)-frozen[0]['main_speed']>=.15,'INVALID_STUCK_EXCITATION')
         need(causality['tracking_confirmed_s'] is not None,'STUCK_TRACKING_CONFIRMATION_MISSING')
     full=all(all(w==155000 for w in r['rack_it_w']) for r in rows if r['time_ns']>=10_000_000_000)
-    grade=dict(SOFTWARE_EXECUTION_VALIDITY='PASS',PHYSICAL_NUMERICAL_VALIDITY='PASS',CDU_EQUIPMENT_SUITABILITY='NOT_VERIFIED',PUMP_EQUIPMENT_SUITABILITY='NOT_VERIFIED',RACK_THERMAL_COMPLIANCE=thermal,RACK_HYDRAULIC_COMPLIANCE='NOT_VERIFIED',FAILOVER_RECOVERY=('PASS' if recover else 'FAIL') if hasfault else 'INCOMPLETE',FULL_LOAD_CONTINUITY='PASS' if full and thermal=='PASS' and (recover or not hasfault) else 'FAIL',SOURCE_COOLING_ADEQUACY='NOT_VERIFIED',OEM_CALIBRATION_STATUS='NOT_VERIFIED',CUSTOMER_DESIGN_APPROVAL_STATUS='INCOMPLETE',**{'90_SECOND_BUFFER_COMPLIANCE':'INCOMPLETE'})
+    grade=dict(SOFTWARE_EXECUTION_VALIDITY='PASS',PHYSICAL_NUMERICAL_VALIDITY='PASS',CDU_EQUIPMENT_SUITABILITY='NOT_VERIFIED',PUMP_EQUIPMENT_SUITABILITY='NOT_VERIFIED',RACK_THERMAL_COMPLIANCE=thermal,RACK_HYDRAULIC_COMPLIANCE='NOT_VERIFIED',FAILOVER_RECOVERY=('PASS' if recover else 'FAIL') if transfer_required else 'INCOMPLETE',FULL_LOAD_CONTINUITY='PASS' if full and thermal=='PASS' and terminal and (recover or not transfer_required) else 'FAIL',SOURCE_COOLING_ADEQUACY='NOT_VERIFIED',OEM_CALIBRATION_STATUS='NOT_VERIFIED',CUSTOMER_DESIGN_APPROVAL_STATUS='INCOMPLETE',**{'90_SECOND_BUFFER_COMPLIANCE':'INCOMPLETE'})
+    if spec.get('loads'):grade['FULL_LOAD_CONTINUITY']='INCOMPLETE'
     return dict(case_id=spec['id'],kind='unit',grades=grade,maximum_inlet_c=mx,final_inlet_c=rows[-1]['supply_k']-273.15,
         final_return_c=max(rows[-1]['rack_return_k'])-273.15,final_mixed_return_c=rows[-1]['return_k']-273.15,
         final_flow_m3_h=rows[-1]['flow_m3_s']*3600,final_branches_m3_h=[f*3600 for f in rows[-1]['branch_flows_m3_s']],
         maximum_it_w=max(fsum(r['rack_it_w']) for r in rows),minimum_branch_m3_h=min(min(r['branch_flows_m3_s']) for r in rows)*3600,
-        events=events,flow_recovered_s=flow,pressure_recovered_s=pressure,temperature_recovered_s=temp,
+        events=events,flow_recovered_s=flow,pressure_recovered_s=pressure,temperature_recovered_s=temp,terminal_recovery_maintained=terminal,
         thermal_exceedance_K_s=fsum(max(0,r['supply_k']-318.15)*c['dt_ns']/1e9 for r in rows[:-1]),
         liquid_j=heat,pump_j=pump,hx_j=hxsum,global_residual_j=residual,global_bound_j=limit,max_local_residual_j=maxerr,
         causal=causality,steps=len(steps),condition='MODEL_ASSUMPTIONS_ONLY; shared rack inventory; inactive CDU internal inventory unknown',procurement='NOT_RELEASED')
@@ -133,6 +141,8 @@ def group(directory,spec):
             need(max(b['source_supply_valve'],b['source_return_valve'])<=1e-9 and b['source_speed']<=1e-9,'SOURCE_AB_NOT_ISOLATED')
     allmax=max(max(max(u['new_k'][1:7])-273.15 for u in s['unit_records']) for s in steps)
     recovery=next((r['time_ns']/1e9 for r in rows if r['cold_A_m3']>=10 and r['cold_B_m3']>=8.25 and r['time_ns']/1e9>=120),None)
+    recharge=spec.get('recharge')
+    recharge_peak=max((s['recharge_flow_m3_h'] if recharge=='INDEPENDENT' else s['source_flow_m3_h'] if s['source_tank']=='B' and s['load_tank']=='A' else 0 for s in steps if s['end_ns']/1e9>=120),default=0.)
     grades=dict(SOFTWARE_EXECUTION_VALIDITY='PASS',PHYSICAL_NUMERICAL_VALIDITY='PASS',CDU_EQUIPMENT_SUITABILITY='NOT_VERIFIED',PUMP_EQUIPMENT_SUITABILITY='NOT_VERIFIED',RACK_THERMAL_COMPLIANCE='PASS' if allmax<=45 else 'FAIL',RACK_HYDRAULIC_COMPLIANCE='NOT_VERIFIED',FAILOVER_RECOVERY='PASS' if strict is not None and strict<=90 else 'FAIL',FULL_LOAD_CONTINUITY='PASS' if allmax<=45 and strict is not None and strict<=90 else 'FAIL',SOURCE_COOLING_ADEQUACY='NOT_VERIFIED',OEM_CALIBRATION_STATUS='NOT_VERIFIED',CUSTOMER_DESIGN_APPROVAL_STATUS='INCOMPLETE',**{'90_SECOND_BUFFER_COMPLIANCE':'INCOMPLETE'})
     dt=spec['dt_s'];exceed=fsum(max(0,max(max(u['new_k'][1:7])-273.15 for u in s['unit_records'])-45)*dt for s in steps)
     persecond=[dict(time_s=s['end_ns']/1e9,stored_j=s['stored_j'],rejected_w=s['rejected_w'],pump_w=s['primary_pump_electrical_w']+s['secondary_pump_electrical_w'],tank_A_cold_m3=s['tank_A_cold_m3'],tank_B_cold_m3=s['tank_B_cold_m3'],primary_c=s['primary_inlet_c'],source_m3_h=s['source_flow_m3_h'],load_m3_h=s['load_flow_m3_h']) for s in window if s['end_ns']%1_000_000_000==0]
@@ -140,4 +150,5 @@ def group(directory,spec):
         first_cold_return_330_delay_s=strict,historical_264_threshold_delay_s=old,actual_AB_switches=switches,
         thermal_exceedance_K_s=exceed,thermal_exceedance_duration_s=sum(max(max(u['new_k'][1:7])-273.15 for u in s['unit_records'])>45 for s in steps)*dt,
         reserve_ready_absolute_s=recovery,minimum_cold_A_m3=min(s['tank_A_cold_m3'] for s in steps),final_cold_A_m3=rows[-1]['cold_A_m3'],final_cold_B_m3=rows[-1]['cold_B_m3'],
+        recharge_flow_comparison=dict(required_m3_h=330,maximum_actual_m3_h=recharge_peak,status=('PASS' if recharge_peak>=330-1e-8 else 'FAIL') if recharge else 'INCOMPLETE'),
         first90_energy_rows=persecond,independent=analysis,steps=len(steps),condition='CONDITIONAL_UNCALIBRATED_TOWER_CURVES; paired valves synchronized assumption; no pressure transient model')

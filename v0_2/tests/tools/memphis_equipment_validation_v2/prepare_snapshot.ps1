@@ -27,6 +27,6 @@ foreach($map in @($prior.source_raw_sha256,$prior.v1_source_raw_sha256)) {foreac
 $new=[ordered]@{}
 $paths=@(Get-ChildItem -LiteralPath $PSScriptRoot -File -Recurse|Where-Object Name -cne 'source_manifest.json'|ForEach-Object {[IO.Path]::GetRelativePath($repo,$_.FullName).Replace('\','/')})+@('.github/workflows/memphis-equipment-v2.yml','.github/workflows/memphis-equipment-v2-runner.yml')
 foreach($path in $paths|Sort-Object){$new[$path]=(Get-FileHash -LiteralPath (Join-Path $repo $path)).Hash.ToLowerInvariant()}
-$manifest=[ordered]@{schema='MEMPHIS-EQUIPMENT-V2-SOURCE';parent='69783d9ba4fb32c6b043733645f8973f477c0046';source_raw_sha256=$new;v1_source_raw_sha256=$old;candidate_sha256='70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce';formal=$false;hardware=$false;phase6=$false}
+$manifest=[ordered]@{schema='MEMPHIS-EQUIPMENT-V2-SOURCE';parent='b762c3267fe0a8655e078501118a558002eec64c';source_raw_sha256=$new;v1_source_raw_sha256=$old;candidate_sha256='70bba3a57f84847f0b486c0df3e4847a322933a1efb70eafb6b613bdbca348ce';formal=$false;hardware=$false;phase6=$false}
 [IO.File]::WriteAllText((Join-Path $PSScriptRoot 'source_manifest.json'),($manifest|ConvertTo-Json -Depth 8),$utf8)
 Get-FileHash -LiteralPath (Join-Path $PSScriptRoot 'source_manifest.json')

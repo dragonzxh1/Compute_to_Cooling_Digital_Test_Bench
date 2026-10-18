@@ -1,6 +1,7 @@
 {
-  "schema":"MEMPHIS-EQUIPMENT-FAILOVER-V2", "build":2,
-  "preserved_runs":[39085647859],
+  "schema":"MEMPHIS-EQUIPMENT-FAILOVER-V2", "build":3,
+  "preserved_runs":[39085647859,39086711213],
+  "terminal_recovery_gate":"Retain first5s recovery timestamps; FAILOVER_RECOVERY and FULL_LOAD_CONTINUITY require final5s flow/pressure/temperature maintained, so later failure cannot be hidden",
   "build_change":"Fix SR_STUCK_BACKUP excitation and independently require frozen original speed, command gap and M1 confirmation; preregister fixed tank mesh/refinement and group UA sensitivity; retain all customer limits",
   "authority":"OFFLINE_DEVELOPMENT_ONLY", "branch":"codex/memphis-equipment-validation-v2",
   "design_authority":"00/01 customer final; R10 is process alternative, not approved replacement",

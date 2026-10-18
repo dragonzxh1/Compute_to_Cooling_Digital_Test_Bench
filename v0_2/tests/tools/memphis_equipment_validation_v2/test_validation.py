@@ -28,6 +28,13 @@ def test_missing_oem_never_upgraded():
     assert all(v['OEM_available_UA'] is None for v in e['UA_study'])
     assert curves()['conflict'].startswith('DESIGN_SIGNATURE_REQUIRED')
 
+def test_first_recovery_cannot_hide_second_failure():
+    from .audit import first_held,terminal_held
+    rows=[{'time_ns':i*1000000000,'flow':1 if i<80 else 0} for i in range(121)]
+    assert first_held(rows,lambda r:r['flow']==1)==10
+    assert not terminal_held(rows,lambda r:r['flow']==1)
+    assert terminal_held(rows,lambda r:r['time_ns']>=0)
+
 @pytest.mark.parametrize('change',['producer','permission','future','hash'])
 def test_false_plc_receipts(change):
     p={'data':{'time_ns':10,'measurement_id':'m'},'sha256':'p'}

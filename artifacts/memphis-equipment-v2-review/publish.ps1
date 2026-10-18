@@ -29,4 +29,4 @@ $readback=gh api ($api+'/git/trees/'+$tree.sha+'?recursive=1')|ConvertFrom-Json
 foreach($e in $entries){if(-not($readback.tree|Where-Object {$_.path -ceq $e.path -and $_.sha -ceq $e.sha})){throw ('TREE_READBACK_FAILED '+$e.path)}}
 $record=[ordered]@{commit=$commit.sha;parent=$Parent;branch=$branch;tree=$tree.sha;files=$entries;manifest_raw_sha256=(Get-FileHash (Join-Path $repo 'v0_2/tests/tools/memphis_equipment_validation_v2/source_manifest.json')).Hash.ToLowerInvariant();method='GH_CLI_GIT_DATA_API_EXACT_BLOBS_NO_LOCAL_GIT_REPAIR'}
 [IO.File]::WriteAllText((Join-Path $PSScriptRoot ('publication_'+$commit.sha.Substring(0,7)+'.json')),($record|ConvertTo-Json -Depth 12),[Text.UTF8Encoding]::new($false))
-$record|Select-Object commit,branch,manifest_raw_sha256|ConvertTo-Json
+[PSCustomObject]$record|Select-Object commit,branch,manifest_raw_sha256|ConvertTo-Json
