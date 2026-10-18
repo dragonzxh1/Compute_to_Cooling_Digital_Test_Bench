@@ -6,6 +6,9 @@ from .requirements import save
 from .audit import need,group
 HERE=Path(__file__).resolve().parent
 
+def full_recovery_label(fault_required,conditions):
+    return ('CONDITIONALLY_FEASIBLE' if conditions else 'NOT_VERIFIED') if fault_required else 'NOT_APPLICABLE_NO_FAULT'
+
 def forward(options,directory,baseline=False):
     from .group_model.simulation import run
     from .analysis import diagnose
@@ -28,7 +31,7 @@ def forward(options,directory,baseline=False):
     ready=dict(SOURCE_READY_s=first(lambda r:r['source_available'][r['source_path']] and r['source_valve']>=1-1e-9 and r['source_speed']>0),
         COLD_WATER_READY_s=None if a['first_cold_return_330_delay_s'] is None else 30+a['first_cold_return_330_delay_s'],
         HYDRAULIC_READY_s=first(hyd),THERMAL_READY_s=first(lambda r:rack(r)<=45),
-        FULL_LOAD_RECOVERED='CONDITIONALLY_FEASIBLE' if a['grades']['FULL_LOAD_CONTINUITY']=='PASS' and diag['strict_uninterrupted_primary330']=='PASS' and not (codes&{'SOURCE_SENSOR_STALE'}) else 'NOT_VERIFIED',
+        FULL_LOAD_RECOVERED=full_recovery_label(bool(c.get('fault')),a['grades']['FULL_LOAD_CONTINUITY']=='PASS' and diag['strict_uninterrupted_primary330']=='PASS' and not (codes&{'SOURCE_SENSOR_STALE'})),
         note='Separate physical analysis cuts; first temperature<=45 alone is not failure recovery; installed far-end cold TT absent')
     energy=a['independent']['independent_energy'];pump=energy['pump_j']/c['seconds']/1000
     final_pump=(steps[-1]['primary_pump_electrical_w']+steps[-1]['secondary_pump_electrical_w'])/1000
@@ -66,7 +69,11 @@ def stage(spec,directory):
         import ast
         for path in HERE.rglob('*.py'):ast.parse(path.read_text(encoding='utf-8-sig'),filename=str(path))
         from .negative import run
-        return run()
+        out=run()
+        need(full_recovery_label(False,True)=='NOT_APPLICABLE_NO_FAULT','NOFAULT_WRONGLY_QUALIFIED_AS_RECOVERY')
+        need(full_recovery_label(True,False)=='NOT_VERIFIED','FAILED_RECOVERY_LABEL')
+        out['refusal_and_positive_witnesses']+=2
+        return out
     if kind=='analytic':
         from .requirements import analytic
         return analytic(directory)
