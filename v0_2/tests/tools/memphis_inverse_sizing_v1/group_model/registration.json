@@ -1,0 +1,424 @@
+{
+  "schema": "MEMPHIS-PROJECT-DEVELOPMENT-v2",
+  "authority": "OFFLINE_ENGINEERING_ONLY_NO_C3_OR_PRODUCTION_OR_HARDWARE_OR_PHASE6",
+  "six_rack": {
+    "rack_it_w": [
+      155000,
+      155000,
+      155000,
+      155000,
+      155000,
+      155000
+    ],
+    "liquid_fraction": 0.95,
+    "it_total_w": 930000,
+    "liquid_total_w": 883500,
+    "cdu_design_target_w": 1100000,
+    "primary_design_c": 41,
+    "primary_design_m3_h": 110,
+    "secondary_target_c": 44,
+    "secondary_design_m3_h": 68.37,
+    "secondary_design_dp_pa": 371810,
+    "rho_kg_m3": 1009,
+    "cp_j_kg_k": 4000,
+    "actual_oem_ua_w_k": null,
+    "actual_pump_curve": null,
+    "actual_rack_curves": null,
+    "actual_geometry": null
+  },
+  "assumptions": {
+    "ua_sensitivity_w_k": [
+      110000,
+      220000
+    ],
+    "secondary_pump_shutoff_factor": 1.25,
+    "secondary_wire_efficiency": 0.65,
+    "primary_wire_efficiency": 0.7,
+    "pump_heat_fraction_to_liquid": 1,
+    "secondary_volumes_m3": {
+      "supply": 0.1,
+      "inlet_each": 0.025,
+      "rack_each": 0.15,
+      "return": 0.15
+    },
+    "branch_K_factors_balanced": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "branch_K_factors_unbalanced": [
+      0.8,
+      1,
+      1.2,
+      1.4,
+      0.9,
+      1.1
+    ],
+    "branch_resistance_law": "Quadratic reduction of document171.63kPa@11.395m3/h NOT actual OEM rack curve",
+    "common_secondary_loss_pa": {
+      "hx": 26600,
+      "internal": 50000,
+      "external": 123580
+    },
+    "rack_dp_pa": 171630,
+    "inlet_fraction_of_branch_K": 0.1,
+    "secondary_suction_reference_gauge_pa": null,
+    "source_curve_basis": "Synthetic quadratics for separate V9/PID alternatives, not vendor curves",
+    "source_static_V9_pa": null,
+    "source_static_PID_pa": 335890,
+    "source_critical_elevations_m": null,
+    "npshr_m": null,
+    "vapour_pressure_pa_range": [
+      2000,
+      12000
+    ],
+    "atmospheric_pa_assumption": 101325,
+    "source_single_design_m3_h": 110,
+    "source_normal_pumps": 3,
+    "source_shared_header_loss_fraction": 0.2,
+    "source_valve_travel_s": 5,
+    "source_detection_s": 1,
+    "standby_startup_s": 54,
+    "standby_pipe_design_residence_s": 30,
+    "source_pipe_cells": 10,
+    "source_pipe_volume_each_m3": 2.75,
+    "tank_volume_each_m3": 15,
+    "tank_layers": 20,
+    "initial_cold_fraction": 0.7,
+    "tank_mixing_m3_s": 0,
+    "short_circuit_fraction": 0,
+    "sensor_delay_ns": 100000000,
+    "sensor_period_ns": 200000000,
+    "m1_period_ns": 1000000000,
+    "m1_long_period_ns": 5000000000,
+    "source_pump_speed_ramp_per_s": 0.5,
+    "source_cold_control_target_c": 40.9448,
+    "tower_model": "Reuse source-bound dynamic_v4 rating reduction, NOT manufacturer maps",
+    "fan_bias": 0.82308,
+    "fan_kp_per_k": 0.08,
+    "fan_ki_per_k_s": 0.001,
+    "recharge_stage_s": 60,
+    "recharge_restore_cold_m3": 10,
+    "backup_ready_cold_m3": 8.25,
+    "recharge_permission_note": "Four-TT conservative10m3 permission, not restoration of initial10.5m3 physical inventory",
+    "independent_recharge_speed_limit": 1,
+    "independent_recharge_target_note": "Required1.011666 exceeds1; actual VFD saturates at1, solved flow shortfall retained; no curve or guard change"
+  },
+  "source_variants": {
+    "V9": {
+      "candidate_design_m3_h": 115,
+      "candidate_head_m": 34,
+      "synthetic_shutoff_factor": 1.2,
+      "static_gauge_pa": null
+    },
+    "PID": {
+      "selection_design_m3_h": 110,
+      "selection_min_dp_pa": 115820,
+      "full_curve_max_head_m": 18,
+      "static_gauge_pa": 335890
+    }
+  },
+  "recharge_selection": null,
+  "source_pump_selection": null,
+  "cases": [
+    {
+      "id": "SIX_MISSING_UA",
+      "group": "baseline",
+      "scope": "SIX",
+      "ua_w_k": null,
+      "seconds": 120,
+      "dt_s": 0.1
+    },
+    {
+      "id": "V2_REGRESSION_LOAD",
+      "group": "baseline",
+      "scope": "V2_BASE",
+      "case": "LOAD_STEP"
+    },
+    {
+      "id": "V2_REGRESSION_STUCK",
+      "group": "baseline",
+      "scope": "V2_BASE",
+      "case": "PUMP_STUCK"
+    },
+    {
+      "id": "SIX_UA220",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 220000,
+      "seconds": 120,
+      "dt_s": 0.1
+    },
+    {
+      "id": "SIX_UA110",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 110000,
+      "seconds": 120,
+      "dt_s": 0.1
+    },
+    {
+      "id": "SIX_UNBALANCED",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 220000,
+      "seconds": 120,
+      "dt_s": 0.1,
+      "unbalanced": true
+    },
+    {
+      "id": "SIX_STUCK",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 220000,
+      "seconds": 120,
+      "dt_s": 0.1,
+      "stuck": true,
+      "initial_speed": 0.35
+    },
+    {
+      "id": "SIX_UA220_REPEAT",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 220000,
+      "seconds": 120,
+      "dt_s": 0.1
+    },
+    {
+      "id": "SIX_UA220_REFINE",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 220000,
+      "seconds": 120,
+      "dt_s": 0.05
+    },
+    {
+      "id": "PLANT_NORMAL",
+      "group": "plant-a",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 360,
+      "dt_s": 0.1
+    },
+    {
+      "id": "PLANT_V9",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "source_variant": "V9"
+    },
+    {
+      "id": "A_B_ISOLATION_TRANSFER",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 180,
+      "dt_s": 0.1,
+      "fault": "A_LEAK_SIGNAL",
+      "fault_at_s": 30
+    },
+    {
+      "id": "WET_LOSS_STRATIFIED",
+      "group": "plant-a",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30
+    },
+    {
+      "id": "WET_LOSS_MIXED",
+      "group": "plant-a",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30,
+      "tank_kind": "MIXED"
+    },
+    {
+      "id": "WET_LOSS_SHORTCIRCUIT",
+      "group": "plant-a",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30,
+      "short_circuit": 0.2
+    },
+    {
+      "id": "WET_LOSS_MESH40",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30,
+      "layers": 40
+    },
+    {
+      "id": "WET_LOSS_REFINE",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.05,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30
+    },
+    {
+      "id": "WET_CAPACITY60",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 360,
+      "dt_s": 0.1,
+      "wet_derating": 0.6
+    },
+    {
+      "id": "COMMON_SOURCE_HEADER_LOSS",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "fault": "SHARED_HEADER_LOSS",
+      "fault_at_s": 30
+    },
+    {
+      "id": "RECHARGE_SHARED",
+      "group": "recharge",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 900,
+      "dt_s": 0.1,
+      "recharge": "SHARED",
+      "recharge_at_s": 120,
+      "backup_initial": "WARM"
+    },
+    {
+      "id": "RECHARGE_INDEPENDENT",
+      "group": "recharge",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 900,
+      "dt_s": 0.1,
+      "recharge": "INDEPENDENT",
+      "recharge_at_s": 120,
+      "backup_initial": "WARM"
+    },
+    {
+      "id": "RECHARGE_INDEP_FAULT",
+      "group": "recharge",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 360,
+      "dt_s": 0.1,
+      "recharge": "INDEPENDENT",
+      "recharge_at_s": 120,
+      "backup_initial": "WARM",
+      "fault": "W1_LOSS",
+      "fault_at_s": 150
+    },
+    {
+      "id": "SIX_UA220_REFINE25",
+      "group": "six",
+      "scope": "SIX",
+      "ua_w_k": 220000,
+      "seconds": 120,
+      "dt_s": 0.025
+    },
+    {
+      "id": "DRY_NORMAL",
+      "group": "plant-a",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "initial_path": "D1",
+      "dry_bulb_c": 29
+    },
+    {
+      "id": "DRY_D1_LOSS",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "ua_w_k": 220000,
+      "seconds": 240,
+      "dt_s": 0.1,
+      "initial_path": "D1",
+      "dry_bulb_c": 29,
+      "fault": "D1_LOSS",
+      "fault_at_s": 30
+    },
+    {
+      "id": "V1_REPRO_WET_LOSS",
+      "group": "baseline",
+      "scope": "V1_PROJECT_BASE",
+      "expected_raw_sha256": {
+        "series.json": "917373a9cffa7a6f52b8d3960ccd0998122c9b92376e309f988590e14d02e689",
+        "physics.json": "ce8706e89ccda136e77f5471760adf7e0022bf19c832ef7eace26f4492b953e3",
+        "source_phases.json": "bfafe49cf95c98373f353ef7ffeff88eccbdf776f859ced437b0019141fe049a",
+        "phases.json": "13e73ebdc759fdbbd76b63c4dffaf2f275f5977d12fdd7a69369c7f34a3f962a"
+      }
+    },
+    {
+      "id": "WET_LOSS_FIXED_REPEAT",
+      "group": "plant-a",
+      "scope": "GROUP18",
+      "dt_s": 0.1,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30,
+      "seconds": 240,
+      "ua_w_k": 220000
+    },
+    {
+      "id": "WET_LOSS_B_WARM",
+      "group": "plant-b",
+      "scope": "GROUP18",
+      "dt_s": 0.1,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30,
+      "seconds": 240,
+      "ua_w_k": 220000,
+      "backup_initial": "WARM"
+    }
+  ],
+  "grading": [
+    "MODEL_NUMERICAL_VALIDITY",
+    "EQUIPMENT_SUITABILITY",
+    "HYDRAULIC_ADEQUACY",
+    "THERMAL_ADEQUACY",
+    "CHANGEOVER_CONTINUITY",
+    "M1_CAUSAL_VALIDITY",
+    "OEM_CALIBRATION_STATUS"
+  ],
+  "supplier_gaps": [
+    "Actual PG25 CDU thermal/service guarantee and1100kW point",
+    "Rack Q-DP and temperature-minimum-flow maps",
+    "Complete pump Q-H/efficiency/NPSHr/shutoff and pressure reference/elevations",
+    "Dry/wet capacity and power maps with startup/flow bounds",
+    "Tank geometry/diffusers/mixing/short-circuit and90s test",
+    "Valve/pump/sensor timing and independent fast protection",
+    "Weakest component MAWP/relief/expansion/PG product curves"
+  ],
+  "fix_registration": {
+    "id": "MEMPHIS-V2-SOURCE-THEN-THERMAL-v1",
+    "parent_execution": "3efa74279b4d9887c19a4b6c383b9fcc22dd0a32",
+    "parent_run": 38938235592,
+    "scope": "Coordinator state ownership only; unchanged physics, M1, thresholds, reserve and timing assumptions",
+    "expected_logic": "Measured high inlet after source switch may request one cold-B takeover through existing actual interlocks",
+    "thermal_outcome": "MEASURE_AND_REPORT_NO_FORCED_45C_PASS",
+    "build": 2,
+    "preserved_failed_run": 38991246285,
+    "reserve_expectation": "STRATIFIED cold B requires one takeover; MIXED or WARM without measured reserve must refuse; numeric guards and45C target unchanged"
+  }
+}

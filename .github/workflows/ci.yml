@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches-ignore: [codex/memphis-failover-optimization-v1]
+    branches-ignore: [codex/memphis-failover-optimization-v1, codex/memphis-inverse-sizing-v1]
   pull_request:
 
 permissions:

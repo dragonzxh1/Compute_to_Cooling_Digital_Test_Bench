@@ -1,0 +1,33 @@
+name: Memphis inverse engineering sizing v1 DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-inverse-sizing-v1]
+    paths: ['v0_2/tests/tools/memphis_inverse_sizing_v1/**', '.github/workflows/memphis-inverse-sizing-v1*.yml']
+permissions:
+  contents: read
+concurrency:
+  group: memphis-inverse-sizing-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-inverse-sizing-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  studies:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        group: [tanks-a, tanks-b, precool, inverse, joint, robust, scenarios, recharge]
+    uses: ./.github/workflows/memphis-inverse-sizing-v1-runner.yml
+    with:
+      group: ${{ matrix.group }}
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, studies]
+    uses: ./.github/workflows/memphis-inverse-sizing-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}
