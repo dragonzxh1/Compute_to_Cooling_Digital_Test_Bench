@@ -1,7 +1,8 @@
 {
   "schema":"MEMPHIS-HYDRAULIC-CONTINUITY-v1",
-  "build":3,
-  "superseded_development_execution":"bc51a39e45e3276303e0eccd42a0fd7298198b1a",
+  "build":4,
+  "superseded_development_execution":"8c4979768a57397a0a103299fe8899c63266e92e",
+  "depleted_reserve_comparison":"Original SHARED cases begin B90% cold and only test active-A recovery/top-up. Add SHARED_DEPLETED_10S/20S and SECOND_SHARED_DEPLETED_900 with full warm B48.29C, same as independentRC cases. Never claim existing cold reserve is replenishment from depletion. Shared variants still include registered preloop/tower/sensor assumptions, not matched-OEM designs.",
   "superseded_build002_status":"CANCELLED_BEFORE_TESTS; explicitly bind fixed-series two-HX neutral path and both losses, not an assumed uninterrupted selector",
   "neutral_fixed_series_binding":{"main_hx_order":["HX_A_NEUTRAL_SIDE","HX_B_NEUTRAL_SIDE"],"main_selector":"NONE; both fixed open in service","each_hx_dp_pa_at330":50000,"two_hx_total_dp_pa_at330":100000,"ports_dp_pa_at330":15000,"total_loop_dp_pa_at330":270920,"nameplate_budget_kW":45,"OEM_verified":false,"unselected_transfer_heat":"ZERO; no free double-UA; HX metal and primary load piping inventory lumped in buffer, not resolved transport","transfer_selection":"only one active isolated A/B primary side; no primary mass crossconnection"},
   "branch":"codex/memphis-hydraulic-continuity-v1",
@@ -35,6 +36,9 @@
     {"id":"BUFFER_PLUS_RECHARGE","group":"recovery_rc","kind":"forward"},
     {"id":"SECOND_SHARED_900","group":"second_fault","kind":"forward"},
     {"id":"SECOND_RC1000_900","group":"second_fault","kind":"forward"},
+    {"id":"SHARED_DEPLETED_10S","group":"recovery_depleted","kind":"forward"},
+    {"id":"SHARED_DEPLETED_20S","group":"recovery_depleted","kind":"forward"},
+    {"id":"SECOND_SHARED_DEPLETED_900","group":"recovery_depleted","kind":"forward"},
     {"id":"FINAL","group":"final","kind":"final"}
   ],
   "dynamic_registry":"scenarios.py cases(); exact source-bound expansion saved by remote ASSERTIONS before physical tests",

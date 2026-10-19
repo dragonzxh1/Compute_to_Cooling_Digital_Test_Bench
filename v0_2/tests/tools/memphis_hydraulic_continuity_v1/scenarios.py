@@ -26,4 +26,7 @@ def cases():
     add('BUFFER_PLUS_RECHARGE','recovery_rc',architecture='NEUTRAL_BUFFER',neutral_buffer_m3=5.,neutral_hx_ua_w_k=4000000.,recharge='INDEPENDENT',independent_recharge=True,preconditioning_mode='C',backup_initial='WARM',seconds=1800.,rc_capacity_kW=1000.,restore_with_four_pumps=True)
     add('SECOND_SHARED_900','second_fault',shared_recharge=True,shared_charge_s=10.,shared_at_s=120.,seconds=1020.,second_fault_at_s=900.,restore_with_four_pumps=False)
     add('SECOND_RC1000_900','second_fault',recharge='INDEPENDENT',independent_recharge=True,preconditioning_mode='C',backup_initial='WARM',seconds=1020.,second_fault_at_s=900.,rc_capacity_kW=1000.,restore_with_four_pumps=True)
+    for offload in (10.,20.):
+        add('SHARED_DEPLETED_'+str(int(offload))+'S','recovery_depleted',shared_recharge=True,shared_charge_s=offload,shared_at_s=120.,seconds=1800.,backup_initial='WARM',restore_with_four_pumps=False)
+    add('SECOND_SHARED_DEPLETED_900','recovery_depleted',shared_recharge=True,shared_charge_s=10.,shared_at_s=120.,seconds=1020.,backup_initial='WARM',second_fault_at_s=900.,restore_with_four_pumps=False)
     return out

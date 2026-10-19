@@ -195,6 +195,9 @@ def evaluate(d,c):
         challenge=reserve_challenge(final,c,hot_return)
         grades['RESERVE_RECOVERY']='PASS' if all(x['status']=='PASS' for x in challenge) else 'FAIL'
         recovery=recovery_scan(series,c,hot_return)
+        recovery['initial_B_cold_m3']=initial['cold_B_m3']
+        recovery['initial_B_state']='WARM_DEPLETED' if c.get('backup_initial')=='WARM' else 'ALREADY_COLD_RESERVE_NOT_DEPLETED_B_RECOVERY'
+        if c.get('backup_initial')=='WARM':require(initial['cold_B_m3']==0.,'DEPLETED_B_NEGATIVE_NOT_EXCITED')
     if c.get('second_fault_at_s') is not None:
         require(second_n==round(90/c['dt_s']),'FULL_SECOND90_WINDOW_REQUIRED')
         grades['SECOND_FAULT_90S']='PASS' if second_peak<=45 and second_min>=330-1e-8 else 'FAIL'

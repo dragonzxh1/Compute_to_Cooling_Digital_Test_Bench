@@ -21,7 +21,7 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        group: [hydraulic, recovery_shared, recovery_rc, second_fault]
+        group: [hydraulic, recovery_shared, recovery_rc, second_fault, recovery_depleted]
     uses: ./.github/workflows/memphis-hydraulic-continuity-v1-runner.yml
     with:
       group: ${{ matrix.group }}

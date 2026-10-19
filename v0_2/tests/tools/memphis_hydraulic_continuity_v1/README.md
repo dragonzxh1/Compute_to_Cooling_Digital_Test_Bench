@@ -12,14 +12,14 @@
 
 工程状态保持 `MEMPHIS_ENGINEERING_NOT_APPROVED`。任何硬限或保护源漂移必须停止受影响操作。
 
-## Build003 增量及重现
+## Build004 增量及重现
 
 保留Build001执行`f1c6f77d4c5a1909a9ff24bdd969eaf951cc8054`及run39227382372；该版新增回路继承了旧阻力预算，只作研发对照，不用其通过结论选泵。Build002已发布后在测试开始前取消，保留commit bc51a39e45e3276303e0eccd42a0fd7298198b1a/run39229359271。Build003将两台HX的负荷侧固定串联、仅切换独立A/B一次侧；不存在负荷侧换路断口。显式注册新HX两侧/连接阀损失、实际Q-H及泵热，增加20%额外阻力负控。新负荷环270.92kPa@330（两台HX各50kPa+阀口合计15kPa+旧CDU环155.92kPa）；A/B单HX转移环85kPa@330，旧泵真实交点不强制流量。全部都是工程假设，不是厂家承诺。
 
-本版24个受控阶段：1项源/拒绝检查、2项旧精确基线、20个新动态场景、1项FINAL。对照包含同罐源切换、1/3/5m³新增缓冲、低UA、卡转移阀、公共负荷泵故障、伪冷就绪、冷备用管失败、0.05秒复算、共享/独立回充及900秒第二次断源。未运行完整00/01双CDU接管模型，不能以T2替代其资格。
+本版27个受控阶段：1项源/拒绝检查、2项旧精确基线、23个新动态场景、1项FINAL。Build003保留原共享方案B初始已有冷量的结果，不能用作耗尽B罐恢复证明；Build004补入热态B的共享10/20秒及900秒第二故障对照，且在最终表中明确起点。对照包含同罐源切换、1/3/5m³新增缓冲、低UA、卡转移阀、公共负荷泵故障、伪冷就绪、冷备用管失败、0.05秒复算、共享/独立回充及900秒第二次断源。未运行完整00/01双CDU接管模型，不能以T2替代其资格。
 
 储备恢复用真实保存温层（每60秒，首通过区间加10秒点）再进行完整90秒放冷，80/160保守细化；报告最早**已测试**通过时刻而非假定单调的精确恢复时间。绝对出罐温度、冷量、温升分别判；第二次连续耦合故障的90秒结论独立判，不能用储罐部件PASS替代。
 
-源码清单由`prepare_snapshot.ps1`纯文件生成；远端工作流分baseline/hydraulic/recovery_shared/recovery_rc/second_fault/final，实际Python PID经外部Job验证后才运行。raw ZIP含全0.1/0.05秒物理证据、三组六柜M1日志、输入/环境/cleanup；compact和FINAL中文MD/HTML/CSV均绑定raw。`checks.py`从保存证据独立核算交点、能量、每步极值及测量TTL；故意泵功率+1W必须拒绝。
+源码清单由`prepare_snapshot.ps1`纯文件生成；远端工作流分baseline/hydraulic/recovery_shared/recovery_rc/second_fault/recovery_depleted/final，实际Python PID经外部Job验证后才运行。raw ZIP含全0.1/0.05秒物理证据、三组六柜M1日志、输入/环境/cleanup；compact和FINAL中文MD/HTML/CSV均绑定raw。`checks.py`从保存证据独立核算交点、能量、每步极值及测量TTL；故意泵功率+1W必须拒绝。
 
 阅读顺序：FINAL中文工程报告→comparison.csv→交互HTML选择同一场景查看温度、流量、库存、准稳态差压、泵功率及事件→actual_results.json中的恢复试验/第二故障。水锤、静压/NPSH和OEM实物验证一直未完成，采购不放行。本机不运行这些模型。

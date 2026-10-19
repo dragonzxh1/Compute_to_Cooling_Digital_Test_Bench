@@ -1,6 +1,6 @@
 param([Parameter(Mandatory)][string]$ExpectedCommit,
       [Parameter(Mandatory)][string]$ExpectedManifestSha256,
-      [Parameter(Mandatory)][ValidateSet('baseline','hydraulic','recovery_shared','recovery_rc','second_fault','final')][string]$StudyGroup)
+      [Parameter(Mandatory)][ValidateSet('baseline','hydraulic','recovery_shared','recovery_rc','second_fault','recovery_depleted','final')][string]$StudyGroup)
 $ErrorActionPreference='Stop'
 Set-StrictMode -Version Latest
 if($env:GITHUB_ACTIONS -cne 'true' -or $env:RUNNER_ENVIRONMENT -cne 'github-hosted' -or

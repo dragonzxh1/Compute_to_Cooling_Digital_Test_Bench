@@ -78,14 +78,14 @@ def finalize(directory):
         w=csv.DictWriter(f,fieldnames=list(all_rows[0]));w.writeheader();w.writerows(all_rows)
     text='# 孟菲斯水力连续性与储备恢复 V1\n\n工程状态：MEMPHIS_ENGINEERING_NOT_APPROVED；OEM_NOT_VERIFIED；采购未放行。本轮为有界离线开发仿真，不是正式C3-C、实物FAT或现场运行。\n\n'
     text+='执行源码：`'+os.environ['GITHUB_SHA']+'`；run '+os.environ['GITHUB_RUN_ID']+'。源和每项输入绑定到本次清单；未借旧PASS。\n\n'
-    text+='|场景|峰温°C|最小负荷m³/h|低流秒|零流秒|亏缺m³|热/流/90s/源/储备|\n|---|---|---|---|---|---|---|\n'
+    text+='|场景|峰温°C|最小负荷m³/h|低流秒|零流秒|亏缺m³|热/流/90s/源/储备|\n|---|---|---|---|---|---|---|---|\n'
     def fmt(v):return '未提供/未达到' if v is None else f'{v:.6f}' if isinstance(v,(int,float)) else str(v)
     for r in all_rows:text+='|'+ '|'.join([r['id'],fmt(r['peak_C']),fmt(r['min_load_m3_h']),fmt(r['shortfall_s']),fmt(r['zero_flow_s']),fmt(r['deficit_m3']),'/'.join(str(r[k]) for k in ('thermal','load','continuity90','source','reserve'))])+'|\n'
-    text+='\n## 储备恢复与第二次故障：独立判定\n\n|场景|最早已测试双罐90秒资格时刻s|故障后延时s|末态双罐|实际第二故障90秒|第二窗口峰温°C/最小流量m³/h|\n|---|---|---|---|---|---|\n'
+    text+='\n## 储备恢复与第二次故障：独立判定\n\n|场景|B初始冷量m³/状态|最早已测试双罐90秒资格时刻s|故障后延时s|末态双罐|实际第二故障90秒|第二窗口峰温°C/最小流量m³/h|\n|---|---|---|---|---|---|\n'
     for id,r in results.items():
         scan=r.get('recovery_scan');second=r.get('second_fault')
         if scan:
-            text+='|'+ '|'.join([id,fmt(scan['first_tested_joint_pass_s']),fmt(scan['delay_from_first_fault_s']),r['grades']['RESERVE_RECOVERY'],r['grades']['SECOND_FAULT_90S'],('未运行' if not second else fmt(second['maximum_inlet_C'])+'/'+fmt(second['minimum_load_m3_h']))])+'|\n'
+            text+='|'+ '|'.join([id,fmt(scan['initial_B_cold_m3'])+'/'+scan['initial_B_state'],fmt(scan['first_tested_joint_pass_s']),fmt(scan['delay_from_first_fault_s']),r['grades']['RESERVE_RECOVERY'],r['grades']['SECOND_FAULT_90S'],('未运行' if not second else fmt(second['maximum_inlet_C'])+'/'+fmt(second['minimum_load_m3_h']))])+'|\n'
     text+='\n零流/低流的持续时间按每个原始积分区间计算，浮点比较仅使用1e−8m³/h数值舍入界，不放宽客户流量限值。新压力曲线仅准稳态差压；水锤、NPSH和绝对承压NOT_VERIFIED。\n\n'+TOPOLOGY
     text+='\n## 失败与开口项\n\n各场景的FAIL全部保留；保护正确不抵消失去连续供冷。新增中性回路的热、水力通过只能称假设下候选，不能称客户设备合格。并未用更细dt替代压力瞬态模型，也未将18柜结果直接扩展为90柜整体结论。\n'
     save(directory/'source_inputs.json',dict(source=os.environ['GITHUB_SHA'],registration=json.loads((HERE/'registration.json').read_bytes()),expanded=cases()))
