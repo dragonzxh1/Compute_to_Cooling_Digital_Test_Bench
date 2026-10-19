@@ -1,0 +1,34 @@
+name: Memphis hydraulic continuity v1 DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-hydraulic-continuity-v1]
+    paths: ['v0_2/tests/tools/memphis_hydraulic_continuity_v1/**', '.github/workflows/memphis-hydraulic-continuity-v1*.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: memphis-hydraulic-continuity-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-hydraulic-continuity-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  comparisons:
+    needs: baseline
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        group: [hydraulic, recovery]
+    uses: ./.github/workflows/memphis-hydraulic-continuity-v1-runner.yml
+    with:
+      group: ${{ matrix.group }}
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, comparisons]
+    uses: ./.github/workflows/memphis-hydraulic-continuity-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}

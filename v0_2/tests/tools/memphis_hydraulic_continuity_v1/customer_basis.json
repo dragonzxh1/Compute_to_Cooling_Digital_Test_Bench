@@ -1,0 +1,131 @@
+{
+  "interpretation": [
+    "Original00/01 require active load pump to maintain330 while source side changes; source loop and load loop are hydraulically decoupled by each stratified tank.",
+    "AB primary supply/return rings must never be cross-connected. Each source/CDU supply-return selector must choose the same ring.",
+    "00/01 explicitly allow only one necessary CDU pair and load-pump pair to overlap briefly, not simultaneous overlap of all three unit pairs. Secondary connection/isolation requires functional topology, not an invented blanket waiver.",
+    "Cold-source failure alone does not require stopping the active load loop or switching its tank. A-loop isolation/CDU failure are separate failure classes.",
+    "Original recharge is shared-source sequential charge with bounded offload and four-pump recovery, no extra recharge pump. Independent RC/preloops remain explicit alternative hardware, not existing00/01.",
+    "New detailed P&ID is pending in00/01; functional topology candidates cannot be called construction drawings or customer-approved."
+  ],
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "documents": [
+    {
+      "paragraphs": [
+        {
+          "xml_paragraph_zero_based": 25,
+          "text": "全项目90柜，5个18柜大组；每大组3个6柜单元。每单元2台CDU一用一备及2套独立二次供回环网；每大组6台CDU，3用3备。全场30台CDU、30套二次环网、10套一次环网。 每18柜D1/D2各由3个BKC11.3*2.3干冷模块并联组成，W1/W2各由5个GESC-K70B23DE湿冷模块并联组成；每套单元330 m³/h、两干互备两湿互备。全场30干模块、50湿模块，分别组成10套干冷及10套湿冷单元。A/B一次供回环网独立一用一备，保留各自分层罐与负荷泵；源侧共用4泵正常3用1备，经选择阀服务单一环网；分段回充后可投入第4泵恢复运行罐冷量，A/B不并通，设备数量不增加。"
+        },
+        {
+          "xml_paragraph_zero_based": 37,
+          "text": "本阶段为初步设计计算，未做CFD、瞬态仿真或实机验证。性能保证依据现阶段不作为更新前置条件；系统连接参考现存R10，回充按本轮确认修订，新版P&ID待归档，实际泵曲线、管路几何、承压和供货接口在08确认清单中保留待办。"
+        },
+        {
+          "xml_paragraph_zero_based": 455,
+          "text": "图5a区分源侧循环与负荷侧循环：源泵从分层罐热侧取液，经运行冷源冷却后返回冷侧；负荷泵从冷侧向CDU供液，CDU热回液返回罐热侧。分层罐使两类循环的泵压差分别承担各自路径损失；示意图不替代阀位、接管顺序和联锁齐全的施工PID。"
+        },
+        {
+          "xml_paragraph_zero_based": 469,
+          "text": "本节列明连续压力路径及节点表压。设计要求为所有一次侧源泵、负荷泵和二次泵入口表压≥50 kPa，板换一次、二次入口表压差的绝对值≤10 kPa。该10 kPa不指单侧进出口压降，也不指板片两面各位置的压差。图7a、图8a列高温稳态设计点；源侧与负荷侧经共同分层罐解耦，各自成环，不叠加为单泵扬程。"
+        },
+        {
+          "xml_paragraph_zero_based": 716,
+          "text": "备用罐采用分段补冷：运行A时短时切共用源泵给B补冷，限时返回A后允许第4台源泵临时投入；负荷侧保持330 m³/h，用源侧高于负荷侧的有效冷液流量恢复A储冷量。A恢复合格后方可进行下一轮B补冷；B运行时对称执行。不新增回充泵，不采用双湿塔分别给A/B同时供冷的独立回充方案。"
+        },
+        {
+          "xml_paragraph_zero_based": 717,
+          "text": "正常源侧3用1备、330 m³/h；四泵恢复阶段总流量按泵并联工作点、冷塔流量与排热能力、管阀压降及供温共同限幅，440 m³/h仅为4×110的算例，不是运行设定或厂家保证。一次A/B始终不并通，冷源持续运行组合仍仅1干、1干＋1湿或1湿。"
+        },
+        {
+          "xml_paragraph_zero_based": 718,
+          "text": "共用源泵换网顺序：运行负荷泵持续供液→源泵卸载并确认停泵→关闭旧网供回选择阀并确认→目标网供回成对建立合法流路→确认阀位后启泵。返回运行网同序。补冷有效时间必须扣除往返停启泵、切阀、建流和确认时间；不能把114.55 s理论储冷时间全部用于补冷。"
+        },
+        {
+          "xml_paragraph_zero_based": 719,
+          "text": "回充算例：运行罐断开源侧60 s消耗冷液330×60/3600＝5.50 m³；若核准恢复流量为440 m³/h，净补冷110 m³/h，理想恢复约3 min。按现有7.34 K温差，冷源热需求约3.62 MW且需另核泵热，超过单湿额定3.30 MW，故不能直接采用440。实际恢复时间按t＝V消耗/(Q源−330)×60 min计算，前提是Q源>330且冷液合格。实际循环周期及全年次数尚未确定。"
+        },
+        {
+          "xml_paragraph_zero_based": 720,
+          "text": "四泵临时运行期间无闲置备用泵。任一泵故障立即终止储冷恢复，优先保障运行环网330 m³/h；剩余三泵能否接管及动态连续性须验证。温度、流量、压力或剩余储冷不满足许可时禁止计划补冷；不以IT降载完成正常回充。"
+        },
+        {
+          "xml_paragraph_zero_based": 724,
+          "text": "每18柜A/B环网各配1台15 m³承压分层缓冲罐，两个液路独立。罐顶部接CDU热回液与冷源泵吸入口，底部接冷塔冷出液与负荷泵吸入口；冷热口设布水器。每环网配2台100%负荷泵一用一备，冷源切换时运行负荷泵仍向CDU供液330 m³/h。按建冷60 s（含故障检测）加置换30 s，完整事件≤90 s；所需可交付冷液8.25 m³，每罐按70%有效量为10.50 m³，理论114.55 s。供应商须保证实际PG及最大回温、330 m³/h下持续90 s出液升温≤0.5 K；15 m³普通混合罐不可替代。"
+        },
+        {
+          "xml_paragraph_zero_based": 726,
+          "text": "每18柜两路独立UPS及电池，各500 kVA/400 kW、满设计负荷后备10 min；任一路承担运行CDU、负荷泵及控制。连续上限3×63＋37＋5＝231 kW，切换短时4×63＋2×37＋5＝331 kW，均小于400 kW。仅允许必要的一对CDU及一对负荷泵短时重叠，不允许多组同时重叠。冷塔风机、冷源泵由独立正常/应急供电保障，源侧恢复纳入90 s冷量恢复时限。UPS的10 min电力保持不等于10 min热缓冲。"
+        },
+        {
+          "xml_paragraph_zero_based": 757,
+          "text": "备用CDU及二次环网限定在各6柜单元内，不做6台CDU跨单元全交叉互备。每塔及CDU供回两端设置独立电动选择阀，先确认原环网隔离再接入另一环网；供回必须同属A或B。接口共用段缩短至直接连接的三通段，邻近支路采用对夹蝶阀物理隔离并反馈阀位。止回阀不能替代检修隔离，共用接口本体故障仍需分区处置。"
+        },
+        {
+          "xml_paragraph_zero_based": 865,
+          "text": "一次侧每18柜配置A/B两套独立供回环网，全场10套；二次侧每6柜两套独立供回环网，全场30套。A/B表示完整备用管网，不是供液和回液的代号。源侧、负荷侧、二次侧分别核算流量和损失，运行压差用于泵热预算，选型余量只在选泵时计入。"
+        }
+      ],
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7",
+      "document": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "locator": "word/document.xml body descendant w:p zero-based index; NOT a rendered page number"
+    },
+    {
+      "paragraphs": [
+        {
+          "xml_paragraph_zero_based": 3,
+          "text": "全项目90柜，5个18柜大组；每大组3个6柜单元。每单元2台CDU一用一备及2套独立二次供回环网；每大组6台CDU，3用3备。全场30台CDU、30套二次环网、10套一次环网。"
+        },
+        {
+          "xml_paragraph_zero_based": 45,
+          "text": "每18柜D1/D2各由3个BKC11.3*2.3干冷模块并联组成，W1/W2各由5个GESC-K70B23DE湿冷模块并联组成；每套单元330 m³/h、两干互备两湿互备。全场30干模块、50湿模块，分别组成10套干冷及10套湿冷单元。A/B一次供回环网独立一用一备，保留各自分层罐与负荷泵；源侧共用4泵正常3用1备，经选择阀服务单一环网；分段回充后可投入第4泵恢复运行罐冷量，A/B不并通，设备数量不增加。"
+        },
+        {
+          "xml_paragraph_zero_based": 49,
+          "text": "每18柜A/B环网各配1台15 m³承压分层缓冲罐，两个液路独立。罐顶部接CDU热回液与冷源泵吸入口，底部接冷塔冷出液与负荷泵吸入口；冷热口设布水器。每环网配2台100%负荷泵一用一备，冷源切换时运行负荷泵仍向CDU供液330 m³/h。按建冷60 s（含故障检测）加置换30 s，完整事件≤90 s；所需可交付冷液8.25 m³，每罐按70%有效量为10.50 m³，理论114.55 s。供应商须保证实际PG及最大回温、330 m³/h下持续90 s出液升温≤0.5 K；15 m³普通混合罐不可替代。"
+        },
+        {
+          "xml_paragraph_zero_based": 51,
+          "text": "每18柜两路独立UPS及电池，各500 kVA/400 kW、满设计负荷后备10 min；任一路承担运行CDU、负荷泵及控制。连续上限3×63＋37＋5＝231 kW，切换短时4×63＋2×37＋5＝331 kW，均小于400 kW。仅允许必要的一对CDU及一对负荷泵短时重叠，不允许多组同时重叠。冷塔风机、冷源泵由独立正常/应急供电保障，源侧恢复纳入90 s冷量恢复时限。UPS的10 min电力保持不等于10 min热缓冲。"
+        },
+        {
+          "xml_paragraph_zero_based": 52,
+          "text": "设计目标为约定单故障/冷源切换及2 h补水中断期间IT始终满负荷，不将IT降载或停机作为合格接管方式。超过储备时间、共用接口破裂或多重共因失效超出该保障包络，需另行设计；紧急安全联锁仍保留，触发即表示供冷连续性要求未满足。当前未完成实际切换或瞬态试验，承诺条件须写入合同并由供应商验证。"
+        },
+        {
+          "xml_paragraph_zero_based": 54,
+          "text": "每塔及CDU供回两端设置独立电动选择阀，先确认原环网隔离再接入另一环网；供回必须同属A或B。接口共用段缩短至直接连接的三通段，邻近支路采用对夹蝶阀物理隔离并反馈阀位。止回阀不能替代检修隔离，共用接口本体故障仍需分区处置。"
+        },
+        {
+          "xml_paragraph_zero_based": 55,
+          "text": "同组四塔可经电动阀选择A或B环网，任何一台塔均不能把A供与B回串通。二次侧每6柜一对CDU独立备用，机柜内部供回歧管不等于双独立液路。"
+        },
+        {
+          "xml_paragraph_zero_based": 57,
+          "text": "常态干球≤29℃时，一次供37℃、二次供40℃；29～37℃之间，二次目标随干球每升1℃上调0.5 K，一次低3 K；干球≥37℃时一次供41℃、二次供44℃。机柜二次供液硬上限45℃，44℃目标预留1 K测量和动态裕量。一次供温测点位于环网后、运行CDU前。"
+        },
+        {
+          "xml_paragraph_zero_based": 165,
+          "text": "每18柜冷源共用泵组4台，正常3用1备、储冷恢复可临时4台运行；厂家候选点单泵115 m³/h、34 m，项目运行单泵约110 m³/h，3台合计330 m³/h。30 kW/台为保留电机预算，非厂家指定，须核PG25曲线、VFD稳定区及关死扬程。 源侧设计包络96.52 kPa、计20%选型余量115.82 kPa；34 m厂家点按ρ1009折算336.43 kPa，工作点靠变频匹配，不能视为实际运行扬程。负荷侧每A/B环网2台100%泵一用一备，330 m³/h、运行155.92 kPa、选型≥187.11 kPa，保留37 kW。二次高温运行371.81 kPa，仍保留70 m³/h、500 kPa、22 kW候选范围，须变频及全曲线核验。湿盘管运行0.1～0.6 MPa；1 MPa试压不作为运行上限。定压、静高差、关死和瞬态未齐时绝对压力不填虚构定值。"
+        },
+        {
+          "xml_paragraph_zero_based": 172,
+          "text": "一次源侧采用巴普额定管内压降：干模块21.14 kPa@110 m³/h，湿模块50.1 kPa@66 m³/h；并联模块不累加压降。源侧外管、汇集管及阀平衡合计暂18.9 kPa，缓冲接口20 kPa。变工况系数暂1.15后，干源回路63.21 kPa、湿源回路96.52 kPa；负荷侧为三花74.714×1.15＋内部50＋接口20＝155.92 kPa。两回路分层罐解耦，合计仅用于泵热和能耗，不作为单泵扬程。此15%系数是缺曲线时的工程敏感性参数，不是厂家保证，也不覆盖低温启动。二次仍以DN100内径102.26 mm、直段120 m、ΣK20、f0.022为路径预算；实际几何、集管和阀Kv待深化。"
+        },
+        {
+          "xml_paragraph_zero_based": 175,
+          "text": "备用罐采用分段补冷：运行A时短时切共用源泵给B补冷，限时返回A后允许第4台源泵临时投入；负荷侧保持330 m³/h，用源侧高于负荷侧的有效冷液流量恢复A储冷量。A恢复合格后方可进行下一轮B补冷；B运行时对称执行。不新增回充泵，不采用双湿塔分别给A/B同时供冷的独立回充方案。"
+        },
+        {
+          "xml_paragraph_zero_based": 176,
+          "text": "正常源侧3用1备、330 m³/h；四泵恢复阶段总流量按泵并联工作点、冷塔流量与排热能力、管阀压降及供温共同限幅，440 m³/h仅为4×110的算例，不是运行设定或厂家保证。一次A/B始终不并通，冷源持续运行组合仍仅1干、1干＋1湿或1湿。"
+        },
+        {
+          "xml_paragraph_zero_based": 177,
+          "text": "四泵临时运行期间无闲置备用泵。任一泵故障立即终止储冷恢复，优先保障运行环网330 m³/h；剩余三泵能否接管及动态连续性须验证。温度、流量、压力或剩余储冷不满足许可时禁止计划补冷；不以IT降载完成正常回充。"
+        }
+      ],
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c",
+      "document": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "locator": "word/document.xml body descendant w:p zero-based index; NOT a rendered page number"
+    }
+  ]
+}

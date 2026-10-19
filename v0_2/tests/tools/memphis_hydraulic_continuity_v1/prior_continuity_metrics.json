@@ -1,0 +1,52 @@
+{
+  "method": "PURE_FILE_INTEGRATION_NO_MODEL_RUN",
+  "trace_sha256": "f0ebfbf7df5b07d24338c482ade1d79c82adac4093f1fbba4b63f48021785c39",
+  "prior_execution_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13",
+  "cases": [
+    {
+      "flow_deficit_m3": 0.38722938579147076,
+      "full_physical_steps": 2400,
+      "shortfall_windows": [
+        {
+          "duration_s": 10.0,
+          "start_s": 30.0,
+          "end_s": 40.0
+        }
+      ],
+      "fault90_window_deficit_m3": 0.38722938579147076,
+      "id": "valves__A_demand_no_stuck",
+      "zero_flow_duration_s": 0.10000000000000142,
+      "flow_shortfall_duration_s": 10.0,
+      "zero_flow_windows": [
+        {
+          "duration_s": 0.10000000000000142,
+          "start_s": 35.0,
+          "end_s": 35.1
+        }
+      ],
+      "definition": "Each saved flow applies to its original [start_ns,end_ns) integration step. This is exact integration of the saved discrete model, NOT substep real-hardware waveform. 0.1s temporal resolution; no interpolation.",
+      "minimum_interval_end_s": 35.1,
+      "minimum_load_m3_h": 0.0
+    },
+    {
+      "flow_deficit_m3": 8.810221717477233,
+      "full_physical_steps": 2400,
+      "shortfall_windows": [
+        {
+          "duration_s": 210.0,
+          "start_s": 30.0,
+          "end_s": 240.0
+        }
+      ],
+      "fault90_window_deficit_m3": 3.7758093074902623,
+      "id": "valves__A_demand_stuck",
+      "zero_flow_duration_s": 0.0,
+      "flow_shortfall_duration_s": 210.0,
+      "zero_flow_windows": [],
+      "definition": "Each saved flow applies to its original [start_ns,end_ns) integration step. This is exact integration of the saved discrete model, NOT substep real-hardware waveform. 0.1s temporal resolution; no interpolation.",
+      "minimum_interval_end_s": 30.1,
+      "minimum_load_m3_h": 178.96762770039132
+    }
+  ],
+  "prior_run": 39180526734
+}
