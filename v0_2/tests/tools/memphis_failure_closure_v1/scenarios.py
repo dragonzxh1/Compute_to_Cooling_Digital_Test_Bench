@@ -42,7 +42,7 @@ def trials(study):
         add('smeared',candidate('D',initial_profile='SMEARED'))
     elif study=='readiness_negatives':
         for label,change in [('near_TT_stuck',dict(prelude_s=0,precool_sensor_stuck_low=True,false_ready_claim=True)),('expired',dict(ready_extra_age_s=2.,false_ready_claim=True)),
-            ('fake_source_ready',dict(preconditioning_mode='NONE',prelude_s=0,false_ready_claim=True)),('rewarmed_deadleg',dict(deadleg_m3=.25,deadleg_open_at_s=80)),('fast_sensor_power_loss',dict(sensor_delay_s=1.2,fast_channel_failed=True))]:add(label,candidate('D',**change))
+            ('fake_source_ready',dict(preconditioning_mode='NONE',prelude_s=0,false_ready_claim=True)),('rewarmed_deadleg',dict(deadleg_m3=.25,deadleg_open_at_s=80)),('fast_sensor_power_loss',dict(sensor_delay_s=1.2,fast_channel_failed=True)),('source_publication_loss',dict(source_sensor_loss_at_s=40))]:add(label,candidate('D',**change))
     elif study=='modules':
         for scale in (1.,1.05,1.15,1.25):
             c=candidate('D',module_loss=True,capacity_scale=scale,design_flow_takeover=False);c.pop('fault');add(str(scale),c)

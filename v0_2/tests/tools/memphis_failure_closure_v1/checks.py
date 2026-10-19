@@ -75,6 +75,10 @@ def evaluate(d,c):
         if c['id'].startswith('valves__'):need(excitation_complete,'STUCK_VALVE_NOT_EXCITED')
     if c.get('source_valve_stuck'):need('VALVE_NOT_AT_REQUESTED_TARGET' in codes,'SOURCE_VALVE_FAILURE_NOT_PROTECTED')
     if c.get('valve_feedback_lie'):need('SOURCE_COMMAND_WITHOUT_MEASURED_FLOW' in codes,'FALSE_OPEN_NOT_CHECKED_AGAINST_FLOW')
+    if c.get('source_sensor_loss_at_s') is not None:
+        cut=round(c['source_sensor_loss_at_s']*1e9);samples=read(d/'source_observations.json')
+        need(all(o['sample_ns']<cut for o in samples),'DROPOUT_INJECTION_DID_NOT_STOP_PUBLICATION')
+        need('SOURCE_SENSOR_STALE' in codes and any(f['time_ns']>cut+1_000_000_000 and f['request']['coordinator_state']=='PROTECTED_HOLD' and not f['request']['source_enable'] for f in frames),'CLOCK_WATCHDOG_NOT_FAIL_CLOSED')
     if c.get('false_ready_claim') or c.get('precool_sensor_stuck_low') or c.get('ready_extra_age_s'):
         need(all(not f['safety']['data'].get('measured_cold_ready',{}).get('W2',False) for f in frames if fault<=f['time_ns']/1e9<=fault+90),'FALSE_READY_NOT_REJECTED')
     # The safety test may correctly FAIL cooling. Do not relabel that as a

@@ -49,7 +49,7 @@ def run(spec,directory):
     initial=dict(source_tank='A',source_path=spec.get('initial_path','W1'),source_enable=True,source_valve=1.,pumps=3,
         recharge_enable=False,fan=.82308,load_tank='A',coordinator_state='INITIAL_CONDITION',permission='NONE',observation_id='NONE')
     issued=record(dict(producer='INITIAL_CONDITION_NO_PLC_ISSUE_PROOF',request=initial))
-    source_safety=None;last_source_id=None
+    source_safety=None;last_source_id=None;last_source_evaluation_ns=None
     dt_ns=round(spec['dt_s']*1e9);duration=round(spec['seconds']*1e9)
     period=5_000_000_000 if group else 1_000_000_000
     initial_energy=fsum(u.energy() for u in units)+(source.energy() if group else 0.)
@@ -77,18 +77,21 @@ def run(spec,directory):
             if spec.get('stuck'):actuators[0].silent_hold=True
             if group:
                 source.inject(now/1e9)
-                if now%200000000==0:
+                sampling_lost=spec.get('extensions') and now/1e9>=spec.get('source_sensor_loss_at_s',float('inf'))
+                if now%200000000==0 and not sampling_lost:
                     obs=source.observation(now,units);pending.append(obs);source_observations.append(asdict(obs))
                 arrived=[o for o in pending if o.release_ns<=now]
                 if arrived:latest_source=max(arrived,key=lambda o:o.sample_ns)
                 pending=[o for o in pending if o.release_ns>now]
-                if latest_source is not None and latest_source.record_id!=last_source_id:
+                watchdog_due=spec.get('extensions') and last_source_evaluation_ns is not None and now-last_source_evaluation_ns>=200000000
+                if latest_source is not None and (latest_source.record_id!=last_source_id or watchdog_due):
                     source_safety=protection.evaluate(latest_source,now)
                     request=coordinator.request(latest_source,source_safety,now)
                     issued=source_plc.issue(request,source_safety,latest_source,now)
                     source_frames.append(dict(time_ns=now,measurement=asdict(latest_source),safety=source_safety,
                         request=request,PLC=issued,actual_primary_inlet_c=source.last_primary_inlet-273.15))
                     last_source_id=latest_source.record_id
+                    last_source_evaluation_ns=now
             physical=[]
             for i,(u,a,sensor,engine,plc,supervisor) in enumerate(zip(units,actuators,sensors,engines,plcs,supervisors)):
                 s=u.snapshot(now,a.actual,a.actuator_state_id)
