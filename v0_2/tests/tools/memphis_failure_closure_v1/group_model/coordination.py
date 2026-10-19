@@ -91,7 +91,8 @@ class ClosureCoordinator:
             if self.design_low_since is None:self.design_low_since=now
         else:self.design_low_since=None
         design_low=self.o.get('design_flow_takeover') and self.design_low_since is not None and now-self.design_low_since>=3_000_000_000
-        bad=not av.get(self.path,False) or bool(design_low)
+        isolation_required=bool(o.leak_A and self.tank=='A' and reserve)
+        bad=not av.get(self.path,False) or bool(design_low) or isolation_required
         if bad and self.bad_since is None:self.bad_since=now
         if not bad:self.bad_since=None
         if bad and now-self.bad_since>=1_000_000_000 and self.path not in self.handled and not blocked:
@@ -101,7 +102,7 @@ class ClosureCoordinator:
             choices=[p for p in choices if p.startswith('W')]
             if choices:
                 self.needed_path=choices[0];self.needed_tank='B' if o.leak_A and reserve else self.tank;self.startup_required=True
-                self.transition('REVOKE_RECHARGE',now,'ACTUAL_RELEASED_SOURCE_FAULT')
+                self.transition('REVOKE_RECHARGE',now,'MEASURED_A_ISOLATION_REQUIRES_SOURCE_AND_LOAD_B' if isolation_required else 'ACTUAL_RELEASED_SOURCE_FAULT')
             else:self.transition('NO_SOURCE',now,'NO_AVAILABLE_INDEPENDENT_SOURCE')
         if self.state=='REVOKE_RECHARGE' and o.recharge_speed<=1e-9:self.transition('STOP_SOURCE',now,'RECHARGE_ZERO_SPEED')
         if self.state=='STOP_SOURCE' and o.source_speed<=1e-9:self.transition('CLOSE',now,'MEASURED_SOURCE_ZERO_SPEED')

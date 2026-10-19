@@ -73,6 +73,8 @@ def evaluate(d,c):
         # Keep the dedicated injection test strict. A rejected reserve in a
         # robustness point is preserved as INCOMPLETE, never a valve PASS.
         if c['id'].startswith('valves__'):need(excitation_complete,'STUCK_VALVE_NOT_EXCITED')
+    if c['id']=='valves__A_demand_no_stuck':
+        need(any(r['source_tank']=='B' for r in rows) and any(r['load_tank']=='B' for r in rows),'ACTUAL_SOURCE_MUST_FOLLOW_ISOLATED_LOAD_TANK')
     if c.get('source_valve_stuck'):need('VALVE_NOT_AT_REQUESTED_TARGET' in codes,'SOURCE_VALVE_FAILURE_NOT_PROTECTED')
     if c.get('valve_feedback_lie'):need('SOURCE_COMMAND_WITHOUT_MEASURED_FLOW' in codes,'FALSE_OPEN_NOT_CHECKED_AGAINST_FLOW')
     if c.get('source_sensor_loss_at_s') is not None:
