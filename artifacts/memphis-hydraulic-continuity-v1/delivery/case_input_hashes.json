@@ -1,0 +1,206 @@
+{
+  "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+  "method": "Exact persisted input.json raw hashes from independently verified official ZIP/index; includes both fresh old baselines",
+  "cases": [
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8836,
+      "indexed_input_path": "OLD_STUCK/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-baseline-39231568548",
+      "stage": "OLD_STUCK",
+      "raw_sha256": "05203968ab3a76dd468073e959286e83aaabdd687c400ad24f3f6dd89b14a857"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8815,
+      "indexed_input_path": "OLD_UNSTUCK/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-baseline-39231568548",
+      "stage": "OLD_UNSTUCK",
+      "raw_sha256": "17858ed9b1e2682c927b7040658bbff3d225ed973012a5224309f863f114db75"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8792,
+      "indexed_input_path": "SOURCE_SAME_A/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-baseline-39231568548",
+      "stage": "SOURCE_SAME_A",
+      "raw_sha256": "773f3538c7a6348740f84b5f454b337b2edaabbe629dedd5d090f6e775f2902c"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8886,
+      "indexed_input_path": "BUFFER_1M3/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_1M3",
+      "raw_sha256": "fdd4de28f61e607a0fa2e33f29f24bf7d4fb1f4431178eceacc7cfcd7dd0e0ca"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8886,
+      "indexed_input_path": "BUFFER_3M3/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_3M3",
+      "raw_sha256": "6785a53d91bfe8f57897ca978ed095ba58c30aa5d7b0249a93ba7c78afe37792"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8886,
+      "indexed_input_path": "BUFFER_5M3/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_5M3",
+      "raw_sha256": "c34e9b7208a247ca404d444631ad00451e39db4cf70184fdd02a0c7c8f0debcb"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8892,
+      "indexed_input_path": "BUFFER_5M3_DT05/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_5M3_DT05",
+      "raw_sha256": "7bf5442774ca2ad8c0f65432b84cd73c4e1c9927164747dc123d862ada9abb44"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8917,
+      "indexed_input_path": "BUFFER_COMMON_LOAD_LOSS/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_COMMON_LOAD_LOSS",
+      "raw_sha256": "ccca70822ecdbfe5eed1875864801b5720d3d6bafbf4a8b6ca53dc09e1ff0e7f"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8931,
+      "indexed_input_path": "BUFFER_EXTRA_RESISTANCE/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_EXTRA_RESISTANCE",
+      "raw_sha256": "97b46472078a0649542b8783e055a2e84bf929cef2c2e957048bb16746b8b8ae"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8889,
+      "indexed_input_path": "BUFFER_LOW_UA/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_LOW_UA",
+      "raw_sha256": "62fb54cdb1b338cba93ebed44c3c8b3b417e6247e8fa74a5b94db613759f9b57"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8944,
+      "indexed_input_path": "BUFFER_REJECT_FALSE_READY/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_REJECT_FALSE_READY",
+      "raw_sha256": "e81540f508dcf24da47993aa2b207023eca9321babfbf87fbf121b3ea2d13489"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8921,
+      "indexed_input_path": "BUFFER_STUCK_TRANSFER/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "BUFFER_STUCK_TRANSFER",
+      "raw_sha256": "2e50b963ffb152fbe3858fdd203a013fb1ca98126867f325a74b73b6c5da83b0"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8800,
+      "indexed_input_path": "SOURCE_WARM_NO_PRELOOP/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "stage": "SOURCE_WARM_NO_PRELOOP",
+      "raw_sha256": "cb2dee0dfa839fd3127d3b65140962bff06fcd185f50756d3d3cd3a2d89e829d"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8954,
+      "indexed_input_path": "SECOND_SHARED_DEPLETED_900/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_depleted-39231568548",
+      "stage": "SECOND_SHARED_DEPLETED_900",
+      "raw_sha256": "28b406b7fbb04b210ee24957330a9ecf3643c260bbc485323ed578efc1fdc0a2"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8921,
+      "indexed_input_path": "SHARED_DEPLETED_10S/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_depleted-39231568548",
+      "stage": "SHARED_DEPLETED_10S",
+      "raw_sha256": "1ae8cb9afdf5763d482ea1d32b4c51f8d278a7780db12a718e0ad59f45cf13e7"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8921,
+      "indexed_input_path": "SHARED_DEPLETED_20S/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_depleted-39231568548",
+      "stage": "SHARED_DEPLETED_20S",
+      "raw_sha256": "c65537859d02c415ffd264fef8cf1da60d72785eb265cef80218e75ccd5a4f94"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 9018,
+      "indexed_input_path": "BUFFER_PLUS_RECHARGE/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_rc-39231568548",
+      "stage": "BUFFER_PLUS_RECHARGE",
+      "raw_sha256": "408aac2929dd3307a3a7d88a11a12c59610dfba82854f62a4c458fb52b30c7c5"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8931,
+      "indexed_input_path": "INDEPENDENT_RC_1000/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_rc-39231568548",
+      "stage": "INDEPENDENT_RC_1000",
+      "raw_sha256": "0a32aad67f2f60b91382f8253aafafacf7273f28868adc3f82fe054734e6cf5a"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8929,
+      "indexed_input_path": "INDEPENDENT_RC_500/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_rc-39231568548",
+      "stage": "INDEPENDENT_RC_500",
+      "raw_sha256": "6ba4866d7290a307e8de8c8b2c98b98d75d1c3f5b9f9843b8c5666b558f60d00"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8888,
+      "indexed_input_path": "SHARED_10S/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_shared-39231568548",
+      "stage": "SHARED_10S",
+      "raw_sha256": "f5c63a5680793b53fbbb2c8b939f163374d250263c74db3644b756b50bfdca0b"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8888,
+      "indexed_input_path": "SHARED_20S/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_shared-39231568548",
+      "stage": "SHARED_20S",
+      "raw_sha256": "77c2341dede20028fc64e704059b2be01ef34be9ee58b545753fcbf1368ece7d"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8901,
+      "indexed_input_path": "SHARED_HEADROOM_CANDIDATE/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_shared-39231568548",
+      "stage": "SHARED_HEADROOM_CANDIDATE",
+      "raw_sha256": "db065b92c266eef22015f3eeac52b610d2dcaca5c9c614cc609b3a83d93afdc8"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8894,
+      "indexed_input_path": "SHARED_NO_HEADROOM/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-recovery_shared-39231568548",
+      "stage": "SHARED_NO_HEADROOM",
+      "raw_sha256": "e9a7b56ee405d390e8af50a8ab4b1cd1d81f889a0ffd2a2dff5cf8a4b0a8a592"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8955,
+      "indexed_input_path": "SECOND_RC1000_900/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-second_fault-39231568548",
+      "stage": "SECOND_RC1000_900",
+      "raw_sha256": "a1350b4046e51372fe2807276ac3ab63e8279c3911ab8a5aae85e7951845ec69"
+    },
+    {
+      "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+      "bytes": 8921,
+      "indexed_input_path": "SECOND_SHARED_900/case/input.json",
+      "official_archive": "memphis-hydraulic-raw-second_fault-39231568548",
+      "stage": "SECOND_SHARED_900",
+      "raw_sha256": "6a94de64fae910b175cfb9693c10e391443a5bafe833b3fd5069df732f18258b"
+    }
+  ]
+}

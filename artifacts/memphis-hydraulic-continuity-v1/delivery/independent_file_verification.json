@@ -1,0 +1,386 @@
+{
+  "status": "OFFICIAL_ZIP_RAW_AND_RUNTIME_INDEPENDENT_FILE_VERIFICATION_PASS",
+  "run": 39231568548,
+  "source_commit": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+  "manifest_sha256": "44a247ec007c730481a6004a460ad2da02a1d3a5b88179feb860b6e981a4cd55",
+  "raw_files": 2536,
+  "stages": [
+    {
+      "pid": 4856,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "ASSERTIONS",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 720,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "OLD_UNSTUCK",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 8164,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "OLD_STUCK",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 4800,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SOURCE_SAME_A",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 2008,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "FINAL",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 8040,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_1M3",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 3932,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_3M3",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 1560,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_5M3",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 7400,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_LOW_UA",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 5412,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_EXTRA_RESISTANCE",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 3376,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_STUCK_TRANSFER",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 1184,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_COMMON_LOAD_LOSS",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 2476,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_REJECT_FALSE_READY",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 5972,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_5M3_DT05",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 8144,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SOURCE_WARM_NO_PRELOOP",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 7544,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SHARED_DEPLETED_10S",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 6088,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SHARED_DEPLETED_20S",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 3564,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SECOND_SHARED_DEPLETED_900",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 2236,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "INDEPENDENT_RC_500",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 3672,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "INDEPENDENT_RC_1000",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 3692,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "BUFFER_PLUS_RECHARGE",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 2456,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SHARED_10S",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 1412,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SHARED_20S",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 7148,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SHARED_NO_HEADROOM",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 4836,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SHARED_HEADROOM_CANDIDATE",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 7520,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SECOND_SHARED_900",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    },
+    {
+      "pid": 4184,
+      "process_mb": 1024,
+      "image": "20261012.333.1",
+      "cpu_rate": 2500,
+      "stage": "SECOND_RC1000_900",
+      "cleanup_complete": true,
+      "job_mb": 2048,
+      "active_after_cleanup": 0
+    }
+  ],
+  "archives": [
+    {
+      "local_sha256": "24df098edda2f6334b2fe11946c46c4143e7bec7873523aef0a3fe5f57332060",
+      "id": 12177936452,
+      "bytes": 90012,
+      "official_digest": "sha256:24df098edda2f6334b2fe11946c46c4143e7bec7873523aef0a3fe5f57332060",
+      "name": "memphis-hydraulic-compact-baseline-39231568548"
+    },
+    {
+      "local_sha256": "219d643d0fabf6c8386cb915d2e3132edcfffc10478643dad3c6bc33359b665f",
+      "id": 12177774008,
+      "bytes": 1055977,
+      "official_digest": "sha256:219d643d0fabf6c8386cb915d2e3132edcfffc10478643dad3c6bc33359b665f",
+      "name": "memphis-hydraulic-compact-final-39231568548"
+    },
+    {
+      "local_sha256": "fd4c74b66d6a83f1f44a97d0ec4e9b404c509b46397a0a35f36809207211c611",
+      "id": 12178221960,
+      "bytes": 449318,
+      "official_digest": "sha256:fd4c74b66d6a83f1f44a97d0ec4e9b404c509b46397a0a35f36809207211c611",
+      "name": "memphis-hydraulic-compact-hydraulic-39231568548"
+    },
+    {
+      "local_sha256": "4ef0671ed7c47b864e87aef96fe8e0d8f14a02783532782a9826507aab93e245",
+      "id": 12178432789,
+      "bytes": 314798,
+      "official_digest": "sha256:4ef0671ed7c47b864e87aef96fe8e0d8f14a02783532782a9826507aab93e245",
+      "name": "memphis-hydraulic-compact-recovery_depleted-39231568548"
+    },
+    {
+      "local_sha256": "1e7490b975916a2cf943fcdbb53cee4c622891bbd1748184a92ffdf6ae59fd90",
+      "id": 12177503678,
+      "bytes": 438024,
+      "official_digest": "sha256:1e7490b975916a2cf943fcdbb53cee4c622891bbd1748184a92ffdf6ae59fd90",
+      "name": "memphis-hydraulic-compact-recovery_rc-39231568548"
+    },
+    {
+      "local_sha256": "f1737268691cbde13f0dc2976406043186756b01f46c0beb662c30ef2ebbcaf7",
+      "id": 12177624087,
+      "bytes": 620431,
+      "official_digest": "sha256:f1737268691cbde13f0dc2976406043186756b01f46c0beb662c30ef2ebbcaf7",
+      "name": "memphis-hydraulic-compact-recovery_shared-39231568548"
+    },
+    {
+      "local_sha256": "bd95801161bc4e99fb35dde9182c362dc46c251b5d64c4599f77e2fb8294fe35",
+      "id": 12177077401,
+      "bytes": 182082,
+      "official_digest": "sha256:bd95801161bc4e99fb35dde9182c362dc46c251b5d64c4599f77e2fb8294fe35",
+      "name": "memphis-hydraulic-compact-second_fault-39231568548"
+    },
+    {
+      "local_sha256": "ab4cfe9a7b81fb5c4cfb7ef26ec3334e9a5fe95ab3ce82b5961ff93d7bebc8f0",
+      "id": 12177506639,
+      "bytes": 19789005,
+      "official_digest": "sha256:ab4cfe9a7b81fb5c4cfb7ef26ec3334e9a5fe95ab3ce82b5961ff93d7bebc8f0",
+      "name": "memphis-hydraulic-raw-baseline-39231568548"
+    },
+    {
+      "local_sha256": "5a4dc81c500e3259b210367517b8a78ac983754202f670e741fb0564584374e4",
+      "id": 12177499528,
+      "bytes": 1069916,
+      "official_digest": "sha256:5a4dc81c500e3259b210367517b8a78ac983754202f670e741fb0564584374e4",
+      "name": "memphis-hydraulic-raw-final-39231568548"
+    },
+    {
+      "local_sha256": "d7a333bd6ea20601fe73cef4d08eae569f28d0669f6f56c355567f027c4d5d12",
+      "id": 12177617313,
+      "bytes": 69212272,
+      "official_digest": "sha256:d7a333bd6ea20601fe73cef4d08eae569f28d0669f6f56c355567f027c4d5d12",
+      "name": "memphis-hydraulic-raw-hydraulic-39231568548"
+    },
+    {
+      "local_sha256": "1d2c295c7565c785d9b331f9930e89db26b749efa23d96996f93216a15569b59",
+      "id": 12178248069,
+      "bytes": 189527071,
+      "official_digest": "sha256:1d2c295c7565c785d9b331f9930e89db26b749efa23d96996f93216a15569b59",
+      "name": "memphis-hydraulic-raw-recovery_depleted-39231568548"
+    },
+    {
+      "local_sha256": "43b035bb8500d1b2262bcd69aafa70a72c459a2315f08c055a53eba7b9037f59",
+      "id": 12177433850,
+      "bytes": 260027910,
+      "official_digest": "sha256:43b035bb8500d1b2262bcd69aafa70a72c459a2315f08c055a53eba7b9037f59",
+      "name": "memphis-hydraulic-raw-recovery_rc-39231568548"
+    },
+    {
+      "local_sha256": "b1e22037806058b7cfc5e4823f10a32d3079028b44c9fbf7e3a8414f39ece633",
+      "id": 12177809044,
+      "bytes": 290791545,
+      "official_digest": "sha256:b1e22037806058b7cfc5e4823f10a32d3079028b44c9fbf7e3a8414f39ece633",
+      "name": "memphis-hydraulic-raw-recovery_shared-39231568548"
+    },
+    {
+      "local_sha256": "e908c01c759a45134a58a32dec935af4b3af4b8ba2f95f17224d4b434fe3aaad",
+      "id": 12177652201,
+      "bytes": 78422088,
+      "official_digest": "sha256:e908c01c759a45134a58a32dec935af4b3af4b8ba2f95f17224d4b434fe3aaad",
+      "name": "memphis-hydraulic-raw-second_fault-39231568548"
+    }
+  ],
+  "raw_logs_sha256": "ee8ec96913009d71a5d6b9fe960e5e2772fd60e5d2abb49226cef7e4fce2cbe0",
+  "method": "PowerShell streaming SHA256; no local Python/model",
+  "engineering_approval": false,
+  "formal": false,
+  "procurement": false,
+  "hardware": false,
+  "phase6": false
+}

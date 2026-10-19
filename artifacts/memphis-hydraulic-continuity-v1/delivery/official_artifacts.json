@@ -1,0 +1,285 @@
+{
+  "total_count": 14,
+  "artifacts": [
+    {
+      "id": 12178432789,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3ODQzMjc4OQ==",
+      "name": "memphis-hydraulic-compact-recovery_depleted-39231568548",
+      "size_in_bytes": 314798,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12178432789",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12178432789/zip",
+      "expired": false,
+      "digest": "sha256:4ef0671ed7c47b864e87aef96fe8e0d8f14a02783532782a9826507aab93e245",
+      "created_at": "2026-10-19T09:56:02Z",
+      "updated_at": "2026-10-19T09:56:02Z",
+      "expires_at": "2026-11-18T09:56:01Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12178248069,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3ODI0ODA2OQ==",
+      "name": "memphis-hydraulic-raw-recovery_depleted-39231568548",
+      "size_in_bytes": 189527071,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12178248069",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12178248069/zip",
+      "expired": false,
+      "digest": "sha256:1d2c295c7565c785d9b331f9930e89db26b749efa23d96996f93216a15569b59",
+      "created_at": "2026-10-19T09:56:01Z",
+      "updated_at": "2026-10-19T09:56:01Z",
+      "expires_at": "2026-11-18T09:55:49Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12178221960,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3ODIyMTk2MA==",
+      "name": "memphis-hydraulic-compact-hydraulic-39231568548",
+      "size_in_bytes": 449318,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12178221960",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12178221960/zip",
+      "expired": false,
+      "digest": "sha256:fd4c74b66d6a83f1f44a97d0ec4e9b404c509b46397a0a35f36809207211c611",
+      "created_at": "2026-10-19T09:47:43Z",
+      "updated_at": "2026-10-19T09:47:43Z",
+      "expires_at": "2026-11-18T09:47:41Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177936452,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzkzNjQ1Mg==",
+      "name": "memphis-hydraulic-compact-baseline-39231568548",
+      "size_in_bytes": 90012,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177936452",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177936452/zip",
+      "expired": false,
+      "digest": "sha256:24df098edda2f6334b2fe11946c46c4143e7bec7873523aef0a3fe5f57332060",
+      "created_at": "2026-10-19T09:44:07Z",
+      "updated_at": "2026-10-19T09:44:07Z",
+      "expires_at": "2026-11-18T09:44:06Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177809044,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzgwOTA0NA==",
+      "name": "memphis-hydraulic-raw-recovery_shared-39231568548",
+      "size_in_bytes": 290791545,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177809044",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177809044/zip",
+      "expired": false,
+      "digest": "sha256:b1e22037806058b7cfc5e4823f10a32d3079028b44c9fbf7e3a8414f39ece633",
+      "created_at": "2026-10-19T09:57:05Z",
+      "updated_at": "2026-10-19T09:57:05Z",
+      "expires_at": "2026-11-18T09:56:39Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177774008,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3Nzc3NDAwOA==",
+      "name": "memphis-hydraulic-compact-final-39231568548",
+      "size_in_bytes": 1055977,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177774008",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177774008/zip",
+      "expired": false,
+      "digest": "sha256:219d643d0fabf6c8386cb915d2e3132edcfffc10478643dad3c6bc33359b665f",
+      "created_at": "2026-10-19T09:57:58Z",
+      "updated_at": "2026-10-19T09:57:58Z",
+      "expires_at": "2026-11-18T09:57:56Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177652201,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzY1MjIwMQ==",
+      "name": "memphis-hydraulic-raw-second_fault-39231568548",
+      "size_in_bytes": 78422088,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177652201",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177652201/zip",
+      "expired": false,
+      "digest": "sha256:e908c01c759a45134a58a32dec935af4b3af4b8ba2f95f17224d4b434fe3aaad",
+      "created_at": "2026-10-19T09:51:13Z",
+      "updated_at": "2026-10-19T09:51:13Z",
+      "expires_at": "2026-11-18T09:51:04Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177624087,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzYyNDA4Nw==",
+      "name": "memphis-hydraulic-compact-recovery_shared-39231568548",
+      "size_in_bytes": 620431,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177624087",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177624087/zip",
+      "expired": false,
+      "digest": "sha256:f1737268691cbde13f0dc2976406043186756b01f46c0beb662c30ef2ebbcaf7",
+      "created_at": "2026-10-19T09:57:07Z",
+      "updated_at": "2026-10-19T09:57:07Z",
+      "expires_at": "2026-11-18T09:57:06Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177617313,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzYxNzMxMw==",
+      "name": "memphis-hydraulic-raw-hydraulic-39231568548",
+      "size_in_bytes": 69212272,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177617313",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177617313/zip",
+      "expired": false,
+      "digest": "sha256:d7a333bd6ea20601fe73cef4d08eae569f28d0669f6f56c355567f027c4d5d12",
+      "created_at": "2026-10-19T09:47:41Z",
+      "updated_at": "2026-10-19T09:47:41Z",
+      "expires_at": "2026-11-18T09:47:32Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177506639,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzUwNjYzOQ==",
+      "name": "memphis-hydraulic-raw-baseline-39231568548",
+      "size_in_bytes": 19789005,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177506639",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177506639/zip",
+      "expired": false,
+      "digest": "sha256:ab4cfe9a7b81fb5c4cfb7ef26ec3334e9a5fe95ab3ce82b5961ff93d7bebc8f0",
+      "created_at": "2026-10-19T09:44:06Z",
+      "updated_at": "2026-10-19T09:44:06Z",
+      "expires_at": "2026-11-18T09:44:03Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177503678,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzUwMzY3OA==",
+      "name": "memphis-hydraulic-compact-recovery_rc-39231568548",
+      "size_in_bytes": 438024,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177503678",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177503678/zip",
+      "expired": false,
+      "digest": "sha256:1e7490b975916a2cf943fcdbb53cee4c622891bbd1748184a92ffdf6ae59fd90",
+      "created_at": "2026-10-19T09:54:05Z",
+      "updated_at": "2026-10-19T09:54:05Z",
+      "expires_at": "2026-11-18T09:54:04Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177499528,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzQ5OTUyOA==",
+      "name": "memphis-hydraulic-raw-final-39231568548",
+      "size_in_bytes": 1069916,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177499528",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177499528/zip",
+      "expired": false,
+      "digest": "sha256:5a4dc81c500e3259b210367517b8a78ac983754202f670e741fb0564584374e4",
+      "created_at": "2026-10-19T09:57:56Z",
+      "updated_at": "2026-10-19T09:57:56Z",
+      "expires_at": "2026-11-18T09:57:54Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177433850,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzQzMzg1MA==",
+      "name": "memphis-hydraulic-raw-recovery_rc-39231568548",
+      "size_in_bytes": 260027910,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177433850",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177433850/zip",
+      "expired": false,
+      "digest": "sha256:43b035bb8500d1b2262bcd69aafa70a72c459a2315f08c055a53eba7b9037f59",
+      "created_at": "2026-10-19T09:54:04Z",
+      "updated_at": "2026-10-19T09:54:04Z",
+      "expires_at": "2026-11-18T09:53:40Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    },
+    {
+      "id": 12177077401,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE3NzA3NzQwMQ==",
+      "name": "memphis-hydraulic-compact-second_fault-39231568548",
+      "size_in_bytes": 182082,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177077401",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12177077401/zip",
+      "expired": false,
+      "digest": "sha256:bd95801161bc4e99fb35dde9182c362dc46c251b5d64c4599f77e2fb8294fe35",
+      "created_at": "2026-10-19T09:51:14Z",
+      "updated_at": "2026-10-19T09:51:14Z",
+      "expires_at": "2026-11-18T09:51:13Z",
+      "workflow_run": {
+        "id": 39231568548,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-hydraulic-continuity-v1",
+        "head_sha": "e6a4cf2b533afbeb2c97c615b030262aa5382f00"
+      }
+    }
+  ]
+}

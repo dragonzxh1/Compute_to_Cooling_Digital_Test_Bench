@@ -1,0 +1,31 @@
+{
+  "build001": {
+    "commit": "f1c6f77d4c5a1909a9ff24bdd969eaf951cc8054",
+    "scope": "Ideal-resistance comparison only; not selected equipment sizing",
+    "run": 39227382372,
+    "manifest": "391b881c338ee827c563a15cae0cbf0b4161edb02ba8fecd500d0c2aa16fd1d6"
+  },
+  "build002": {
+    "run": 39229359271,
+    "commit": "bc51a39e45e3276303e0eccd42a0fd7298198b1a",
+    "conclusion": "cancelled",
+    "job_count": 0,
+    "classification": "CANCELLED_BEFORE_TESTS_TO_BIND_FIXED_SERIES_TWO_HX_LOSSES",
+    "raw_manifest_sha256": "11241bd8ef215c1dab2970ff2904f92204af7662ca494748bc6ae5e4a2cc5c5b",
+    "no_pass_claim": true,
+    "superseding_commit": "8c4979768a57397a0a103299fe8899c63266e92e"
+  },
+  "build003": {
+    "commit": "8c4979768a57397a0a103299fe8899c63266e92e",
+    "scope": "Shared cases start with cold B; not a depleted-B recovery proof",
+    "run": 39229967227,
+    "manifest": "9382eb2a6e9c511ad50028bcec1d852df7c835d7dd98559c1a1acd024ce0aac5"
+  },
+  "original_failure_closure": {
+    "commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13",
+    "package_manifest_raw": "6731f915c88e59ebdb78d04752a8e00e3a37b50209844908b8416089d8784b75",
+    "run": 39180526734
+  },
+  "no_inherited_qualification": true,
+  "all_failures_retained": true
+}
