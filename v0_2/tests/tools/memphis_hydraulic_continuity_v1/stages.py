@@ -13,7 +13,7 @@ def stage(spec,directory):
         require(len({x['id'] for x in expanded})==len(expanded),'DUPLICATE_REGISTRY_ID')
         require(all(c['parameters']['dt_s'] in (.1,.05) and c['parameters']['seconds']<=1800 for c in expanded),'FINITE_CAMPAIGN_BOUND')
         from .coordination import control_options
-        require(control_options({'extensions':True,'fault_at_s':30,'hidden_state':'NO','architecture':'NEUTRAL_BUFFER'})=={'extensions':True,'architecture':'NEUTRAL_BUFFER'},'CONTROLLER_FUTURE_SCHEDULE_ACCESS')
+        require(control_options({'extensions':True,'fault_at_s':30,'second_fault_at_s':900,'hidden_state':'NO','architecture':'NEUTRAL_BUFFER'})=={'extensions':True,'architecture':'NEUTRAL_BUFFER'},'CONTROLLER_FUTURE_SCHEDULE_ACCESS')
         from v0_2.tests.tools.memphis_failure_closure_v1.negative import run
         witnesses=run()
         save(directory/'expanded_inputs.json',expanded)

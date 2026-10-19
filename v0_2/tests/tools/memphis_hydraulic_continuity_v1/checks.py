@@ -17,14 +17,17 @@ def save(p,obj):
 def verify_primary(r,c):
     nominal=330/3600;eta=c.get('primary_efficiency',.7)
     valve=r['load_valve'];factor=r['load_resistance_factor']
-    kt=(135920+20000/max(valve,.001)**2)/nominal**2*factor
+    neutral=r.get('neutral')
+    kt=((c.get('transfer_hx_dp_pa',50000.)+(20000+c.get('transfer_ports_dp_pa',15000.))/max(valve,.001)**2) if neutral else
+        (135920+20000/max(valve,.001)**2))/nominal**2*factor
     kp_load=155920/nominal**2*.25;h0_load=155920*1.25/.9**2
     qt=sqrt(h0_load*.9**2/(kt+kp_load)) if valve>1e-9 else 0.
-    neutral=r.get('neutral')
     expected_main_on=r['start_ns']/1e9<c.get('common_load_loss_at_s',float('inf'))
-    main=(nominal if expected_main_on else 0.) if neutral else qt
+    extra=c.get('neutral_hx_dp_pa',50000.)+c.get('neutral_ports_dp_pa',15000.)
+    kmain=(155920+extra)*c.get('neutral_resistance_factor',1.)/nominal**2
+    main_h0=(155920+extra+kp_load*nominal**2)/.9**2
+    main=(sqrt(main_h0*.9**2/(kmain+kp_load)) if expected_main_on else 0.) if neutral else qt
     if neutral:
-        require(r['load_flow_m3_h'] in (0.,330.) or abs(r['load_flow_m3_h']-330)<1e-8,'NEUTRAL_MAIN_QH')
         close(r['transfer_flow_m3_h'],qt*3600)
         cm=CV*main;ct=CV*qt
         if min(cm,ct)==0:heat=0.
@@ -33,7 +36,8 @@ def verify_primary(r,c):
             e=exp(-ntu*(1-cr));effect=ntu/(1+ntu) if abs(1-cr)<1e-10 else (1-e)/(1-cr*e)
             heat=effect*cmin*(r['actual_primary_return_c']+273.15-neutral['transfer_in_k'])
         close(heat,neutral['transfer_heat_w'])
-        close(neutral['main_pump_w'],main*155920/eta if main else 0.)
+        close(neutral['main_pump_w'],main**3*kmain/eta)
+        close(neutral['main_dp_pa'],main**2*kmain)
         close(neutral['transfer_pump_w'],qt**3*kt/eta)
         close(neutral['transfer_return_k'],neutral['transfer_in_k']+heat/(CV*qt) if qt else neutral['transfer_in_k'])
         dt=(r['end_ns']-r['start_ns'])/1e9
@@ -53,15 +57,15 @@ def verify_primary(r,c):
     close(r['source_flow_m3_h'],qs*3600);close(r['recharge_flow_m3_h'],qr*3600)
     aux=fsum(q/3600*20000/.65 for q in r['aux_actual_flows_m3_h'].values())
     electric=(qt**3*kt+qs**3*ks+qr**3*kr)/eta+aux
-    if neutral:electric+=main*155920/eta
+    if neutral:electric+=main**3*kmain/eta
     close(r['primary_pump_electrical_w'],electric)
     for name,t in r['tank_records'].items():
         close(t['load_m3_s'],qt if name==r['load_tank'] else 0.)
         close(t['source_m3_s'],(qs if name==r['source_tank'] else 0.)+(qr if name=='B' else 0.))
     close(fsum(u['primary_flow_m3_s'] for u in r['unit_records']),main)
 
-def reserve_challenge(final,c):
-    # Exact final state, no ideal profile reset. Uniform finite-volume refinement
+def reserve_challenge(final,c,return_c):
+    # Exact saved state, no ideal profile reset. Uniform finite-volume refinement
     # splits each final cell into equal cells, conserving the exact stored heat.
     # Tank math reuse is allowed here after independent forward audit completed.
     from v0_2.tests.tools.memphis_failure_closure_v1.group_model.tank import Tank
@@ -71,17 +75,47 @@ def reserve_challenge(final,c):
         for mult in (1,2):
             n=len(actual)*mult;t=Tank(n,volume=c.get('tank_volume_m3',15.))
             t.t=[x for x in actual for _ in range(mult)]
-            before=t.energy();initial=t.t[0];hot=48.29+273.15;worst=initial
+            before=t.energy();initial=t.t[0];hot=return_c+273.15;worst=initial
             for _ in range(round(90/dt)):
                 t.advance(dt,load,0.,hot,t.t[0],0.,c.get('short_circuit',0.))
                 worst=max(worst,t.t[0])
             rise=worst-initial
             cold=sum(x<=314.5948 for x in actual)*c.get('tank_volume_m3',15.)/len(actual)
-            met=initial<=314.5948 and cold>=.85*c.get('tank_volume_m3',15.) and rise<=.5
+            met=worst<=314.5948 and cold>=.85*c.get('tank_volume_m3',15.) and rise<=.5
             results.append(dict(tank=name,layers=n,dt_s=dt,initial_outlet_C=initial-273.15,initial_cold_m3=cold,
-                rise_K=rise,initial_energy_J=before,final_energy_J=t.energy(),status='PASS' if met else 'FAIL',
-                method='EXACT_FINAL_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM',return_boundary_C=48.29))
+                rise_K=rise,maximum_outlet_C=worst-273.15,initial_energy_J=before,final_energy_J=t.energy(),status='PASS' if met else 'FAIL',
+                profile_time_s=final['time_ns']/1e9,
+                method='EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM',return_boundary_C=return_c,
+                scope='COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification'))
     return results
+
+def recovery_scan(series,c,return_c):
+    # Fixed 60s sampling, then 10s within the first passing coarse interval.
+    # No monotonicity claim and no exact/continuous earliest-time claim.
+    samples=[];first=None
+    fault=c.get('fault_at_s',30.)
+    def trial(row):
+        if any(row['cold_'+n+'_m3']<.85*c.get('tank_volume_m3',15.) or
+               row['tank_'+n+'_k'][0]>314.5948 for n in ('A','B')):
+            return dict(time_s=row['time_ns']/1e9,status='FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE',challenge=[])
+        test=reserve_challenge(row,c,return_c)
+        return dict(time_s=row['time_ns']/1e9,status='PASS' if all(x['status']=='PASS' for x in test) else 'FAIL',challenge=test)
+    for row in series:
+        t=row['time_ns']/1e9
+        if t>fault and (round(t)%60==0 or t==c['seconds']):
+            x=trial(row);samples.append(x)
+            if first is None and x['status']=='PASS':first=t
+    if first is not None:
+        for row in series:
+            t=row['time_ns']/1e9
+            if max(fault,first-60)<t<first and round(t)%10==0:samples.append(trial(row))
+    samples.sort(key=lambda r:r['time_s'])
+    passing=[x['time_s'] for x in samples if x['status']=='PASS']
+    return dict(first_tested_joint_pass_s=min(passing) if passing else None,
+        delay_from_first_fault_s=min(passing)-fault if passing else None,
+        method='FIXED60S_PROFILES_AND10S_FIRST_PASS_INTERVAL; no monotonicity or unsampled-time guarantee',
+        horizon_s=c['seconds'],return_boundary_C=return_c,samples=samples,
+        qualification='CONDITIONAL_COMPONENT_RESERVE_ONLY_NOT_SYSTEM_SECOND_FAULT_PASS')
 
 def evaluate(d,c):
     independent=_unchanged_physics_audit(d,c)
@@ -89,15 +123,22 @@ def evaluate(d,c):
     frames=read(d/'phases.json');measurements=read(d/'measurements.json')
     for unit in range(3):causal([f for f in frames if f['unit']==unit],[m for m in measurements if m['unit']==unit])
     rows=FileArray(d/'physics.json',round(c['seconds']/c['dt_s']))
-    initial=read(d/'series.json')[0];final=read(d/'series.json')[-1]
+    series=read(d/'series.json');initial=series[0];final=series[-1]
     peak=max(max(u['inlet_k'])-273.15 for u in initial['units']);peak90=-1e9
     minload=1e9;min90=1e9;deficit=deficit90=zero=short=0.;first_short=last_short=None
-    first_cold=first_B_cold=None;source_tail=[];points=[];last=None;count=0
-    fault=c.get('fault_at_s',30.);window_n=0;qd=330.;minimum_at=None
+    first_cold=first_B_cold=None;source_tail=[];points=[];last=None;count=0;neutral_negative=False
+    fault=c.get('fault_at_s',30.);window_n=0;qd=330.;minimum_at=None;hot_return=48.29
+    second_peak=-1e9;second_min=1e9;second_n=0;second_deficit=0.
     for r in rows:
         verify_primary(r,c);count+=1;last=r
+        if r.get('neutral') and not neutral_negative:
+            damaged=dict(r,neutral=dict(r['neutral'],main_pump_w=r['neutral']['main_pump_w']+1.))
+            try:verify_primary(damaged,c)
+            except ValueError:neutral_negative=True
+            else:raise ValueError('NEW_MAIN_PUMP_ENERGY_CORRUPTION_NOT_REJECTED')
         t=r['end_ns']/1e9;start=r['start_ns']/1e9;dt=t-start
         maximum=max(max(u['new_k'][1:7])-273.15 for u in r['unit_records'])
+        hot_return=max(hot_return,r['actual_primary_return_c'])
         peak=max(peak,maximum);q=r['load_flow_m3_h']
         if q<minload:minload=q;minimum_at=t
         if q<qd-1e-8:
@@ -105,6 +146,10 @@ def evaluate(d,c):
             if first_short is None:first_short=start
             last_short=t
         if q<=1e-8:zero+=dt
+        if c.get('second_fault_at_s') is not None and start>=c['second_fault_at_s']-1e-9 and t<=c['second_fault_at_s']+90+1e-9:
+            second_n+=1;second_peak=max(second_peak,maximum);second_min=min(second_min,q)
+            second_deficit+=max(0.,qd-q)*dt/3600
+            require(not r['source_available']['W2'],'SECOND_PHYSICAL_FAULT_NOT_EXCITED')
         if start>=fault-1e-9 and t<=fault+90+1e-9:
             window_n+=1;peak90=max(peak90,maximum);min90=min(min90,q)
             deficit90+=max(0.,qd-q)*dt/3600
@@ -135,24 +180,35 @@ def evaluate(d,c):
         if c.get('false_ready_claim') and fault<=now/1e9<=fault+90 and not expected['W2']:false_claim_witness=True
     if c.get('false_ready_claim'):require(false_claim_witness,'FALSE_READY_NEGATIVE_NOT_EXCITED')
     if c.get('common_load_loss_at_s') is not None:require(minload<=1e-8,'COMMON_LOAD_NEGATIVE_NOT_EXCITED')
+    if c.get('neutral_resistance_factor',1.)>1:require(minload<330-1e-8,'EXTRA_RESISTANCE_MUST_NOT_FORCE_TARGET_FLOW')
     required_cold=first_B_cold if c.get('fault')=='A_LOAD_RESTRICTION' else first_cold
     grades={'THERMAL_COMPLIANCE':'PASS' if peak<=45 else 'FAIL','LOAD_FLOW_COMPLIANCE':'PASS' if minload>=330-1e-8 else 'FAIL',
         '90S_CONTINUITY':'PASS' if peak90<=45 and min90>=330-1e-8 else 'FAIL',
         'SOURCE_RECOVERY':'PASS' if required_cold is not None and required_cold-fault<=90 and all(source_tail) else 'FAIL',
         'RESERVE_RECOVERY':'NOT_RUN','PRESSURE_TRANSIENT':'NOT_VERIFIED','ABSOLUTE_PRESSURE_NPSH':'NOT_VERIFIED',
+        'SECOND_FAULT_90S':'NOT_RUN',
         'M1_CAUSALITY':'VERIFIED_NEW_INTEGRATION_NOT_INHERITED_C3C','OEM_EVIDENCE':'NOT_VERIFIED'}
-    challenge=[]
+    challenge=[];recovery=None;second=None
     if c.get('shared_recharge') or c.get('independent_recharge'):
-        challenge=reserve_challenge(final,c)
+        # Bound by the greater of design return and the actual forward peak.
+        # This remains a declared constant-return component challenge, not OEM.
+        challenge=reserve_challenge(final,c,hot_return)
         grades['RESERVE_RECOVERY']='PASS' if all(x['status']=='PASS' for x in challenge) else 'FAIL'
+        recovery=recovery_scan(series,c,hot_return)
+    if c.get('second_fault_at_s') is not None:
+        require(second_n==round(90/c['dt_s']),'FULL_SECOND90_WINDOW_REQUIRED')
+        grades['SECOND_FAULT_90S']='PASS' if second_peak<=45 and second_min>=330-1e-8 else 'FAIL'
+        second=dict(at_s=c['second_fault_at_s'],maximum_inlet_C=second_peak,minimum_load_m3_h=second_min,
+            deficit_m3=second_deficit,steps=second_n,state_reset=False,
+            scope='CONTINUOUS_COUPLED_STATE_SECOND_W2_LOSS; no new W3 source; registered interval not customer deadline')
     output=read(d/'result.json')
     result=dict(id=c['id'],parameters=c,grades=grades,maximum_inlet_C=peak,maximum90_inlet_C=peak90,minimum_load_m3_h=minload,
         minimum_time_s=minimum_at,shortfall_duration_s=short,zero_flow_duration_s=zero,deficit_m3=deficit,deficit90_m3=deficit90,first_short_s=first_short,last_short_s=last_short,
         source_cold_delay_s=None if required_cold is None else required_cold-fault,any_source_first_cold_s=first_cold,
         first_actual_B_cold_s=first_B_cold,source_final_m3_h=last['source_flow_m3_h'],
         final_pumps=last['actual_source_pumps'],final_tanks_k={n:final['tank_'+n+'_k'] for n in ('A','B')},
-        cold_A_final_m3=final['cold_A_m3'],cold_B_final_m3=final['cold_B_m3'],reserve_challenge=challenge,
-        codes=codes,events=output['source_timeline'],independent=independent,
+        cold_A_final_m3=final['cold_A_m3'],cold_B_final_m3=final['cold_B_m3'],reserve_challenge=challenge,recovery_scan=recovery,second_fault=second,
+        codes=codes,events=output['source_timeline'],independent=independent,new_pump_energy_negative_rejected=neutral_negative,
         raw_sha256={n:digest(d/n) for n in ('physics.json','series.json','phases.json','source_phases.json','measurements.json','source_observations.json')},
         engineering='MEMPHIS_ENGINEERING_NOT_APPROVED',hardware=False,source_first_good_is_not_B_path_transfer_proof=True)
     save(d.parent/'forward_result.json',result);save(d.parent/'plot_data.json',points)

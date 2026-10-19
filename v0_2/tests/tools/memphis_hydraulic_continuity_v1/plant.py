@@ -10,14 +10,29 @@ from dataclasses import replace
 from math import fsum
 from v0_2.tests.tools.memphis_failure_closure_v1.group_model.sources import ClosurePlant
 from v0_2.tests.tools.memphis_failure_closure_v1.group_model.hydraulics import primary_load_graph
-from v0_2.tests.tools.memphis_failure_closure_v1.group_model.common import CV,RHO,p,check,rounding_bound
+from v0_2.tests.tools.memphis_failure_closure_v1.group_model.common import CV,RHO,check,rounding_bound
 from v0_2.hydraulics.solver import solve
 from v0_2.hydraulics.pump import pump_energy
 from v0_2.cdu.heat_exchanger import evaluate
 from v0_2.thermal.provenance import ParameterRecord
 
 
-class NeutralBufferPlant(ClosurePlant):
+def assumption(name,value,unit):
+    return ParameterRecord(name,value,unit,'ENGINEERING_ASSUMPTION',
+        'memphis_hydraulic_continuity_v1 Build002 registration/scenarios; NEW uncalibrated component, not existing00/01',
+        0.,'2026-10-19',(value,value),'CALIBRATION_REQUIRED')
+
+
+class RecoveryPlant(ClosurePlant):
+    def inject(self,seconds):
+        super().inject(seconds)
+        # Predetermined second physical event, never a controller option and
+        # never triggered by hidden reserve readiness or an anticipated PASS.
+        if seconds>=self.spec.get('second_fault_at_s',float('inf')):
+            self.available['W2']=False
+
+
+class NeutralBufferPlant(RecoveryPlant):
     def __init__(self,spec):
         self.neutral_volume=spec['neutral_buffer_m3']
         self.neutral_k=spec.get('neutral_initial_c',40.5)+273.15
@@ -28,6 +43,23 @@ class NeutralBufferPlant(ClosurePlant):
 
     def energy(self):
         return super().energy()+self.neutral_cap*self.neutral_k
+
+    def flows(self,command):
+        _,source,recharge,_,sh,rh=super().flows(command)
+        transfer=0.;th=None
+        if self.load_valve>1e-9:
+            # This side now contains ONE new HX, not the old three CDUs.
+            # Reuse the old pump curve honestly; do not assign transfer330.
+            g,c=primary_load_graph(self.load_valve);qd=330/3600;v=max(self.load_valve,.001)
+            factor=self.load_resistance_factor
+            def header(e):return replace(e,coefficient=assumption('NEW_TRANSFER_HEADER',
+                (10000+self.spec.get('transfer_ports_dp_pa',15000.)/2)/qd**2/v**2*factor,'Pa/(m3/s)^2'))
+            branch=replace(g.branches[0][0],coefficient=assumption('NEW_TRANSFER_HX',
+                self.spec.get('transfer_hx_dp_pa',50000.)/qd**2*factor,'Pa/(m3/s)^2'))
+            g=replace(g,supply_series=tuple(map(header,g.supply_series)),
+                return_series=tuple(map(header,g.return_series)),branches=((branch,),))
+            th=solve(g,c,.9,RHO);transfer=th.total_flow_m3_s
+        return transfer,source,recharge,th,sh,rh
 
     def advance(self,start_ns,end_ns,units,speeds,issued):
         dt=(end_ns-start_ns)/1e9
@@ -41,6 +73,19 @@ class NeutralBufferPlant(ClosurePlant):
             main=0.;mh=None
         else:
             g,c=primary_load_graph(1.)
+            qd=330/3600
+            extra=self.spec.get('neutral_hx_dp_pa',50000.)+self.spec.get('neutral_ports_dp_pa',15000.)
+            factor=self.spec.get('neutral_resistance_factor',1.)
+            # New HX and headers/valves have explicit nonzero loss. A NEW pump
+            # curve is selected at that design point, not the old pump forced
+            # to deliver unchanged flow through extra resistance.
+            def add(edge,head):
+                return replace(edge,coefficient=assumption('NEW_NEUTRAL_LOOP_RESISTANCE',(edge.coefficient.value+head/qd**2)*factor,'Pa/(m3/s)^2'))
+            g=replace(g,supply_series=tuple(add(e,extra/2) for e in g.supply_series),
+                return_series=tuple(add(e,extra/2) for e in g.return_series),
+                branches=tuple(tuple(add(e,0.) for e in b) for b in g.branches))
+            h0=(155920+extra+c.curve_k.value*qd**2)/.9**2
+            c=replace(c,shutoff_head_pa=assumption('NEW_NEUTRAL_LOAD_PUMP_H0',h0,'Pa'))
             mh=solve(g,c,.9,RHO);main=mh.total_flow_m3_s
         mp=0. if mh is None else pump_energy(self.primary_drive,mh.pump_head_pa,main,dt).electrical_w
         tp=0. if th is None else pump_energy(self.primary_drive,th.pump_head_pa,transfer,dt).electrical_w
@@ -54,9 +99,7 @@ class NeutralBufferPlant(ClosurePlant):
         if self.neutral_hx is None:
             # New component has its own bound/provenance; old HX is untouched.
             ua=self.spec['neutral_hx_ua_w_k']
-            provenance=ParameterRecord('NEW_NEUTRAL_HX_UA',ua,'W/K','ENGINEERING_ASSUMPTION',
-                'memphis_hydraulic_continuity_v1 registration/scenarios; NEW uncalibrated HX, not existing00/01',
-                0.,'2026-10-19',(ua,ua),'CALIBRATION_REQUIRED')
+            provenance=assumption('NEW_NEUTRAL_HX_UA',ua,'W/K')
             self.neutral_hx=replace(units[0].hx,ua=provenance,
                 secondary_fluid=replace(units[0].hx.secondary_fluid,fluid_id='NEW_NEUTRAL_LOAD_LOOP'),
                 primary_fluid=replace(units[0].hx.primary_fluid,fluid_id='SELECTED_ISOLATED_A_OR_B_TRANSFER'),
@@ -122,10 +165,13 @@ class NeutralBufferPlant(ClosurePlant):
             neutral=dict(old_k=old_buffer,new_k=self.neutral_k,capacity_j_k=self.neutral_cap,volume_m3=self.neutral_volume,
                 main_pump_w=mp,transfer_pump_w=tp,transfer_heat_w=exchanged,transfer_in_k=transfer_in,transfer_return_k=transfer_return,
                 environment_w=buffer_gain,energy_residual_j=buffer_residual,main_dp_pa=0. if mh is None else mh.pump_head_pa,
+                new_hx_design_dp_pa=self.spec.get('neutral_hx_dp_pa',50000.),new_ports_design_dp_pa=self.spec.get('neutral_ports_dp_pa',15000.),
+                transfer_hx_design_dp_pa=self.spec.get('transfer_hx_dp_pa',50000.),transfer_ports_design_dp_pa=self.spec.get('transfer_ports_dp_pa',15000.),
+                new_load_pump_nameplate_budget_kW=37.,resistance_factor=self.spec.get('neutral_resistance_factor',1.),
                 transfer_dp_pa=0. if th is None else th.pump_head_pa,AB_direct_mass_connection=False,
                 pressure_transient='NOT_VERIFIED_QUASI_STEADY_QH_ONLY',static_pressure='NOT_VERIFIED',NPSH='NOT_VERIFIED'))
 
 
 def SourcePlant(spec):
     if spec.get('architecture')=='NEUTRAL_BUFFER':return NeutralBufferPlant(spec)
-    return ClosurePlant(spec)
+    return RecoveryPlant(spec)
