@@ -19,7 +19,7 @@ from v0_2.thermal.provenance import ParameterRecord
 
 def assumption(name,value,unit):
     return ParameterRecord(name,value,unit,'ENGINEERING_ASSUMPTION',
-        'memphis_hydraulic_continuity_v1 Build002 registration/scenarios; NEW uncalibrated component, not existing00/01',
+        'memphis_hydraulic_continuity_v1 Build003 registration/scenarios; NEW uncalibrated component, not existing00/01',
         0.,'2026-10-19',(value,value),'CALIBRATION_REQUIRED')
 
 
@@ -74,7 +74,10 @@ class NeutralBufferPlant(RecoveryPlant):
         else:
             g,c=primary_load_graph(1.)
             qd=330/3600
-            extra=self.spec.get('neutral_hx_dp_pa',50000.)+self.spec.get('neutral_ports_dp_pa',15000.)
+            # Both neutral sides stay in FIXED SERIES, each50kPa at330.
+            # Only A/B TRANSFER sides switch. No imaginary bypass, no
+            # secondary selector closing the supposedly continuous loop.
+            extra=self.spec.get('neutral_hx_dp_pa',100000.)+self.spec.get('neutral_ports_dp_pa',15000.)
             factor=self.spec.get('neutral_resistance_factor',1.)
             # New HX and headers/valves have explicit nonzero loss. A NEW pump
             # curve is selected at that design point, not the old pump forced
@@ -165,9 +168,9 @@ class NeutralBufferPlant(RecoveryPlant):
             neutral=dict(old_k=old_buffer,new_k=self.neutral_k,capacity_j_k=self.neutral_cap,volume_m3=self.neutral_volume,
                 main_pump_w=mp,transfer_pump_w=tp,transfer_heat_w=exchanged,transfer_in_k=transfer_in,transfer_return_k=transfer_return,
                 environment_w=buffer_gain,energy_residual_j=buffer_residual,main_dp_pa=0. if mh is None else mh.pump_head_pa,
-                new_hx_design_dp_pa=self.spec.get('neutral_hx_dp_pa',50000.),new_ports_design_dp_pa=self.spec.get('neutral_ports_dp_pa',15000.),
+                new_hx_design_dp_pa=self.spec.get('neutral_hx_dp_pa',100000.),new_ports_design_dp_pa=self.spec.get('neutral_ports_dp_pa',15000.),
                 transfer_hx_design_dp_pa=self.spec.get('transfer_hx_dp_pa',50000.),transfer_ports_design_dp_pa=self.spec.get('transfer_ports_dp_pa',15000.),
-                new_load_pump_nameplate_budget_kW=37.,resistance_factor=self.spec.get('neutral_resistance_factor',1.),
+                new_load_pump_nameplate_budget_kW=45.,resistance_factor=self.spec.get('neutral_resistance_factor',1.),
                 transfer_dp_pa=0. if th is None else th.pump_head_pa,AB_direct_mass_connection=False,
                 pressure_transient='NOT_VERIFIED_QUASI_STEADY_QH_ONLY',static_pressure='NOT_VERIFIED',NPSH='NOT_VERIFIED'))
 

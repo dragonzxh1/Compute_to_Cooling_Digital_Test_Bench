@@ -23,7 +23,7 @@ def verify_primary(r,c):
     kp_load=155920/nominal**2*.25;h0_load=155920*1.25/.9**2
     qt=sqrt(h0_load*.9**2/(kt+kp_load)) if valve>1e-9 else 0.
     expected_main_on=r['start_ns']/1e9<c.get('common_load_loss_at_s',float('inf'))
-    extra=c.get('neutral_hx_dp_pa',50000.)+c.get('neutral_ports_dp_pa',15000.)
+    extra=c.get('neutral_hx_dp_pa',100000.)+c.get('neutral_ports_dp_pa',15000.)
     kmain=(155920+extra)*c.get('neutral_resistance_factor',1.)/nominal**2
     main_h0=(155920+extra+kp_load*nominal**2)/.9**2
     main=(sqrt(main_h0*.9**2/(kmain+kp_load)) if expected_main_on else 0.) if neutral else qt
