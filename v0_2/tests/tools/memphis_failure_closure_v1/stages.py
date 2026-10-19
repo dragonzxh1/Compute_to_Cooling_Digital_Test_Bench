@@ -68,6 +68,9 @@ def stage(spec,directory):
     if kind=='standby':
         from .storage import standby
         return standby(spec,directory)
+    if kind=='standby_pipe':
+        from .storage import pipe_standby
+        return pipe_standby(spec,directory)
     if kind=='final':
         from .report import finalize
         return finalize(directory)

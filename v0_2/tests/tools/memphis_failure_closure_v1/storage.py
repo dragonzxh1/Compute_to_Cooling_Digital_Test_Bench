@@ -35,3 +35,17 @@ def standby(spec,directory):
         need(abs(t.energy()-initial-gain)<=1e-8*(initial+t.energy()+abs(gain)),'STANDBY_ENERGY')
         results.append(dict(id=label,UA_W_K=ua,final_cold_m3=t.cold_volume(),gain_MJ=gain/1e6,points=points,OEM='NOT_VERIFIED'))
     return dict(kind='standby',cases=results,scope='15m3 initially90pct40.5C,46C ambient,2h,no withdrawals; realUA unavailable')
+
+def pipe_standby(spec,directory):
+    from .group_model.sources import ClosurePlant
+    from .scenarios import candidate
+    p=ClosurePlant(candidate('D'));p.pre_failed=True
+    before=p.energy();gain=0.;first=None;points=[]
+    for tick in range(7200):
+        p._loop('W2',1.,tick+1);gain+=p.pipe_heat_gain('W2',1.)
+        temps=[x-273.15 for x in p.pipes['W2'].t]
+        if max(temps)+.2>41.4448 and first is None:first=tick+1
+        if tick%30==29:points.append(dict(time_s=tick+1,near_C=temps[0],far_C=temps[-1],cold_temperature_bound=max(temps)+.2,actual_flow_m3_h=0.))
+    need(abs(p.energy()-before-gain)<1e-8*(p.energy()+before+abs(gain)),'PIPE_STANDBY_ENERGY')
+    result=dict(kind='pipe_standby',first_temperature_readiness_loss_s=first,flow_readiness_loss='IMMEDIATE_FLOW_ZERO; actual published refusal also tested in preconditioning_loss cases',ambient_gain_MJ=gain/1e6,prelude=p.prelude,points=points,scope='W2 2.75m3,46C ambient,UA500W/K,zero flow,7200s; no calibrated hold-time guarantee')
+    save(directory/'pipe_ready_hold.json',result);return result

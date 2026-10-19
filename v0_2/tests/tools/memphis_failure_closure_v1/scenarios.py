@@ -3,7 +3,7 @@ def legacy(**changes):
     c=dict(scope='GROUP18',ua_w_k=220000.,dt_s=.1,seconds=240.,source_variant='V9',tank_kind='STRATIFIED',fault='W1_LOSS',fault_at_s=30.,recharge_at_s=120.,layers=80,cold_fraction=.85,standby_initial_c=40.5,startup_s=20.)
     c.update(changes);return c
 def candidate(name,**changes):
-    c=legacy(extensions=True,ua_w_k=240000.,cold_fraction=.9,cold_initial_c=40.5,secondary_initial_c=43.8,primary_target_c=40.7,
+    c=legacy(extensions=True,ua_w_k=240000.,cold_fraction=.9,cold_initial_c=40.5,standby_initial_c=48.29,secondary_initial_c=43.8,primary_target_c=40.7,
         preconditioning_mode='A',precool_flow_m3_h=90.,precool_capacity_kW=100.,precool_floor_c=40.5,prelude_s=1200,
         pipe_ambient_UA_W_K=500.,tank_ambient_UA_W_K=50.,ready_flow_m3_h=90.,use_fast_sensor_channel=False)
     if name=='A':c.update(preconditioning_mode='NONE',prelude_s=0,cold_fraction=.85)
@@ -53,6 +53,8 @@ def trials(study):
         for margin in (0.,.0154,.03):add('H0minus3_margin'+str(margin),candidate('D',source_head_factor=.97,source_speed_margin=margin))
         add('R10_minus3',candidate('D',source_variant='PID',source_head_factor=.97))
         add('pump_out_no_spare',candidate('D',pump_loss_at_s=40,use_spare=False));add('pump_out_spare',candidate('D',pump_loss_at_s=40,use_spare=True))
+        for spare in (False,True):
+            c=candidate('D',pump_loss_at_s=40,fault_at_s=40,use_spare=spare);c.pop('fault');add('isolated_pump_out_'+str(spare),c)
     elif study=='valves':
         add('A_demand_no_stuck',candidate('D',fault='A_LOAD_RESTRICTION'))
         add('A_demand_stuck',candidate('D',fault='A_LOAD_RESTRICTION',load_valve_stuck=True))

@@ -16,6 +16,7 @@ def finalize(directory):
             for r in a['cases']:dynamic.append(r);locations[r['id']]=d/('case' if name=='G_WET_LOSS' else r['id']+'/case')
         if a['kind']=='tank':tanks+=a['cases']
         if a['kind']=='standby':standby=a
+        if a['kind']=='pipe_standby':save(directory/'pipe_ready_hold.json',a)
         if a['kind']=='analytic':
             save(directory/'minimum_performance_requirements.json',a['results'])
             for p in d.glob('*.csv'):(directory/p.name).write_bytes(p.read_bytes())
@@ -59,7 +60,7 @@ def finalize(directory):
     save(directory/'precooling_topologies.json',topologies)
     modifications=[]
     for name in ('A','B','C','D','E'):
-        r=maps['option_'+name+'__nominal'];p=r['parameters'];modifications.append(dict(option=name,case=r['id'],result=r['grades'],equipment_changes=p,
+        r=maps['option_'+name+'__nominal'];p=r['parameters'];modifications.append(dict(option=name,case=r['id'],result=r['grades'],equipment_changes=p,auxiliary_pump_mean_kW=r['auxiliary_pump_mean_kW'],prelude=r['prelude'],
             CAPEX_items='泵/阀/管路/HX/测点/电源/独立冷源按配置逐项报价，价格UNKNOWN',OPEX_items='实际附加泵热/用电在原始轨迹；塔风机/喷淋/COP/年气象map缺失，不报虚假节能率',OEM=None,procurement='BLOCKED'))
     save(directory/'modification_risk_cost_matrix.json',modifications)
     # Actual final charged tank states, not a hand-assigned85pct ideal profile.

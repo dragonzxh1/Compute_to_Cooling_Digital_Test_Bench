@@ -48,7 +48,7 @@ def evaluate(d,c):
             need(expected==f['safety']['data']['measured_cold_ready'],'INDEPENDENT_READY_RECONSTRUCTION')
             if f['request']['recharge_enable']:need(c.get('independent_recharge') and f['request']['recharge_path']=='RC','DOUBLE_USE_ONLINE_SOURCE')
     fault=c.get('fault_at_s',30.);dt=c['dt_s'];end=c['seconds']
-    fault_required=bool(c.get('fault') or c.get('module_loss') or c.get('common_load_loss_at_s') or c.get('common_source_loss_at_s'))
+    fault_required=bool(c.get('fault') or c.get('module_loss') or c.get('common_load_loss_at_s') is not None or c.get('common_source_loss_at_s') is not None or c.get('pump_loss_at_s') is not None)
     temp=lambda r:max(max(u['new_k'][1:7])-273.15 for u in r['unit_records'])
     good=lambda r:r['source_available'].get(r['source_path'],False) and r['source_flow_m3_h']>=330-1e-8 and r['source_return_k']<=314.5948
     post=[r for r in rows if r['start_ns']>=round(fault*1e9)];window=[r for r in post if r['end_ns']<=round((fault+90)*1e9)]
@@ -90,6 +90,9 @@ def evaluate(d,c):
         maximum_inlet_C=peak,maximum90_inlet_C=peak90,minimum_load_m3_h=minload,cold_return_delay_s=None if cold is None else cold-fault,
         normal_or_hot_operating_target_C=40 if c.get('primary_target_c')==37 else 44,operating_target_met=peak<=(40 if c.get('primary_target_c')==37 else 44),
         source_final_m3_h=rows[-1]['source_flow_m3_h'],source_final_reject_kW=rows[-1].get('main_rejected_w',rows[-1]['rejected_w'])/1000,maximum_primary_return_C=max(r['actual_primary_return_c'] for r in rows),
+        final_source_pumps=rows[-1].get('actual_source_pumps'),
+        auxiliary_pump_energy_kWh=fsum(r.get('aux_pump_w',0)*(r['end_ns']-r['start_ns'])/1e9 for r in rows)/3600000,
+        auxiliary_pump_mean_kW=fsum(r.get('aux_pump_w',0)*(r['end_ns']-r['start_ns'])/1e9 for r in rows)/(end*1000),
         max_recharge_m3_h=max(r['recharge_flow_m3_h'] for r in rows),first_violations_s=firsts,codes=codes,excitation=expected_excitation,
         first_reserve_actual_s=next((r['time_ns']/1e9 for r in series if r['time_ns']>=round(fault*1e9) and all(r['cold_'+k+'_m3']>=.85*c.get('tank_volume_m3',15) for k in ('A','B'))),None),
         final_tanks_k={k:series[-1]['tank_'+k+'_k'] for k in ('A','B')},independent_energy=independent['independent_energy'],independent_primary=hyd,

@@ -82,7 +82,11 @@ class ClosureCoordinator:
             self.load_tank='B';self.thermal_takeover_used=True
             self.events.append(dict(time_ns=now,from_state=self.state,to_state=self.state,reason='MEASURED_A_ISOLATION_DEMAND_B_RESERVE_PROVEN'))
         if self.o.get('use_spare') and o.active_pumps<3 and o.source_enable_echo:self.wanted_pumps=4
-        if self.o.get('restore_with_four_pumps') and self.failure_seen and self.cold(o.reserve_A_k)<.85*self.o.get('tank_volume_m3',15):self.wanted_pumps=4
+        if self.o.get('restore_with_four_pumps') and self.failure_seen:
+            if self.cold(o.reserve_A_k)<.85*self.o.get('tank_volume_m3',15):self.wanted_pumps=4
+            elif self.wanted_pumps==4 and o.active_pumps==4:
+                self.wanted_pumps=3
+                self.events.append(dict(time_ns=now,from_state=self.state,to_state=self.state,reason='A_RESERVE_PROVEN_RETURN_3_RUNNING_1_STANDBY'))
         if o.source_enable_echo and o.source_speed>.2 and o.source_flow_m3_s<330/3600-1e-12:
             if self.design_low_since is None:self.design_low_since=now
         else:self.design_low_since=None

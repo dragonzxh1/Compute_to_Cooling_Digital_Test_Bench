@@ -47,22 +47,26 @@ class ClosurePlant(LegacyPlant):
         if self.spec.get('preconditioning_mode')=='A' and path!='RC':
             power=min(power,tower_capacity('W2',q,hot-273.15,db=self.spec.get('dry_bulb_c',46),wb=self.spec.get('wet_bulb_c',30))) if self.available.get(path,False) else 0.
         reject=min(power,CV*q*max(0,hot-floor));pipe.advance(dt,q,hot-reject/(CV*q));self.pre_q[path]=q
-        gain=self.spec.get('pipe_ambient_UA_W_K',500.)*(319.15-fsum(pipe.t)/pipe.n)
+        return pump,reject,0.
+    def pipe_heat_gain(self,path,dt):
+        # Stopping the preconditioning pump does NOT remove ambient heat gain.
+        # Registered UA applies to the proposed W2/W3/RC preconditioned paths.
+        pipe=self.pipes[path];gain=self.spec.get('pipe_ambient_UA_W_K',500.)*(319.15-fsum(pipe.t)/pipe.n)
         pipe.t=[x+gain*dt/(pipe.cap*pipe.n) for x in pipe.t]
-        if max(pipe.t)<=314.3948:self.ready_at.setdefault(path,now_s)
-        return pump,reject,gain
+        return gain
     def _precondition_prelude(self):
         paths=[x for x in ('W2','W3','RC') if x in self.pipes]
-        before=self.energy();pump=reject=gain=0.
+        before=self.energy();pump=reject=gain=0.;initial_temperatures={k:[x-273.15 for x in self.pipes[k].t] for k in paths}
         # Standby-only component prelude; online IT circuit remains outside
         # this independent component ledger, not silently assigned zero IT.
         for tick in range(round(self.spec.get('prelude_s',0))):
             for name in paths:
-                a,b,c=self._loop(name,1.,tick+1);pump+=a;reject+=b;gain+=c
+                a,b,c=self._loop(name,1.,tick+1);pump+=a;reject+=b;gain+=c+self.pipe_heat_gain(name,1.)
+                if max(self.pipes[name].t)<=314.3948:self.ready_at.setdefault(name,tick+1)
             if tick%10==9:self.pre_history.append(dict(time_s=tick+1,temperatures_C={k:[x-273.15 for x in self.pipes[k].t] for k in paths},pump_W=sum(self.pre_q.get(k,0)*20000/.65 for k in paths)))
         residual=self.energy()-before-pump+reject-gain
         check(abs(residual)<=rounding_bound(before,self.energy(),pump,reject,gain,operations=8192*max(1,self.spec.get('prelude_s',0))),'PRELUDE_ENERGY')
-        self.prelude=dict(initial_J=before,final_J=self.energy(),pump_J=pump,rejected_J=reject,ambient_J=gain,residual_J=residual,ready_times_s=dict(self.ready_at),duration_s=self.spec.get('prelude_s',0),component_scope='STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD',paths=paths)
+        self.prelude=dict(initial_J=before,final_J=self.energy(),pump_J=pump,rejected_J=reject,ambient_J=gain,residual_J=residual,ready_times_s=dict(self.ready_at),duration_s=self.spec.get('prelude_s',0),component_scope='STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD',paths=paths,initial_temperatures_C=initial_temperatures,final_temperatures_C={k:[x-273.15 for x in self.pipes[k].t] for k in paths})
     def inject(self,seconds):
         super().inject(seconds)
         if self.spec.get('fault')=='A_LOAD_RESTRICTION' and seconds>=self.spec.get('fault_at_s',30):self.leak_A=True
@@ -138,6 +142,8 @@ class ClosurePlant(LegacyPlant):
             rec.update(new_k=list(t.t),environment_heat_w=gain);tank_records[name]=rec
         self.last_source_q=source;self.last_load_q=load;aux_pump=aux_reject=0.;aux_flows={}
         for name in ('W2','W3','RC'):
+            if name not in self.pipes:continue
+            ambient+=self.pipe_heat_gain(name,dt)
             if name=='RC' and recharge>0:continue
             a,b,c=self._loop(name,dt,end_ns/1e9);aux_pump+=a;aux_reject+=b;ambient+=c
             if a:aux_flows[name]=self.pre_q[name]*3600
