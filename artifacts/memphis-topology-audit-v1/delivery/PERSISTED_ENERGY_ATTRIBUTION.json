@@ -1,0 +1,255 @@
+{
+  "method": "PURE_PERSISTED_CSV_AND_PROFILE_ARITHMETIC_NO_MODEL_EXECUTION",
+  "tanks": {
+    "A": {
+      "classification": "Net port enthalpy; pump andHX already inside port temperature; do not add twice",
+      "stored_delta_MJ": 301.5072898794837,
+      "ambient_MJ": 0.09630649189130713,
+      "attribution_residual_J": -0.00012689828872680664,
+      "load_loop_net_MJ": 4947.5982401159,
+      "source_loop_net_MJ": -4646.1872567284345,
+      "rows": 18000
+    },
+    "B": {
+      "classification": "Net port enthalpy; pump andHX already inside port temperature; do not add twice",
+      "stored_delta_MJ": -458.48436454856017,
+      "ambient_MJ": 0.3487187969065281,
+      "attribution_residual_J": 0.00016677379608154297,
+      "load_loop_net_MJ": 0.0,
+      "source_loop_net_MJ": -458.8330833452999,
+      "rows": 18000
+    }
+  },
+  "numerics": [
+    {
+      "crossing_scope": "Linear interpolation of cellcenter temperatures; not measured thermocline geometry",
+      "dt_s": 0.1,
+      "case": "MESH20",
+      "cold_threshold_crossing_height_fraction": 0.03410384046764479,
+      "real_mixing": "NUMERICAL_INCOMPLETE_CALIBRATION_REQUIRED",
+      "volume_precision": "CELL_COUNT_QUANTIZED",
+      "cell_volume_m3": 0.75,
+      "actual_A_discharge": [
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412544191.50366,
+          "initial_cold_m3": 0.75,
+          "initial_energy_J": 19322670061.67685,
+          "initial_outlet_C": 40.37599925060039,
+          "layers": 20,
+          "maximum_outlet_C": 46.35317710154368,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.4874698232133,
+          "rise_K": 5.977177850943292,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        },
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412548411.952152,
+          "initial_cold_m3": 0.75,
+          "initial_energy_J": 19322670061.67685,
+          "initial_outlet_C": 40.37599925060039,
+          "layers": 40,
+          "maximum_outlet_C": 46.35242194873962,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.4874698232133,
+          "rise_K": 5.976422698139231,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        }
+      ],
+      "layers": 20
+    },
+    {
+      "crossing_scope": "Linear interpolation of cellcenter temperatures; not measured thermocline geometry",
+      "dt_s": 0.1,
+      "case": "MESH40",
+      "cold_threshold_crossing_height_fraction": 0.017027379725478346,
+      "real_mixing": "NUMERICAL_INCOMPLETE_CALIBRATION_REQUIRED",
+      "volume_precision": "CELL_COUNT_QUANTIZED",
+      "cell_volume_m3": 0.375,
+      "actual_A_discharge": [
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412486375.96519,
+          "initial_cold_m3": 0.375,
+          "initial_energy_J": 19332240758.032654,
+          "initial_outlet_C": 40.386167243541706,
+          "layers": 40,
+          "maximum_outlet_C": 46.380750363245795,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.48745391529718,
+          "rise_K": 5.994583119704089,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        },
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412434473.72484,
+          "initial_cold_m3": 0.375,
+          "initial_energy_J": 19332240758.032654,
+          "initial_outlet_C": 40.386167243541706,
+          "layers": 80,
+          "maximum_outlet_C": 46.385714931331336,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.48745391529718,
+          "rise_K": 5.999547687789629,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        }
+      ],
+      "layers": 40
+    },
+    {
+      "crossing_scope": "Linear interpolation of cellcenter temperatures; not measured thermocline geometry",
+      "dt_s": 0.1,
+      "case": "BASELINE_EXACT",
+      "cold_threshold_crossing_height_fraction": 0.008477135104723577,
+      "real_mixing": "NUMERICAL_INCOMPLETE_CALIBRATION_REQUIRED",
+      "volume_precision": "CELL_COUNT_QUANTIZED",
+      "cell_volume_m3": 0.1875,
+      "actual_A_discharge": [
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412317160.484177,
+          "initial_cold_m3": 0.1875,
+          "initial_energy_J": 19337038949.879482,
+          "initial_outlet_C": 40.407858236451716,
+          "layers": 80,
+          "maximum_outlet_C": 46.425788116794024,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.48742306774267,
+          "rise_K": 6.017929880342308,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        },
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412278394.01413,
+          "initial_cold_m3": 0.1875,
+          "initial_energy_J": 19337038949.879482,
+          "initial_outlet_C": 40.407858236451716,
+          "layers": 160,
+          "maximum_outlet_C": 46.43820514918929,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.48742306774267,
+          "rise_K": 6.030346912737571,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        }
+      ],
+      "layers": 80
+    },
+    {
+      "crossing_scope": "Linear interpolation of cellcenter temperatures; not measured thermocline geometry",
+      "dt_s": 0.1,
+      "case": "MESH160",
+      "cold_threshold_crossing_height_fraction": 0.004214303356193818,
+      "real_mixing": "NUMERICAL_INCOMPLETE_CALIBRATION_REQUIRED",
+      "volume_precision": "CELL_COUNT_QUANTIZED",
+      "cell_volume_m3": 0.09375,
+      "actual_A_discharge": [
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412192895.679924,
+          "initial_cold_m3": 0.09375,
+          "initial_energy_J": 19339517464.864445,
+          "initial_outlet_C": 40.430317853483075,
+          "layers": 160,
+          "maximum_outlet_C": 46.49395566055614,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.487380572174914,
+          "rise_K": 6.063637807073064,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        },
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412169688.397923,
+          "initial_cold_m3": 0.09375,
+          "initial_energy_J": 19339517464.864445,
+          "initial_outlet_C": 40.430317853483075,
+          "layers": 320,
+          "maximum_outlet_C": 46.51015862567641,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.487380572174914,
+          "rise_K": 6.079840772193336,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        }
+      ],
+      "layers": 160
+    },
+    {
+      "crossing_scope": "Linear interpolation of cellcenter temperatures; not measured thermocline geometry",
+      "dt_s": 0.05,
+      "case": "DT005",
+      "cold_threshold_crossing_height_fraction": 0.008477611630816558,
+      "real_mixing": "NUMERICAL_INCOMPLETE_CALIBRATION_REQUIRED",
+      "volume_precision": "CELL_COUNT_QUANTIZED",
+      "cell_volume_m3": 0.1875,
+      "actual_A_discharge": [
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412313179.06323,
+          "initial_cold_m3": 0.1875,
+          "initial_energy_J": 19337037066.14281,
+          "initial_outlet_C": 40.40764726375647,
+          "layers": 80,
+          "maximum_outlet_C": 46.42546444504973,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.48724681537328,
+          "rise_K": 6.017817181293253,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        },
+        {
+          "dt_s": 0.05,
+          "final_energy_J": 19412274589.031452,
+          "initial_cold_m3": 0.1875,
+          "initial_energy_J": 19337037066.14281,
+          "initial_outlet_C": 40.40764726375647,
+          "layers": 160,
+          "maximum_outlet_C": 46.437801683286466,
+          "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+          "profile_time_s": 1800.0,
+          "return_boundary_C": 48.48724681537328,
+          "rise_K": 6.0301544195299925,
+          "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+          "status": "FAIL",
+          "tank": "A"
+        }
+      ],
+      "layers": 80
+    }
+  ],
+  "bottom_cell_identity": {
+    "scope": "Instantaneous zero-rate solution excluding tinyambient term, not a future-temperature prediction or real diffuser calibration",
+    "zero_rate_mixing_temperature_C": 40.4080037281181,
+    "transfer_m3_h": 413.75575111909495,
+    "actual_start_C": 40.407848758682746,
+    "source_m3_h": 373.1731271840133,
+    "difference_from_current_K": 0.00015496943535708851,
+    "next_layer_C": 46.22765896613555,
+    "source_return_C": 39.775115498093385
+  }
+}

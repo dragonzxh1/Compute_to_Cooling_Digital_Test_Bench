@@ -1,0 +1,198 @@
+{
+  "status": "OFFICIAL_ZIP_RAW_AND_RUNTIME_INDEPENDENT_FILE_VERIFICATION_PASS",
+  "run": 39269508449,
+  "source_commit": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c",
+  "manifest_sha256": "25126c48431eb62697a70b19529b8f0a5eedb7099815321189ea33eae8cc64d5",
+  "raw_files": 2047,
+  "stages": [
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 4684,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ASSERTIONS"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 7452,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "BASELINE_EXACT"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 2060,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "TRANSFER330_DIAGNOSTIC"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 2148,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "FINAL"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 4812,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "MESH20"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 1684,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "MESH40"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 5180,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "MESH160"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 2500,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "DT005"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 6924,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "BASELINE_SECOND1800"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 7856,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "TRANSFER330_SECOND1800"
+    },
+    {
+      "cleanup_complete": true,
+      "image": "20261012.333.1",
+      "pid": 7044,
+      "active_after_cleanup": 0,
+      "job_mb": 2048,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "TRANSFER330_SECOND650"
+    }
+  ],
+  "archives": [
+    {
+      "name": "memphis-topology-compact-baseline-39269508449",
+      "local_sha256": "572d1340b51037caea1bfc677dd2df4b7b5e2104b6949932b13d6535990b08db",
+      "official_digest": "sha256:572d1340b51037caea1bfc677dd2df4b7b5e2104b6949932b13d6535990b08db",
+      "id": 12195376462,
+      "bytes": 20167308
+    },
+    {
+      "name": "memphis-topology-compact-diagnostic-39269508449",
+      "local_sha256": "3def2649dd84e1c161baae4590fcc78e62252f1c3cf752f15855343b9462f19a",
+      "official_digest": "sha256:3def2649dd84e1c161baae4590fcc78e62252f1c3cf752f15855343b9462f19a",
+      "id": 12195696568,
+      "bytes": 306330
+    },
+    {
+      "name": "memphis-topology-compact-final-39269508449",
+      "local_sha256": "5bfb7fa3f2daa98ffe7585fb1af4e5825429cc40b458cf0d55332a98612b7196",
+      "official_digest": "sha256:5bfb7fa3f2daa98ffe7585fb1af4e5825429cc40b458cf0d55332a98612b7196",
+      "id": 12195683617,
+      "bytes": 22314147
+    },
+    {
+      "name": "memphis-topology-compact-mesh-39269508449",
+      "local_sha256": "ebcc7a1a58caa85d76ac5c7eafcfb860dc7590fd55147b5b0fcc6818856b5bcd",
+      "official_digest": "sha256:ebcc7a1a58caa85d76ac5c7eafcfb860dc7590fd55147b5b0fcc6818856b5bcd",
+      "id": 12196341008,
+      "bytes": 1189159
+    },
+    {
+      "name": "memphis-topology-compact-second-39269508449",
+      "local_sha256": "a534b21af718116d93be537b0ed9e07b1053032b657e8c3f3ce532df142f5d66",
+      "official_digest": "sha256:a534b21af718116d93be537b0ed9e07b1053032b657e8c3f3ce532df142f5d66",
+      "id": 12196340470,
+      "bytes": 788081
+    },
+    {
+      "name": "memphis-topology-raw-baseline-39269508449",
+      "local_sha256": "7bf57ab8ccf845a7a6bd7c40ca3583fb62e8778d74128506d8fbcc156dd64dd2",
+      "official_digest": "sha256:7bf57ab8ccf845a7a6bd7c40ca3583fb62e8778d74128506d8fbcc156dd64dd2",
+      "id": 12195591058,
+      "bytes": 129417516
+    },
+    {
+      "name": "memphis-topology-raw-diagnostic-39269508449",
+      "local_sha256": "5bb5df68b5b458ff6afb72cd356e5e19c27f5d75067bf49586697064b8d9e8de",
+      "official_digest": "sha256:5bb5df68b5b458ff6afb72cd356e5e19c27f5d75067bf49586697064b8d9e8de",
+      "id": 12196045882,
+      "bytes": 125812067
+    },
+    {
+      "name": "memphis-topology-raw-final-39269508449",
+      "local_sha256": "2def7eeb50e833532495c99af1024398cade53f487d38d80faf1857c7cb3678e",
+      "official_digest": "sha256:2def7eeb50e833532495c99af1024398cade53f487d38d80faf1857c7cb3678e",
+      "id": 12195494272,
+      "bytes": 22361669
+    },
+    {
+      "name": "memphis-topology-raw-mesh-39269508449",
+      "local_sha256": "658202d1fd02d5beb1b3f13b65c48f0e48faba4ac5471600d4d6ef48f82837b8",
+      "official_digest": "sha256:658202d1fd02d5beb1b3f13b65c48f0e48faba4ac5471600d4d6ef48f82837b8",
+      "id": 12196530346,
+      "bytes": 585776076
+    },
+    {
+      "name": "memphis-topology-raw-second-39269508449",
+      "local_sha256": "bd0e4b34aa574a121c0bf2a99c8d280f2cbcd02951de2026021d5cefd207a970",
+      "official_digest": "sha256:bd0e4b34aa574a121c0bf2a99c8d280f2cbcd02951de2026021d5cefd207a970",
+      "id": 12196250559,
+      "bytes": 319355948
+    }
+  ],
+  "raw_logs_sha256": "679d1876c4061653598c563cffd48a452b788a72e1da342bbad0f9024b56ad95",
+  "method": "PowerShell streaming SHA256; no local Python/model",
+  "engineering_approval": false,
+  "formal": false,
+  "procurement": false,
+  "hardware": false,
+  "phase6": false
+}

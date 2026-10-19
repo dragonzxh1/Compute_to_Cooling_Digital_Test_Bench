@@ -1,0 +1,5 @@
+condition,current,reference,unit,status,missing
+源侧流量必须超过实际A转移流量，且回液合格,373.1731271840133,413.75575111909495,m3/h,NECESSARY_FOR_BULK_UPWARD_REBUILD_IN_CURRENT1D_PORT_MODEL_NOT_SUFFICIENT,PG25QH/冷塔排热/真实布水器
+恢复时间,,,s,CUSTOMER_DEADLINE_NOT_REGISTERED,允许第二故障间隔；不虚构600或1800秒合同
+恢复A库存所需净合格流量下界,-40.58262393508164,(V_required-V_available)/recovery_hours,m3/h,NEGATIVE_BASELINE; energy andmixing must also hold,设计恢复时限/流量能力
+两罐90秒组件资格与整系统二次故障分别通过,False,All component gates + full coupled secondfault,separate_verdicts,SEE_ACTUAL_COMPARISONS,厂家标定/定压/NPSH/真实双CDU接管

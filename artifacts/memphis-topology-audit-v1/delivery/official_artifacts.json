@@ -1,0 +1,205 @@
+{
+  "total_count": 10,
+  "artifacts": [
+    {
+      "id": 12196530346,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NjUzMDM0Ng==",
+      "name": "memphis-topology-raw-mesh-39269508449",
+      "size_in_bytes": 585776076,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196530346",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196530346/zip",
+      "expired": false,
+      "digest": "sha256:658202d1fd02d5beb1b3f13b65c48f0e48faba4ac5471600d4d6ef48f82837b8",
+      "created_at": "2026-10-19T14:52:55Z",
+      "updated_at": "2026-10-19T14:52:55Z",
+      "expires_at": "2026-11-18T14:51:56Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12196341008,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NjM0MTAwOA==",
+      "name": "memphis-topology-compact-mesh-39269508449",
+      "size_in_bytes": 1189159,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196341008",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196341008/zip",
+      "expired": false,
+      "digest": "sha256:ebcc7a1a58caa85d76ac5c7eafcfb860dc7590fd55147b5b0fcc6818856b5bcd",
+      "created_at": "2026-10-19T14:52:57Z",
+      "updated_at": "2026-10-19T14:52:57Z",
+      "expires_at": "2026-11-18T14:52:55Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12196340470,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NjM0MDQ3MA==",
+      "name": "memphis-topology-compact-second-39269508449",
+      "size_in_bytes": 788081,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196340470",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196340470/zip",
+      "expired": false,
+      "digest": "sha256:a534b21af718116d93be537b0ed9e07b1053032b657e8c3f3ce532df142f5d66",
+      "created_at": "2026-10-19T14:50:08Z",
+      "updated_at": "2026-10-19T14:50:08Z",
+      "expires_at": "2026-11-18T14:50:07Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12196250559,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NjI1MDU1OQ==",
+      "name": "memphis-topology-raw-second-39269508449",
+      "size_in_bytes": 319355948,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196250559",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196250559/zip",
+      "expired": false,
+      "digest": "sha256:bd0e4b34aa574a121c0bf2a99c8d280f2cbcd02951de2026021d5cefd207a970",
+      "created_at": "2026-10-19T14:50:07Z",
+      "updated_at": "2026-10-19T14:50:07Z",
+      "expires_at": "2026-11-18T14:49:33Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12196045882,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NjA0NTg4Mg==",
+      "name": "memphis-topology-raw-diagnostic-39269508449",
+      "size_in_bytes": 125812067,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196045882",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12196045882/zip",
+      "expired": false,
+      "digest": "sha256:5bb5df68b5b458ff6afb72cd356e5e19c27f5d75067bf49586697064b8d9e8de",
+      "created_at": "2026-10-19T14:40:26Z",
+      "updated_at": "2026-10-19T14:40:26Z",
+      "expires_at": "2026-11-18T14:40:12Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12195696568,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NTY5NjU2OA==",
+      "name": "memphis-topology-compact-diagnostic-39269508449",
+      "size_in_bytes": 306330,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195696568",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195696568/zip",
+      "expired": false,
+      "digest": "sha256:3def2649dd84e1c161baae4590fcc78e62252f1c3cf752f15855343b9462f19a",
+      "created_at": "2026-10-19T14:40:27Z",
+      "updated_at": "2026-10-19T14:40:27Z",
+      "expires_at": "2026-11-18T14:40:26Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12195683617,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NTY4MzYxNw==",
+      "name": "memphis-topology-compact-final-39269508449",
+      "size_in_bytes": 22314147,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195683617",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195683617/zip",
+      "expired": false,
+      "digest": "sha256:5bfb7fa3f2daa98ffe7585fb1af4e5825429cc40b458cf0d55332a98612b7196",
+      "created_at": "2026-10-19T14:53:53Z",
+      "updated_at": "2026-10-19T14:53:53Z",
+      "expires_at": "2026-11-18T14:53:51Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12195591058,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NTU5MTA1OA==",
+      "name": "memphis-topology-raw-baseline-39269508449",
+      "size_in_bytes": 129417516,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195591058",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195591058/zip",
+      "expired": false,
+      "digest": "sha256:7bf57ab8ccf845a7a6bd7c40ca3583fb62e8778d74128506d8fbcc156dd64dd2",
+      "created_at": "2026-10-19T14:36:02Z",
+      "updated_at": "2026-10-19T14:36:02Z",
+      "expires_at": "2026-11-18T14:35:53Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12195494272,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NTQ5NDI3Mg==",
+      "name": "memphis-topology-raw-final-39269508449",
+      "size_in_bytes": 22361669,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195494272",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195494272/zip",
+      "expired": false,
+      "digest": "sha256:2def7eeb50e833532495c99af1024398cade53f487d38d80faf1857c7cb3678e",
+      "created_at": "2026-10-19T14:53:50Z",
+      "updated_at": "2026-10-19T14:53:50Z",
+      "expires_at": "2026-11-18T14:53:48Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    },
+    {
+      "id": 12195376462,
+      "node_id": "MDg6QXJ0aWZhY3QxMjE5NTM3NjQ2Mg==",
+      "name": "memphis-topology-compact-baseline-39269508449",
+      "size_in_bytes": 20167308,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195376462",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12195376462/zip",
+      "expired": false,
+      "digest": "sha256:572d1340b51037caea1bfc677dd2df4b7b5e2104b6949932b13d6535990b08db",
+      "created_at": "2026-10-19T14:36:05Z",
+      "updated_at": "2026-10-19T14:36:05Z",
+      "expires_at": "2026-11-18T14:36:02Z",
+      "workflow_run": {
+        "id": 39269508449,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-topology-audit-v1",
+        "head_sha": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"
+      }
+    }
+  ]
+}

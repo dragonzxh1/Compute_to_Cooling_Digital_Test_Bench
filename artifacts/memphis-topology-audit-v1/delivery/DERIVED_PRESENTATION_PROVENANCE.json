@@ -1,0 +1,177 @@
+{
+  "original_official_report_sha256": "a5541ea6e9d24150c3dddb03aa3d7b266a1011329e1e74238a345f78e9c10cd2",
+  "private_preloop_witnesses": [
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 30.0,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|30",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 30.0,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|30",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 31.1,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|31.1",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 31.1,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|31.1",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 42.9,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|42.9",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 42.9,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|42.9",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 62.9,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|62.9",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 62.9,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|62.9",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 84.7,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|84.7",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 84.7,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|84.7",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 120.1,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|120.1",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 120.1,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|120.1",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 635.9,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|635.9",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 635.9,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|635.9",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 638.1,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|638.1",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 638.1,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|638.1",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    },
+    {
+      "private_pump_W": 0,
+      "time_s": 1800.0,
+      "private_preloop_flow_m3_h": 0.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_W2|1800",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "W2",
+      "online_main": true
+    },
+    {
+      "private_pump_W": 769.2307692307692,
+      "time_s": 1800.0,
+      "private_preloop_flow_m3_h": 90.0,
+      "runtime_CV_row": "SOURCE_AND_PIPE_RC|1800",
+      "method": "Actual persisted CV pump heat / registered20000Pa/.65efficiency; compare source-loop quadratic QH=90",
+      "path": "RC",
+      "online_main": false
+    }
+  ],
+  "original_official_netlist_sha256": "5a2fcff2d31ef95fc5677dd1612f05116481a5359d066898d2ac25f6beac6f17",
+  "original_official_html_sha256": "66af0648b8b6613d3a8676afae31a0cf8cee2e94a063366a06ccedd06541ba2c",
+  "method": "DERIVED_PERSISTED_EVIDENCE_PRESENTATION_ONLY",
+  "derived_report_sha256": "1434811a5d9c24745a7290183ae2fd874f434e5ce12d9dbb047a8b333701b516",
+  "extended_netlist_sha256": "ae48b69b7f17aba6ce9adb2aee338f6dfee43f9859a47c9887eb6a2098019b52",
+  "physical_outputs_changed": false,
+  "diagram_scope": "netlist and saved actual keyframes; derived instrument plot, not ISA construction drawing",
+  "M1_changed": false,
+  "derived_html_sha256": "3e7a88e3e1042ed570f9626cb5c669be134990c1eeedd89f14023a4ffdd1bf35",
+  "source_execution_changed": false
+}
