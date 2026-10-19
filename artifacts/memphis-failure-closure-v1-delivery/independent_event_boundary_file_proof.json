@@ -1,0 +1,63 @@
+{
+  "method": "Independent bounded JsonDocument decoding of immutable original traces; no model execution",
+  "run": 39180526734,
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "cases": [
+    {
+      "id": "valves__A_demand_no_stuck",
+      "frames": 1200,
+      "nonresponse_frames": 26,
+      "minimum_published_load_m3_h": 10.28663112014795,
+      "first_actual_source_B_s": 37.9,
+      "minimum_all_physical_steps_load_m3_h": 0.0,
+      "first_B_request_s": 30.1,
+      "source_phases_raw_sha256": "0f6a1375c4ce41d28f1af8bea9a66fad5afb086421adb21a65c65cfac0c9610f",
+      "hardware_PLC": "NOT_CLAIMED",
+      "first_actual_load_B_s": 35.3,
+      "grades": {
+        "90S_CONTINUITY": "FAIL",
+        "HYDRAULIC_COMPLIANCE": "FAIL",
+        "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+        "RESERVE_RECOVERY": "NOT_RUN",
+        "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+        "SOURCE_RECOVERY": "PASS",
+        "THERMAL_COMPLIANCE": "PASS"
+      },
+      "issued_B_requests": 1050
+    },
+    {
+      "id": "valves__A_demand_stuck",
+      "frames": 1200,
+      "nonresponse_frames": 1050,
+      "minimum_published_load_m3_h": 178.96762770039132,
+      "first_actual_source_B_s": 37.9,
+      "minimum_all_physical_steps_load_m3_h": 178.96762770039132,
+      "first_B_request_s": 30.1,
+      "source_phases_raw_sha256": "5c5326d7a843e86fd553f0be4df5f9aac15ed1bf198d0e09fb996146de6c5924",
+      "hardware_PLC": "NOT_CLAIMED",
+      "first_actual_load_B_s": null,
+      "grades": {
+        "90S_CONTINUITY": "FAIL",
+        "HYDRAULIC_COMPLIANCE": "FAIL",
+        "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+        "RESERVE_RECOVERY": "NOT_RUN",
+        "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+        "SOURCE_RECOVERY": "PASS",
+        "THERMAL_COMPLIANCE": "FAIL"
+      },
+      "issued_B_requests": 1050
+    },
+    {
+      "id": "readiness_negatives__source_publication_loss",
+      "status": "PUBLISHED_SAMPLE_LOSS_AND_CLOCK_FAIL_CLOSED_VERIFIED",
+      "not_extra_M1_credit": true,
+      "first_stale_s": 40.9,
+      "last_actual_sample_s": 39.8,
+      "source_phases_raw_sha256": "a678d5edfa249e21129c33154b9a1420f19a06fa7c35bbfafbdcc2c72d3ba369",
+      "distinct_published_samples_used": 200,
+      "first_stale_stop_permission_s": 40.9,
+      "last_protection_evaluation_s": 239.9
+    }
+  ],
+  "hardware": false
+}

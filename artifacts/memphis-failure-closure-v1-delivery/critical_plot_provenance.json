@@ -1,0 +1,33 @@
+{
+  "official_html_sha256": "df3c8caa011e8e6304eabc20b0ae3b11226ef479aa4ee1827aa9ca9322887fa5",
+  "engineering_approval": false,
+  "cases": [
+    {
+      "method": "Every saved physical interval; no interpolation or favorable sampling",
+      "first_actual_B_path_cold_s": 64.2,
+      "actual_B_path_cold_delay_s": 34.2,
+      "physical_rows": 2400,
+      "minimum_time_s": 35.1,
+      "physical_raw_sha256": "c178fa1ccdad76c97f8483f08ff43c5f8c5334745efff2d9e406308b6fb02b70",
+      "original_any_path_cold_delay_s": 0.10000000000000142,
+      "minimum_load_m3_h": 0.0,
+      "id": "valves__A_demand_no_stuck"
+    },
+    {
+      "method": "Every saved physical interval; no interpolation or favorable sampling",
+      "first_actual_B_path_cold_s": 64.2,
+      "actual_B_path_cold_delay_s": 34.2,
+      "physical_rows": 2400,
+      "minimum_time_s": 30.1,
+      "physical_raw_sha256": "06237dfe4b7170724f5841b177ae414c0e3acae8159fcc2966259b37583069ae",
+      "original_any_path_cold_delay_s": 0.10000000000000142,
+      "minimum_load_m3_h": 178.96762770039132,
+      "id": "valves__A_demand_stuck"
+    }
+  ],
+  "no_model_rerun": true,
+  "derived_html_sha256": "290ea166cdc55e3d01d581677e1ac8cbf4e4e6f0e9ee7c2556c26cbd16ce46b5",
+  "run": 39180526734,
+  "renderer_source_raw_sha256": "0bbce5dc7e0dab158c72dde6ee5aa23971a097df85c10a31bc37766d58841312",
+  "transformation": "EVENT_COMPLETE_TWO_VALVE_CASES_v1"
+}

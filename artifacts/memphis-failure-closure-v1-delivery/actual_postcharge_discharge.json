@@ -1,0 +1,34 @@
+[
+  {
+    "case": "recharge_new__500.0",
+    "input_state_sha256": "7ef363c6f310b3c5781e9e475c2836a6889096a334d7ee1f0300d08b30444da4",
+    "outlet_rise_K": 0.5093525663106107,
+    "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+    "status": "NO_FEASIBLE_DESIGN",
+    "tank": "A"
+  },
+  {
+    "case": "recharge_new__500.0",
+    "input_state_sha256": "28b957e23d09e08b7cf75adfeddd7bd8dcd79accf6008ffbdf65238dd2315178",
+    "outlet_rise_K": 0.07617877980106869,
+    "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "case": "recharge_new__1000.0",
+    "input_state_sha256": "7ef363c6f310b3c5781e9e475c2836a6889096a334d7ee1f0300d08b30444da4",
+    "outlet_rise_K": 0.5093525663106107,
+    "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+    "status": "NO_FEASIBLE_DESIGN",
+    "tank": "A"
+  },
+  {
+    "case": "recharge_new__1000.0",
+    "input_state_sha256": "a2b59956777d080713d810b0780370be0d870e9d0ca114df6af06f2c7cf2afe7",
+    "outlet_rise_K": 0.6756142456532643,
+    "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+    "status": "NO_FEASIBLE_DESIGN",
+    "tank": "B"
+  }
+]

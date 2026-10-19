@@ -1,0 +1,417 @@
+[
+  {
+    "run": 39146509431,
+    "source_commit": "cf4b5661a1ff3de5ac8ca10ae4bc24b6c3cb58cd",
+    "conclusion": "cancelled",
+    "official_artifacts": {
+      "total_count": 1,
+      "artifacts": [
+        {
+          "id": 12143841918,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0Mzg0MTkxOA==",
+          "name": "memphis-closure-raw-baseline-39146509431",
+          "size_in_bytes": 9327008,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143841918",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143841918/zip",
+          "expired": false,
+          "digest": "sha256:4cd4ee59a76c04e07f70e5723fd25269b5611f9ecb42a90496ab791e06ceaca4",
+          "created_at": "2026-10-18T16:47:34Z",
+          "updated_at": "2026-10-18T16:47:34Z",
+          "expires_at": "2026-11-17T16:47:32Z",
+          "workflow_run": {
+            "id": 39146509431,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "cf4b5661a1ff3de5ac8ca10ae4bc24b6c3cb58cd"
+          }
+        }
+      ]
+    },
+    "preserved_raw": [],
+    "log_sha256": "156304d6273284f13f76ae365435dcc9bd054e522c808c5eebcf9a72f8d486fd",
+    "log_state": "PRESERVED",
+    "all_official_artifacts_remain_on_GitHub": true,
+    "no_pass_reuse": true,
+    "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+  },
+  {
+    "run": 39146681509,
+    "source_commit": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba",
+    "conclusion": "failure",
+    "official_artifacts": {
+      "total_count": 17,
+      "artifacts": [
+        {
+          "id": 12144080754,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0NDA4MDc1NA==",
+          "name": "memphis-closure-raw-tanks-a-39146681509",
+          "size_in_bytes": 387465,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12144080754",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12144080754/zip",
+          "expired": false,
+          "digest": "sha256:a1d48cad6a0e67b8e7efdd868dbf86f9769300a9584fc9b20439be757dcc719d",
+          "created_at": "2026-10-18T16:50:17Z",
+          "updated_at": "2026-10-18T16:50:17Z",
+          "expires_at": "2026-11-17T16:50:15Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12144056685,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0NDA1NjY4NQ==",
+          "name": "memphis-closure-compact-inverse-39146681509",
+          "size_in_bytes": 610072,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12144056685",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12144056685/zip",
+          "expired": false,
+          "digest": "sha256:e49624b1b3ee435bdaade904a01555983fd06afe8f6462467843a900883629fd",
+          "created_at": "2026-10-18T16:56:07Z",
+          "updated_at": "2026-10-18T16:56:07Z",
+          "expires_at": "2026-11-17T16:56:06Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143911282,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzkxMTI4Mg==",
+          "name": "memphis-closure-raw-precool-39146681509",
+          "size_in_bytes": 48567640,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143911282",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143911282/zip",
+          "expired": false,
+          "digest": "sha256:9f17315aa05457aa772730cc3561642e1f2342f46a63f9e0968d2aeb08acb05a",
+          "created_at": "2026-10-18T16:51:38Z",
+          "updated_at": "2026-10-18T16:51:38Z",
+          "expires_at": "2026-11-17T16:51:32Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143822348,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzgyMjM0OA==",
+          "name": "memphis-closure-compact-tanks-a-39146681509",
+          "size_in_bytes": 337979,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143822348",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143822348/zip",
+          "expired": false,
+          "digest": "sha256:ccf3b715a76368959f68dc34897ff8d2e17322d87154b52664457858142a1834",
+          "created_at": "2026-10-18T16:50:18Z",
+          "updated_at": "2026-10-18T16:50:18Z",
+          "expires_at": "2026-11-17T16:50:17Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143768171,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0Mzc2ODE3MQ==",
+          "name": "memphis-closure-raw-scenarios-39146681509",
+          "size_in_bytes": 120752592,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143768171",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143768171/zip",
+          "expired": false,
+          "digest": "sha256:b4a1605f5f5934d4b6ce205a4cec6742bee92e67e81b52570888b5bc2075039a",
+          "created_at": "2026-10-18T16:57:10Z",
+          "updated_at": "2026-10-18T16:57:10Z",
+          "expires_at": "2026-11-17T16:56:56Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143712036,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzcxMjAzNg==",
+          "name": "memphis-closure-raw-recharge-39146681509",
+          "size_in_bytes": 69945128,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143712036",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143712036/zip",
+          "expired": false,
+          "digest": "sha256:ab15e535fd4758379063a4578d99a65ca454497f7d8f88c653d84c98f7becdf0",
+          "created_at": "2026-10-18T16:56:17Z",
+          "updated_at": "2026-10-18T16:56:17Z",
+          "expires_at": "2026-11-17T16:56:10Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143707129,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzcwNzEyOQ==",
+          "name": "memphis-closure-compact-recharge-39146681509",
+          "size_in_bytes": 163201,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143707129",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143707129/zip",
+          "expired": false,
+          "digest": "sha256:2dfba39a9d1220ad3b6f8bbf5256875f6cc8db09e1cfc1d729f158cf98deb83c",
+          "created_at": "2026-10-18T16:56:18Z",
+          "updated_at": "2026-10-18T16:56:18Z",
+          "expires_at": "2026-11-17T16:56:17Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143703318,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzcwMzMxOA==",
+          "name": "memphis-closure-raw-inverse-39146681509",
+          "size_in_bytes": 138711512,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143703318",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143703318/zip",
+          "expired": false,
+          "digest": "sha256:158c921c64952eb3e90f50438b310a89adc021af75fe02cfd9c0cdff6a7abad7",
+          "created_at": "2026-10-18T16:56:05Z",
+          "updated_at": "2026-10-18T16:56:05Z",
+          "expires_at": "2026-11-17T16:55:48Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143692976,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzY5Mjk3Ng==",
+          "name": "memphis-closure-compact-joint-39146681509",
+          "size_in_bytes": 194149,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143692976",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143692976/zip",
+          "expired": false,
+          "digest": "sha256:c6d2f75f339131561d78df995553532189d379b9ac7f67cd6f649721edfdd53a",
+          "created_at": "2026-10-18T16:52:54Z",
+          "updated_at": "2026-10-18T16:52:54Z",
+          "expires_at": "2026-11-17T16:52:52Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143681726,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzY4MTcyNg==",
+          "name": "memphis-closure-compact-precool-39146681509",
+          "size_in_bytes": 184711,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143681726",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143681726/zip",
+          "expired": false,
+          "digest": "sha256:e3cede529e880c691571e6ececc5e15ef6ca33180d85821df3c4cf2cc4581127",
+          "created_at": "2026-10-18T16:51:39Z",
+          "updated_at": "2026-10-18T16:51:39Z",
+          "expires_at": "2026-11-17T16:51:38Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143482101,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzQ4MjEwMQ==",
+          "name": "memphis-closure-raw-baseline-39146681509",
+          "size_in_bytes": 8966296,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143482101",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143482101/zip",
+          "expired": false,
+          "digest": "sha256:492029a8b9cb7c3cb4ae4e68b63238d4ecc1e716bec5870c06dad1fe0f7f2a20",
+          "created_at": "2026-10-18T16:49:25Z",
+          "updated_at": "2026-10-18T16:49:25Z",
+          "expires_at": "2026-11-17T16:49:23Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143459017,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzQ1OTAxNw==",
+          "name": "memphis-closure-raw-robust-39146681509",
+          "size_in_bytes": 71420478,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143459017",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143459017/zip",
+          "expired": false,
+          "digest": "sha256:4f342cb1a495291e2f4cbcb4b77787087c88fdad1d022e67572ce474c3dbcee8",
+          "created_at": "2026-10-18T16:53:43Z",
+          "updated_at": "2026-10-18T16:53:43Z",
+          "expires_at": "2026-11-17T16:53:37Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143449000,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzQ0OTAwMA==",
+          "name": "memphis-closure-raw-joint-39146681509",
+          "size_in_bytes": 43847206,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143449000",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143449000/zip",
+          "expired": false,
+          "digest": "sha256:3cdf72e4e8fcd600d9638912c1039248ae0031b68f884278547b7649909ba118",
+          "created_at": "2026-10-18T16:52:52Z",
+          "updated_at": "2026-10-18T16:52:52Z",
+          "expires_at": "2026-11-17T16:52:45Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143444347,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzQ0NDM0Nw==",
+          "name": "memphis-closure-compact-scenarios-39146681509",
+          "size_in_bytes": 435324,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143444347",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143444347/zip",
+          "expired": false,
+          "digest": "sha256:1043a958d77023a1b076738e5037bea558945000e1406ce318935bab2523fdc2",
+          "created_at": "2026-10-18T16:57:11Z",
+          "updated_at": "2026-10-18T16:57:11Z",
+          "expires_at": "2026-11-17T16:57:10Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143207842,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzIwNzg0Mg==",
+          "name": "memphis-closure-compact-baseline-39146681509",
+          "size_in_bytes": 336781,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143207842",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143207842/zip",
+          "expired": false,
+          "digest": "sha256:c13ba77c325981689ff254f3cee1111b22d93f4602ad1591a6df57876e2e5ed9",
+          "created_at": "2026-10-18T16:49:26Z",
+          "updated_at": "2026-10-18T16:49:26Z",
+          "expires_at": "2026-11-17T16:49:25Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12143123155,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0MzEyMzE1NQ==",
+          "name": "memphis-closure-raw-tanks-b-39146681509",
+          "size_in_bytes": 389282,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143123155",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12143123155/zip",
+          "expired": false,
+          "digest": "sha256:9b02ab6342a94e07378bf10363100416c5982fb74483006295d982e8968ea577",
+          "created_at": "2026-10-18T16:50:23Z",
+          "updated_at": "2026-10-18T16:50:23Z",
+          "expires_at": "2026-11-17T16:50:22Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        },
+        {
+          "id": 12142998358,
+          "node_id": "MDg6QXJ0aWZhY3QxMjE0Mjk5ODM1OA==",
+          "name": "memphis-closure-compact-tanks-b-39146681509",
+          "size_in_bytes": 339176,
+          "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12142998358",
+          "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12142998358/zip",
+          "expired": false,
+          "digest": "sha256:c0264d305e0668d7797de48b7d65f429ddf50589a47ccde14c1bd647aace643c",
+          "created_at": "2026-10-18T16:50:26Z",
+          "updated_at": "2026-10-18T16:50:26Z",
+          "expires_at": "2026-11-17T16:50:24Z",
+          "workflow_run": {
+            "id": 39146681509,
+            "repository_id": 1371600389,
+            "head_repository_id": 1371600389,
+            "head_branch": "codex/memphis-failure-closure-v1",
+            "head_sha": "c23bbc8ecf7a6dd64426e491484443d57d8c72ba"
+          }
+        }
+      ]
+    },
+    "preserved_raw": [
+      {
+        "state": "FAILED_NOT_PASS",
+        "id": 12143459017,
+        "raw_sha256": "4f342cb1a495291e2f4cbcb4b77787087c88fdad1d022e67572ce474c3dbcee8",
+        "name": "memphis-closure-raw-robust-39146681509",
+        "bytes": 71420478
+      }
+    ],
+    "log_sha256": "a17fd6979a75763ef74407c317a531a391ec1bf726375166ddb05e64592eee07",
+    "log_state": "PRESERVED",
+    "all_official_artifacts_remain_on_GitHub": true,
+    "no_pass_reuse": true,
+    "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+  },
+  {
+    "run": 39180072218,
+    "source_commit": "09003d9b48b5e1b6f25b1b72c69cddf9cea61336",
+    "conclusion": "cancelled",
+    "official_artifacts": {
+      "total_count": 0,
+      "artifacts": []
+    },
+    "preserved_raw": [],
+    "log_sha256": null,
+    "log_state": "NOT_CREATED_NO_JOBS_NO_NUMERICAL_EXECUTION",
+    "all_official_artifacts_remain_on_GitHub": true,
+    "no_pass_reuse": true,
+    "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+  }
+]

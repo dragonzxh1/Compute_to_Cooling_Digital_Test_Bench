@@ -1,0 +1,181 @@
+{
+  "status": "ACTUAL_HTML_SELECTION_CURVE_AND_RESPONSIVE_CHECK_PASS",
+  "run": 39180526734,
+  "source_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13",
+  "derived_html_sha256": "290ea166cdc55e3d01d581677e1ac8cbf4e4e6f0e9ee7c2556c26cbd16ce46b5",
+  "desktop": {
+    "url": "file:///D:/Github/c2c-evidence-review/memphis-failure-closure-v1/run39180526734/delivery/engineering_report_event_complete.html",
+    "cases": 127,
+    "selection": "valves__A_demand_no_stuck",
+    "verdict": {
+      "grades": {
+        "90S_CONTINUITY": "FAIL",
+        "HYDRAULIC_COMPLIANCE": "FAIL",
+        "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+        "RESERVE_RECOVERY": "NOT_RUN",
+        "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+        "SOURCE_RECOVERY": "PASS",
+        "THERMAL_COMPLIANCE": "PASS"
+      },
+      "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+      "peak_C": 44.26927305299927,
+      "min_load_m3_h": 0,
+      "any_path_first_cold_delay_s": 0.10000000000000142,
+      "B_path_cold_return_s": 64.2,
+      "B_path_cold_return_delay_s": 34.2,
+      "excitation": {},
+      "first_violations": {
+        "load_flow": 30.1,
+        "protected": null,
+        "recovery_deadline": null,
+        "thermal": null
+      },
+      "events": [
+        {
+          "from_state": "RUN",
+          "reason": "MEASURED_A_ISOLATION_DEMAND_B_RESERVE_PROVEN",
+          "time_ns": 30100000000,
+          "to_state": "RUN"
+        },
+        {
+          "from_state": "RUN",
+          "reason": "MEASURED_A_ISOLATION_REQUIRES_SOURCE_AND_LOAD_B",
+          "time_ns": 31100000000,
+          "to_state": "REVOKE_RECHARGE"
+        },
+        {
+          "from_state": "REVOKE_RECHARGE",
+          "reason": "RECHARGE_ZERO_SPEED",
+          "time_ns": 31100000000,
+          "to_state": "STOP_SOURCE"
+        },
+        {
+          "from_state": "STOP_SOURCE",
+          "reason": "MEASURED_SOURCE_ZERO_SPEED",
+          "time_ns": 32500000000,
+          "to_state": "CLOSE"
+        },
+        {
+          "from_state": "CLOSE",
+          "reason": "MEASURED_CLOSED_BREAK_BEFORE_MAKE",
+          "time_ns": 37700000000,
+          "to_state": "OPEN"
+        },
+        {
+          "from_state": "OPEN",
+          "reason": "MEASURED_VALVE_OPEN_NOT_COLD_READY",
+          "time_ns": 42900000000,
+          "to_state": "BUILD_COLD"
+        },
+        {
+          "from_state": "BUILD_COLD",
+          "reason": "TIMER_AND_RELEASED_PAIRED_TT_FLOW_READY",
+          "time_ns": 62900000000,
+          "to_state": "RUN"
+        }
+      ]
+    },
+    "polylines": [
+      2400,
+      2400,
+      2400,
+      2400,
+      2400,
+      2400,
+      2400
+    ],
+    "viewport": 1280,
+    "overflow": false
+  },
+  "mobile": {
+    "cases": 127,
+    "selection": "valves__A_demand_stuck",
+    "verdict": {
+      "grades": {
+        "90S_CONTINUITY": "FAIL",
+        "HYDRAULIC_COMPLIANCE": "FAIL",
+        "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+        "RESERVE_RECOVERY": "NOT_RUN",
+        "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+        "SOURCE_RECOVERY": "PASS",
+        "THERMAL_COMPLIANCE": "FAIL"
+      },
+      "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+      "peak_C": 45.21034294774216,
+      "min_load_m3_h": 178.96762770039132,
+      "any_path_first_cold_delay_s": 0.10000000000000142,
+      "B_path_cold_return_s": 64.2,
+      "B_path_cold_return_delay_s": 34.2,
+      "excitation": {
+        "actual_selector_changed": false,
+        "demand_issued": true,
+        "nonresponse": true,
+        "qualification": "ACTUALLY_EXCITED"
+      },
+      "first_violations": {
+        "load_flow": 30.1,
+        "protected": null,
+        "recovery_deadline": null,
+        "thermal": 128.1
+      },
+      "events": [
+        {
+          "from_state": "RUN",
+          "reason": "MEASURED_A_ISOLATION_DEMAND_B_RESERVE_PROVEN",
+          "time_ns": 30100000000,
+          "to_state": "RUN"
+        },
+        {
+          "from_state": "RUN",
+          "reason": "MEASURED_A_ISOLATION_REQUIRES_SOURCE_AND_LOAD_B",
+          "time_ns": 31100000000,
+          "to_state": "REVOKE_RECHARGE"
+        },
+        {
+          "from_state": "REVOKE_RECHARGE",
+          "reason": "RECHARGE_ZERO_SPEED",
+          "time_ns": 31100000000,
+          "to_state": "STOP_SOURCE"
+        },
+        {
+          "from_state": "STOP_SOURCE",
+          "reason": "MEASURED_SOURCE_ZERO_SPEED",
+          "time_ns": 32500000000,
+          "to_state": "CLOSE"
+        },
+        {
+          "from_state": "CLOSE",
+          "reason": "MEASURED_CLOSED_BREAK_BEFORE_MAKE",
+          "time_ns": 37700000000,
+          "to_state": "OPEN"
+        },
+        {
+          "from_state": "OPEN",
+          "reason": "MEASURED_VALVE_OPEN_NOT_COLD_READY",
+          "time_ns": 42900000000,
+          "to_state": "BUILD_COLD"
+        },
+        {
+          "from_state": "BUILD_COLD",
+          "reason": "TIMER_AND_RELEASED_PAIRED_TT_FLOW_READY",
+          "time_ns": 62900000000,
+          "to_state": "RUN"
+        }
+      ]
+    },
+    "polylines": [
+      2400,
+      2400,
+      2400,
+      2400,
+      2400,
+      2400,
+      2400
+    ],
+    "viewport": 375,
+    "overflow": false
+  },
+  "console": "--- BEGIN UNTRUSTED EXTERNAL CONTENT (source: file:///D:/Github/c2c-evidence-review/memphis-failure-closure-v1/run39180526734/delivery/engineering_report_event_complete.html) ---\r\n(no console errors)\r\n--- END UNTRUSTED EXTERNAL CONTENT ---\r\n",
+  "scope": "Read-only playback, not live hardware or model execution",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}

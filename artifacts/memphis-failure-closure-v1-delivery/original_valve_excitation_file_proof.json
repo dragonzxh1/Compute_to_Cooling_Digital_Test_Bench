@@ -1,0 +1,24 @@
+{
+  "original_official_zip_sha256": "6103ea42e1b0746991c021a95a664fe212805d0e0e654a23da6785fa529f1e55",
+  "method": "PowerShell bounded JsonDocument pure-file review; no model execution",
+  "cases": [
+    {
+      "status": "STUCK_VALVE_NOT_EXCITED_NO_ISSUED_B_REQUEST",
+      "actual_request_and_simulated_PLC_frames": 1200,
+      "source_phases_raw_sha256": "ef0f12f0b57241201800d57bd67c0c2f3de1dd00c0c202c36d62c9dc77a9445e",
+      "issued_B_requests": 0,
+      "hardware_PLC_issue_proof": "NOT_CLAIMED",
+      "source_commit": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb",
+      "id": "ROBUST_B15_13"
+    },
+    {
+      "status": "STUCK_VALVE_NOT_EXCITED_NO_ISSUED_B_REQUEST",
+      "actual_request_and_simulated_PLC_frames": 1200,
+      "source_phases_raw_sha256": "3d12ef08df1e3b82c57d1f660ab5667ba28eafaa6ab13d579c05e76f87805dd2",
+      "issued_B_requests": 0,
+      "hardware_PLC_issue_proof": "NOT_CLAIMED",
+      "source_commit": "840e813dbc6ef0840c7e26850bc4ba6276dd4ffb",
+      "id": "ROBUST_C20_13"
+    }
+  ]
+}

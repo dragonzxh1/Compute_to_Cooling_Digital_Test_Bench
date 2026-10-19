@@ -1,0 +1,13 @@
+{
+  "stages": [
+    {
+      "actual_python_pid": 5924,
+      "status": "PASS",
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "stage": "FINAL"
+    }
+  ],
+  "manifest_sha256": "ba263422c76d02710e410c2071cc87b84d6faee82fd0d65e94cc4148adee7ce2",
+  "source_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13"
+}

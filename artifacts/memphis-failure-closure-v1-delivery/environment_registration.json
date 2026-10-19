@@ -1,0 +1,12 @@
+{
+  "commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13",
+  "manifest_raw_sha256": "ba263422c76d02710e410c2071cc87b84d6faee82fd0d65e94cc4148adee7ce2",
+  "image": "20261012.333.1",
+  "runner": "GitHub Actions 1000001972",
+  "python_executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+  "formal": false,
+  "cpu_rate": 2500,
+  "process_mb": 1024,
+  "job_mb": 2048,
+  "wall_seconds": 480
+}

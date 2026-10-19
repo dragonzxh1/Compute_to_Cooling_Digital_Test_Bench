@@ -1,0 +1,23 @@
+[
+  {
+    "case": "topologies__A",
+    "equipment": "每条备用支路独立90m3/h泵/20kPa；隔离阀/止回阀/近远端TT/FT；自身湿源低负荷热服务；独立电源需OEM证明",
+    "id": "A",
+    "limits": "主源供液与小循环互斥；模型采用理想隔离，不证明实际预冷隔离阀动态/共因电源",
+    "status": "SIMULATED_PROPOSED_MODIFICATION"
+  },
+  {
+    "case": null,
+    "equipment": "专用旁通路径、双隔离阀/止回/流量/TT和独立电源",
+    "id": "B",
+    "limits": "00/01未证明该路由与A/B隔离；不能凭空增加现场旁通或假定不争抢330流量",
+    "status": "NOT_RUN"
+  },
+  {
+    "case": "topologies__C",
+    "equipment": "独立90m3/h泵/20kPa、100kW换热或冷服务、隔离阀/止回/TT/FT、电源；RC另500/1000kW服务和330泵",
+    "id": "C",
+    "limits": "冷服务边界/冷端温度/OEM COP与电耗未知；不是免费冷量，也不是现有W2重复使用",
+    "status": "SIMULATED_PROPOSED_MODIFICATION"
+  }
+]

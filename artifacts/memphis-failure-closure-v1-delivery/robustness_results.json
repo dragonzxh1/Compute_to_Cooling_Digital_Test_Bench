@@ -1,0 +1,38 @@
+[
+  {
+    "candidate": "B",
+    "failed_ids": [
+      "robust_B__02",
+      "robust_B__04",
+      "robust_B__06",
+      "robust_B__11",
+      "robust_B__12",
+      "robust_B__13",
+      "robust_B__16"
+    ],
+    "scope": "Only these17 finite injected conditions; no continuous probabilities or OEM qualification",
+    "status": "NOT_VERIFIED",
+    "tested": 17
+  },
+  {
+    "candidate": "D",
+    "failed_ids": [
+      "robust_D__04",
+      "robust_D__12",
+      "robust_D__13"
+    ],
+    "scope": "Only these17 finite injected conditions; no continuous probabilities or OEM qualification",
+    "status": "NOT_VERIFIED",
+    "tested": 17
+  },
+  {
+    "candidate": "E",
+    "failed_ids": [
+      "robust_E__04",
+      "robust_E__13"
+    ],
+    "scope": "Only these17 finite injected conditions; no continuous probabilities or OEM qualification",
+    "status": "NOT_VERIFIED",
+    "tested": 17
+  }
+]

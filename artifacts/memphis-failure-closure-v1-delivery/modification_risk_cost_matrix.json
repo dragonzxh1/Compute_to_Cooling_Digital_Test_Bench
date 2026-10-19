@@ -1,0 +1,491 @@
+[
+  {
+    "CAPEX_items": "泵/阀/管路/HX/测点/电源/独立冷源按配置逐项报价，价格UNKNOWN",
+    "OEM": null,
+    "OPEX_items": "实际附加泵热/用电在原始轨迹；塔风机/喷淋/COP/年气象map缺失，不报虚假节能率",
+    "auxiliary_pump_mean_kW": 0.0,
+    "case": "option_A__nominal",
+    "equipment_changes": {
+      "cold_fraction": 0.85,
+      "cold_initial_c": 40.5,
+      "dt_s": 0.1,
+      "extensions": true,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30.0,
+      "id": "option_A__nominal",
+      "layers": 80,
+      "pipe_ambient_UA_W_K": 500.0,
+      "preconditioning_mode": "NONE",
+      "precool_capacity_kW": 100.0,
+      "precool_floor_c": 40.5,
+      "precool_flow_m3_h": 90.0,
+      "prelude_s": 0,
+      "primary_target_c": 40.7,
+      "ready_flow_m3_h": 90.0,
+      "recharge_at_s": 120.0,
+      "scope": "GROUP18",
+      "secondary_initial_c": 43.8,
+      "seconds": 240.0,
+      "source_variant": "V9",
+      "standby_initial_c": 48.29,
+      "startup_s": 20.0,
+      "tank_ambient_UA_W_K": 50.0,
+      "tank_kind": "STRATIFIED",
+      "ua_w_k": 240000.0,
+      "use_fast_sensor_channel": false
+    },
+    "option": "A",
+    "prelude": {
+      "ambient_J": 0.0,
+      "component_scope": "STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD",
+      "duration_s": 0,
+      "final_J": 52302413010.0,
+      "final_temperatures_C": {
+        "W2": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ]
+      },
+      "initial_J": 52302413010.0,
+      "initial_temperatures_C": {
+        "W2": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ]
+      },
+      "paths": [
+        "W2"
+      ],
+      "pump_J": 0.0,
+      "ready_times_s": {},
+      "rejected_J": 0.0,
+      "residual_J": 0.0
+    },
+    "procurement": "BLOCKED",
+    "result": {
+      "90S_CONTINUITY": "PASS",
+      "HYDRAULIC_COMPLIANCE": "PASS",
+      "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+      "RESERVE_RECOVERY": "NOT_RUN",
+      "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+      "SOURCE_RECOVERY": "FAIL",
+      "THERMAL_COMPLIANCE": "FAIL"
+    }
+  },
+  {
+    "CAPEX_items": "泵/阀/管路/HX/测点/电源/独立冷源按配置逐项报价，价格UNKNOWN",
+    "OEM": null,
+    "OPEX_items": "实际附加泵热/用电在原始轨迹；塔风机/喷淋/COP/年气象map缺失，不报虚假节能率",
+    "auxiliary_pump_mean_kW": 0.2016025641025641,
+    "case": "option_B__nominal",
+    "equipment_changes": {
+      "cold_fraction": 0.85,
+      "cold_initial_c": 40.5,
+      "dt_s": 0.1,
+      "extensions": true,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30.0,
+      "id": "option_B__nominal",
+      "layers": 80,
+      "pipe_ambient_UA_W_K": 500.0,
+      "preconditioning_mode": "A",
+      "precool_capacity_kW": 100.0,
+      "precool_floor_c": 40.5,
+      "precool_flow_m3_h": 90.0,
+      "prelude_s": 1200,
+      "primary_target_c": 40.7,
+      "ready_flow_m3_h": 90.0,
+      "recharge_at_s": 120.0,
+      "scope": "GROUP18",
+      "secondary_initial_c": 43.8,
+      "seconds": 240.0,
+      "source_variant": "V9",
+      "standby_initial_c": 48.29,
+      "startup_s": 20.0,
+      "tank_ambient_UA_W_K": 50.0,
+      "tank_kind": "STRATIFIED",
+      "ua_w_k": 240000.0,
+      "use_fast_sensor_channel": false
+    },
+    "option": "B",
+    "prelude": {
+      "ambient_J": 1596441.6762743373,
+      "component_scope": "STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD",
+      "duration_s": 1200,
+      "final_J": 52216117730.174965,
+      "final_temperatures_C": {
+        "W2": [
+          40.5027181848867,
+          40.50543636977636,
+          40.50815455466358,
+          40.51087273952129,
+          40.513590924257926,
+          40.516309108614166,
+          40.51902729194944,
+          40.521745472880866,
+          40.52446364893024,
+          40.52718181711134
+        ]
+      },
+      "initial_J": 52302413010.0,
+      "initial_temperatures_C": {
+        "W2": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ]
+      },
+      "paths": [
+        "W2"
+      ],
+      "pump_J": 923076.9230769092,
+      "ready_times_s": {
+        "W2": 844
+      },
+      "rejected_J": 88814798.42439142,
+      "residual_J": 5.073379725217819e-06
+    },
+    "procurement": "BLOCKED",
+    "result": {
+      "90S_CONTINUITY": "PASS",
+      "HYDRAULIC_COMPLIANCE": "PASS",
+      "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+      "RESERVE_RECOVERY": "NOT_RUN",
+      "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+      "SOURCE_RECOVERY": "PASS",
+      "THERMAL_COMPLIANCE": "PASS"
+    }
+  },
+  {
+    "CAPEX_items": "泵/阀/管路/HX/测点/电源/独立冷源按配置逐项报价，价格UNKNOWN",
+    "OEM": null,
+    "OPEX_items": "实际附加泵热/用电在原始轨迹；塔风机/喷淋/COP/年气象map缺失，不报虚假节能率",
+    "auxiliary_pump_mean_kW": 0.2016025641025641,
+    "case": "option_C__nominal",
+    "equipment_changes": {
+      "cold_fraction": 0.9,
+      "cold_initial_c": 40.5,
+      "dt_s": 0.1,
+      "extensions": true,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30.0,
+      "id": "option_C__nominal",
+      "layers": 80,
+      "pipe_ambient_UA_W_K": 500.0,
+      "preconditioning_mode": "A",
+      "precool_capacity_kW": 100.0,
+      "precool_floor_c": 40.5,
+      "precool_flow_m3_h": 90.0,
+      "prelude_s": 1200,
+      "primary_target_c": 40.7,
+      "ready_flow_m3_h": 90.0,
+      "recharge_at_s": 120.0,
+      "scope": "GROUP18",
+      "secondary_initial_c": 43.8,
+      "seconds": 240.0,
+      "source_variant": "V9",
+      "standby_initial_c": 48.29,
+      "startup_s": 20.0,
+      "tank_ambient_UA_W_K": 50.0,
+      "tank_kind": "STRATIFIED",
+      "ua_w_k": 240000.0,
+      "use_fast_sensor_channel": false
+    },
+    "option": "C",
+    "prelude": {
+      "ambient_J": 1596441.6762743373,
+      "component_scope": "STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD",
+      "duration_s": 1200,
+      "final_J": 52168957070.174965,
+      "final_temperatures_C": {
+        "W2": [
+          40.5027181848867,
+          40.50543636977636,
+          40.50815455466358,
+          40.51087273952129,
+          40.513590924257926,
+          40.516309108614166,
+          40.51902729194944,
+          40.521745472880866,
+          40.52446364893024,
+          40.52718181711134
+        ]
+      },
+      "initial_J": 52255252350.0,
+      "initial_temperatures_C": {
+        "W2": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ]
+      },
+      "paths": [
+        "W2"
+      ],
+      "pump_J": 923076.9230769092,
+      "ready_times_s": {
+        "W2": 844
+      },
+      "rejected_J": 88814798.42439142,
+      "residual_J": 5.073379725217819e-06
+    },
+    "procurement": "BLOCKED",
+    "result": {
+      "90S_CONTINUITY": "PASS",
+      "HYDRAULIC_COMPLIANCE": "PASS",
+      "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+      "RESERVE_RECOVERY": "NOT_RUN",
+      "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+      "SOURCE_RECOVERY": "PASS",
+      "THERMAL_COMPLIANCE": "PASS"
+    }
+  },
+  {
+    "CAPEX_items": "泵/阀/管路/HX/测点/电源/独立冷源按配置逐项报价，价格UNKNOWN",
+    "OEM": null,
+    "OPEX_items": "实际附加泵热/用电在原始轨迹；塔风机/喷淋/COP/年气象map缺失，不报虚假节能率",
+    "auxiliary_pump_mean_kW": 0.2016025641025641,
+    "case": "option_D__nominal",
+    "equipment_changes": {
+      "capacity_scale": 1.15,
+      "cold_fraction": 0.9,
+      "cold_initial_c": 40.5,
+      "design_flow_takeover": true,
+      "dt_s": 0.1,
+      "extensions": true,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30.0,
+      "id": "option_D__nominal",
+      "layers": 80,
+      "pipe_ambient_UA_W_K": 500.0,
+      "preconditioning_mode": "A",
+      "precool_capacity_kW": 100.0,
+      "precool_floor_c": 40.5,
+      "precool_flow_m3_h": 90.0,
+      "prelude_s": 1200,
+      "primary_target_c": 40.7,
+      "ready_flow_m3_h": 90.0,
+      "recharge_at_s": 120.0,
+      "scope": "GROUP18",
+      "secondary_initial_c": 43.8,
+      "seconds": 240.0,
+      "source_speed_margin": 0.03,
+      "source_variant": "V9",
+      "standby_initial_c": 48.29,
+      "startup_s": 20.0,
+      "tank_ambient_UA_W_K": 50.0,
+      "tank_kind": "STRATIFIED",
+      "ua_w_k": 240000.0,
+      "use_fast_sensor_channel": true,
+      "use_spare": true
+    },
+    "option": "D",
+    "prelude": {
+      "ambient_J": 1596441.6762743373,
+      "component_scope": "STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD",
+      "duration_s": 1200,
+      "final_J": 52168957070.174965,
+      "final_temperatures_C": {
+        "W2": [
+          40.5027181848867,
+          40.50543636977636,
+          40.50815455466358,
+          40.51087273952129,
+          40.513590924257926,
+          40.516309108614166,
+          40.51902729194944,
+          40.521745472880866,
+          40.52446364893024,
+          40.52718181711134
+        ]
+      },
+      "initial_J": 52255252350.0,
+      "initial_temperatures_C": {
+        "W2": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ]
+      },
+      "paths": [
+        "W2"
+      ],
+      "pump_J": 923076.9230769092,
+      "ready_times_s": {
+        "W2": 844
+      },
+      "rejected_J": 88814798.42439142,
+      "residual_J": 5.073379725217819e-06
+    },
+    "procurement": "BLOCKED",
+    "result": {
+      "90S_CONTINUITY": "PASS",
+      "HYDRAULIC_COMPLIANCE": "PASS",
+      "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+      "RESERVE_RECOVERY": "NOT_RUN",
+      "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+      "SOURCE_RECOVERY": "PASS",
+      "THERMAL_COMPLIANCE": "PASS"
+    }
+  },
+  {
+    "CAPEX_items": "泵/阀/管路/HX/测点/电源/独立冷源按配置逐项报价，价格UNKNOWN",
+    "OEM": null,
+    "OPEX_items": "实际附加泵热/用电在原始轨迹；塔风机/喷淋/COP/年气象map缺失，不报虚假节能率",
+    "auxiliary_pump_mean_kW": 0.9708333333333333,
+    "case": "option_E__nominal",
+    "equipment_changes": {
+      "capacity_scale": 1.15,
+      "cold_fraction": 0.9,
+      "cold_initial_c": 40.5,
+      "design_flow_takeover": true,
+      "dt_s": 0.1,
+      "extensions": true,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30.0,
+      "id": "option_E__nominal",
+      "layers": 80,
+      "pipe_ambient_UA_W_K": 500.0,
+      "preconditioning_mode": "C",
+      "precool_capacity_kW": 100.0,
+      "precool_floor_c": 40.5,
+      "precool_flow_m3_h": 90.0,
+      "prelude_s": 1200,
+      "primary_target_c": 40.7,
+      "ready_flow_m3_h": 90.0,
+      "recharge_at_s": 120.0,
+      "scope": "GROUP18",
+      "secondary_initial_c": 43.8,
+      "seconds": 240.0,
+      "source_speed_margin": 0.03,
+      "source_variant": "V9",
+      "standby_initial_c": 48.29,
+      "startup_s": 20.0,
+      "tank_ambient_UA_W_K": 50.0,
+      "tank_kind": "STRATIFIED",
+      "tank_volume_m3": 20.0,
+      "third_source": true,
+      "ua_w_k": 240000.0,
+      "use_fast_sensor_channel": true,
+      "use_spare": true
+    },
+    "option": "E",
+    "prelude": {
+      "ambient_J": 3192883.352548682,
+      "component_scope": "STANDBY_PIPES_ONLY_NOT_WHOLE_SITE_ZERO_LOAD",
+      "duration_s": 1200,
+      "final_J": 68340678790.34993,
+      "final_temperatures_C": {
+        "W2": [
+          40.5027181848867,
+          40.50543636977636,
+          40.50815455466358,
+          40.51087273952129,
+          40.513590924257926,
+          40.516309108614166,
+          40.51902729194944,
+          40.521745472880866,
+          40.52446364893024,
+          40.52718181711134
+        ],
+        "W3": [
+          40.5027181848867,
+          40.50543636977636,
+          40.50815455466358,
+          40.51087273952129,
+          40.513590924257926,
+          40.516309108614166,
+          40.51902729194944,
+          40.521745472880866,
+          40.52446364893024,
+          40.52718181711134
+        ]
+      },
+      "initial_J": 68513269350.0,
+      "initial_temperatures_C": {
+        "W2": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ],
+        "W3": [
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002,
+          48.29000000000002
+        ]
+      },
+      "paths": [
+        "W2",
+        "W3"
+      ],
+      "pump_J": 1846153.8461538109,
+      "ready_times_s": {
+        "W2": 844,
+        "W3": 844
+      },
+      "rejected_J": 177629596.84878284,
+      "residual_J": 1.0139308869838715e-05
+    },
+    "procurement": "BLOCKED",
+    "result": {
+      "90S_CONTINUITY": "PASS",
+      "HYDRAULIC_COMPLIANCE": "PASS",
+      "OEM_EVIDENCE": "OEM_NOT_VERIFIED",
+      "RESERVE_RECOVERY": "NOT_RUN",
+      "SAFETY_CORRECTNESS": "MODEL_VALIDATED_CAUSAL_AND_FAIL_CLOSED",
+      "SOURCE_RECOVERY": "PASS",
+      "THERMAL_COMPLIANCE": "PASS"
+    }
+  }
+]

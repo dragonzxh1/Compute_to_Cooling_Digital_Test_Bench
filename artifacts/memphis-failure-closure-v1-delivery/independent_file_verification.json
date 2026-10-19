@@ -1,0 +1,558 @@
+{
+  "status": "OFFICIAL_ZIP_RAW_AND_RUNTIME_INDEPENDENT_FILE_VERIFICATION_PASS",
+  "run": 39180526734,
+  "source_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13",
+  "manifest_sha256": "ba263422c76d02710e410c2071cc87b84d6faee82fd0d65e94cc4148adee7ce2",
+  "raw_files": 4425,
+  "stages": [
+    {
+      "job_mb": 2048,
+      "pid": 5760,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ASSERTIONS",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 1056,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "PRIOR_RAW",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 2284,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ANALYTIC",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 4236,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "G_WET_LOSS",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 5580,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "SMOKE",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 5924,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "FINAL",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 3808,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "CAUSE_CAPACITY",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 8152,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "CAUSE_PUMP",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 6952,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "CAUSE_MEASUREMENT",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 4332,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "CAUSE_SECOND",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 1352,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "CAUSE_JOINT",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7832,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "OPTION_A",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 3272,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "OPTION_B",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 6140,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "OPTION_C",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7080,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "OPTION_D",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7876,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "OPTION_E",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 2960,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ASYMMETRIC",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 3112,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "TANK_STANDBY2H",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 6896,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "PIPE_READY_HOLD",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 4728,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "PRECOOL_TOPOLOGY",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 4872,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "READY_NEGATIVES",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7204,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RECHARGE_OLD",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 6244,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RECHARGE_NEW",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 1456,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ROBUST_B",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 1240,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ROBUST_D",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7136,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ROBUST_E",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 5816,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "MODULE_FAILURE",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 5632,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "PUMP_FAILURE",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 3648,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "VALVE_FAILURE",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7408,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "COMMON_CAUSES",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7404,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "A20",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 6452,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "A40",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 8172,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "A80",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 4092,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "A160",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 2924,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "A160dt05",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 1944,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "B20",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 6964,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "B40",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7932,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "B80",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 1960,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "B160",
+      "image": "20261012.333.1"
+    },
+    {
+      "job_mb": 2048,
+      "pid": 7112,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "B160dt05",
+      "image": "20261012.333.1"
+    }
+  ],
+  "archives": [
+    {
+      "id": 12156117105,
+      "local_sha256": "12a1281aa55cde569e2454178ff6ffc0f3fb744a850ccbd7bd11b9f16e8c5e44",
+      "name": "memphis-closure-compact-baseline-39180526734",
+      "bytes": 337777,
+      "official_digest": "sha256:12a1281aa55cde569e2454178ff6ffc0f3fb744a850ccbd7bd11b9f16e8c5e44"
+    },
+    {
+      "id": 12156731141,
+      "local_sha256": "69b33eb7f1342c161d478cff3cb51fecdc0677a7564ec94ef9720370e5f96733",
+      "name": "memphis-closure-compact-final-39180526734",
+      "bytes": 1522886,
+      "official_digest": "sha256:69b33eb7f1342c161d478cff3cb51fecdc0677a7564ec94ef9720370e5f96733"
+    },
+    {
+      "id": 12156421440,
+      "local_sha256": "f81717daf2feb5679888535779cc756e3112d093615a555d9aaf866817843aba",
+      "name": "memphis-closure-compact-inverse-39180526734",
+      "bytes": 614603,
+      "official_digest": "sha256:f81717daf2feb5679888535779cc756e3112d093615a555d9aaf866817843aba"
+    },
+    {
+      "id": 12155988458,
+      "local_sha256": "b198a6aa30a9e33d8fb537e47959d597837d7a862274d0f51301ebb031518c75",
+      "name": "memphis-closure-compact-joint-39180526734",
+      "bytes": 189657,
+      "official_digest": "sha256:b198a6aa30a9e33d8fb537e47959d597837d7a862274d0f51301ebb031518c75"
+    },
+    {
+      "id": 12155809369,
+      "local_sha256": "f069a437b10d33fe3b74c4c9d7f595ca9639a101df89abde7baf61282c197e6b",
+      "name": "memphis-closure-compact-precool-39180526734",
+      "bytes": 219337,
+      "official_digest": "sha256:f069a437b10d33fe3b74c4c9d7f595ca9639a101df89abde7baf61282c197e6b"
+    },
+    {
+      "id": 12155969625,
+      "local_sha256": "6417ed614df617804cc7e25b7cfa4169c3ab1e2ba0bc5228bb250c11835de4c5",
+      "name": "memphis-closure-compact-recharge-39180526734",
+      "bytes": 169039,
+      "official_digest": "sha256:6417ed614df617804cc7e25b7cfa4169c3ab1e2ba0bc5228bb250c11835de4c5"
+    },
+    {
+      "id": 12156222037,
+      "local_sha256": "c6e3c68b6a2dbcc5aa3431acd7ad08bbc3296945e47cab2ac3169145eadb6e38",
+      "name": "memphis-closure-compact-robust-39180526734",
+      "bytes": 1051137,
+      "official_digest": "sha256:c6e3c68b6a2dbcc5aa3431acd7ad08bbc3296945e47cab2ac3169145eadb6e38"
+    },
+    {
+      "id": 12156167901,
+      "local_sha256": "76383f7ceab1ec3b0941383931637a0de51a2341c71b8d6ff609c2f46c64c49a",
+      "name": "memphis-closure-compact-scenarios-39180526734",
+      "bytes": 488577,
+      "official_digest": "sha256:76383f7ceab1ec3b0941383931637a0de51a2341c71b8d6ff609c2f46c64c49a"
+    },
+    {
+      "id": 12156400333,
+      "local_sha256": "95576445e991a098476787e345e29d4c649161ddde56a45d7d477f76dabbf32c",
+      "name": "memphis-closure-compact-tanks-a-39180526734",
+      "bytes": 338467,
+      "official_digest": "sha256:95576445e991a098476787e345e29d4c649161ddde56a45d7d477f76dabbf32c"
+    },
+    {
+      "id": 12155019882,
+      "local_sha256": "ce02cbcf0fd8a328bd60eaaa8bc44fa9651c0472a502d0cfb67154d1ec46eeed",
+      "name": "memphis-closure-compact-tanks-b-39180526734",
+      "bytes": 339264,
+      "official_digest": "sha256:ce02cbcf0fd8a328bd60eaaa8bc44fa9651c0472a502d0cfb67154d1ec46eeed"
+    },
+    {
+      "id": 12156231423,
+      "local_sha256": "3b15e04171b6ea94f19141c188f3d3b29f85c9fc9c020f08fb4635e4119b9ae0",
+      "name": "memphis-closure-raw-baseline-39180526734",
+      "bytes": 8976166,
+      "official_digest": "sha256:3b15e04171b6ea94f19141c188f3d3b29f85c9fc9c020f08fb4635e4119b9ae0"
+    },
+    {
+      "id": 12156681371,
+      "local_sha256": "7fdda649c52dad99d18634a9669a5e21d43609bf38b2ef4481daa756dbfc7fd4",
+      "name": "memphis-closure-raw-final-39180526734",
+      "bytes": 1538721,
+      "official_digest": "sha256:7fdda649c52dad99d18634a9669a5e21d43609bf38b2ef4481daa756dbfc7fd4"
+    },
+    {
+      "id": 12156147789,
+      "local_sha256": "f8fbc66b619029f6d559fb70f207d778b0b25216d9b489021c7b30cc5f0a41ca",
+      "name": "memphis-closure-raw-inverse-39180526734",
+      "bytes": 138808957,
+      "official_digest": "sha256:f8fbc66b619029f6d559fb70f207d778b0b25216d9b489021c7b30cc5f0a41ca"
+    },
+    {
+      "id": 12155804501,
+      "local_sha256": "66d7eb9987b9acb2bfa73d77d711d7777511366f1993c802dc37bd5b85e86f37",
+      "name": "memphis-closure-raw-joint-39180526734",
+      "bytes": 43954352,
+      "official_digest": "sha256:66d7eb9987b9acb2bfa73d77d711d7777511366f1993c802dc37bd5b85e86f37"
+    },
+    {
+      "id": 12155908945,
+      "local_sha256": "ca02bdc316fa1be086b54e7fde04282c7d863693d70ef8db1eb6fb7732bee7aa",
+      "name": "memphis-closure-raw-precool-39180526734",
+      "bytes": 54532674,
+      "official_digest": "sha256:ca02bdc316fa1be086b54e7fde04282c7d863693d70ef8db1eb6fb7732bee7aa"
+    },
+    {
+      "id": 12156068471,
+      "local_sha256": "a894831dc392f7d3bd7d660e53cf44ea21ad4e481934fc88b893e6d0a762327b",
+      "name": "memphis-closure-raw-recharge-39180526734",
+      "bytes": 69859897,
+      "official_digest": "sha256:a894831dc392f7d3bd7d660e53cf44ea21ad4e481934fc88b893e6d0a762327b"
+    },
+    {
+      "id": 12155953395,
+      "local_sha256": "b1453a0ddfdccfc93aba3f9defe80a27404e6e3f9720630cd2d3cddfeea2515a",
+      "name": "memphis-closure-raw-robust-39180526734",
+      "bytes": 311882924,
+      "official_digest": "sha256:b1453a0ddfdccfc93aba3f9defe80a27404e6e3f9720630cd2d3cddfeea2515a"
+    },
+    {
+      "id": 12156023583,
+      "local_sha256": "610c96633faf1e257e01d51ff56d697249a8cd58854bf164b7ec58a0362cb174",
+      "name": "memphis-closure-raw-scenarios-39180526734",
+      "bytes": 130895240,
+      "official_digest": "sha256:610c96633faf1e257e01d51ff56d697249a8cd58854bf164b7ec58a0362cb174"
+    },
+    {
+      "id": 12155543580,
+      "local_sha256": "4707f3c5f146f6b5407afca1be8968b2ab1a06a0015b7941e3a7ed0fce6bbc60",
+      "name": "memphis-closure-raw-tanks-a-39180526734",
+      "bytes": 388258,
+      "official_digest": "sha256:4707f3c5f146f6b5407afca1be8968b2ab1a06a0015b7941e3a7ed0fce6bbc60"
+    },
+    {
+      "id": 12156290669,
+      "local_sha256": "5bd3a14910d988fec87ed65795879ef37d196986ac69d0c66fd2c088f4db413e",
+      "name": "memphis-closure-raw-tanks-b-39180526734",
+      "bytes": 389358,
+      "official_digest": "sha256:5bd3a14910d988fec87ed65795879ef37d196986ac69d0c66fd2c088f4db413e"
+    }
+  ],
+  "raw_logs_sha256": "58da1c24b185f971ac4f3cb0f632918e16eacde2bb987cecf51492d44a5a00e4",
+  "method": "PowerShell streaming SHA256; no local Python/model",
+  "engineering_approval": false,
+  "formal": false,
+  "procurement": false,
+  "hardware": false,
+  "phase6": false
+}

@@ -1,0 +1,71 @@
+{
+  "run": 39180526734,
+  "note": "Threshold cold inventory is distinct from actual next90s discharge qualification; raw original grades retained",
+  "cases": [
+    {
+      "id": "recharge_new__500.0",
+      "actual_cold_m3": {
+        "A": 13.6875,
+        "B": 0
+      },
+      "initial_outlet_C": {
+        "A": 40.47902610509561,
+        "B": 44.188250045207496
+      },
+      "actual_discharge": [
+        {
+          "case": "recharge_new__500.0",
+          "input_state_sha256": "7ef363c6f310b3c5781e9e475c2836a6889096a334d7ee1f0300d08b30444da4",
+          "outlet_rise_K": 0.5093525663106107,
+          "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+          "status": "NO_FEASIBLE_DESIGN",
+          "tank": "A"
+        },
+        {
+          "case": "recharge_new__500.0",
+          "input_state_sha256": "28b957e23d09e08b7cf75adfeddd7bd8dcd79accf6008ffbdf65238dd2315178",
+          "outlet_rise_K": 0.07617877980106869,
+          "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+          "status": "CONDITIONALLY_FEASIBLE",
+          "tank": "B"
+        }
+      ],
+      "required_each_cold_m3": 12.75,
+      "next90s_status": "FAIL",
+      "threshold_inventory_grade": "FAIL"
+    },
+    {
+      "id": "recharge_new__1000.0",
+      "actual_cold_m3": {
+        "A": 13.6875,
+        "B": 10.3125
+      },
+      "initial_outlet_C": {
+        "A": 40.47902610509561,
+        "B": 40.50743572355634
+      },
+      "actual_discharge": [
+        {
+          "case": "recharge_new__1000.0",
+          "input_state_sha256": "7ef363c6f310b3c5781e9e475c2836a6889096a334d7ee1f0300d08b30444da4",
+          "outlet_rise_K": 0.5093525663106107,
+          "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+          "status": "NO_FEASIBLE_DESIGN",
+          "tank": "A"
+        },
+        {
+          "case": "recharge_new__1000.0",
+          "input_state_sha256": "a2b59956777d080713d810b0780370be0d870e9d0ca114df6af06f2c7cf2afe7",
+          "outlet_rise_K": 0.6756142456532643,
+          "scope": "Actual final80-layer state only;not a replacement for cross-grid full dynamic recharge",
+          "status": "NO_FEASIBLE_DESIGN",
+          "tank": "B"
+        }
+      ],
+      "required_each_cold_m3": 12.75,
+      "next90s_status": "FAIL",
+      "threshold_inventory_grade": "FAIL"
+    }
+  ],
+  "source_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13"
+}

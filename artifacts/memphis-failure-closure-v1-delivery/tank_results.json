@@ -1,0 +1,6462 @@
+[
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.0013580322265625e-05,
+    "id": "A20_00",
+    "layers": 20,
+    "max_outlet_C": 42.54286818325278,
+    "outlet_rise_K": 1.598068183252792,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.6987323760986328e-06,
+    "id": "A20_01",
+    "layers": 20,
+    "max_outlet_C": 42.823758415693646,
+    "outlet_rise_K": 1.8789584156936598,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.0,
+    "id": "A20_02",
+    "layers": 20,
+    "max_outlet_C": 42.64878464196846,
+    "outlet_rise_K": 1.703984641968475,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.175569534301758e-06,
+    "id": "A20_03",
+    "layers": 20,
+    "max_outlet_C": 42.925254247490386,
+    "outlet_rise_K": 1.9804542474903997,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.68899917602539e-06,
+    "id": "A20_04",
+    "layers": 20,
+    "max_outlet_C": 41.34731646528087,
+    "outlet_rise_K": 0.4025164652808826,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.5331974029541016e-06,
+    "id": "A20_05",
+    "layers": 20,
+    "max_outlet_C": 41.667247488264366,
+    "outlet_rise_K": 0.722447488264379,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 6.198883056640625e-06,
+    "id": "A20_06",
+    "layers": 20,
+    "max_outlet_C": 41.41073310773129,
+    "outlet_rise_K": 0.4659331077313027,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.033348083496094e-06,
+    "id": "A20_07",
+    "layers": 20,
+    "max_outlet_C": 41.72801511895909,
+    "outlet_rise_K": 0.7832151189591059,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.5299530029296875e-06,
+    "id": "A20_08",
+    "layers": 20,
+    "max_outlet_C": 41.17485249800757,
+    "outlet_rise_K": 0.23005249800758065,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.344650268554688e-07,
+    "id": "A20_09",
+    "layers": 20,
+    "max_outlet_C": 41.49973261947724,
+    "outlet_rise_K": 0.5549326194772561,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.328126907348633e-06,
+    "id": "A20_10",
+    "layers": 20,
+    "max_outlet_C": 41.21981092709393,
+    "outlet_rise_K": 0.2750109270939447,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.64267349243164e-06,
+    "id": "A20_11",
+    "layers": 20,
+    "max_outlet_C": 41.54263400498735,
+    "outlet_rise_K": 0.5978340049873623,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.500150680541992e-06,
+    "id": "A20_12",
+    "layers": 20,
+    "max_outlet_C": 41.07016917629028,
+    "outlet_rise_K": 0.12536917629029176,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.940696716308594e-08,
+    "id": "A20_13",
+    "layers": 20,
+    "max_outlet_C": 41.39789997272311,
+    "outlet_rise_K": 0.4530999727231233,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.0563602447509766e-06,
+    "id": "A20_14",
+    "layers": 20,
+    "max_outlet_C": 41.09984831237705,
+    "outlet_rise_K": 0.15504831237706185,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.804964065551758e-06,
+    "id": "A20_15",
+    "layers": 20,
+    "max_outlet_C": 41.42600171118528,
+    "outlet_rise_K": 0.4812017111852924,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.066394805908203e-07,
+    "id": "A20_16",
+    "layers": 20,
+    "max_outlet_C": 41.24908961404941,
+    "outlet_rise_K": 0.30428961404942356,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.0100345611572266e-06,
+    "id": "A20_17",
+    "layers": 20,
+    "max_outlet_C": 41.575324525761005,
+    "outlet_rise_K": 0.6305245257610181,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.470348358154297e-06,
+    "id": "A20_18",
+    "layers": 20,
+    "max_outlet_C": 41.301114758616166,
+    "outlet_rise_K": 0.356314758616179,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.546476364135742e-06,
+    "id": "A20_19",
+    "layers": 20,
+    "max_outlet_C": 41.625798137795584,
+    "outlet_rise_K": 0.6809981377955978,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.996755599975586e-06,
+    "id": "A20_20",
+    "layers": 20,
+    "max_outlet_C": 40.9800118899567,
+    "outlet_rise_K": 0.035211889956713094,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.066394805908203e-06,
+    "id": "A20_21",
+    "layers": 20,
+    "max_outlet_C": 41.31298973682169,
+    "outlet_rise_K": 0.3681897368217051,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.129243850708008e-06,
+    "id": "A20_22",
+    "layers": 20,
+    "max_outlet_C": 40.9909182487566,
+    "outlet_rise_K": 0.04611824875661341,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.913309097290039e-05,
+    "id": "A20_23",
+    "layers": 20,
+    "max_outlet_C": 41.32345715034887,
+    "outlet_rise_K": 0.3786571503488858,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.5730342864990234e-06,
+    "id": "A20_24",
+    "layers": 20,
+    "max_outlet_C": 40.96018940411642,
+    "outlet_rise_K": 0.015389404116433525,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.2040138244628906e-05,
+    "id": "A20_25",
+    "layers": 20,
+    "max_outlet_C": 41.29359849917813,
+    "outlet_rise_K": 0.34879849917814454,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -6.586313247680664e-06,
+    "id": "A20_26",
+    "layers": 20,
+    "max_outlet_C": 40.96579045211587,
+    "outlet_rise_K": 0.020990452115881908,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.589557647705078e-06,
+    "id": "A20_27",
+    "layers": 20,
+    "max_outlet_C": 41.29885980116023,
+    "outlet_rise_K": 0.35405980116024693,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.0067901611328125e-06,
+    "id": "A20_28",
+    "layers": 20,
+    "max_outlet_C": 40.951193244646674,
+    "outlet_rise_K": 0.00639324464668789,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.0877847671508789e-05,
+    "id": "A20_29",
+    "layers": 20,
+    "max_outlet_C": 41.28478793747456,
+    "outlet_rise_K": 0.3399879374745751,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.798173904418945e-06,
+    "id": "A20_30",
+    "layers": 20,
+    "max_outlet_C": 40.95389102792194,
+    "outlet_rise_K": 0.009091027921954264,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.59634780883789e-06,
+    "id": "A20_31",
+    "layers": 20,
+    "max_outlet_C": 41.28703022298788,
+    "outlet_rise_K": 0.34223022298789374,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.036592483520508e-06,
+    "id": "A20_32",
+    "layers": 20,
+    "max_outlet_C": 41.46545600842694,
+    "outlet_rise_K": 0.26545600842695194,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.298324584960938e-06,
+    "id": "A20_33",
+    "layers": 20,
+    "max_outlet_C": 41.703160678767404,
+    "outlet_rise_K": 0.7583606787674171,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.682209014892578e-07,
+    "id": "A40_00",
+    "layers": 40,
+    "max_outlet_C": 41.82411237865978,
+    "outlet_rise_K": 0.8793123786597903,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.3942203521728516e-06,
+    "id": "A40_01",
+    "layers": 40,
+    "max_outlet_C": 42.12885765113862,
+    "outlet_rise_K": 1.1840576511386303,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.430511474609375e-05,
+    "id": "A40_02",
+    "layers": 40,
+    "max_outlet_C": 41.919312226645616,
+    "outlet_rise_K": 0.9745122266456292,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.570582389831543e-05,
+    "id": "A40_03",
+    "layers": 40,
+    "max_outlet_C": 42.220646827666144,
+    "outlet_rise_K": 1.2758468276661574,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.4901161193847656e-06,
+    "id": "A40_04",
+    "layers": 40,
+    "max_outlet_C": 41.01574780335255,
+    "outlet_rise_K": 0.07094780335256701,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.62939453125e-06,
+    "id": "A40_05",
+    "layers": 40,
+    "max_outlet_C": 41.34751835015663,
+    "outlet_rise_K": 0.4027183501566469,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 2.294778823852539e-06,
+    "id": "A40_06",
+    "layers": 40,
+    "max_outlet_C": 41.03730625418552,
+    "outlet_rise_K": 0.09250625418553682,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.76837158203125e-06,
+    "id": "A40_07",
+    "layers": 40,
+    "max_outlet_C": 41.368383353611875,
+    "outlet_rise_K": 0.4235833536118889,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.662441253662109e-06,
+    "id": "A40_08",
+    "layers": 40,
+    "max_outlet_C": 40.96942182684472,
+    "outlet_rise_K": 0.02462182684473646,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.129243850708008e-06,
+    "id": "A40_09",
+    "layers": 40,
+    "max_outlet_C": 41.302532589394275,
+    "outlet_rise_K": 0.3577325893942884,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.996755599975586e-06,
+    "id": "A40_10",
+    "layers": 40,
+    "max_outlet_C": 40.97907043044813,
+    "outlet_rise_K": 0.03427043044814582,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.0,
+    "id": "A40_11",
+    "layers": 40,
+    "max_outlet_C": 41.31185305761585,
+    "outlet_rise_K": 0.3670530576158626,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.0728836059570312e-06,
+    "id": "A40_12",
+    "layers": 40,
+    "max_outlet_C": 40.95250203657963,
+    "outlet_rise_K": 0.0077020365796443,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.331371307373047e-06,
+    "id": "A40_13",
+    "layers": 40,
+    "max_outlet_C": 41.28607661054593,
+    "outlet_rise_K": 0.3412766105459468,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.016824722290039e-06,
+    "id": "A40_14",
+    "layers": 40,
+    "max_outlet_C": 40.95629428707588,
+    "outlet_rise_K": 0.011494287075890952,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.7418136596679688e-06,
+    "id": "A40_15",
+    "layers": 40,
+    "max_outlet_C": 41.289709287534095,
+    "outlet_rise_K": 0.344909287534108,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.0100345611572266e-06,
+    "id": "A40_16",
+    "layers": 40,
+    "max_outlet_C": 40.98633374696408,
+    "outlet_rise_K": 0.04153374696409173,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.069639205932617e-06,
+    "id": "A40_17",
+    "layers": 40,
+    "max_outlet_C": 41.319137947952015,
+    "outlet_rise_K": 0.37433794795202857,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.913309097290039e-05,
+    "id": "A40_18",
+    "layers": 40,
+    "max_outlet_C": 41.00020372473011,
+    "outlet_rise_K": 0.05540372473012667,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.900859832763672e-06,
+    "id": "A40_19",
+    "layers": 40,
+    "max_outlet_C": 41.332635809348176,
+    "outlet_rise_K": 0.3878358093481893,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.4405460357666016e-06,
+    "id": "A40_20",
+    "layers": 40,
+    "max_outlet_C": 40.94545788329941,
+    "outlet_rise_K": 0.0006578832994250661,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.993511199951172e-06,
+    "id": "A40_21",
+    "layers": 40,
+    "max_outlet_C": 41.279316192547924,
+    "outlet_rise_K": 0.3345161925479374,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.8477439880371094e-06,
+    "id": "A40_22",
+    "layers": 40,
+    "max_outlet_C": 40.945902808561186,
+    "outlet_rise_K": 0.0011028085611997085,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -6.616115570068359e-06,
+    "id": "A40_23",
+    "layers": 40,
+    "max_outlet_C": 41.279750642594365,
+    "outlet_rise_K": 0.3349506425943787,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.924173355102539e-06,
+    "id": "A40_24",
+    "layers": 40,
+    "max_outlet_C": 40.94493065716671,
+    "outlet_rise_K": 0.00013065716672144845,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.635883331298828e-06,
+    "id": "A40_25",
+    "layers": 40,
+    "max_outlet_C": 41.27880052184429,
+    "outlet_rise_K": 0.3340005218443025,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.834766387939453e-06,
+    "id": "A40_26",
+    "layers": 40,
+    "max_outlet_C": 40.9450380147905,
+    "outlet_rise_K": 0.0002380147905114427,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.692243576049805e-06,
+    "id": "A40_27",
+    "layers": 40,
+    "max_outlet_C": 41.27890504679215,
+    "outlet_rise_K": 0.33410504679216046,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.821487426757812e-06,
+    "id": "A40_28",
+    "layers": 40,
+    "max_outlet_C": 40.94482327639071,
+    "outlet_rise_K": 2.327639072063903e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.3245811462402344e-06,
+    "id": "A40_29",
+    "layers": 40,
+    "max_outlet_C": 41.278695369162676,
+    "outlet_rise_K": 0.3338953691626898,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.9073486328125e-06,
+    "id": "A40_30",
+    "layers": 40,
+    "max_outlet_C": 40.9448462028206,
+    "outlet_rise_K": 4.620282061296166e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.304813385009766e-06,
+    "id": "A40_31",
+    "layers": 40,
+    "max_outlet_C": 41.27871712541662,
+    "outlet_rise_K": 0.3339171254166331,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.3974647521972656e-06,
+    "id": "A40_32",
+    "layers": 40,
+    "max_outlet_C": 41.23307974621224,
+    "outlet_rise_K": 0.03307974621225185,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.7881393432617188e-07,
+    "id": "A40_33",
+    "layers": 40,
+    "max_outlet_C": 41.33568021616247,
+    "outlet_rise_K": 0.39088021616248625,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.703070640563965e-05,
+    "id": "A80_00",
+    "layers": 80,
+    "max_outlet_C": 41.24957900629795,
+    "outlet_rise_K": 0.30477900629796295,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.1831521987915039e-05,
+    "id": "A80_01",
+    "layers": 80,
+    "max_outlet_C": 41.5730770258927,
+    "outlet_rise_K": 0.6282770258927144,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.7071447372436523e-05,
+    "id": "A80_02",
+    "layers": 80,
+    "max_outlet_C": 41.31042092220781,
+    "outlet_rise_K": 0.3656209222078246,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.2351741790771484e-06,
+    "id": "A80_03",
+    "layers": 80,
+    "max_outlet_C": 41.6317503368623,
+    "outlet_rise_K": 0.68695033686231,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.491474151611328e-05,
+    "id": "A80_04",
+    "layers": 80,
+    "max_outlet_C": 40.94726445582296,
+    "outlet_rise_K": 0.0024644558229738323,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.682209014892578e-06,
+    "id": "A80_05",
+    "layers": 80,
+    "max_outlet_C": 41.28106658157793,
+    "outlet_rise_K": 0.3362665815779451,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.364418029785156e-05,
+    "id": "A80_06",
+    "layers": 80,
+    "max_outlet_C": 40.948933563976766,
+    "outlet_rise_K": 0.004133563976779442,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.063150405883789e-06,
+    "id": "A80_07",
+    "layers": 80,
+    "max_outlet_C": 41.28268635873144,
+    "outlet_rise_K": 0.3378863587314527,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.8759241104125977e-05,
+    "id": "A80_08",
+    "layers": 80,
+    "max_outlet_C": 40.94510517769885,
+    "outlet_rise_K": 0.00030517769886273527,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.887580871582031e-06,
+    "id": "A80_09",
+    "layers": 80,
+    "max_outlet_C": 41.2789695278621,
+    "outlet_rise_K": 0.33416952786211596,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.5865774154663086e-05,
+    "id": "A80_10",
+    "layers": 80,
+    "max_outlet_C": 40.94538698332474,
+    "outlet_rise_K": 0.0005869833247515999,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.0251998901367188e-05,
+    "id": "A80_11",
+    "layers": 80,
+    "max_outlet_C": 41.279243323080095,
+    "outlet_rise_K": 0.3344433230801087,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.7626752853393555e-05,
+    "id": "A80_12",
+    "layers": 80,
+    "max_outlet_C": 40.944830113023215,
+    "outlet_rise_K": 3.0113023228750535e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.12275505065918e-06,
+    "id": "A80_13",
+    "layers": 80,
+    "max_outlet_C": 41.278701955591714,
+    "outlet_rise_K": 0.33390195559172753,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.4543533325195312e-05,
+    "id": "A80_14",
+    "layers": 80,
+    "max_outlet_C": 40.94486706877433,
+    "outlet_rise_K": 6.706877434226044e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -6.258487701416016e-06,
+    "id": "A80_15",
+    "layers": 80,
+    "max_outlet_C": 41.27873776473689,
+    "outlet_rise_K": 0.33393776473690195,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.5730342864990234e-06,
+    "id": "A80_16",
+    "layers": 80,
+    "max_outlet_C": 40.9456871116808,
+    "outlet_rise_K": 0.0008871116808109036,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.115964889526367e-06,
+    "id": "A80_17",
+    "layers": 80,
+    "max_outlet_C": 41.279536624048376,
+    "outlet_rise_K": 0.33473662404838933,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.7729740142822266e-05,
+    "id": "A80_18",
+    "layers": 80,
+    "max_outlet_C": 40.946352206698975,
+    "outlet_rise_K": 0.0015522066989888117,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.7285346984863281e-06,
+    "id": "A80_19",
+    "layers": 80,
+    "max_outlet_C": 41.280183815090766,
+    "outlet_rise_K": 0.3353838150907791,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.404254913330078e-06,
+    "id": "A80_20",
+    "layers": 80,
+    "max_outlet_C": 40.94480023284552,
+    "outlet_rise_K": 2.3284553662961116e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.9371509552001953e-06,
+    "id": "A80_21",
+    "layers": 80,
+    "max_outlet_C": 41.27867295506593,
+    "outlet_rise_K": 0.3338729550659423,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.784894943237305e-05,
+    "id": "A80_22",
+    "layers": 80,
+    "max_outlet_C": 40.94480065565119,
+    "outlet_rise_K": 6.556512062161346e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.2278556823730469e-05,
+    "id": "A80_23",
+    "layers": 80,
+    "max_outlet_C": 41.278673368500165,
+    "outlet_rise_K": 0.33387336850017846,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.3083219528198242e-05,
+    "id": "A80_24",
+    "layers": 80,
+    "max_outlet_C": 40.94480000898591,
+    "outlet_rise_K": 8.985921340354253e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.304813385009766e-06,
+    "id": "A80_25",
+    "layers": 80,
+    "max_outlet_C": 41.27867273607427,
+    "outlet_rise_K": 0.3338727360742837,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.355741500854492e-05,
+    "id": "A80_26",
+    "layers": 80,
+    "max_outlet_C": 40.944800030100396,
+    "outlet_rise_K": 3.010040927620139e-08,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.558661460876465e-05,
+    "id": "A80_27",
+    "layers": 80,
+    "max_outlet_C": 41.278672756742594,
+    "outlet_rise_K": 0.33387275674260763,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.867813110351562e-06,
+    "id": "A80_28",
+    "layers": 80,
+    "max_outlet_C": 40.944800000274654,
+    "outlet_rise_K": 2.7466739993542433e-10,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.5795230865478516e-06,
+    "id": "A80_29",
+    "layers": 80,
+    "max_outlet_C": 41.278672727541675,
+    "outlet_rise_K": 0.3338727275416886,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.0563602447509766e-06,
+    "id": "A80_30",
+    "layers": 80,
+    "max_outlet_C": 40.94480000110008,
+    "outlet_rise_K": 1.1000906852132175e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.817941665649414e-05,
+    "id": "A80_31",
+    "layers": 80,
+    "max_outlet_C": 41.27867272834595,
+    "outlet_rise_K": 0.33387272834596615,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.0514936447143555e-05,
+    "id": "A80_32",
+    "layers": 80,
+    "max_outlet_C": 41.20056658930645,
+    "outlet_rise_K": 0.000566589306458809,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.291534423828125e-06,
+    "id": "A80_33",
+    "layers": 80,
+    "max_outlet_C": 41.279695650319695,
+    "outlet_rise_K": 0.3348956503197087,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.785724639892578e-05,
+    "id": "A160_00",
+    "layers": 160,
+    "max_outlet_C": 40.98351297843527,
+    "outlet_rise_K": 0.038712978435285095,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.30507755279541e-05,
+    "id": "A160_01",
+    "layers": 160,
+    "max_outlet_C": 41.31605643422404,
+    "outlet_rise_K": 0.3712564342240512,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.507205009460449e-05,
+    "id": "A160_02",
+    "layers": 160,
+    "max_outlet_C": 41.00030354651625,
+    "outlet_rise_K": 0.055503546516263214,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 9.506940841674805e-06,
+    "id": "A160_03",
+    "layers": 160,
+    "max_outlet_C": 41.33225148022353,
+    "outlet_rise_K": 0.3874514802235467,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.156895637512207e-05,
+    "id": "A160_04",
+    "layers": 160,
+    "max_outlet_C": 40.944802167933574,
+    "outlet_rise_K": 2.167933587315929e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.997321128845215e-05,
+    "id": "A160_05",
+    "layers": 160,
+    "max_outlet_C": 41.278674834105686,
+    "outlet_rise_K": 0.33387483410569985,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.988908767700195e-05,
+    "id": "A160_06",
+    "layers": 160,
+    "max_outlet_C": 40.94480650030317,
+    "outlet_rise_K": 6.500303186385281e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.9932470321655273e-05,
+    "id": "A160_07",
+    "layers": 160,
+    "max_outlet_C": 41.27867904160456,
+    "outlet_rise_K": 0.3338790416045754,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.055567741394043e-05,
+    "id": "A160_08",
+    "layers": 160,
+    "max_outlet_C": 40.944800027828364,
+    "outlet_rise_K": 2.7828377824334893e-08,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.00010082125663757324,
+    "id": "A160_09",
+    "layers": 160,
+    "max_outlet_C": 41.27867275436358,
+    "outlet_rise_K": 0.33387275436359687,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.978610038757324e-05,
+    "id": "A160_10",
+    "layers": 160,
+    "max_outlet_C": 40.944800113116855,
+    "outlet_rise_K": 1.1311686876069871e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.680058479309082e-05,
+    "id": "A160_11",
+    "layers": 160,
+    "max_outlet_C": 41.27867283734315,
+    "outlet_rise_K": 0.333872837343165,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.50422477722168e-05,
+    "id": "A160_12",
+    "layers": 160,
+    "max_outlet_C": 40.944800000215935,
+    "outlet_rise_K": 2.1594814825220965e-10,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.00010985136032104492,
+    "id": "A160_13",
+    "layers": 160,
+    "max_outlet_C": 41.27867272748318,
+    "outlet_rise_K": 0.33387272748319674,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.282857894897461e-05,
+    "id": "A160_14",
+    "layers": 160,
+    "max_outlet_C": 40.94480000121018,
+    "outlet_rise_K": 1.2101963875466026e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.681416511535645e-05,
+    "id": "A160_15",
+    "layers": 160,
+    "max_outlet_C": 41.27867272845174,
+    "outlet_rise_K": 0.33387272845175175,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.947185516357422e-05,
+    "id": "A160_16",
+    "layers": 160,
+    "max_outlet_C": 40.94480032061608,
+    "outlet_rise_K": 3.2061609545053216e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.5909156799316406e-05,
+    "id": "A160_17",
+    "layers": 160,
+    "max_outlet_C": 41.27867303959238,
+    "outlet_rise_K": 0.33387303959239034,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.191036224365234e-05,
+    "id": "A160_18",
+    "layers": 160,
+    "max_outlet_C": 40.94480102552478,
+    "outlet_rise_K": 1.0255247957502434e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.238719940185547e-07,
+    "id": "A160_19",
+    "layers": 160,
+    "max_outlet_C": 41.278673725863996,
+    "outlet_rise_K": 0.33387372586400943,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.421306610107422e-05,
+    "id": "A160_20",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000124,
+    "outlet_rise_K": 1.2505552149377763e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.849931716918945e-05,
+    "id": "A160_21",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727394,
+    "outlet_rise_K": 0.3338727272739561,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.921457290649414e-05,
+    "id": "A160_22",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000192,
+    "outlet_rise_K": 1.9326762412674725e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.291534423828125e-06,
+    "id": "A160_23",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727474,
+    "outlet_rise_K": 0.3338727272747519,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.8683414459228516e-05,
+    "id": "A160_24",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.793307304382324e-05,
+    "id": "A160_25",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727235,
+    "outlet_rise_K": 0.3338727272723645,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.064508438110352e-05,
+    "id": "A160_26",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.957220077514648e-06,
+    "id": "A160_27",
+    "layers": 160,
+    "max_outlet_C": 41.278672727271214,
+    "outlet_rise_K": 0.33387272727122763,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.4868717193603516e-05,
+    "id": "A160_28",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.411837577819824e-05,
+    "id": "A160_29",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727235,
+    "outlet_rise_K": 0.3338727272723645,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.301568984985352e-05,
+    "id": "A160_30",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.2232532501220703e-05,
+    "id": "A160_31",
+    "layers": 160,
+    "max_outlet_C": 41.27867272726928,
+    "outlet_rise_K": 0.33387272726929496,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.6597251892089844e-05,
+    "id": "A160_32",
+    "layers": 160,
+    "max_outlet_C": 41.20000010918699,
+    "outlet_rise_K": 1.0918699899775675e-07,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 6.979703903198242e-05,
+    "id": "A160_33",
+    "layers": 160,
+    "max_outlet_C": 41.27867294227826,
+    "outlet_rise_K": 0.33387294227827624,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001614987850189209,
+    "id": "A160dt05_00",
+    "layers": 160,
+    "max_outlet_C": 40.99216038658005,
+    "outlet_rise_K": 0.047360386580066915,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 7.295608520507812e-05,
+    "id": "A160dt05_01",
+    "layers": 160,
+    "max_outlet_C": 41.32438232276132,
+    "outlet_rise_K": 0.37958232276133685,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00021073222160339355,
+    "id": "A160dt05_02",
+    "layers": 160,
+    "max_outlet_C": 41.01053760955682,
+    "outlet_rise_K": 0.06573760955683383,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 9.447336196899414e-06,
+    "id": "A160dt05_03",
+    "layers": 160,
+    "max_outlet_C": 41.34209993177774,
+    "outlet_rise_K": 0.39729993177775214,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00013118982315063477,
+    "id": "A160dt05_04",
+    "layers": 160,
+    "max_outlet_C": 40.94480471007108,
+    "outlet_rise_K": 4.710071095814783e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00020056962966918945,
+    "id": "A160dt05_05",
+    "layers": 160,
+    "max_outlet_C": 41.2786773004608,
+    "outlet_rise_K": 0.3338773004608129,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00018548965454101562,
+    "id": "A160dt05_06",
+    "layers": 160,
+    "max_outlet_C": 40.9448127194911,
+    "outlet_rise_K": 1.2719491110146919e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 8.666515350341797e-05,
+    "id": "A160dt05_07",
+    "layers": 160,
+    "max_outlet_C": 41.27868507247331,
+    "outlet_rise_K": 0.333885072473322,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001182258129119873,
+    "id": "A160dt05_08",
+    "layers": 160,
+    "max_outlet_C": 40.94480008002694,
+    "outlet_rise_K": 8.00269503997697e-08,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00022968649864196777,
+    "id": "A160dt05_09",
+    "layers": 160,
+    "max_outlet_C": 41.27867280510054,
+    "outlet_rise_K": 0.3338728051005546,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00017079710960388184,
+    "id": "A160dt05_10",
+    "layers": 160,
+    "max_outlet_C": 40.94480028423379,
+    "outlet_rise_K": 2.8423380626918515e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.0001169443130493164,
+    "id": "A160dt05_11",
+    "layers": 160,
+    "max_outlet_C": 41.27867300359128,
+    "outlet_rise_K": 0.3338730035912931,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -9.73045825958252e-05,
+    "id": "A160dt05_12",
+    "layers": 160,
+    "max_outlet_C": 40.944800000859914,
+    "outlet_rise_K": 8.599272405263036e-10,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.0002561211585998535,
+    "id": "A160dt05_13",
+    "layers": 160,
+    "max_outlet_C": 41.278672728109825,
+    "outlet_rise_K": 0.3338727281098386,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001430213451385498,
+    "id": "A160dt05_14",
+    "layers": 160,
+    "max_outlet_C": 40.94480000406713,
+    "outlet_rise_K": 4.0671466194908135e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00013625621795654297,
+    "id": "A160dt05_15",
+    "layers": 160,
+    "max_outlet_C": 41.278672731230756,
+    "outlet_rise_K": 0.33387273123076966,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -9.453296661376953e-05,
+    "id": "A160dt05_16",
+    "layers": 160,
+    "max_outlet_C": 40.94480063269492,
+    "outlet_rise_K": 6.326949346657784e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00012165307998657227,
+    "id": "A160dt05_17",
+    "layers": 160,
+    "max_outlet_C": 41.278673343126,
+    "outlet_rise_K": 0.33387334312601524,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001577436923980713,
+    "id": "A160dt05_18",
+    "layers": 160,
+    "max_outlet_C": 40.94480186246835,
+    "outlet_rise_K": 1.8624683661983e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 1.9818544387817383e-05,
+    "id": "A160dt05_19",
+    "layers": 160,
+    "max_outlet_C": 41.278674539522285,
+    "outlet_rise_K": 0.3338745395222986,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -4.622340202331543e-05,
+    "id": "A160dt05_20",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000715,
+    "outlet_rise_K": 7.16227077646181e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00019592046737670898,
+    "id": "A160dt05_21",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727963,
+    "outlet_rise_K": 0.33387272727964046,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00011497735977172852,
+    "id": "A160dt05_22",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000857,
+    "outlet_rise_K": 8.58335624798201e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 4.482269287109375e-05,
+    "id": "A160dt05_23",
+    "layers": 160,
+    "max_outlet_C": 41.27867272728122,
+    "outlet_rise_K": 0.3338727272812321,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -4.342198371887207e-05,
+    "id": "A160dt05_24",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000033,
+    "outlet_rise_K": 3.410605131648481e-13,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00018969178199768066,
+    "id": "A160dt05_25",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727309,
+    "outlet_rise_K": 0.33387272727310346,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00011530518531799316,
+    "id": "A160dt05_26",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000175,
+    "outlet_rise_K": 1.7621459846850485e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 3.209710121154785e-05,
+    "id": "A160dt05_27",
+    "layers": 160,
+    "max_outlet_C": 41.278672727274795,
+    "outlet_rise_K": 0.33387272727480877,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -4.342198371887207e-05,
+    "id": "A160dt05_28",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.0001932680606842041,
+    "id": "A160dt05_29",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727201,
+    "outlet_rise_K": 0.33387272727202344,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -9.682774543762207e-05,
+    "id": "A160dt05_30",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 1.33514404296875e-05,
+    "id": "A160dt05_31",
+    "layers": 160,
+    "max_outlet_C": 41.27867272726826,
+    "outlet_rise_K": 0.3338727272682718,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00017529726028442383,
+    "id": "A160dt05_32",
+    "layers": 160,
+    "max_outlet_C": 41.20000027435884,
+    "outlet_rise_K": 2.7435885385784786e-07,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00012257695198059082,
+    "id": "A160dt05_33",
+    "layers": 160,
+    "max_outlet_C": 41.27867322552231,
+    "outlet_rise_K": 0.3338732255223249,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "A"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.0013580322265625e-05,
+    "id": "B20_00",
+    "layers": 20,
+    "max_outlet_C": 42.54286818325278,
+    "outlet_rise_K": 1.598068183252792,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.6987323760986328e-06,
+    "id": "B20_01",
+    "layers": 20,
+    "max_outlet_C": 42.823758415693646,
+    "outlet_rise_K": 1.8789584156936598,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.0,
+    "id": "B20_02",
+    "layers": 20,
+    "max_outlet_C": 42.64878464196846,
+    "outlet_rise_K": 1.703984641968475,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.175569534301758e-06,
+    "id": "B20_03",
+    "layers": 20,
+    "max_outlet_C": 42.925254247490386,
+    "outlet_rise_K": 1.9804542474903997,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.68899917602539e-06,
+    "id": "B20_04",
+    "layers": 20,
+    "max_outlet_C": 41.34731646528087,
+    "outlet_rise_K": 0.4025164652808826,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.5331974029541016e-06,
+    "id": "B20_05",
+    "layers": 20,
+    "max_outlet_C": 41.667247488264366,
+    "outlet_rise_K": 0.722447488264379,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 6.198883056640625e-06,
+    "id": "B20_06",
+    "layers": 20,
+    "max_outlet_C": 41.41073310773129,
+    "outlet_rise_K": 0.4659331077313027,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.033348083496094e-06,
+    "id": "B20_07",
+    "layers": 20,
+    "max_outlet_C": 41.72801511895909,
+    "outlet_rise_K": 0.7832151189591059,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.5299530029296875e-06,
+    "id": "B20_08",
+    "layers": 20,
+    "max_outlet_C": 41.17485249800757,
+    "outlet_rise_K": 0.23005249800758065,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.344650268554688e-07,
+    "id": "B20_09",
+    "layers": 20,
+    "max_outlet_C": 41.49973261947724,
+    "outlet_rise_K": 0.5549326194772561,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.328126907348633e-06,
+    "id": "B20_10",
+    "layers": 20,
+    "max_outlet_C": 41.21981092709393,
+    "outlet_rise_K": 0.2750109270939447,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.64267349243164e-06,
+    "id": "B20_11",
+    "layers": 20,
+    "max_outlet_C": 41.54263400498735,
+    "outlet_rise_K": 0.5978340049873623,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.500150680541992e-06,
+    "id": "B20_12",
+    "layers": 20,
+    "max_outlet_C": 41.07016917629028,
+    "outlet_rise_K": 0.12536917629029176,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.940696716308594e-08,
+    "id": "B20_13",
+    "layers": 20,
+    "max_outlet_C": 41.39789997272311,
+    "outlet_rise_K": 0.4530999727231233,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.0563602447509766e-06,
+    "id": "B20_14",
+    "layers": 20,
+    "max_outlet_C": 41.09984831237705,
+    "outlet_rise_K": 0.15504831237706185,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.804964065551758e-06,
+    "id": "B20_15",
+    "layers": 20,
+    "max_outlet_C": 41.42600171118528,
+    "outlet_rise_K": 0.4812017111852924,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.066394805908203e-07,
+    "id": "B20_16",
+    "layers": 20,
+    "max_outlet_C": 41.24908961404941,
+    "outlet_rise_K": 0.30428961404942356,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.0100345611572266e-06,
+    "id": "B20_17",
+    "layers": 20,
+    "max_outlet_C": 41.575324525761005,
+    "outlet_rise_K": 0.6305245257610181,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.470348358154297e-06,
+    "id": "B20_18",
+    "layers": 20,
+    "max_outlet_C": 41.301114758616166,
+    "outlet_rise_K": 0.356314758616179,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.546476364135742e-06,
+    "id": "B20_19",
+    "layers": 20,
+    "max_outlet_C": 41.625798137795584,
+    "outlet_rise_K": 0.6809981377955978,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.996755599975586e-06,
+    "id": "B20_20",
+    "layers": 20,
+    "max_outlet_C": 40.9800118899567,
+    "outlet_rise_K": 0.035211889956713094,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.066394805908203e-06,
+    "id": "B20_21",
+    "layers": 20,
+    "max_outlet_C": 41.31298973682169,
+    "outlet_rise_K": 0.3681897368217051,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.129243850708008e-06,
+    "id": "B20_22",
+    "layers": 20,
+    "max_outlet_C": 40.9909182487566,
+    "outlet_rise_K": 0.04611824875661341,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.913309097290039e-05,
+    "id": "B20_23",
+    "layers": 20,
+    "max_outlet_C": 41.32345715034887,
+    "outlet_rise_K": 0.3786571503488858,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.5730342864990234e-06,
+    "id": "B20_24",
+    "layers": 20,
+    "max_outlet_C": 40.96018940411642,
+    "outlet_rise_K": 0.015389404116433525,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.2040138244628906e-05,
+    "id": "B20_25",
+    "layers": 20,
+    "max_outlet_C": 41.29359849917813,
+    "outlet_rise_K": 0.34879849917814454,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -6.586313247680664e-06,
+    "id": "B20_26",
+    "layers": 20,
+    "max_outlet_C": 40.96579045211587,
+    "outlet_rise_K": 0.020990452115881908,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.589557647705078e-06,
+    "id": "B20_27",
+    "layers": 20,
+    "max_outlet_C": 41.29885980116023,
+    "outlet_rise_K": 0.35405980116024693,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.0067901611328125e-06,
+    "id": "B20_28",
+    "layers": 20,
+    "max_outlet_C": 40.951193244646674,
+    "outlet_rise_K": 0.00639324464668789,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.0877847671508789e-05,
+    "id": "B20_29",
+    "layers": 20,
+    "max_outlet_C": 41.28478793747456,
+    "outlet_rise_K": 0.3399879374745751,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.798173904418945e-06,
+    "id": "B20_30",
+    "layers": 20,
+    "max_outlet_C": 40.95389102792194,
+    "outlet_rise_K": 0.009091027921954264,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.59634780883789e-06,
+    "id": "B20_31",
+    "layers": 20,
+    "max_outlet_C": 41.28703022298788,
+    "outlet_rise_K": 0.34223022298789374,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.036592483520508e-06,
+    "id": "B20_32",
+    "layers": 20,
+    "max_outlet_C": 41.46545600842694,
+    "outlet_rise_K": 0.26545600842695194,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.298324584960938e-06,
+    "id": "B20_33",
+    "layers": 20,
+    "max_outlet_C": 41.703160678767404,
+    "outlet_rise_K": 0.7583606787674171,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.682209014892578e-07,
+    "id": "B40_00",
+    "layers": 40,
+    "max_outlet_C": 41.82411237865978,
+    "outlet_rise_K": 0.8793123786597903,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.3942203521728516e-06,
+    "id": "B40_01",
+    "layers": 40,
+    "max_outlet_C": 42.12885765113862,
+    "outlet_rise_K": 1.1840576511386303,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.430511474609375e-05,
+    "id": "B40_02",
+    "layers": 40,
+    "max_outlet_C": 41.919312226645616,
+    "outlet_rise_K": 0.9745122266456292,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.570582389831543e-05,
+    "id": "B40_03",
+    "layers": 40,
+    "max_outlet_C": 42.220646827666144,
+    "outlet_rise_K": 1.2758468276661574,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.4901161193847656e-06,
+    "id": "B40_04",
+    "layers": 40,
+    "max_outlet_C": 41.01574780335255,
+    "outlet_rise_K": 0.07094780335256701,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.62939453125e-06,
+    "id": "B40_05",
+    "layers": 40,
+    "max_outlet_C": 41.34751835015663,
+    "outlet_rise_K": 0.4027183501566469,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 2.294778823852539e-06,
+    "id": "B40_06",
+    "layers": 40,
+    "max_outlet_C": 41.03730625418552,
+    "outlet_rise_K": 0.09250625418553682,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.76837158203125e-06,
+    "id": "B40_07",
+    "layers": 40,
+    "max_outlet_C": 41.368383353611875,
+    "outlet_rise_K": 0.4235833536118889,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.662441253662109e-06,
+    "id": "B40_08",
+    "layers": 40,
+    "max_outlet_C": 40.96942182684472,
+    "outlet_rise_K": 0.02462182684473646,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.129243850708008e-06,
+    "id": "B40_09",
+    "layers": 40,
+    "max_outlet_C": 41.302532589394275,
+    "outlet_rise_K": 0.3577325893942884,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.996755599975586e-06,
+    "id": "B40_10",
+    "layers": 40,
+    "max_outlet_C": 40.97907043044813,
+    "outlet_rise_K": 0.03427043044814582,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.0,
+    "id": "B40_11",
+    "layers": 40,
+    "max_outlet_C": 41.31185305761585,
+    "outlet_rise_K": 0.3670530576158626,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.0728836059570312e-06,
+    "id": "B40_12",
+    "layers": 40,
+    "max_outlet_C": 40.95250203657963,
+    "outlet_rise_K": 0.0077020365796443,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.331371307373047e-06,
+    "id": "B40_13",
+    "layers": 40,
+    "max_outlet_C": 41.28607661054593,
+    "outlet_rise_K": 0.3412766105459468,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.016824722290039e-06,
+    "id": "B40_14",
+    "layers": 40,
+    "max_outlet_C": 40.95629428707588,
+    "outlet_rise_K": 0.011494287075890952,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.7418136596679688e-06,
+    "id": "B40_15",
+    "layers": 40,
+    "max_outlet_C": 41.289709287534095,
+    "outlet_rise_K": 0.344909287534108,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.0100345611572266e-06,
+    "id": "B40_16",
+    "layers": 40,
+    "max_outlet_C": 40.98633374696408,
+    "outlet_rise_K": 0.04153374696409173,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.069639205932617e-06,
+    "id": "B40_17",
+    "layers": 40,
+    "max_outlet_C": 41.319137947952015,
+    "outlet_rise_K": 0.37433794795202857,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.913309097290039e-05,
+    "id": "B40_18",
+    "layers": 40,
+    "max_outlet_C": 41.00020372473011,
+    "outlet_rise_K": 0.05540372473012667,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.900859832763672e-06,
+    "id": "B40_19",
+    "layers": 40,
+    "max_outlet_C": 41.332635809348176,
+    "outlet_rise_K": 0.3878358093481893,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.4405460357666016e-06,
+    "id": "B40_20",
+    "layers": 40,
+    "max_outlet_C": 40.94545788329941,
+    "outlet_rise_K": 0.0006578832994250661,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.993511199951172e-06,
+    "id": "B40_21",
+    "layers": 40,
+    "max_outlet_C": 41.279316192547924,
+    "outlet_rise_K": 0.3345161925479374,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.8477439880371094e-06,
+    "id": "B40_22",
+    "layers": 40,
+    "max_outlet_C": 40.945902808561186,
+    "outlet_rise_K": 0.0011028085611997085,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -6.616115570068359e-06,
+    "id": "B40_23",
+    "layers": 40,
+    "max_outlet_C": 41.279750642594365,
+    "outlet_rise_K": 0.3349506425943787,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.924173355102539e-06,
+    "id": "B40_24",
+    "layers": 40,
+    "max_outlet_C": 40.94493065716671,
+    "outlet_rise_K": 0.00013065716672144845,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.635883331298828e-06,
+    "id": "B40_25",
+    "layers": 40,
+    "max_outlet_C": 41.27880052184429,
+    "outlet_rise_K": 0.3340005218443025,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.834766387939453e-06,
+    "id": "B40_26",
+    "layers": 40,
+    "max_outlet_C": 40.9450380147905,
+    "outlet_rise_K": 0.0002380147905114427,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.692243576049805e-06,
+    "id": "B40_27",
+    "layers": 40,
+    "max_outlet_C": 41.27890504679215,
+    "outlet_rise_K": 0.33410504679216046,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.821487426757812e-06,
+    "id": "B40_28",
+    "layers": 40,
+    "max_outlet_C": 40.94482327639071,
+    "outlet_rise_K": 2.327639072063903e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.3245811462402344e-06,
+    "id": "B40_29",
+    "layers": 40,
+    "max_outlet_C": 41.278695369162676,
+    "outlet_rise_K": 0.3338953691626898,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.9073486328125e-06,
+    "id": "B40_30",
+    "layers": 40,
+    "max_outlet_C": 40.9448462028206,
+    "outlet_rise_K": 4.620282061296166e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.304813385009766e-06,
+    "id": "B40_31",
+    "layers": 40,
+    "max_outlet_C": 41.27871712541662,
+    "outlet_rise_K": 0.3339171254166331,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.3974647521972656e-06,
+    "id": "B40_32",
+    "layers": 40,
+    "max_outlet_C": 41.23307974621224,
+    "outlet_rise_K": 0.03307974621225185,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.7881393432617188e-07,
+    "id": "B40_33",
+    "layers": 40,
+    "max_outlet_C": 41.33568021616247,
+    "outlet_rise_K": 0.39088021616248625,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.703070640563965e-05,
+    "id": "B80_00",
+    "layers": 80,
+    "max_outlet_C": 41.24957900629795,
+    "outlet_rise_K": 0.30477900629796295,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.1831521987915039e-05,
+    "id": "B80_01",
+    "layers": 80,
+    "max_outlet_C": 41.5730770258927,
+    "outlet_rise_K": 0.6282770258927144,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.7071447372436523e-05,
+    "id": "B80_02",
+    "layers": 80,
+    "max_outlet_C": 41.31042092220781,
+    "outlet_rise_K": 0.3656209222078246,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.2351741790771484e-06,
+    "id": "B80_03",
+    "layers": 80,
+    "max_outlet_C": 41.6317503368623,
+    "outlet_rise_K": 0.68695033686231,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "NO_FEASIBLE_DESIGN_AT_THIS_POINT",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.491474151611328e-05,
+    "id": "B80_04",
+    "layers": 80,
+    "max_outlet_C": 40.94726445582296,
+    "outlet_rise_K": 0.0024644558229738323,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.682209014892578e-06,
+    "id": "B80_05",
+    "layers": 80,
+    "max_outlet_C": 41.28106658157793,
+    "outlet_rise_K": 0.3362665815779451,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.364418029785156e-05,
+    "id": "B80_06",
+    "layers": 80,
+    "max_outlet_C": 40.948933563976766,
+    "outlet_rise_K": 0.004133563976779442,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.063150405883789e-06,
+    "id": "B80_07",
+    "layers": 80,
+    "max_outlet_C": 41.28268635873144,
+    "outlet_rise_K": 0.3378863587314527,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.8759241104125977e-05,
+    "id": "B80_08",
+    "layers": 80,
+    "max_outlet_C": 40.94510517769885,
+    "outlet_rise_K": 0.00030517769886273527,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.887580871582031e-06,
+    "id": "B80_09",
+    "layers": 80,
+    "max_outlet_C": 41.2789695278621,
+    "outlet_rise_K": 0.33416952786211596,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.5865774154663086e-05,
+    "id": "B80_10",
+    "layers": 80,
+    "max_outlet_C": 40.94538698332474,
+    "outlet_rise_K": 0.0005869833247515999,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.0251998901367188e-05,
+    "id": "B80_11",
+    "layers": 80,
+    "max_outlet_C": 41.279243323080095,
+    "outlet_rise_K": 0.3344433230801087,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.7626752853393555e-05,
+    "id": "B80_12",
+    "layers": 80,
+    "max_outlet_C": 40.944830113023215,
+    "outlet_rise_K": 3.0113023228750535e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.12275505065918e-06,
+    "id": "B80_13",
+    "layers": 80,
+    "max_outlet_C": 41.278701955591714,
+    "outlet_rise_K": 0.33390195559172753,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.4543533325195312e-05,
+    "id": "B80_14",
+    "layers": 80,
+    "max_outlet_C": 40.94486706877433,
+    "outlet_rise_K": 6.706877434226044e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -6.258487701416016e-06,
+    "id": "B80_15",
+    "layers": 80,
+    "max_outlet_C": 41.27873776473689,
+    "outlet_rise_K": 0.33393776473690195,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.5730342864990234e-06,
+    "id": "B80_16",
+    "layers": 80,
+    "max_outlet_C": 40.9456871116808,
+    "outlet_rise_K": 0.0008871116808109036,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.115964889526367e-06,
+    "id": "B80_17",
+    "layers": 80,
+    "max_outlet_C": 41.279536624048376,
+    "outlet_rise_K": 0.33473662404838933,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.7729740142822266e-05,
+    "id": "B80_18",
+    "layers": 80,
+    "max_outlet_C": 40.946352206698975,
+    "outlet_rise_K": 0.0015522066989888117,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.7285346984863281e-06,
+    "id": "B80_19",
+    "layers": 80,
+    "max_outlet_C": 41.280183815090766,
+    "outlet_rise_K": 0.3353838150907791,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.404254913330078e-06,
+    "id": "B80_20",
+    "layers": 80,
+    "max_outlet_C": 40.94480023284552,
+    "outlet_rise_K": 2.3284553662961116e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.9371509552001953e-06,
+    "id": "B80_21",
+    "layers": 80,
+    "max_outlet_C": 41.27867295506593,
+    "outlet_rise_K": 0.3338729550659423,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.784894943237305e-05,
+    "id": "B80_22",
+    "layers": 80,
+    "max_outlet_C": 40.94480065565119,
+    "outlet_rise_K": 6.556512062161346e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.2278556823730469e-05,
+    "id": "B80_23",
+    "layers": 80,
+    "max_outlet_C": 41.278673368500165,
+    "outlet_rise_K": 0.33387336850017846,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.3083219528198242e-05,
+    "id": "B80_24",
+    "layers": 80,
+    "max_outlet_C": 40.94480000898591,
+    "outlet_rise_K": 8.985921340354253e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.304813385009766e-06,
+    "id": "B80_25",
+    "layers": 80,
+    "max_outlet_C": 41.27867273607427,
+    "outlet_rise_K": 0.3338727360742837,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.355741500854492e-05,
+    "id": "B80_26",
+    "layers": 80,
+    "max_outlet_C": 40.944800030100396,
+    "outlet_rise_K": 3.010040927620139e-08,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.558661460876465e-05,
+    "id": "B80_27",
+    "layers": 80,
+    "max_outlet_C": 41.278672756742594,
+    "outlet_rise_K": 0.33387275674260763,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.867813110351562e-06,
+    "id": "B80_28",
+    "layers": 80,
+    "max_outlet_C": 40.944800000274654,
+    "outlet_rise_K": 2.7466739993542433e-10,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 1.5795230865478516e-06,
+    "id": "B80_29",
+    "layers": 80,
+    "max_outlet_C": 41.278672727541675,
+    "outlet_rise_K": 0.3338727275416886,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.0563602447509766e-06,
+    "id": "B80_30",
+    "layers": 80,
+    "max_outlet_C": 40.94480000110008,
+    "outlet_rise_K": 1.1000906852132175e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -1.817941665649414e-05,
+    "id": "B80_31",
+    "layers": 80,
+    "max_outlet_C": 41.27867272834595,
+    "outlet_rise_K": 0.33387272834596615,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -5.0514936447143555e-05,
+    "id": "B80_32",
+    "layers": 80,
+    "max_outlet_C": 41.20056658930645,
+    "outlet_rise_K": 0.000566589306458809,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.291534423828125e-06,
+    "id": "B80_33",
+    "layers": 80,
+    "max_outlet_C": 41.279695650319695,
+    "outlet_rise_K": 0.3348956503197087,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.785724639892578e-05,
+    "id": "B160_00",
+    "layers": 160,
+    "max_outlet_C": 40.98351297843527,
+    "outlet_rise_K": 0.038712978435285095,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 3.30507755279541e-05,
+    "id": "B160_01",
+    "layers": 160,
+    "max_outlet_C": 41.31605643422404,
+    "outlet_rise_K": 0.3712564342240512,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.507205009460449e-05,
+    "id": "B160_02",
+    "layers": 160,
+    "max_outlet_C": 41.00030354651625,
+    "outlet_rise_K": 0.055503546516263214,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 9.506940841674805e-06,
+    "id": "B160_03",
+    "layers": 160,
+    "max_outlet_C": 41.33225148022353,
+    "outlet_rise_K": 0.3874514802235467,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.156895637512207e-05,
+    "id": "B160_04",
+    "layers": 160,
+    "max_outlet_C": 40.944802167933574,
+    "outlet_rise_K": 2.167933587315929e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.997321128845215e-05,
+    "id": "B160_05",
+    "layers": 160,
+    "max_outlet_C": 41.278674834105686,
+    "outlet_rise_K": 0.33387483410569985,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.988908767700195e-05,
+    "id": "B160_06",
+    "layers": 160,
+    "max_outlet_C": 40.94480650030317,
+    "outlet_rise_K": 6.500303186385281e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.9932470321655273e-05,
+    "id": "B160_07",
+    "layers": 160,
+    "max_outlet_C": 41.27867904160456,
+    "outlet_rise_K": 0.3338790416045754,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.055567741394043e-05,
+    "id": "B160_08",
+    "layers": 160,
+    "max_outlet_C": 40.944800027828364,
+    "outlet_rise_K": 2.7828377824334893e-08,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.00010082125663757324,
+    "id": "B160_09",
+    "layers": 160,
+    "max_outlet_C": 41.27867275436358,
+    "outlet_rise_K": 0.33387275436359687,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.978610038757324e-05,
+    "id": "B160_10",
+    "layers": 160,
+    "max_outlet_C": 40.944800113116855,
+    "outlet_rise_K": 1.1311686876069871e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.680058479309082e-05,
+    "id": "B160_11",
+    "layers": 160,
+    "max_outlet_C": 41.27867283734315,
+    "outlet_rise_K": 0.333872837343165,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.50422477722168e-05,
+    "id": "B160_12",
+    "layers": 160,
+    "max_outlet_C": 40.944800000215935,
+    "outlet_rise_K": 2.1594814825220965e-10,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 0.00010985136032104492,
+    "id": "B160_13",
+    "layers": 160,
+    "max_outlet_C": 41.27867272748318,
+    "outlet_rise_K": 0.33387272748319674,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.282857894897461e-05,
+    "id": "B160_14",
+    "layers": 160,
+    "max_outlet_C": 40.94480000121018,
+    "outlet_rise_K": 1.2101963875466026e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 8.681416511535645e-05,
+    "id": "B160_15",
+    "layers": 160,
+    "max_outlet_C": 41.27867272845174,
+    "outlet_rise_K": 0.33387272845175175,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -4.947185516357422e-05,
+    "id": "B160_16",
+    "layers": 160,
+    "max_outlet_C": 40.94480032061608,
+    "outlet_rise_K": 3.2061609545053216e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 5.5909156799316406e-05,
+    "id": "B160_17",
+    "layers": 160,
+    "max_outlet_C": 41.27867303959238,
+    "outlet_rise_K": 0.33387303959239034,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.191036224365234e-05,
+    "id": "B160_18",
+    "layers": 160,
+    "max_outlet_C": 40.94480102552478,
+    "outlet_rise_K": 1.0255247957502434e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -9.238719940185547e-07,
+    "id": "B160_19",
+    "layers": 160,
+    "max_outlet_C": 41.278673725863996,
+    "outlet_rise_K": 0.33387372586400943,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.421306610107422e-05,
+    "id": "B160_20",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000124,
+    "outlet_rise_K": 1.2505552149377763e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.849931716918945e-05,
+    "id": "B160_21",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727394,
+    "outlet_rise_K": 0.3338727272739561,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.921457290649414e-05,
+    "id": "B160_22",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000192,
+    "outlet_rise_K": 1.9326762412674725e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 4.291534423828125e-06,
+    "id": "B160_23",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727474,
+    "outlet_rise_K": 0.3338727272747519,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.8683414459228516e-05,
+    "id": "B160_24",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.793307304382324e-05,
+    "id": "B160_25",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727235,
+    "outlet_rise_K": 0.3338727272723645,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -8.064508438110352e-05,
+    "id": "B160_26",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.957220077514648e-06,
+    "id": "B160_27",
+    "layers": 160,
+    "max_outlet_C": 41.278672727271214,
+    "outlet_rise_K": 0.33387272727122763,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.4868717193603516e-05,
+    "id": "B160_28",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 7.411837577819824e-05,
+    "id": "B160_29",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727235,
+    "outlet_rise_K": 0.3338727272723645,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -7.301568984985352e-05,
+    "id": "B160_30",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -2.2232532501220703e-05,
+    "id": "B160_31",
+    "layers": 160,
+    "max_outlet_C": 41.27867272726928,
+    "outlet_rise_K": 0.33387272726929496,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": -3.6597251892089844e-05,
+    "id": "B160_32",
+    "layers": 160,
+    "max_outlet_C": 41.20000010918699,
+    "outlet_rise_K": 1.0918699899775675e-07,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.1,
+    "energy_residual_J": 6.979703903198242e-05,
+    "id": "B160_33",
+    "layers": 160,
+    "max_outlet_C": 41.27867294227826,
+    "outlet_rise_K": 0.33387294227827624,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001614987850189209,
+    "id": "B160dt05_00",
+    "layers": 160,
+    "max_outlet_C": 40.99216038658005,
+    "outlet_rise_K": 0.047360386580066915,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 7.295608520507812e-05,
+    "id": "B160dt05_01",
+    "layers": 160,
+    "max_outlet_C": 41.32438232276132,
+    "outlet_rise_K": 0.37958232276133685,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00021073222160339355,
+    "id": "B160dt05_02",
+    "layers": 160,
+    "max_outlet_C": 41.01053760955682,
+    "outlet_rise_K": 0.06573760955683383,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 9.447336196899414e-06,
+    "id": "B160dt05_03",
+    "layers": 160,
+    "max_outlet_C": 41.34209993177774,
+    "outlet_rise_K": 0.39729993177775214,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00013118982315063477,
+    "id": "B160dt05_04",
+    "layers": 160,
+    "max_outlet_C": 40.94480471007108,
+    "outlet_rise_K": 4.710071095814783e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00020056962966918945,
+    "id": "B160dt05_05",
+    "layers": 160,
+    "max_outlet_C": 41.2786773004608,
+    "outlet_rise_K": 0.3338773004608129,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00018548965454101562,
+    "id": "B160dt05_06",
+    "layers": 160,
+    "max_outlet_C": 40.9448127194911,
+    "outlet_rise_K": 1.2719491110146919e-05,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 8.666515350341797e-05,
+    "id": "B160dt05_07",
+    "layers": 160,
+    "max_outlet_C": 41.27868507247331,
+    "outlet_rise_K": 0.333885072473322,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001182258129119873,
+    "id": "B160dt05_08",
+    "layers": 160,
+    "max_outlet_C": 40.94480008002694,
+    "outlet_rise_K": 8.00269503997697e-08,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00022968649864196777,
+    "id": "B160dt05_09",
+    "layers": 160,
+    "max_outlet_C": 41.27867280510054,
+    "outlet_rise_K": 0.3338728051005546,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00017079710960388184,
+    "id": "B160dt05_10",
+    "layers": 160,
+    "max_outlet_C": 40.94480028423379,
+    "outlet_rise_K": 2.8423380626918515e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.0001169443130493164,
+    "id": "B160dt05_11",
+    "layers": 160,
+    "max_outlet_C": 41.27867300359128,
+    "outlet_rise_K": 0.3338730035912931,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -9.73045825958252e-05,
+    "id": "B160dt05_12",
+    "layers": 160,
+    "max_outlet_C": 40.944800000859914,
+    "outlet_rise_K": 8.599272405263036e-10,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.0002561211585998535,
+    "id": "B160dt05_13",
+    "layers": 160,
+    "max_outlet_C": 41.278672728109825,
+    "outlet_rise_K": 0.3338727281098386,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001430213451385498,
+    "id": "B160dt05_14",
+    "layers": 160,
+    "max_outlet_C": 40.94480000406713,
+    "outlet_rise_K": 4.0671466194908135e-09,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00013625621795654297,
+    "id": "B160dt05_15",
+    "layers": 160,
+    "max_outlet_C": 41.278672731230756,
+    "outlet_rise_K": 0.33387273123076966,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -9.453296661376953e-05,
+    "id": "B160dt05_16",
+    "layers": 160,
+    "max_outlet_C": 40.94480063269492,
+    "outlet_rise_K": 6.326949346657784e-07,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00012165307998657227,
+    "id": "B160dt05_17",
+    "layers": 160,
+    "max_outlet_C": 41.278673343126,
+    "outlet_rise_K": 0.33387334312601524,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.0001577436923980713,
+    "id": "B160dt05_18",
+    "layers": 160,
+    "max_outlet_C": 40.94480186246835,
+    "outlet_rise_K": 1.8624683661983e-06,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 1.9818544387817383e-05,
+    "id": "B160dt05_19",
+    "layers": 160,
+    "max_outlet_C": 41.278674539522285,
+    "outlet_rise_K": 0.3338745395222986,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.7,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -4.622340202331543e-05,
+    "id": "B160dt05_20",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000715,
+    "outlet_rise_K": 7.16227077646181e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00019592046737670898,
+    "id": "B160dt05_21",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727963,
+    "outlet_rise_K": 0.33387272727964046,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00011497735977172852,
+    "id": "B160dt05_22",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000857,
+    "outlet_rise_K": 8.58335624798201e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 4.482269287109375e-05,
+    "id": "B160dt05_23",
+    "layers": 160,
+    "max_outlet_C": 41.27867272728122,
+    "outlet_rise_K": 0.3338727272812321,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.85,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -4.342198371887207e-05,
+    "id": "B160dt05_24",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000033,
+    "outlet_rise_K": 3.410605131648481e-13,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00018969178199768066,
+    "id": "B160dt05_25",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727309,
+    "outlet_rise_K": 0.33387272727310346,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00011530518531799316,
+    "id": "B160dt05_26",
+    "layers": 160,
+    "max_outlet_C": 40.94480000000175,
+    "outlet_rise_K": 1.7621459846850485e-12,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 3.209710121154785e-05,
+    "id": "B160dt05_27",
+    "layers": 160,
+    "max_outlet_C": 41.278672727274795,
+    "outlet_rise_K": 0.33387272727480877,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -4.342198371887207e-05,
+    "id": "B160dt05_28",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.0001932680606842041,
+    "id": "B160dt05_29",
+    "layers": 160,
+    "max_outlet_C": 41.27867272727201,
+    "outlet_rise_K": 0.33387272727202344,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.0,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -9.682774543762207e-05,
+    "id": "B160dt05_30",
+    "layers": 160,
+    "max_outlet_C": 40.94479999999999,
+    "outlet_rise_K": 0.0,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 1.33514404296875e-05,
+    "id": "B160dt05_31",
+    "layers": 160,
+    "max_outlet_C": 41.27867272726826,
+    "outlet_rise_K": 0.3338727272682718,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.95,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.05,
+      "volume": 20.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": -0.00017529726028442383,
+    "id": "B160dt05_32",
+    "layers": 160,
+    "max_outlet_C": 41.20000027435884,
+    "outlet_rise_K": 2.7435885385784786e-07,
+    "parameters": {
+      "cold_C": 41.2,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SHARP",
+      "short": 0.0,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  },
+  {
+    "OEM": "NOT_VERIFIED",
+    "dt_s": 0.05,
+    "energy_residual_J": 0.00012257695198059082,
+    "id": "B160dt05_33",
+    "layers": 160,
+    "max_outlet_C": 41.27867322552231,
+    "outlet_rise_K": 0.3338732255223249,
+    "parameters": {
+      "cold_C": 40.9448,
+      "fraction": 0.9,
+      "mixing": 0.005,
+      "profile": "SMEARED",
+      "short": 0.05,
+      "volume": 15.0
+    },
+    "status": "CONDITIONALLY_FEASIBLE",
+    "tank": "B"
+  }
+]

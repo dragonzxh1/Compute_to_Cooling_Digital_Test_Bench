@@ -1,0 +1,4 @@
+﻿"assumed_standby_hours_h","one_loop_wire_kW","pump_only_kWh","electricity_price_USD_kWh","annual_cost_USD","fan_spray_cold_service_electricity_kWh","basis"
+"1000","0.7692307692307576","769.2307692307576",,,,"ASSUMED_HOURS_NOT_ANNUAL_FORECAST; model constant90m3h20kPa eta0.65; excludes all other equipment"
+"4000","0.7692307692307576","3076.9230769230303",,,,"ASSUMED_HOURS_NOT_ANNUAL_FORECAST; model constant90m3h20kPa eta0.65; excludes all other equipment"
+"8760","0.7692307692307576","6738.461538461437",,,,"ASSUMED_HOURS_NOT_ANNUAL_FORECAST; model constant90m3h20kPa eta0.65; excludes all other equipment"

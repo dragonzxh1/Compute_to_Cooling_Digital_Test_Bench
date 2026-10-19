@@ -1,0 +1,319 @@
+{
+  "schema": "MEMPHIS-FAILURE-CLOSURE-DELIVERY-v1",
+  "execution_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13",
+  "run": 39180526734,
+  "scope": "Finite engineering software failure diagnosis, component sensitivity and supplier protocol proposal, NOT OEM qualification",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "manifest_raw_sha256": "ba263422c76d02710e410c2071cc87b84d6faee82fd0d65e94cc4148adee7ce2",
+  "source_input_environment_manifest_sha256": "383c0b0c0c32f0d9f9fa312581d41d1a899cf551c1111a8b613590f93ce46797",
+  "derivation_note": "Official raw HTML/Markdown/JSON untouched; ENGINEERING_DECISION_ZH interprets actual outputs, clarifies incomplete source/reserve/numerical scope. Event-complete HTML/CSV decodes saved physical steps only; no local model execution. Original artifact_hashes indexes official FINAL, package_manifest indexes the full delivery.",
+  "derived_plot_provenance": {
+    "official_html_sha256": "df3c8caa011e8e6304eabc20b0ae3b11226ef479aa4ee1827aa9ca9322887fa5",
+    "engineering_approval": false,
+    "cases": [
+      {
+        "method": "Every saved physical interval; no interpolation or favorable sampling",
+        "first_actual_B_path_cold_s": 64.2,
+        "actual_B_path_cold_delay_s": 34.2,
+        "physical_rows": 2400,
+        "minimum_time_s": 35.1,
+        "physical_raw_sha256": "c178fa1ccdad76c97f8483f08ff43c5f8c5334745efff2d9e406308b6fb02b70",
+        "original_any_path_cold_delay_s": 0.10000000000000142,
+        "minimum_load_m3_h": 0.0,
+        "id": "valves__A_demand_no_stuck"
+      },
+      {
+        "method": "Every saved physical interval; no interpolation or favorable sampling",
+        "first_actual_B_path_cold_s": 64.2,
+        "actual_B_path_cold_delay_s": 34.2,
+        "physical_rows": 2400,
+        "minimum_time_s": 30.1,
+        "physical_raw_sha256": "06237dfe4b7170724f5841b177ae414c0e3acae8159fcc2966259b37583069ae",
+        "original_any_path_cold_delay_s": 0.10000000000000142,
+        "minimum_load_m3_h": 178.96762770039132,
+        "id": "valves__A_demand_stuck"
+      }
+    ],
+    "no_model_rerun": true,
+    "derived_html_sha256": "290ea166cdc55e3d01d581677e1ac8cbf4e4e6f0e9ee7c2556c26cbd16ce46b5",
+    "run": 39180526734,
+    "renderer_source_raw_sha256": "0bbce5dc7e0dab158c72dde6ee5aa23971a097df85c10a31bc37766d58841312",
+    "transformation": "EVENT_COMPLETE_TWO_VALVE_CASES_v1"
+  },
+  "model_source_changed_by_delivery": false,
+  "files": [
+    {
+      "path": "actual_postcharge_discharge.json",
+      "bytes": 1378,
+      "raw_sha256": "c13b27490c1c97e3980e4d229b24fadb00c38c5f172de1f287d8a811bb4c0461"
+    },
+    {
+      "path": "artifact_hashes.json",
+      "bytes": 6874,
+      "raw_sha256": "657d4013b994355fb348c0cff2ccc3cefa5263fc0ac8e4774c0ac371465ffb03"
+    },
+    {
+      "path": "bounded_energy_sensitivity.csv",
+      "bytes": 617,
+      "raw_sha256": "383ebef0cd10b5f0d4cfb62f747be272c198a37e94325eb3872ca1aaa03cb164"
+    },
+    {
+      "path": "closure_summary.json",
+      "bytes": 2987,
+      "raw_sha256": "bc6e0eaf32970a02bb911979cf872cb99c660d2390fa51c5c1e4958b1945c63e"
+    },
+    {
+      "path": "critical_event_points.csv",
+      "bytes": 590363,
+      "raw_sha256": "f0ebfbf7df5b07d24338c482ade1d79c82adac4093f1fbba4b63f48021785c39"
+    },
+    {
+      "path": "critical_plot_provenance.json",
+      "bytes": 1438,
+      "raw_sha256": "b77a1c7b0d2aa6c39dce7688f7c959d207d3aa2e9ff1da83eaafacd76e26c458"
+    },
+    {
+      "path": "dry_performance_surface.csv",
+      "bytes": 40602,
+      "raw_sha256": "9b7e47d7498446a8d4330a6aff4303ef63f597610c8b71180e2e5629fa0f01e1"
+    },
+    {
+      "path": "dynamic_results.json",
+      "bytes": 1302190,
+      "raw_sha256": "22e642918946d02de3510534cf7b373028953911bc57f5277652f555151a58aa"
+    },
+    {
+      "path": "ENGINEERING_DECISION_ZH.md",
+      "bytes": 17910,
+      "raw_sha256": "445a51b7d941dde8f57c172935760acec94e423d10da8db728c87558b0538eb0"
+    },
+    {
+      "path": "engineering_report_event_complete.html",
+      "bytes": 12793619,
+      "raw_sha256": "290ea166cdc55e3d01d581677e1ac8cbf4e4e6f0e9ee7c2556c26cbd16ce46b5"
+    },
+    {
+      "path": "engineering_report.html",
+      "bytes": 11901177,
+      "raw_sha256": "df3c8caa011e8e6304eabc20b0ae3b11226ef479aa4ee1827aa9ca9322887fa5"
+    },
+    {
+      "path": "environment_registration.json",
+      "bytes": 423,
+      "raw_sha256": "7110d066b9bf2e89aaa8e934513a0e111e4f7ef5706d6eeaea36da826edf7fae"
+    },
+    {
+      "path": "execution_receipts.json",
+      "bytes": 343,
+      "raw_sha256": "df05309fc0a892a0fde0302291267c2f73950b44a91693a093f77b1c1e111f3d"
+    },
+    {
+      "path": "external_job_identity.json",
+      "bytes": 677,
+      "raw_sha256": "0c38a26da7674d531a324a6a208b584a5d99b55a9eed9796d46fe5b5d4c98c53"
+    },
+    {
+      "path": "failure_and_candidate_results.csv",
+      "bytes": 150502,
+      "raw_sha256": "6e92dcfa3d5bff2b305f450ade3506f662fe5e30b4bb86c545b7e506cc045310"
+    },
+    {
+      "path": "failure_closure_decisions.csv",
+      "bytes": 19631,
+      "raw_sha256": "b13abbb05f74852fb9eb82539f157f3cef0725e46182fc1b50db305a700ee4ba"
+    },
+    {
+      "path": "failure_closure_decisions.json",
+      "bytes": 26459,
+      "raw_sha256": "fc32d88eeb4e9a5c79420edb329a1130c626b2e765b5495022df3cb6484913be"
+    },
+    {
+      "path": "full_reserve_readiness.json",
+      "bytes": 2577,
+      "raw_sha256": "6bbb97f5129d789ed7b0b427bbd37d269721f4e2ca32c9a9d18c40007a420314"
+    },
+    {
+      "path": "independent_analysis.json",
+      "bytes": 2459,
+      "raw_sha256": "dc9cd04d0b374274baa69caf5b626c9f4c752ab456ef3f9ab41548f3521cb147"
+    },
+    {
+      "path": "independent_event_boundary_file_proof.json",
+      "bytes": 2426,
+      "raw_sha256": "5d1155ca935b157e6bc62a9e2e0e292f69bc54f0031c10582303f95c215b9a21"
+    },
+    {
+      "path": "independent_file_verification.json",
+      "bytes": 16502,
+      "raw_sha256": "31772475a060a039c73029e9fe8bbd3a4a11c0eaa8b0e9d907fbc55ee547a877"
+    },
+    {
+      "path": "job_start.json",
+      "bytes": 237,
+      "raw_sha256": "31c570e297adea7f311cf21e1d80b60cede3875feb51b9d05c7a94b63cc42627"
+    },
+    {
+      "path": "job_status.json",
+      "bytes": 156,
+      "raw_sha256": "a7e56114f1465895160a3592122ce521d949d81cd592d85aa7390b2e6563d1eb"
+    },
+    {
+      "path": "MEMPHIS_FAILURE_CLOSURE_ZH.md",
+      "bytes": 10859,
+      "raw_sha256": "bde89a48dfb0f6129dfe9582cff025b70523a45998ab93a3dd15a1f9af854bfb"
+    },
+    {
+      "path": "minimum_performance_requirements.json",
+      "bytes": 478535,
+      "raw_sha256": "ce85d45d03a1b667b1d10532d5a561601dee8ea1af1a39f8b69897235838fff1"
+    },
+    {
+      "path": "modification_risk_cost_matrix.json",
+      "bytes": 14819,
+      "raw_sha256": "cd3288fd626911a25fce9f12d8d68816ac2781dc23eb0d69d677450888c6988a"
+    },
+    {
+      "path": "official_artifacts.json",
+      "bytes": 19605,
+      "raw_sha256": "34a3b68234db5fd39e8189e300f3599b99691fc08df4b590fac0a6db933c8e20"
+    },
+    {
+      "path": "official_run.json",
+      "bytes": 16857,
+      "raw_sha256": "fcb1b8fa8b80b3078f0af15031cb8badc8b712a5312e4321692967dce097e5d7"
+    },
+    {
+      "path": "original_failure_reproduction.json",
+      "bytes": 12047,
+      "raw_sha256": "eb74c04db9fd76f2545dbb289762f9b440eb0bc1a7b9ccef0ec65b8aa4f2b591"
+    },
+    {
+      "path": "original_five_failures.json",
+      "bytes": 911009,
+      "raw_sha256": "99f2cb1e68ec7be26603834a88f0245833e866c0de6b418a7adb1f992ac1a056"
+    },
+    {
+      "path": "original_valve_excitation_file_proof.json",
+      "bytes": 1042,
+      "raw_sha256": "33410b41b9201494f39fd46b7820062772652e045adf08e0f8dc8ddf2a0f92d5"
+    },
+    {
+      "path": "original17_traceability.csv",
+      "bytes": 27990,
+      "raw_sha256": "d3cfe721d14238f13efdaf75aa5b8ddf95bdb18c5c9c5576128d8aa22d2aea76"
+    },
+    {
+      "path": "original17_traceability.json",
+      "bytes": 42226,
+      "raw_sha256": "2423fc3d2a1a12dfc502f78e317ca00037870a72e7f425ca56842a4bf8421467"
+    },
+    {
+      "path": "pipe_ready_hold.json",
+      "bytes": 47670,
+      "raw_sha256": "7484382b00dceb4fd51702de0a7a66bb4bf950506f0b9b49bce3974a80f873aa"
+    },
+    {
+      "path": "precool_energy_bounds.csv",
+      "bytes": 11943,
+      "raw_sha256": "796f69e61573b74d97ed3f3c44413d1544be9b334b7bceaefc84f842a3b57764"
+    },
+    {
+      "path": "precooling_topologies.json",
+      "bytes": 1032,
+      "raw_sha256": "8efef222ac844bc0db0565dfca25ba5eee5f1612bc4788cc9f9de8f316b99da0"
+    },
+    {
+      "path": "preserved_failed_runs.json",
+      "bytes": 20795,
+      "raw_sha256": "605b13b90b29ff3933fe4f8fa5e4ca8ba6d387ff2818ae2bc6c538884cb5bcf8"
+    },
+    {
+      "path": "ready.json",
+      "bytes": 93,
+      "raw_sha256": "0bc22a8daf37a2d0aabf339ea06354200eb52a81bca2fc33074f57417709652b"
+    },
+    {
+      "path": "release.json",
+      "bytes": 134,
+      "raw_sha256": "16033e9e97326a6b1a9ef709cbfbd8947562f723286f50c32d2ec594516a20fc"
+    },
+    {
+      "path": "result.json",
+      "bytes": 3356,
+      "raw_sha256": "676e9d06c9341eba0fd3026f68788a3798b85c4628c253cde38542f3b937d156"
+    },
+    {
+      "path": "robustness_results.json",
+      "bytes": 933,
+      "raw_sha256": "80d699c269683fa7ab0ef338ac23fe6d6649d077bf3677988913262627f739ab"
+    },
+    {
+      "path": "source_input_environment_manifest.json",
+      "bytes": 153452,
+      "raw_sha256": "383c0b0c0c32f0d9f9fa312581d41d1a899cf551c1111a8b613590f93ce46797"
+    },
+    {
+      "path": "standby_inventory_results.json",
+      "bytes": 57718,
+      "raw_sha256": "f9053ad2a82d7a7d3294b3c2d8589fd06813c221185bb3867781e2c04e1a019b"
+    },
+    {
+      "path": "supplier_RFI_FAT.csv",
+      "bytes": 12157,
+      "raw_sha256": "3fac9aead2049fb24958f33ad8e7f6469036d1ff70991ef2db52a3ce9e25966d"
+    },
+    {
+      "path": "supplier_RFI_FAT.json",
+      "bytes": 16430,
+      "raw_sha256": "9d8054b316609bd6fa7e6dd47696c82624278136350f32a9981a38dd02c1d76c"
+    },
+    {
+      "path": "tank_convergence.csv",
+      "bytes": 17520,
+      "raw_sha256": "9d2f76d88597c5689ae89184791519d734e1313f9665dd5bb68213d007c5ee08"
+    },
+    {
+      "path": "tank_convergence.json",
+      "bytes": 34807,
+      "raw_sha256": "d7a088dcb22c9b811b3e8dea54bb8339dcaa034be57939d2cf039bf5ff81fd2a"
+    },
+    {
+      "path": "tank_results.json",
+      "bytes": 157541,
+      "raw_sha256": "4c4f7bae0279452c7c70b5b247543188b088643946f24b65a5a59156a6102eec"
+    },
+    {
+      "path": "ui_validation.json",
+      "bytes": 5735,
+      "raw_sha256": "c20a8c2da6163edff554d9e46548170590a7ae18ab36dd614c073b1400c9e440"
+    },
+    {
+      "path": "ui-critical-desktop-v2.png",
+      "bytes": 52532,
+      "raw_sha256": "373a7b58bcc84639e4e9d68002fe2362b2f5ee691c42eb939c7c3d61ea9e0386"
+    },
+    {
+      "path": "ui-critical-mobile-v2.png",
+      "bytes": 31346,
+      "raw_sha256": "68aaa43d8832b26eddb09c93b51ea5e780c0df1e6ef6008504a02b0981193b4d"
+    },
+    {
+      "path": "VENDOR_COMPONENT_FAT_INTEGRATED_FAT_SITE_SAT_ZH.md",
+      "bytes": 13572,
+      "raw_sha256": "c7968addb79a4068617899cf6d14cefd4c55f22a6e75843aeb1af9ace450358a"
+    },
+    {
+      "path": "wet_performance_surface.csv",
+      "bytes": 40802,
+      "raw_sha256": "fc11b9959685c66f88d39eebc458f7df425645d195fb9448c4f082001edb2da8"
+    }
+  ],
+  "raw_zip_count": 20,
+  "raw_files": 4425,
+  "raw_logs_sha256": "58da1c24b185f971ac4f3cb0f632918e16eacde2bb987cecf51492d44a5a00e4",
+  "formal": false,
+  "procurement": false,
+  "production": false,
+  "hardware": false,
+  "phase6": false
+}

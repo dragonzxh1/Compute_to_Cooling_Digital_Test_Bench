@@ -1,0 +1,196 @@
+{
+  "run": 39180526734,
+  "cases": [
+    {
+      "old_id": "ROBUST_B15_02",
+      "fresh_raw_sha256": {
+        "measurements.json": "022e45cf7761440732d2b0db19064f3b389f155efba20c37b76eceb72e0b0d39",
+        "phases.json": "2d879e08e9a38ea3b46bd6e0b7720df9089043cef0fd3ae2011ae7d1d03f8f7e",
+        "physics.json": "e32cbb08be428c4409aeebedf8eda0c64be687ba6070f20ddbac48a0285a6591",
+        "series.json": "977d0bf71f9ead4c81bd33d14dc04ecac4662582bcd959350aca912e157064b9",
+        "source_observations.json": "c9b7fc5b49d0b5bc6f4a427298a756aa6422617bde89a3a288d4accf7a386824",
+        "source_phases.json": "527c4e50434017a9388dcfe8dcdfe20190566312486b27401cfd57ea8a24cff0"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_capacity__original15",
+      "old_raw_sha256": {
+        "phases.json": "b6269a6b9470236f71c0b759938fbf969b9a9dfeb16d7b878d2909867ed0124a",
+        "physics.json": "e32cbb08be428c4409aeebedf8eda0c64be687ba6070f20ddbac48a0285a6591",
+        "series.json": "977d0bf71f9ead4c81bd33d14dc04ecac4662582bcd959350aca912e157064b9",
+        "source_phases.json": "527c4e50434017a9388dcfe8dcdfe20190566312486b27401cfd57ea8a24cff0"
+      }
+    },
+    {
+      "old_id": "ROBUST_B15_06",
+      "fresh_raw_sha256": {
+        "measurements.json": "145ee2ac28a62a3971f3c12ff4cd9c910f5fd9a917261ad41f5c7d29cb49f573",
+        "phases.json": "f959f010920386d8df3d8bc3d0a6eab1d2f5de40905cf4de324ea12e93e9bc25",
+        "physics.json": "8fa796dd9d1537a56fe7b25f69fea60b76daed2e11099b79fb55af26ac5902b4",
+        "series.json": "9d088a3e5716a3c7492016929b6a73c420b58308901dbadfccf3a8569d7ea2c1",
+        "source_observations.json": "67a20e352bca0621a1cdf31d79deb6f33481c9d2598289075b512581f436b2e1",
+        "source_phases.json": "9cf80e2834e44e56b951c7366663bdd99e4e8f1bc7cd0d50b4f24b92f0aba25b"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_pump__original15",
+      "old_raw_sha256": {
+        "phases.json": "fc60fe785494a1fa9a33f34c2c207ebf1a9cbb5319beaa06a45a65404378346a",
+        "physics.json": "8fa796dd9d1537a56fe7b25f69fea60b76daed2e11099b79fb55af26ac5902b4",
+        "series.json": "9d088a3e5716a3c7492016929b6a73c420b58308901dbadfccf3a8569d7ea2c1",
+        "source_phases.json": "9cf80e2834e44e56b951c7366663bdd99e4e8f1bc7cd0d50b4f24b92f0aba25b"
+      }
+    },
+    {
+      "old_id": "ROBUST_B15_11",
+      "fresh_raw_sha256": {
+        "measurements.json": "6139b3da8e3fd571490366ac29dd138a87a6fb9fa3c3c8de425ddf42b95648a7",
+        "phases.json": "690f6a028adff2cf8925110d36d67b8eedcce508d7a6dfe85f3763f6d68e4262",
+        "physics.json": "64519c4fb1f0c8b92a677bfd944473878752cee942e23e89bb678fd67bf4d697",
+        "series.json": "9a11a0dcf161366af2df8b1f737980afd4e2e8d5a092fca578b65212ca114d2e",
+        "source_observations.json": "f0f17df9b14f617608c734c957bd1de73c616d1cc69044b3b214e06e3fc282d3",
+        "source_phases.json": "c9912a3537114917ada569f552a61d7ea7d01a01ecd6527f2027867a0a9314ab"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_measurement__original15",
+      "old_raw_sha256": {
+        "phases.json": "7789adffe5ed36743fd7a9402e373af0a8aa70ec11db7f40e401e1a07b6c5095",
+        "physics.json": "64519c4fb1f0c8b92a677bfd944473878752cee942e23e89bb678fd67bf4d697",
+        "series.json": "9a11a0dcf161366af2df8b1f737980afd4e2e8d5a092fca578b65212ca114d2e",
+        "source_phases.json": "c9912a3537114917ada569f552a61d7ea7d01a01ecd6527f2027867a0a9314ab"
+      }
+    },
+    {
+      "old_id": "ROBUST_B15_12",
+      "fresh_raw_sha256": {
+        "measurements.json": "05d46476f86340d209c34e43aa7532804c25ba6a8a91c97cd8aa5c41302b484d",
+        "phases.json": "94e665e56922294b1e0c022cb4d0449c1cecb98bf3a764b0e9a2d372ea03c107",
+        "physics.json": "ec9a7c52d3f1166627577ccb65c8e43da4a74713549ef57c8834f508d88e3f71",
+        "series.json": "62f184151ce2ad1b4481153c9000fab858c9d0fa5e190f734ad902e800b9dabb",
+        "source_observations.json": "eabca1c8d8368656d47b3b2faa956364901f45a39835f02dd979f401b1d60111",
+        "source_phases.json": "d4c80c7a45c6dbd2554d507e2bba8946a5d6f44248397272a8eb58b142b93625"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_second__original15",
+      "old_raw_sha256": {
+        "phases.json": "ea943227cd117d7e4d1dc94cd4601b59e24a0a792fc7ca28910a338102f3b178",
+        "physics.json": "ec9a7c52d3f1166627577ccb65c8e43da4a74713549ef57c8834f508d88e3f71",
+        "series.json": "62f184151ce2ad1b4481153c9000fab858c9d0fa5e190f734ad902e800b9dabb",
+        "source_phases.json": "d4c80c7a45c6dbd2554d507e2bba8946a5d6f44248397272a8eb58b142b93625"
+      }
+    },
+    {
+      "old_id": "ROBUST_B15_16",
+      "fresh_raw_sha256": {
+        "measurements.json": "10b8e67e3dd4506d2ea1343aab343766200f25919367010722e9e5ec1c2087d3",
+        "phases.json": "c44a8e4fd2f4f0f89e426e7129bd9f52ff0b7f13c4506b0667f2138793c55198",
+        "physics.json": "ec75a0b1845a3ae13a400b930372a841e1fbd0ae7aefdb14750b624369c784d8",
+        "series.json": "a2edc55ad39365dcee8153332453de415ba5b4b19a89726fd1e922a86f6c98ae",
+        "source_observations.json": "d5f9c146718f66fce240cd18eda391528ba1af431d4db0853c1506abbe52eb3d",
+        "source_phases.json": "7c86799c2180ea3398ede40c593007ead2b0a4439e350ca2591234654eb4d69c"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_joint__original15",
+      "old_raw_sha256": {
+        "phases.json": "ae47280b620e61398fcc42381d289ab0692a7ce487bc7f4aa7f88d9a0109af1c",
+        "physics.json": "ec75a0b1845a3ae13a400b930372a841e1fbd0ae7aefdb14750b624369c784d8",
+        "series.json": "a2edc55ad39365dcee8153332453de415ba5b4b19a89726fd1e922a86f6c98ae",
+        "source_phases.json": "7c86799c2180ea3398ede40c593007ead2b0a4439e350ca2591234654eb4d69c"
+      }
+    },
+    {
+      "old_id": "ROBUST_C20_02",
+      "fresh_raw_sha256": {
+        "measurements.json": "cf71f61d085e4803e9b287f74d101632fbba3486c1a0f693b6d06f9197cbf861",
+        "phases.json": "78f3f927cc72f5b14cf02386c41d8da56b52f7f4d79279ed7f666e818b856a1a",
+        "physics.json": "52aa0ed4d497a32ef55a42afcf02b136b972e824b73d673bc0c15544725b8e3e",
+        "series.json": "e4c5fd606b0c5edb259c53845300587db148f121497007bbe7e2f49d1218577b",
+        "source_observations.json": "e2a5d9b1761936ac45320eef1b90ec99175ab31257d4c28b354097c7be8bc5db",
+        "source_phases.json": "a8d18b65369e703faba544156887de716f3bf43f4fb1e6a5e6159166f78379d9"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_capacity__original20",
+      "old_raw_sha256": {
+        "phases.json": "924b4b334d38f47671c431bfcb7445db04425bf6fde845b35d3bc9e1761f9f9c",
+        "physics.json": "52aa0ed4d497a32ef55a42afcf02b136b972e824b73d673bc0c15544725b8e3e",
+        "series.json": "e4c5fd606b0c5edb259c53845300587db148f121497007bbe7e2f49d1218577b",
+        "source_phases.json": "a8d18b65369e703faba544156887de716f3bf43f4fb1e6a5e6159166f78379d9"
+      }
+    },
+    {
+      "old_id": "ROBUST_C20_06",
+      "fresh_raw_sha256": {
+        "measurements.json": "c7bf2c5fede753bfde2755a1e2d58094e2dff86c4fc82aca5ca7bf17594f7b94",
+        "phases.json": "ae7b4d5030369c8ab6b76742cddc518d79f324472e6c518b175e2d5634111d1d",
+        "physics.json": "ea3bd26ca9230bf3618a77edabea582be4571f84ac2e4fe04acbce2121015e43",
+        "series.json": "fbbeb516534a02b48aef4b3ce747bd2a0772db3ed14ac4c4c0c134c765399fcd",
+        "source_observations.json": "dec5f342a07a14bc16fae9d95108440abcf1c6c20c12f89e6dc3ce151026f704",
+        "source_phases.json": "0427d102493ba31df61b124e3368255d9936eb8eb917fe43783554fae8458f66"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_pump__original20",
+      "old_raw_sha256": {
+        "phases.json": "02b04a28c2c22ad5c84c089df09de84d3e75502bd59edac02a09524766ec8756",
+        "physics.json": "ea3bd26ca9230bf3618a77edabea582be4571f84ac2e4fe04acbce2121015e43",
+        "series.json": "fbbeb516534a02b48aef4b3ce747bd2a0772db3ed14ac4c4c0c134c765399fcd",
+        "source_phases.json": "0427d102493ba31df61b124e3368255d9936eb8eb917fe43783554fae8458f66"
+      }
+    },
+    {
+      "old_id": "ROBUST_C20_11",
+      "fresh_raw_sha256": {
+        "measurements.json": "51d70f4e5a4e81cf00fd3db0b9b2b2a919f978d042ef7b57f742a5b974669812",
+        "phases.json": "13820346a1a03196210bd3023dfb6d7be78abd7ed8b24541780c939b783a2c42",
+        "physics.json": "c71318f6058261d067c0e46c4f8dfca25d33fbd3090e2879b198899c2e5c0fd4",
+        "series.json": "e82caebdb86a121da2725357fc578a913ee07b95adbbca0c077ac7a325688ea3",
+        "source_observations.json": "bbeeeb482e130796fc67abd32a4bc884995dac0d0de0774627138bd8d80b0d2a",
+        "source_phases.json": "93a51351d8fb06b59fbba0538cca859b56abcbc687df6a87148261825ba78265"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_measurement__original20",
+      "old_raw_sha256": {
+        "phases.json": "625a9016d7a0b10573a5151bf9e6d3d0d55bcde3ac0d18eb2d37c27fb3c2c6e4",
+        "physics.json": "c71318f6058261d067c0e46c4f8dfca25d33fbd3090e2879b198899c2e5c0fd4",
+        "series.json": "e82caebdb86a121da2725357fc578a913ee07b95adbbca0c077ac7a325688ea3",
+        "source_phases.json": "93a51351d8fb06b59fbba0538cca859b56abcbc687df6a87148261825ba78265"
+      }
+    },
+    {
+      "old_id": "ROBUST_C20_12",
+      "fresh_raw_sha256": {
+        "measurements.json": "0014e57c62e69fad0413dc064b3a56b652fd58b94a6c8f85d138e50f97bac502",
+        "phases.json": "c9af0ebaf07e1e32a03cd867b300d2c453adc90c58f7cc175d145e39499103e8",
+        "physics.json": "0ab18cb732d8df65d2d5c32a4e6b4826f3b8a2f59f801b3734c72be1ee85c9a2",
+        "series.json": "ed907b68c8a377e00d5daa9eda73cca3387b27b61f8f9face3196c75b0a306ac",
+        "source_observations.json": "5d7bd03371bcae4adfb4b1515c219273cfb9e2119f7aae9c8b9e37764be84225",
+        "source_phases.json": "366b1ab76d5830d25256dc76e71c5ab42a37a78ed9166038813a99b3165d9969"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_second__original20",
+      "old_raw_sha256": {
+        "phases.json": "6368e792657ee32804c95906c0c974cd1f469c31ef1a93ed44468e4015bbf46f",
+        "physics.json": "0ab18cb732d8df65d2d5c32a4e6b4826f3b8a2f59f801b3734c72be1ee85c9a2",
+        "series.json": "ed907b68c8a377e00d5daa9eda73cca3387b27b61f8f9face3196c75b0a306ac",
+        "source_phases.json": "366b1ab76d5830d25256dc76e71c5ab42a37a78ed9166038813a99b3165d9969"
+      }
+    },
+    {
+      "old_id": "ROBUST_C20_16",
+      "fresh_raw_sha256": {
+        "measurements.json": "07473ca49451bdf29bd74eaee4ce06199e324d806e11a461965fb88e4438f161",
+        "phases.json": "5870d118a34490df7bcaf0eb3f0c3d05b9c4513829204b0f854176d1175e737e",
+        "physics.json": "3250f32adcd8bec2b5be9610d97f5e344caf3a07bd3b5c41bb66fdaa2d7b8b55",
+        "series.json": "7b05d74ae1989ab4ab03c743c186b19c37b2d63759c989b20091c1074c055b37",
+        "source_observations.json": "1701321a8e10589eb90acbfd73697ef2ad7b60fc118a8d0f90b86144a871b3a8",
+        "source_phases.json": "83791f212adbb30df706daa9e21a03948fbc7a676232ce3bbe14352ea6215ebf"
+      },
+      "status": "FRESH_PHYSICAL_METRICS_REPRODUCED_NOT_PASS_REUSE",
+      "fresh_id": "cause_joint__original20",
+      "old_raw_sha256": {
+        "phases.json": "bbcc90ff0a0f44d70c5a666a0bedd36cdb273cb6a782349009b4649d67ee01ef",
+        "physics.json": "3250f32adcd8bec2b5be9610d97f5e344caf3a07bd3b5c41bb66fdaa2d7b8b55",
+        "series.json": "7b05d74ae1989ab4ab03c743c186b19c37b2d63759c989b20091c1074c055b37",
+        "source_phases.json": "83791f212adbb30df706daa9e21a03948fbc7a676232ce3bbe14352ea6215ebf"
+      }
+    }
+  ],
+  "source_commit": "be3e9ea395ebd461683190d6cf3a0d5125973e13"
+}
