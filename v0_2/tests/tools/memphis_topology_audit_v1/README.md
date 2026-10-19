@@ -6,7 +6,7 @@ As-built means executed simulation connections, NOT field installation or constr
 
 Baseline observer must reproduce all six raw SHA256 identities. Every layer and every CV is independently reconstructed. PG25 rho1009/cp4000 constant-property assumption, zero-Celsius enthalpy reference. Nested CVs overlap and must not be summed.
 
-Eight fresh forward cases: original1800s,20/40/160layers,80layersdt.05, additional transfer resistance diagnostic, and two continuous secondfault runs at1800 through1890. Original85% research reserve gate remains separate from customer70%/8.25m3/90s. Second event is qualified only if both actual pre-event saved profiles pass independent full90s challenges; no future data/controller reset.
+Build002 nine fresh forward cases: original1800s,20/40/160layers,80layersdt.05, additional transfer resistance diagnostic, two continuous secondfault runs at1800 through1890, and one pre-registered650s secondfault through740s. Build001 immutable evidence found only tested630–660s joint-ready window before1800s failure; selection is offline, not controller future access. Full90s final and pre-event discharge CSVs are persisted, cross-checked against the original challenge results. Original85% research reserve gate remains separate from customer70%/8.25m3/90s. Second event is qualified only if both actual pre-event saved profiles pass independent full90s challenges; no state reset.
 
 No RC/tank capacity scan. Transfer ports85.92kPa@330 is a diagnostic counterfactual with actual QH intersection, not a procurement specification. Missing absolute pressure/Kv/NPSH/OEM/diffuser and customer recovery deadline remain unverified. MEMPHIS_ENGINEERING_NOT_APPROVED.
 

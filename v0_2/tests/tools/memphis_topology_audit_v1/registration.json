@@ -1,5 +1,7 @@
 {
-  "schema":"MEMPHIS-AS-BUILT-AUDIT-v1","build":1,
+  "schema":"MEMPHIS-AS-BUILT-AUDIT-v1","build":2,
+  "preserved_audit_execution":"b1bf9f9dc2f085f38511be405ba3b3f09e549c20",
+  "qualified_second_fault_selection":"Build001 persisted recovery_scan found joint component PASS only at tested630/640/650/660s;650 chosen before new run, no future readiness signal fed to controller. Full-discharge traces newly persisted; no physical source/policy changes.",
   "branch":"codex/memphis-topology-audit-v1",
   "parent_execution":"e6a4cf2b533afbeb2c97c615b030262aa5382f00",
   "parent_delivery":"328b52baa28ee2e8d4d449125446398134038fdc",
@@ -14,6 +16,7 @@
     {"id":"TRANSFER330_DIAGNOSTIC","group":"diagnostic","kind":"forward","change":{"transfer_ports_dp_pa":85920}},
     {"id":"BASELINE_SECOND1800","group":"second","kind":"forward","change":{"second_fault_at_s":1800,"seconds":1890}},
     {"id":"TRANSFER330_SECOND1800","group":"second","kind":"forward","change":{"transfer_ports_dp_pa":85920,"second_fault_at_s":1800,"seconds":1890}},
+    {"id":"TRANSFER330_SECOND650","group":"second","kind":"forward","change":{"transfer_ports_dp_pa":85920,"second_fault_at_s":650,"seconds":740}},
     {"id":"FINAL","group":"final","kind":"final"}
   ],
   "diagnostic_gate":"Baseline group must finish original raw-hash reproduction and CV audit before any changed-input stage. Additional transfer resistance is a causal experiment, NOT an approved valve/pump design.",

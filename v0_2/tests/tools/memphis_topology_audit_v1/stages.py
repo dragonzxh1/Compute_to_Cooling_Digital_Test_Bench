@@ -30,11 +30,16 @@ def stage(entry,directory):
         simulation.SourcePlant=original
         summary=plant[0].finish() if plant else None
     result=evaluate(directory/'case',spec)
+    from .discharge import full_discharge
+    full=full_discharge({n:list(plant[0].tanks[n].t) for n in ('A','B')},spec,plant[0].hot_return_peak,directory/'FINAL_90S_DISCHARGE.csv')
+    for a,b in zip(full,result['reserve_challenge']):
+        require(a['tank']==b['tank'] and a['layers']==b['layers'] and a['status']==b['status'] and abs(a['maximum_outlet_C']-b['maximum_outlet_C'])<1e-9,'FULL_DISCHARGE_TRACE_DIVERGES_FROM_ORIGINAL_RULE')
     if entry['id']=='BASELINE_EXACT':
         require(result['raw_sha256']==binding['case']['raw_sha256'],'OBSERVATION_CHANGED_HISTORICAL_SIX_RAW_FILES')
         require(result['events']==binding['case']['events'],'BASELINE_EVENT_DRIFT')
     summary.update(id=entry['id'],parameters=spec,raw_sha256=result['raw_sha256'],baseline_exact_six_hashes=entry['id']=='BASELINE_EXACT',
         final_challenge=result['reserve_challenge'],grades=result['grades'],maximum_inlet_C=result['maximum_inlet_C'],
+        final_full_discharge=full,recovery_scan=result['recovery_scan'],
         minimum_load_m3_h=result['minimum_load_m3_h'],second_fault=result['second_fault'],events=result['events'],
         source_commit=__import__('os').environ['GITHUB_SHA'],independent_global=result['independent'])
     save(directory/'audit_summary.json',summary)

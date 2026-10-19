@@ -60,6 +60,8 @@ class ObserverPlant(NeutralBufferPlant):
         if start_ns==round(self.spec.get('second_fault_at_s',-1)*1e9):
             row=dict(time_ns=start_ns,**{'tank_'+n+'_k':list(t.t) for n,t in self.tanks.items()})
             self.pre_second=reserve_challenge(row,self.spec,max(48.29,self.hot_return_peak))
+            from .discharge import full_discharge
+            self.pre_second_full=full_discharge({n:list(t.t) for n,t in self.tanks.items()},self.spec,max(48.29,self.hot_return_peak),self.directory/'PRE_SECOND_90S_DISCHARGE.csv')
         r=super().advance(start_ns,end_ns,units,speeds,issued)
         dt=(end_ns-start_ns)/1e9;time=end_ns/1e9;n=r['neutral'];self.steps+=1
         self.hot_return_peak=max(getattr(self,'hot_return_peak',48.29),r['actual_primary_return_c'])
@@ -143,6 +145,7 @@ class ObserverPlant(NeutralBufferPlant):
         self.profile_file.close()
         return dict(steps=self.steps,integrals=self.sums,max_CV_step_residual_J=self.max_residual,keyframes=self.keyframes,
             curves=self.curves,initial_profiles=self.initial,second_fault_preconditions=self.pre_second,
+            pre_second_full_discharge=getattr(self,'pre_second_full',None),
             enthalpy_reference='PG25 rho1009 kg/m3 cp4000 J/kgK; h=cp*(T-273.15K); frozen engineering assumptions, not OEM property curve',
             double_count_warning='Nested diagnostic CVs overlap; never sum their energy columns. Whole-system identity separately checked.',
             capture='Read-only subclass; exact six historical raw hashes required for baseline')

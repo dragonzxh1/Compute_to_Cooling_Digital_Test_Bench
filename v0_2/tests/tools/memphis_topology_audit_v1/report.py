@@ -116,7 +116,8 @@ def finalize(directory):
     for k,a in cases.items():
         z=a['curves'][-1];lines.append(f'|{k}|{z["A_cold_m3"]:.6f}|{z["B_cold_m3"]:.6f}|{a["maximum_inlet_C"]:.6f}|{a["minimum_load_m3_h"]:.6f}|{"PASS" if challenge_ready(a) else "FAIL"}|')
     lines+=['','## 回充控制与第二故障','','独立RC硬接B罐。B17TT估计达到85%触发停止，泵归零后recharge_done=True；不等于A储备或双罐再次90秒资格。原控制器已有A17TT触发4源泵，但没有以实际转移流量414重定义恢复前提，也没有双罐完整放冷就绪信号。所有估计只来自已发布测量，独立真值不反灌控制器。']
-    for k in ('BASELINE_SECOND1800','TRANSFER330_SECOND1800'):
+    lines += [f'转移330对照最早已测试双罐组件通过时刻：{diag["recovery_scan"]["first_tested_joint_pass_s"]}s；窗口内通过不保证持续通过，1800s仍FAIL。650s二次故障基于前一不可变执行已保存的630–660s通过窗口预先登记，不把隐藏真值送入控制器。']
+    for k in ('BASELINE_SECOND1800','TRANSFER330_SECOND1800','TRANSFER330_SECOND650'):
         a=cases[k];pre=a['second_fault_preconditions'];ready=bool(pre) and all(x['status']=='PASS' for x in pre)
         lines += [f'{k}：1800s前置双罐组件资格{"PASS" if ready else "FAIL"}；实际第二90秒结果{a["grades"]["SECOND_FAULT_90S"]}。'+('仅当前条件下二次事件验证，不是硬件资格。' if ready else '仅UNQUALIFIED_DIAGNOSTIC，禁止当恢复冗余后正式二次故障PASS。')]
     lines+=['','## 限制及设计方决策','','20/40/80/160整程及更小时间步结果见NUMERICAL_STUDY.json；尚未证明真实混合/布水器收敛，保持NUMERICAL_INCOMPLETE。原研究85%冷库存门槛与客户70%有效容积、8.25m³实际90秒需求分开，不放宽原门槛取PASS。',
@@ -130,7 +131,7 @@ def finalize(directory):
         engineering='MEMPHIS_ENGINEERING_NOT_APPROVED',OEM='CALIBRATION_REQUIRED',procurement=False,formal=False,hardware=False,phase6=False,
         independent_official_zip_and_native_cleanup='PENDING_POST_EXIT_FILE_VERIFICATION_NOT_IMPLIED_BY_THIS_REPORT')
     save(d/'15_SOURCE_AND_EVIDENCE_MANIFEST.json',manifest)
-    return dict(status='SOFTWARE_AUDIT_FILES_GENERATED_PENDING_EXTERNAL_VERIFICATION',cases=8,delivery_files=len(list(d.iterdir())),engineering='MEMPHIS_ENGINEERING_NOT_APPROVED')
+    return dict(status='SOFTWARE_AUDIT_FILES_GENERATED_PENDING_EXTERNAL_VERIFICATION',cases=len(cases),delivery_files=len(list(d.iterdir())),engineering='MEMPHIS_ENGINEERING_NOT_APPROVED')
 
 def make_html(d,graph,cases,diff,report):
     data={k:dict(curves=a['curves'],keyframes=a['keyframes'],grades=a['grades'],challenge=a['final_challenge'],pre_second=a['second_fault_preconditions']) for k,a in cases.items()}
