@@ -1,0 +1,41 @@
+name: Memphis topology and control volume audit v1 DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-topology-audit-v1]
+    paths: ['v0_2/tests/tools/memphis_topology_audit_v1/**', '.github/workflows/memphis-topology-audit-v1*.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: memphis-topology-audit-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-topology-audit-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  mesh:
+    needs: baseline
+    uses: ./.github/workflows/memphis-topology-audit-v1-runner.yml
+    with:
+      group: mesh
+      expected_commit: ${{ github.sha }}
+  diagnostic:
+    needs: baseline
+    uses: ./.github/workflows/memphis-topology-audit-v1-runner.yml
+    with:
+      group: diagnostic
+      expected_commit: ${{ github.sha }}
+  second:
+    needs: diagnostic
+    uses: ./.github/workflows/memphis-topology-audit-v1-runner.yml
+    with:
+      group: second
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, mesh, diagnostic, second]
+    uses: ./.github/workflows/memphis-topology-audit-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}

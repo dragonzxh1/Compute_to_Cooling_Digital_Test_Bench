@@ -1,0 +1,26 @@
+{
+  "schema":"MEMPHIS-AS-BUILT-AUDIT-v1","build":1,
+  "branch":"codex/memphis-topology-audit-v1",
+  "parent_execution":"e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+  "parent_delivery":"328b52baa28ee2e8d4d449125446398134038fdc",
+  "authority":"User supplied complete task; dedicated development branch publication and isolated remote bounded execution under existing explicit authorization. No merge/release/formal/hardware/customer changes.",
+  "cases":[
+    {"id":"ASSERTIONS","group":"baseline","kind":"assertions"},
+    {"id":"BASELINE_EXACT","group":"baseline","kind":"forward","change":{}},
+    {"id":"MESH20","group":"mesh","kind":"forward","change":{"layers":20}},
+    {"id":"MESH40","group":"mesh","kind":"forward","change":{"layers":40}},
+    {"id":"MESH160","group":"mesh","kind":"forward","change":{"layers":160}},
+    {"id":"DT005","group":"mesh","kind":"forward","change":{"dt_s":0.05}},
+    {"id":"TRANSFER330_DIAGNOSTIC","group":"diagnostic","kind":"forward","change":{"transfer_ports_dp_pa":85920}},
+    {"id":"BASELINE_SECOND1800","group":"second","kind":"forward","change":{"second_fault_at_s":1800,"seconds":1890}},
+    {"id":"TRANSFER330_SECOND1800","group":"second","kind":"forward","change":{"transfer_ports_dp_pa":85920,"second_fault_at_s":1800,"seconds":1890}},
+    {"id":"FINAL","group":"final","kind":"final"}
+  ],
+  "diagnostic_gate":"Baseline group must finish original raw-hash reproduction and CV audit before any changed-input stage. Additional transfer resistance is a causal experiment, NOT an approved valve/pump design.",
+  "numerics":{"cold_threshold_C":41.4448,"original_research_fraction":0.85,"customer_effective_volume_m3":10.5,"customer_discharge_m3":8.25,"customer_rise_K":0.5,"grid_status":"NUMERICAL_INCOMPLETE unless profile/enthalpy/extraction convergence shown; never mesh-pick PASS","convergence_screen_outlet_K":0.05,"convergence_screen_extractable_relative":0.02,"screen_authority":"Research numerical screens, NOT customer acceptance tolerances"},
+  "second_fault":"Fixed plant-only W2 loss at1800 after initial W1 loss30. Audit actual pre-fault profiles with 90s component tests. If either is unready, mark second fault UNQUALIFIED_DIAGNOSTIC even if temperatures pass. No future state fed to controller; no reset.",
+  "restoration_deadline":"SOURCE_MISSING customer-approved interval;1800s study horizon only",
+  "pressure":"Relative quasi-steady drops only; absolute/static/transient/NPSH not verified",
+  "engineering":"MEMPHIS_ENGINEERING_NOT_APPROVED","OEM":"CALIBRATION_REQUIRED",
+  "formal":false,"hardware":false,"production":false,"procurement":false,"phase6":false
+}
