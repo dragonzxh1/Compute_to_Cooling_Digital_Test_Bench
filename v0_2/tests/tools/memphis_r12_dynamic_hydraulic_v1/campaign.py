@@ -38,7 +38,7 @@ def run_case(graph,reg,case,out):
             max_mass=max(max_mass,post['secondary_mass_residual'],post['primary_mass_residual'])
             max_energy=max(max_energy,abs(post['energy']['energy_step_error_J']))
             record=dict(t=now,state=control.state,pre_sampled_at=frame['sampled_at'] if frame else None,
-                pre_release_at=frame['release_at'] if frame else None,command=command,
+                pre_release_at=frame['release_at'] if frame else None,released_measurements=frame,command=command,
                 simulated_command_refusal=refusal,post=post)
             raw.write(json.dumps(record,ensure_ascii=False,allow_nan=False)+'\n')
             row=dict(t=post['t'],state=control.state,master=plant.master or 'NONE',

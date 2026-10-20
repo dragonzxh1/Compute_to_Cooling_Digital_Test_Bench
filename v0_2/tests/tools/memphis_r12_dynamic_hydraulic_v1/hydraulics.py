@@ -104,8 +104,10 @@ class Network:
             if err<self.a['mass_relative_tolerance']:convergence=True;break
             if not unknown:break
             sub=jac[np.ix_(unknown,unknown)]; rhs=-f[unknown]
-            try:delta=np.linalg.solve(sub,rhs)
-            except np.linalg.LinAlgError:delta=np.linalg.lstsq(sub,rhs,rcond=1e-12)[0]
+            # Ideal closed check valves leave legitimate undetermined dead-leg
+            # pressure modes. A rank-revealing solve removes those null modes;
+            # it does not invent a reservoir leak or relax the KCL residual.
+            delta=np.linalg.lstsq(sub,rhs,rcond=1e-12)[0]
             if not np.all(np.isfinite(delta)):raise RuntimeError('NONFINITE_PRESSURE_STEP')
             largest=max(float(np.max(np.abs(delta))),1.);delta/=largest
             merit=float(np.linalg.norm(f));accepted=False
@@ -118,7 +120,11 @@ class Network:
         f,_,qs=evaluate(p)
         err=float(np.max(np.abs(f)))
         if not convergence and err>=self.a['mass_relative_tolerance']:
-            raise RuntimeError(f'HYDRAULIC_NONCONVERGENCE domain={self.primary} residual={err} iteration={iteration}')
+            worst=int(np.argmax(np.abs(f)))
+            self.failure=dict(domain_primary=self.primary,residual=err,iteration=iteration,
+                worst_node=self.names[worst],node_residuals=f.tolist(),scaled_pressures=p.tolist(),
+                active_edges=[dict(e,flow=q) for e,q in zip(active,qs)])
+            raise RuntimeError(f'HYDRAULIC_NONCONVERGENCE domain={self.primary} residual={err} iteration={iteration} node={self.names[worst]}')
         # Gauge references are not extra hydraulic sources. Only offsets per zone.
         offset=1000*self.a['primary_reference_kPa_g' if self.primary else 'secondary_reference_kPa_g']
         self.p=p; self.pressures=p*self.pscale+offset

@@ -39,6 +39,7 @@ class Controller:
         self.a=reg['assumptions'];self.req=reg['requirements'];self.state='DUTY_A'
         self.events=[];self.stable_since=None;self.overlap_since=None;self.fault_latch=False
         self.completed_at=None;self.last_now=-1.;self.refusal=None
+        self.master_reference={};self.follower_reference=None
     def event(self,t,state,reason):
         if self.state!=state:self.events.append(dict(t=t,old=self.state,new=state,reason=reason));self.state=state
     def command(self,frame,now,dt):
@@ -55,8 +56,9 @@ class Controller:
         if frame['master'] in ('A','B'):
             side=frame['master'];meas=sum(r['dp_kPa'] for r in frame['racks'].values())/6*1000
             target=self.a['rack_drop_at_design_Pa']*(1+self.a['pressure_control_flow_margin_fraction'])**2
-            old=frame['speeds']['G01-C01'+side+'-P2-PM1']
-            cmd['speeds']['G01-C01'+side+'-P2-PM1']=max(0.,min(1.,old+self.a['pressure_master_gain_speed_per_Pa_s']*(target-meas)*dt))
+            old=self.master_reference.get(side,frame['speeds']['G01-C01'+side+'-P2-PM1'])
+            ref=max(0.,min(1.,old+self.a['pressure_master_gain_speed_per_Pa_s']*(target-meas)*dt))
+            self.master_reference[side]=ref;cmd['speeds']['G01-C01'+side+'-P2-PM1']=ref
         if self.state=='DUTY_A' and frame['alarm_A']:
             self.event(now,'PREPARE_B','Released duty-CDU diagnostic, not a source fault')
         if self.state=='PREPARE_B':
@@ -73,19 +75,22 @@ class Controller:
                 if self.stable_since is None:self.stable_since=now
             else:self.stable_since=None
             if self.stable_since is not None and now-self.stable_since>=self.req['match_stable_s']-1e-9:
-                self.overlap_since=now;self.event(now,'OVERLAP','Measured dT/dp continuously within limits for 5s')
+                self.overlap_since=now;self.follower_reference=b['speed']
+                self.event(now,'OVERLAP','Measured dT/dp continuously within limits for 5s')
         if self.state in ('OVERLAP','STOP_OLD','ISOLATE_OLD'):
-            if now-self.overlap_since>self.req['overlap_max_s']:
+            close_allowance=self.a['valve_travel_s']+self.a['instrument_release_delay_s']+self.a['instrument_sample_s']
+            if now-self.overlap_since>=self.req['overlap_max_s']-close_allowance:
                 for r in range(1,7):
                     for end in ('BS','BR'):cmd['valves'][f'G01-U1-R{r:02d}-CV-'+end]=0.
                 cmd['valves']['G01-C01B-P2-XV-SUP']=0.
                 cmd['speeds']['G01-C01B-P2-PM1']=0.
-                self.event(now,'OVERLAP_ABORT','30s overlap timeout; no completion');return cmd
+                self.event(now,'OVERLAP_ABORT','30s actual-overlap bound: close early by registered travel/release allowance; no completion');return cmd
             cmd['valves']['G01-C01B-P2-XV-SUP']=1.
             for r in range(1,7):
                 for end in ('BS','BR'):cmd['valves'][f'G01-U1-R{r:02d}-CV-'+end]=1.
             # Flow-following open-loop ramp is an explicit research strategy, not OEM logic.
-            cmd['speeds']['G01-C01B-P2-PM1']=min(.94,b['speed']+.03*dt)
+            self.follower_reference=min(.94,self.follower_reference+.03*dt)
+            cmd['speeds']['G01-C01B-P2-PM1']=self.follower_reference
         if self.state=='OVERLAP':
             threshold=self.a['flow_established_fraction']
             established=(b['secondary_flow_m3_h']>=threshold*self.req['unit_flow_hot_m3_h']
