@@ -1,0 +1,13 @@
+﻿mode,step,state,command,required_proof,source_locator
+T2,1,OPEN_NEW_PRIMARY,new CDU P1 current-network pair open; opposite pair closed,actual pair feedback + primary FT,PID-005; 阀位矩阵 A8:O8
+T2,2,MATCH_SECONDARY,retain old path; new master not granted,two-channel deltaT<=2K/dp<=5kPa continuously5s,PID-006
+T2,3,CONTROLLED_OVERLAP,new rack S/R pair open; old master retained initially,actual local/rack flow; overlap<=30s,PID-006; follower control OPEN
+T2,4,REVOKE_AND_STOP,request old master revoke and old pump stop,"actual revoke + zero speed, not closed-valve inference",PID-005/006
+T2,5,ISOLATE_OLD,close old rack pair/P2/P1 after zero proof,all actual old path closed; master NONE,PID-006; T2 candidate mapping
+T2,6,GRANT_NEW_MASTER,request one new master only,actual new sole master + paths + released local/rack FT,PID-006; candidate completion gate
+T1,1,SAME_PRIMARY_SOURCE_CHANGE,prepare new source on same primary; CDU identity unchanged,new source flow+cold return; isolate old source,PID-009 T1; no dynamic startup implementation
+RECHARGE,1,STOP_SOURCE_PUMPS,LP running network unchanged; stop shared SP01..04,all actual zero-speed proofs + running tank budget permission,PID-008 step1/2
+RECHARGE,2,CLOSE_OLD_NETWORK,close old SRC-H/S and source-unit S/R,"all closed feedback, source pumps still stopped",PID-008 step3
+RECHARGE,3,OPEN_TARGET_NETWORK,open only target paired headers and source branch,actual valves+suction/liquid permission,PID-008 step4
+RECHARGE,4,RESTART_AND_PROVE,restart shared source pumps,actual FT + valid target path + cold return,PID-008
+RECHARGE,5,RESERVE_PROOF,no automatic dual-ready,independent reserve evidence; performance/time budget OPEN,PID-008

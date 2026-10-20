@@ -1,0 +1,666 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R12 流路与阀序验证</title>
+<style>
+:root{font-family:Inter,"Microsoft YaHei",sans-serif;color:#182737;background:#eef2f6}*{box-sizing:border-box}body{margin:0}header{padding:32px max(24px,calc((100vw - 1360px)/2));background:#11293b;color:white}h1{font-size:26px;margin:4px 0 12px}header p{max-width:1100px;color:#becdd8;line-height:1.7;margin:5px 0}main{max-width:1408px;margin:auto;padding:24px}section{background:white;border:1px solid #d9e2e9;border-radius:12px;padding:24px;margin-bottom:20px}.bar{display:flex;align-items:center;gap:16px;flex-wrap:wrap}select{font:inherit;border:1px solid #becbd6;border-radius:7px;padding:10px;background:white;min-width:200px}h2{font-size:19px;margin:0 0 18px}.muted{color:#5d7080}.warn{border-left:4px solid #dc9a38;padding:12px 16px;background:#fff8ed;line-height:1.7}#view{width:100%;height:auto;display:block;background:#f7fafc;border-radius:8px;margin-top:24px}table{border-collapse:collapse;width:100%;font-size:13px}td,th{text-align:left;padding:11px;border-bottom:1px solid #e5ebef;vertical-align:top}th{color:#536877}code{font-family:Consolas,monospace}details{margin:14px 0}summary{cursor:pointer;padding:8px;font-weight:600}.atlas{overflow:auto;max-height:650px;background:#0f172a}.atlas svg{width:1680px;height:auto;max-width:none;display:block}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.8 Consolas,"Microsoft YaHei",monospace}a{color:#006e91}#pathlist{max-height:400px;overflow:auto}.pill{border:1px solid #bfced9;border-radius:20px;padding:6px 12px;font-size:12px}
+#view text{fill:#244252}
+</style>
+<header><p>MEMPHIS · R12-MAPPING-v1 · 过程验证</p><h1>三个 A/B，分别看清楚</h1><p>切换 CDU 身份，不等于切换一次网，也不等于启用备用储罐。下面使用保存的静态测试输入，显示真实登记的启用流路，不播放虚构温度动画。</p></header>
+<main><section><div class="bar"><h2 style="margin:0">已保存的图路用例</h2><select id="case" aria-label="用例"><option value="0">CDU A · 一次 A · 二次 A</option><option value="1">CDU B · 一次 A · 二次 B（T-2目标）</option><option value="2">CDU B · 一次 B · 二次 B</option></select><select id="unit" aria-label="六柜单元"><option value="0">U1 · C01A/B · 六柜</option><option value="1">U2 · C02A/B · 六柜</option><option value="2">U3 · C03A/B · 六柜</option></select><span class="pill">静态 / 合成单元证据</span></div>
+<svg id="view" viewBox="0 0 1260 640" aria-label="所选单元已保存路径"></svg><p id="explain" class="warn"></p>
+<details><summary>查看图中每条聚合管线对应的实际 JSON 支路</summary><div id="pathlist"></div></details></section>
+<section><h2>接管许可与证据边界</h2><div class="warn">≤2K、≤5kPa稳定5s、≤30s重叠、旧主撤销和旧路隔离后授新主：只通过合成单元验证。新泵跟随控制、真实测量链、阀动作和泵性能仍需工程闭合。</div><table><thead><tr><th>状态层</th><th>本轮结果</th></tr></thead><tbody id="statuses"></tbody></table><p class="muted">图纸可以版本化修订。原件哈希保留，PID-005疑似贯通线未建成真实旁通；拟增每CDU一次FT和滤器可用性抽象均不冒充原图已有设备。</p></section>
+<section><h2>完整 194 支路功能图谱</h2><p class="muted">完整图由同一 JSON 生成并逐边自动核对。下方为可滚动图谱，不是施工 CAD。</p><details><summary>展开完整端口与支路图谱</summary><div class="atlas"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 6710" role="img" aria-label="R12功能验证图及完整支路清单，非施工图">
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width=".5"/></pattern><marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><path d="M0 0L10 3.5L0 7Z" fill="#64748b"/></marker></defs>
+<style>text{font-family:"Cascadia Code","Microsoft YaHei",sans-serif;fill:#e2e8f0}.title{font-size:24px;font-weight:700}.body{font-size:16px}.small{font-size:12px}.sub{fill:#94a3b8}</style>
+<rect width="1680" height="6710" fill="#0f172a"/><rect width="1680" height="6710" fill="url(#grid)"/>
+<text x="35" y="46" class="title">R12 三层身份与流路验证图 · R12-MAPPING-v1</text>
+<text x="35" y="78" class="body" fill="#fbbf24">过程验证图，可版本化修改；原图保留。PARTIALLY_MAPPED_BLOCKED / 非施工批准</text>
+<rect x="35" y="110" width="480" height="145" rx="10" fill="#0f172a"/>
+<rect x="35" y="110" width="480" height="145" rx="10" fill="#22d3ee" fill-opacity=".12" stroke="#22d3ee"/>
+<text x="53" y="140" class="body">一次网 A / BT-A / LP-A</text>
+<text x="53" y="167" class="small sub">一次供回成对，禁止 A 取液、B 回液</text>
+<text x="53" y="190" class="small sub">共享源泵是分时切网，不是 A/B 连通桥</text>
+<text x="53" y="213" class="small sub">T-2 示例：LP-A 运行，LP-B 停止</text>
+<rect x="555" y="110" width="525" height="145" rx="10" fill="#0f172a"/>
+<rect x="555" y="110" width="525" height="145" rx="10" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa"/>
+<text x="573" y="140" class="body">三对 CDU：C01A/B · C02A/B · C03A/B</text>
+<text x="573" y="167" class="small sub">CDU 身份 ≠ 一次网身份</text>
+<text x="573" y="190" class="small sub">任一 CDU 的 P1 阀组独立选择 A 或 B</text>
+<text x="573" y="213" class="small sub">一次/二次之间只有 HX 热耦合，无流体边</text>
+<rect x="1120" y="110" width="525" height="145" rx="10" fill="#0f172a"/>
+<rect x="1120" y="110" width="525" height="145" rx="10" fill="#34d399" fill-opacity=".12" stroke="#34d399"/>
+<text x="1138" y="140" class="body">二次 A/B 环与 18 柜四阀</text>
+<text x="1138" y="167" class="small sub">每 CDU 两台 100% 泵，一用一备</text>
+<text x="1138" y="190" class="small sub">每柜 AS/AR/BS/BR，柜外选择</text>
+<text x="1138" y="213" class="small sub">短时并流：≤2K / ≤5kPa 稳定5s / ≤30s</text>
+<rect x="35" y="295" width="1580" height="65" rx="10" fill="#0f172a"/>
+<rect x="35" y="295" width="1580" height="65" rx="10" fill="#60a5fa" fill-opacity=".12" stroke="#60a5fa"/>
+<text x="53" y="325" class="body">U1  六柜单元</text>
+<text x="53" y="352" class="small sub">C01A 或 C01B → 二次环 A 或 B → R01 … R06；备用 CDU B 可使用一次网 A</text>
+<rect x="35" y="385" width="1580" height="65" rx="10" fill="#0f172a"/>
+<rect x="35" y="385" width="1580" height="65" rx="10" fill="#60a5fa" fill-opacity=".12" stroke="#60a5fa"/>
+<text x="53" y="415" class="body">U2  六柜单元</text>
+<text x="53" y="442" class="small sub">C02A 或 C02B → 二次环 A 或 B → R01 … R06；备用 CDU B 可使用一次网 A</text>
+<rect x="35" y="475" width="1580" height="65" rx="10" fill="#0f172a"/>
+<rect x="35" y="475" width="1580" height="65" rx="10" fill="#60a5fa" fill-opacity=".12" stroke="#60a5fa"/>
+<text x="53" y="505" class="body">U3  六柜单元</text>
+<text x="53" y="532" class="small sub">C03A 或 C03B → 二次环 A 或 B → R01 … R06；备用 CDU B 可使用一次网 A</text>
+<rect x="35" y="585" width="760" height="125" rx="10" fill="#0f172a"/>
+<rect x="35" y="585" width="760" height="125" rx="10" fill="#fb7185" fill-opacity=".12" stroke="#fb7185"/>
+<text x="53" y="615" class="body">仍需设计澄清 / 不能自动放行</text>
+<text x="53" y="642" class="small sub">PID-005 贯通线没有建成真实旁通；滤器内部阀位未定</text>
+<text x="53" y="665" class="small sub">压力主站跟随策略、泵曲线/瞬态、M2 定值尚未闭合</text>
+<text x="53" y="688" class="small sub">此图只验证功能意图，不证明 90s 热水力连续性</text>
+<rect x="835" y="585" width="810" height="125" rx="10" fill="#0f172a"/>
+<rect x="835" y="585" width="810" height="125" rx="10" fill="#fbbf24" fill-opacity=".12" stroke="#fbbf24"/>
+<text x="853" y="615" class="body">源泵回充：无独立 RC / 无 CP-1/2</text>
+<text x="853" y="642" class="small sub">停泵证明 → 旧网隔离 → 目标网建路 → 启泵 → 实际流量</text>
+<text x="853" y="665" class="small sub">冷液返回 → 独立储冷证明；B 回充完成 ≠ 双罐恢复</text>
+<text x="853" y="688" class="small sub">440 m³/h / 约3.62 MW 只是算例，不是单湿塔运行保证</text>
+<text x="35" y="750" class="body">完整节点—支路图谱（每行对应 JSON 中一条边，方向及阀/泵依赖必须同时满足）</text>
+<g data-edge-id="G01-LP-A/load-supply" data-upstream="G01-BT-A:BOTTOM_LOAD" data-downstream="G01-NET-A:SUP" data-domain="PG25_PRIMARY"><path d="M38 780H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="784" class="small">G01-LP-A/load-supply: G01-BT-A:BOTTOM_LOAD → G01-NET-A:SUP</text>
+<text x="990" y="784" class="small sub">V=G01-LP-A-I,G01-LP-A-O P=G01-LP-A</text></g>
+<g data-edge-id="G01-NET-A/load-return" data-upstream="G01-NET-A:RET" data-downstream="G01-BT-A:TOP_LOAD" data-domain="PG25_PRIMARY"><path d="M38 810H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="814" class="small">G01-NET-A/load-return: G01-NET-A:RET → G01-BT-A:TOP_LOAD</text>
+<text x="990" y="814" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-SRC-H-A/source-draw" data-upstream="G01-BT-A:TOP_SOURCE" data-downstream="G01-SRC:SUCTION" data-domain="PG25_PRIMARY"><path d="M38 840H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="844" class="small">G01-SRC-H-A/source-draw: G01-BT-A:TOP_SOURCE → G01-SRC:SUCTION</text>
+<text x="990" y="844" class="small sub">V=G01-SRC-H-A P=</text></g>
+<g data-edge-id="G01-SRC-S-A/source-supply" data-upstream="G01-SRC:DISCHARGE" data-downstream="G01-SRC-A:HOT" data-domain="PG25_PRIMARY"><path d="M38 870H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="874" class="small">G01-SRC-S-A/source-supply: G01-SRC:DISCHARGE → G01-SRC-A:HOT</text>
+<text x="990" y="874" class="small sub">V=G01-SRC-S-A P=</text></g>
+<g data-edge-id="G01-D1/A-in" data-upstream="G01-SRC-A:HOT" data-downstream="G01-D1:IN" data-domain="PG25_PRIMARY"><path d="M38 900H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="904" class="small">G01-D1/A-in: G01-SRC-A:HOT → G01-D1:IN</text>
+<text x="990" y="904" class="small sub">V=G01-D1-CV-AS P=</text></g>
+<g data-edge-id="G01-D1/A-out" data-upstream="G01-D1:OUT" data-downstream="G01-BT-A:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 930H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="934" class="small">G01-D1/A-out: G01-D1:OUT → G01-BT-A:BOTTOM_SOURCE</text>
+<text x="990" y="934" class="small sub">V=G01-D1-CV-AR P=</text></g>
+<g data-edge-id="G01-D2/A-in" data-upstream="G01-SRC-A:HOT" data-downstream="G01-D2:IN" data-domain="PG25_PRIMARY"><path d="M38 960H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="964" class="small">G01-D2/A-in: G01-SRC-A:HOT → G01-D2:IN</text>
+<text x="990" y="964" class="small sub">V=G01-D2-CV-AS P=</text></g>
+<g data-edge-id="G01-D2/A-out" data-upstream="G01-D2:OUT" data-downstream="G01-BT-A:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 990H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="994" class="small">G01-D2/A-out: G01-D2:OUT → G01-BT-A:BOTTOM_SOURCE</text>
+<text x="990" y="994" class="small sub">V=G01-D2-CV-AR P=</text></g>
+<g data-edge-id="G01-W1/A-in" data-upstream="G01-SRC-A:HOT" data-downstream="G01-W1:IN" data-domain="PG25_PRIMARY"><path d="M38 1020H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1024" class="small">G01-W1/A-in: G01-SRC-A:HOT → G01-W1:IN</text>
+<text x="990" y="1024" class="small sub">V=G01-W1-CV-AS P=</text></g>
+<g data-edge-id="G01-W1/A-out" data-upstream="G01-W1:OUT" data-downstream="G01-BT-A:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 1050H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1054" class="small">G01-W1/A-out: G01-W1:OUT → G01-BT-A:BOTTOM_SOURCE</text>
+<text x="990" y="1054" class="small sub">V=G01-W1-CV-AR P=</text></g>
+<g data-edge-id="G01-W2/A-in" data-upstream="G01-SRC-A:HOT" data-downstream="G01-W2:IN" data-domain="PG25_PRIMARY"><path d="M38 1080H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1084" class="small">G01-W2/A-in: G01-SRC-A:HOT → G01-W2:IN</text>
+<text x="990" y="1084" class="small sub">V=G01-W2-CV-AS P=</text></g>
+<g data-edge-id="G01-W2/A-out" data-upstream="G01-W2:OUT" data-downstream="G01-BT-A:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 1110H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1114" class="small">G01-W2/A-out: G01-W2:OUT → G01-BT-A:BOTTOM_SOURCE</text>
+<text x="990" y="1114" class="small sub">V=G01-W2-CV-AR P=</text></g>
+<g data-edge-id="G01-LP-B/load-supply" data-upstream="G01-BT-B:BOTTOM_LOAD" data-downstream="G01-NET-B:SUP" data-domain="PG25_PRIMARY"><path d="M38 1140H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1144" class="small">G01-LP-B/load-supply: G01-BT-B:BOTTOM_LOAD → G01-NET-B:SUP</text>
+<text x="990" y="1144" class="small sub">V=G01-LP-B-I,G01-LP-B-O P=G01-LP-B</text></g>
+<g data-edge-id="G01-NET-B/load-return" data-upstream="G01-NET-B:RET" data-downstream="G01-BT-B:TOP_LOAD" data-domain="PG25_PRIMARY"><path d="M38 1170H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1174" class="small">G01-NET-B/load-return: G01-NET-B:RET → G01-BT-B:TOP_LOAD</text>
+<text x="990" y="1174" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-SRC-H-B/source-draw" data-upstream="G01-BT-B:TOP_SOURCE" data-downstream="G01-SRC:SUCTION" data-domain="PG25_PRIMARY"><path d="M38 1200H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1204" class="small">G01-SRC-H-B/source-draw: G01-BT-B:TOP_SOURCE → G01-SRC:SUCTION</text>
+<text x="990" y="1204" class="small sub">V=G01-SRC-H-B P=</text></g>
+<g data-edge-id="G01-SRC-S-B/source-supply" data-upstream="G01-SRC:DISCHARGE" data-downstream="G01-SRC-B:HOT" data-domain="PG25_PRIMARY"><path d="M38 1230H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1234" class="small">G01-SRC-S-B/source-supply: G01-SRC:DISCHARGE → G01-SRC-B:HOT</text>
+<text x="990" y="1234" class="small sub">V=G01-SRC-S-B P=</text></g>
+<g data-edge-id="G01-D1/B-in" data-upstream="G01-SRC-B:HOT" data-downstream="G01-D1:IN" data-domain="PG25_PRIMARY"><path d="M38 1260H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1264" class="small">G01-D1/B-in: G01-SRC-B:HOT → G01-D1:IN</text>
+<text x="990" y="1264" class="small sub">V=G01-D1-CV-BS P=</text></g>
+<g data-edge-id="G01-D1/B-out" data-upstream="G01-D1:OUT" data-downstream="G01-BT-B:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 1290H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1294" class="small">G01-D1/B-out: G01-D1:OUT → G01-BT-B:BOTTOM_SOURCE</text>
+<text x="990" y="1294" class="small sub">V=G01-D1-CV-BR P=</text></g>
+<g data-edge-id="G01-D2/B-in" data-upstream="G01-SRC-B:HOT" data-downstream="G01-D2:IN" data-domain="PG25_PRIMARY"><path d="M38 1320H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1324" class="small">G01-D2/B-in: G01-SRC-B:HOT → G01-D2:IN</text>
+<text x="990" y="1324" class="small sub">V=G01-D2-CV-BS P=</text></g>
+<g data-edge-id="G01-D2/B-out" data-upstream="G01-D2:OUT" data-downstream="G01-BT-B:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 1350H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1354" class="small">G01-D2/B-out: G01-D2:OUT → G01-BT-B:BOTTOM_SOURCE</text>
+<text x="990" y="1354" class="small sub">V=G01-D2-CV-BR P=</text></g>
+<g data-edge-id="G01-W1/B-in" data-upstream="G01-SRC-B:HOT" data-downstream="G01-W1:IN" data-domain="PG25_PRIMARY"><path d="M38 1380H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1384" class="small">G01-W1/B-in: G01-SRC-B:HOT → G01-W1:IN</text>
+<text x="990" y="1384" class="small sub">V=G01-W1-CV-BS P=</text></g>
+<g data-edge-id="G01-W1/B-out" data-upstream="G01-W1:OUT" data-downstream="G01-BT-B:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 1410H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1414" class="small">G01-W1/B-out: G01-W1:OUT → G01-BT-B:BOTTOM_SOURCE</text>
+<text x="990" y="1414" class="small sub">V=G01-W1-CV-BR P=</text></g>
+<g data-edge-id="G01-W2/B-in" data-upstream="G01-SRC-B:HOT" data-downstream="G01-W2:IN" data-domain="PG25_PRIMARY"><path d="M38 1440H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1444" class="small">G01-W2/B-in: G01-SRC-B:HOT → G01-W2:IN</text>
+<text x="990" y="1444" class="small sub">V=G01-W2-CV-BS P=</text></g>
+<g data-edge-id="G01-W2/B-out" data-upstream="G01-W2:OUT" data-downstream="G01-BT-B:BOTTOM_SOURCE" data-domain="PG25_PRIMARY"><path d="M38 1470H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1474" class="small">G01-W2/B-out: G01-W2:OUT → G01-BT-B:BOTTOM_SOURCE</text>
+<text x="990" y="1474" class="small sub">V=G01-W2-CV-BR P=</text></g>
+<g data-edge-id="G01-SP01/pump" data-upstream="G01-SRC:SUCTION" data-downstream="G01-SRC:DISCHARGE" data-domain="PG25_PRIMARY"><path d="M38 1500H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1504" class="small">G01-SP01/pump: G01-SRC:SUCTION → G01-SRC:DISCHARGE</text>
+<text x="990" y="1504" class="small sub">V= P=G01-SP01</text></g>
+<g data-edge-id="G01-SP02/pump" data-upstream="G01-SRC:SUCTION" data-downstream="G01-SRC:DISCHARGE" data-domain="PG25_PRIMARY"><path d="M38 1530H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1534" class="small">G01-SP02/pump: G01-SRC:SUCTION → G01-SRC:DISCHARGE</text>
+<text x="990" y="1534" class="small sub">V= P=G01-SP02</text></g>
+<g data-edge-id="G01-SP03/pump" data-upstream="G01-SRC:SUCTION" data-downstream="G01-SRC:DISCHARGE" data-domain="PG25_PRIMARY"><path d="M38 1560H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1564" class="small">G01-SP03/pump: G01-SRC:SUCTION → G01-SRC:DISCHARGE</text>
+<text x="990" y="1564" class="small sub">V= P=G01-SP03</text></g>
+<g data-edge-id="G01-SP04/pump" data-upstream="G01-SRC:SUCTION" data-downstream="G01-SRC:DISCHARGE" data-domain="PG25_PRIMARY"><path d="M38 1590H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1594" class="small">G01-SP04/pump: G01-SRC:SUCTION → G01-SRC:DISCHARGE</text>
+<text x="990" y="1594" class="small sub">V= P=G01-SP04</text></g>
+<g data-edge-id="G01-D1/coil" data-upstream="G01-D1:IN" data-downstream="G01-D1:OUT" data-domain="PG25_PRIMARY"><path d="M38 1620H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1624" class="small">G01-D1/coil: G01-D1:IN → G01-D1:OUT</text>
+<text x="990" y="1624" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-D2/coil" data-upstream="G01-D2:IN" data-downstream="G01-D2:OUT" data-domain="PG25_PRIMARY"><path d="M38 1650H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1654" class="small">G01-D2/coil: G01-D2:IN → G01-D2:OUT</text>
+<text x="990" y="1654" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-W1/coil" data-upstream="G01-W1:IN" data-downstream="G01-W1:OUT" data-domain="PG25_PRIMARY"><path d="M38 1680H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1684" class="small">G01-W1/coil: G01-W1:IN → G01-W1:OUT</text>
+<text x="990" y="1684" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-W2/coil" data-upstream="G01-W2:IN" data-downstream="G01-W2:OUT" data-domain="PG25_PRIMARY"><path d="M38 1710H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1714" class="small">G01-W2/coil: G01-W2:IN → G01-W2:OUT</text>
+<text x="990" y="1714" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C01A/P1-A-supply" data-upstream="G01-NET-A:SUP" data-downstream="G01-C01A:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 1740H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1744" class="small">G01-C01A/P1-A-supply: G01-NET-A:SUP → G01-C01A:P1-IN</text>
+<text x="990" y="1744" class="small sub">V=G01-C01A-P1-CV-AS P=</text></g>
+<g data-edge-id="G01-C01A/P1-A-return" data-upstream="G01-C01A:P1-OUT" data-downstream="G01-NET-A:RET" data-domain="PG25_PRIMARY"><path d="M38 1770H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1774" class="small">G01-C01A/P1-A-return: G01-C01A:P1-OUT → G01-NET-A:RET</text>
+<text x="990" y="1774" class="small sub">V=G01-C01A-P1-CV-AR P=</text></g>
+<g data-edge-id="G01-C01A/P1-B-supply" data-upstream="G01-NET-B:SUP" data-downstream="G01-C01A:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 1800H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1804" class="small">G01-C01A/P1-B-supply: G01-NET-B:SUP → G01-C01A:P1-IN</text>
+<text x="990" y="1804" class="small sub">V=G01-C01A-P1-CV-BS P=</text></g>
+<g data-edge-id="G01-C01A/P1-B-return" data-upstream="G01-C01A:P1-OUT" data-downstream="G01-NET-B:RET" data-domain="PG25_PRIMARY"><path d="M38 1830H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1834" class="small">G01-C01A/P1-B-return: G01-C01A:P1-OUT → G01-NET-B:RET</text>
+<text x="990" y="1834" class="small sub">V=G01-C01A-P1-CV-BR P=</text></g>
+<g data-edge-id="G01-C01A/HX-primary" data-upstream="G01-C01A:P1-IN" data-downstream="G01-C01A:P1-OUT" data-domain="PG25_PRIMARY"><path d="M38 1860H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1864" class="small">G01-C01A/HX-primary: G01-C01A:P1-IN → G01-C01A:P1-OUT</text>
+<text x="990" y="1864" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C01A/return-isolation" data-upstream="G01-U1-P2-A:RET" data-downstream="G01-C01A:P2-SUCTION" data-domain="PG25_SECONDARY_U1"><path d="M38 1890H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1894" class="small">G01-C01A/return-isolation: G01-U1-P2-A:RET → G01-C01A:P2-SUCTION</text>
+<text x="990" y="1894" class="small sub">V=G01-C01A-P2-XV-RET P=</text></g>
+<g data-edge-id="G01-C01A/P2-pump-1" data-upstream="G01-C01A:P2-SUCTION" data-downstream="G01-C01A:P2-DISCHARGE" data-domain="PG25_SECONDARY_U1"><path d="M38 1920H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1924" class="small">G01-C01A/P2-pump-1: G01-C01A:P2-SUCTION → G01-C01A:P2-DISCHARGE</text>
+<text x="990" y="1924" class="small sub">V= P=G01-C01A-P2-PM1</text></g>
+<g data-edge-id="G01-C01A/P2-pump-2" data-upstream="G01-C01A:P2-SUCTION" data-downstream="G01-C01A:P2-DISCHARGE" data-domain="PG25_SECONDARY_U1"><path d="M38 1950H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1954" class="small">G01-C01A/P2-pump-2: G01-C01A:P2-SUCTION → G01-C01A:P2-DISCHARGE</text>
+<text x="990" y="1954" class="small sub">V= P=G01-C01A-P2-PM2</text></g>
+<g data-edge-id="G01-C01A/P2-filter-1" data-upstream="G01-C01A:P2-DISCHARGE" data-downstream="G01-C01A:P2-HX-IN" data-domain="PG25_SECONDARY_U1"><path d="M38 1980H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="1984" class="small">G01-C01A/P2-filter-1: G01-C01A:P2-DISCHARGE → G01-C01A:P2-HX-IN</text>
+<text x="990" y="1984" class="small sub">V=G01-C01A-FILTER1-SERVICE P=</text></g>
+<g data-edge-id="G01-C01A/P2-filter-2" data-upstream="G01-C01A:P2-DISCHARGE" data-downstream="G01-C01A:P2-HX-IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2010H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2014" class="small">G01-C01A/P2-filter-2: G01-C01A:P2-DISCHARGE → G01-C01A:P2-HX-IN</text>
+<text x="990" y="2014" class="small sub">V=G01-C01A-FILTER2-SERVICE P=</text></g>
+<g data-edge-id="G01-C01A/HX-secondary" data-upstream="G01-C01A:P2-HX-IN" data-downstream="G01-C01A:P2-HX-OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 2040H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2044" class="small">G01-C01A/HX-secondary: G01-C01A:P2-HX-IN → G01-C01A:P2-HX-OUT</text>
+<text x="990" y="2044" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C01A/supply-isolation" data-upstream="G01-C01A:P2-HX-OUT" data-downstream="G01-U1-P2-A:SUP" data-domain="PG25_SECONDARY_U1"><path d="M38 2070H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2074" class="small">G01-C01A/supply-isolation: G01-C01A:P2-HX-OUT → G01-U1-P2-A:SUP</text>
+<text x="990" y="2074" class="small sub">V=G01-C01A-P2-XV-SUP P=</text></g>
+<g data-edge-id="G01-C01B/P1-A-supply" data-upstream="G01-NET-A:SUP" data-downstream="G01-C01B:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 2100H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2104" class="small">G01-C01B/P1-A-supply: G01-NET-A:SUP → G01-C01B:P1-IN</text>
+<text x="990" y="2104" class="small sub">V=G01-C01B-P1-CV-AS P=</text></g>
+<g data-edge-id="G01-C01B/P1-A-return" data-upstream="G01-C01B:P1-OUT" data-downstream="G01-NET-A:RET" data-domain="PG25_PRIMARY"><path d="M38 2130H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2134" class="small">G01-C01B/P1-A-return: G01-C01B:P1-OUT → G01-NET-A:RET</text>
+<text x="990" y="2134" class="small sub">V=G01-C01B-P1-CV-AR P=</text></g>
+<g data-edge-id="G01-C01B/P1-B-supply" data-upstream="G01-NET-B:SUP" data-downstream="G01-C01B:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 2160H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2164" class="small">G01-C01B/P1-B-supply: G01-NET-B:SUP → G01-C01B:P1-IN</text>
+<text x="990" y="2164" class="small sub">V=G01-C01B-P1-CV-BS P=</text></g>
+<g data-edge-id="G01-C01B/P1-B-return" data-upstream="G01-C01B:P1-OUT" data-downstream="G01-NET-B:RET" data-domain="PG25_PRIMARY"><path d="M38 2190H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2194" class="small">G01-C01B/P1-B-return: G01-C01B:P1-OUT → G01-NET-B:RET</text>
+<text x="990" y="2194" class="small sub">V=G01-C01B-P1-CV-BR P=</text></g>
+<g data-edge-id="G01-C01B/HX-primary" data-upstream="G01-C01B:P1-IN" data-downstream="G01-C01B:P1-OUT" data-domain="PG25_PRIMARY"><path d="M38 2220H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2224" class="small">G01-C01B/HX-primary: G01-C01B:P1-IN → G01-C01B:P1-OUT</text>
+<text x="990" y="2224" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C01B/return-isolation" data-upstream="G01-U1-P2-B:RET" data-downstream="G01-C01B:P2-SUCTION" data-domain="PG25_SECONDARY_U1"><path d="M38 2250H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2254" class="small">G01-C01B/return-isolation: G01-U1-P2-B:RET → G01-C01B:P2-SUCTION</text>
+<text x="990" y="2254" class="small sub">V=G01-C01B-P2-XV-RET P=</text></g>
+<g data-edge-id="G01-C01B/P2-pump-1" data-upstream="G01-C01B:P2-SUCTION" data-downstream="G01-C01B:P2-DISCHARGE" data-domain="PG25_SECONDARY_U1"><path d="M38 2280H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2284" class="small">G01-C01B/P2-pump-1: G01-C01B:P2-SUCTION → G01-C01B:P2-DISCHARGE</text>
+<text x="990" y="2284" class="small sub">V= P=G01-C01B-P2-PM1</text></g>
+<g data-edge-id="G01-C01B/P2-pump-2" data-upstream="G01-C01B:P2-SUCTION" data-downstream="G01-C01B:P2-DISCHARGE" data-domain="PG25_SECONDARY_U1"><path d="M38 2310H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2314" class="small">G01-C01B/P2-pump-2: G01-C01B:P2-SUCTION → G01-C01B:P2-DISCHARGE</text>
+<text x="990" y="2314" class="small sub">V= P=G01-C01B-P2-PM2</text></g>
+<g data-edge-id="G01-C01B/P2-filter-1" data-upstream="G01-C01B:P2-DISCHARGE" data-downstream="G01-C01B:P2-HX-IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2340H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2344" class="small">G01-C01B/P2-filter-1: G01-C01B:P2-DISCHARGE → G01-C01B:P2-HX-IN</text>
+<text x="990" y="2344" class="small sub">V=G01-C01B-FILTER1-SERVICE P=</text></g>
+<g data-edge-id="G01-C01B/P2-filter-2" data-upstream="G01-C01B:P2-DISCHARGE" data-downstream="G01-C01B:P2-HX-IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2370H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2374" class="small">G01-C01B/P2-filter-2: G01-C01B:P2-DISCHARGE → G01-C01B:P2-HX-IN</text>
+<text x="990" y="2374" class="small sub">V=G01-C01B-FILTER2-SERVICE P=</text></g>
+<g data-edge-id="G01-C01B/HX-secondary" data-upstream="G01-C01B:P2-HX-IN" data-downstream="G01-C01B:P2-HX-OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 2400H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2404" class="small">G01-C01B/HX-secondary: G01-C01B:P2-HX-IN → G01-C01B:P2-HX-OUT</text>
+<text x="990" y="2404" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C01B/supply-isolation" data-upstream="G01-C01B:P2-HX-OUT" data-downstream="G01-U1-P2-B:SUP" data-domain="PG25_SECONDARY_U1"><path d="M38 2430H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2434" class="small">G01-C01B/supply-isolation: G01-C01B:P2-HX-OUT → G01-U1-P2-B:SUP</text>
+<text x="990" y="2434" class="small sub">V=G01-C01B-P2-XV-SUP P=</text></g>
+<g data-edge-id="G01-U1-R01/A-supply" data-upstream="G01-U1-P2-A:SUP" data-downstream="G01-U1-R01:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2460H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2464" class="small">G01-U1-R01/A-supply: G01-U1-P2-A:SUP → G01-U1-R01:IN</text>
+<text x="990" y="2464" class="small sub">V=G01-U1-R01-CV-AS P=</text></g>
+<g data-edge-id="G01-U1-R01/A-return" data-upstream="G01-U1-R01:OUT" data-downstream="G01-U1-P2-A:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2490H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2494" class="small">G01-U1-R01/A-return: G01-U1-R01:OUT → G01-U1-P2-A:RET</text>
+<text x="990" y="2494" class="small sub">V=G01-U1-R01-CV-AR P=</text></g>
+<g data-edge-id="G01-U1-R01/B-supply" data-upstream="G01-U1-P2-B:SUP" data-downstream="G01-U1-R01:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2520H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2524" class="small">G01-U1-R01/B-supply: G01-U1-P2-B:SUP → G01-U1-R01:IN</text>
+<text x="990" y="2524" class="small sub">V=G01-U1-R01-CV-BS P=</text></g>
+<g data-edge-id="G01-U1-R01/B-return" data-upstream="G01-U1-R01:OUT" data-downstream="G01-U1-P2-B:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2550H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2554" class="small">G01-U1-R01/B-return: G01-U1-R01:OUT → G01-U1-P2-B:RET</text>
+<text x="990" y="2554" class="small sub">V=G01-U1-R01-CV-BR P=</text></g>
+<g data-edge-id="G01-U1-R01/heat-load" data-upstream="G01-U1-R01:IN" data-downstream="G01-U1-R01:OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 2580H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2584" class="small">G01-U1-R01/heat-load: G01-U1-R01:IN → G01-U1-R01:OUT</text>
+<text x="990" y="2584" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U1-R02/A-supply" data-upstream="G01-U1-P2-A:SUP" data-downstream="G01-U1-R02:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2610H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2614" class="small">G01-U1-R02/A-supply: G01-U1-P2-A:SUP → G01-U1-R02:IN</text>
+<text x="990" y="2614" class="small sub">V=G01-U1-R02-CV-AS P=</text></g>
+<g data-edge-id="G01-U1-R02/A-return" data-upstream="G01-U1-R02:OUT" data-downstream="G01-U1-P2-A:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2640H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2644" class="small">G01-U1-R02/A-return: G01-U1-R02:OUT → G01-U1-P2-A:RET</text>
+<text x="990" y="2644" class="small sub">V=G01-U1-R02-CV-AR P=</text></g>
+<g data-edge-id="G01-U1-R02/B-supply" data-upstream="G01-U1-P2-B:SUP" data-downstream="G01-U1-R02:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2670H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2674" class="small">G01-U1-R02/B-supply: G01-U1-P2-B:SUP → G01-U1-R02:IN</text>
+<text x="990" y="2674" class="small sub">V=G01-U1-R02-CV-BS P=</text></g>
+<g data-edge-id="G01-U1-R02/B-return" data-upstream="G01-U1-R02:OUT" data-downstream="G01-U1-P2-B:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2700H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2704" class="small">G01-U1-R02/B-return: G01-U1-R02:OUT → G01-U1-P2-B:RET</text>
+<text x="990" y="2704" class="small sub">V=G01-U1-R02-CV-BR P=</text></g>
+<g data-edge-id="G01-U1-R02/heat-load" data-upstream="G01-U1-R02:IN" data-downstream="G01-U1-R02:OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 2730H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2734" class="small">G01-U1-R02/heat-load: G01-U1-R02:IN → G01-U1-R02:OUT</text>
+<text x="990" y="2734" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U1-R03/A-supply" data-upstream="G01-U1-P2-A:SUP" data-downstream="G01-U1-R03:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2760H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2764" class="small">G01-U1-R03/A-supply: G01-U1-P2-A:SUP → G01-U1-R03:IN</text>
+<text x="990" y="2764" class="small sub">V=G01-U1-R03-CV-AS P=</text></g>
+<g data-edge-id="G01-U1-R03/A-return" data-upstream="G01-U1-R03:OUT" data-downstream="G01-U1-P2-A:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2790H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2794" class="small">G01-U1-R03/A-return: G01-U1-R03:OUT → G01-U1-P2-A:RET</text>
+<text x="990" y="2794" class="small sub">V=G01-U1-R03-CV-AR P=</text></g>
+<g data-edge-id="G01-U1-R03/B-supply" data-upstream="G01-U1-P2-B:SUP" data-downstream="G01-U1-R03:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2820H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2824" class="small">G01-U1-R03/B-supply: G01-U1-P2-B:SUP → G01-U1-R03:IN</text>
+<text x="990" y="2824" class="small sub">V=G01-U1-R03-CV-BS P=</text></g>
+<g data-edge-id="G01-U1-R03/B-return" data-upstream="G01-U1-R03:OUT" data-downstream="G01-U1-P2-B:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2850H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2854" class="small">G01-U1-R03/B-return: G01-U1-R03:OUT → G01-U1-P2-B:RET</text>
+<text x="990" y="2854" class="small sub">V=G01-U1-R03-CV-BR P=</text></g>
+<g data-edge-id="G01-U1-R03/heat-load" data-upstream="G01-U1-R03:IN" data-downstream="G01-U1-R03:OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 2880H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2884" class="small">G01-U1-R03/heat-load: G01-U1-R03:IN → G01-U1-R03:OUT</text>
+<text x="990" y="2884" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U1-R04/A-supply" data-upstream="G01-U1-P2-A:SUP" data-downstream="G01-U1-R04:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2910H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2914" class="small">G01-U1-R04/A-supply: G01-U1-P2-A:SUP → G01-U1-R04:IN</text>
+<text x="990" y="2914" class="small sub">V=G01-U1-R04-CV-AS P=</text></g>
+<g data-edge-id="G01-U1-R04/A-return" data-upstream="G01-U1-R04:OUT" data-downstream="G01-U1-P2-A:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 2940H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2944" class="small">G01-U1-R04/A-return: G01-U1-R04:OUT → G01-U1-P2-A:RET</text>
+<text x="990" y="2944" class="small sub">V=G01-U1-R04-CV-AR P=</text></g>
+<g data-edge-id="G01-U1-R04/B-supply" data-upstream="G01-U1-P2-B:SUP" data-downstream="G01-U1-R04:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 2970H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="2974" class="small">G01-U1-R04/B-supply: G01-U1-P2-B:SUP → G01-U1-R04:IN</text>
+<text x="990" y="2974" class="small sub">V=G01-U1-R04-CV-BS P=</text></g>
+<g data-edge-id="G01-U1-R04/B-return" data-upstream="G01-U1-R04:OUT" data-downstream="G01-U1-P2-B:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 3000H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3004" class="small">G01-U1-R04/B-return: G01-U1-R04:OUT → G01-U1-P2-B:RET</text>
+<text x="990" y="3004" class="small sub">V=G01-U1-R04-CV-BR P=</text></g>
+<g data-edge-id="G01-U1-R04/heat-load" data-upstream="G01-U1-R04:IN" data-downstream="G01-U1-R04:OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 3030H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3034" class="small">G01-U1-R04/heat-load: G01-U1-R04:IN → G01-U1-R04:OUT</text>
+<text x="990" y="3034" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U1-R05/A-supply" data-upstream="G01-U1-P2-A:SUP" data-downstream="G01-U1-R05:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 3060H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3064" class="small">G01-U1-R05/A-supply: G01-U1-P2-A:SUP → G01-U1-R05:IN</text>
+<text x="990" y="3064" class="small sub">V=G01-U1-R05-CV-AS P=</text></g>
+<g data-edge-id="G01-U1-R05/A-return" data-upstream="G01-U1-R05:OUT" data-downstream="G01-U1-P2-A:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 3090H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3094" class="small">G01-U1-R05/A-return: G01-U1-R05:OUT → G01-U1-P2-A:RET</text>
+<text x="990" y="3094" class="small sub">V=G01-U1-R05-CV-AR P=</text></g>
+<g data-edge-id="G01-U1-R05/B-supply" data-upstream="G01-U1-P2-B:SUP" data-downstream="G01-U1-R05:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 3120H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3124" class="small">G01-U1-R05/B-supply: G01-U1-P2-B:SUP → G01-U1-R05:IN</text>
+<text x="990" y="3124" class="small sub">V=G01-U1-R05-CV-BS P=</text></g>
+<g data-edge-id="G01-U1-R05/B-return" data-upstream="G01-U1-R05:OUT" data-downstream="G01-U1-P2-B:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 3150H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3154" class="small">G01-U1-R05/B-return: G01-U1-R05:OUT → G01-U1-P2-B:RET</text>
+<text x="990" y="3154" class="small sub">V=G01-U1-R05-CV-BR P=</text></g>
+<g data-edge-id="G01-U1-R05/heat-load" data-upstream="G01-U1-R05:IN" data-downstream="G01-U1-R05:OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 3180H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3184" class="small">G01-U1-R05/heat-load: G01-U1-R05:IN → G01-U1-R05:OUT</text>
+<text x="990" y="3184" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U1-R06/A-supply" data-upstream="G01-U1-P2-A:SUP" data-downstream="G01-U1-R06:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 3210H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3214" class="small">G01-U1-R06/A-supply: G01-U1-P2-A:SUP → G01-U1-R06:IN</text>
+<text x="990" y="3214" class="small sub">V=G01-U1-R06-CV-AS P=</text></g>
+<g data-edge-id="G01-U1-R06/A-return" data-upstream="G01-U1-R06:OUT" data-downstream="G01-U1-P2-A:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 3240H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3244" class="small">G01-U1-R06/A-return: G01-U1-R06:OUT → G01-U1-P2-A:RET</text>
+<text x="990" y="3244" class="small sub">V=G01-U1-R06-CV-AR P=</text></g>
+<g data-edge-id="G01-U1-R06/B-supply" data-upstream="G01-U1-P2-B:SUP" data-downstream="G01-U1-R06:IN" data-domain="PG25_SECONDARY_U1"><path d="M38 3270H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3274" class="small">G01-U1-R06/B-supply: G01-U1-P2-B:SUP → G01-U1-R06:IN</text>
+<text x="990" y="3274" class="small sub">V=G01-U1-R06-CV-BS P=</text></g>
+<g data-edge-id="G01-U1-R06/B-return" data-upstream="G01-U1-R06:OUT" data-downstream="G01-U1-P2-B:RET" data-domain="PG25_SECONDARY_U1"><path d="M38 3300H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3304" class="small">G01-U1-R06/B-return: G01-U1-R06:OUT → G01-U1-P2-B:RET</text>
+<text x="990" y="3304" class="small sub">V=G01-U1-R06-CV-BR P=</text></g>
+<g data-edge-id="G01-U1-R06/heat-load" data-upstream="G01-U1-R06:IN" data-downstream="G01-U1-R06:OUT" data-domain="PG25_SECONDARY_U1"><path d="M38 3330H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3334" class="small">G01-U1-R06/heat-load: G01-U1-R06:IN → G01-U1-R06:OUT</text>
+<text x="990" y="3334" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C02A/P1-A-supply" data-upstream="G01-NET-A:SUP" data-downstream="G01-C02A:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 3360H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3364" class="small">G01-C02A/P1-A-supply: G01-NET-A:SUP → G01-C02A:P1-IN</text>
+<text x="990" y="3364" class="small sub">V=G01-C02A-P1-CV-AS P=</text></g>
+<g data-edge-id="G01-C02A/P1-A-return" data-upstream="G01-C02A:P1-OUT" data-downstream="G01-NET-A:RET" data-domain="PG25_PRIMARY"><path d="M38 3390H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3394" class="small">G01-C02A/P1-A-return: G01-C02A:P1-OUT → G01-NET-A:RET</text>
+<text x="990" y="3394" class="small sub">V=G01-C02A-P1-CV-AR P=</text></g>
+<g data-edge-id="G01-C02A/P1-B-supply" data-upstream="G01-NET-B:SUP" data-downstream="G01-C02A:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 3420H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3424" class="small">G01-C02A/P1-B-supply: G01-NET-B:SUP → G01-C02A:P1-IN</text>
+<text x="990" y="3424" class="small sub">V=G01-C02A-P1-CV-BS P=</text></g>
+<g data-edge-id="G01-C02A/P1-B-return" data-upstream="G01-C02A:P1-OUT" data-downstream="G01-NET-B:RET" data-domain="PG25_PRIMARY"><path d="M38 3450H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3454" class="small">G01-C02A/P1-B-return: G01-C02A:P1-OUT → G01-NET-B:RET</text>
+<text x="990" y="3454" class="small sub">V=G01-C02A-P1-CV-BR P=</text></g>
+<g data-edge-id="G01-C02A/HX-primary" data-upstream="G01-C02A:P1-IN" data-downstream="G01-C02A:P1-OUT" data-domain="PG25_PRIMARY"><path d="M38 3480H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3484" class="small">G01-C02A/HX-primary: G01-C02A:P1-IN → G01-C02A:P1-OUT</text>
+<text x="990" y="3484" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C02A/return-isolation" data-upstream="G01-U2-P2-A:RET" data-downstream="G01-C02A:P2-SUCTION" data-domain="PG25_SECONDARY_U2"><path d="M38 3510H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3514" class="small">G01-C02A/return-isolation: G01-U2-P2-A:RET → G01-C02A:P2-SUCTION</text>
+<text x="990" y="3514" class="small sub">V=G01-C02A-P2-XV-RET P=</text></g>
+<g data-edge-id="G01-C02A/P2-pump-1" data-upstream="G01-C02A:P2-SUCTION" data-downstream="G01-C02A:P2-DISCHARGE" data-domain="PG25_SECONDARY_U2"><path d="M38 3540H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3544" class="small">G01-C02A/P2-pump-1: G01-C02A:P2-SUCTION → G01-C02A:P2-DISCHARGE</text>
+<text x="990" y="3544" class="small sub">V= P=G01-C02A-P2-PM1</text></g>
+<g data-edge-id="G01-C02A/P2-pump-2" data-upstream="G01-C02A:P2-SUCTION" data-downstream="G01-C02A:P2-DISCHARGE" data-domain="PG25_SECONDARY_U2"><path d="M38 3570H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3574" class="small">G01-C02A/P2-pump-2: G01-C02A:P2-SUCTION → G01-C02A:P2-DISCHARGE</text>
+<text x="990" y="3574" class="small sub">V= P=G01-C02A-P2-PM2</text></g>
+<g data-edge-id="G01-C02A/P2-filter-1" data-upstream="G01-C02A:P2-DISCHARGE" data-downstream="G01-C02A:P2-HX-IN" data-domain="PG25_SECONDARY_U2"><path d="M38 3600H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3604" class="small">G01-C02A/P2-filter-1: G01-C02A:P2-DISCHARGE → G01-C02A:P2-HX-IN</text>
+<text x="990" y="3604" class="small sub">V=G01-C02A-FILTER1-SERVICE P=</text></g>
+<g data-edge-id="G01-C02A/P2-filter-2" data-upstream="G01-C02A:P2-DISCHARGE" data-downstream="G01-C02A:P2-HX-IN" data-domain="PG25_SECONDARY_U2"><path d="M38 3630H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3634" class="small">G01-C02A/P2-filter-2: G01-C02A:P2-DISCHARGE → G01-C02A:P2-HX-IN</text>
+<text x="990" y="3634" class="small sub">V=G01-C02A-FILTER2-SERVICE P=</text></g>
+<g data-edge-id="G01-C02A/HX-secondary" data-upstream="G01-C02A:P2-HX-IN" data-downstream="G01-C02A:P2-HX-OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 3660H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3664" class="small">G01-C02A/HX-secondary: G01-C02A:P2-HX-IN → G01-C02A:P2-HX-OUT</text>
+<text x="990" y="3664" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C02A/supply-isolation" data-upstream="G01-C02A:P2-HX-OUT" data-downstream="G01-U2-P2-A:SUP" data-domain="PG25_SECONDARY_U2"><path d="M38 3690H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3694" class="small">G01-C02A/supply-isolation: G01-C02A:P2-HX-OUT → G01-U2-P2-A:SUP</text>
+<text x="990" y="3694" class="small sub">V=G01-C02A-P2-XV-SUP P=</text></g>
+<g data-edge-id="G01-C02B/P1-A-supply" data-upstream="G01-NET-A:SUP" data-downstream="G01-C02B:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 3720H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3724" class="small">G01-C02B/P1-A-supply: G01-NET-A:SUP → G01-C02B:P1-IN</text>
+<text x="990" y="3724" class="small sub">V=G01-C02B-P1-CV-AS P=</text></g>
+<g data-edge-id="G01-C02B/P1-A-return" data-upstream="G01-C02B:P1-OUT" data-downstream="G01-NET-A:RET" data-domain="PG25_PRIMARY"><path d="M38 3750H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3754" class="small">G01-C02B/P1-A-return: G01-C02B:P1-OUT → G01-NET-A:RET</text>
+<text x="990" y="3754" class="small sub">V=G01-C02B-P1-CV-AR P=</text></g>
+<g data-edge-id="G01-C02B/P1-B-supply" data-upstream="G01-NET-B:SUP" data-downstream="G01-C02B:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 3780H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3784" class="small">G01-C02B/P1-B-supply: G01-NET-B:SUP → G01-C02B:P1-IN</text>
+<text x="990" y="3784" class="small sub">V=G01-C02B-P1-CV-BS P=</text></g>
+<g data-edge-id="G01-C02B/P1-B-return" data-upstream="G01-C02B:P1-OUT" data-downstream="G01-NET-B:RET" data-domain="PG25_PRIMARY"><path d="M38 3810H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3814" class="small">G01-C02B/P1-B-return: G01-C02B:P1-OUT → G01-NET-B:RET</text>
+<text x="990" y="3814" class="small sub">V=G01-C02B-P1-CV-BR P=</text></g>
+<g data-edge-id="G01-C02B/HX-primary" data-upstream="G01-C02B:P1-IN" data-downstream="G01-C02B:P1-OUT" data-domain="PG25_PRIMARY"><path d="M38 3840H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3844" class="small">G01-C02B/HX-primary: G01-C02B:P1-IN → G01-C02B:P1-OUT</text>
+<text x="990" y="3844" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C02B/return-isolation" data-upstream="G01-U2-P2-B:RET" data-downstream="G01-C02B:P2-SUCTION" data-domain="PG25_SECONDARY_U2"><path d="M38 3870H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3874" class="small">G01-C02B/return-isolation: G01-U2-P2-B:RET → G01-C02B:P2-SUCTION</text>
+<text x="990" y="3874" class="small sub">V=G01-C02B-P2-XV-RET P=</text></g>
+<g data-edge-id="G01-C02B/P2-pump-1" data-upstream="G01-C02B:P2-SUCTION" data-downstream="G01-C02B:P2-DISCHARGE" data-domain="PG25_SECONDARY_U2"><path d="M38 3900H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3904" class="small">G01-C02B/P2-pump-1: G01-C02B:P2-SUCTION → G01-C02B:P2-DISCHARGE</text>
+<text x="990" y="3904" class="small sub">V= P=G01-C02B-P2-PM1</text></g>
+<g data-edge-id="G01-C02B/P2-pump-2" data-upstream="G01-C02B:P2-SUCTION" data-downstream="G01-C02B:P2-DISCHARGE" data-domain="PG25_SECONDARY_U2"><path d="M38 3930H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3934" class="small">G01-C02B/P2-pump-2: G01-C02B:P2-SUCTION → G01-C02B:P2-DISCHARGE</text>
+<text x="990" y="3934" class="small sub">V= P=G01-C02B-P2-PM2</text></g>
+<g data-edge-id="G01-C02B/P2-filter-1" data-upstream="G01-C02B:P2-DISCHARGE" data-downstream="G01-C02B:P2-HX-IN" data-domain="PG25_SECONDARY_U2"><path d="M38 3960H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3964" class="small">G01-C02B/P2-filter-1: G01-C02B:P2-DISCHARGE → G01-C02B:P2-HX-IN</text>
+<text x="990" y="3964" class="small sub">V=G01-C02B-FILTER1-SERVICE P=</text></g>
+<g data-edge-id="G01-C02B/P2-filter-2" data-upstream="G01-C02B:P2-DISCHARGE" data-downstream="G01-C02B:P2-HX-IN" data-domain="PG25_SECONDARY_U2"><path d="M38 3990H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="3994" class="small">G01-C02B/P2-filter-2: G01-C02B:P2-DISCHARGE → G01-C02B:P2-HX-IN</text>
+<text x="990" y="3994" class="small sub">V=G01-C02B-FILTER2-SERVICE P=</text></g>
+<g data-edge-id="G01-C02B/HX-secondary" data-upstream="G01-C02B:P2-HX-IN" data-downstream="G01-C02B:P2-HX-OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4020H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4024" class="small">G01-C02B/HX-secondary: G01-C02B:P2-HX-IN → G01-C02B:P2-HX-OUT</text>
+<text x="990" y="4024" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C02B/supply-isolation" data-upstream="G01-C02B:P2-HX-OUT" data-downstream="G01-U2-P2-B:SUP" data-domain="PG25_SECONDARY_U2"><path d="M38 4050H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4054" class="small">G01-C02B/supply-isolation: G01-C02B:P2-HX-OUT → G01-U2-P2-B:SUP</text>
+<text x="990" y="4054" class="small sub">V=G01-C02B-P2-XV-SUP P=</text></g>
+<g data-edge-id="G01-U2-R01/A-supply" data-upstream="G01-U2-P2-A:SUP" data-downstream="G01-U2-R01:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4080H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4084" class="small">G01-U2-R01/A-supply: G01-U2-P2-A:SUP → G01-U2-R01:IN</text>
+<text x="990" y="4084" class="small sub">V=G01-U2-R01-CV-AS P=</text></g>
+<g data-edge-id="G01-U2-R01/A-return" data-upstream="G01-U2-R01:OUT" data-downstream="G01-U2-P2-A:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4110H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4114" class="small">G01-U2-R01/A-return: G01-U2-R01:OUT → G01-U2-P2-A:RET</text>
+<text x="990" y="4114" class="small sub">V=G01-U2-R01-CV-AR P=</text></g>
+<g data-edge-id="G01-U2-R01/B-supply" data-upstream="G01-U2-P2-B:SUP" data-downstream="G01-U2-R01:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4140H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4144" class="small">G01-U2-R01/B-supply: G01-U2-P2-B:SUP → G01-U2-R01:IN</text>
+<text x="990" y="4144" class="small sub">V=G01-U2-R01-CV-BS P=</text></g>
+<g data-edge-id="G01-U2-R01/B-return" data-upstream="G01-U2-R01:OUT" data-downstream="G01-U2-P2-B:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4170H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4174" class="small">G01-U2-R01/B-return: G01-U2-R01:OUT → G01-U2-P2-B:RET</text>
+<text x="990" y="4174" class="small sub">V=G01-U2-R01-CV-BR P=</text></g>
+<g data-edge-id="G01-U2-R01/heat-load" data-upstream="G01-U2-R01:IN" data-downstream="G01-U2-R01:OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4200H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4204" class="small">G01-U2-R01/heat-load: G01-U2-R01:IN → G01-U2-R01:OUT</text>
+<text x="990" y="4204" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U2-R02/A-supply" data-upstream="G01-U2-P2-A:SUP" data-downstream="G01-U2-R02:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4230H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4234" class="small">G01-U2-R02/A-supply: G01-U2-P2-A:SUP → G01-U2-R02:IN</text>
+<text x="990" y="4234" class="small sub">V=G01-U2-R02-CV-AS P=</text></g>
+<g data-edge-id="G01-U2-R02/A-return" data-upstream="G01-U2-R02:OUT" data-downstream="G01-U2-P2-A:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4260H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4264" class="small">G01-U2-R02/A-return: G01-U2-R02:OUT → G01-U2-P2-A:RET</text>
+<text x="990" y="4264" class="small sub">V=G01-U2-R02-CV-AR P=</text></g>
+<g data-edge-id="G01-U2-R02/B-supply" data-upstream="G01-U2-P2-B:SUP" data-downstream="G01-U2-R02:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4290H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4294" class="small">G01-U2-R02/B-supply: G01-U2-P2-B:SUP → G01-U2-R02:IN</text>
+<text x="990" y="4294" class="small sub">V=G01-U2-R02-CV-BS P=</text></g>
+<g data-edge-id="G01-U2-R02/B-return" data-upstream="G01-U2-R02:OUT" data-downstream="G01-U2-P2-B:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4320H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4324" class="small">G01-U2-R02/B-return: G01-U2-R02:OUT → G01-U2-P2-B:RET</text>
+<text x="990" y="4324" class="small sub">V=G01-U2-R02-CV-BR P=</text></g>
+<g data-edge-id="G01-U2-R02/heat-load" data-upstream="G01-U2-R02:IN" data-downstream="G01-U2-R02:OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4350H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4354" class="small">G01-U2-R02/heat-load: G01-U2-R02:IN → G01-U2-R02:OUT</text>
+<text x="990" y="4354" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U2-R03/A-supply" data-upstream="G01-U2-P2-A:SUP" data-downstream="G01-U2-R03:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4380H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4384" class="small">G01-U2-R03/A-supply: G01-U2-P2-A:SUP → G01-U2-R03:IN</text>
+<text x="990" y="4384" class="small sub">V=G01-U2-R03-CV-AS P=</text></g>
+<g data-edge-id="G01-U2-R03/A-return" data-upstream="G01-U2-R03:OUT" data-downstream="G01-U2-P2-A:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4410H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4414" class="small">G01-U2-R03/A-return: G01-U2-R03:OUT → G01-U2-P2-A:RET</text>
+<text x="990" y="4414" class="small sub">V=G01-U2-R03-CV-AR P=</text></g>
+<g data-edge-id="G01-U2-R03/B-supply" data-upstream="G01-U2-P2-B:SUP" data-downstream="G01-U2-R03:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4440H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4444" class="small">G01-U2-R03/B-supply: G01-U2-P2-B:SUP → G01-U2-R03:IN</text>
+<text x="990" y="4444" class="small sub">V=G01-U2-R03-CV-BS P=</text></g>
+<g data-edge-id="G01-U2-R03/B-return" data-upstream="G01-U2-R03:OUT" data-downstream="G01-U2-P2-B:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4470H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4474" class="small">G01-U2-R03/B-return: G01-U2-R03:OUT → G01-U2-P2-B:RET</text>
+<text x="990" y="4474" class="small sub">V=G01-U2-R03-CV-BR P=</text></g>
+<g data-edge-id="G01-U2-R03/heat-load" data-upstream="G01-U2-R03:IN" data-downstream="G01-U2-R03:OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4500H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4504" class="small">G01-U2-R03/heat-load: G01-U2-R03:IN → G01-U2-R03:OUT</text>
+<text x="990" y="4504" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U2-R04/A-supply" data-upstream="G01-U2-P2-A:SUP" data-downstream="G01-U2-R04:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4530H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4534" class="small">G01-U2-R04/A-supply: G01-U2-P2-A:SUP → G01-U2-R04:IN</text>
+<text x="990" y="4534" class="small sub">V=G01-U2-R04-CV-AS P=</text></g>
+<g data-edge-id="G01-U2-R04/A-return" data-upstream="G01-U2-R04:OUT" data-downstream="G01-U2-P2-A:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4560H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4564" class="small">G01-U2-R04/A-return: G01-U2-R04:OUT → G01-U2-P2-A:RET</text>
+<text x="990" y="4564" class="small sub">V=G01-U2-R04-CV-AR P=</text></g>
+<g data-edge-id="G01-U2-R04/B-supply" data-upstream="G01-U2-P2-B:SUP" data-downstream="G01-U2-R04:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4590H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4594" class="small">G01-U2-R04/B-supply: G01-U2-P2-B:SUP → G01-U2-R04:IN</text>
+<text x="990" y="4594" class="small sub">V=G01-U2-R04-CV-BS P=</text></g>
+<g data-edge-id="G01-U2-R04/B-return" data-upstream="G01-U2-R04:OUT" data-downstream="G01-U2-P2-B:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4620H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4624" class="small">G01-U2-R04/B-return: G01-U2-R04:OUT → G01-U2-P2-B:RET</text>
+<text x="990" y="4624" class="small sub">V=G01-U2-R04-CV-BR P=</text></g>
+<g data-edge-id="G01-U2-R04/heat-load" data-upstream="G01-U2-R04:IN" data-downstream="G01-U2-R04:OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4650H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4654" class="small">G01-U2-R04/heat-load: G01-U2-R04:IN → G01-U2-R04:OUT</text>
+<text x="990" y="4654" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U2-R05/A-supply" data-upstream="G01-U2-P2-A:SUP" data-downstream="G01-U2-R05:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4680H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4684" class="small">G01-U2-R05/A-supply: G01-U2-P2-A:SUP → G01-U2-R05:IN</text>
+<text x="990" y="4684" class="small sub">V=G01-U2-R05-CV-AS P=</text></g>
+<g data-edge-id="G01-U2-R05/A-return" data-upstream="G01-U2-R05:OUT" data-downstream="G01-U2-P2-A:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4710H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4714" class="small">G01-U2-R05/A-return: G01-U2-R05:OUT → G01-U2-P2-A:RET</text>
+<text x="990" y="4714" class="small sub">V=G01-U2-R05-CV-AR P=</text></g>
+<g data-edge-id="G01-U2-R05/B-supply" data-upstream="G01-U2-P2-B:SUP" data-downstream="G01-U2-R05:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4740H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4744" class="small">G01-U2-R05/B-supply: G01-U2-P2-B:SUP → G01-U2-R05:IN</text>
+<text x="990" y="4744" class="small sub">V=G01-U2-R05-CV-BS P=</text></g>
+<g data-edge-id="G01-U2-R05/B-return" data-upstream="G01-U2-R05:OUT" data-downstream="G01-U2-P2-B:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4770H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4774" class="small">G01-U2-R05/B-return: G01-U2-R05:OUT → G01-U2-P2-B:RET</text>
+<text x="990" y="4774" class="small sub">V=G01-U2-R05-CV-BR P=</text></g>
+<g data-edge-id="G01-U2-R05/heat-load" data-upstream="G01-U2-R05:IN" data-downstream="G01-U2-R05:OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4800H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4804" class="small">G01-U2-R05/heat-load: G01-U2-R05:IN → G01-U2-R05:OUT</text>
+<text x="990" y="4804" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U2-R06/A-supply" data-upstream="G01-U2-P2-A:SUP" data-downstream="G01-U2-R06:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4830H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4834" class="small">G01-U2-R06/A-supply: G01-U2-P2-A:SUP → G01-U2-R06:IN</text>
+<text x="990" y="4834" class="small sub">V=G01-U2-R06-CV-AS P=</text></g>
+<g data-edge-id="G01-U2-R06/A-return" data-upstream="G01-U2-R06:OUT" data-downstream="G01-U2-P2-A:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4860H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4864" class="small">G01-U2-R06/A-return: G01-U2-R06:OUT → G01-U2-P2-A:RET</text>
+<text x="990" y="4864" class="small sub">V=G01-U2-R06-CV-AR P=</text></g>
+<g data-edge-id="G01-U2-R06/B-supply" data-upstream="G01-U2-P2-B:SUP" data-downstream="G01-U2-R06:IN" data-domain="PG25_SECONDARY_U2"><path d="M38 4890H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4894" class="small">G01-U2-R06/B-supply: G01-U2-P2-B:SUP → G01-U2-R06:IN</text>
+<text x="990" y="4894" class="small sub">V=G01-U2-R06-CV-BS P=</text></g>
+<g data-edge-id="G01-U2-R06/B-return" data-upstream="G01-U2-R06:OUT" data-downstream="G01-U2-P2-B:RET" data-domain="PG25_SECONDARY_U2"><path d="M38 4920H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4924" class="small">G01-U2-R06/B-return: G01-U2-R06:OUT → G01-U2-P2-B:RET</text>
+<text x="990" y="4924" class="small sub">V=G01-U2-R06-CV-BR P=</text></g>
+<g data-edge-id="G01-U2-R06/heat-load" data-upstream="G01-U2-R06:IN" data-downstream="G01-U2-R06:OUT" data-domain="PG25_SECONDARY_U2"><path d="M38 4950H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4954" class="small">G01-U2-R06/heat-load: G01-U2-R06:IN → G01-U2-R06:OUT</text>
+<text x="990" y="4954" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C03A/P1-A-supply" data-upstream="G01-NET-A:SUP" data-downstream="G01-C03A:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 4980H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="4984" class="small">G01-C03A/P1-A-supply: G01-NET-A:SUP → G01-C03A:P1-IN</text>
+<text x="990" y="4984" class="small sub">V=G01-C03A-P1-CV-AS P=</text></g>
+<g data-edge-id="G01-C03A/P1-A-return" data-upstream="G01-C03A:P1-OUT" data-downstream="G01-NET-A:RET" data-domain="PG25_PRIMARY"><path d="M38 5010H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5014" class="small">G01-C03A/P1-A-return: G01-C03A:P1-OUT → G01-NET-A:RET</text>
+<text x="990" y="5014" class="small sub">V=G01-C03A-P1-CV-AR P=</text></g>
+<g data-edge-id="G01-C03A/P1-B-supply" data-upstream="G01-NET-B:SUP" data-downstream="G01-C03A:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 5040H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5044" class="small">G01-C03A/P1-B-supply: G01-NET-B:SUP → G01-C03A:P1-IN</text>
+<text x="990" y="5044" class="small sub">V=G01-C03A-P1-CV-BS P=</text></g>
+<g data-edge-id="G01-C03A/P1-B-return" data-upstream="G01-C03A:P1-OUT" data-downstream="G01-NET-B:RET" data-domain="PG25_PRIMARY"><path d="M38 5070H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5074" class="small">G01-C03A/P1-B-return: G01-C03A:P1-OUT → G01-NET-B:RET</text>
+<text x="990" y="5074" class="small sub">V=G01-C03A-P1-CV-BR P=</text></g>
+<g data-edge-id="G01-C03A/HX-primary" data-upstream="G01-C03A:P1-IN" data-downstream="G01-C03A:P1-OUT" data-domain="PG25_PRIMARY"><path d="M38 5100H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5104" class="small">G01-C03A/HX-primary: G01-C03A:P1-IN → G01-C03A:P1-OUT</text>
+<text x="990" y="5104" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C03A/return-isolation" data-upstream="G01-U3-P2-A:RET" data-downstream="G01-C03A:P2-SUCTION" data-domain="PG25_SECONDARY_U3"><path d="M38 5130H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5134" class="small">G01-C03A/return-isolation: G01-U3-P2-A:RET → G01-C03A:P2-SUCTION</text>
+<text x="990" y="5134" class="small sub">V=G01-C03A-P2-XV-RET P=</text></g>
+<g data-edge-id="G01-C03A/P2-pump-1" data-upstream="G01-C03A:P2-SUCTION" data-downstream="G01-C03A:P2-DISCHARGE" data-domain="PG25_SECONDARY_U3"><path d="M38 5160H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5164" class="small">G01-C03A/P2-pump-1: G01-C03A:P2-SUCTION → G01-C03A:P2-DISCHARGE</text>
+<text x="990" y="5164" class="small sub">V= P=G01-C03A-P2-PM1</text></g>
+<g data-edge-id="G01-C03A/P2-pump-2" data-upstream="G01-C03A:P2-SUCTION" data-downstream="G01-C03A:P2-DISCHARGE" data-domain="PG25_SECONDARY_U3"><path d="M38 5190H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5194" class="small">G01-C03A/P2-pump-2: G01-C03A:P2-SUCTION → G01-C03A:P2-DISCHARGE</text>
+<text x="990" y="5194" class="small sub">V= P=G01-C03A-P2-PM2</text></g>
+<g data-edge-id="G01-C03A/P2-filter-1" data-upstream="G01-C03A:P2-DISCHARGE" data-downstream="G01-C03A:P2-HX-IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5220H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5224" class="small">G01-C03A/P2-filter-1: G01-C03A:P2-DISCHARGE → G01-C03A:P2-HX-IN</text>
+<text x="990" y="5224" class="small sub">V=G01-C03A-FILTER1-SERVICE P=</text></g>
+<g data-edge-id="G01-C03A/P2-filter-2" data-upstream="G01-C03A:P2-DISCHARGE" data-downstream="G01-C03A:P2-HX-IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5250H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5254" class="small">G01-C03A/P2-filter-2: G01-C03A:P2-DISCHARGE → G01-C03A:P2-HX-IN</text>
+<text x="990" y="5254" class="small sub">V=G01-C03A-FILTER2-SERVICE P=</text></g>
+<g data-edge-id="G01-C03A/HX-secondary" data-upstream="G01-C03A:P2-HX-IN" data-downstream="G01-C03A:P2-HX-OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 5280H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5284" class="small">G01-C03A/HX-secondary: G01-C03A:P2-HX-IN → G01-C03A:P2-HX-OUT</text>
+<text x="990" y="5284" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C03A/supply-isolation" data-upstream="G01-C03A:P2-HX-OUT" data-downstream="G01-U3-P2-A:SUP" data-domain="PG25_SECONDARY_U3"><path d="M38 5310H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5314" class="small">G01-C03A/supply-isolation: G01-C03A:P2-HX-OUT → G01-U3-P2-A:SUP</text>
+<text x="990" y="5314" class="small sub">V=G01-C03A-P2-XV-SUP P=</text></g>
+<g data-edge-id="G01-C03B/P1-A-supply" data-upstream="G01-NET-A:SUP" data-downstream="G01-C03B:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 5340H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5344" class="small">G01-C03B/P1-A-supply: G01-NET-A:SUP → G01-C03B:P1-IN</text>
+<text x="990" y="5344" class="small sub">V=G01-C03B-P1-CV-AS P=</text></g>
+<g data-edge-id="G01-C03B/P1-A-return" data-upstream="G01-C03B:P1-OUT" data-downstream="G01-NET-A:RET" data-domain="PG25_PRIMARY"><path d="M38 5370H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5374" class="small">G01-C03B/P1-A-return: G01-C03B:P1-OUT → G01-NET-A:RET</text>
+<text x="990" y="5374" class="small sub">V=G01-C03B-P1-CV-AR P=</text></g>
+<g data-edge-id="G01-C03B/P1-B-supply" data-upstream="G01-NET-B:SUP" data-downstream="G01-C03B:P1-IN" data-domain="PG25_PRIMARY"><path d="M38 5400H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5404" class="small">G01-C03B/P1-B-supply: G01-NET-B:SUP → G01-C03B:P1-IN</text>
+<text x="990" y="5404" class="small sub">V=G01-C03B-P1-CV-BS P=</text></g>
+<g data-edge-id="G01-C03B/P1-B-return" data-upstream="G01-C03B:P1-OUT" data-downstream="G01-NET-B:RET" data-domain="PG25_PRIMARY"><path d="M38 5430H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5434" class="small">G01-C03B/P1-B-return: G01-C03B:P1-OUT → G01-NET-B:RET</text>
+<text x="990" y="5434" class="small sub">V=G01-C03B-P1-CV-BR P=</text></g>
+<g data-edge-id="G01-C03B/HX-primary" data-upstream="G01-C03B:P1-IN" data-downstream="G01-C03B:P1-OUT" data-domain="PG25_PRIMARY"><path d="M38 5460H75" stroke="#22d3ee" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5464" class="small">G01-C03B/HX-primary: G01-C03B:P1-IN → G01-C03B:P1-OUT</text>
+<text x="990" y="5464" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C03B/return-isolation" data-upstream="G01-U3-P2-B:RET" data-downstream="G01-C03B:P2-SUCTION" data-domain="PG25_SECONDARY_U3"><path d="M38 5490H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5494" class="small">G01-C03B/return-isolation: G01-U3-P2-B:RET → G01-C03B:P2-SUCTION</text>
+<text x="990" y="5494" class="small sub">V=G01-C03B-P2-XV-RET P=</text></g>
+<g data-edge-id="G01-C03B/P2-pump-1" data-upstream="G01-C03B:P2-SUCTION" data-downstream="G01-C03B:P2-DISCHARGE" data-domain="PG25_SECONDARY_U3"><path d="M38 5520H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5524" class="small">G01-C03B/P2-pump-1: G01-C03B:P2-SUCTION → G01-C03B:P2-DISCHARGE</text>
+<text x="990" y="5524" class="small sub">V= P=G01-C03B-P2-PM1</text></g>
+<g data-edge-id="G01-C03B/P2-pump-2" data-upstream="G01-C03B:P2-SUCTION" data-downstream="G01-C03B:P2-DISCHARGE" data-domain="PG25_SECONDARY_U3"><path d="M38 5550H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5554" class="small">G01-C03B/P2-pump-2: G01-C03B:P2-SUCTION → G01-C03B:P2-DISCHARGE</text>
+<text x="990" y="5554" class="small sub">V= P=G01-C03B-P2-PM2</text></g>
+<g data-edge-id="G01-C03B/P2-filter-1" data-upstream="G01-C03B:P2-DISCHARGE" data-downstream="G01-C03B:P2-HX-IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5580H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5584" class="small">G01-C03B/P2-filter-1: G01-C03B:P2-DISCHARGE → G01-C03B:P2-HX-IN</text>
+<text x="990" y="5584" class="small sub">V=G01-C03B-FILTER1-SERVICE P=</text></g>
+<g data-edge-id="G01-C03B/P2-filter-2" data-upstream="G01-C03B:P2-DISCHARGE" data-downstream="G01-C03B:P2-HX-IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5610H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5614" class="small">G01-C03B/P2-filter-2: G01-C03B:P2-DISCHARGE → G01-C03B:P2-HX-IN</text>
+<text x="990" y="5614" class="small sub">V=G01-C03B-FILTER2-SERVICE P=</text></g>
+<g data-edge-id="G01-C03B/HX-secondary" data-upstream="G01-C03B:P2-HX-IN" data-downstream="G01-C03B:P2-HX-OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 5640H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5644" class="small">G01-C03B/HX-secondary: G01-C03B:P2-HX-IN → G01-C03B:P2-HX-OUT</text>
+<text x="990" y="5644" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-C03B/supply-isolation" data-upstream="G01-C03B:P2-HX-OUT" data-downstream="G01-U3-P2-B:SUP" data-domain="PG25_SECONDARY_U3"><path d="M38 5670H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5674" class="small">G01-C03B/supply-isolation: G01-C03B:P2-HX-OUT → G01-U3-P2-B:SUP</text>
+<text x="990" y="5674" class="small sub">V=G01-C03B-P2-XV-SUP P=</text></g>
+<g data-edge-id="G01-U3-R01/A-supply" data-upstream="G01-U3-P2-A:SUP" data-downstream="G01-U3-R01:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5700H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5704" class="small">G01-U3-R01/A-supply: G01-U3-P2-A:SUP → G01-U3-R01:IN</text>
+<text x="990" y="5704" class="small sub">V=G01-U3-R01-CV-AS P=</text></g>
+<g data-edge-id="G01-U3-R01/A-return" data-upstream="G01-U3-R01:OUT" data-downstream="G01-U3-P2-A:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 5730H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5734" class="small">G01-U3-R01/A-return: G01-U3-R01:OUT → G01-U3-P2-A:RET</text>
+<text x="990" y="5734" class="small sub">V=G01-U3-R01-CV-AR P=</text></g>
+<g data-edge-id="G01-U3-R01/B-supply" data-upstream="G01-U3-P2-B:SUP" data-downstream="G01-U3-R01:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5760H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5764" class="small">G01-U3-R01/B-supply: G01-U3-P2-B:SUP → G01-U3-R01:IN</text>
+<text x="990" y="5764" class="small sub">V=G01-U3-R01-CV-BS P=</text></g>
+<g data-edge-id="G01-U3-R01/B-return" data-upstream="G01-U3-R01:OUT" data-downstream="G01-U3-P2-B:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 5790H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5794" class="small">G01-U3-R01/B-return: G01-U3-R01:OUT → G01-U3-P2-B:RET</text>
+<text x="990" y="5794" class="small sub">V=G01-U3-R01-CV-BR P=</text></g>
+<g data-edge-id="G01-U3-R01/heat-load" data-upstream="G01-U3-R01:IN" data-downstream="G01-U3-R01:OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 5820H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5824" class="small">G01-U3-R01/heat-load: G01-U3-R01:IN → G01-U3-R01:OUT</text>
+<text x="990" y="5824" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U3-R02/A-supply" data-upstream="G01-U3-P2-A:SUP" data-downstream="G01-U3-R02:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5850H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5854" class="small">G01-U3-R02/A-supply: G01-U3-P2-A:SUP → G01-U3-R02:IN</text>
+<text x="990" y="5854" class="small sub">V=G01-U3-R02-CV-AS P=</text></g>
+<g data-edge-id="G01-U3-R02/A-return" data-upstream="G01-U3-R02:OUT" data-downstream="G01-U3-P2-A:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 5880H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5884" class="small">G01-U3-R02/A-return: G01-U3-R02:OUT → G01-U3-P2-A:RET</text>
+<text x="990" y="5884" class="small sub">V=G01-U3-R02-CV-AR P=</text></g>
+<g data-edge-id="G01-U3-R02/B-supply" data-upstream="G01-U3-P2-B:SUP" data-downstream="G01-U3-R02:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 5910H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5914" class="small">G01-U3-R02/B-supply: G01-U3-P2-B:SUP → G01-U3-R02:IN</text>
+<text x="990" y="5914" class="small sub">V=G01-U3-R02-CV-BS P=</text></g>
+<g data-edge-id="G01-U3-R02/B-return" data-upstream="G01-U3-R02:OUT" data-downstream="G01-U3-P2-B:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 5940H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5944" class="small">G01-U3-R02/B-return: G01-U3-R02:OUT → G01-U3-P2-B:RET</text>
+<text x="990" y="5944" class="small sub">V=G01-U3-R02-CV-BR P=</text></g>
+<g data-edge-id="G01-U3-R02/heat-load" data-upstream="G01-U3-R02:IN" data-downstream="G01-U3-R02:OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 5970H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="5974" class="small">G01-U3-R02/heat-load: G01-U3-R02:IN → G01-U3-R02:OUT</text>
+<text x="990" y="5974" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U3-R03/A-supply" data-upstream="G01-U3-P2-A:SUP" data-downstream="G01-U3-R03:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6000H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6004" class="small">G01-U3-R03/A-supply: G01-U3-P2-A:SUP → G01-U3-R03:IN</text>
+<text x="990" y="6004" class="small sub">V=G01-U3-R03-CV-AS P=</text></g>
+<g data-edge-id="G01-U3-R03/A-return" data-upstream="G01-U3-R03:OUT" data-downstream="G01-U3-P2-A:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6030H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6034" class="small">G01-U3-R03/A-return: G01-U3-R03:OUT → G01-U3-P2-A:RET</text>
+<text x="990" y="6034" class="small sub">V=G01-U3-R03-CV-AR P=</text></g>
+<g data-edge-id="G01-U3-R03/B-supply" data-upstream="G01-U3-P2-B:SUP" data-downstream="G01-U3-R03:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6060H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6064" class="small">G01-U3-R03/B-supply: G01-U3-P2-B:SUP → G01-U3-R03:IN</text>
+<text x="990" y="6064" class="small sub">V=G01-U3-R03-CV-BS P=</text></g>
+<g data-edge-id="G01-U3-R03/B-return" data-upstream="G01-U3-R03:OUT" data-downstream="G01-U3-P2-B:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6090H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6094" class="small">G01-U3-R03/B-return: G01-U3-R03:OUT → G01-U3-P2-B:RET</text>
+<text x="990" y="6094" class="small sub">V=G01-U3-R03-CV-BR P=</text></g>
+<g data-edge-id="G01-U3-R03/heat-load" data-upstream="G01-U3-R03:IN" data-downstream="G01-U3-R03:OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 6120H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6124" class="small">G01-U3-R03/heat-load: G01-U3-R03:IN → G01-U3-R03:OUT</text>
+<text x="990" y="6124" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U3-R04/A-supply" data-upstream="G01-U3-P2-A:SUP" data-downstream="G01-U3-R04:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6150H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6154" class="small">G01-U3-R04/A-supply: G01-U3-P2-A:SUP → G01-U3-R04:IN</text>
+<text x="990" y="6154" class="small sub">V=G01-U3-R04-CV-AS P=</text></g>
+<g data-edge-id="G01-U3-R04/A-return" data-upstream="G01-U3-R04:OUT" data-downstream="G01-U3-P2-A:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6180H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6184" class="small">G01-U3-R04/A-return: G01-U3-R04:OUT → G01-U3-P2-A:RET</text>
+<text x="990" y="6184" class="small sub">V=G01-U3-R04-CV-AR P=</text></g>
+<g data-edge-id="G01-U3-R04/B-supply" data-upstream="G01-U3-P2-B:SUP" data-downstream="G01-U3-R04:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6210H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6214" class="small">G01-U3-R04/B-supply: G01-U3-P2-B:SUP → G01-U3-R04:IN</text>
+<text x="990" y="6214" class="small sub">V=G01-U3-R04-CV-BS P=</text></g>
+<g data-edge-id="G01-U3-R04/B-return" data-upstream="G01-U3-R04:OUT" data-downstream="G01-U3-P2-B:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6240H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6244" class="small">G01-U3-R04/B-return: G01-U3-R04:OUT → G01-U3-P2-B:RET</text>
+<text x="990" y="6244" class="small sub">V=G01-U3-R04-CV-BR P=</text></g>
+<g data-edge-id="G01-U3-R04/heat-load" data-upstream="G01-U3-R04:IN" data-downstream="G01-U3-R04:OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 6270H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6274" class="small">G01-U3-R04/heat-load: G01-U3-R04:IN → G01-U3-R04:OUT</text>
+<text x="990" y="6274" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U3-R05/A-supply" data-upstream="G01-U3-P2-A:SUP" data-downstream="G01-U3-R05:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6300H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6304" class="small">G01-U3-R05/A-supply: G01-U3-P2-A:SUP → G01-U3-R05:IN</text>
+<text x="990" y="6304" class="small sub">V=G01-U3-R05-CV-AS P=</text></g>
+<g data-edge-id="G01-U3-R05/A-return" data-upstream="G01-U3-R05:OUT" data-downstream="G01-U3-P2-A:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6330H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6334" class="small">G01-U3-R05/A-return: G01-U3-R05:OUT → G01-U3-P2-A:RET</text>
+<text x="990" y="6334" class="small sub">V=G01-U3-R05-CV-AR P=</text></g>
+<g data-edge-id="G01-U3-R05/B-supply" data-upstream="G01-U3-P2-B:SUP" data-downstream="G01-U3-R05:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6360H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6364" class="small">G01-U3-R05/B-supply: G01-U3-P2-B:SUP → G01-U3-R05:IN</text>
+<text x="990" y="6364" class="small sub">V=G01-U3-R05-CV-BS P=</text></g>
+<g data-edge-id="G01-U3-R05/B-return" data-upstream="G01-U3-R05:OUT" data-downstream="G01-U3-P2-B:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6390H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6394" class="small">G01-U3-R05/B-return: G01-U3-R05:OUT → G01-U3-P2-B:RET</text>
+<text x="990" y="6394" class="small sub">V=G01-U3-R05-CV-BR P=</text></g>
+<g data-edge-id="G01-U3-R05/heat-load" data-upstream="G01-U3-R05:IN" data-downstream="G01-U3-R05:OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 6420H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6424" class="small">G01-U3-R05/heat-load: G01-U3-R05:IN → G01-U3-R05:OUT</text>
+<text x="990" y="6424" class="small sub">V= P=</text></g>
+<g data-edge-id="G01-U3-R06/A-supply" data-upstream="G01-U3-P2-A:SUP" data-downstream="G01-U3-R06:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6450H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6454" class="small">G01-U3-R06/A-supply: G01-U3-P2-A:SUP → G01-U3-R06:IN</text>
+<text x="990" y="6454" class="small sub">V=G01-U3-R06-CV-AS P=</text></g>
+<g data-edge-id="G01-U3-R06/A-return" data-upstream="G01-U3-R06:OUT" data-downstream="G01-U3-P2-A:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6480H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6484" class="small">G01-U3-R06/A-return: G01-U3-R06:OUT → G01-U3-P2-A:RET</text>
+<text x="990" y="6484" class="small sub">V=G01-U3-R06-CV-AR P=</text></g>
+<g data-edge-id="G01-U3-R06/B-supply" data-upstream="G01-U3-P2-B:SUP" data-downstream="G01-U3-R06:IN" data-domain="PG25_SECONDARY_U3"><path d="M38 6510H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6514" class="small">G01-U3-R06/B-supply: G01-U3-P2-B:SUP → G01-U3-R06:IN</text>
+<text x="990" y="6514" class="small sub">V=G01-U3-R06-CV-BS P=</text></g>
+<g data-edge-id="G01-U3-R06/B-return" data-upstream="G01-U3-R06:OUT" data-downstream="G01-U3-P2-B:RET" data-domain="PG25_SECONDARY_U3"><path d="M38 6540H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6544" class="small">G01-U3-R06/B-return: G01-U3-R06:OUT → G01-U3-P2-B:RET</text>
+<text x="990" y="6544" class="small sub">V=G01-U3-R06-CV-BR P=</text></g>
+<g data-edge-id="G01-U3-R06/heat-load" data-upstream="G01-U3-R06:IN" data-downstream="G01-U3-R06:OUT" data-domain="PG25_SECONDARY_U3"><path d="M38 6570H75" stroke="#34d399" stroke-width="2" marker-end="url(#a)"/>
+<text x="88" y="6574" class="small">G01-U3-R06/heat-load: G01-U3-R06:IN → G01-U3-R06:OUT</text>
+<text x="990" y="6574" class="small sub">V= P=</text></g>
+<text x="35" y="6645" class="small sub">青色：一次流体边；绿色：二次流体边。上方卡片为分组说明，不增加物理管路。HX 热耦合不属于流体连边。</text>
+<text x="35" y="6671" class="small sub">共 194 支路 / 108 端口。资料：S2 阀位矩阵；S3 PID-002/004/005/006/008/009。MEMPHIS_ENGINEERING_NOT_APPROVED</text></svg></div></details><p><a href="R12_FUNCTIONAL_PID.svg">独立 SVG</a> · <a href="R12_EXECUTABLE_TOPOLOGY.json">拓扑 JSON</a> · <a href="R12_MODEL_MAPPING_REPORT_ZH.md">完整中文报告</a> · <a href="R12_DELIVERY_HASHES.json">交付哈希</a></p></section>
+<section><h2>完整结论与下一步</h2><pre id="report"></pre></section></main>
+<script type="application/json" id="evidence">{"cases": [{"id": "CASE01_CDU_A_PRIMARY_A_SECONDARY_A", "negative": false, "expected": "18 racks connected through A CDU on A primary", "actual": {"command": {"selection": ["C01A", "C02A", "C03A"], "primary": "A", "secondary": "A"}, "actual_valves": {"G01-LP-A-I": true, "G01-LP-A-O": true, "G01-SRC-H-A": false, "G01-SRC-S-A": false, "G01-D1-CV-AS": false, "G01-D1-CV-AR": false, "G01-D2-CV-AS": false, "G01-D2-CV-AR": false, "G01-W1-CV-AS": false, "G01-W1-CV-AR": false, "G01-W2-CV-AS": false, "G01-W2-CV-AR": false, "G01-LP-B-I": false, "G01-LP-B-O": false, "G01-SRC-H-B": false, "G01-SRC-S-B": false, "G01-D1-CV-BS": false, "G01-D1-CV-BR": false, "G01-D2-CV-BS": false, "G01-D2-CV-BR": false, "G01-W1-CV-BS": false, "G01-W1-CV-BR": false, "G01-W2-CV-BS": false, "G01-W2-CV-BR": false, "G01-C01A-P1-CV-AS": true, "G01-C01A-P1-CV-AR": true, "G01-C01A-P1-CV-BS": false, "G01-C01A-P1-CV-BR": false, "G01-C01A-P2-XV-RET": true, "G01-C01A-FILTER1-SERVICE": true, "G01-C01A-FILTER2-SERVICE": false, "G01-C01A-P2-XV-SUP": true, "G01-C01B-P1-CV-AS": false, "G01-C01B-P1-CV-AR": false, "G01-C01B-P1-CV-BS": false, "G01-C01B-P1-CV-BR": false, "G01-C01B-P2-XV-RET": false, "G01-C01B-FILTER1-SERVICE": false, "G01-C01B-FILTER2-SERVICE": false, "G01-C01B-P2-XV-SUP": false, "G01-U1-R01-CV-AS": true, "G01-U1-R01-CV-AR": true, "G01-U1-R01-CV-BS": false, "G01-U1-R01-CV-BR": false, "G01-U1-R02-CV-AS": true, "G01-U1-R02-CV-AR": true, "G01-U1-R02-CV-BS": false, "G01-U1-R02-CV-BR": false, "G01-U1-R03-CV-AS": true, "G01-U1-R03-CV-AR": true, "G01-U1-R03-CV-BS": false, "G01-U1-R03-CV-BR": false, "G01-U1-R04-CV-AS": true, "G01-U1-R04-CV-AR": true, "G01-U1-R04-CV-BS": false, "G01-U1-R04-CV-BR": false, "G01-U1-R05-CV-AS": true, "G01-U1-R05-CV-AR": true, "G01-U1-R05-CV-BS": false, "G01-U1-R05-CV-BR": false, "G01-U1-R06-CV-AS": true, "G01-U1-R06-CV-AR": true, "G01-U1-R06-CV-BS": false, "G01-U1-R06-CV-BR": false, "G01-C02A-P1-CV-AS": true, "G01-C02A-P1-CV-AR": true, "G01-C02A-P1-CV-BS": false, "G01-C02A-P1-CV-BR": false, "G01-C02A-P2-XV-RET": true, "G01-C02A-FILTER1-SERVICE": true, "G01-C02A-FILTER2-SERVICE": false, "G01-C02A-P2-XV-SUP": true, "G01-C02B-P1-CV-AS": false, "G01-C02B-P1-CV-AR": false, "G01-C02B-P1-CV-BS": false, "G01-C02B-P1-CV-BR": false, "G01-C02B-P2-XV-RET": false, "G01-C02B-FILTER1-SERVICE": false, "G01-C02B-FILTER2-SERVICE": false, "G01-C02B-P2-XV-SUP": false, "G01-U2-R01-CV-AS": true, "G01-U2-R01-CV-AR": true, "G01-U2-R01-CV-BS": false, "G01-U2-R01-CV-BR": false, "G01-U2-R02-CV-AS": true, "G01-U2-R02-CV-AR": true, "G01-U2-R02-CV-BS": false, "G01-U2-R02-CV-BR": false, "G01-U2-R03-CV-AS": true, "G01-U2-R03-CV-AR": true, "G01-U2-R03-CV-BS": false, "G01-U2-R03-CV-BR": false, "G01-U2-R04-CV-AS": true, "G01-U2-R04-CV-AR": true, "G01-U2-R04-CV-BS": false, "G01-U2-R04-CV-BR": false, "G01-U2-R05-CV-AS": true, "G01-U2-R05-CV-AR": true, "G01-U2-R05-CV-BS": false, "G01-U2-R05-CV-BR": false, "G01-U2-R06-CV-AS": true, "G01-U2-R06-CV-AR": true, "G01-U2-R06-CV-BS": false, "G01-U2-R06-CV-BR": false, "G01-C03A-P1-CV-AS": true, "G01-C03A-P1-CV-AR": true, "G01-C03A-P1-CV-BS": false, "G01-C03A-P1-CV-BR": false, "G01-C03A-P2-XV-RET": true, "G01-C03A-FILTER1-SERVICE": true, "G01-C03A-FILTER2-SERVICE": false, "G01-C03A-P2-XV-SUP": true, "G01-C03B-P1-CV-AS": false, "G01-C03B-P1-CV-AR": false, "G01-C03B-P1-CV-BS": false, "G01-C03B-P1-CV-BR": false, "G01-C03B-P2-XV-RET": false, "G01-C03B-FILTER1-SERVICE": false, "G01-C03B-FILTER2-SERVICE": false, "G01-C03B-P2-XV-SUP": false, "G01-U3-R01-CV-AS": true, "G01-U3-R01-CV-AR": true, "G01-U3-R01-CV-BS": false, "G01-U3-R01-CV-BR": false, "G01-U3-R02-CV-AS": true, "G01-U3-R02-CV-AR": true, "G01-U3-R02-CV-BS": false, "G01-U3-R02-CV-BR": false, "G01-U3-R03-CV-AS": true, "G01-U3-R03-CV-AR": true, "G01-U3-R03-CV-BS": false, "G01-U3-R03-CV-BR": false, "G01-U3-R04-CV-AS": true, "G01-U3-R04-CV-AR": true, "G01-U3-R04-CV-BS": false, "G01-U3-R04-CV-BR": false, "G01-U3-R05-CV-AS": true, "G01-U3-R05-CV-AR": true, "G01-U3-R05-CV-BS": false, "G01-U3-R05-CV-BR": false, "G01-U3-R06-CV-AS": true, "G01-U3-R06-CV-AR": true, "G01-U3-R06-CV-BS": false, "G01-U3-R06-CV-BR": false}, "actual_pumps": {"G01-LP-A": true, "G01-LP-B": false, "G01-SP01": false, "G01-SP02": false, "G01-SP03": false, "G01-SP04": false, "G01-C01A-P2-PM1": true, "G01-C01A-P2-PM2": false, "G01-C01B-P2-PM1": false, "G01-C01B-P2-PM2": false, "G01-C02A-P2-PM1": true, "G01-C02A-P2-PM2": false, "G01-C02B-P2-PM1": false, "G01-C02B-P2-PM2": false, "G01-C03A-P2-PM1": true, "G01-C03A-P2-PM2": false, "G01-C03B-P2-PM1": false, "G01-C03B-P2-PM2": false}, "connectivity": {"isolation_errors": [], "units": [{"CDU": "G01-C01A", "primary_supply_path": ["G01-LP-A/load-supply", "G01-C01A/P1-A-supply"], "primary_return_path": ["G01-C01A/P1-A-return", "G01-NET-A/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U1-R01", "supply_path": ["G01-C01A/supply-isolation", "G01-U1-R01/A-supply"], "return_path": ["G01-U1-R01/A-return", "G01-C01A/return-isolation", "G01-C01A/P2-pump-1", "G01-C01A/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R02", "supply_path": ["G01-C01A/supply-isolation", "G01-U1-R02/A-supply"], "return_path": ["G01-U1-R02/A-return", "G01-C01A/return-isolation", "G01-C01A/P2-pump-1", "G01-C01A/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R03", "supply_path": ["G01-C01A/supply-isolation", "G01-U1-R03/A-supply"], "return_path": ["G01-U1-R03/A-return", "G01-C01A/return-isolation", "G01-C01A/P2-pump-1", "G01-C01A/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R04", "supply_path": ["G01-C01A/supply-isolation", "G01-U1-R04/A-supply"], "return_path": ["G01-U1-R04/A-return", "G01-C01A/return-isolation", "G01-C01A/P2-pump-1", "G01-C01A/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R05", "supply_path": ["G01-C01A/supply-isolation", "G01-U1-R05/A-supply"], "return_path": ["G01-U1-R05/A-return", "G01-C01A/return-isolation", "G01-C01A/P2-pump-1", "G01-C01A/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R06", "supply_path": ["G01-C01A/supply-isolation", "G01-U1-R06/A-supply"], "return_path": ["G01-U1-R06/A-return", "G01-C01A/return-isolation", "G01-C01A/P2-pump-1", "G01-C01A/P2-filter-1"], "connected": true}]}, {"CDU": "G01-C02A", "primary_supply_path": ["G01-LP-A/load-supply", "G01-C02A/P1-A-supply"], "primary_return_path": ["G01-C02A/P1-A-return", "G01-NET-A/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U2-R01", "supply_path": ["G01-C02A/supply-isolation", "G01-U2-R01/A-supply"], "return_path": ["G01-U2-R01/A-return", "G01-C02A/return-isolation", "G01-C02A/P2-pump-1", "G01-C02A/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R02", "supply_path": ["G01-C02A/supply-isolation", "G01-U2-R02/A-supply"], "return_path": ["G01-U2-R02/A-return", "G01-C02A/return-isolation", "G01-C02A/P2-pump-1", "G01-C02A/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R03", "supply_path": ["G01-C02A/supply-isolation", "G01-U2-R03/A-supply"], "return_path": ["G01-U2-R03/A-return", "G01-C02A/return-isolation", "G01-C02A/P2-pump-1", "G01-C02A/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R04", "supply_path": ["G01-C02A/supply-isolation", "G01-U2-R04/A-supply"], "return_path": ["G01-U2-R04/A-return", "G01-C02A/return-isolation", "G01-C02A/P2-pump-1", "G01-C02A/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R05", "supply_path": ["G01-C02A/supply-isolation", "G01-U2-R05/A-supply"], "return_path": ["G01-U2-R05/A-return", "G01-C02A/return-isolation", "G01-C02A/P2-pump-1", "G01-C02A/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R06", "supply_path": ["G01-C02A/supply-isolation", "G01-U2-R06/A-supply"], "return_path": ["G01-U2-R06/A-return", "G01-C02A/return-isolation", "G01-C02A/P2-pump-1", "G01-C02A/P2-filter-1"], "connected": true}]}, {"CDU": "G01-C03A", "primary_supply_path": ["G01-LP-A/load-supply", "G01-C03A/P1-A-supply"], "primary_return_path": ["G01-C03A/P1-A-return", "G01-NET-A/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U3-R01", "supply_path": ["G01-C03A/supply-isolation", "G01-U3-R01/A-supply"], "return_path": ["G01-U3-R01/A-return", "G01-C03A/return-isolation", "G01-C03A/P2-pump-1", "G01-C03A/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R02", "supply_path": ["G01-C03A/supply-isolation", "G01-U3-R02/A-supply"], "return_path": ["G01-U3-R02/A-return", "G01-C03A/return-isolation", "G01-C03A/P2-pump-1", "G01-C03A/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R03", "supply_path": ["G01-C03A/supply-isolation", "G01-U3-R03/A-supply"], "return_path": ["G01-U3-R03/A-return", "G01-C03A/return-isolation", "G01-C03A/P2-pump-1", "G01-C03A/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R04", "supply_path": ["G01-C03A/supply-isolation", "G01-U3-R04/A-supply"], "return_path": ["G01-U3-R04/A-return", "G01-C03A/return-isolation", "G01-C03A/P2-pump-1", "G01-C03A/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R05", "supply_path": ["G01-C03A/supply-isolation", "G01-U3-R05/A-supply"], "return_path": ["G01-U3-R05/A-return", "G01-C03A/return-isolation", "G01-C03A/P2-pump-1", "G01-C03A/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R06", "supply_path": ["G01-C03A/supply-isolation", "G01-U3-R06/A-supply"], "return_path": ["G01-U3-R06/A-return", "G01-C03A/return-isolation", "G01-C03A/P2-pump-1", "G01-C03A/P2-filter-1"], "connected": true}]}], "scope": "STATIC_ACTUAL_FEEDBACK_FIXTURE_CONNECTIVITY_NOT_FLOW_MAGNITUDE"}}, "status": "PASS", "grounds": "PID-005/006/009 M-A", "evidence_class": "STATIC_GRAPH_OR_SYNTHETIC_UNIT_NOT_PHYSICAL_SIMULATION"}, {"id": "CASE02_CDU_B_PRIMARY_A_SECONDARY_B", "negative": false, "expected": "18 racks connected through B CDU on A primary", "actual": {"command": {"selection": ["C01B", "C02B", "C03B"], "primary": "A", "secondary": "B"}, "actual_valves": {"G01-LP-A-I": true, "G01-LP-A-O": true, "G01-SRC-H-A": false, "G01-SRC-S-A": false, "G01-D1-CV-AS": false, "G01-D1-CV-AR": false, "G01-D2-CV-AS": false, "G01-D2-CV-AR": false, "G01-W1-CV-AS": false, "G01-W1-CV-AR": false, "G01-W2-CV-AS": false, "G01-W2-CV-AR": false, "G01-LP-B-I": false, "G01-LP-B-O": false, "G01-SRC-H-B": false, "G01-SRC-S-B": false, "G01-D1-CV-BS": false, "G01-D1-CV-BR": false, "G01-D2-CV-BS": false, "G01-D2-CV-BR": false, "G01-W1-CV-BS": false, "G01-W1-CV-BR": false, "G01-W2-CV-BS": false, "G01-W2-CV-BR": false, "G01-C01A-P1-CV-AS": false, "G01-C01A-P1-CV-AR": false, "G01-C01A-P1-CV-BS": false, "G01-C01A-P1-CV-BR": false, "G01-C01A-P2-XV-RET": false, "G01-C01A-FILTER1-SERVICE": false, "G01-C01A-FILTER2-SERVICE": false, "G01-C01A-P2-XV-SUP": false, "G01-C01B-P1-CV-AS": true, "G01-C01B-P1-CV-AR": true, "G01-C01B-P1-CV-BS": false, "G01-C01B-P1-CV-BR": false, "G01-C01B-P2-XV-RET": true, "G01-C01B-FILTER1-SERVICE": true, "G01-C01B-FILTER2-SERVICE": false, "G01-C01B-P2-XV-SUP": true, "G01-U1-R01-CV-AS": false, "G01-U1-R01-CV-AR": false, "G01-U1-R01-CV-BS": true, "G01-U1-R01-CV-BR": true, "G01-U1-R02-CV-AS": false, "G01-U1-R02-CV-AR": false, "G01-U1-R02-CV-BS": true, "G01-U1-R02-CV-BR": true, "G01-U1-R03-CV-AS": false, "G01-U1-R03-CV-AR": false, "G01-U1-R03-CV-BS": true, "G01-U1-R03-CV-BR": true, "G01-U1-R04-CV-AS": false, "G01-U1-R04-CV-AR": false, "G01-U1-R04-CV-BS": true, "G01-U1-R04-CV-BR": true, "G01-U1-R05-CV-AS": false, "G01-U1-R05-CV-AR": false, "G01-U1-R05-CV-BS": true, "G01-U1-R05-CV-BR": true, "G01-U1-R06-CV-AS": false, "G01-U1-R06-CV-AR": false, "G01-U1-R06-CV-BS": true, "G01-U1-R06-CV-BR": true, "G01-C02A-P1-CV-AS": false, "G01-C02A-P1-CV-AR": false, "G01-C02A-P1-CV-BS": false, "G01-C02A-P1-CV-BR": false, "G01-C02A-P2-XV-RET": false, "G01-C02A-FILTER1-SERVICE": false, "G01-C02A-FILTER2-SERVICE": false, "G01-C02A-P2-XV-SUP": false, "G01-C02B-P1-CV-AS": true, "G01-C02B-P1-CV-AR": true, "G01-C02B-P1-CV-BS": false, "G01-C02B-P1-CV-BR": false, "G01-C02B-P2-XV-RET": true, "G01-C02B-FILTER1-SERVICE": true, "G01-C02B-FILTER2-SERVICE": false, "G01-C02B-P2-XV-SUP": true, "G01-U2-R01-CV-AS": false, "G01-U2-R01-CV-AR": false, "G01-U2-R01-CV-BS": true, "G01-U2-R01-CV-BR": true, "G01-U2-R02-CV-AS": false, "G01-U2-R02-CV-AR": false, "G01-U2-R02-CV-BS": true, "G01-U2-R02-CV-BR": true, "G01-U2-R03-CV-AS": false, "G01-U2-R03-CV-AR": false, "G01-U2-R03-CV-BS": true, "G01-U2-R03-CV-BR": true, "G01-U2-R04-CV-AS": false, "G01-U2-R04-CV-AR": false, "G01-U2-R04-CV-BS": true, "G01-U2-R04-CV-BR": true, "G01-U2-R05-CV-AS": false, "G01-U2-R05-CV-AR": false, "G01-U2-R05-CV-BS": true, "G01-U2-R05-CV-BR": true, "G01-U2-R06-CV-AS": false, "G01-U2-R06-CV-AR": false, "G01-U2-R06-CV-BS": true, "G01-U2-R06-CV-BR": true, "G01-C03A-P1-CV-AS": false, "G01-C03A-P1-CV-AR": false, "G01-C03A-P1-CV-BS": false, "G01-C03A-P1-CV-BR": false, "G01-C03A-P2-XV-RET": false, "G01-C03A-FILTER1-SERVICE": false, "G01-C03A-FILTER2-SERVICE": false, "G01-C03A-P2-XV-SUP": false, "G01-C03B-P1-CV-AS": true, "G01-C03B-P1-CV-AR": true, "G01-C03B-P1-CV-BS": false, "G01-C03B-P1-CV-BR": false, "G01-C03B-P2-XV-RET": true, "G01-C03B-FILTER1-SERVICE": true, "G01-C03B-FILTER2-SERVICE": false, "G01-C03B-P2-XV-SUP": true, "G01-U3-R01-CV-AS": false, "G01-U3-R01-CV-AR": false, "G01-U3-R01-CV-BS": true, "G01-U3-R01-CV-BR": true, "G01-U3-R02-CV-AS": false, "G01-U3-R02-CV-AR": false, "G01-U3-R02-CV-BS": true, "G01-U3-R02-CV-BR": true, "G01-U3-R03-CV-AS": false, "G01-U3-R03-CV-AR": false, "G01-U3-R03-CV-BS": true, "G01-U3-R03-CV-BR": true, "G01-U3-R04-CV-AS": false, "G01-U3-R04-CV-AR": false, "G01-U3-R04-CV-BS": true, "G01-U3-R04-CV-BR": true, "G01-U3-R05-CV-AS": false, "G01-U3-R05-CV-AR": false, "G01-U3-R05-CV-BS": true, "G01-U3-R05-CV-BR": true, "G01-U3-R06-CV-AS": false, "G01-U3-R06-CV-AR": false, "G01-U3-R06-CV-BS": true, "G01-U3-R06-CV-BR": true}, "actual_pumps": {"G01-LP-A": true, "G01-LP-B": false, "G01-SP01": false, "G01-SP02": false, "G01-SP03": false, "G01-SP04": false, "G01-C01A-P2-PM1": false, "G01-C01A-P2-PM2": false, "G01-C01B-P2-PM1": true, "G01-C01B-P2-PM2": false, "G01-C02A-P2-PM1": false, "G01-C02A-P2-PM2": false, "G01-C02B-P2-PM1": true, "G01-C02B-P2-PM2": false, "G01-C03A-P2-PM1": false, "G01-C03A-P2-PM2": false, "G01-C03B-P2-PM1": true, "G01-C03B-P2-PM2": false}, "connectivity": {"isolation_errors": [], "units": [{"CDU": "G01-C01B", "primary_supply_path": ["G01-LP-A/load-supply", "G01-C01B/P1-A-supply"], "primary_return_path": ["G01-C01B/P1-A-return", "G01-NET-A/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U1-R01", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R01/B-supply"], "return_path": ["G01-U1-R01/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R02", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R02/B-supply"], "return_path": ["G01-U1-R02/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R03", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R03/B-supply"], "return_path": ["G01-U1-R03/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R04", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R04/B-supply"], "return_path": ["G01-U1-R04/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R05", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R05/B-supply"], "return_path": ["G01-U1-R05/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R06", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R06/B-supply"], "return_path": ["G01-U1-R06/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}]}, {"CDU": "G01-C02B", "primary_supply_path": ["G01-LP-A/load-supply", "G01-C02B/P1-A-supply"], "primary_return_path": ["G01-C02B/P1-A-return", "G01-NET-A/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U2-R01", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R01/B-supply"], "return_path": ["G01-U2-R01/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R02", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R02/B-supply"], "return_path": ["G01-U2-R02/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R03", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R03/B-supply"], "return_path": ["G01-U2-R03/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R04", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R04/B-supply"], "return_path": ["G01-U2-R04/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R05", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R05/B-supply"], "return_path": ["G01-U2-R05/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R06", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R06/B-supply"], "return_path": ["G01-U2-R06/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}]}, {"CDU": "G01-C03B", "primary_supply_path": ["G01-LP-A/load-supply", "G01-C03B/P1-A-supply"], "primary_return_path": ["G01-C03B/P1-A-return", "G01-NET-A/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U3-R01", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R01/B-supply"], "return_path": ["G01-U3-R01/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R02", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R02/B-supply"], "return_path": ["G01-U3-R02/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R03", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R03/B-supply"], "return_path": ["G01-U3-R03/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R04", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R04/B-supply"], "return_path": ["G01-U3-R04/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R05", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R05/B-supply"], "return_path": ["G01-U3-R05/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R06", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R06/B-supply"], "return_path": ["G01-U3-R06/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}]}], "scope": "STATIC_ACTUAL_FEEDBACK_FIXTURE_CONNECTIVITY_NOT_FLOW_MAGNITUDE"}}, "status": "PASS", "grounds": "阀位矩阵 A8:O8; PID-009 T-2", "evidence_class": "STATIC_GRAPH_OR_SYNTHETIC_UNIT_NOT_PHYSICAL_SIMULATION"}, {"id": "CASE03_CDU_B_PRIMARY_B_SECONDARY_B", "negative": false, "expected": "18 racks connected through B CDU on B primary", "actual": {"command": {"selection": ["C01B", "C02B", "C03B"], "primary": "B", "secondary": "B"}, "actual_valves": {"G01-LP-A-I": false, "G01-LP-A-O": false, "G01-SRC-H-A": false, "G01-SRC-S-A": false, "G01-D1-CV-AS": false, "G01-D1-CV-AR": false, "G01-D2-CV-AS": false, "G01-D2-CV-AR": false, "G01-W1-CV-AS": false, "G01-W1-CV-AR": false, "G01-W2-CV-AS": false, "G01-W2-CV-AR": false, "G01-LP-B-I": true, "G01-LP-B-O": true, "G01-SRC-H-B": false, "G01-SRC-S-B": false, "G01-D1-CV-BS": false, "G01-D1-CV-BR": false, "G01-D2-CV-BS": false, "G01-D2-CV-BR": false, "G01-W1-CV-BS": false, "G01-W1-CV-BR": false, "G01-W2-CV-BS": false, "G01-W2-CV-BR": false, "G01-C01A-P1-CV-AS": false, "G01-C01A-P1-CV-AR": false, "G01-C01A-P1-CV-BS": false, "G01-C01A-P1-CV-BR": false, "G01-C01A-P2-XV-RET": false, "G01-C01A-FILTER1-SERVICE": false, "G01-C01A-FILTER2-SERVICE": false, "G01-C01A-P2-XV-SUP": false, "G01-C01B-P1-CV-AS": false, "G01-C01B-P1-CV-AR": false, "G01-C01B-P1-CV-BS": true, "G01-C01B-P1-CV-BR": true, "G01-C01B-P2-XV-RET": true, "G01-C01B-FILTER1-SERVICE": true, "G01-C01B-FILTER2-SERVICE": false, "G01-C01B-P2-XV-SUP": true, "G01-U1-R01-CV-AS": false, "G01-U1-R01-CV-AR": false, "G01-U1-R01-CV-BS": true, "G01-U1-R01-CV-BR": true, "G01-U1-R02-CV-AS": false, "G01-U1-R02-CV-AR": false, "G01-U1-R02-CV-BS": true, "G01-U1-R02-CV-BR": true, "G01-U1-R03-CV-AS": false, "G01-U1-R03-CV-AR": false, "G01-U1-R03-CV-BS": true, "G01-U1-R03-CV-BR": true, "G01-U1-R04-CV-AS": false, "G01-U1-R04-CV-AR": false, "G01-U1-R04-CV-BS": true, "G01-U1-R04-CV-BR": true, "G01-U1-R05-CV-AS": false, "G01-U1-R05-CV-AR": false, "G01-U1-R05-CV-BS": true, "G01-U1-R05-CV-BR": true, "G01-U1-R06-CV-AS": false, "G01-U1-R06-CV-AR": false, "G01-U1-R06-CV-BS": true, "G01-U1-R06-CV-BR": true, "G01-C02A-P1-CV-AS": false, "G01-C02A-P1-CV-AR": false, "G01-C02A-P1-CV-BS": false, "G01-C02A-P1-CV-BR": false, "G01-C02A-P2-XV-RET": false, "G01-C02A-FILTER1-SERVICE": false, "G01-C02A-FILTER2-SERVICE": false, "G01-C02A-P2-XV-SUP": false, "G01-C02B-P1-CV-AS": false, "G01-C02B-P1-CV-AR": false, "G01-C02B-P1-CV-BS": true, "G01-C02B-P1-CV-BR": true, "G01-C02B-P2-XV-RET": true, "G01-C02B-FILTER1-SERVICE": true, "G01-C02B-FILTER2-SERVICE": false, "G01-C02B-P2-XV-SUP": true, "G01-U2-R01-CV-AS": false, "G01-U2-R01-CV-AR": false, "G01-U2-R01-CV-BS": true, "G01-U2-R01-CV-BR": true, "G01-U2-R02-CV-AS": false, "G01-U2-R02-CV-AR": false, "G01-U2-R02-CV-BS": true, "G01-U2-R02-CV-BR": true, "G01-U2-R03-CV-AS": false, "G01-U2-R03-CV-AR": false, "G01-U2-R03-CV-BS": true, "G01-U2-R03-CV-BR": true, "G01-U2-R04-CV-AS": false, "G01-U2-R04-CV-AR": false, "G01-U2-R04-CV-BS": true, "G01-U2-R04-CV-BR": true, "G01-U2-R05-CV-AS": false, "G01-U2-R05-CV-AR": false, "G01-U2-R05-CV-BS": true, "G01-U2-R05-CV-BR": true, "G01-U2-R06-CV-AS": false, "G01-U2-R06-CV-AR": false, "G01-U2-R06-CV-BS": true, "G01-U2-R06-CV-BR": true, "G01-C03A-P1-CV-AS": false, "G01-C03A-P1-CV-AR": false, "G01-C03A-P1-CV-BS": false, "G01-C03A-P1-CV-BR": false, "G01-C03A-P2-XV-RET": false, "G01-C03A-FILTER1-SERVICE": false, "G01-C03A-FILTER2-SERVICE": false, "G01-C03A-P2-XV-SUP": false, "G01-C03B-P1-CV-AS": false, "G01-C03B-P1-CV-AR": false, "G01-C03B-P1-CV-BS": true, "G01-C03B-P1-CV-BR": true, "G01-C03B-P2-XV-RET": true, "G01-C03B-FILTER1-SERVICE": true, "G01-C03B-FILTER2-SERVICE": false, "G01-C03B-P2-XV-SUP": true, "G01-U3-R01-CV-AS": false, "G01-U3-R01-CV-AR": false, "G01-U3-R01-CV-BS": true, "G01-U3-R01-CV-BR": true, "G01-U3-R02-CV-AS": false, "G01-U3-R02-CV-AR": false, "G01-U3-R02-CV-BS": true, "G01-U3-R02-CV-BR": true, "G01-U3-R03-CV-AS": false, "G01-U3-R03-CV-AR": false, "G01-U3-R03-CV-BS": true, "G01-U3-R03-CV-BR": true, "G01-U3-R04-CV-AS": false, "G01-U3-R04-CV-AR": false, "G01-U3-R04-CV-BS": true, "G01-U3-R04-CV-BR": true, "G01-U3-R05-CV-AS": false, "G01-U3-R05-CV-AR": false, "G01-U3-R05-CV-BS": true, "G01-U3-R05-CV-BR": true, "G01-U3-R06-CV-AS": false, "G01-U3-R06-CV-AR": false, "G01-U3-R06-CV-BS": true, "G01-U3-R06-CV-BR": true}, "actual_pumps": {"G01-LP-A": false, "G01-LP-B": true, "G01-SP01": false, "G01-SP02": false, "G01-SP03": false, "G01-SP04": false, "G01-C01A-P2-PM1": false, "G01-C01A-P2-PM2": false, "G01-C01B-P2-PM1": true, "G01-C01B-P2-PM2": false, "G01-C02A-P2-PM1": false, "G01-C02A-P2-PM2": false, "G01-C02B-P2-PM1": true, "G01-C02B-P2-PM2": false, "G01-C03A-P2-PM1": false, "G01-C03A-P2-PM2": false, "G01-C03B-P2-PM1": true, "G01-C03B-P2-PM2": false}, "connectivity": {"isolation_errors": [], "units": [{"CDU": "G01-C01B", "primary_supply_path": ["G01-LP-B/load-supply", "G01-C01B/P1-B-supply"], "primary_return_path": ["G01-C01B/P1-B-return", "G01-NET-B/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U1-R01", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R01/B-supply"], "return_path": ["G01-U1-R01/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R02", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R02/B-supply"], "return_path": ["G01-U1-R02/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R03", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R03/B-supply"], "return_path": ["G01-U1-R03/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R04", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R04/B-supply"], "return_path": ["G01-U1-R04/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R05", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R05/B-supply"], "return_path": ["G01-U1-R05/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}, {"rack": "G01-U1-R06", "supply_path": ["G01-C01B/supply-isolation", "G01-U1-R06/B-supply"], "return_path": ["G01-U1-R06/B-return", "G01-C01B/return-isolation", "G01-C01B/P2-pump-1", "G01-C01B/P2-filter-1"], "connected": true}]}, {"CDU": "G01-C02B", "primary_supply_path": ["G01-LP-B/load-supply", "G01-C02B/P1-B-supply"], "primary_return_path": ["G01-C02B/P1-B-return", "G01-NET-B/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U2-R01", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R01/B-supply"], "return_path": ["G01-U2-R01/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R02", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R02/B-supply"], "return_path": ["G01-U2-R02/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R03", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R03/B-supply"], "return_path": ["G01-U2-R03/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R04", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R04/B-supply"], "return_path": ["G01-U2-R04/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R05", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R05/B-supply"], "return_path": ["G01-U2-R05/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}, {"rack": "G01-U2-R06", "supply_path": ["G01-C02B/supply-isolation", "G01-U2-R06/B-supply"], "return_path": ["G01-U2-R06/B-return", "G01-C02B/return-isolation", "G01-C02B/P2-pump-1", "G01-C02B/P2-filter-1"], "connected": true}]}, {"CDU": "G01-C03B", "primary_supply_path": ["G01-LP-B/load-supply", "G01-C03B/P1-B-supply"], "primary_return_path": ["G01-C03B/P1-B-return", "G01-NET-B/load-return"], "primary_connected": true, "racks": [{"rack": "G01-U3-R01", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R01/B-supply"], "return_path": ["G01-U3-R01/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R02", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R02/B-supply"], "return_path": ["G01-U3-R02/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R03", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R03/B-supply"], "return_path": ["G01-U3-R03/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R04", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R04/B-supply"], "return_path": ["G01-U3-R04/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R05", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R05/B-supply"], "return_path": ["G01-U3-R05/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}, {"rack": "G01-U3-R06", "supply_path": ["G01-C03B/supply-isolation", "G01-U3-R06/B-supply"], "return_path": ["G01-U3-R06/B-return", "G01-C03B/return-isolation", "G01-C03B/P2-pump-1", "G01-C03B/P2-filter-1"], "connected": true}]}], "scope": "STATIC_ACTUAL_FEEDBACK_FIXTURE_CONNECTIVITY_NOT_FLOW_MAGNITUDE"}}, "status": "PASS", "grounds": "PID-005 selector independence; PID-009 M-B", "evidence_class": "STATIC_GRAPH_OR_SYNTHETIC_UNIT_NOT_PHYSICAL_SIMULATION"}], "statuses": {"SOURCE_REGISTERED": "PASS_ORIGINAL_BYTES_RECHECKED_LOCALLY; HASH_BOUND_INTAKE_USED_REMOTELY", "TOPOLOGY_MAPPED": "DECLARED_FUNCTIONAL_INTENT_PARTIAL; PID005_CONNECTIVITY_BLOCKED", "CONTROL_IMPLEMENTED": "T2_UNIT_STATE_MACHINE; T1_TERMINAL_GATE; RECHARGE_UNIT_SEQUENCE", "UNIT_TESTED": "35/35 PASS", "DYNAMICALLY_VALIDATED": "NO", "OEM_VERIFIED": "NO", "ENGINEERING_APPROVED": "NO"}, "report": "# R12 拓扑与阀序映射 V1\n\n结论：35/35 项静态/合成单元验证通过。不是动态热水力 PASS。总 admission 保持 **PARTIALLY_MAPPED_BLOCKED**，工程状态保持 **MEMPHIS_ENGINEERING_NOT_APPROVED**。\n\n## 十项回答\n\n1. 三个 A/B 维度已用独立类型拆开，错误类型互换被拒绝。\n2. T-2 中 CDU B 可通过自身 P1-AS/AR 接一次网 A。不是改标签：新 CDU 一次/二次、柜外供回实际反馈图路和流量门禁均检查。\n3. T-2 的 B 罐负载路径关闭，LP-B 无启动请求。证明范围为零启用负载支路，不是完成了罐温度/耗冷积分仿真。\n4. 18柜72选择阀、6台CDU12台二次泵逐件展开。G01 是单组模板实例，未冒充现场竣工位号。\n5. ≤2K、≤5kPa持续5s、≤30s重叠、单压力主站撤销/隔离/授予已实现单元门禁。泵跟随模式与测量工程定值仍待定义，不能据测试宣布实际控制能力验证完成。\n6. 一次 A/B 非法并通、A供B回、源侧共用泵串网均被拒绝。二次受控重叠不授予一次并通权限。\n7. 共用源泵按停泵→旧网关闭→目标建路→重启→流量→冷返→独立储冷证明建图并作合成序列验证；没有 RC/CP1/2。R-2净恢复、A/B双罐再次90s和第二次故障未验证。\n8. 废弃固定 CDU-B→一次B罐、接管自动耗B、总管流量替代每柜/单元流量、单等效二次泵与默认独立RC等旧假设。旧程序/证据未覆盖、不改名借PASS。\n9. PID-005贯通线、压力主站跟随实现、滤器内部阀组、每CDU一次FT/并流压差测量链、泵扬程/曲线、OEM UA、M2定值、气象分钟CSV、正式设计签署仍未闭合。P1-FT是拟增测量接口，不冒充原图已有仪表。R12为可修订的过程图，原件留存，新图标出修订/待定，不要求把草稿当作不可修改。\n10. 已具备已声明意图的有界静态/单元执行条件，尚不具备“R12全图已确认”的动态工程放行。下一轮先解决上述P0接口，再单独登记动态模型与预算。\n\n## 状态分开\n\n- SOURCE_REGISTERED: PASS_ORIGINAL_BYTES_RECHECKED_LOCALLY; HASH_BOUND_INTAKE_USED_REMOTELY\n- TOPOLOGY_MAPPED: DECLARED_FUNCTIONAL_INTENT_PARTIAL; PID005_CONNECTIVITY_BLOCKED\n- CONTROL_IMPLEMENTED: T2_UNIT_STATE_MACHINE; T1_TERMINAL_GATE; RECHARGE_UNIT_SEQUENCE\n- UNIT_TESTED: 35/35 PASS\n- DYNAMICALLY_VALIDATED: NO\n- OEM_VERIFIED: NO\n- ENGINEERING_APPROVED: NO\n\n## 验证证据与边界\n\n正向和负向结果分别见 JSON，含逐观测命令、实际阀/泵反馈、FT、许可、预期/实得、资料依据；均明确 SYNTHETIC_UNIT，不生成 PLC issue 收据。\n源参数采用哈希绑定接收层，S5仅结构参考。静态注册数：192组件记录、108端口、194有向支路、166测点。组件含模型过滤器可用性抽象，不是物理采购数量。\n基础热接口：18×147.25=2650.5kW，每六柜883.5kW，经所选CDU映射；测试不是UA求解，不含泵热/罐储热，不证明实际冷源容量或完整能量守恒。没有流路时热负载不能消失，应保留未移除热量。\nSVG完整支路图谱与JSON逐边核对一致：194条。不是施工CAD；尺寸、管径选择、阀Cv/动作、NPSH、水锤、定压/泄压须专业深化。\n本轮CPU25%、单Python进程256MiB/Job512MiB、480s上限；没有本机Python/模型运行，没有1800s仿真，没有采用60/105分钟预算，没有正式C3-C/生产/硬件/采购/Phase6授权。\n\n## 下一轮候选（未启动、预算未批准）\n\n先定义压力跟随与滤器内部可施工阀序；再分开注册单单元T2、同网T1、A运行分段补B/返回补A及真实末态第二次故障。物理时长先围绕切换窗口逐例登记；1800s恢复仍需独立预算。执行耗时无R12动态基准，当前不虚报分钟估计。保持CPU25%和已批准内存上限，若动态模型需提高则另请批准。\n\n## 来源与执行\n\n执行commit：ecc4851e7f4616c09a3eed8476e15a53ce3661c7。Python：3.11.9。镜像：20261012.333.1。\n源码、输入、共享监督器与工作流原始SHA256：R12_SOURCE_INPUT_ENVIRONMENT_MANIFEST.json。全部交付字节：R12_DELIVERY_HASHES.json。\n"}</script>
+<script>
+const D=JSON.parse(document.querySelector('#evidence').textContent),N='http://www.w3.org/2000/svg';
+function node(tag,attrs,text,parent){let e=document.createElementNS(N,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text)e.textContent=text;(parent||document.querySelector('#view')).appendChild(e);return e}
+function draw(){let svg=document.querySelector('#view');svg.replaceChildren();let t=D.cases[+document.querySelector('#case').value],i=+document.querySelector('#unit').value,u=t.actual.connectivity.units[i],p=t.actual.command.primary,s=t.actual.command.secondary,c=u.CDU;
+node('defs',{},'',svg);let defs=svg.firstChild;for(let [id,color] of [['arrow','#17859b'],['arrow-ret','#ce8052']]){let m=node('marker',{id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto'},'',defs);node('path',{d:'M0 0L10 5L0 10Z',fill:color},'',m)}
+function line(points,ids,color='#17859b',dashed=false){node('polyline',{points,fill:'none',stroke:color,'stroke-width':4,'stroke-dasharray':dashed?'7 5':'none','marker-end':dashed?'':color==='#ce8052'?'url(#arrow-ret)':'url(#arrow)','data-edge-ids':JSON.stringify(ids)},'');}
+function box(x,y,w,h,title,sub,on=true){node('rect',{x,y,width:w,height:h,rx:10,fill:on?'#e6f4f7':'#f0f3f5',stroke:on?'#3196a5':'#c6d1d9','stroke-width':1.5});node('text',{x:x+15,y:y+29,fill:on?'#133849':'#718494','font-size':16,'font-weight':600},title);node('text',{x:x+15,y:y+53,fill:'#617684','font-size':12},sub)}
+const y=p==='A'?200:420;
+const returnX=p==='A'?250:330,returnY=y+35;
+line(`210,${y} 285,${y} 285,265 380,265`,u.primary_supply_path);line(`380,305 ${returnX},305 ${returnX},${returnY} 210,${returnY}`,u.primary_return_path,'#ce8052');
+let secondary=u.racks[0].supply_path;line('760,265 840,265 840,305 940,305',secondary);line('940,380 830,380 830,470 760,470',u.racks[0].return_path,'#ce8052');line('705,455 675,455 675,320 705,320',u.racks[0].return_path,'#ce8052');line('640,290 710,290',[],'#c0942e',true);
+box(30,155,180,100,'BT-A / LP-A',p==='A'?'负载支路启用':'负载支路未启用',p==='A');box(30,375,180,100,'BT-B / LP-B',p==='B'?'负载支路启用':'待命，无负载启用路径',p==='B');
+box(380,195,255,155,c+' · 一次侧','一次网 '+p+'；P1-'+p+'S/'+p+'R 开');node('text',{x:397,y:288,fill:'#5b7181','font-size':12},'另一一次网选择阀关闭');node('text',{x:397,y:313,fill:'#5b7181','font-size':12},'供回必须同网，不跨罐串流');
+box(705,195,200,155,'二次 '+s+' 环 / HX','两台100%泵，一用一备');node('text',{x:720,y:289,fill:'#5b7181','font-size':12},'与一次侧只交换热量');node('text',{x:720,y:314,fill:'#5b7181','font-size':12},'无跨板换流体边');
+box(705,405,200,100,'二次回路泵/滤器','泵 → 过滤 → HX入口');box(940,265,285,165,'U'+(i+1)+' · 六柜负载','每柜 AS/AR/BS/BR 独立选择');node('text',{x:956,y:358,fill:'#5b7181','font-size':13},'供回 '+s+' 路成对开启');node('text',{x:956,y:384,fill:'#5b7181','font-size':13},'R01 · R02 · R03 · R04 · R05 · R06');
+node('text',{x:35,y:55,fill:'#15394c','font-size':21,'font-weight':600},'一次网 '+p+' → '+c+' → 二次网 '+s+' → 六柜');node('text',{x:35,y:90,fill:'#71818b','font-size':13},'青色供液，橙色回液，黄色虚线仅热耦合。新/旧CDU切换中间态另见原始事件证据。');node('text',{x:35,y:610,fill:'#6e8191','font-size':13},'图示是保存用例的功能路径，不是流量/温度数值求解。源侧回充另按独立源泵阀序，不能从CDU字母推断。');
+document.querySelector('#explain').textContent=p==='A'&&s==='B'?'关键反证：CDU B 已接管二次 B 环，但一次仍取 BT-A；BT-B/LP-B 没有启用负载路径。这里没有计算罐的温度或冷库存。':'本用例的18柜路径已作静态连通验证；当前只显示其中一个六柜单元。路径连通不等于已经求出所需流量、换热能力或45°C温度结果。';
+let list=document.querySelector('#pathlist');list.replaceChildren();for(let r of u.racks){let el=document.createElement('pre');el.textContent=r.rack+'\n供液: '+JSON.stringify(r.supply_path)+'\n回液: '+JSON.stringify(r.return_path);list.append(el)}
+}
+for(let [k,v] of Object.entries(D.statuses)){let tr=document.createElement('tr');for(let x of [k,v]){let td=document.createElement('td');td.textContent=x;tr.append(td)}document.querySelector('#statuses').append(tr)}document.querySelector('#report').textContent=D.report;document.querySelector('#case').onchange=draw;document.querySelector('#unit').onchange=draw;draw();
+</script></html>

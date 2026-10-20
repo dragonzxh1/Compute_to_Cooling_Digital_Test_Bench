@@ -1,0 +1,161 @@
+{
+  "source_manifest": {
+    "schema": "R12-MAPPING-SOURCE-CLOSURE-v1",
+    "remote_uses_hash_bound_intake_not_PDF_extraction": true,
+    "source_originals_local_rechecked": true,
+    "no_local_python": true,
+    "authority": "USER_R12_DEDICATED_BRANCH_PUSH_AND_REMOTE_UNIT_APPROVED",
+    "frozen_M1_imported": false,
+    "intake_sha256": "4527cf5c7ba21a9d568064a4c15395efc643a642d58034da4c9411b1dee98ef4",
+    "no_long_simulation": true,
+    "parent_commit": "63c1c036afdf5f7833d45473fac4626c1a4890e0",
+    "source_files": [
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/__init__.py",
+        "sha256": "a5905dd364ca01172ce6a5a34b90a62e67bba16be3a476bcb870062ce7e5099f",
+        "bytes": 80
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/AUTHORITY_AND_SCOPE.md",
+        "sha256": "7743bf6538e907858ee0465458c80a659f111f7bbd558ff5d8d4c3435f51f4d5",
+        "bytes": 1753
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/control.py",
+        "sha256": "717b71ab939f65381568d3fb582c491f6102b70c080671a056bf3cc494138b25",
+        "bytes": 15061
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/delivery.py",
+        "sha256": "06b17e82a6d7bf7f524cd8b8cb11611876c93bee24627013d2f291114ab1a62d",
+        "bytes": 22185
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/README.md",
+        "sha256": "7c690e9b7c5039ab2cb091d85b3a738a300b67d8b0406c6b578ea6c72a45db20",
+        "bytes": 1577
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/run_remote.ps1",
+        "sha256": "dd34686bcd91cda1f983ee912b2b19ef87102c5dd0ab417f5fda363ded9aafb1",
+        "bytes": 4817
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/tests.py",
+        "sha256": "c53d5a58afb2a23b246c07c18fb57d5dbcd64d7c34d7d34e18bd3263c9213bf4",
+        "bytes": 18117
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/topology.py",
+        "sha256": "309922751d2b6dbb135a1f87219e4c7011ba0d23d45511d5f41bba3a69f637af",
+        "bytes": 16358
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/worker.py",
+        "sha256": "97a80b3b1281f932ef00aaf8aa5d1002ea319a51e1bd28354b8b1eb0f1adbef7",
+        "bytes": 3549
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/infra/ci-r12-branch-only.yml",
+        "sha256": "9d0dbe6a5c5bf62321427713710587301c463d0c784184297dd2eddc1b23cd73",
+        "bytes": 4357
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/inputs/memphis_r12_pid_data_v1.json",
+        "sha256": "4527cf5c7ba21a9d568064a4c15395efc643a642d58034da4c9411b1dee98ef4",
+        "bytes": 555137
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/inputs/source_manifest.json",
+        "sha256": "49e0f41d3d928b4421f93e01f3dfce722114c604e23f50ba75fb667264b7af1f",
+        "bytes": 2336
+      },
+      {
+        "path": ".github/workflows/memphis-r12-mapping-v1.yml",
+        "sha256": "6b4edfb84a35b4afd9afca1625fa58360ac0c5fcede5fe99c226d746207ba143",
+        "bytes": 1623
+      },
+      {
+        "path": "v0_2/__init__.py",
+        "sha256": "b526e266cb8ee98cd02b1a4a61f6829a95ab0ad45ac9cc221eb05ee6b651935a",
+        "bytes": 88
+      },
+      {
+        "path": "v0_2/tests/tools/m1_remote_executor_v1/build.ps1",
+        "sha256": "5b9363ee1e809b4d8dcd688d38c20906169898848c423854a8a20d75ad04d55f",
+        "bytes": 1807
+      },
+      {
+        "path": "v0_2/tests/tools/m1_remote_executor_v1/ControlledJob.cs",
+        "sha256": "eb36313d9184971d317b866e493d95afce4b002ee3f06f094d62a91df99de992",
+        "bytes": 13599
+      },
+      {
+        "path": "v0_2/tests/tools/m1_remote_executor_v1/VerifyTarget.cs",
+        "sha256": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8",
+        "bytes": 4780
+      },
+      {
+        "path": "v0_2/tests/tools/liquid_recovery_v1/batch.ps1",
+        "sha256": "0b128615f0ecbaed53c05d06f74ea47a59e4c76a185983366db52d1394caa90f",
+        "bytes": 7265
+      },
+      {
+        "path": ".github/workflows/ci.yml",
+        "sha256": "9d0dbe6a5c5bf62321427713710587301c463d0c784184297dd2eddc1b23cd73",
+        "bytes": 4357
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD002_CHANGE.md",
+        "sha256": "9a182271a8a35838a9a3cffbf29dbeb4ba34eda920388903becbbe5ee940a315",
+        "bytes": 621
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD003_CHANGE.md",
+        "sha256": "cb8f286019bb47eb4bd65104d0adb544d0b445a230f76ece878d3ca9d5d28dfe",
+        "bytes": 1015
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/report_template.html",
+        "sha256": "216e500da6b8afa6d5ace56a3d4132b526e3e5dd4601bff225a13eada2583b18",
+        "bytes": 8661
+      },
+      {
+        "path": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD004_CHANGE.md",
+        "sha256": "e9f0315e3b7d89d5ae0d07de98fc8f67ba05706b63d171dc1d3a1c672ae23366",
+        "bytes": 765
+      }
+    ]
+  },
+  "environment": {
+    "source_commit": "ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+    "python": "3.11.9",
+    "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+    "image": "20261012.333.1",
+    "os": "Windows-10-10.0.20348-SP0",
+    "pid": 2884,
+    "scope": "NEW_R12_STATIC_AND_UNIT_DEVELOPMENT_NOT_FORMAL_M1_ENVIRONMENT",
+    "cpu_rate": 2500,
+    "process_mb": 256,
+    "job_mb": 512,
+    "wall_seconds": 480,
+    "job_proof_sha256": "d8640792158d6b9830ce8e9ba7fc5d63a01dd686924697aa7629e47d67571ebf",
+    "long_simulation": false
+  },
+  "graph_revision": "R12-MAPPING-v1-build003",
+  "control_revision": "R12-INTENT-CONTROL-v1",
+  "svg_json_check": {
+    "status": "PASS",
+    "edges": 194
+  },
+  "authorities": {
+    "development": true,
+    "git_dedicated_branch": true,
+    "remote_unit_tests": true,
+    "long_simulation": false,
+    "formal_C3C": false,
+    "hardware": false,
+    "production": false,
+    "phase6": false
+  }
+}

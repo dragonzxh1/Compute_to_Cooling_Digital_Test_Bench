@@ -1,0 +1,84 @@
+{
+  "records": [
+    {
+      "path": "engineering_report.html",
+      "bytes": 122455,
+      "sha256": "f7794079dd9c8f251826b6e84e0aa3cd38bfaf6d1dcf0a73c998ddc12ffad0f7"
+    },
+    {
+      "path": "R12_CDU_IDENTITY_MAPPING.csv",
+      "bytes": 1024,
+      "sha256": "88d5a60be0341730957dfeff86b68a61713ef879f8fa52944620a116b1fe7fb2"
+    },
+    {
+      "path": "R12_COMPONENT_PORT_REGISTRY.csv",
+      "bytes": 63650,
+      "sha256": "44e438b74cf6b4a08151fb3158fb5a9b4ebfefd1eb7648834ea5726396160e4d"
+    },
+    {
+      "path": "R12_CONTROL_PERMISSIVES.json",
+      "bytes": 1213,
+      "sha256": "fc9411238a1cc4376aa7b906a54e2375314e74ae9facbcbca19d6ad5828b670b"
+    },
+    {
+      "path": "R12_EXECUTABLE_TOPOLOGY.json",
+      "bytes": 398378,
+      "sha256": "d0ae2a3e2636b43cb77e0b55df13d8be6ee24f265e480fcce3689ac0b3ab2c85"
+    },
+    {
+      "path": "R12_FUNCTIONAL_PID.svg",
+      "bytes": 80560,
+      "sha256": "0941ec1170db6d25bf2c48fad3f3e6160455baf20dd2be02773a35549a32d046"
+    },
+    {
+      "path": "R12_LEGACY_MODEL_DIFFERENCES.csv",
+      "bytes": 927,
+      "sha256": "fb36be4d12046b80ffce10be2ee59be38108f4b4caf1c2d29574425b01b27e22"
+    },
+    {
+      "path": "R12_MODEL_MAPPING_REPORT_ZH.md",
+      "bytes": 4222,
+      "sha256": "6d83cc772ddae606dfcc4b8f6b67f6f7d562d9be68b885c2864cb73492f0a783"
+    },
+    {
+      "path": "R12_NEGATIVE_CONTROL_RESULTS.json",
+      "bytes": 6864208,
+      "sha256": "171cb161a506621a2cbc756a942ddff189b44c2c9fad04291c4146da8f47df1e"
+    },
+    {
+      "path": "R12_OPEN_ENGINEERING_ISSUES.csv",
+      "bytes": 6290,
+      "sha256": "530d583b580c14d0ebf15e8a2e0f5e4d16e3341802ceeebb0477f156f6d3bec3"
+    },
+    {
+      "path": "R12_PRIMARY_SECONDARY_NETWORK_MAP.json",
+      "bytes": 5125,
+      "sha256": "239216f7786694ea0fcd2f6779f7e16d14454ae7de1b4538e531eca66897c3f7"
+    },
+    {
+      "path": "R12_SOURCE_INPUT_ENVIRONMENT_MANIFEST.json",
+      "bytes": 6197,
+      "sha256": "d298bc83e9cce8a31c5deca6bbea6ff48dfa2e2fefbb1c8c08aaca1a46ad038c"
+    },
+    {
+      "path": "R12_STATIC_CONNECTIVITY_TESTS.json",
+      "bytes": 452548,
+      "sha256": "f0bdbc67eaea71e2354ade32520b022637ec72a672d88c2f8b4e2a54cb3755ac"
+    },
+    {
+      "path": "R12_STATUS.json",
+      "bytes": 409,
+      "sha256": "2da830f802991d935cec0bf3265af690b2c4a1336ecf0160e7ed1b8d11c2a58c"
+    },
+    {
+      "path": "R12_T1_T2_STATE_MACHINE.md",
+      "bytes": 2724,
+      "sha256": "d036ae157db49a6fd6c0550a62ef301b88f31e279cc715919b989487a8b74eea"
+    },
+    {
+      "path": "R12_VALVE_SEQUENCE_MATRIX.csv",
+      "bytes": 1714,
+      "sha256": "bb31940f51ee7e4f6e837d4059cfc0e17ea36bad5e85bdf4a841d166d5217b15"
+    }
+  ]
+}

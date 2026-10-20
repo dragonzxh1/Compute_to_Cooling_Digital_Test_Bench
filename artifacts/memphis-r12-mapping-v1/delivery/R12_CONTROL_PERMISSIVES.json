@@ -1,0 +1,44 @@
+{
+  "version": "R12-INTENT-CONTROL-v1",
+  "use": "UNIT_TEST_ONLY",
+  "source_refs": [
+    {
+      "source": "S3",
+      "locator": "PDF p7 PID-006"
+    }
+  ],
+  "registered": {
+    "delta_T_max_K": 2,
+    "delta_p_max_kPa": 5,
+    "stable_duration_s": 5,
+    "overlap_max_s": 30,
+    "pressure_masters_max": 1
+  },
+  "gates": [
+    "TEMP_MATCH_VALID",
+    "PRESSURE_MATCH_VALID",
+    "STABLE_5S_VALID",
+    "PRESSURE_MASTER_TRANSFER_VALID",
+    "OVERLAP_TIMER_VALID",
+    "SENSOR_FRESHNESS_VALID",
+    "VALVE_FEEDBACK_VALID",
+    "FLOW_ESTABLISHED_VALID"
+  ],
+  "engineering_unknowns": {
+    "measurement_freshness_s": null,
+    "pump_follower_control": null,
+    "pump_QH_NPSHr": null,
+    "valve_travel_s": null,
+    "M2_trigger_degC": null,
+    "permissive_measurement_tolerances": null,
+    "recharge_time_limit_s": null
+  },
+  "unit_fixture_policy": {
+    "freshness_s": 0.5,
+    "max_sample_gap_s": 0.5,
+    "cold_return_limit_C": 40.0,
+    "status": "SYNTHETIC_TEST_ONLY_NOT_APPROVED_CONTROL_DEFAULT"
+  },
+  "actuator_issue_receipts": "NONE_THIS_IS_NOT_PLC_EXECUTION",
+  "PRE_Safety_PLC_POST": "FROZEN_M1_NOT_IMPORTED_OR_MODIFIED; DYNAMIC_INTEGRATION_PENDING"
+}

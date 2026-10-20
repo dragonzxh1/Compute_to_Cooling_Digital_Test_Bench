@@ -1,0 +1,281 @@
+{
+  "schema": "R12-MAPPING-INDEPENDENT-PACKAGE-REVIEW-v1",
+  "execution": {
+    "schema": "R12-INDEPENDENT-OFFICIAL-BYTE-REVIEW-v1",
+    "run": "39452435236",
+    "commit": "ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+    "official_zip_sha256": "e42cfd33e5f775ed8c6b4d416d33b64576998d72bdea919053f2ab780ae14476",
+    "github_zip_digest_verified": true,
+    "raw_logs_sha256": "e58ad94ba06931cfc33d2f5abf0bd91f271932e6d43599053ae56caa637d749d",
+    "source_zip_sha256": "34b7b93e1c2149b226805517a34ee7ceb14a66381e723f7fd87734ab0724f74d",
+    "source_manifest_sha256": "fbc8d73d54e42bfaa414e4e358484cd58972d9ea648068761f351461e8b53dc8",
+    "raw_files_verified": 31,
+    "delivery_files_verified": 16,
+    "actual_python_pid": 2884,
+    "cleanup_complete": true,
+    "active_after_cleanup": 0,
+    "environment": {
+      "source_commit": "ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+      "python": "3.11.9",
+      "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+      "image": "20261012.333.1",
+      "os": "Windows-10-10.0.20348-SP0",
+      "pid": 2884,
+      "scope": "NEW_R12_STATIC_AND_UNIT_DEVELOPMENT_NOT_FORMAL_M1_ENVIRONMENT",
+      "cpu_rate": 2500,
+      "process_mb": 256,
+      "job_mb": 512,
+      "wall_seconds": 480,
+      "job_proof_sha256": "d8640792158d6b9830ce8e9ba7fc5d63a01dd686924697aa7629e47d67571ebf",
+      "long_simulation": false
+    },
+    "test_count": 35,
+    "passed": 35,
+    "dynamic_admission": "PARTIALLY_MAPPED_BLOCKED",
+    "engineering_approved": false,
+    "formal": false,
+    "scope": "PASS_INDEPENDENT_STATIC_AND_SYNTHETIC_UNIT_ONLY",
+    "svg_json_edges": 194,
+    "independent_reachability_positive_cases": 3,
+    "T2_primary_A_B_tank_load_route_disabled": true,
+    "new_master_after_actual_revoke_and_isolation": true
+  },
+  "original_source_identities": [
+    {
+      "id": "S1",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\Memphis_Meteorological_Data_Analysis_Guide(3).md",
+      "name": "Memphis_Meteorological_Data_Analysis_Guide(3).md",
+      "role": "WEATHER_GUIDE_AND_REPORTED_SUMMARY_NOT_RAW_SERIES",
+      "bytes": 7524,
+      "sha256": "ab407b149b9de515b6c6d48cd5b9cd700a34d727bfa2d734ce6efe3c6e8cd4f3"
+    },
+    {
+      "id": "S2",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025_P&ID评估底层数据- ACC(1).xlsx",
+      "name": "26025_P&ID评估底层数据- ACC(1).xlsx",
+      "role": "CURRENT_PID_DATA",
+      "bytes": 54238,
+      "sha256": "93ae03b2dc61ab7300985bc0e985b5f1d35a72de3f75417c98e7691c94d0306d"
+    },
+    {
+      "id": "S3",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025_系统PID_欧洲版IEC-ISO_R12-ACC(1).pdf",
+      "name": "26025_系统PID_欧洲版IEC-ISO_R12-ACC(1).pdf",
+      "role": "CURRENT_SYSTEM_PID_R12",
+      "bytes": 4413331,
+      "sha256": "8bc163364d1aa82195158fb1109fdddddb53cf068699d291a79283a32d1eb2f6"
+    },
+    {
+      "id": "S4",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025_11号函逐项核查与澄清-ACC(1).pdf",
+      "name": "26025_11号函逐项核查与澄清-ACC(1).pdf",
+      "role": "CURRENT_CLARIFICATION",
+      "bytes": 938692,
+      "sha256": "e15d5b1f0398d204fc32a2afc5c7e0db7d08895d5f95ab7764c9d94be04454a2"
+    },
+    {
+      "id": "S5",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025 eval data(1).json",
+      "name": "26025 eval data(1).json",
+      "role": "LEGACY_SCHEMA_REFERENCE_ONLY_NOT_PARAMETER_AUTHORITY",
+      "bytes": 35072,
+      "sha256": "25735d7f030d43e3b143313e5272d083d1d877cd6dbfc13a448599a68a124a2d"
+    }
+  ],
+  "source_local_original_recheck": "5/5 unchanged",
+  "source_change_scope": "19 files: new R12 adapter/workflow plus dedicated-branch CI exclusion; zero frozen/legacy/DSX changes",
+  "browser_checks": {
+    "no_console_errors": true,
+    "inactive_tank_not_crossed_by_return_geometry": true,
+    "no_horizontal_overflow": true,
+    "rendered_PNGs": "Local browser rendering only; not added remote runtime evidence",
+    "six_rack_paths_each_unit": true,
+    "case3_C03B_primaryB_secondaryB": true,
+    "case2_C01B_primaryA_secondaryB": true
+  },
+  "package_files": [
+    {
+      "bytes": 122455,
+      "path": "delivery/engineering_report.html",
+      "sha256": "f7794079dd9c8f251826b6e84e0aa3cd38bfaf6d1dcf0a73c998ddc12ffad0f7"
+    },
+    {
+      "bytes": 177312,
+      "path": "delivery/R12_B_primary_paths@2x.png",
+      "sha256": "128a80b4fd775f0cfa1305a59ffdc57e9ecbaa928facfa6e9842371e23f8e4f9"
+    },
+    {
+      "bytes": 1024,
+      "path": "delivery/R12_CDU_IDENTITY_MAPPING.csv",
+      "sha256": "88d5a60be0341730957dfeff86b68a61713ef879f8fa52944620a116b1fe7fb2"
+    },
+    {
+      "bytes": 63650,
+      "path": "delivery/R12_COMPONENT_PORT_REGISTRY.csv",
+      "sha256": "44e438b74cf6b4a08151fb3158fb5a9b4ebfefd1eb7648834ea5726396160e4d"
+    },
+    {
+      "bytes": 1213,
+      "path": "delivery/R12_CONTROL_PERMISSIVES.json",
+      "sha256": "fc9411238a1cc4376aa7b906a54e2375314e74ae9facbcbca19d6ad5828b670b"
+    },
+    {
+      "bytes": 2745,
+      "path": "delivery/R12_DELIVERY_HASHES.json",
+      "sha256": "85c0604b989b68d93aa9f8d8c6b6c260e2f563538c91598ec593e1e207feb960"
+    },
+    {
+      "bytes": 398378,
+      "path": "delivery/R12_EXECUTABLE_TOPOLOGY.json",
+      "sha256": "d0ae2a3e2636b43cb77e0b55df13d8be6ee24f265e480fcce3689ac0b3ab2c85"
+    },
+    {
+      "bytes": 80560,
+      "path": "delivery/R12_FUNCTIONAL_PID.svg",
+      "sha256": "0941ec1170db6d25bf2c48fad3f3e6160455baf20dd2be02773a35549a32d046"
+    },
+    {
+      "bytes": 927,
+      "path": "delivery/R12_LEGACY_MODEL_DIFFERENCES.csv",
+      "sha256": "fb36be4d12046b80ffce10be2ee59be38108f4b4caf1c2d29574425b01b27e22"
+    },
+    {
+      "bytes": 4222,
+      "path": "delivery/R12_MODEL_MAPPING_REPORT_ZH.md",
+      "sha256": "6d83cc772ddae606dfcc4b8f6b67f6f7d562d9be68b885c2864cb73492f0a783"
+    },
+    {
+      "bytes": 6864208,
+      "path": "delivery/R12_NEGATIVE_CONTROL_RESULTS.json",
+      "sha256": "171cb161a506621a2cbc756a942ddff189b44c2c9fad04291c4146da8f47df1e"
+    },
+    {
+      "bytes": 6290,
+      "path": "delivery/R12_OPEN_ENGINEERING_ISSUES.csv",
+      "sha256": "530d583b580c14d0ebf15e8a2e0f5e4d16e3341802ceeebb0477f156f6d3bec3"
+    },
+    {
+      "bytes": 5125,
+      "path": "delivery/R12_PRIMARY_SECONDARY_NETWORK_MAP.json",
+      "sha256": "239216f7786694ea0fcd2f6779f7e16d14454ae7de1b4538e531eca66897c3f7"
+    },
+    {
+      "bytes": 6197,
+      "path": "delivery/R12_SOURCE_INPUT_ENVIRONMENT_MANIFEST.json",
+      "sha256": "d298bc83e9cce8a31c5deca6bbea6ff48dfa2e2fefbb1c8c08aaca1a46ad038c"
+    },
+    {
+      "bytes": 452548,
+      "path": "delivery/R12_STATIC_CONNECTIVITY_TESTS.json",
+      "sha256": "f0bdbc67eaea71e2354ade32520b022637ec72a672d88c2f8b4e2a54cb3755ac"
+    },
+    {
+      "bytes": 409,
+      "path": "delivery/R12_STATUS.json",
+      "sha256": "2da830f802991d935cec0bf3265af690b2c4a1336ecf0160e7ed1b8d11c2a58c"
+    },
+    {
+      "bytes": 2724,
+      "path": "delivery/R12_T1_T2_STATE_MACHINE.md",
+      "sha256": "d036ae157db49a6fd6c0550a62ef301b88f31e279cc715919b989487a8b74eea"
+    },
+    {
+      "bytes": 177797,
+      "path": "delivery/R12_T2_paths@2x.png",
+      "sha256": "e1bdeba3a495e51d2a3db35e90f32f73bd67e4e004e56fe8666969f5399bf6dc"
+    },
+    {
+      "bytes": 1714,
+      "path": "delivery/R12_VALVE_SEQUENCE_MATRIX.csv",
+      "sha256": "bb31940f51ee7e4f6e837d4059cfc0e17ea36bad5e85bdf4a841d166d5217b15"
+    },
+    {
+      "bytes": 3802,
+      "path": "delivery/.gstack/browse-audit.jsonl",
+      "sha256": "1c100aff363d6f890446bd3d12e45d2cfbce9d3a56d675faabe00bd4330991a6"
+    },
+    {
+      "bytes": 321,
+      "path": "delivery/.gstack/browse-network.log",
+      "sha256": "4716abd5c128edcd21fcfd9f887e234fc8bf75879618dc4db1fe554065fad339"
+    },
+    {
+      "bytes": 278,
+      "path": "delivery/.gstack/browse.json",
+      "sha256": "0c2a9c99517a2064538dbcd7dc73c811c551bb0b221a204f9fff82be0b14466f"
+    },
+    {
+      "bytes": 195,
+      "path": "delivery/.gstack/claude-available.json",
+      "sha256": "69a6af54fc139cdc74e21539a3d579f6cd73daa5d7a7bd07e6b9f85ff33ea26c"
+    },
+    {
+      "bytes": 70,
+      "path": "delivery/.gstack/terminal-agent-pid",
+      "sha256": "c4544bbe44947ae0009152f26157858e21c5c8b24c93ab5ef6ec67d3a5079583"
+    },
+    {
+      "bytes": 43,
+      "path": "delivery/.gstack/terminal-internal-token",
+      "sha256": "f0a65202905798283ba69ed0af5640fc632b906b4c70b6e90670dfca03d893d8"
+    },
+    {
+      "bytes": 4,
+      "path": "delivery/.gstack/terminal-port",
+      "sha256": "a68a5f2e3a4446bfff75a9f9f29d76730a207b273b09c6cb15c314054e46d359"
+    },
+    {
+      "bytes": 12267,
+      "path": "evidence/execution_publication.json",
+      "sha256": "f8190aecd331b4a301643e1375137e7fc61f374e67bf9a824fbd2a2196c9c55d"
+    },
+    {
+      "bytes": 1007,
+      "path": "evidence/github_artifacts.json",
+      "sha256": "758a89016e51486005c75c138edcd7effead025921dd6a593fa018257e1b5da4"
+    },
+    {
+      "bytes": 16550,
+      "path": "evidence/github_run.json",
+      "sha256": "80740016c792f1060bf6aa56a7e225b86aafc38526150a3b33eea544a3c30d40"
+    },
+    {
+      "bytes": 2603,
+      "path": "evidence/independent_failure_preservation.json",
+      "sha256": "1c57e282978b1cf7347938bec78872e7f702d71e1bc2f4883872759a0b342297"
+    },
+    {
+      "bytes": 1682,
+      "path": "evidence/independent_review.json",
+      "sha256": "1b52017cf4ece4bcd7f01cad67e56a187919b427ee4a80d2e26cf8bd0f62cf48"
+    },
+    {
+      "bytes": 63004,
+      "path": "evidence/memphis-r12-unit-39450623853.zip",
+      "sha256": "f1326a9698d925eda9a29fc3a4f536fbceb215961714ba4c1b751590bf71ccae"
+    },
+    {
+      "bytes": 210244,
+      "path": "evidence/memphis-r12-unit-39452435236.zip",
+      "sha256": "e42cfd33e5f775ed8c6b4d416d33b64576998d72bdea919053f2ab780ae14476"
+    },
+    {
+      "bytes": 13996,
+      "path": "evidence/official_logs.zip",
+      "sha256": "e58ad94ba06931cfc33d2f5abf0bd91f271932e6d43599053ae56caa637d749d"
+    },
+    {
+      "bytes": 96712,
+      "path": "evidence/source-ecc4851.zip",
+      "sha256": "34b7b93e1c2149b226805517a34ee7ceb14a66381e723f7fd87734ab0724f74d"
+    }
+  ],
+  "admission": "PARTIALLY_MAPPED_BLOCKED",
+  "test_scope": "35/35 STATIC_AND_SYNTHETIC_UNIT_ONLY",
+  "formal_C3C": false,
+  "production": false,
+  "hardware": false,
+  "procurement": false,
+  "phase6": false,
+  "long_simulation": false
+}

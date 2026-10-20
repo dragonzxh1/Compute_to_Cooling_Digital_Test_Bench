@@ -1,0 +1,166 @@
+{
+  "hardware": false,
+  "manifest_sha256": "fbc8d73d54e42bfaa414e4e358484cd58972d9ea648068761f351461e8b53dc8",
+  "files": [
+    {
+      "sha": "13fa01ef35d6acf66ae931919c1722bc01a6da9d",
+      "path": ".github/workflows/ci.yml",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "afb6c5188dca367dad5bc8a0448c62cfe74115ea",
+      "path": ".github/workflows/memphis-r12-mapping-v1.yml",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "a3bba89bfe1171ec79ee030da9e4f0f0cfba9e9a",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/__init__.py",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "479fcaa1ca2ce9eee374c809cac83c94f0e54984",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/AUTHORITY_AND_SCOPE.md",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "ce1ba1999e99bf81825776c72c35b39715ddfdd6",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD002_CHANGE.md",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "a58453957cbe5b19b6daf657ed51ed02296993ff",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD003_CHANGE.md",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "1908e60d6bf43006fa4d16d6c6d0abf73eaad44b",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD004_CHANGE.md",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "962bdcd48ec9012aaaee2236059b9a024176e05c",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/control.py",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "a34d33c4954b0ff437efc5bccb1def447facecc5",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/delivery.py",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "13fa01ef35d6acf66ae931919c1722bc01a6da9d",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/infra/ci-r12-branch-only.yml",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "869a2cc93f4909b186062a28b1fa6c528384753a",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/inputs/memphis_r12_pid_data_v1.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "f251d2d64e583e71c1c383c9e70be8500d0e6d21",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/inputs/source_manifest.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "06afc676a9f3f8677cbba1080ff52d1eeb8b0f88",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/README.md",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "53cca21e1f2b201c6ff2ce76d00b9b0da90504fb",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/report_template.html",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "e5f588901c898f3baaab6894a256e167fa3041e4",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/run_remote.ps1",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "db0bfc384d6aefd29c32b02e5e28862c5caa6d2f",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/source_manifest.json",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "ae08c694df5f18fdf26c1046f49d5fccd045f3e0",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/tests.py",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "5acebe27b3ef3495ca7755129d80dbc2eb02614e",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/topology.py",
+      "mode": "100644",
+      "type": "blob"
+    },
+    {
+      "sha": "f13100e12d4c41e86a3e1af52167740294f96966",
+      "path": "v0_2/tests/tools/memphis_r12_mapping_v1/worker.py",
+      "mode": "100644",
+      "type": "blob"
+    }
+  ],
+  "branch": "codex/memphis-r12-mapping-v1",
+  "source_zip_sha256": "34b7b93e1c2149b226805517a34ee7ceb14a66381e723f7fd87734ab0724f74d",
+  "long_simulation": false,
+  "phase6": false,
+  "diff_files": [
+    {
+      "sha": "1908e60d6bf43006fa4d16d6c6d0abf73eaad44b",
+      "filename": "v0_2/tests/tools/memphis_r12_mapping_v1/BUILD004_CHANGE.md",
+      "status": "added",
+      "additions": 5,
+      "deletions": 0,
+      "changes": 5,
+      "blob_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/blob/ecc4851e7f4616c09a3eed8476e15a53ce3661c7/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2FBUILD004_CHANGE.md",
+      "raw_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/raw/ecc4851e7f4616c09a3eed8476e15a53ce3661c7/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2FBUILD004_CHANGE.md",
+      "contents_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/contents/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2FBUILD004_CHANGE.md?ref=ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+      "patch": "@@ -0,0 +1,5 @@\n+# Build004 report geometry correction\n+\n+Build003 commit63c1c036afdf5f7833d45473fac4626c1a4890e0/run39451963295 passed35/35 static/synthetic units; official ZIP/raw hashes, independent reachability and actual Python Job/cleanup verified. Original outputs remain unchanged.\n+\n+Browser inspection found the compact reader's primary return line passed behind the inactive tank box, potentially implying a connection not present in JSON. This build routes it directly to the selected tank outside the inactive box, adds the secondary pump/filter return segment, and makes arrowhead colors match supply/return. No topology edge, control logic, physical value or threshold changed. Fresh unit evidence plus browser checks are required for delivery of this new report source."
+    },
+    {
+      "sha": "53cca21e1f2b201c6ff2ce76d00b9b0da90504fb",
+      "filename": "v0_2/tests/tools/memphis_r12_mapping_v1/report_template.html",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 4,
+      "changes": 9,
+      "blob_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/blob/ecc4851e7f4616c09a3eed8476e15a53ce3661c7/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2Freport_template.html",
+      "raw_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/raw/ecc4851e7f4616c09a3eed8476e15a53ce3661c7/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2Freport_template.html",
+      "contents_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/contents/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2Freport_template.html?ref=ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+      "patch": "@@ -15,12 +15,13 @@\n const D=JSON.parse(document.querySelector('#evidence').textContent),N='http://www.w3.org/2000/svg';\n function node(tag,attrs,text,parent){let e=document.createElementNS(N,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text)e.textContent=text;(parent||document.querySelector('#view')).appendChild(e);return e}\n function draw(){let svg=document.querySelector('#view');svg.replaceChildren();let t=D.cases[+document.querySelector('#case').value],i=+document.querySelector('#unit').value,u=t.actual.connectivity.units[i],p=t.actual.command.primary,s=t.actual.command.secondary,c=u.CDU;\n-node('defs',{},'',svg);let defs=svg.firstChild;let m=node('marker',{id:'arrow',viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto'},'',defs);node('path',{d:'M0 0L10 5L0 10Z',fill:'#17859b'},'',m);\n-function line(points,ids,color='#17859b',dashed=false){node('polyline',{points,fill:'none',stroke:color,'stroke-width':4,'stroke-dasharray':dashed?'7 5':'none','marker-end':dashed?'':'url(#arrow)','data-edge-ids':JSON.stringify(ids)},'');}\n+node('defs',{},'',svg);let defs=svg.firstChild;for(let [id,color] of [['arrow','#17859b'],['arrow-ret','#ce8052']]){let m=node('marker',{id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto'},'',defs);node('path',{d:'M0 0L10 5L0 10Z',fill:color},'',m)}\n+function line(points,ids,color='#17859b',dashed=false){node('polyline',{points,fill:'none',stroke:color,'stroke-width':4,'stroke-dasharray':dashed?'7 5':'none','marker-end':dashed?'':color==='#ce8052'?'url(#arrow-ret)':'url(#arrow)','data-edge-ids':JSON.stringify(ids)},'');}\n function box(x,y,w,h,title,sub,on=true){node('rect',{x,y,width:w,height:h,rx:10,fill:on?'#e6f4f7':'#f0f3f5',stroke:on?'#3196a5':'#c6d1d9','stroke-width':1.5});node('text',{x:x+15,y:y+29,fill:on?'#133849':'#718494','font-size':16,'font-weight':600},title);node('text',{x:x+15,y:y+53,fill:'#617684','font-size':12},sub)}\n const y=p==='A'?200:420;\n-line(`210,${y} 285,${y} 285,265 380,265`,u.primary_supply_path);line(`380,305 300,305 300,555 120,555 120,${y+60}`,u.primary_return_path,'#ce8052');\n-let secondary=u.racks[0].supply_path;line('760,265 840,265 840,305 940,305',secondary);line('940,380 830,380 830,470 760,470',u.racks[0].return_path,'#ce8052');line('640,290 710,290',[],'#c0942e',true);\n+const returnX=p==='A'?250:330,returnY=y+35;\n+line(`210,${y} 285,${y} 285,265 380,265`,u.primary_supply_path);line(`380,305 ${returnX},305 ${returnX},${returnY} 210,${returnY}`,u.primary_return_path,'#ce8052');\n+let secondary=u.racks[0].supply_path;line('760,265 840,265 840,305 940,305',secondary);line('940,380 830,380 830,470 760,470',u.racks[0].return_path,'#ce8052');line('705,455 675,455 675,320 705,320',u.racks[0].return_path,'#ce8052');line('640,290 710,290',[],'#c0942e',true);\n box(30,155,180,100,'BT-A / LP-A',p==='A'?'负载支路启用':'负载支路未启用',p==='A');box(30,375,180,100,'BT-B / LP-B',p==='B'?'负载支路启用':'待命，无负载启用路径',p==='B');\n box(380,195,255,155,c+' · 一次侧','一次网 '+p+'；P1-'+p+'S/'+p+'R 开');node('text',{x:397,y:288,fill:'#5b7181','font-size':12},'另一一次网选择阀关闭');node('text',{x:397,y:313,fill:'#5b7181','font-size':12},'供回必须同网，不跨罐串流');\n box(705,195,200,155,'二次 '+s+' 环 / HX','两台100%泵，一用一备');node('text',{x:720,y:289,fill:'#5b7181','font-size':12},'与一次侧只交换热量');node('text',{x:720,y:314,fill:'#5b7181','font-size':12},'无跨板换流体边');"
+    },
+    {
+      "sha": "db0bfc384d6aefd29c32b02e5e28862c5caa6d2f",
+      "filename": "v0_2/tests/tools/memphis_r12_mapping_v1/source_manifest.json",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 3,
+      "changes": 11,
+      "blob_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/blob/ecc4851e7f4616c09a3eed8476e15a53ce3661c7/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2Fsource_manifest.json",
+      "raw_url": "https://github.com/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/raw/ecc4851e7f4616c09a3eed8476e15a53ce3661c7/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2Fsource_manifest.json",
+      "contents_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/contents/v0_2%2Ftests%2Ftools%2Fmemphis_r12_mapping_v1%2Fsource_manifest.json?ref=ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+      "patch": "@@ -7,7 +7,7 @@\n   \"frozen_M1_imported\": false,\n   \"intake_sha256\": \"4527cf5c7ba21a9d568064a4c15395efc643a642d58034da4c9411b1dee98ef4\",\n   \"no_long_simulation\": true,\n-  \"parent_commit\": \"0a466d26f918390bc785d16a1210cd0285b04c27\",\n+  \"parent_commit\": \"63c1c036afdf5f7833d45473fac4626c1a4890e0\",\n   \"source_files\": [\n     {\n       \"path\": \"v0_2/tests/tools/memphis_r12_mapping_v1/__init__.py\",\n@@ -116,8 +116,13 @@\n     },\n     {\n       \"path\": \"v0_2/tests/tools/memphis_r12_mapping_v1/report_template.html\",\n-      \"sha256\": \"93811e88964b99aabc74fb79adbafe42fe359a8fa2c70510e7629fe1eb67f03f\",\n-      \"bytes\": 8435\n+      \"sha256\": \"216e500da6b8afa6d5ace56a3d4132b526e3e5dd4601bff225a13eada2583b18\",\n+      \"bytes\": 8661\n+    },\n+    {\n+      \"path\": \"v0_2/tests/tools/memphis_r12_mapping_v1/BUILD004_CHANGE.md\",\n+      \"sha256\": \"e9f0315e3b7d89d5ae0d07de98fc8f67ba05706b63d171dc1d3a1c672ae23366\",\n+      \"bytes\": 765\n     }\n   ]\n }"
+    }
+  ],
+  "parent": "63c1c036afdf5f7833d45473fac4626c1a4890e0",
+  "commit": "ecc4851e7f4616c09a3eed8476e15a53ce3661c7",
+  "scope": "R12_STATIC_AND_UNIT_DEVELOPMENT",
+  "formal": false
+}

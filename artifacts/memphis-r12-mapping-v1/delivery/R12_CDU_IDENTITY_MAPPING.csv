@@ -1,0 +1,7 @@
+﻿unit,CDU_IDENTITY,secondary_network,allowed_primary_networks,tank_from_CDU_identity,source_refs
+1,C01A,A,A or B (paired selector),False,"[{""source"": ""S3"", ""locator"": ""PDF p6 PID-005""}, {""source"": ""S3"", ""locator"": ""PDF p7 PID-006""}]"
+1,C01B,B,A or B (paired selector),False,"[{""source"": ""S3"", ""locator"": ""PDF p6 PID-005""}, {""source"": ""S3"", ""locator"": ""PDF p7 PID-006""}]"
+2,C02A,A,A or B (paired selector),False,"[{""source"": ""S3"", ""locator"": ""PDF p6 PID-005""}, {""source"": ""S3"", ""locator"": ""PDF p7 PID-006""}]"
+2,C02B,B,A or B (paired selector),False,"[{""source"": ""S3"", ""locator"": ""PDF p6 PID-005""}, {""source"": ""S3"", ""locator"": ""PDF p7 PID-006""}]"
+3,C03A,A,A or B (paired selector),False,"[{""source"": ""S3"", ""locator"": ""PDF p6 PID-005""}, {""source"": ""S3"", ""locator"": ""PDF p7 PID-006""}]"
+3,C03B,B,A or B (paired selector),False,"[{""source"": ""S3"", ""locator"": ""PDF p6 PID-005""}, {""source"": ""S3"", ""locator"": ""PDF p7 PID-006""}]"

@@ -1,0 +1,8 @@
+﻿legacy,R12,status,source
+CDU_B primary = B tank,Any CDU independently selects primary A or B,LEGACY_ASSUMPTION_NOT_REUSED,PID-005/009 T2
+CDU transfer implies B tank depletion,T2 primary A/LP-A; B tank standby,LEGACY_ASSUMPTION_NOT_REUSED,阀位矩阵 A8:O8
+one equivalent CDU secondary pump,two distinct 100% pumps per CDU,INTENT_GRAPH_REPLACED_NOT_HYDRAULIC_CALIBRATED,PID-005
+aggregate rack resistance/flow,18 independent four-valve rack branches,INTENT_GRAPH_REPLACED_LOCAL_FLOW_REQUIRED,PID-006
+independent RC/CP1/2 assumed,common source pump sequential recharge,NOT_ORIGINAL_R12_EQUIPMENT,PID-008
+old takeover no explicit matching/master proofs,5s temp/pressure + <=30s overlap + actual revoke/isolate/grant,NEW_UNIT_MAPPING_NO_INHERITED_PASS,PID-006
+sealed historical development/formal outcomes,remain attributed to registered original source; no relabel,PRESERVED_UNCHANGED,project AGENTS; no frozen imports

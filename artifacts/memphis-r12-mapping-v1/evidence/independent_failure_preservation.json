@@ -1,0 +1,58 @@
+{
+  "schema": "R12-INDEPENDENT-OFFICIAL-BYTE-REVIEW-v1",
+  "run": "39450623853",
+  "commit": "b0916450c273ba9c68c7c5c3bbe5ccc90b5924cb",
+  "official_zip_sha256": "f1326a9698d925eda9a29fc3a4f536fbceb215961714ba4c1b751590bf71ccae",
+  "github_zip_digest_verified": true,
+  "raw_logs_sha256": "fdd3cf9c14774db1bc3489a4074e1fd75a245901c1722cd57ad16f8b1c38ed2e",
+  "source_zip_sha256": "04285a36c1adab12c1aab56b057593072fd83b78015c2736f7ee9d4a4fe28a5e",
+  "source_manifest_sha256": "a0bbe02eb018b5de36d0e0e56b24ff498d8e78577227d89f0dee0bc1cbad6082",
+  "raw_files_verified": 29,
+  "delivery_files_verified": 15,
+  "actual_python_pid": 6052,
+  "cleanup_complete": true,
+  "active_after_cleanup": 0,
+  "environment": {
+    "source_commit": "b0916450c273ba9c68c7c5c3bbe5ccc90b5924cb",
+    "python": "3.11.9",
+    "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+    "image": "20261012.333.1",
+    "os": "Windows-10-10.0.20348-SP0",
+    "pid": 6052,
+    "scope": "NEW_R12_STATIC_AND_UNIT_DEVELOPMENT_NOT_FORMAL_M1_ENVIRONMENT",
+    "cpu_rate": 2500,
+    "process_mb": 256,
+    "job_mb": 512,
+    "wall_seconds": 480,
+    "job_proof_sha256": "b02c9e8591fb2358525c02ef4d83817ba702828b0404d0e9f401c179f3434c40",
+    "long_simulation": false
+  },
+  "test_count": 32,
+  "passed": 7,
+  "dynamic_admission": "PARTIALLY_MAPPED_BLOCKED",
+  "engineering_approved": false,
+  "formal": false,
+  "scope": "FAILED_BUILD_BYTES_PRESERVED_NOT_A_PASS",
+  "execution_result": {
+    "status": "FAIL",
+    "scope": "R12_UNIT_ONLY",
+    "source_commit": "b0916450c273ba9c68c7c5c3bbe5ccc90b5924cb",
+    "summary": {
+      "tests": 32,
+      "passed": 7,
+      "failed": 25,
+      "statuses": {
+        "SOURCE_REGISTERED": "PASS_ORIGINAL_BYTES_RECHECKED_LOCALLY; HASH_BOUND_INTAKE_USED_REMOTELY",
+        "TOPOLOGY_MAPPED": "DECLARED_FUNCTIONAL_INTENT_PARTIAL; PID005_CONNECTIVITY_BLOCKED",
+        "CONTROL_IMPLEMENTED": "T2_UNIT_STATE_MACHINE; T1_TERMINAL_GATE; RECHARGE_UNIT_SEQUENCE",
+        "UNIT_TESTED": "7/32 FAIL",
+        "DYNAMICALLY_VALIDATED": "NO",
+        "OEM_VERIFIED": "NO",
+        "ENGINEERING_APPROVED": "NO"
+      },
+      "svg_json_edges": 194
+    },
+    "error": "RuntimeError('UNIT_ASSERTION_FAILURE')",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_mapping_v1\\worker.py\", line 58, in main\n    raise RuntimeError(\"UNIT_ASSERTION_FAILURE\")\nRuntimeError: UNIT_ASSERTION_FAILURE\n"
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "CDU_IDENTITY": [
+    "C01A",
+    "C01B",
+    "C02A",
+    "C02B",
+    "C03A",
+    "C03B"
+  ],
+  "PRIMARY_NETWORK_ID": [
+    "A",
+    "B"
+  ],
+  "SECONDARY_NETWORK_ID": [
+    "A",
+    "B"
+  ],
+  "identity_mappings": [
+    {
+      "unit": 1,
+      "CDU_IDENTITY": "C01A",
+      "secondary_network": "A",
+      "allowed_primary_networks": "A or B (paired selector)",
+      "tank_from_CDU_identity": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        },
+        {
+          "source": "S3",
+          "locator": "PDF p7 PID-006"
+        }
+      ]
+    },
+    {
+      "unit": 1,
+      "CDU_IDENTITY": "C01B",
+      "secondary_network": "B",
+      "allowed_primary_networks": "A or B (paired selector)",
+      "tank_from_CDU_identity": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        },
+        {
+          "source": "S3",
+          "locator": "PDF p7 PID-006"
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "CDU_IDENTITY": "C02A",
+      "secondary_network": "A",
+      "allowed_primary_networks": "A or B (paired selector)",
+      "tank_from_CDU_identity": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        },
+        {
+          "source": "S3",
+          "locator": "PDF p7 PID-006"
+        }
+      ]
+    },
+    {
+      "unit": 2,
+      "CDU_IDENTITY": "C02B",
+      "secondary_network": "B",
+      "allowed_primary_networks": "A or B (paired selector)",
+      "tank_from_CDU_identity": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        },
+        {
+          "source": "S3",
+          "locator": "PDF p7 PID-006"
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "CDU_IDENTITY": "C03A",
+      "secondary_network": "A",
+      "allowed_primary_networks": "A or B (paired selector)",
+      "tank_from_CDU_identity": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        },
+        {
+          "source": "S3",
+          "locator": "PDF p7 PID-006"
+        }
+      ]
+    },
+    {
+      "unit": 3,
+      "CDU_IDENTITY": "C03B",
+      "secondary_network": "B",
+      "allowed_primary_networks": "A or B (paired selector)",
+      "tank_from_CDU_identity": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        },
+        {
+          "source": "S3",
+          "locator": "PDF p7 PID-006"
+        }
+      ]
+    }
+  ],
+  "heat_only_interfaces": [
+    {
+      "id": "G01-C01A/HX-HEAT",
+      "primary_edge": "G01-C01A/HX-primary",
+      "secondary_edge": "G01-C01A/HX-secondary",
+      "fluid_mixing": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        }
+      ],
+      "UA_actual": null,
+      "use": "BASIC_INTERFACE_UNIT_TEST_ONLY"
+    },
+    {
+      "id": "G01-C01B/HX-HEAT",
+      "primary_edge": "G01-C01B/HX-primary",
+      "secondary_edge": "G01-C01B/HX-secondary",
+      "fluid_mixing": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        }
+      ],
+      "UA_actual": null,
+      "use": "BASIC_INTERFACE_UNIT_TEST_ONLY"
+    },
+    {
+      "id": "G01-C02A/HX-HEAT",
+      "primary_edge": "G01-C02A/HX-primary",
+      "secondary_edge": "G01-C02A/HX-secondary",
+      "fluid_mixing": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        }
+      ],
+      "UA_actual": null,
+      "use": "BASIC_INTERFACE_UNIT_TEST_ONLY"
+    },
+    {
+      "id": "G01-C02B/HX-HEAT",
+      "primary_edge": "G01-C02B/HX-primary",
+      "secondary_edge": "G01-C02B/HX-secondary",
+      "fluid_mixing": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        }
+      ],
+      "UA_actual": null,
+      "use": "BASIC_INTERFACE_UNIT_TEST_ONLY"
+    },
+    {
+      "id": "G01-C03A/HX-HEAT",
+      "primary_edge": "G01-C03A/HX-primary",
+      "secondary_edge": "G01-C03A/HX-secondary",
+      "fluid_mixing": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        }
+      ],
+      "UA_actual": null,
+      "use": "BASIC_INTERFACE_UNIT_TEST_ONLY"
+    },
+    {
+      "id": "G01-C03B/HX-HEAT",
+      "primary_edge": "G01-C03B/HX-primary",
+      "secondary_edge": "G01-C03B/HX-secondary",
+      "fluid_mixing": false,
+      "source_refs": [
+        {
+          "source": "S3",
+          "locator": "PDF p6 PID-005"
+        }
+      ],
+      "UA_actual": null,
+      "use": "BASIC_INTERFACE_UNIT_TEST_ONLY"
+    }
+  ],
+  "primary_cross_connect_allowed": false,
+  "fluid_domain_note": "secondary A/B may transiently connect only at released permitted rack paths; never via HX to primary"
+}
