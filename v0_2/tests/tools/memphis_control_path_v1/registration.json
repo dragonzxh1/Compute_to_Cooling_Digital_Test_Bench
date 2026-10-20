@@ -1,12 +1,13 @@
 {
- "schema":"MEMPHIS-ORIGINAL-CONTROL-PATH-COMPLETION-v1","build":1,
+ "schema":"MEMPHIS-ORIGINAL-CONTROL-PATH-COMPLETION-v1","build":2,
+ "previous_build":{"execution":"463361c28e883b825696e385617da28b9a4f6a5c","run":39407670508,"status":"INCOMPLETE_ADAPTER_KEY_ERROR","error":"requested_recharge_done legacy audit key removed; restore explicitly labeled compatibility alias, not a qualification claim. Official raw ZIP and logs retained; child exited1, cleanup complete active0. No full new engineering cases ran."},
  "branch":"codex/memphis-control-path-v1",
  "authority":"User supplied FULL AUTONOMOUS ENGINEERING EXECUTION task, dedicated research branch publication and isolated development scenarios; no merge, customer design change approval, formal, procurement, production or hardware.",
  "parent_execution":"1f67d705571a09f04c29e37c094d280b85d041ce","parent_delivery":"5cc8c4ac3d18c3a5af4b2cba0af4dd5a63c3782e",
  "cases":[
   {"id":"ASSERTIONS","group":"baseline","kind":"assertions"},
-  {"id":"BASELINE_EXACT","group":"baseline","kind":"old"},
   {"id":"NEW_PATH_SMOKE","group":"baseline","kind":"smoke"},
+  {"id":"BASELINE_EXACT","group":"baseline","kind":"old"},
   {"id":"ORIGINAL_20","group":"mesh","kind":"forward","change":{"layers":20}},
   {"id":"ORIGINAL_40","group":"mesh","kind":"forward","change":{"layers":40}},
   {"id":"ORIGINAL_80","group":"mesh","kind":"forward","change":{}},

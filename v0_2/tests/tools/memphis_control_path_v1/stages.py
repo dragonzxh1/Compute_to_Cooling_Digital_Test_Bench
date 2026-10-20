@@ -8,6 +8,8 @@ HERE=Path(__file__).resolve().parent
 def assertions(directory):
     for p in HERE.glob('*.py'):ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p))
     from . import simulation,plant,observer,report
+    constants={n.value for n in ast.walk(ast.parse((HERE/'simulation.py').read_text(encoding='utf-8'))) if isinstance(n,ast.Constant) and isinstance(n.value,str)}
+    require({'requested_recharge_done','requested_recharge_screen_met','source_timeline','source_returned_at_ns','final_units','maximum_rack_return_c'}<=constants,'LEGACY_AUDIT_RESULT_ADAPTER_KEYS')
     from .coordination import control_options,Controller,PLC,record
     from types import SimpleNamespace
     require(control_options(dict(extensions=True,architecture='ORIGINAL_SHARED',fault_at_s=30,repair_W1_at_s=900,second_fault_at_s=1800,hidden_state=True))==dict(extensions=True,architecture='ORIGINAL_SHARED'),'FUTURE_SCHEDULE_WHITELIST')

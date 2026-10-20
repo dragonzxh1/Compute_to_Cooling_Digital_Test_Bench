@@ -164,6 +164,8 @@ def run(spec,directory):
         final_units=series[-1]['units'],transaction_count=len(records),source_transaction_count=len(source_frames),
         source_timeline=coordinator.events,source_returned_at_ns=coordinator.returned_at,
         requested_recharge_screen_met=coordinator.recharge_done if group else None,
+        requested_recharge_done=coordinator.recharge_done if group else None,
+        requested_recharge_done_scope='LEGACY_ADAPTER_ALIAS_TT_SCREEN_ONLY_NOT90S_QUALIFICATION',
         hardware='CALIBRATION_REQUIRED',formal_C3_C='NOT_RUN',production=False,phase6=False)
     write(directory/'series.json',series);write(directory/'phases.json',records)
     write(directory/'measurements.json',measurements);write(directory/'source_phases.json',source_frames)

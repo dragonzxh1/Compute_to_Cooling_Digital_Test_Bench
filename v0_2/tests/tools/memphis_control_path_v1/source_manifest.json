@@ -1,6 +1,6 @@
 {
   "schema": "MEMPHIS-LOOP-VALIDATION-SOURCE-v1",
-  "build": 1,
+  "build": 2,
   "source_raw_sha256": {
     ".github/workflows/memphis-control-path-v1-runner.yml": "0185ea7e51d080fe7b272ae0139ca49d099999a139dcb3e3da2c7d1575884977",
     ".github/workflows/memphis-control-path-v1.yml": "07538ec8c23af3a337f2477cb89262d96503a7cd11495af0d442a621744853c5",
@@ -20,12 +20,12 @@
     "v0_2/tests/tools/memphis_control_path_v1/prior_root_cause.json": "a90db835b4231013d2a2583160f77d06aeb915eb5b388477a4cb4d26e0e814f4",
     "v0_2/tests/tools/memphis_control_path_v1/qualification.py": "600168a87f266c7cab477b0f805f0674a65792996164acf98c017e69dbcf5d6d",
     "v0_2/tests/tools/memphis_control_path_v1/README.md": "ce0a409d915d18d6750940047af3f8225ed13d770a09cfc8ddea87b0f12b48ac",
-    "v0_2/tests/tools/memphis_control_path_v1/registration.json": "88a9a2e39e21d49de4b13ebeb437a78d100648947165143798a9c2ef41c74fb3",
+    "v0_2/tests/tools/memphis_control_path_v1/registration.json": "af31907dc2b18a3a3dc0d879fc3467b6eee9e01761f54624c3724ce2aac6e5ef",
     "v0_2/tests/tools/memphis_control_path_v1/report_template.html": "89034ab27283625ebd31fb519a79ad6731c46f52270aad19710f756f33980193",
     "v0_2/tests/tools/memphis_control_path_v1/report.py": "b7a5ba8039dd4cc7aeebacca16f24d0083c924d256297044d4897d26e4aebd8f",
     "v0_2/tests/tools/memphis_control_path_v1/run_remote.ps1": "b88dbce42e59330a2b07cd0c48e4decefb0e33eb08147a578ea06c78f1e8ee40",
-    "v0_2/tests/tools/memphis_control_path_v1/simulation.py": "f52bb4bd30518e8b2764e4c55f74bd24407dfc7c084a39e4ef12314b4b6d30d2",
-    "v0_2/tests/tools/memphis_control_path_v1/stages.py": "947ce255552b2f36611a9c21f2ad2352738a687cfcd1cfdfbc38975ae4096cb8",
+    "v0_2/tests/tools/memphis_control_path_v1/simulation.py": "17baf98b26533a9fb0bc0d93e242feca3059fdef9740c5b7b49025dd347cb4ca",
+    "v0_2/tests/tools/memphis_control_path_v1/stages.py": "62ca2f4876aa97b809d646df3f5e7e37e695f7a3ba99e3094d4f1ce984fef23e",
     "v0_2/tests/tools/memphis_control_path_v1/worker.py": "9dd67bdb2796d110eea9df013185ef69738b45819258dbd8c262a20506329721",
     ".github/workflows/ci.yml": "1e8392f0f478f82076a6a3cd13a4e26d32c1e3058edbdda49315f9eabdc13b14"
   },
