@@ -1,5 +1,5 @@
 {
- "schema":"MEMPHIS-CDU-TAKEOVER-RESERVE-v1","build":1,
+ "schema":"MEMPHIS-CDU-TAKEOVER-RESERVE-v1","build":2,
  "branch":"codex/memphis-cdu-takeover-v1",
  "parent_execution":"3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d","parent_delivery":"246ed3c49550287249b474f93f92d8b990a35af7",
  "authority":"User explicitly authorized this dedicated branch commit/push and bounded GitHub DEVELOPMENT. No merge, release, formal C3C, procurement, production, hardware or Phase6.",

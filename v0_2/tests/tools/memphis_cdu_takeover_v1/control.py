@@ -42,6 +42,15 @@ class CDUController:
                 if self.bad[i] is not None and now-self.bad[i]>=1000000000 and self.owner in (None,i):
                     self.owner=i;self.change(i,'FAULT_DETECTED',now,'RELEASED_CDU_HEALTH_OR_LOCAL_FLOW_NOT_SOURCE_TEMPERATURE',obs)
             elif state=='FAULT_DETECTED':
+                # A measured failed primary path cannot remove rack heat even
+                # while its secondary pump circulates. Leaving that pump in
+                # parallel indefinitely prevents the spare branch from reaching
+                # its single-running design point. Isolate that failed path;
+                # do NOT lower the spare flow/thermal completion thresholds.
+                # This candidate sequence is not a continuity PASS or an OEM
+                # safety policy; all actual coast/valve gaps remain measured.
+                if a['primary_m3_h']<88:
+                    self.primary[i][0]=self.secondary[i][0]=self.pumps[i][0]=0.
                 self.change(i,'STANDBY_CDU_PERMISSIVE' if b['ready'] else 'NO_STANDBY',now,'PAIR_LOCAL_AVAILABILITY; NO_CROSS_UNIT_BACKUP',obs)
             elif state=='STANDBY_CDU_PERMISSIVE':
                 self.primary[i][1]=1.;self.change(i,'STANDBY_CDU_START',now,'OPEN_B_PRIMARY_PAIR; A_B_PRIMARY_FLUIDS_SEPARATE',obs)

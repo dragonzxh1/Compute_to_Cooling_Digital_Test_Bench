@@ -28,6 +28,15 @@ def assertions(d):
     try:ctl.request(bad,3)
     except AssertionError:pass
     else:raise ValueError('FUTURE_SOURCE_REFUSAL')
+    # Pure control regression: a released failed-primary observation must not
+    # leave an uncooled old secondary branch blocking the spare design flow.
+    pair=[dict(ready=True,primary_m3_h=0.,secondary_m3_h=68.37,primary_valve=1.),dict(ready=True,primary_m3_h=0.,secondary_m3_h=0.,primary_valve=0.)]
+    controller=control.CDUController()
+    for now in (0,1000000000,1200000000):
+        observation=dict(id='regression:'+str(now),sample_ns=now,release_ns=now,units=[dict(cdu=pair) for _ in range(3)])
+        issued=controller.request(observation,now)
+    require(issued['primary'][0][0]==0 and issued['secondary'][0][0]==0 and issued['pumps'][0][0]==0,'FAILED_PRIMARY_OLD_BRANCH_ISOLATION')
+    require(issued['primary'][1][0]==1 and issued['secondary'][1][0]==1,'ONLY_LOCAL_SELECTED_PAIR_CHANGED')
     ids=[s['id'] for s in reg['cases']];require(len(set(ids))==len(ids),'UNIQUE_REGISTERED_CASES')
     expanded=[dict(reg['common_input'],**s.get('change',{}),id=s['id']) for s in reg['cases'] if s['kind']=='forward']
     require(all(c['seconds']<=1800 and c['dt_s'] in (.1,.05) and not c['independent_recharge'] for c in expanded),'BOUNDED_NO_RC')
