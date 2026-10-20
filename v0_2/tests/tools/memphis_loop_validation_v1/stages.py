@@ -7,6 +7,7 @@ HERE=Path(__file__).resolve().parent
 
 def assertions(directory):
     for p in HERE.glob('*.py'):ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p))
+    from . import simulation,plant,observer,report
     from .coordination import control_options,Controller,PLC,record
     from types import SimpleNamespace
     require(control_options(dict(extensions=True,architecture='ORIGINAL_SHARED',fault_at_s=30,repair_W1_at_s=900,second_fault_at_s=1800,hidden_state=True))==dict(extensions=True,architecture='ORIGINAL_SHARED'),'FUTURE_SCHEDULE_WHITELIST')
@@ -39,6 +40,7 @@ def source_checks(directory,c):
     from v0_2.tests.tools.memphis_hydraulic_continuity_v1.independent import close
     rows=FileArray(directory/'case/physics.json',round(c['seconds']/c['dt_s']))
     source_warmup=False;rc_a=False;rc_b=False;sink_witness=False;pump_witness=False;sample_binding={}
+    stable_since=None;last_mode=None;last_speed=None;restoration_samples=restoration_deficit=0.;restoration_minimum=None
     for r in rows:
         require(r.get('neutral') is None and r['load_tank']=='A','NO_THIRD_LOOP_OR_HIDDEN_LOAD_TRANSFER')
         require(r['aux_rejected_w']==0 and r['aux_pump_w']==0,'NO_EXTRA_PRECONDITIONING_COLD_SERVICE')
@@ -53,6 +55,19 @@ def source_checks(directory,c):
             if sink==0:sink_witness=True
         if c.get('pump_loss_at_s') is not None and r['start_ns']/1e9>=c['pump_loss_at_s']:
             require(r['actual_source_pumps']<=3,'SOURCE_PUMP_FAILURE_NOT_ACTUAL');pump_witness=True
+        mode=(r['source_tank'],r['source_path'],r['actual_source_pumps'])
+        speed=r['source_speed'];now_s=r['end_ns']/1e9;dt=(r['end_ns']-r['start_ns'])/1e9
+        full=r['source_valve']>=1-1e-9 and speed>0 and mode==last_mode and last_speed is not None and abs(last_speed-speed)<1e-12
+        if full:
+            if stable_since is None:stable_since=now_s
+        else:stable_since=None
+        restoring=(now_s>=120 and r['source_tank']=='A' and r['actual_source_pumps']==4 and r['source_startup_elapsed_s']>=c['physical_startup_s']
+            and r['tank_A_cold_m3']<14.0625 and stable_since is not None and now_s-stable_since>=5.)
+        if restoring:
+            restoration_samples+=dt;flow=r['source_flow_m3_h']
+            restoration_minimum=flow if restoration_minimum is None else min(restoration_minimum,flow)
+            if flow<=330+1e-8:restoration_deficit+=dt
+        last_mode=mode;last_speed=speed
         if r['end_ns']%200000000==0:
             sample_binding[r['end_ns']]=dict(source_flow_m3_s=r['source_flow_m3_h']/3600,
                 recharge_speed=r['recharge_actual_speed'],rc_valve_feedback=r['rc_valve'],actual_rc_tank=r['rc_tank'],
@@ -83,7 +98,9 @@ def source_checks(directory,c):
         require(f['safety']['data']['current_cold_return_confirmed']==expected,'INDEPENDENT_CURRENT_COLD_READY')
         require(o['wet_inlet_gauge_pa'] is None,'NO_FABRICATED_ABSOLUTE_PRESSURE')
         prior=r
-    return dict(actual_RC_served_A=rc_a,actual_RC_served_B=rc_b,source_cold_start_exercised=source_warmup,RC_sink_loss_exercised=sink_witness,pump_loss_exercised=pump_witness)
+    return dict(actual_RC_served_A=rc_a,actual_RC_served_B=rc_b,source_cold_start_exercised=source_warmup,RC_sink_loss_exercised=sink_witness,pump_loss_exercised=pump_witness,
+        A_restoration_stable_samples_s=restoration_samples,A_restoration_min_source_m3_h=restoration_minimum,A_restoration_flow_not_above330_s=restoration_deficit,
+        A_restoration_hydraulic_deficit=restoration_deficit>=5.)
 
 def stage(entry,directory):
     if entry['kind']=='assertions':return assertions(directory)
@@ -113,7 +130,7 @@ def stage(entry,directory):
         a,b=(bound[n] for n in ('SHARED_SECOND_REPAIRED','RC_SECOND_REPAIRED'))
         require(a['source_commit']==b['source_commit']==os.environ['GITHUB_SHA'],'C_REQUIRES_SAME_EXECUTION_PRIOR_EVIDENCE')
         unqualified=all(not x['second_fault']['pre_event_component_qualified'] or x['grades']['SECOND_FAULT_90S']!='PASS' for x in (a,b))
-        hydraulic=any(x['minimum_load_m3_h']<330-1e-8 for x in (a,b)) or a['source_final_m3_h']<=330+1e-8
+        hydraulic=any(x['minimum_load_m3_h']<330-1e-8 or x['proposal_checks']['A_restoration_hydraulic_deficit'] for x in (a,b))
         decision=dict(id=entry['id'],A_B_both_unqualified=unqualified,observed_hydraulic_deficit=hydraulic,
             source_commit=os.environ['GITHUB_SHA'],status='RUN_DECLARED_SOURCE_VFD_MARGIN' if unqualified and hydraulic else 'NOT_RUN_NO_JUSTIFIED_HYDRAULIC_DEFICIT',
             scope='Gated diagnostic, not an approved pump/valve redesign',registered_change=entry['change'])

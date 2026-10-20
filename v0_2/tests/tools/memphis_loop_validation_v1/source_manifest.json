@@ -1,6 +1,6 @@
 {
   "schema": "MEMPHIS-LOOP-VALIDATION-SOURCE-v1",
-  "build": 1,
+  "build": 2,
   "source_raw_sha256": {
     ".github/workflows/memphis-loop-validation-v1-runner.yml": "384d7469ea38db1f3c5ea420d8396c8b777d3dde09cce1616beb6e1e64d355ce",
     ".github/workflows/memphis-loop-validation-v1.yml": "f628aaa3810023b05a1b0907155ce36de0ad7caa47638533e9efc74465244845",
@@ -15,11 +15,11 @@
     "v0_2/tests/tools/memphis_loop_validation_v1/plant.py": "64f44a7de34667e8e9ec95d431adce7d8881fc518e1ba066263c5b75ad86405b",
     "v0_2/tests/tools/memphis_loop_validation_v1/prepare_snapshot.ps1": "240382e58879a4a76d94a485754b3c92f4e4c3453e6399f65d9121fb4a056c73",
     "v0_2/tests/tools/memphis_loop_validation_v1/README.md": "8dd2a0c5e73fe4e06ab2b4fda575520c2e3d408862e1f8cfbf0447e1cfa9d265",
-    "v0_2/tests/tools/memphis_loop_validation_v1/registration.json": "f67e40b53a597c310c2c98ef0f8e7d2008dcc00a9fc10fc24e3cd3a7b285b4e0",
+    "v0_2/tests/tools/memphis_loop_validation_v1/registration.json": "e41739ba5e30e8852db58cb27afb6aff4a0367b2b19855953f7dbe40c80653ae",
     "v0_2/tests/tools/memphis_loop_validation_v1/report.py": "8d413c19b25818a8190f86fbc5bedd4cdaf9dd6bbeca862caf4f9937f7664a30",
     "v0_2/tests/tools/memphis_loop_validation_v1/run_remote.ps1": "d607e28b883684050d5672ad84e0217a2009a6f130ef0a9f02a83df25c020094",
-    "v0_2/tests/tools/memphis_loop_validation_v1/simulation.py": "a6b3233e2632023c9786279ea1ba7ff39673ce05346154670643378bde098406",
-    "v0_2/tests/tools/memphis_loop_validation_v1/stages.py": "5146890c2c23d66714f2007dd7c593496846394308e543bb058fa6c36a522a8f",
+    "v0_2/tests/tools/memphis_loop_validation_v1/simulation.py": "9858c53c71da43d1378172209e2a2776ac9fe8e5ff853d796f9da7c689071187",
+    "v0_2/tests/tools/memphis_loop_validation_v1/stages.py": "94aea3b689952de78f56fd26f388bbde7e55c2a2dd82b4ea2af7d3df74b38560",
     "v0_2/tests/tools/memphis_loop_validation_v1/worker.py": "9dd67bdb2796d110eea9df013185ef69738b45819258dbd8c262a20506329721",
     ".github/workflows/ci.yml": "34f7d1c68f183e91570d85ed86b3b2a11ad46d7dd24ec8d419839995d842dd61"
   },

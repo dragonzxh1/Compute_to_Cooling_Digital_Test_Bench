@@ -10,7 +10,7 @@ from v0_2.tests.tools.memphis_failure_closure_v1.group_model.common import HERE,
 from v0_2.tests.tools.memphis_failure_closure_v1.group_model.plant import ProjectUnit
 from .plant import SourcePlant
 from .coordination import Coordinator,ProjectProtection,SourcePLC,record,control_options
-from .streaming import StreamArray
+from v0_2.tests.tools.memphis_hydraulic_continuity_v1.streaming import StreamArray
 
 ROOT=HERE.parents[4]
 
