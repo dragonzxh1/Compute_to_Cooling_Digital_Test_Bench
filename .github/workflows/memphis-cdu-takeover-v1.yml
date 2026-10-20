@@ -1,0 +1,53 @@
+name: Memphis dual CDU and actual reserve depletion DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-cdu-takeover-v1]
+    paths: ['v0_2/tests/tools/memphis_cdu_takeover_v1/**', '.github/workflows/memphis-cdu-takeover-v1*.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: memphis-cdu-takeover-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  matrix:
+    needs: baseline
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: matrix
+      expected_commit: ${{ github.sha }}
+  recovery:
+    needs: matrix
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: recovery
+      expected_commit: ${{ github.sha }}
+  negative:
+    needs: recovery
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: negative
+      expected_commit: ${{ github.sha }}
+  mesh:
+    needs: negative
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: mesh
+      expected_commit: ${{ github.sha }}
+  diagnostic:
+    needs: mesh
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: diagnostic
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, matrix, recovery, negative, mesh, diagnostic]
+    uses: ./.github/workflows/memphis-cdu-takeover-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}

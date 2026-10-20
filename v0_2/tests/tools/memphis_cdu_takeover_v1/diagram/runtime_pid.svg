@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="三组六柜双CDU与独立A/B一次回路功能连接，非施工图">
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width=".5"/></pattern><marker id="a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0L9 3.5L0 7" fill="#94a3b8"/></marker></defs>
+<style>text{font-family:'Microsoft YaHei',sans-serif;fill:#e2e8f0;font-size:15px}.small{fill:#94a3b8;font-size:12px}.A{fill:none;stroke:#22d3ee;stroke-width:2}.B{fill:none;stroke:#a78bfa;stroke-width:2}.s{fill:none;stroke:#34d399;stroke-width:2}.box{fill:#0f172a;stroke:#64748b;stroke-width:1.5}.group{fill:none;stroke:#64748b;stroke-dasharray:7 5}.label{font-size:13px}</style>
+<rect width="1200" height="650" fill="#0f172a"/><rect width="1200" height="650" fill="url(#grid)"/>
+<text x="30" y="35" style="font-size:21px;font-weight:600">原00/01架构 · 三用三备CDU · 本次物理模型功能连接</text>
+<text x="30" y="60" class="small">SOURCE_MISSING：最终新版施工P&amp;ID/详细故障联锁矩阵；当前初始运行A、备用B及阀序为待确认候选。</text>
+<rect x="35" y="110" width="165" height="90" rx="8" class="box"/><text x="55" y="140">W1 / W2 冷源</text><text x="55" y="165" class="small">单一路径运行 / 真实建冷</text><text x="55" y="185" class="small">共用4源泵，常态3+1</text>
+<path d="M200 145H230V155H265M200 175H230V410H265" class="A" marker-end="url(#a)"/><text x="205" y="240" class="small">成对选择阀</text><text x="205" y="260" class="small">先停泵/隔离</text><text x="205" y="280" class="small">源侧不并通</text>
+<rect x="265" y="115" width="170" height="125" rx="12" class="box"/><text x="285" y="143">A罐 · 15m³</text><text x="285" y="169" class="small">顶：负荷热回 / 源热抽</text><text x="285" y="193" class="small">底：源冷回 / 负荷冷抽</text><text x="285" y="220" class="small">逐层能量 / 实际冷量</text>
+<rect x="265" y="370" width="170" height="125" rx="12" class="box"/><text x="285" y="398">B罐 · 15m³</text><text x="285" y="424" class="small">顶：负荷热回 / 源热抽</text><text x="285" y="448" class="small">底：源冷回 / 负荷冷抽</text><text x="285" y="475" class="small">从冷备实际放冷，不虚扣</text>
+<path d="M435 155H1135M435 410H1135" class="A"/><path d="M435 410H1135" class="B"/>
+<text x="455" y="135" class="small">A独立负荷泵/环网 · CDU热回同罐顶部（回线省画）</text><text x="455" y="465" class="small">B独立负荷泵/环网 · 不经CDU把A供与B回连通</text>
+<rect x="540" y="180" width="190" height="375" rx="10" class="group"/><rect x="750" y="180" width="190" height="375" rx="10" class="group"/><rect x="960" y="180" width="190" height="375" rx="10" class="group"/>
+<path d="M635 155V210M845 155V210M1055 155V210" class="A" marker-end="url(#a)"/><path d="M635 410V455M845 410V455M1055 410V455" class="B" marker-end="url(#a)"/>
+<rect id="U0A" x="565" y="210" width="140" height="62" rx="7" class="box"/><text x="585" y="236">U0-A CDU</text><text x="585" y="257" class="small">独立HX / 二次泵</text>
+<rect id="U1A" x="775" y="210" width="140" height="62" rx="7" class="box"/><text x="795" y="236">U1-A CDU</text><text x="795" y="257" class="small">独立HX / 二次泵</text>
+<rect id="U2A" x="985" y="210" width="140" height="62" rx="7" class="box"/><text x="1005" y="236">U2-A CDU</text><text x="1005" y="257" class="small">独立HX / 二次泵</text>
+<path d="M635 272V315M845 272V315M1055 272V315" class="s" marker-end="url(#a)"/>
+<rect x="565" y="315" width="140" height="62" rx="7" class="box"/><text x="585" y="340">U0 · 六机柜</text><text x="585" y="361" class="small">147.25kW入液/柜</text>
+<rect x="775" y="315" width="140" height="62" rx="7" class="box"/><text x="795" y="340">U1 · 六机柜</text><text x="795" y="361" class="small">147.25kW入液/柜</text>
+<rect x="985" y="315" width="140" height="62" rx="7" class="box"/><text x="1005" y="340">U2 · 六机柜</text><text x="1005" y="361" class="small">147.25kW入液/柜</text>
+<rect id="U0B" x="565" y="475" width="140" height="62" rx="7" class="box"/><text x="585" y="501">U0-B CDU</text><text x="585" y="522" class="small">仅本单元备用</text>
+<rect id="U1B" x="775" y="475" width="140" height="62" rx="7" class="box"/><text x="795" y="501">U1-B CDU</text><text x="795" y="522" class="small">仅本单元备用</text>
+<rect id="U2B" x="985" y="475" width="140" height="62" rx="7" class="box"/><text x="1005" y="501">U2-B CDU</text><text x="1005" y="522" class="small">仅本单元备用</text>
+<path d="M705 505H718V345H705M915 505H928V345H915M1125 505H1138V345H1125" class="s" marker-end="url(#a)"/>
+<text x="30" y="580" class="label">青：A一次环网　紫：B一次环网　绿：各单元二次路径；板换两侧仅传热，不混液。</text>
+<text x="30" y="608" class="small">一次设计总330m³/h，逐组六柜110m³/h；二次逐组68.37m³/h参考另判。总管流量不代替局部流量/45°C/90秒。</text>
+<text x="30" y="631" class="small">仅一对必要短时重叠；流量由泵-网交点算得；相对压差不证明静压/NPSH/水锤；非施工图、非OEM保证。</text>
+</svg>
