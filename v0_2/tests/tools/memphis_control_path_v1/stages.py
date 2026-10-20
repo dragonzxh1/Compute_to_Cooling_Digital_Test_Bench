@@ -8,7 +8,11 @@ HERE=Path(__file__).resolve().parent
 def assertions(directory):
     for p in HERE.glob('*.py'):ast.parse(p.read_text(encoding='utf-8-sig'),filename=str(p))
     from . import simulation,plant,observer,report
-    constants={n.value for n in ast.walk(ast.parse((HERE/'simulation.py').read_text(encoding='utf-8'))) if isinstance(n,ast.Constant) and isinstance(n.value,str)}
+    def declared_keys(text):
+        nodes=list(ast.walk(ast.parse(text)))
+        return {n.value for n in nodes if isinstance(n,ast.Constant) and isinstance(n.value,str)}|{n.arg for n in nodes if isinstance(n,ast.keyword) and n.arg is not None}
+    require('example' in declared_keys('dict(example=1)') and 'example' in declared_keys("{'example':1}") and 'missing' not in declared_keys('dict(example=1)'),'ADAPTER_AST_POSITIVE_AND_NEGATIVE_CONTROLS')
+    constants=declared_keys((HERE/'simulation.py').read_text(encoding='utf-8'))
     require({'requested_recharge_done','requested_recharge_screen_met','source_timeline','source_returned_at_ns','final_units','maximum_rack_return_c'}<=constants,'LEGACY_AUDIT_RESULT_ADAPTER_KEYS')
     from .coordination import control_options,Controller,PLC,record
     from types import SimpleNamespace

@@ -1,5 +1,6 @@
 {
- "schema":"MEMPHIS-ORIGINAL-CONTROL-PATH-COMPLETION-v1","build":2,
+ "schema":"MEMPHIS-ORIGINAL-CONTROL-PATH-COMPLETION-v1","build":3,
+ "previous_preflight_failure":{"execution":"9a47e971ed9b18af275ab61fb78f1b725307ed5c","run":39408641593,"error":"New AST adapter checker did not collect ast.keyword names in dict(key=value), falsely rejected present output keys. Fix recognizer and add positive/negative synthetic AST controls; no model or physical cases ran. Raw evidence retained; actualPID6208 exit1 cleanup0active."},
  "previous_build":{"execution":"463361c28e883b825696e385617da28b9a4f6a5c","run":39407670508,"status":"INCOMPLETE_ADAPTER_KEY_ERROR","error":"requested_recharge_done legacy audit key removed; restore explicitly labeled compatibility alias, not a qualification claim. Official raw ZIP and logs retained; child exited1, cleanup complete active0. No full new engineering cases ran."},
  "branch":"codex/memphis-control-path-v1",
  "authority":"User supplied FULL AUTONOMOUS ENGINEERING EXECUTION task, dedicated research branch publication and isolated development scenarios; no merge, customer design change approval, formal, procurement, production or hardware.",
