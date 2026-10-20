@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches-ignore: [codex/memphis-r12-mapping-v1, codex/memphis-cdu-takeover-v1, codex/memphis-failover-optimization-v1, codex/memphis-inverse-sizing-v1, codex/memphis-failure-closure-v1, codex/memphis-topology-audit-v1]
+    branches-ignore: [codex/memphis-r12-dynamic-hydraulic-v1, codex/memphis-r12-mapping-v1, codex/memphis-cdu-takeover-v1, codex/memphis-failover-optimization-v1, codex/memphis-inverse-sizing-v1, codex/memphis-failure-closure-v1, codex/memphis-topology-audit-v1]
   pull_request:
 
 permissions:

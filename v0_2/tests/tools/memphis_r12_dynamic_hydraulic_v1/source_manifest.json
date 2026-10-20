@@ -1,0 +1,87 @@
+{
+  "revision": "R12-DYNAMIC-HYDRAULIC-V1-BUILD001",
+  "scope": "ONE_SIX_RACK_SHORT_DYNAMIC_RESEARCH",
+  "frozen_m1_modified": false,
+  "cpu_rate": 2500,
+  "process_mb": 256,
+  "job_mb": 512,
+  "wall_seconds": 480,
+  "source_files": [
+    {
+      "path": ".github/workflows/memphis-r12-dynamic-hydraulic-v1.yml",
+      "sha256": "24bfeefaceeee666710632260859a6b3a9df0565c02b1f54d4038ec4f8ccaf8b"
+    },
+    {
+      "path": "v0_2/__init__.py",
+      "sha256": "b526e266cb8ee98cd02b1a4a61f6829a95ab0ad45ac9cc221eb05ee6b651935a"
+    },
+    {
+      "path": "v0_2/tests/tools/liquid_recovery_v1/batch.ps1",
+      "sha256": "0b128615f0ecbaed53c05d06f74ea47a59e4c76a185983366db52d1394caa90f"
+    },
+    {
+      "path": "v0_2/tests/tools/m1_remote_executor_v1/build.ps1",
+      "sha256": "5b9363ee1e809b4d8dcd688d38c20906169898848c423854a8a20d75ad04d55f"
+    },
+    {
+      "path": "v0_2/tests/tools/m1_remote_executor_v1/ControlledJob.cs",
+      "sha256": "eb36313d9184971d317b866e493d95afce4b002ee3f06f094d62a91df99de992"
+    },
+    {
+      "path": "v0_2/tests/tools/m1_remote_executor_v1/VerifyTarget.cs",
+      "sha256": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/__init__.py",
+      "sha256": "8089e00ac79e4aaf9180394c458f7f8f5901bda65638eb766a144129b6e5de08"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/campaign.py",
+      "sha256": "3ce97c4860ca1cd9ff826c1c0526d3c9613f35a9cdf0c479ad925cd07c444f77"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/control.py",
+      "sha256": "7d88808927e3240bb7f45eee48d8fef72103eeead8cc6004456f58d15bb3185f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/hydraulics.py",
+      "sha256": "e9faa7b3ef6e4eba3fae4bd13a938e0248efa2804d3a469866f29d74fc6f485f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/infra/ci-branch-only.yml",
+      "sha256": "da03c9295324885f71e3a5e39dac9b0acacc23aa15974dab76630ab0713e2469"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/inputs/pid_spec.json",
+      "sha256": "5d67438a38cc13f12bb474fd8753c8796fdccf608dcd12ce0319cefede41fc64"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/inputs/pid.expanded.json",
+      "sha256": "3cef7f02928e3ac11eb1fd672622a80cb2f6cdb402337291e4796d30d2a4a02b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/plant.py",
+      "sha256": "f44d9cb80f46908fd1c8e177d12570ab60183088fb1134c42de46aad059d6e8a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/README_ZH.md",
+      "sha256": "0516f625847e380c36645cbf427f9c501b1c0cbb2b33378351d386b36aa9f6b6"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/registration.json",
+      "sha256": "08d15cb4a4effd55425a1774c1ad06c5d558455f08b292859316dc050fcc74b3"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/report.py",
+      "sha256": "9e5018d566ba06818cab6ad76b5c7b68ed73de075f1e9d30970169cef29da180"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/run_remote.ps1",
+      "sha256": "5a2ea3ac0eaf1305aec4895629fd39019da0fcbf11a53c65da905422468c28ef"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/worker.py",
+      "sha256": "322cf639a5339f0c35327282a14395f472d9d0684972cf487286a8ad0b53c54a"
+    }
+  ]
+}

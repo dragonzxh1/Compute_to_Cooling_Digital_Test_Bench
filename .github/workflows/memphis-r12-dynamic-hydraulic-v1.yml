@@ -1,0 +1,56 @@
+name: Memphis R12 single-six-rack bounded dynamic hydraulic development
+on:
+  push:
+    branches: [codex/memphis-r12-dynamic-hydraulic-v1]
+    paths: ['v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/**', '.github/workflows/memphis-r12-dynamic-hydraulic-v1.yml']
+permissions:
+  contents: read
+concurrency:
+  group: memphis-r12-dynamic-hydraulic-v1
+  cancel-in-progress: false
+jobs:
+  short-dynamic:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      PYTEST_DISABLE_PLUGIN_AUTOLOAD: '1'
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMEXPR_NUM_THREADS: '1'
+    steps:
+      - name: Preserve exact Git blob bytes
+        shell: pwsh
+        run: git config --global core.autocrlf false
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11.9'
+          architecture: x64
+      - name: Install only the registered numerical dependency (no model execution)
+        shell: pwsh
+        run: python -m pip install numpy==2.4.6
+      - name: First bounded 60-physical-second baseline under actual native Job
+        id: baseline
+        shell: pwsh
+        run: |
+          & ./v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/run_remote.ps1 -ExpectedCommit $env:GITHUB_SHA -Stage baseline
+      - name: Remaining short cases only if measured resource admission succeeds
+        if: steps.baseline.outputs.suite_ready == 'true'
+        shell: pwsh
+        run: |
+          & ./v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/run_remote.ps1 -ExpectedCommit $env:GITHUB_SHA -Stage suite
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: memphis-r12-short-dynamic-${{ github.run_id }}
+          path: |
+            artifacts/memphis-r12-dynamic-hydraulic-v1/
+            artifacts/m1-remote-executor-v1/build/build_identity.json
+            v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/source_manifest.json
+            v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/registration.json
+          retention-days: 30
+          if-no-files-found: error
