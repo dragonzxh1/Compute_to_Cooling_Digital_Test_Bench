@@ -1,0 +1,106 @@
+{
+  "source_commit": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+  "registration_raw_sha256": "922fb21d17eea223f5b867f2e6ee64f37e13c0b9e485c15e01262d45607b3e80",
+  "topology_raw_sha256": "3cef7f02928e3ac11eb1fd672622a80cb2f6cdb402337291e4796d30d2a4a02b",
+  "authoring_sha256": "5d67438a38cc13f12bb474fd8753c8796fdccf608dcd12ce0319cefede41fc64",
+  "source_manifest_sha256": "4a2978d991cdc2cf9a3c45c8f374bdad05324147fc0fc5c098aabbca3fda93b0",
+  "source_zip_sha256": "0022043c7c693f8c6ee9e1c896e8b9fd082b48f13354edf196616f4a9f11f793",
+  "official_zip_sha256": "371fa29d99aa97d778a451c20fe98c7450816d320c91e5a55f28e731de613263",
+  "raw_logs_sha256": "d93a1eb9ca1dd761cbd94257e0a349dbe8145aa741f3bd0325bf41fa0e66b630",
+  "native_jobs": [
+    {
+      "stage": "baseline",
+      "pid": 7312,
+      "environment": {
+        "source_commit": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+        "image": "20261012.333.1",
+        "os": "Windows-10-10.0.20348-SP0",
+        "python": "3.11.9",
+        "numpy": "2.4.6",
+        "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "pid": 7312,
+        "stage": "baseline",
+        "cpu_rate": 2500,
+        "process_mb": 256,
+        "job_mb": 512,
+        "wall_seconds": 480,
+        "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+        "external_job_sha256": "f0ed2db0fd5c350c045d81e6cbc6f8c8d82076a0591413177b1c1f717671ddfc",
+        "long_run": false
+      },
+      "job": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 7312,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      }
+    },
+    {
+      "stage": "suite",
+      "pid": 5208,
+      "environment": {
+        "source_commit": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+        "image": "20261012.333.1",
+        "os": "Windows-10-10.0.20348-SP0",
+        "python": "3.11.9",
+        "numpy": "2.4.6",
+        "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "pid": 5208,
+        "stage": "suite",
+        "cpu_rate": 2500,
+        "process_mb": 256,
+        "job_mb": 512,
+        "wall_seconds": 480,
+        "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+        "external_job_sha256": "d076a1ca3b070d935f3072a0ef092c90b0465aec60ea89d26fcff03714b2e037",
+        "long_run": false
+      },
+      "job": {
+        "outcome": "EXITED",
+        "child_exitcode": 1,
+        "pid": 5208,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      }
+    }
+  ],
+  "observed": [
+    {
+      "stage": "baseline",
+      "pid": 7312,
+      "peak_job_bytes_observed_in_heartbeats": 71073792,
+      "last_heartbeat": {
+        "pid": 7312,
+        "elapsed_ms": 2059,
+        "job_cpu_100ns": 17500000,
+        "active": 2,
+        "peak_job_memory_bytes": 71073792
+      },
+      "note": "Heartbeat observation, not a claim to have captured final lifetime peak. Limits and cleanup independently verified."
+    },
+    {
+      "stage": "suite",
+      "pid": 5208,
+      "peak_job_bytes_observed_in_heartbeats": 71094272,
+      "last_heartbeat": {
+        "pid": 5208,
+        "elapsed_ms": 2053,
+        "job_cpu_100ns": 18437500,
+        "active": 2,
+        "peak_job_memory_bytes": 71094272
+      },
+      "note": "Heartbeat observation, not a claim to have captured final lifetime peak. Limits and cleanup independently verified."
+    }
+  ],
+  "no_local_model_execution": true,
+  "formal_c3c": false,
+  "hardware": false,
+  "phase6": false
+}

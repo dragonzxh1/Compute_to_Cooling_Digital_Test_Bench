@@ -1,0 +1,71 @@
+{
+  "schema": "R12-SHORT-DYNAMIC-OFFICIAL-BYTE-REVIEW-1",
+  "run": "39491851591",
+  "source_commit": "8e5535afa77f9a7b0beaa96f244d66e4c74e4495",
+  "official_zip_sha256": "c0b2d749e10b3f77e5813d325dcbfc3c82e3f1618ba1f29d3ca2c746a8a9b117",
+  "official_digest_verified": true,
+  "raw_logs_sha256": "8f9e3aabb90bdaa2d53f02ae7b31c22f968dc852ec3a1142897edbc54553fbc8",
+  "source_manifest_sha256": "fa6b0525e40bffd96b6a7aaec0c63719e15698452223d7c9f80cb68454b09b1b",
+  "source_zip_sha256": "ed7d2fa522449c333b3fd41dca705562c151d3b71e8e7c0a5f20ed756b30d7b9",
+  "github_conclusion": "failure",
+  "stages": [
+    {
+      "result": {
+        "status": "FAIL",
+        "stage": "baseline",
+        "environment": {
+          "source_commit": "8e5535afa77f9a7b0beaa96f244d66e4c74e4495",
+          "image": "20261012.333.1",
+          "os": "Windows-10-10.0.20348-SP0",
+          "python": "3.11.9",
+          "numpy": "2.4.6",
+          "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+          "pid": 4456,
+          "stage": "baseline",
+          "cpu_rate": 2500,
+          "process_mb": 256,
+          "job_mb": 512,
+          "wall_seconds": 480,
+          "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+          "external_job_sha256": "72dba9a06b4749abce00278dde4eb9ca5a6b47d9f32a5d6906f4a78deaff27c4",
+          "long_run": false
+        },
+        "error": "RuntimeError('HYDRAULIC_NONCONVERGENCE domain=False residual=0.04998627699555322 iteration=79')",
+        "traceback": "Traceback (most recent call last):\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_dynamic_hydraulic_v1\\worker.py\", line 55, in main\n    r,rows=run_case(graph,reg,case,delivery/case['id']);results.append(r);series.append(rows)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_dynamic_hydraulic_v1\\campaign.py\", line 37, in run_case\n    plant.actuate(dt,now);plant.solve();plant.thermal_step(dt);post=plant.physical(round(now+dt,8))\n                          ^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_dynamic_hydraulic_v1\\plant.py\", line 84, in solve\n    self.sec.solve(self.valves,self.speeds,self.faults)\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_dynamic_hydraulic_v1\\hydraulics.py\", line 121, in solve\n    raise RuntimeError(f'HYDRAULIC_NONCONVERGENCE domain={self.primary} residual={err} iteration={iteration}')\nRuntimeError: HYDRAULIC_NONCONVERGENCE domain=False residual=0.04998627699555322 iteration=79\n",
+        "elapsed_s": 1.5620000000000118
+      },
+      "actual_python_pid": 4456,
+      "environment": {
+        "source_commit": "8e5535afa77f9a7b0beaa96f244d66e4c74e4495",
+        "image": "20261012.333.1",
+        "os": "Windows-10-10.0.20348-SP0",
+        "python": "3.11.9",
+        "numpy": "2.4.6",
+        "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "pid": 4456,
+        "stage": "baseline",
+        "cpu_rate": 2500,
+        "process_mb": 256,
+        "job_mb": 512,
+        "wall_seconds": 480,
+        "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+        "external_job_sha256": "72dba9a06b4749abce00278dde4eb9ca5a6b47d9f32a5d6906f4a78deaff27c4",
+        "long_run": false
+      },
+      "raw_files_verified": 15,
+      "stage": "baseline",
+      "job": {
+        "outcome": "EXITED",
+        "child_exitcode": 1,
+        "pid": 4456,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      }
+    }
+  ],
+  "scope": "IDENTITY_HASH_RESOURCE_CLEANUP_REVIEW_NOT_ENGINEERING_APPROVAL",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}

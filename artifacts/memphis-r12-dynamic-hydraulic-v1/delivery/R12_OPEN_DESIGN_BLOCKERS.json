@@ -1,0 +1,28 @@
+{
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "pressure": {
+    "requirement_kPa": 10,
+    "normal_max_all_states_kPa": 192.4123318626816,
+    "normal_max_when_both_sides_flow_kPa": 192.4123318626816,
+    "at_s": 30.4,
+    "status": "FAIL_UNDER_REGISTERED_PRESSURE_REFERENCES_NOT_OEM_PERFORMANCE_PROOF",
+    "interpretation": "Primary and secondary static pressure/equalization policy is unclosed; do not tune offsets just to obtain PASS. Isolated trapped pressure is not modeled."
+  },
+  "solver": {
+    "status": "BLOCKED_THREE_CANDIDATES_STOPPED",
+    "case": "NEG_EARLY_DUTY_EXIT",
+    "t_s": 13.5,
+    "evidence": "Pump predicted zero flow while following check valve predicted0.000637626m3/s; KCL residual0.033574 at PM1 outlet, so trial step was rejected.",
+    "questionable_assumption": "Clipped one-way pump/check algebraic flow laws handled by plain nodal Newton across zero-speed/complementarity transitions. Needs solver-method review, not a larger budget or relaxed conservation."
+  },
+  "warm_standby": "46C spare cannot obtain <=2K match; no secondary-flow standby cooling path validated.",
+  "hard_pump_loss": "Diagnostic controlled handover does not cover sudden loss of duty pumping;50s modeled zero-flow in60s case.",
+  "vendor_data": [
+    "Q-H/efficiency/NPSHr and response",
+    "filter clean/blocked dp",
+    "valve Kv/Cv and travel",
+    "fouled HX UA/dp",
+    "sensor accuracy and actual IO chains"
+  ],
+  "long_run": "NOT_ADMITTED_OR_REQUESTED; first close solver, absolute pressure and failure-coverage issues"
+}

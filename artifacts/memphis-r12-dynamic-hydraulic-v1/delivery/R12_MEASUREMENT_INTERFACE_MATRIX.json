@@ -1,0 +1,35 @@
+{
+  "source": "RELEASED_MODELED_SENSOR_FRAMES_SAVED_IN_TRACE_NOT_FIELD_IO",
+  "sample_s": 0.1,
+  "release_delay_s": 0.1,
+  "lag_s": 0.2,
+  "max_age_s": 0.5,
+  "cdu_fields": [
+    "primary_flow_m3_h",
+    "primary_inlet_C",
+    "primary_outlet_C",
+    "primary_dp_kPa",
+    "secondary_flow_m3_h",
+    "secondary_hx_inlet_C",
+    "supply_C",
+    "secondary_dp_kPa",
+    "heat_W",
+    "speed",
+    "outlet_kPa_g",
+    "suction_kPa_g"
+  ],
+  "rack_fields": [
+    "flow_m3_h",
+    "supply_C",
+    "return_C",
+    "dp_kPa",
+    "A_supply_m3_h",
+    "B_supply_m3_h",
+    "A_return_m3_h",
+    "B_return_m3_h"
+  ],
+  "individual_valve_and_pump_feedback": "Saved each integration step",
+  "hardware_independence": "NOT_VERIFIED",
+  "P1_FT": "PROPOSED_REQUIRED_INTERFACE_NOT_ORIGINAL_INSTALLED_SENSOR",
+  "units_2_3": "NOT_DYNAMICALLY_VERIFIED"
+}

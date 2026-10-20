@@ -1,0 +1,229 @@
+{
+  "scope": "ONE_SIX_RACK_UNIT_G01_U1_T2_CDU_A_TO_B_PRIMARY_A_UNCHANGED",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "complete_cases": [
+    {
+      "case": {
+        "id": "T2_COLD_STANDBY",
+        "kind": "CONTROL_HEALTH_ALARM",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "T2_COMPLETE_WITH_RECORDED_FLOW_AND_TEMPERATURE_VERDICTS"
+      },
+      "execution_status": "COMPLETED",
+      "scope": "ONE_SIX_RACK_UNIT_G01_U1_T2_CDU_A_TO_B_PRIMARY_A_UNCHANGED",
+      "wall_seconds": 1.531000000000006,
+      "physical_seconds": 60,
+      "dt_s": 0.1,
+      "steps": 600,
+      "controller_terminal": "RUN_B",
+      "complete_at": 35.2,
+      "events": [
+        {
+          "t": 10.2,
+          "old": "DUTY_A",
+          "new": "PREPARE_B",
+          "reason": "Released duty-CDU diagnostic, not a source fault"
+        },
+        {
+          "t": 17.8,
+          "old": "PREPARE_B",
+          "new": "OVERLAP",
+          "reason": "Measured dT/dp continuously within limits for 5s"
+        },
+        {
+          "t": 29.7,
+          "old": "OVERLAP",
+          "new": "STOP_OLD",
+          "reason": "New branch actual local flows established; revoke old master then stop"
+        },
+        {
+          "t": 32.9,
+          "old": "STOP_OLD",
+          "new": "ISOLATE_OLD",
+          "reason": "Released zero-speed and near-zero-flow proof"
+        },
+        {
+          "t": 35,
+          "old": "ISOLATE_OLD",
+          "new": "PROVE_B",
+          "reason": "Old path actually isolated; grant one new master"
+        },
+        {
+          "t": 35.2,
+          "old": "PROVE_B",
+          "new": "RUN_B",
+          "reason": "Actual per-rack flow after master grant"
+        }
+      ],
+      "min_rack_flow_m3_h": 11.622903565689906,
+      "min_unit_flow_m3_h": 69.73742139413945,
+      "max_rack_inlet_C": 39.611420024122886,
+      "near_zero_flow_duration_s": 0,
+      "flow_deficit_volume_m3": 0,
+      "thermal_verdict": "PASS",
+      "hydraulic_verdict": "PASS",
+      "takeover_verdict": "PASS",
+      "max_mass_relative_residual": 9.983839310834242e-7,
+      "max_energy_step_error_J": 0.0007287162734428421,
+      "final_energy_cumulative_error_J": 0.052310265600681305,
+      "simulated_guard_refusals": [],
+      "safety_latch": false,
+      "primary_boundary_rejection_energy_J": 28938194.557355307,
+      "capability_missing": [
+        "OEM_CALIBRATION",
+        "WATERHAMMER_AND_COMPRESSIBILITY",
+        "NPSH_AND_CAVITATION",
+        "SOURCE_SP_PUMPS_AND_TOWER_PERFORMANCE",
+        "STRATIFIED_A_B_TANK_INVENTORY",
+        "FULL_18_RACK_DYNAMIC_OPERATION",
+        "FROZEN_M1_INTEGRATION_QUALIFICATION",
+        "INDEPENDENT_PHYSICAL_SENSOR_HARDWARE",
+        "SECOND_FULL_SYSTEM_FAULT"
+      ],
+      "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+      "primary_B_max_valve_position": 0,
+      "max_hx_inlet_gauge_difference_kPa": 192.4123318626816,
+      "min_suction_kPa_g": 97.82295580383452,
+      "max_actual_overlap_s": 17,
+      "hx_pressure_verdict": "FAIL",
+      "suction_verdict": "PASS"
+    },
+    {
+      "case": {
+        "id": "NEG_DUTY_PUMP_LOSS",
+        "kind": "DUTY_PUMP_LOSS",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "EXPOSE_INITIAL_FLOW_LOSS_NOT_GENERALIZED_CONTINUITY_PASS"
+      },
+      "execution_status": "COMPLETED",
+      "scope": "ONE_SIX_RACK_UNIT_G01_U1_T2_CDU_A_TO_B_PRIMARY_A_UNCHANGED",
+      "wall_seconds": 1,
+      "physical_seconds": 60,
+      "dt_s": 0.1,
+      "steps": 600,
+      "controller_terminal": "PREPARE_B",
+      "complete_at": null,
+      "events": [
+        {
+          "t": 10.2,
+          "old": "DUTY_A",
+          "new": "PREPARE_B",
+          "reason": "Released duty-CDU diagnostic, not a source fault"
+        }
+      ],
+      "min_rack_flow_m3_h": 0,
+      "min_unit_flow_m3_h": 0,
+      "max_rack_inlet_C": 39.611420024122886,
+      "near_zero_flow_duration_s": 50.00000000000044,
+      "flow_deficit_volume_m3": 0.9495833333333747,
+      "thermal_verdict": "PASS",
+      "hydraulic_verdict": "FAIL",
+      "takeover_verdict": "INCOMPLETE",
+      "max_mass_relative_residual": 8.507674240654239e-7,
+      "max_energy_step_error_J": 0.000010372212273068726,
+      "final_energy_cumulative_error_J": 0.00015056133270263672,
+      "simulated_guard_refusals": [],
+      "safety_latch": false,
+      "primary_boundary_rejection_energy_J": 2465636.537810167,
+      "capability_missing": [
+        "OEM_CALIBRATION",
+        "WATERHAMMER_AND_COMPRESSIBILITY",
+        "NPSH_AND_CAVITATION",
+        "SOURCE_SP_PUMPS_AND_TOWER_PERFORMANCE",
+        "STRATIFIED_A_B_TANK_INVENTORY",
+        "FULL_18_RACK_DYNAMIC_OPERATION",
+        "FROZEN_M1_INTEGRATION_QUALIFICATION",
+        "INDEPENDENT_PHYSICAL_SENSOR_HARDWARE",
+        "SECOND_FULL_SYSTEM_FAULT"
+      ],
+      "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+      "primary_B_max_valve_position": 0,
+      "max_hx_inlet_gauge_difference_kPa": 197.09704317858996,
+      "min_suction_kPa_g": 100,
+      "max_actual_overlap_s": 0,
+      "hx_pressure_verdict": "FAIL",
+      "suction_verdict": "PASS"
+    },
+    {
+      "case": {
+        "id": "T2_WARM_STANDBY",
+        "kind": "WARM_STANDBY",
+        "fault_s": 10,
+        "initial_spare_C": 46,
+        "expected": "NO_FORCED_TEMPERATURE_PERMISSION"
+      },
+      "execution_status": "COMPLETED",
+      "scope": "ONE_SIX_RACK_UNIT_G01_U1_T2_CDU_A_TO_B_PRIMARY_A_UNCHANGED",
+      "wall_seconds": 1.1089999999999804,
+      "physical_seconds": 60,
+      "dt_s": 0.1,
+      "steps": 600,
+      "controller_terminal": "PREPARE_B",
+      "complete_at": null,
+      "events": [
+        {
+          "t": 10.2,
+          "old": "DUTY_A",
+          "new": "PREPARE_B",
+          "reason": "Released duty-CDU diagnostic, not a source fault"
+        }
+      ],
+      "min_rack_flow_m3_h": 11.622899004765124,
+      "min_unit_flow_m3_h": 69.73739402859074,
+      "max_rack_inlet_C": 39.8811014082176,
+      "near_zero_flow_duration_s": 0,
+      "flow_deficit_volume_m3": 0,
+      "thermal_verdict": "PASS",
+      "hydraulic_verdict": "PASS",
+      "takeover_verdict": "INCOMPLETE",
+      "max_mass_relative_residual": 9.894503403273802e-7,
+      "max_energy_step_error_J": 0.00072894573713711,
+      "final_energy_cumulative_error_J": 0.023106694221496582,
+      "simulated_guard_refusals": [],
+      "safety_latch": false,
+      "primary_boundary_rejection_energy_J": 39611900.16802507,
+      "capability_missing": [
+        "OEM_CALIBRATION",
+        "WATERHAMMER_AND_COMPRESSIBILITY",
+        "NPSH_AND_CAVITATION",
+        "SOURCE_SP_PUMPS_AND_TOWER_PERFORMANCE",
+        "STRATIFIED_A_B_TANK_INVENTORY",
+        "FULL_18_RACK_DYNAMIC_OPERATION",
+        "FROZEN_M1_INTEGRATION_QUALIFICATION",
+        "INDEPENDENT_PHYSICAL_SENSOR_HARDWARE",
+        "SECOND_FULL_SYSTEM_FAULT"
+      ],
+      "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+      "primary_B_max_valve_position": 0,
+      "max_hx_inlet_gauge_difference_kPa": 177.8556596870271,
+      "min_suction_kPa_g": 100,
+      "max_actual_overlap_s": 0,
+      "hx_pressure_verdict": "FAIL",
+      "suction_verdict": "PASS"
+    }
+  ],
+  "partial": [
+    {
+      "case": "NEG_EARLY_DUTY_EXIT",
+      "stage": "suite",
+      "status": "NUMERICALLY_INVALID_PREFIX_NOT_COMPLETE_CASE",
+      "t": 13.5,
+      "state": "PREPARE_B",
+      "worst_node": "G01-C01A-P2-PM1:OUT",
+      "mass_relative_residual": 0.033574007252778475
+    }
+  ],
+  "not_executed": [
+    "NEG_SPARE_NO_FLOW",
+    "NEG_MASTER_CONFLICT",
+    "NEG_FILTER_BLOCK",
+    "NEG_RACK_B_VALVE_STUCK",
+    "NEG_INSTRUMENT_STALE",
+    "NEG_PRESSURE_MISMATCH",
+    "NEG_OVERLAP_TIMEOUT",
+    "NEG_PRIMARY_AB",
+    "NEG_LOW_UA"
+  ]
+}

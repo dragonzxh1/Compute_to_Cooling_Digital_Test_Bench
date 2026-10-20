@@ -1,0 +1,116 @@
+{
+  "schema": "R12-INDEPENDENT-TRACE-REVIEW-1",
+  "run": "39492934891",
+  "source_commit": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+  "stage": "BASELINE_AND_COMPLETED_SUITE_CASES",
+  "status": "EVIDENCE_CONSISTENT_NOT_ENGINEERING_APPROVED",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "case_count": 3,
+  "cases": [
+    {
+      "case": "T2_COLD_STANDBY",
+      "scope": "INDEPENDENT_SAVED_EVIDENCE_ARITHMETIC_NOT_MODEL_REEXECUTION",
+      "evidence_consistency": "PASS",
+      "issues": [],
+      "hard_requirement_violations": [
+        "HX_INLET_GAUGE_DIFFERENCE_OVER_10KPA"
+      ],
+      "rows": 600,
+      "min_rack_flow_m3_h": 11.622903565689906,
+      "max_rack_inlet_C": 39.611420024122886,
+      "near_zero_flow_duration_s": 0,
+      "flow_deficit_volume_m3": 0,
+      "max_rack_node_mass_error_m3_h": 0.000006226417326615774,
+      "max_HX_heat_balance_error_W": 5.820766091346741e-10,
+      "max_energy_step_error_J": 0.0007287162734428421,
+      "cumulative_energy_error_J": 0.052310265600681305,
+      "primary_B_max_valve_position": 0,
+      "max_actual_overlap_s": 17,
+      "five_second_stability": {
+        "at": 17.8,
+        "observed_stable_since": 12.8,
+        "elapsed": 5
+      },
+      "controller_terminal": "RUN_B",
+      "takeover_verdict": "PASS",
+      "thermal_verdict": "PASS",
+      "hydraulic_verdict": "PASS",
+      "hx_pressure_verdict": "FAIL"
+    },
+    {
+      "case": "NEG_DUTY_PUMP_LOSS",
+      "scope": "INDEPENDENT_SAVED_EVIDENCE_ARITHMETIC_NOT_MODEL_REEXECUTION",
+      "evidence_consistency": "PASS",
+      "issues": [],
+      "hard_requirement_violations": [
+        "HX_INLET_GAUGE_DIFFERENCE_OVER_10KPA",
+        "LOCAL_FLOW_BELOW_11.395M3H"
+      ],
+      "rows": 600,
+      "min_rack_flow_m3_h": 0,
+      "max_rack_inlet_C": 39.611420024122886,
+      "near_zero_flow_duration_s": 50.00000000000044,
+      "flow_deficit_volume_m3": 0.9495833333333362,
+      "max_rack_node_mass_error_m3_h": 3.3361402529408224e-10,
+      "max_HX_heat_balance_error_W": 4.3655745685100555e-10,
+      "max_energy_step_error_J": 0.000010372212273068726,
+      "cumulative_energy_error_J": 0.00015056133270263672,
+      "primary_B_max_valve_position": 0,
+      "max_actual_overlap_s": 0,
+      "five_second_stability": null,
+      "controller_terminal": "PREPARE_B",
+      "takeover_verdict": "INCOMPLETE",
+      "thermal_verdict": "PASS",
+      "hydraulic_verdict": "FAIL",
+      "hx_pressure_verdict": "FAIL"
+    },
+    {
+      "case": "T2_WARM_STANDBY",
+      "scope": "INDEPENDENT_SAVED_EVIDENCE_ARITHMETIC_NOT_MODEL_REEXECUTION",
+      "evidence_consistency": "PASS",
+      "issues": [],
+      "hard_requirement_violations": [
+        "HX_INLET_GAUGE_DIFFERENCE_OVER_10KPA"
+      ],
+      "rows": 600,
+      "min_rack_flow_m3_h": 11.622899004765124,
+      "max_rack_inlet_C": 39.8811014082176,
+      "near_zero_flow_duration_s": 0,
+      "flow_deficit_volume_m3": 0,
+      "max_rack_node_mass_error_m3_h": 3.3361402529408224e-10,
+      "max_HX_heat_balance_error_W": 4.656612873077393e-10,
+      "max_energy_step_error_J": 0.00072894573713711,
+      "cumulative_energy_error_J": 0.023106694221496582,
+      "primary_B_max_valve_position": 0,
+      "max_actual_overlap_s": 0,
+      "five_second_stability": null,
+      "controller_terminal": "PREPARE_B",
+      "takeover_verdict": "INCOMPLETE",
+      "thermal_verdict": "PASS",
+      "hydraulic_verdict": "PASS",
+      "hx_pressure_verdict": "FAIL"
+    }
+  ],
+  "invalid_partial_cases": [
+    {
+      "case": "NEG_EARLY_DUTY_EXIT",
+      "stage": "suite",
+      "status": "NUMERICALLY_INVALID_PREFIX_NOT_COMPLETE_CASE",
+      "t": 13.5,
+      "state": "PREPARE_B",
+      "worst_node": "G01-C01A-P2-PM1:OUT",
+      "mass_relative_residual": 0.033574007252778475
+    }
+  ],
+  "not_executed": [
+    "NEG_SPARE_NO_FLOW",
+    "NEG_MASTER_CONFLICT",
+    "NEG_FILTER_BLOCK",
+    "NEG_RACK_B_VALVE_STUCK",
+    "NEG_INSTRUMENT_STALE",
+    "NEG_PRESSURE_MISMATCH",
+    "NEG_OVERLAP_TIMEOUT",
+    "NEG_PRIMARY_AB",
+    "NEG_LOW_UA"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "scope": "ONE_UNIT_RESEARCH_CONTROLLER_NOT_FROZEN_M1",
+  "events": [
+    {
+      "t": 10.2,
+      "old": "DUTY_A",
+      "new": "PREPARE_B",
+      "reason": "Released duty-CDU diagnostic, not a source fault"
+    },
+    {
+      "t": 17.8,
+      "old": "PREPARE_B",
+      "new": "OVERLAP",
+      "reason": "Measured dT/dp continuously within limits for 5s"
+    },
+    {
+      "t": 29.7,
+      "old": "OVERLAP",
+      "new": "STOP_OLD",
+      "reason": "New branch actual local flows established; revoke old master then stop"
+    },
+    {
+      "t": 32.9,
+      "old": "STOP_OLD",
+      "new": "ISOLATE_OLD",
+      "reason": "Released zero-speed and near-zero-flow proof"
+    },
+    {
+      "t": 35,
+      "old": "ISOLATE_OLD",
+      "new": "PROVE_B",
+      "reason": "Old path actually isolated; grant one new master"
+    },
+    {
+      "t": 35.2,
+      "old": "PROVE_B",
+      "new": "RUN_B",
+      "reason": "Actual per-rack flow after master grant"
+    }
+  ],
+  "five_second_stability": {
+    "at": 17.8,
+    "observed_stable_since": 12.8,
+    "elapsed": 5
+  },
+  "max_actual_overlap_s": 17,
+  "actual_master_count_max": 1,
+  "actual_primary_B_valve_max": 0
+}

@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 12296935345,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI5NjkzNTM0NQ==",
+      "name": "memphis-r12-short-dynamic-39492422095",
+      "size_in_bytes": 308179,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12296935345",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12296935345/zip",
+      "expired": false,
+      "digest": "sha256:a85201f17b7dba1dbc8f86e3ec410990cdf9e834afd8bf4cb4342c604567b9e6",
+      "created_at": "2026-10-20T20:30:19Z",
+      "updated_at": "2026-10-20T20:30:19Z",
+      "expires_at": "2026-11-19T20:30:18Z",
+      "workflow_run": {
+        "id": 39492422095,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-r12-dynamic-hydraulic-v1",
+        "head_sha": "2f1fd25346625cfb7414c5c08ff39fcbb2172c67"
+      }
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "status": "INCOMPLETE",
+  "coverage": [
+    {
+      "id": "T2_COLD_STANDBY",
+      "registration": {
+        "id": "T2_COLD_STANDBY",
+        "kind": "CONTROL_HEALTH_ALARM",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "T2_COMPLETE_WITH_RECORDED_FLOW_AND_TEMPERATURE_VERDICTS"
+      },
+      "status": "COMPLETE_60S_RESEARCH_MODEL_CASE",
+      "engineering_takeover": "PASS",
+      "negative_behavior": null
+    },
+    {
+      "id": "T2_WARM_STANDBY",
+      "registration": {
+        "id": "T2_WARM_STANDBY",
+        "kind": "WARM_STANDBY",
+        "fault_s": 10,
+        "initial_spare_C": 46,
+        "expected": "NO_FORCED_TEMPERATURE_PERMISSION"
+      },
+      "status": "COMPLETE_60S_RESEARCH_MODEL_CASE",
+      "engineering_takeover": "INCOMPLETE",
+      "negative_behavior": "TEMPERATURE_PERMISSION_NOT_FORCED"
+    },
+    {
+      "id": "NEG_DUTY_PUMP_LOSS",
+      "registration": {
+        "id": "NEG_DUTY_PUMP_LOSS",
+        "kind": "DUTY_PUMP_LOSS",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "EXPOSE_INITIAL_FLOW_LOSS_NOT_GENERALIZED_CONTINUITY_PASS"
+      },
+      "status": "COMPLETE_60S_RESEARCH_MODEL_CASE",
+      "engineering_takeover": "INCOMPLETE",
+      "negative_behavior": "FLOW_FAILURE_EXPOSED_NOT_A_CONTINUITY_PASS"
+    },
+    {
+      "id": "NEG_EARLY_DUTY_EXIT",
+      "registration": {
+        "id": "NEG_EARLY_DUTY_EXIT",
+        "kind": "EARLY_DUTY_EXIT",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "EXPOSE_SEQUENCE_AND_FLOW_DEFICIT"
+      },
+      "status": "INVALID_NUMERICAL_MODEL_PREFIX_ONLY",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_SPARE_NO_FLOW",
+      "registration": {
+        "id": "NEG_SPARE_NO_FLOW",
+        "kind": "SPARE_NO_FLOW",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "NO_COMPLETION_BY_START_COMMAND"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_MASTER_CONFLICT",
+      "registration": {
+        "id": "NEG_MASTER_CONFLICT",
+        "kind": "MASTER_CONFLICT",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "REFUSE_TWO_MASTERS"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_FILTER_BLOCK",
+      "registration": {
+        "id": "NEG_FILTER_BLOCK",
+        "kind": "FILTER_BLOCK",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "EXPOSE_ACTUAL_PRESSURE_DROP_AND_FLOW"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_RACK_B_VALVE_STUCK",
+      "registration": {
+        "id": "NEG_RACK_B_VALVE_STUCK",
+        "kind": "RACK_VALVE_STUCK",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "EXPOSE_LOCAL_FLOW_NOT_AGGREGATE_READY"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_INSTRUMENT_STALE",
+      "registration": {
+        "id": "NEG_INSTRUMENT_STALE",
+        "kind": "INSTRUMENT_STALE",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "HOLD_ON_EXPIRED_MEASUREMENTS"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_PRESSURE_MISMATCH",
+      "registration": {
+        "id": "NEG_PRESSURE_MISMATCH",
+        "kind": "PRESSURE_MISMATCH",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "NO_FORCED_PRESSURE_PERMISSION"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_OVERLAP_TIMEOUT",
+      "registration": {
+        "id": "NEG_OVERLAP_TIMEOUT",
+        "kind": "OVERLAP_TIMEOUT",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "ABORT_AFTER_30S_NO_FAKE_COMPLETION"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_PRIMARY_AB",
+      "registration": {
+        "id": "NEG_PRIMARY_AB",
+        "kind": "PRIMARY_AB_REQUEST",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "INDEPENDENT_COMMAND_GUARD_REJECTS_ILLEGAL_PRIMARY_PAIR"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    },
+    {
+      "id": "NEG_LOW_UA",
+      "registration": {
+        "id": "NEG_LOW_UA",
+        "kind": "LOW_UA",
+        "fault_s": 10,
+        "initial_spare_C": 40,
+        "expected": "MEASURE_HEAT_DEFICIT_NOT_COMMAND_AS_COOLING"
+      },
+      "status": "NOT_EXECUTED",
+      "engineering_takeover": null,
+      "negative_behavior": "NOT_PROVEN"
+    }
+  ]
+}

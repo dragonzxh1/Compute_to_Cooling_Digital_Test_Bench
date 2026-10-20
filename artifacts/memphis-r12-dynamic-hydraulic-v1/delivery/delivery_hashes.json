@@ -1,0 +1,208 @@
+{
+  "schema": "R12-REVIEWED-DELIVERY-ALL-FILES-1",
+  "source_commit": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+  "run": "39492934891",
+  "status": "PARTIAL_DYNAMIC_EVIDENCE_NOT_ENGINEERING_APPROVED",
+  "records": [
+    {
+      "path": "engineering_report.html",
+      "bytes": 154040,
+      "sha256": "82c5f85f7c9d83470320e8a9225cd47ddd33a5336ac56675956f0cd55fdfb99f"
+    },
+    {
+      "path": "github_artifacts.json",
+      "bytes": 1027,
+      "sha256": "b1d3c94deab52bd9f403d29540da66f1594f63d5e61de21ae60ecf824783acce"
+    },
+    {
+      "path": "github_run.json",
+      "bytes": 16575,
+      "sha256": "f39d606229cabb09044fbfc62eeb2dcaf01f2d472b91eb79c693ad15a6cd6f62"
+    },
+    {
+      "path": "independent_byte_review.json",
+      "bytes": 9844,
+      "sha256": "af5608b2dcd335762d4c0a081495528d4ccd7cf12e86f23b3e1755bb30db681d"
+    },
+    {
+      "path": "independent_trace_review.json",
+      "bytes": 4030,
+      "sha256": "2f0ccdda46ace23bc66527570a583887781ba6d5a39fe4cd499e46e6bb09845b"
+    },
+    {
+      "path": "inputs/pid.expanded.json",
+      "bytes": 1369035,
+      "sha256": "3cef7f02928e3ac11eb1fd672622a80cb2f6cdb402337291e4796d30d2a4a02b"
+    },
+    {
+      "path": "inputs/pid_spec.json",
+      "bytes": 15985,
+      "sha256": "5d67438a38cc13f12bb474fd8753c8796fdccf608dcd12ce0319cefede41fc64"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/case_result.json",
+      "bytes": 1837,
+      "sha256": "8ed046eff3d28ff90b936cf4b518773c887198873d665710fdca399a221558b6"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/cdus.csv",
+      "bytes": 240406,
+      "sha256": "7aa3a0eaa0894c71a949cc6ea5693f1c7472483c20f356b0a09735cd1c34b39b"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/energy.csv",
+      "bytes": 83539,
+      "sha256": "c6b1074be885b89f0b3da85ffbe032ed701951093a293d6459af372375e0e55f"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/racks.csv",
+      "bytes": 282832,
+      "sha256": "67b220d3bd2a39962a26ba51dd1378831487b50ea0babb082fb163a329672032"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/summary.csv",
+      "bytes": 60860,
+      "sha256": "7fd829578de463d5a8ef0d6046aae94f940f1368e45fec9caf65ac807bb6671d"
+    },
+    {
+      "path": "NEG_DUTY_PUMP_LOSS/trace.ndjson",
+      "bytes": 6270769,
+      "sha256": "28573ac05263c5505ae05f5c60c4387e4f207210ae607eddea003fd48d96b223"
+    },
+    {
+      "path": "NEG_EARLY_DUTY_EXIT/numerical_failure.json",
+      "bytes": 12791,
+      "sha256": "551a6dad3089d46c044a8f2de3fa873c40ede2ebf6d1957dce3e071c1743500d"
+    },
+    {
+      "path": "NEG_EARLY_DUTY_EXIT/trace.ndjson",
+      "bytes": 1421561,
+      "sha256": "c6247712521c5857ccbea611b1d1724881b59ee45799b998100c04b5bd62badc"
+    },
+    {
+      "path": "R12_DYNAMIC_ADMISSION_REPORT_ZH.md",
+      "bytes": 5041,
+      "sha256": "b2cda4f2240eab157dcf9007afbbb25bf7b5857d576bd4f629d884861ae531d8"
+    },
+    {
+      "path": "R12_DYNAMIC_MODEL_ADAPTER.json",
+      "bytes": 3050,
+      "sha256": "69d25255fe9470dde232d0149ea9e41526e8f450131ebe44ea7faf946e2aa459"
+    },
+    {
+      "path": "R12_DYNAMIC_NEGATIVE_TESTS.json",
+      "bytes": 5025,
+      "sha256": "a60e5ee854f2af7834948774572eae8471266c09b651f8dc6f77af894a7731b4"
+    },
+    {
+      "path": "R12_MEASUREMENT_INTERFACE_MATRIX.json",
+      "bytes": 836,
+      "sha256": "6feee24fbae3ec8241336b91d32363909c63c8c69472d6eaf17ab069700206ec"
+    },
+    {
+      "path": "R12_OPEN_DESIGN_BLOCKERS.json",
+      "bytes": 1559,
+      "sha256": "47b5addca47ffedaeebaee8624f9b81c1df06f6130ab230839cd630407b35179"
+    },
+    {
+      "path": "R12_PID005_CONNECTIVITY_DECISION.json",
+      "bytes": 407,
+      "sha256": "d6e1bf3da9799a6997d1d46a232807e7e07ba7666a7f957a954308f83ed86906"
+    },
+    {
+      "path": "R12_PRESSURE_MASTER_TRANSFER.json",
+      "bytes": 1165,
+      "sha256": "73e4c0220488be3e2786fb065d563d4faa7840b7713767fa1c7974b5f8958458"
+    },
+    {
+      "path": "R12_SOURCE_INPUT_ENVIRONMENT_HASH_MANIFEST.json",
+      "bytes": 3668,
+      "sha256": "543d3a8909f91259d01ac8b1de356a8d504e3b4de5e34465789c5cfe5add8dc3"
+    },
+    {
+      "path": "R12_T2_PHYSICAL_TAKEOVER_TESTS.json",
+      "bytes": 7736,
+      "sha256": "ad06dbf0a584a242ee0c72756f8f32b2760e7ce972a72e7d23fccb78f7ad60d1"
+    },
+    {
+      "path": "registration.json",
+      "bytes": 5285,
+      "sha256": "922fb21d17eea223f5b867f2e6ee64f37e13c0b9e485c15e01262d45607b3e80"
+    },
+    {
+      "path": "T2_COLD_STANDBY/case_result.json",
+      "bytes": 2595,
+      "sha256": "98e155d4a0acf1cd05f5a0e47661ece49f01c48c5cd329196fa264e0424f51d7"
+    },
+    {
+      "path": "T2_COLD_STANDBY/causality_audit.json",
+      "bytes": 71861,
+      "sha256": "7f6d87c35e6d1108ae680b6d1dfb642ee57d9458d61a3cf84bd0271dce99f752"
+    },
+    {
+      "path": "T2_COLD_STANDBY/cdus.csv",
+      "bytes": 288321,
+      "sha256": "1b3336976c5230568b1d5ae09332f5935eb8bb18fd0301616db132beb0315205"
+    },
+    {
+      "path": "T2_COLD_STANDBY/energy.csv",
+      "bytes": 114541,
+      "sha256": "2f5cc2c8fa05ba3d2b46386bf6bca56b2e236eb84e621f1803080460883a9a1a"
+    },
+    {
+      "path": "T2_COLD_STANDBY/racks.csv",
+      "bytes": 484757,
+      "sha256": "ddcae8aebfd9f8846e0b0b3d89231f93a2d5dffd1407b8aaa3e050fb3d7b6b19"
+    },
+    {
+      "path": "T2_COLD_STANDBY/summary.csv",
+      "bytes": 82765,
+      "sha256": "32bf17da61320a7f7c6b752620c1e879db0cf0b82019c9b38bec0aba51c79215"
+    },
+    {
+      "path": "T2_COLD_STANDBY/trace.ndjson",
+      "bytes": 6647270,
+      "sha256": "f95ff26aeeaa480225ed6c876d77242a59a15938ce9bc2cea5857f33a42253e7"
+    },
+    {
+      "path": "T2_WARM_STANDBY/case_result.json",
+      "bytes": 1813,
+      "sha256": "51286f4157553e913907b27996a69bb1368e154dd0638568a26d505c132238d2"
+    },
+    {
+      "path": "T2_WARM_STANDBY/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "T2_WARM_STANDBY/cdus.csv",
+      "bytes": 302206,
+      "sha256": "1e87de5c46a00816362faf6886d9cd79fbdcf740f02216dbd6284e4d1482520a"
+    },
+    {
+      "path": "T2_WARM_STANDBY/energy.csv",
+      "bytes": 114629,
+      "sha256": "fd3b4f37f3ac3ce761d3f4e1cfbfab54ea746d0a78f725453dd20c23013da92f"
+    },
+    {
+      "path": "T2_WARM_STANDBY/racks.csv",
+      "bytes": 457030,
+      "sha256": "e4a887322613909bd9a4a7fbc9bdcb99841862215de1820fe73650e7e2f76c8a"
+    },
+    {
+      "path": "T2_WARM_STANDBY/summary.csv",
+      "bytes": 81604,
+      "sha256": "39c655fa984e9aa9eb4959f046eaca653b3c6ef339a559b3f716793b87474129"
+    },
+    {
+      "path": "T2_WARM_STANDBY/trace.ndjson",
+      "bytes": 6587737,
+      "sha256": "ccbb87db5f3049b7346e36b60405e237b6f6445d53b90facc70320986e7e2bdf"
+    }
+  ]
+}

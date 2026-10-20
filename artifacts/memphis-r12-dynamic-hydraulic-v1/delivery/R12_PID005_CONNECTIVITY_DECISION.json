@@ -1,0 +1,8 @@
+{
+  "revision": "R12-PID005-006-VALIDATION-REV01",
+  "authoring_sha256": "5d67438a38cc13f12bb474fd8753c8796fdccf608dcd12ce0319cefede41fc64",
+  "expanded_sha256": "3cef7f02928e3ac11eb1fd672622a80cb2f6cdb402337291e4796d30d2a4a02b",
+  "structural_decision": "EXPLICIT_PUMP_FILTER_HX_PATH_NO_UNFILTERED_OR_UNPUMPED_BYPASS",
+  "oem_or_construction_approved": false,
+  "dynamic_scope": "ONE_SIX_RACK_UNIT_ONLY"
+}
