@@ -1,0 +1,887 @@
+{
+  "execution": "e6a4cf2b533afbeb2c97c615b030262aa5382f00",
+  "case": {
+    "any_source_first_cold_s": 44.1,
+    "codes": [],
+    "cold_A_final_m3": 0.1875,
+    "cold_B_final_m3": 13.5,
+    "deficit90_m3": 0.0,
+    "deficit_m3": 0.0,
+    "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+    "events": [
+      {
+        "from_state": "RUN",
+        "reason": "ACTUAL_RELEASED_SOURCE_FAULT",
+        "time_ns": 31100000000,
+        "to_state": "REVOKE_RECHARGE"
+      },
+      {
+        "from_state": "REVOKE_RECHARGE",
+        "reason": "RECHARGE_ZERO_SPEED",
+        "time_ns": 31100000000,
+        "to_state": "STOP_SOURCE"
+      },
+      {
+        "from_state": "STOP_SOURCE",
+        "reason": "MEASURED_SOURCE_ZERO_SPEED",
+        "time_ns": 32500000000,
+        "to_state": "CLOSE"
+      },
+      {
+        "from_state": "CLOSE",
+        "reason": "MEASURED_CLOSED_BREAK_BEFORE_MAKE",
+        "time_ns": 37700000000,
+        "to_state": "OPEN"
+      },
+      {
+        "from_state": "OPEN",
+        "reason": "MEASURED_VALVE_OPEN_NOT_COLD_READY",
+        "time_ns": 42900000000,
+        "to_state": "BUILD_COLD"
+      },
+      {
+        "from_state": "BUILD_COLD",
+        "reason": "TIMER_ONLY_IS_NOT_COLD_READY",
+        "time_ns": 62900000000,
+        "to_state": "WAIT_COLD_READY"
+      },
+      {
+        "from_state": "WAIT_COLD_READY",
+        "reason": "RELEASED_PAIRED_TT_FLOW_READY",
+        "time_ns": 84700000000,
+        "to_state": "RUN"
+      },
+      {
+        "from_state": "RUN",
+        "reason": "SEPARATE_RC_HX_PUMP_NOT_ONLINE_W2",
+        "time_ns": 120100000000,
+        "to_state": "INDEPENDENT_RECHARGE"
+      },
+      {
+        "from_state": "INDEPENDENT_RECHARGE",
+        "reason": "REGISTERED17_TT_UNCERTAINTY_GUARDED85PCT_ESTIMATE",
+        "time_ns": 635900000000,
+        "to_state": "STOP_RECHARGE"
+      },
+      {
+        "from_state": "STOP_RECHARGE",
+        "reason": "RC_ZERO_SPEED_AND_ESTIMATED_RESERVE",
+        "time_ns": 638100000000,
+        "to_state": "RUN"
+      }
+    ],
+    "final_pumps": 4,
+    "final_tanks_k": {
+      "A": [
+        313.5578582364517,
+        319.37778897027346,
+        319.3994041573384,
+        319.41908596626547,
+        319.4366628508751,
+        319.45202866275235,
+        319.46514033257796,
+        319.476014148032,
+        319.4847208735446,
+        319.4913799583658,
+        319.4961530705736,
+        319.49923717781803,
+        319.50085737308297,
+        319.5012596178588,
+        319.50070354802466,
+        319.49945546139986,
+        319.49778158199564,
+        319.495941675725,
+        319.49418307661114,
+        319.49273517178034,
+        319.49180438773027,
+        319.49156971913857,
+        319.4921788439213,
+        319.49374487324826,
+        319.49634379126525,
+        319.5000126447482,
+        319.504748546062,
+        319.5105085520571,
+        319.517210475385,
+        319.52473467218454,
+        319.5329268305583,
+        319.5416017577836,
+        319.5505481314714,
+        319.5595341422562,
+        319.56831391506006,
+        319.5766345549796,
+        319.5842436252517,
+        319.5908968314602,
+        319.59636566097794,
+        319.6004447120527,
+        319.6029584447465,
+        319.6037670971699,
+        319.6027715352634,
+        319.59991684186207,
+        319.5951944991689,
+        319.5886430754799,
+        319.58034738876495,
+        319.57043618298997,
+        319.5590784141856,
+        319.5464782987357,
+        319.53286932326614,
+        319.5185074514656,
+        319.50366378677217,
+        319.48861696047095,
+        319.47364551267066,
+        319.45902051993534,
+        319.4449986996955,
+        319.4318161901074,
+        319.4196831670989,
+        319.4087794202997,
+        319.39925096864175,
+        319.391207756546,
+        319.3847224343274,
+        319.3798301929272,
+        319.37652959399776,
+        319.3747843121418,
+        319.37452568677423,
+        319.3756559665058,
+        319.3780521188722,
+        319.38157007227056,
+        319.38604925477915,
+        319.39131729575104,
+        319.3971947603638,
+        319.4034997943973,
+        319.41005256605996,
+        319.41667940346804,
+        319.4232165399926,
+        319.4295133948709,
+        319.43543533272066,
+        319.4408658625399
+      ],
+      "B": [
+        313.6625306916147,
+        313.6625244414245,
+        313.6625320657929,
+        313.6625407765776,
+        313.66254952492943,
+        313.66255823695855,
+        313.66256690743006,
+        313.6625755350814,
+        313.66258411891124,
+        313.662592658009,
+        313.6626011515444,
+        313.66260959876513,
+        313.66261799899576,
+        313.66262635163343,
+        313.6626346561498,
+        313.662642912096,
+        313.6626511191177,
+        313.6626592769914,
+        313.6626673856976,
+        313.6626754455664,
+        313.66268345755014,
+        313.6626914237276,
+        313.66269934821014,
+        313.6627072387329,
+        313.66271510940743,
+        313.6627229853794,
+        313.66273091057695,
+        313.6627389603642,
+        313.6627472618326,
+        313.6627560257607,
+        313.6627655960391,
+        313.6627765247189,
+        313.6627896838733,
+        313.66280642923834,
+        313.6628288350837,
+        313.6628600248544,
+        313.6629046275331,
+        313.66296939490053,
+        313.6630640192208,
+        313.6632021933692,
+        313.66340295482655,
+        313.66369234995756,
+        313.6641054441314,
+        313.6646886852997,
+        313.66550260274187,
+        313.66662478863685,
+        313.6681530686375,
+        313.67020872063506,
+        313.67293955157487,
+        313.67652259498425,
+        313.6811661522978,
+        313.6871108752188,
+        313.69462958035837,
+        313.7040255065315,
+        313.7156287730407,
+        313.72979087529774,
+        313.7468771603744,
+        313.7672573544322,
+        313.7912943579615,
+        313.81933167222377,
+        313.85167995822917,
+        313.8886033445192,
+        313.9303061794442,
+        313.9769209574849,
+        314.02849813119656,
+        314.0849984489561,
+        314.14628833733366,
+        314.21213868396006,
+        314.2822271846362,
+        314.3561442124115,
+        314.43340196295827,
+        314.51344644581684,
+        314.5956717389699,
+        314.67943581529306,
+        314.7640771900477,
+        314.84893163037947,
+        314.9333482080002,
+        315.01670405818567,
+        315.09841732241284,
+        315.17795788716285
+      ]
+    },
+    "first_actual_B_cold_s": null,
+    "first_short_s": null,
+    "grades": {
+      "90S_CONTINUITY": "PASS",
+      "ABSOLUTE_PRESSURE_NPSH": "NOT_VERIFIED",
+      "LOAD_FLOW_COMPLIANCE": "PASS",
+      "M1_CAUSALITY": "VERIFIED_NEW_INTEGRATION_NOT_INHERITED_C3C",
+      "OEM_EVIDENCE": "NOT_VERIFIED",
+      "PRESSURE_TRANSIENT": "NOT_VERIFIED",
+      "RESERVE_RECOVERY": "FAIL",
+      "SECOND_FAULT_90S": "NOT_RUN",
+      "SOURCE_RECOVERY": "PASS",
+      "THERMAL_COMPLIANCE": "PASS"
+    },
+    "hardware": false,
+    "id": "BUFFER_PLUS_RECHARGE",
+    "independent": {
+      "actual_equipment_ua": null,
+      "air_heat_w": 139500,
+      "changeover_window_maximum_inlet_c": 42.84021414423654,
+      "control_volumes_checked": 756000,
+      "coordinator_ready_latency_s": 54.7,
+      "design_selections": null,
+      "final_cold_B_m3": 13.5,
+      "final_inlet_c": 42.69211023047097,
+      "final_primary_inlet_c": 40.72348778142066,
+      "final_return_c": 54.238044314062506,
+      "final_units": [
+        {
+          "actual_speed": 0.9,
+          "actuator_state_id": "actuator-state:1800000000000:18000",
+          "branch_flows_m3_s": [
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777
+          ],
+          "command": 0.9,
+          "dp_pa": 371809.99999999994,
+          "edge_drops_pa": {
+            "HX": 26599.999999999996,
+            "inlet0": 17163.0,
+            "inlet1": 17163.0,
+            "inlet2": 17163.0,
+            "inlet3": 17163.0,
+            "inlet4": 17163.0,
+            "inlet5": 17163.0,
+            "rack0": 154467.0,
+            "rack1": 154467.0,
+            "rack2": 154467.0,
+            "rack3": 154467.0,
+            "rack4": 154467.0,
+            "rack5": 154467.0,
+            "return_filter": 25000.0,
+            "return_pipe": 61790.0,
+            "supply_pipe_filter": 86790.0
+          },
+          "flow_m3_s": 0.018991666666666667,
+          "hydraulic_solution_id": "hydraulic:1800000000000",
+          "inlet_k": [
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095
+          ],
+          "mass_residual_kg_s": 8.881784197001252E-16,
+          "node_pressure_relative_pa": {
+            "filter_return": 61790.000000000015,
+            "hx": 345209.99999999994,
+            "in0": 241256.99999999994,
+            "in1": 241256.99999999994,
+            "in2": 241256.99999999994,
+            "in3": 241256.99999999994,
+            "in4": 241256.99999999994,
+            "in5": 241256.99999999994,
+            "p": 371809.99999999994,
+            "r": 1.4551915228366852E-11,
+            "rm": 86789.99999999994,
+            "sm": 258419.99999999994
+          },
+          "pump_curve_residual_pa": 5.820766091346741E-11,
+          "rack_return_k": [
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625
+          ],
+          "return_k": 327.45595990220676,
+          "secondary_stored_j": 1706130182.66718,
+          "supply_header_k": 315.84043320727574,
+          "supply_k": 315.84211023047095,
+          "time_ns": 1800000000000
+        },
+        {
+          "actual_speed": 0.9,
+          "actuator_state_id": "actuator-state:1800000000000:18000",
+          "branch_flows_m3_s": [
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777
+          ],
+          "command": 0.9,
+          "dp_pa": 371809.99999999994,
+          "edge_drops_pa": {
+            "HX": 26599.999999999996,
+            "inlet0": 17163.0,
+            "inlet1": 17163.0,
+            "inlet2": 17163.0,
+            "inlet3": 17163.0,
+            "inlet4": 17163.0,
+            "inlet5": 17163.0,
+            "rack0": 154467.0,
+            "rack1": 154467.0,
+            "rack2": 154467.0,
+            "rack3": 154467.0,
+            "rack4": 154467.0,
+            "rack5": 154467.0,
+            "return_filter": 25000.0,
+            "return_pipe": 61790.0,
+            "supply_pipe_filter": 86790.0
+          },
+          "flow_m3_s": 0.018991666666666667,
+          "hydraulic_solution_id": "hydraulic:1800000000000",
+          "inlet_k": [
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095
+          ],
+          "mass_residual_kg_s": 8.881784197001252E-16,
+          "node_pressure_relative_pa": {
+            "filter_return": 61790.000000000015,
+            "hx": 345209.99999999994,
+            "in0": 241256.99999999994,
+            "in1": 241256.99999999994,
+            "in2": 241256.99999999994,
+            "in3": 241256.99999999994,
+            "in4": 241256.99999999994,
+            "in5": 241256.99999999994,
+            "p": 371809.99999999994,
+            "r": 1.4551915228366852E-11,
+            "rm": 86789.99999999994,
+            "sm": 258419.99999999994
+          },
+          "pump_curve_residual_pa": 5.820766091346741E-11,
+          "rack_return_k": [
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625
+          ],
+          "return_k": 327.45595990220676,
+          "secondary_stored_j": 1706130182.66718,
+          "supply_header_k": 315.84043320727574,
+          "supply_k": 315.84211023047095,
+          "time_ns": 1800000000000
+        },
+        {
+          "actual_speed": 0.9,
+          "actuator_state_id": "actuator-state:1800000000000:18000",
+          "branch_flows_m3_s": [
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777,
+            0.0031652777777777777
+          ],
+          "command": 0.9,
+          "dp_pa": 371809.99999999994,
+          "edge_drops_pa": {
+            "HX": 26599.999999999996,
+            "inlet0": 17163.0,
+            "inlet1": 17163.0,
+            "inlet2": 17163.0,
+            "inlet3": 17163.0,
+            "inlet4": 17163.0,
+            "inlet5": 17163.0,
+            "rack0": 154467.0,
+            "rack1": 154467.0,
+            "rack2": 154467.0,
+            "rack3": 154467.0,
+            "rack4": 154467.0,
+            "rack5": 154467.0,
+            "return_filter": 25000.0,
+            "return_pipe": 61790.0,
+            "supply_pipe_filter": 86790.0
+          },
+          "flow_m3_s": 0.018991666666666667,
+          "hydraulic_solution_id": "hydraulic:1800000000000",
+          "inlet_k": [
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095,
+            315.84211023047095
+          ],
+          "mass_residual_kg_s": 8.881784197001252E-16,
+          "node_pressure_relative_pa": {
+            "filter_return": 61790.000000000015,
+            "hx": 345209.99999999994,
+            "in0": 241256.99999999994,
+            "in1": 241256.99999999994,
+            "in2": 241256.99999999994,
+            "in3": 241256.99999999994,
+            "in4": 241256.99999999994,
+            "in5": 241256.99999999994,
+            "p": 371809.99999999994,
+            "r": 1.4551915228366852E-11,
+            "rm": 86789.99999999994,
+            "sm": 258419.99999999994
+          },
+          "pump_curve_residual_pa": 5.820766091346741E-11,
+          "rack_return_k": [
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625,
+            327.3880443140625
+          ],
+          "return_k": 327.45595990220676,
+          "secondary_stored_j": 1706130182.66718,
+          "supply_header_k": 315.84043320727574,
+          "supply_k": 315.84211023047095,
+          "time_ns": 1800000000000
+        }
+      ],
+      "first_fault_s": {},
+      "first_tracking_confirmed_s": {},
+      "first_tracking_suspected_s": {},
+      "grades": {
+        "CHANGEOVER_CONTINUITY": "CONDITIONAL_MET",
+        "EQUIPMENT_SUITABILITY": "NOT_VERIFIED",
+        "HYDRAULIC_ADEQUACY": "CONDITIONAL_DESIGN_FLOW_MET",
+        "M1_CAUSAL_VALIDITY": "PROJECT_OBSERVED_TRANSACTIONS_VERIFIED_NOT_INHERITED_C3C",
+        "MODEL_NUMERICAL_VALIDITY": "EQUATIONS_VERIFIED_FINITE_HORIZON",
+        "OEM_CALIBRATION_STATUS": "CALIBRATION_REQUIRED",
+        "THERMAL_ADEQUACY": "CONDITIONAL_45C_MET"
+      },
+      "independent_energy": {
+        "bound_j": 2374.5405873104387,
+        "environment_gain_j": 10417578.159745103,
+        "export_j": 5178294721.9302845,
+        "final_j": 67346078103.30983,
+        "initial_j": 67539681718.74993,
+        "liquid_j": 4770900000.0,
+        "max_local_residual_j": 1.7205977087542124E-08,
+        "pump_j": 203373528.32671908,
+        "residual_j": 0.003718489781022072
+      },
+      "limitations": [
+        "No OEM calibration or pressure/MAWP/NPSHr guarantee",
+        "Finite horizon not steady-state proof",
+        "A_LEAK_SIGNAL tests measured isolation logic, not leak-rate or mass-loss physics",
+        "Zero-flow motor/deadhead losses not calibrated",
+        "Secondary45C is rack inlet, not return or GPU die",
+        "Shared source headers remain common cause",
+        "M1 period1s/5s is new project scheduling, not inherited formal detection guarantee"
+      ],
+      "maximum_inlet_c": 43.80000000000001,
+      "maximum_recharge_actual_speed": 1.0,
+      "maximum_recharge_flow_m3_h": 330.0,
+      "maximum_recharge_requested_speed": 0.0,
+      "maximum_return_c": 55.32708161730608,
+      "minimum_branch_flow_m3_h": 11.395,
+      "no_aggregate_engineering_pass": true,
+      "npshr": null,
+      "primary_inlet_range_c": [
+        39.74138918775736,
+        41.0
+      ],
+      "recharge_done": true,
+      "recovery_definition": "FIRST_ACTUAL_AVAILABLE_SOURCE_FLOW_GE264M3H_AND_TANK_RETURN_LE41_4448C_AFTER_STARTUP_READY_NOT_CONTINUOUS_STABILITY_PROOF",
+      "secondary44C_target_met": true,
+      "source_timeline": [
+        {
+          "from_state": "RUN",
+          "reason": "ACTUAL_RELEASED_SOURCE_FAULT",
+          "time_ns": 31100000000,
+          "to_state": "REVOKE_RECHARGE"
+        },
+        {
+          "from_state": "REVOKE_RECHARGE",
+          "reason": "RECHARGE_ZERO_SPEED",
+          "time_ns": 31100000000,
+          "to_state": "STOP_SOURCE"
+        },
+        {
+          "from_state": "STOP_SOURCE",
+          "reason": "MEASURED_SOURCE_ZERO_SPEED",
+          "time_ns": 32500000000,
+          "to_state": "CLOSE"
+        },
+        {
+          "from_state": "CLOSE",
+          "reason": "MEASURED_CLOSED_BREAK_BEFORE_MAKE",
+          "time_ns": 37700000000,
+          "to_state": "OPEN"
+        },
+        {
+          "from_state": "OPEN",
+          "reason": "MEASURED_VALVE_OPEN_NOT_COLD_READY",
+          "time_ns": 42900000000,
+          "to_state": "BUILD_COLD"
+        },
+        {
+          "from_state": "BUILD_COLD",
+          "reason": "TIMER_ONLY_IS_NOT_COLD_READY",
+          "time_ns": 62900000000,
+          "to_state": "WAIT_COLD_READY"
+        },
+        {
+          "from_state": "WAIT_COLD_READY",
+          "reason": "RELEASED_PAIRED_TT_FLOW_READY",
+          "time_ns": 84700000000,
+          "to_state": "RUN"
+        },
+        {
+          "from_state": "RUN",
+          "reason": "SEPARATE_RC_HX_PUMP_NOT_ONLINE_W2",
+          "time_ns": 120100000000,
+          "to_state": "INDEPENDENT_RECHARGE"
+        },
+        {
+          "from_state": "INDEPENDENT_RECHARGE",
+          "reason": "REGISTERED17_TT_UNCERTAINTY_GUARDED85PCT_ESTIMATE",
+          "time_ns": 635900000000,
+          "to_state": "STOP_RECHARGE"
+        },
+        {
+          "from_state": "STOP_RECHARGE",
+          "reason": "RC_ZERO_SPEED_AND_ESTIMATED_RESERVE",
+          "time_ns": 638100000000,
+          "to_state": "RUN"
+        }
+      ],
+      "source_transactions": 9000,
+      "takeover_latency_s": 54.8,
+      "transactions": 1080
+    },
+    "last_short_s": null,
+    "maximum90_inlet_C": 42.8393860628359,
+    "maximum_inlet_C": 43.80005384109268,
+    "minimum_load_m3_h": 330.0,
+    "minimum_time_s": 0.1,
+    "new_pump_energy_negative_rejected": true,
+    "parameters": {
+      "architecture": "NEUTRAL_BUFFER",
+      "backup_initial": "WARM",
+      "capacity_scale": 1.15,
+      "cold_fraction": 0.9,
+      "cold_initial_c": 40.5,
+      "design_flow_takeover": true,
+      "dt_s": 0.1,
+      "extensions": true,
+      "fault": "W1_LOSS",
+      "fault_at_s": 30.0,
+      "id": "BUFFER_PLUS_RECHARGE",
+      "independent_recharge": true,
+      "layers": 80,
+      "neutral_buffer_m3": 5.0,
+      "neutral_hx_ua_w_k": 4000000.0,
+      "pipe_ambient_UA_W_K": 500.0,
+      "preconditioning_mode": "C",
+      "precool_capacity_kW": 100.0,
+      "precool_floor_c": 40.5,
+      "precool_flow_m3_h": 90.0,
+      "prelude_s": 1200,
+      "primary_target_c": 40.7,
+      "rc_capacity_kW": 1000.0,
+      "ready_flow_m3_h": 90.0,
+      "recharge": "INDEPENDENT",
+      "recharge_at_s": 120.0,
+      "restore_with_four_pumps": true,
+      "scope": "GROUP18",
+      "secondary_initial_c": 43.8,
+      "seconds": 1800.0,
+      "source_speed_margin": 0.03,
+      "source_variant": "V9",
+      "standby_initial_c": 48.29,
+      "startup_s": 20.0,
+      "tank_ambient_UA_W_K": 50.0,
+      "tank_kind": "STRATIFIED",
+      "ua_w_k": 240000.0,
+      "use_fast_sensor_channel": true,
+      "use_spare": true
+    },
+    "raw_sha256": {
+      "measurements.json": "f2acdb5de3579ab570b03186cf1a155e065769e7f67475f17a3f12ae6f8a20ba",
+      "phases.json": "b0019bf26b167099f1e7c26bcd4f621a6e9d291e7a57d00c0c2a2a5606ba4510",
+      "physics.json": "c1cd2f618357ac73ea66d5f6c8d7c4154f1a2ea84414c35a0275ef0563f455f9",
+      "series.json": "5d58dd789cf418b9f30cd3c16a5b1a7b1529a1a414f62812110400884f9820b8",
+      "source_observations.json": "339e2fdaa237624269edea1dd3e7d055f5fdd84ede57de63741e7cc1735fda9e",
+      "source_phases.json": "831ecfb79d3d9b8f4c39dbc7adf2ae27c9bce4f63bf1f5316273d0f1dd71585d"
+    },
+    "recovery_scan": {
+      "delay_from_first_fault_s": null,
+      "first_tested_joint_pass_s": null,
+      "horizon_s": 1800.0,
+      "initial_B_cold_m3": 0.0,
+      "initial_B_state": "WARM_DEPLETED",
+      "method": "FIXED60S_PROFILES_AND10S_FIRST_PASS_INTERVAL; no monotonicity or unsampled-time guarantee",
+      "qualification": "CONDITIONAL_COMPONENT_RESERVE_ONLY_NOT_SYSTEM_SECOND_FAULT_PASS",
+      "return_boundary_C": 48.48742306774267,
+      "samples": [
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 60.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 120.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 180.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 240.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 300.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 360.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 420.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 480.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 540.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 600.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 660.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 720.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 780.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 840.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 900.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 960.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1020.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1080.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1140.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1200.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1260.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1320.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1380.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1440.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1500.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1560.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1620.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1680.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1740.0
+        },
+        {
+          "challenge": [],
+          "status": "FAIL_INITIAL_ABSOLUTE_OR_INVENTORY_GATE",
+          "time_s": 1800.0
+        }
+      ]
+    },
+    "reserve_challenge": [
+      {
+        "dt_s": 0.05,
+        "final_energy_J": 19412317160.484177,
+        "initial_cold_m3": 0.1875,
+        "initial_energy_J": 19337038949.879482,
+        "initial_outlet_C": 40.407858236451716,
+        "layers": 80,
+        "maximum_outlet_C": 46.425788116794024,
+        "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+        "profile_time_s": 1800.0,
+        "return_boundary_C": 48.48742306774267,
+        "rise_K": 6.017929880342308,
+        "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+        "status": "FAIL",
+        "tank": "A"
+      },
+      {
+        "dt_s": 0.05,
+        "final_energy_J": 19412278394.01413,
+        "initial_cold_m3": 0.1875,
+        "initial_energy_J": 19337038949.879482,
+        "initial_outlet_C": 40.407858236451716,
+        "layers": 160,
+        "maximum_outlet_C": 46.43820514918929,
+        "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+        "profile_time_s": 1800.0,
+        "return_boundary_C": 48.48742306774267,
+        "rise_K": 6.030346912737571,
+        "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+        "status": "FAIL",
+        "tank": "A"
+      },
+      {
+        "dt_s": 0.05,
+        "final_energy_J": 19266990592.578487,
+        "initial_cold_m3": 13.5,
+        "initial_energy_J": 19001493235.451443,
+        "initial_outlet_C": 40.5125306916147,
+        "layers": 80,
+        "maximum_outlet_C": 40.527388909856256,
+        "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+        "profile_time_s": 1800.0,
+        "return_boundary_C": 48.48742306774267,
+        "rise_K": 0.014858218241556642,
+        "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+        "status": "PASS",
+        "tank": "B"
+      },
+      {
+        "dt_s": 0.05,
+        "final_energy_J": 19267013022.083385,
+        "initial_cold_m3": 13.5,
+        "initial_energy_J": 19001493235.451443,
+        "initial_outlet_C": 40.5125306916147,
+        "layers": 160,
+        "maximum_outlet_C": 40.51950790220519,
+        "method": "EXACT_SAVED_PROFILE_CONSERVATIVE_REFINEMENT_NO_NONZERO_DIFFUSION_CLAIM",
+        "profile_time_s": 1800.0,
+        "return_boundary_C": 48.48742306774267,
+        "rise_K": 0.0069772105904917225,
+        "scope": "COMPONENT_ONLY_NO_EXTERNAL_SOURCE; not full second-fault system qualification",
+        "status": "PASS",
+        "tank": "B"
+      }
+    ],
+    "second_fault": null,
+    "shortfall_duration_s": 0.0,
+    "source_cold_delay_s": 14.100000000000001,
+    "source_final_m3_h": 373.1731271840133,
+    "source_first_good_is_not_B_path_transfer_proof": true,
+    "zero_flow_duration_s": 0.0
+  },
+  "delivery": "328b52baa28ee2e8d4d449125446398134038fdc",
+  "run": 39231568548
+}

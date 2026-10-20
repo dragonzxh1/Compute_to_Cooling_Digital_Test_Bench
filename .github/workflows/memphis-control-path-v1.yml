@@ -1,0 +1,41 @@
+name: Memphis original loop and selectable RC comparison DEVELOPMENT
+on:
+  push:
+    branches: [codex/memphis-control-path-v1]
+    paths: ['v0_2/tests/tools/memphis_control_path_v1/**', '.github/workflows/memphis-control-path-v1*.yml']
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: memphis-control-path-v1
+  cancel-in-progress: false
+jobs:
+  baseline:
+    uses: ./.github/workflows/memphis-control-path-v1-runner.yml
+    with:
+      group: baseline
+      expected_commit: ${{ github.sha }}
+  mesh:
+    needs: baseline
+    uses: ./.github/workflows/memphis-control-path-v1-runner.yml
+    with:
+      group: mesh
+      expected_commit: ${{ github.sha }}
+  diagnostic:
+    needs: mesh
+    uses: ./.github/workflows/memphis-control-path-v1-runner.yml
+    with:
+      group: diagnostic
+      expected_commit: ${{ github.sha }}
+  second:
+    needs: [mesh, diagnostic]
+    uses: ./.github/workflows/memphis-control-path-v1-runner.yml
+    with:
+      group: second
+      expected_commit: ${{ github.sha }}
+  final:
+    needs: [baseline, mesh, diagnostic, second]
+    uses: ./.github/workflows/memphis-control-path-v1-runner.yml
+    with:
+      group: final
+      expected_commit: ${{ github.sha }}
