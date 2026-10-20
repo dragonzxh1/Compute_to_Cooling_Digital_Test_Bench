@@ -1,0 +1,21 @@
+{
+  "scope": "OFFLINE_REPORT_UI_ONLY_NOT_A_MODEL_REEXECUTION",
+  "report": "15_INTERACTIVE_ENGINEERING_REPORT.html",
+  "checks": {
+    "loaded_without_console_errors": true,
+    "scenario_selection": "New NEG_EARLY_DUTY_EXIT",
+    "temperature_curves": 2,
+    "replay_end_s": 60,
+    "raw_near_zero_roundoff_visible": true,
+    "inlet_45C_limit_not_mislabeled_as_return_limit": true,
+    "all_basis_rows": 20,
+    "filter_keyword_板换_rows": 4,
+    "differences_only_rows": 16,
+    "reset_rows": 20,
+    "mobile_viewport_width": 390,
+    "mobile_document_scroll_width": 390,
+    "desktop_viewport": "1440x1000",
+    "mobile_screenshot_visually_reviewed": true,
+    "desktop_screenshot_visually_reviewed": true
+  }
+}

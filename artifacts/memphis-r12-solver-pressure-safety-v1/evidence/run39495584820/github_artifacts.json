@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 12298255720,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI5ODI1NTcyMA==",
+      "name": "r12-solver-pressure-39495584820",
+      "size_in_bytes": 1780133,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12298255720",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12298255720/zip",
+      "expired": false,
+      "digest": "sha256:2038ae499e414947a0c70c546fe9cf93ca5c4f879b8b22855e65877680556f52",
+      "created_at": "2026-10-20T20:52:30Z",
+      "updated_at": "2026-10-20T20:52:30Z",
+      "expires_at": "2026-11-19T20:52:28Z",
+      "workflow_run": {
+        "id": 39495584820,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-r12-solver-pressure-safety-v1",
+        "head_sha": "222b3454d40f2cfe6cedb65adbe478c9fffd46e6"
+      }
+    }
+  ]
+}

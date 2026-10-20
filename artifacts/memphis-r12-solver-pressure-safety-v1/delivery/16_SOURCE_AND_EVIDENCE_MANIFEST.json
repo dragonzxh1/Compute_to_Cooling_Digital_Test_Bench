@@ -1,0 +1,968 @@
+{
+  "schema": "MEMPHIS-SOLVER-PRESSURE-REVIEWED-PACKAGE-v1",
+  "source_commit": "418ccfbe494774f9ebe416f575c3ba0d44939f1c",
+  "run": "39497147240",
+  "final_design_source_hashes": [
+    {
+      "id": "00",
+      "filename": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    },
+    {
+      "id": "01",
+      "filename": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    }
+  ],
+  "source_manifest_sha256": "76c5c6f6cec514f028a8defc385051aa5cd7dcd81f6a7bebe3fed7ab92387eb1",
+  "official_zip_sha256": "7842a3868293e8a9f07ceef930112dcba06a9aa954565d40b6ad8430a6a38023",
+  "raw_logs_sha256": "55308e9eb0494191d78147097996c6636000824b20e295b2622f5b28bcdee628",
+  "source_zip_sha256": "730a3c778992e1b9ed229eabddb7046f24ef51287e290a92ede56aca834c7e9d",
+  "hash_rule": "SHA256 of file raw bytes; this manifest excluded to avoid circular hashing",
+  "records": [
+    {
+      "path": "01_PRESSURE_REQUIREMENT_PROVENANCE.md",
+      "bytes": 3201,
+      "sha256": "2c9fd3b842e957bac00b9cde33168f70a91d52ca73e19402f2346f0532f660af"
+    },
+    {
+      "path": "02_PRESSURE_PORT_MAPPING.json",
+      "bytes": 5136,
+      "sha256": "eb509f2ca7d3cc53b7f91da849066647765fbbb092006cac5a7fcca3e0afa676"
+    },
+    {
+      "path": "03_STATIC_PRESSURE_MODEL_AUDIT.csv",
+      "bytes": 5085,
+      "sha256": "8ccabf67af5a7662b1de3cda41339cc77590181312282279e7cefd3c7e55d9aa"
+    },
+    {
+      "path": "04_HX_DIFFERENTIAL_PRESSURE_RESULTS.csv",
+      "bytes": 1973727,
+      "sha256": "9e6fa98bab8fb0cfeddaa72d60e6653e20d9840159dd34d833bf238b53f2f4a0"
+    },
+    {
+      "path": "05_PUMP_CHECK_VALVE_EQUATIONS.md",
+      "bytes": 1768,
+      "sha256": "8c968b5cc4cd0578b32fbea9718ac686daccf3bd76d73e4491d2a2dc91d3c534"
+    },
+    {
+      "path": "06_SOLVER_FAILURE_REPRODUCER.py",
+      "bytes": 404,
+      "sha256": "45797344eec2ef144360082948928876c4b6777240b37af622ab8d6a0cf2ac1d"
+    },
+    {
+      "path": "07_COMPLEMENTARITY_SOLVER_TESTS.json",
+      "bytes": 33004,
+      "sha256": "ed8d65766a1785232f88ca780df2ec8473c1ec6c276311919e1518aee0e106ca"
+    },
+    {
+      "path": "08_HYDRAULIC_SOLVER_PATCH_REPORT.md",
+      "bytes": 1436,
+      "sha256": "76c56c1b14e71ca1261074b07f61920c7d88f02b846a1b23f3bbe5340942e0fa"
+    },
+    {
+      "path": "09_NEG_EARLY_EXIT_REPLAY.csv",
+      "bytes": 319087,
+      "sha256": "614e5fd66bf23ace933bc0ab366d2c34f6c993f2af918c69f68f84d577ea7f62"
+    },
+    {
+      "path": "10_T2_BASELINE_BEFORE_AFTER.csv",
+      "bytes": 1463,
+      "sha256": "b031166f261b8f0bf3ab0b99865718d12fea24b5339647db89de7c06b7c1a8f7"
+    },
+    {
+      "path": "11_SUDDEN_PUMP_LOSS_RETEST.csv",
+      "bytes": 318781,
+      "sha256": "d6d17321057c2c42304c05e103c0072b58958d7781db6f37f4547c859fea5cf4"
+    },
+    {
+      "path": "12_PROTECTION_RESPONSE_TIMELINE.csv",
+      "bytes": 471778,
+      "sha256": "b4b974268ee99ce49662f4a207bc56417987a3de6b17faaa1460cdf07de478cf"
+    },
+    {
+      "path": "13_NUMERICAL_AND_PHYSICAL_STATUS.json",
+      "bytes": 7734,
+      "sha256": "b00fde8b53790d25704b1a16dfe732a6fa46964888b1c39543c1e44a5cceb83a"
+    },
+    {
+      "path": "14_ENGINEERING_REPORT_ZH.md",
+      "bytes": 8337,
+      "sha256": "b44c834bfe789ccd743e1a050bf837494c4301f34acf27bd9e901c9e678d6a83"
+    },
+    {
+      "path": "15_INTERACTIVE_ENGINEERING_REPORT.html",
+      "bytes": 775470,
+      "sha256": "f646f76a27e2e8564848d00ed02c1bb9a3d1c1a0f2ab5bb4ec6a4258fd5b7aba"
+    },
+    {
+      "path": "basis_reconciliation.json",
+      "bytes": 9373,
+      "sha256": "faa154059630d8faaddbae46cc8dabb7e1a81e427f48028bfba0bea16c4a7b38"
+    },
+    {
+      "path": "design_basis.json",
+      "bytes": 2259,
+      "sha256": "dfd9c59cc53b591ee92534c5a5c947359929a65c39c026e561ddcdb28875da14"
+    },
+    {
+      "path": "github_artifacts.json",
+      "bytes": 1026,
+      "sha256": "204d9e27982a5fe9b68a76706cef72abe07f979dbd821a3266f40eee84486497"
+    },
+    {
+      "path": "github_run.json",
+      "bytes": 16553,
+      "sha256": "3db49d346d74bf0290db737ef459e9ba0d2a241ec427fe67588afe2fac64ad94"
+    },
+    {
+      "path": "independent_byte_review.json",
+      "bytes": 48873,
+      "sha256": "1e3d60277aca5171fe89bd5682010e202037692aa291437c17b23e68f2e16f3e"
+    },
+    {
+      "path": "independent_hydraulic_review.json",
+      "bytes": 7779,
+      "sha256": "bf35ee7c9a84e49d0f70152ec3419ddd8e6bfc051edf437f0dc18a9012f4c987"
+    },
+    {
+      "path": "independent_trace_review.json",
+      "bytes": 9342,
+      "sha256": "0521bd5aa708e0ab01a9723ff857ad63afff7cf9c287fde6e63a560a1cf615a4"
+    },
+    {
+      "path": "raw/baseline/artifact_hashes.json",
+      "bytes": 8325,
+      "sha256": "b11f33cb2b8b63625d58cc2c8564e247fb30420bc585cafdf7108065f5176828"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/case_result.json",
+      "bytes": 1852,
+      "sha256": "6535a498cee20394ea7966eccd51860133f299f11e98887c3322df40aaaa2765"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/cdus.csv",
+      "bytes": 240406,
+      "sha256": "7aa3a0eaa0894c71a949cc6ea5693f1c7472483c20f356b0a09735cd1c34b39b"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/energy.csv",
+      "bytes": 83539,
+      "sha256": "c6b1074be885b89f0b3da85ffbe032ed701951093a293d6459af372375e0e55f"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/racks.csv",
+      "bytes": 282832,
+      "sha256": "67b220d3bd2a39962a26ba51dd1378831487b50ea0babb082fb163a329672032"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/summary.csv",
+      "bytes": 60860,
+      "sha256": "7fd829578de463d5a8ef0d6046aae94f940f1368e45fec9caf65ac807bb6671d"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_DUTY_PUMP_LOSS/trace.ndjson",
+      "bytes": 6270769,
+      "sha256": "28573ac05263c5505ae05f5c60c4387e4f207210ae607eddea003fd48d96b223"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_EARLY_DUTY_EXIT/last_valid_step.json",
+      "bytes": 14089,
+      "sha256": "e0da27ca43791396b83217f7881372d616c289a1f2ff8439ca4059bfabceb9a3"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_EARLY_DUTY_EXIT/numerical_failure.json",
+      "bytes": 12791,
+      "sha256": "551a6dad3089d46c044a8f2de3fa873c40ede2ebf6d1957dce3e071c1743500d"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_EARLY_DUTY_EXIT/rejected_trial_full_diagnostics.json",
+      "bytes": 65684,
+      "sha256": "73d8349d1f3d94771e884f703c6cfc30ba0454983ae4fa96dbdb03433fe00970"
+    },
+    {
+      "path": "raw/baseline/delivery/NEG_EARLY_DUTY_EXIT/trace.ndjson",
+      "bytes": 1421561,
+      "sha256": "c6247712521c5857ccbea611b1d1724881b59ee45799b998100c04b5bd62badc"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/case_result.json",
+      "bytes": 2595,
+      "sha256": "b12f415afef93cdc3d80bbc01db973521edd44131d76063abde562f543f047b2"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/causality_audit.json",
+      "bytes": 71861,
+      "sha256": "7f6d87c35e6d1108ae680b6d1dfb642ee57d9458d61a3cf84bd0271dce99f752"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/cdus.csv",
+      "bytes": 288321,
+      "sha256": "1b3336976c5230568b1d5ae09332f5935eb8bb18fd0301616db132beb0315205"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/energy.csv",
+      "bytes": 114541,
+      "sha256": "2f5cc2c8fa05ba3d2b46386bf6bca56b2e236eb84e621f1803080460883a9a1a"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/racks.csv",
+      "bytes": 484757,
+      "sha256": "ddcae8aebfd9f8846e0b0b3d89231f93a2d5dffd1407b8aaa3e050fb3d7b6b19"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/summary.csv",
+      "bytes": 82765,
+      "sha256": "32bf17da61320a7f7c6b752620c1e879db0cf0b82019c9b38bec0aba51c79215"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_COLD_STANDBY/trace.ndjson",
+      "bytes": 6647270,
+      "sha256": "f95ff26aeeaa480225ed6c876d77242a59a15938ce9bc2cea5857f33a42253e7"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/case_result.json",
+      "bytes": 1813,
+      "sha256": "66856e6af18687e9fd5284ae7caf8906e3403d983b8701e4a4cdb463bb77e14d"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/cdus.csv",
+      "bytes": 302206,
+      "sha256": "1e87de5c46a00816362faf6886d9cd79fbdcf740f02216dbd6284e4d1482520a"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/energy.csv",
+      "bytes": 114629,
+      "sha256": "fd3b4f37f3ac3ce761d3f4e1cfbfab54ea746d0a78f725453dd20c23013da92f"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/racks.csv",
+      "bytes": 457030,
+      "sha256": "e4a887322613909bd9a4a7fbc9bdcb99841862215de1820fe73650e7e2f76c8a"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/summary.csv",
+      "bytes": 81604,
+      "sha256": "39c655fa984e9aa9eb4959f046eaca653b3c6ef339a559b3f716793b87474129"
+    },
+    {
+      "path": "raw/baseline/delivery/T2_WARM_STANDBY/trace.ndjson",
+      "bytes": 6587737,
+      "sha256": "ccbb87db5f3049b7346e36b60405e237b6f6445d53b90facc70320986e7e2bdf"
+    },
+    {
+      "path": "raw/baseline/delivery/unchanged_reproduction.json",
+      "bytes": 23221,
+      "sha256": "e36bc7e05b5a80d87af352637698c48a3eb7b396f33d2b0d8955d44e596d5b70"
+    },
+    {
+      "path": "raw/baseline/environment_after.json",
+      "bytes": 547,
+      "sha256": "9411530f60365fcbeaf2c34fce721a9e6dbd30af4548a2f8bee48216caf12abb"
+    },
+    {
+      "path": "raw/baseline/environment_before.json",
+      "bytes": 547,
+      "sha256": "9411530f60365fcbeaf2c34fce721a9e6dbd30af4548a2f8bee48216caf12abb"
+    },
+    {
+      "path": "raw/baseline/external_job_identity.json",
+      "bytes": 652,
+      "sha256": "9aa640b0fae31c1d2f3551eda86c9cea3fad41e295dded69b8bb9c9e92ab8a1f"
+    },
+    {
+      "path": "raw/baseline/job_start.json",
+      "bytes": 235,
+      "sha256": "9b4040bf54dde1d315e775bd2c6f45591206f06f2696fc85445a927831b4ebfa"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-000.json",
+      "bytes": 99,
+      "sha256": "0a125f33800b15522b825fdcecce5dedb09b6807d0d362352e3bf8f8ff313db1"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-001.json",
+      "bytes": 100,
+      "sha256": "4230d243b10396d5db4f43483cfb58e7ab2ac427d2dab807448135c9cdd5a8fc"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-002.json",
+      "bytes": 100,
+      "sha256": "6fdcd204550713f574d5ed28dce8500b0fef5a4b8969b3f8b63847ed3f8be46a"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-003.json",
+      "bytes": 100,
+      "sha256": "745a2e8072a043e5545e81030bbe44f31a86c38faee113a3fb5005de677de577"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-004.json",
+      "bytes": 100,
+      "sha256": "468ed42cca8327a421e5cb37c1b0ce8f5d1b632d40bd5ac3b7915e8276c1d3e4"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-005.json",
+      "bytes": 100,
+      "sha256": "70693d56250ef7384e924e5fb78b9321b08c1ec9a5647586549fab977d08ee1f"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-006.json",
+      "bytes": 100,
+      "sha256": "c1340932861c603cc9472b18d50d448e5d9c6ba4dfb6c7d754f4775e73b33744"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-007.json",
+      "bytes": 100,
+      "sha256": "9a701143d9523d0cf6eea7ea31f51c1124f52d8639fc5ebe93f2ad9c8d8ed2f8"
+    },
+    {
+      "path": "raw/baseline/job_start.json.heartbeat-008.json",
+      "bytes": 100,
+      "sha256": "04e200cd8b5027c576131cff10a54c7f4530787d482186ed99b88656386dfe54"
+    },
+    {
+      "path": "raw/baseline/job_status.json",
+      "bytes": 156,
+      "sha256": "53a3c7968df602ed047debc3b7946fe5e01784480c95122ba7fc4f00acc838e4"
+    },
+    {
+      "path": "raw/baseline/ready.json",
+      "bytes": 99,
+      "sha256": "4dfe5d631ccfc838a68f53e76cea75e5e4bd80decb049dc386885f1b103575b0"
+    },
+    {
+      "path": "raw/baseline/release.json",
+      "bytes": 134,
+      "sha256": "9450a314afae5542be87c89e846ea731ee2bf4f1a80c86013e979e075f743f82"
+    },
+    {
+      "path": "raw/baseline/result.json",
+      "bytes": 24745,
+      "sha256": "d44b0542453cab184b38348d7182cc27be2d824690c378b41c792a47615817a5"
+    },
+    {
+      "path": "raw/baseline/supervisor_stderr.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/baseline/supervisor_stdout.raw",
+      "bytes": 16124,
+      "sha256": "735684e60336331ba7b3cb44d08240c1ccd388a01623eb0d2e853e87b4c06d8a"
+    },
+    {
+      "path": "raw/baseline/verify_stderr.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/baseline/verify_stdout.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/suite/artifact_hashes.json",
+      "bytes": 11022,
+      "sha256": "da47309274e3d5026e1359e812af59169f412d807c04519b845dddde97b5bdcd"
+    },
+    {
+      "path": "raw/suite/delivery/math/historical_rejected_trial_recalculation.json",
+      "bytes": 31873,
+      "sha256": "73f7af6c437402006f7c1f7dc380baad54b764fef52248087a2c0db18355f18b"
+    },
+    {
+      "path": "raw/suite/delivery/math/tests.json",
+      "bytes": 28036,
+      "sha256": "5ac816240247d932d5b3d1ae3de1c0431b92eb6c576db4188011aa71636f6d70"
+    },
+    {
+      "path": "raw/suite/delivery/math/tests_before_saved_state.json",
+      "bytes": 26091,
+      "sha256": "fff3009322327dbab7469eb275f242ef5fa59d7ac49454da286f2686b44892c3"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/case_result.json",
+      "bytes": 1876,
+      "sha256": "4002e433c3f21396015918df9dcf929e3806c2f99105dcbb2c482b376aeeb0ae"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/cdus.csv",
+      "bytes": 337664,
+      "sha256": "b38cc4dece74027cd17098b7fcef6f954c9b7458a121ca50386abaf3525346b6"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/energy.csv",
+      "bytes": 84805,
+      "sha256": "035e04a5bd24443a5491b269747dcf9871eff13249619c4d5eec3b324deb817f"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/racks.csv",
+      "bytes": 449358,
+      "sha256": "229ebb92389629257f6f409b74662f1c1e891a101d2d6d46b38750cdbaa621b9"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/summary.csv",
+      "bytes": 83166,
+      "sha256": "8e8bcb16d883cc3bc0a24116a470a6c9a6386c568cc16205875e30af65340b10"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_DUTY_PUMP_LOSS/trace.ndjson",
+      "bytes": 9777502,
+      "sha256": "d95aecfee54068165b12249aebdb0732a4542b671918850b22c405e77f85e365"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/case_result.json",
+      "bytes": 1866,
+      "sha256": "b152d7a997e21608d3f19af3d496812a18eb0651b140420aa1e93288149cb634"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/cdus.csv",
+      "bytes": 349237,
+      "sha256": "91d5dd9d95e96b50f9aced21e4b4bc7947b1690d5a19856b0f6a7876a4d8ff50"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/energy.csv",
+      "bytes": 94139,
+      "sha256": "8a3ae0088861c68624cc69cb546aa144122a9a79003b13831ae4e2ee68653b04"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/racks.csv",
+      "bytes": 450886,
+      "sha256": "b3cba1166c2eb878d81e72805d1c0e9aff28f43fc1092aa89b4911e01890d25a"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/summary.csv",
+      "bytes": 82069,
+      "sha256": "f7d4177057a11e2b5bfbd0678645a022a0e9b59cf4eb15a6e0344b51dce307a6"
+    },
+    {
+      "path": "raw/suite/delivery/NEG_EARLY_DUTY_EXIT/trace.ndjson",
+      "bytes": 9816959,
+      "sha256": "30b43d4439d3795be36c308a5f21bd6b9bbb0e5724270f1c77130a7b8fd705f4"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/case_result.json",
+      "bytes": 1937,
+      "sha256": "424d052b6aad2e6b1e1938ee8176853fa24d8dcf4c60df02e7644f9ca54b3133"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/causality_audit.json",
+      "bytes": 78779,
+      "sha256": "27a516fd3e06f8640dd9d936415a9e20c9c54adaa87d5db194e3924518dc1117"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/cdus.csv",
+      "bytes": 229479,
+      "sha256": "a6633fd6f19b95b175e1554ec026a60f3f5bca7b0f917fd4f4c62c68a3c13b45"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/energy.csv",
+      "bytes": 75877,
+      "sha256": "6c8349e68da136e67502eb880e87dec3d731dd9f07210c034a3be25a70427584"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/racks.csv",
+      "bytes": 450775,
+      "sha256": "e3054d64e92fe4ed82eebd7c6b6e0b066147ca8e3778f8f745bd148dc7e2d7cf"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/summary.csv",
+      "bytes": 91037,
+      "sha256": "99daa1eba5883c5ecc14da629a0e54b916498e9ae85f628e66e4f72a1aac7b17"
+    },
+    {
+      "path": "raw/suite/delivery/PRESSURE_PROTECTED_COLD/trace.ndjson",
+      "bytes": 9332130,
+      "sha256": "512e57e629846c0db944b60b86d23c3769aed11df5c45f7f267df470c32742e4"
+    },
+    {
+      "path": "raw/suite/delivery/suite_summary.json",
+      "bytes": 42435,
+      "sha256": "e8659bfda4d34ffc7fce5b48ee31dd4844f417b681a7c18c195663a108b9bbe7"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/case_result.json",
+      "bytes": 2595,
+      "sha256": "66518d0d58fb17a131bddc163233b4bad55cc7812e018e3d49fb5407674ac98d"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/causality_audit.json",
+      "bytes": 71865,
+      "sha256": "e6b988234afc6fb7941305c92a949a5ef4daf54195ff9eae95c0ca09bdbec030"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/cdus.csv",
+      "bytes": 440141,
+      "sha256": "1103f31fa37e7d9a38461bf2d30f97bcfa5af6da696d84d5345cca5a54cfdc7a"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/energy.csv",
+      "bytes": 112617,
+      "sha256": "c124ca5ffc4fef0577016a2184836f7bb986aa352061f5fc317ab059a28a4ea6"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/racks.csv",
+      "bytes": 490214,
+      "sha256": "ca84ae01726fdd0fa8bd4d4628a43b0536f20fa5289ecee972401af3dffc9c6d"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/summary.csv",
+      "bytes": 86075,
+      "sha256": "65802c1273d3a55ecdb084eb1d793c3af7e6b92b76a0e534a33dd7b77dc45d45"
+    },
+    {
+      "path": "raw/suite/delivery/T2_COLD_STANDBY/trace.ndjson",
+      "bytes": 9969519,
+      "sha256": "0e7f1226167b701d42e7d9130299ab686abc78eac3302eb25740c368b4d5043c"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/case_result.json",
+      "bytes": 1819,
+      "sha256": "e27dce2d071611bb8a2c1235a2df0a76119e22e4897d220cbff91e7d420a1145"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/causality_audit.json",
+      "bytes": 73085,
+      "sha256": "3ffc72e9a5228c892db37726b6d9edfb99ff32d8059925204f17fbbf52371507"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/cdus.csv",
+      "bytes": 461030,
+      "sha256": "9bed611bc1024d23cb89b36c8f85ee5d7e3c447ebefa3cb729e22ce22265ae61"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/energy.csv",
+      "bytes": 110966,
+      "sha256": "f964146b0b64ac713fd74014df4c4df3ee11d797cf2af37d96d3470d5899148f"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/racks.csv",
+      "bytes": 455337,
+      "sha256": "3acf4516b0803fd573130ed2adbe830c85c4df5809f9ac7d391b23cd802117c9"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/summary.csv",
+      "bytes": 79377,
+      "sha256": "6a02799e65965bb2dab44e318c1847a41ec7679031520fb3b41e8be6040f86f1"
+    },
+    {
+      "path": "raw/suite/delivery/T2_WARM_STANDBY/trace.ndjson",
+      "bytes": 9906027,
+      "sha256": "05d9a5e04e30ba636783e850215a44e0c6f2f2e3568690289a80522a1c668afc"
+    },
+    {
+      "path": "raw/suite/environment_after.json",
+      "bytes": 544,
+      "sha256": "b9e2d3ca035c906bd8ab2c72452a85c21917bbb3e1990912bd4480f7d244f622"
+    },
+    {
+      "path": "raw/suite/environment_before.json",
+      "bytes": 544,
+      "sha256": "b9e2d3ca035c906bd8ab2c72452a85c21917bbb3e1990912bd4480f7d244f622"
+    },
+    {
+      "path": "raw/suite/external_job_identity.json",
+      "bytes": 652,
+      "sha256": "da678262be3a76ae50d96ca92e3809f298422c875ca87fb574cf7a8202ee0528"
+    },
+    {
+      "path": "raw/suite/job_start.json",
+      "bytes": 235,
+      "sha256": "0b1be20004edff2fe20b1d37017c01e201824e216afc4d5be69ebb2d411d1490"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-000.json",
+      "bytes": 99,
+      "sha256": "f6fa546c26fac972aef45b3c43a5277533779d745ef28a0a4fd0c03dcfee35d9"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-001.json",
+      "bytes": 100,
+      "sha256": "791b83ae31edc1208e7709928d8e44a541b1e67e5c5411806fb60071d1bb98f5"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-002.json",
+      "bytes": 100,
+      "sha256": "fa790c691142b25edcf877c804679c9b3641b896dfc61f55899f3aa78e4184af"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-003.json",
+      "bytes": 100,
+      "sha256": "d0b15dea407bce698ab526cde59264ce080272be3a23277ec871f0b3fdb47f01"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-004.json",
+      "bytes": 100,
+      "sha256": "30e85294ee2625fe1917f5a273cf200cf03db3390c321f92236c650ca2058609"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-005.json",
+      "bytes": 100,
+      "sha256": "0dcc7699cb0da4ff8ab504c75263c5b0ab4fa287bf5bbe4b324dd8a0e2201a4b"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-006.json",
+      "bytes": 100,
+      "sha256": "89c7d5b2e3a8b29d418ffb20952fb5dcd361fc8832ee0531d14d80bcbefc984e"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-007.json",
+      "bytes": 100,
+      "sha256": "1a1684acc00cdf0fad80882e6cd515550ce38cb076db3421d2516f9ed5cf61b7"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-008.json",
+      "bytes": 100,
+      "sha256": "f8da4c6dc3a4ccad62aa4826a9f8f2d674c43f324d680a710e16d8b1e58b1202"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-009.json",
+      "bytes": 102,
+      "sha256": "f84cfc0d28c267ba689aeba4e22db588178fad97c0d1337a4cd808c0cf74e691"
+    },
+    {
+      "path": "raw/suite/job_start.json.heartbeat-010.json",
+      "bytes": 102,
+      "sha256": "5327736bf119ec4167627aac2b11dc6c8fcdd04b4656eae4244efc33b34df48e"
+    },
+    {
+      "path": "raw/suite/job_status.json",
+      "bytes": 156,
+      "sha256": "529242bd976d2addec0ce437f4c5ff21f75299704b6a1fcd3d846dc145218fa1"
+    },
+    {
+      "path": "raw/suite/ready.json",
+      "bytes": 99,
+      "sha256": "8a8396ba87d2a6d43cca647b567da8cb30b656174f6e8fa520d0dcd18f4e031a"
+    },
+    {
+      "path": "raw/suite/release.json",
+      "bytes": 134,
+      "sha256": "fc2bc30339c74675d70352ef90d14adcfacb8192b221db99024e0aa1d04449ed"
+    },
+    {
+      "path": "raw/suite/result.json",
+      "bytes": 13269,
+      "sha256": "5d49f2736e88a79726a0af9fe6193f1ca3e9c080320c325f962399c67cde14f8"
+    },
+    {
+      "path": "raw/suite/supervisor_stderr.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/suite/supervisor_stdout.raw",
+      "bytes": 11428,
+      "sha256": "b2e09d62803fdc672e437504dcaa0fc95312284ef3b189429b49013ec6e092c5"
+    },
+    {
+      "path": "raw/suite/verify_stderr.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "raw/suite/verify_stdout.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "report_data.json",
+      "bytes": 1279052,
+      "sha256": "26d7cbc4e0f9272ac4140828aa0dd763be4010faa14c97cdf406580dc116a844"
+    },
+    {
+      "path": "report_qa.json",
+      "bytes": 718,
+      "sha256": "a9142182c508b33324fe2ae8c7f3b5b85fcf5e254b7d763d78763ce56a36b8b6"
+    },
+    {
+      "path": "source/.github/workflows/ci.yml",
+      "bytes": 4442,
+      "sha256": "f04063325f8030b1125fadd036c3de9f3f1c6ec678f0e9e0a2c494a1841d521b"
+    },
+    {
+      "path": "source/.github/workflows/memphis-r12-dynamic-hydraulic-v1.yml",
+      "bytes": 2318,
+      "sha256": "24bfeefaceeee666710632260859a6b3a9df0565c02b1f54d4038ec4f8ccaf8b"
+    },
+    {
+      "path": "source/.github/workflows/memphis-r12-solver-pressure-safety-v1.yml",
+      "bytes": 2158,
+      "sha256": "38a3b5fe946882e62f5a22a0e83fa99761fe34d9db5c364ba32749fbf985a6b4"
+    },
+    {
+      "path": "source/v0_2/tests/tools/liquid_recovery_v1/batch.ps1",
+      "bytes": 7265,
+      "sha256": "0b128615f0ecbaed53c05d06f74ea47a59e4c76a185983366db52d1394caa90f"
+    },
+    {
+      "path": "source/v0_2/tests/tools/m1_remote_executor_v1/build.ps1",
+      "bytes": 1807,
+      "sha256": "5b9363ee1e809b4d8dcd688d38c20906169898848c423854a8a20d75ad04d55f"
+    },
+    {
+      "path": "source/v0_2/tests/tools/m1_remote_executor_v1/ControlledJob.cs",
+      "bytes": 13599,
+      "sha256": "eb36313d9184971d317b866e493d95afce4b002ee3f06f094d62a91df99de992"
+    },
+    {
+      "path": "source/v0_2/tests/tools/m1_remote_executor_v1/VerifyTarget.cs",
+      "bytes": 4780,
+      "sha256": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/BUILD002_CHANGE.md",
+      "bytes": 1568,
+      "sha256": "a295e24d88fc0bbef257750bebf76a7f13220734e05960d9ddcad988bfa950de"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/BUILD003_CHANGE.md",
+      "bytes": 1434,
+      "sha256": "23fb869009b3f9401c890dc6286334172cb32068a20340bd17dbbaf5e6264568"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/campaign.py",
+      "bytes": 7740,
+      "sha256": "3c0d658a9807fbc843e50bd504311b269b13b47ce5f19d0f71d1d9c5bc933761"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/control.py",
+      "bytes": 7419,
+      "sha256": "c7ab9a1a924f2c63570774ce0717dda0903a15c64afa252eff7f256bdcb540e1"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/hydraulics.py",
+      "bytes": 9334,
+      "sha256": "150f2322c063ba4d154b127f1e744d0115c7b074d5a4b3ed7b692e70275a3374"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/infra/ci-branch-only.yml",
+      "bytes": 4397,
+      "sha256": "da03c9295324885f71e3a5e39dac9b0acacc23aa15974dab76630ab0713e2469"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/inputs/pid.expanded.json",
+      "bytes": 1369035,
+      "sha256": "3cef7f02928e3ac11eb1fd672622a80cb2f6cdb402337291e4796d30d2a4a02b"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/inputs/pid_spec.json",
+      "bytes": 15985,
+      "sha256": "5d67438a38cc13f12bb474fd8753c8796fdccf608dcd12ce0319cefede41fc64"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/plant.py",
+      "bytes": 9993,
+      "sha256": "f44d9cb80f46908fd1c8e177d12570ab60183088fb1134c42de46aad059d6e8a"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/README_ZH.md",
+      "bytes": 2735,
+      "sha256": "0516f625847e380c36645cbf427f9c501b1c0cbb2b33378351d386b36aa9f6b6"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/registration.json",
+      "bytes": 5285,
+      "sha256": "922fb21d17eea223f5b867f2e6ee64f37e13c0b9e485c15e01262d45607b3e80"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/report.py",
+      "bytes": 6291,
+      "sha256": "9e5018d566ba06818cab6ad76b5c7b68ed73de075f1e9d30970169cef29da180"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/run_remote.ps1",
+      "bytes": 6118,
+      "sha256": "5a2ea3ac0eaf1305aec4895629fd39019da0fcbf11a53c65da905422468c28ef"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/source_manifest.json",
+      "bytes": 3969,
+      "sha256": "4a2978d991cdc2cf9a3c45c8f374bdad05324147fc0fc5c098aabbca3fda93b0"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/worker.py",
+      "bytes": 5524,
+      "sha256": "322cf639a5339f0c35327282a14395f472d9d0684972cf487286a8ad0b53c54a"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/__init__.py",
+      "bytes": 81,
+      "sha256": "8089e00ac79e4aaf9180394c458f7f8f5901bda65638eb766a144129b6e5de08"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/01_PRESSURE_REQUIREMENT_PROVENANCE.md",
+      "bytes": 3201,
+      "sha256": "2c9fd3b842e957bac00b9cde33168f70a91d52ca73e19402f2346f0532f660af"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/05_PUMP_CHECK_VALVE_EQUATIONS.md",
+      "bytes": 1768,
+      "sha256": "8c968b5cc4cd0578b32fbea9718ac686daccf3bd76d73e4491d2a2dc91d3c534"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/audited.py",
+      "bytes": 3085,
+      "sha256": "197957f669934fa91d6c774a701a0a188be73f78dbf5f135ed23f71d71ddc75e"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/basis_reconciliation.json",
+      "bytes": 9373,
+      "sha256": "faa154059630d8faaddbae46cc8dabb7e1a81e427f48028bfba0bea16c4a7b38"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/constrained.py",
+      "bytes": 7207,
+      "sha256": "5a0836ba4a4ceeeba2297987d01ea5354f869ffd14801ce5c41061a5778afe8f"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/design_basis.json",
+      "bytes": 2259,
+      "sha256": "dfd9c59cc53b591ee92534c5a5c947359929a65c39c026e561ddcdb28875da14"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/infra/ci-branch-only.yml",
+      "bytes": 4442,
+      "sha256": "f04063325f8030b1125fadd036c3de9f3f1c6ec678f0e9e0a2c494a1841d521b"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/inputs/historical_rejected_trial.json",
+      "bytes": 12791,
+      "sha256": "551a6dad3089d46c044a8f2de3fa873c40ede2ebf6d1957dce3e071c1743500d"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/README_ZH.md",
+      "bytes": 839,
+      "sha256": "fdbcb85b304b69d0d93c72c96967497a3e8d846afa31d46cc64feb5894a33186"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/run_remote.ps1",
+      "bytes": 6128,
+      "sha256": "12d763c2c7826643240c804c909e97d143fa4b3ce89a5f9c86176c2ffdda57bb"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/suite.py",
+      "bytes": 6095,
+      "sha256": "367ca723f8cf1817f8a9eab3dbd65122e6a128ec2fa5d6729f945042462dfbf9"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/validation.py",
+      "bytes": 3408,
+      "sha256": "fe98366f1a024d78517cdf680a8ee34d7004ddfc536b839e19c5d995c092c11c"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/worker.py",
+      "bytes": 3422,
+      "sha256": "c61c0b36f2116dbbd39461fe8789b1cf4bc1fb58da34c2f56dfb50f74d210962"
+    },
+    {
+      "path": "source/v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "source/v0_2/__init__.py",
+      "bytes": 88,
+      "sha256": "b526e266cb8ee98cd02b1a4a61f6829a95ab0ad45ac9cc221eb05ee6b651935a"
+    },
+    {
+      "path": "source_manifest.json",
+      "bytes": 8009,
+      "sha256": "76c5c6f6cec514f028a8defc385051aa5cd7dcd81f6a7bebe3fed7ab92387eb1"
+    }
+  ],
+  "statuses": {
+    "NUMERICAL_SOLVER_STATUS": "BOUNDED_MATHEMATICAL_AND_FOUR_CASE_REGRESSION_VALIDATED",
+    "PRESSURE_REQUIREMENT_STATUS": "10_KPA_CONFIRMED_00_01_IMPLEMENTATION_CLARIFICATION_REQUIRED",
+    "PRESSURE_PROTECTION_STATUS": "MEASURED_TRIP_AND_ACTUATION_VERIFIED_SAFE_PRESSURE_STATE_NOT_PROVEN",
+    "CONTROLLED_TAKEOVER_STATUS": "RESEARCH_ORIGINAL_CONTROL_THERMAL_FLOW_PASS_HX_PRESSURE_FAIL",
+    "SUDDEN_FAILURE_CONTINUITY_STATUS": "PHYSICAL_CONTINUITY_FAILURE_IN_RESEARCH_MODEL",
+    "MODEL_VALIDITY_STATUS": "CONDITIONAL_RESEARCH_NOT_FINAL_00_01_DESIGN_VALIDATION",
+    "OEM_CALIBRATION_STATUS": "CALIBRATION_REQUIRED",
+    "ENGINEERING_APPROVAL_STATUS": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+  },
+  "native_jobs": [
+    {
+      "stage": "baseline",
+      "pid": 2928,
+      "environment": {
+        "source_commit": "418ccfbe494774f9ebe416f575c3ba0d44939f1c",
+        "image": "20261012.333.1",
+        "os": "Windows-10-10.0.20348-SP0",
+        "python": "3.11.9",
+        "numpy": "2.4.6",
+        "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "pid": 2928,
+        "stage": "baseline",
+        "cpu_rate": 2500,
+        "process_mb": 256,
+        "job_mb": 512,
+        "wall_seconds": 480,
+        "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+        "external_job_sha256": "9aa640b0fae31c1d2f3551eda86c9cea3fad41e295dded69b8bb9c9e92ab8a1f",
+        "long_run": false
+      },
+      "job": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 2928,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      }
+    },
+    {
+      "stage": "suite",
+      "pid": 1080,
+      "environment": {
+        "source_commit": "418ccfbe494774f9ebe416f575c3ba0d44939f1c",
+        "image": "20261012.333.1",
+        "os": "Windows-10-10.0.20348-SP0",
+        "python": "3.11.9",
+        "numpy": "2.4.6",
+        "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "pid": 1080,
+        "stage": "suite",
+        "cpu_rate": 2500,
+        "process_mb": 256,
+        "job_mb": 512,
+        "wall_seconds": 480,
+        "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+        "external_job_sha256": "da678262be3a76ae50d96ca92e3809f298422c875ca87fb574cf7a8202ee0528",
+        "long_run": false
+      },
+      "job": {
+        "outcome": "EXITED",
+        "child_exitcode": 0,
+        "pid": 1080,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "R12-SHORT-DYNAMIC-OFFICIAL-BYTE-REVIEW-1",
+  "run": "39495584820",
+  "source_commit": "222b3454d40f2cfe6cedb65adbe478c9fffd46e6",
+  "official_root": "D:\\Github\\c2c-evidence-review\\memphis-r12-solver-pressure-safety-v1\\run39495584820\\official\\r12-solver-pressure-39495584820",
+  "official_zip_sha256": "2038ae499e414947a0c70c546fe9cf93ca5c4f879b8b22855e65877680556f52",
+  "official_digest_verified": true,
+  "raw_logs_sha256": "1258ab51f281b5b7b389636d6b15e477e6246959e3191af1c7be951626a7f19a",
+  "source_manifest_sha256": "8617abc3be7ebd777954382fbb05a62a697bf8203c3542d58f157032375f1ff9",
+  "source_zip_sha256": "4e971dfc465e575f107188e61e8930bac5eefc6aef7920f2f3a57144c8fe2e07",
+  "github_conclusion": "failure",
+  "stages": [
+    {
+      "job": {
+        "outcome": "EXITED",
+        "child_exitcode": 1,
+        "pid": 1660,
+        "assigned_before_resume": true,
+        "resumed": true,
+        "cleanup_complete": true,
+        "active_after_cleanup": 0,
+        "error": ""
+      },
+      "stage": "baseline",
+      "actual_python_pid": 1660,
+      "raw_files_verified": 47,
+      "environment": {
+        "source_commit": "222b3454d40f2cfe6cedb65adbe478c9fffd46e6",
+        "image": "20261012.333.1",
+        "os": "Windows-10-10.0.20348-SP0",
+        "python": "3.11.9",
+        "numpy": "2.4.6",
+        "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+        "pid": 1660,
+        "stage": "baseline",
+        "cpu_rate": 2500,
+        "process_mb": 256,
+        "job_mb": 512,
+        "wall_seconds": 480,
+        "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+        "external_job_sha256": "886f05305580367ccaa80e54e6ce94459cd2d2ac70a8f08756595901fa26820e",
+        "long_run": false
+      },
+      "result": {
+        "status": "FAIL",
+        "stage": "baseline",
+        "environment": {
+          "source_commit": "222b3454d40f2cfe6cedb65adbe478c9fffd46e6",
+          "image": "20261012.333.1",
+          "os": "Windows-10-10.0.20348-SP0",
+          "python": "3.11.9",
+          "numpy": "2.4.6",
+          "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+          "pid": 1660,
+          "stage": "baseline",
+          "cpu_rate": 2500,
+          "process_mb": 256,
+          "job_mb": 512,
+          "wall_seconds": 480,
+          "scope": "NEW_RESEARCH_SHORT_DEVELOPMENT_NOT_FORMAL_M1",
+          "external_job_sha256": "886f05305580367ccaa80e54e6ce94459cd2d2ac70a8f08756595901fa26820e",
+          "long_run": false
+        },
+        "error": "AssertionError()",
+        "traceback": "Traceback (most recent call last):\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_solver_pressure_safety_v1\\worker.py\", line 45, in main\n    details=execute(out/'delivery', stage)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_solver_pressure_safety_v1\\validation.py\", line 71, in execute\n    if stage==\"baseline\": return reproduce(out)\n                                 ^^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_r12_solver_pressure_safety_v1\\validation.py\", line 65, in reproduce\n    assert results[-1][\"execution_status\"]==\"INVALID\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+        "elapsed_s": 6.843999999999994
+      }
+    }
+  ],
+  "scope": "IDENTITY_HASH_RESOURCE_CLEANUP_REVIEW_NOT_ENGINEERING_APPROVAL",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}

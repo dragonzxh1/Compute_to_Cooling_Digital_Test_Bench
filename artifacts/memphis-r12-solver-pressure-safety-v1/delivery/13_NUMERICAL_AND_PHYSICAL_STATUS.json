@@ -1,0 +1,218 @@
+{
+  "NUMERICAL_SOLVER_STATUS": "BOUNDED_MATHEMATICAL_AND_FOUR_CASE_REGRESSION_VALIDATED",
+  "PRESSURE_REQUIREMENT_STATUS": "10_KPA_CONFIRMED_00_01_IMPLEMENTATION_CLARIFICATION_REQUIRED",
+  "PRESSURE_PROTECTION_STATUS": "MEASURED_TRIP_AND_ACTUATION_VERIFIED_SAFE_PRESSURE_STATE_NOT_PROVEN",
+  "CONTROLLED_TAKEOVER_STATUS": "RESEARCH_ORIGINAL_CONTROL_THERMAL_FLOW_PASS_HX_PRESSURE_FAIL",
+  "SUDDEN_FAILURE_CONTINUITY_STATUS": "PHYSICAL_CONTINUITY_FAILURE_IN_RESEARCH_MODEL",
+  "MODEL_VALIDITY_STATUS": "CONDITIONAL_RESEARCH_NOT_FINAL_00_01_DESIGN_VALIDATION",
+  "OEM_CALIBRATION_STATUS": "CALIBRATION_REQUIRED",
+  "ENGINEERING_APPROVAL_STATUS": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "scope_decision": "RESEARCH_NUMERICAL_COMPARISON_ADMITTED; FINAL_00_01_DYNAMIC_DESIGN_VALIDATION_NOT_ADMITTED",
+  "source_commit": "418ccfbe494774f9ebe416f575c3ba0d44939f1c",
+  "run": "39497147240",
+  "math_subcases": 28,
+  "mathematical_feasible_converged": 27,
+  "expected_infeasible": 1,
+  "independent_math_checks": [
+    {
+      "test": "A_NORMAL/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/1",
+      "KCL_relative": 4.1402970461794145e-18,
+      "open_loop_head_residual_Pa": 6.548361852765083e-11
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/2",
+      "KCL_relative": 2.168404344971009e-17,
+      "open_loop_head_residual_Pa": 2.2737367544323206e-13
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/3",
+      "KCL_relative": 2.710505431213761e-18,
+      "open_loop_head_residual_Pa": 5.9550586684054e-11
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/4",
+      "KCL_relative": 9.316767883732031e-21,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "C_CHECK_CLOSE/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 1.1641532182693481e-10
+    },
+    {
+      "test": "C_CHECK_CLOSE/1",
+      "KCL_relative": 0,
+      "open_loop_head_residual_Pa": 0.0000037763966247439384
+    },
+    {
+      "test": "C_CHECK_CLOSE/2",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "D_STANDBY_BUILD/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "D_STANDBY_BUILD/1",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003776454832404852
+    },
+    {
+      "test": "D_STANDBY_BUILD/2",
+      "KCL_relative": 2.400159548420391e-13,
+      "open_loop_head_residual_Pa": 6.4319465309381485e-9
+    },
+    {
+      "test": "D_STANDBY_BUILD/3",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 1.1641532182693481e-10
+    },
+    {
+      "test": "E_TWO_PARALLEL/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 1.1641532182693481e-10
+    },
+    {
+      "test": "F_MASTER_HANDOVER/0",
+      "KCL_relative": 1.985864010883061e-15,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "F_MASTER_HANDOVER/1",
+      "KCL_relative": 1.734723475976807e-16,
+      "open_loop_head_residual_Pa": 4.656612873077393e-10
+    },
+    {
+      "test": "F_MASTER_HANDOVER/2",
+      "KCL_relative": 1.9777731554796113e-15,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "G_EARLY_EXIT/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003776454832404852
+    },
+    {
+      "test": "G_EARLY_EXIT/1",
+      "KCL_relative": 0,
+      "open_loop_head_residual_Pa": 0.0000014702472839189795
+    },
+    {
+      "test": "G_EARLY_EXIT/2",
+      "KCL_relative": 1.158052837852716e-22,
+      "open_loop_head_residual_Pa": 1.8322936057302286e-8
+    },
+    {
+      "test": "H_NO_STANDBY_FLOW/0",
+      "KCL_relative": 9.316767883732031e-21,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "I_REVERSE_CHECK_PRESSURE/0",
+      "KCL_relative": 1.524659365642258e-20,
+      "open_loop_head_residual_Pa": 0.0000034612894523888826
+    },
+    {
+      "test": "J_NEAR_ZERO_GUESS/0",
+      "KCL_relative": 4.617637730807588e-13,
+      "open_loop_head_residual_Pa": 3.396417014300823e-8
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/0.1",
+      "KCL_relative": 6.938893903907228e-16,
+      "open_loop_head_residual_Pa": 1.8917489796876907e-10
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/1.0",
+      "KCL_relative": 0,
+      "open_loop_head_residual_Pa": 0.00007777227438054979
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/10.0",
+      "KCL_relative": 3.7801407678237495e-15,
+      "open_loop_head_residual_Pa": 0
+    }
+  ],
+  "independent_pressure_checks": [
+    {
+      "case": "NEG_DUTY_PUMP_LOSS",
+      "pressure_tap_mapping_error_kPa": 2.842170943040401e-14,
+      "HX_loss_law_error_Pa": 0.00007860289770178497
+    },
+    {
+      "case": "NEG_EARLY_DUTY_EXIT",
+      "pressure_tap_mapping_error_kPa": 3.552713678800501e-14,
+      "HX_loss_law_error_Pa": 0.00007860289770178497
+    },
+    {
+      "case": "PRESSURE_PROTECTED_COLD",
+      "pressure_tap_mapping_error_kPa": 5.684341886080802e-14,
+      "HX_loss_law_error_Pa": 0.000044399319449439645
+    },
+    {
+      "case": "T2_COLD_STANDBY",
+      "pressure_tap_mapping_error_kPa": 5.684341886080802e-14,
+      "HX_loss_law_error_Pa": 0.00007860289770178497
+    },
+    {
+      "case": "T2_WARM_STANDBY",
+      "pressure_tap_mapping_error_kPa": 5.684341886080802e-14,
+      "HX_loss_law_error_Pa": 0.00007860289770178497
+    }
+  ],
+  "max_dynamic_KCL": 1.2212453270876722e-14,
+  "max_dynamic_equation_residual_Pa": 0.0000998957361275643,
+  "max_dynamic_complementarity": 9.98957361275643e-10,
+  "minimum_forward_scaled_flow_raw": -1.0285487389513382e-15,
+  "numerical_roundoff_note": "Tiny signed roundoff retained without clipping; not a physical reverse-flow interpretation.",
+  "nonunique_pressure_solve_records": 1145,
+  "rank_null_interpretation": "NOT_ASSESSED_THIS_STEP_NOT_PROOF_OF_UNIQUENESS",
+  "pressure_peak_breakdown": {
+    "case": "T2_COLD_STANDBY",
+    "t": 30.5,
+    "state": "STOP_OLD",
+    "cdu": "B",
+    "P1_IN_kPa_g": 284.00948919633817,
+    "P1_OUT_kPa_g": 166.80317408965524,
+    "P2_IN_kPa_g": 476.4218251359117,
+    "P2_OUT_kPa_g": 289.00009109028105,
+    "signed_cross_kPa": -192.41233593957355,
+    "abs_cross_kPa": 192.41233593957355,
+    "limit_kPa": 10,
+    "reference_difference_kPa": 65,
+    "primary_relative_to_reference_kPa": 119.00948919633817,
+    "secondary_relative_to_reference_kPa": 376.4218251359117,
+    "pump_in_kPa_g": 96.7344337059503,
+    "pump_out_kPa_g": 502.5463553920779,
+    "filter_in_kPa_g": 499.2807891026216,
+    "filter_out_kPa_g": 477.5103472339282,
+    "primary_flow_m3_h": 104.44713100586635,
+    "secondary_flow_m3_h": 71.33196766128314,
+    "pressure_interpretation": "RESEARCH_COMMON_DATUM_NO_TRAPPED_PRESSURE_COMPLIANCE_OR_ELEVATION_PROOF"
+  },
+  "protection": {
+    "trip_decision_s": 0.1,
+    "source_sample_s": 0,
+    "release_s": 0.1,
+    "actual_pumps_stopped_post_s": 3.8,
+    "actual_primary_isolated_post_s": 5.9,
+    "terminal_model_cross_dp_kPa": 65,
+    "terminal_pressure_meaning": "65 kPa reference arithmetic in isolated zones, NOT a physical trapped-pressure prediction",
+    "full_window_near_zero_sampled_duration_s": 56.300000000000004
+  },
+  "original_reproduction_first_run": "39495584820 expected failure did not recur; assertion FAIL preserved",
+  "original_reproduction_current_run": "39497147240 cold pressure reproduced and early-exit failure recurred at13.5s",
+  "extension_18_racks_or_1800_s": false
+}

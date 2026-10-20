@@ -1,0 +1,1175 @@
+{
+  "scope": "A_L_PLUS_FROZEN_REJECTED_TRIAL",
+  "cases": [
+    {
+      "test": "A_NORMAL/0",
+      "heads_Pa": [
+        300000,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 0.000008517497818161246,
+        "complementarity_residual": 8.517497818161246e-11,
+        "min_forward_scaled_flow": -2.0746305977604996e-11,
+        "slacks": [
+          -8.517497818161246e-11,
+          1.0988709941983643e-12,
+          1.993346644561683,
+          0.000008837075947676354,
+          4.941758113830019e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.031570203370735475,
+        0.031570203370735475,
+        -4.149261150458846e-13,
+        -4.1492611955209995e-13,
+        0.03157020337032054
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/0",
+      "heads_Pa": [
+        300000,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 0.000008517497818161246,
+        "complementarity_residual": 8.517497818161246e-11,
+        "min_forward_scaled_flow": -2.0746305977604996e-11,
+        "slacks": [
+          -8.517497818161246e-11,
+          1.0988709941983643e-12,
+          1.993346644561683,
+          0.000008837075947676354,
+          4.941758113830019e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.031570203370735475,
+        0.031570203370735475,
+        -4.149261150458846e-13,
+        -4.1492611955209995e-13,
+        0.03157020337032054
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/1",
+      "heads_Pa": [
+        75000,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 1.1102230246251565e-16,
+        "pressure_residual_Pa": 5.551115123125783e-11,
+        "complementarity_residual": 2.8452717612537093e-15,
+        "min_forward_scaled_flow": -2.845224327408663e-15,
+        "slacks": [
+          5.551115123125783e-16,
+          2.2985086056692694e-17,
+          0.497676584762751,
+          0.0006622856694784574,
+          1.1102230246251565e-16
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.015785101685311213,
+        0.015785101685311213,
+        -5.682168060724968e-17,
+        -5.690448654817327e-17,
+        0.015785101685311158
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/2",
+      "heads_Pa": [
+        3000,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 1.1170246991916086e-19,
+        "pressure_residual_Pa": 3.469446951953614e-13,
+        "complementarity_residual": 2.1510571102112408e-16,
+        "min_forward_scaled_flow": -2.1399895659641793e-16,
+        "slacks": [
+          3.469446951953614e-18,
+          -1.2739375526704677e-18,
+          0.019885168498931273,
+          0.00004838632676112259,
+          0
+        ],
+        "status": "CONVERGED",
+        "iterations": 8,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.003157020335744539,
+        0.003157020335744539,
+        -4.279979131928359e-18,
+        -4.277745082529976e-18,
+        0.003157020335744534
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/3",
+      "heads_Pa": [
+        30,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 6.617444900424221e-23,
+        "pressure_residual_Pa": 4.5810252292943776e-11,
+        "complementarity_residual": 5.521378416860001e-12,
+        "min_forward_scaled_flow": -5.514568630003414e-12,
+        "slacks": [
+          4.581025229294378e-16,
+          4.581177695224883e-18,
+          0.00019933415692677083,
+          2.2328467426781587e-9,
+          1.3284187118378643e-16
+        ],
+        "status": "CONVERGED",
+        "iterations": 9,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.0003157007139978647,
+        0.0003157007139978647,
+        -1.1029137259874479e-13,
+        -1.1029137260006829e-13,
+        0.0003157007138875734
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/4",
+      "heads_Pa": [
+        0,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 9.317362419797304e-21,
+        "pressure_residual_Pa": 1.7031969019552336e-8,
+        "complementarity_residual": 6.08424356859405e-12,
+        "min_forward_scaled_flow": 3.533388554596133e-9,
+        "slacks": [
+          6.089490919333964e-12,
+          6.091283356944148e-14,
+          6.08949092132246e-12,
+          6.091283157839247e-14,
+          1.7031969019552337e-13
+        ],
+        "status": "CONVERGED",
+        "iterations": 10,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0.015000000000100044
+      },
+      "flows_m3_s": [
+        7.066778897975078e-11,
+        7.066778897956445e-11,
+        7.066777109197349e-11,
+        7.066777109192267e-11,
+        1.4133556007155487e-10
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "C_CHECK_CLOSE/0",
+      "heads_Pa": [
+        300000,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 0,
+        "pressure_residual_Pa": 2.6645352591003757e-10,
+        "complementarity_residual": 2.6645352591003757e-15,
+        "min_forward_scaled_flow": 0.91236420089353,
+        "slacks": [
+          -2.6645352591003757e-15,
+          1.95590071916385e-16,
+          -2.6645352591003757e-15,
+          1.964574336543734e-16,
+          1.3322676295501878e-15
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.0182472840178706,
+        0.0182472840178706,
+        0.018247284017870603,
+        0.018247284017870603,
+        0.0364945680357412
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "C_CHECK_CLOSE/1",
+      "heads_Pa": [
+        100,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 0,
+        "pressure_residual_Pa": 0.000008658274097683716,
+        "complementarity_residual": 8.658274097683716e-11,
+        "min_forward_scaled_flow": -2.1270035471487284e-11,
+        "slacks": [
+          1.9923464306300076,
+          0.000009051006810700812,
+          -8.658274097683716e-11,
+          1.096277582601779e-12,
+          4.772271466890743e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        -4.254007094297457e-13,
+        -4.254007094297457e-13,
+        0.031570203370726094,
+        0.031570203370726094,
+        0.03157020337030069
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "C_CHECK_CLOSE/2",
+      "heads_Pa": [
+        0,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 0,
+        "pressure_residual_Pa": 0.000008517497818161246,
+        "complementarity_residual": 8.517497818161246e-11,
+        "min_forward_scaled_flow": -2.0746408434710296e-11,
+        "slacks": [
+          1.993346644517772,
+          0.000008837119858329245,
+          -8.517497818161246e-11,
+          1.0986489495934393e-12,
+          4.941780318290512e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        -4.1492816869420593e-13,
+        -4.1492816869420593e-13,
+        0.031570203370735475,
+        0.031570203370735475,
+        0.03157020337032054
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "D_STANDBY_BUILD/0",
+      "heads_Pa": [
+        300000,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 0.000008517497818161246,
+        "complementarity_residual": 8.517497818161246e-11,
+        "min_forward_scaled_flow": -2.0746305977604996e-11,
+        "slacks": [
+          -8.517497818161246e-11,
+          1.0988709941983643e-12,
+          1.993346644561683,
+          0.000008837075947676354,
+          4.941758113830019e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.031570203370735475,
+        0.031570203370735475,
+        -4.149261150458846e-13,
+        -4.1492611955209995e-13,
+        0.03157020337032054
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "D_STANDBY_BUILD/1",
+      "heads_Pa": [
+        300000,
+        100
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 0.0000086583185066047,
+        "complementarity_residual": 8.658318506604701e-11,
+        "min_forward_scaled_flow": -2.1270066740555565e-11,
+        "slacks": [
+          -8.658318506604701e-11,
+          1.096052068549902e-12,
+          1.9923464306170957,
+          0.000009051019722372544,
+          4.7722936713512354e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.03157020337072609,
+        0.03157020337072609,
+        -4.2540132393520827e-13,
+        -4.254013348111113e-13,
+        0.03157020337030069
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "D_STANDBY_BUILD/2",
+      "heads_Pa": [
+        300000,
+        10000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.4003021792395884e-13,
+        "pressure_residual_Pa": 5.595524044110789e-9,
+        "complementarity_residual": 5.632994071191888e-13,
+        "min_forward_scaled_flow": -5.632858733326367e-13,
+        "slacks": [
+          5.595524044110789e-14,
+          8.222589276130066e-16,
+          1.7158057451810824,
+          0.17754973654613426,
+          7.549516567451064e-15
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 7,
+        "variables": 8,
+        "pressure_nonunique": true,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.03157020337064996,
+        0.03157020337064996,
+        -6.465398369811951e-15,
+        -1.1265717466652734e-14,
+        0.03157020337063869
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "D_STANDBY_BUILD/3",
+      "heads_Pa": [
+        300000,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 0,
+        "pressure_residual_Pa": 2.6645352591003757e-10,
+        "complementarity_residual": 2.6645352591003757e-15,
+        "min_forward_scaled_flow": 0.91236420089353,
+        "slacks": [
+          -2.6645352591003757e-15,
+          1.95590071916385e-16,
+          -2.6645352591003757e-15,
+          1.964574336543734e-16,
+          1.3322676295501878e-15
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.0182472840178706,
+        0.0182472840178706,
+        0.018247284017870603,
+        0.018247284017870603,
+        0.0364945680357412
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "E_TWO_PARALLEL/0",
+      "heads_Pa": [
+        300000,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 0,
+        "pressure_residual_Pa": 2.6645352591003757e-10,
+        "complementarity_residual": 2.6645352591003757e-15,
+        "min_forward_scaled_flow": 0.91236420089353,
+        "slacks": [
+          -2.6645352591003757e-15,
+          1.95590071916385e-16,
+          -2.6645352591003757e-15,
+          1.964574336543734e-16,
+          1.3322676295501878e-15
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.0182472840178706,
+        0.0182472840178706,
+        0.018247284017870603,
+        0.018247284017870603,
+        0.0364945680357412
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "F_MASTER_HANDOVER/0",
+      "heads_Pa": [
+        300000,
+        100000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 1.9984014443252818e-15,
+        "pressure_residual_Pa": 4.440892098500626e-11,
+        "complementarity_residual": 3.964059983041501e-15,
+        "min_forward_scaled_flow": -3.964104917973917e-15,
+        "slacks": [
+          4.440892098500626e-16,
+          -8.847089727481716e-17,
+          0.991955195295184,
+          0.001400286432472031,
+          -2.220446049250313e-16
+        ],
+        "status": "CONVERGED",
+        "iterations": 8,
+        "rank": 7,
+        "variables": 8,
+        "pressure_nonunique": true,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.03157020337064219,
+        0.03157020337064219,
+        -3.956481814181711e-17,
+        -7.928209835947834e-17,
+        0.03157020337064211
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "F_MASTER_HANDOVER/1",
+      "heads_Pa": [
+        200000,
+        200000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 5.773159728050814e-10,
+        "complementarity_residual": 5.773159728050814e-15,
+        "min_forward_scaled_flow": 0.7449422505903943,
+        "slacks": [
+          -5.773159728050814e-15,
+          1.0104764247564901e-16,
+          -5.773159728050814e-15,
+          1.0061396160665481e-16,
+          8.881784197001252e-16
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.014898845011807889,
+        0.014898845011807889,
+        0.014898845011807887,
+        0.014898845011807887,
+        0.029797690023615774
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "F_MASTER_HANDOVER/2",
+      "heads_Pa": [
+        100000,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 1.977773155479611e-15,
+        "pressure_residual_Pa": 4.440892098500626e-11,
+        "complementarity_residual": 3.972299919552391e-15,
+        "min_forward_scaled_flow": -3.972195793229702e-15,
+        "slacks": [
+          0.9919551952836658,
+          0.0014002864439901508,
+          4.440892098500626e-16,
+          -8.847089727481716e-17,
+          -2.220446049250313e-16
+        ],
+        "status": "CONVERGED",
+        "iterations": 8,
+        "rank": 7,
+        "variables": 8,
+        "pressure_nonunique": true,
+        "physical_violation": false,
+        "wall_s": 0.015999999999849024
+      },
+      "flows_m3_s": [
+        -3.988845275500183e-17,
+        -7.944391586459405e-17,
+        0.03157020337064219,
+        0.03157020337064219,
+        0.03157020337064211
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "G_EARLY_EXIT/0",
+      "heads_Pa": [
+        300000,
+        100
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 0.0000086583185066047,
+        "complementarity_residual": 8.658318506604701e-11,
+        "min_forward_scaled_flow": -2.1270066740555565e-11,
+        "slacks": [
+          -8.658318506604701e-11,
+          1.096052068549902e-12,
+          1.9923464306170957,
+          0.000009051019722372544,
+          4.7722936713512354e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.03157020337072609,
+        0.03157020337072609,
+        -4.2540132393520827e-13,
+        -4.254013348111113e-13,
+        0.03157020337030069
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "G_EARLY_EXIT/1",
+      "heads_Pa": [
+        100,
+        100
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 6.938893903907228e-18,
+        "pressure_residual_Pa": 0.0000013073658475248884,
+        "complementarity_residual": 1.6124731758160316e-12,
+        "min_forward_scaled_flow": 0.016657410548672626,
+        "slacks": [
+          1.6124731758160316e-12,
+          1.6341155918315488e-14,
+          1.6124731758160316e-12,
+          1.6341156130073725e-14,
+          1.3073658475248884e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 5,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.00033314821097345254,
+        0.00033314821097345254,
+        0.0003331482109734526,
+        0.0003331482109734526,
+        0.0006662964219469052
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "G_EARLY_EXIT/2",
+      "heads_Pa": [
+        0,
+        100
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 3.469446951953614e-18,
+        "pressure_residual_Pa": 1.2091510518535964e-8,
+        "complementarity_residual": 6.168329735878331e-14,
+        "min_forward_scaled_flow": -5.4762829816228093e-14,
+        "slacks": [
+          0.0006644520524018759,
+          2.7340108801031382e-11,
+          6.168329735878331e-14,
+          6.310746975717648e-16,
+          1.2091510518535964e-13
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        -1.0952565940084563e-15,
+        -1.095256596324562e-15,
+        0.0005763902008912839,
+        0.0005763902008912839,
+        0.0005763902008901887
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "H_NO_STANDBY_FLOW/0",
+      "heads_Pa": [
+        0,
+        0
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 9.317362419797304e-21,
+        "pressure_residual_Pa": 1.7031969019552336e-8,
+        "complementarity_residual": 6.08424356859405e-12,
+        "min_forward_scaled_flow": 3.533388554596133e-9,
+        "slacks": [
+          6.089490919333964e-12,
+          6.091283356944148e-14,
+          6.08949092132246e-12,
+          6.091283157839247e-14,
+          1.7031969019552337e-13
+        ],
+        "status": "CONVERGED",
+        "iterations": 10,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        7.066778897975078e-11,
+        7.066778897956445e-11,
+        7.066777109197349e-11,
+        7.066777109192267e-11,
+        1.4133556007155487e-10
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "I_REVERSE_CHECK_PRESSURE/0",
+      "heads_Pa": [
+        1,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 2.220446049250313e-16,
+        "pressure_residual_Pa": 0.000008516343186215636,
+        "complementarity_residual": 8.516343186215636e-11,
+        "min_forward_scaled_flow": -2.0735972958306936e-11,
+        "slacks": [
+          1.9933366487721818,
+          0.00000883286545416695,
+          -8.516343186215636e-11,
+          1.0989317095200235e-12,
+          4.945155396285372e-11
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        -4.1471945886120685e-13,
+        -4.1471945916613873e-13,
+        0.03157020337073557,
+        0.03157020337073557,
+        0.031570203370320855
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "J_NEAR_ZERO_GUESS/0",
+      "heads_Pa": [
+        300000,
+        100
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 4.618527782440651e-13,
+        "pressure_residual_Pa": 2.9531932455029164e-8,
+        "complementarity_residual": 1.3999912340523224e-12,
+        "min_forward_scaled_flow": -1.3999804659342222e-12,
+        "slacks": [
+          2.9531932455029164e-13,
+          4.093947403305265e-15,
+          1.5862508494235403,
+          0.40610463230311766,
+          4.04121180963557e-14
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 7,
+        "variables": 8,
+        "pressure_nonunique": true,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.031570203370662527,
+        0.031570203370662527,
+        -1.8764333857069268e-14,
+        -2.7999609318684443e-14,
+        0.03157020337063453
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/0.1",
+      "heads_Pa": [
+        200000,
+        300000
+      ],
+      "load_K": 20000000,
+      "metrics": {
+        "kcl_max": 4.440892098500626e-16,
+        "pressure_residual_Pa": 2.220446049250313e-10,
+        "complementarity_residual": 2.220446049250313e-15,
+        "min_forward_scaled_flow": 1.5051050017132326,
+        "slacks": [
+          0,
+          1.717376241217039e-16,
+          -2.220446049250313e-15,
+          1.3877787807814457e-16,
+          2.220446049250313e-16
+        ],
+        "status": "CONVERGED",
+        "iterations": 6,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.030102100034264653,
+        0.030102100034264653,
+        0.043545785517933464,
+        0.043545785517933464,
+        0.07364788555219813
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/1.0",
+      "heads_Pa": [
+        200000,
+        300000
+      ],
+      "load_K": 200000000,
+      "metrics": {
+        "kcl_max": 0,
+        "pressure_residual_Pa": 0.00007793037326564445,
+        "complementarity_residual": 7.79303770820361e-10,
+        "min_forward_scaled_flow": 0.007817707281283724,
+        "slacks": [
+          -7.793037326564445e-10,
+          6.808520403198771e-14,
+          3.0682123508540826e-12,
+          3.063174713879846e-14,
+          1.5127898933542383e-12
+        ],
+        "status": "CONVERGED",
+        "iterations": 7,
+        "rank": 8,
+        "variables": 8,
+        "pressure_nonunique": false,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        0.00015635414562567448,
+        0.00015635414562567448,
+        0.031466227249138605,
+        0.031466227249138605,
+        0.03162258139476428
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/10.0",
+      "heads_Pa": [
+        200000,
+        300000
+      ],
+      "load_K": 2000000000,
+      "metrics": {
+        "kcl_max": 3.7801407678237495e-15,
+        "pressure_residual_Pa": 1.4961989980299961e-12,
+        "complementarity_residual": 7.668345125555476e-15,
+        "min_forward_scaled_flow": -7.668467892393268e-15,
+        "slacks": [
+          0.8531647314678152,
+          0.0026182290271918873,
+          0,
+          -1.496198998029996e-17,
+          0
+        ],
+        "status": "CONVERGED",
+        "iterations": 8,
+        "rank": 7,
+        "variables": 8,
+        "pressure_nonunique": true,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "flows_m3_s": [
+        -7.776654249139038e-17,
+        -1.5336935784786538e-16,
+        0.011949441326888268,
+        0.011949441326888268,
+        0.011949441326888115
+      ],
+      "expected": "CONVERGED_WITH_NO_FORWARD_VIOLATION",
+      "test_pass": true
+    },
+    {
+      "test": "L_NO_SOURCE_FOR_PRESCRIBED_NET_OUTFLOW",
+      "metrics": {
+        "status": "PHYSICAL_INFEASIBLE",
+        "reason": "Closed network has nonzero net prescribed outflow",
+        "iterations": 0,
+        "wall_s": 0
+      },
+      "expected": "PHYSICAL_INFEASIBLE",
+      "test_pass": true
+    },
+    {
+      "test": "G_SAVED_REJECTED_STATE",
+      "metrics": {
+        "kcl_max": 3.994686700494948e-18,
+        "pressure_residual_Pa": 1.323001278842606e-7,
+        "complementarity_residual": 6.618193406499051e-13,
+        "min_forward_scaled_flow": -5.0510184848667556e-24,
+        "slacks": [
+          8.066323555822909e-15,
+          8.066324402855856e-15,
+          6.618193406499051e-13,
+          -8.698147369333225e-14,
+          8.066482798016993e-15,
+          -1.9894882873431781e-22,
+          1.3832803372808578e-45,
+          7.904759423870236e-26,
+          8.066265957582495e-15,
+          1.5370518714145215e-13,
+          8.066265957582495e-15,
+          2.0191578000296065e-22,
+          8.066374377799744e-15,
+          1.323001278842606e-12,
+          9.388803154593942e-34,
+          -2.4047803577655284e-23,
+          0.7223483232148669,
+          0.0004209229089494615,
+          1.5450692569142702e-22,
+          1.207021949837378e-20,
+          1.2359930151732762e-22,
+          4.1468885058211046e-22,
+          6.183788799636514e-23,
+          5.2811368465366247e-23,
+          4.057422527719279e-22,
+          8.06626765164839e-15,
+          1.3187754924551265e-12,
+          8.066325249888803e-15,
+          8.06626765164839e-15,
+          1.3187754924551265e-12,
+          8.066325249888803e-15,
+          8.06626765164839e-15,
+          1.3187754924551265e-12,
+          8.066325249888803e-15,
+          8.066265110549548e-15,
+          1.3187751671944747e-12,
+          8.066322708789962e-15,
+          8.06626765164839e-15,
+          1.3187754924551265e-12,
+          8.066325249888803e-15,
+          8.066265110549548e-15,
+          1.3187751671944747e-12,
+          8.066322708789962e-15
+        ],
+        "status": "CONVERGED",
+        "iterations": 8,
+        "rank": 78,
+        "variables": 80,
+        "pressure_nonunique": true,
+        "physical_violation": false,
+        "wall_s": 0
+      },
+      "expected": "CONVERGED",
+      "test_pass": true
+    }
+  ],
+  "independent_flow_and_head_checks": [
+    {
+      "test": "A_NORMAL/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/1",
+      "KCL_relative": 4.1402970461794145e-18,
+      "open_loop_head_residual_Pa": 6.548361852765083e-11
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/2",
+      "KCL_relative": 2.168404344971009e-17,
+      "open_loop_head_residual_Pa": 2.2737367544323206e-13
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/3",
+      "KCL_relative": 2.710505431213761e-18,
+      "open_loop_head_residual_Pa": 5.9550586684054e-11
+    },
+    {
+      "test": "B_RAMP_TO_ZERO/4",
+      "KCL_relative": 9.316767883732031e-21,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "C_CHECK_CLOSE/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 1.1641532182693481e-10
+    },
+    {
+      "test": "C_CHECK_CLOSE/1",
+      "KCL_relative": 0,
+      "open_loop_head_residual_Pa": 0.0000037763966247439384
+    },
+    {
+      "test": "C_CHECK_CLOSE/2",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "D_STANDBY_BUILD/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003465829649940133
+    },
+    {
+      "test": "D_STANDBY_BUILD/1",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003776454832404852
+    },
+    {
+      "test": "D_STANDBY_BUILD/2",
+      "KCL_relative": 2.400159548420391e-13,
+      "open_loop_head_residual_Pa": 6.4319465309381485e-9
+    },
+    {
+      "test": "D_STANDBY_BUILD/3",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 1.1641532182693481e-10
+    },
+    {
+      "test": "E_TWO_PARALLEL/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 1.1641532182693481e-10
+    },
+    {
+      "test": "F_MASTER_HANDOVER/0",
+      "KCL_relative": 1.985864010883061e-15,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "F_MASTER_HANDOVER/1",
+      "KCL_relative": 1.734723475976807e-16,
+      "open_loop_head_residual_Pa": 4.656612873077393e-10
+    },
+    {
+      "test": "F_MASTER_HANDOVER/2",
+      "KCL_relative": 1.9777731554796113e-15,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "G_EARLY_EXIT/0",
+      "KCL_relative": 3.469446951953614e-16,
+      "open_loop_head_residual_Pa": 0.000003776454832404852
+    },
+    {
+      "test": "G_EARLY_EXIT/1",
+      "KCL_relative": 0,
+      "open_loop_head_residual_Pa": 0.0000014702472839189795
+    },
+    {
+      "test": "G_EARLY_EXIT/2",
+      "KCL_relative": 1.158052837852716e-22,
+      "open_loop_head_residual_Pa": 1.8322936057302286e-8
+    },
+    {
+      "test": "H_NO_STANDBY_FLOW/0",
+      "KCL_relative": 9.316767883732031e-21,
+      "open_loop_head_residual_Pa": 0
+    },
+    {
+      "test": "I_REVERSE_CHECK_PRESSURE/0",
+      "KCL_relative": 1.524659365642258e-20,
+      "open_loop_head_residual_Pa": 0.0000034612894523888826
+    },
+    {
+      "test": "J_NEAR_ZERO_GUESS/0",
+      "KCL_relative": 4.617637730807588e-13,
+      "open_loop_head_residual_Pa": 3.396417014300823e-8
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/0.1",
+      "KCL_relative": 6.938893903907228e-16,
+      "open_loop_head_residual_Pa": 1.8917489796876907e-10
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/1.0",
+      "KCL_relative": 0,
+      "open_loop_head_residual_Pa": 0.00007777227438054979
+    },
+    {
+      "test": "K_RESISTANCE_SLOPE/10.0",
+      "KCL_relative": 3.7801407678237495e-15,
+      "open_loop_head_residual_Pa": 0
+    }
+  ],
+  "infeasible_case_meaning": "Expected refusal is a passing negative test, NOT a hydraulic feasibility PASS.",
+  "timing_note": "Windows monotonic clock resolution can report 0 for sub-tick solves; not zero computational cost."
+}

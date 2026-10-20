@@ -1,0 +1,205 @@
+{
+  "definition_source": "00 B146/B168",
+  "absolute_pressure_Pa": null,
+  "atmospheric_pressure_Pa": null,
+  "elevations_m": null,
+  "hydrostatic_correction": "NOT_REGISTERED_SAME_DATUM_RESEARCH_ASSUMPTION",
+  "dynamic_velocity_pressure": "NOT_MODELED_NO_REGISTERED_PIPE_GEOMETRY",
+  "primary_reference_kPa_g": 165,
+  "secondary_reference_kPa_g": 100,
+  "sensors": [
+    {
+      "id": "G01-C01A-P1-PT-IN-CH1",
+      "tap": "G01-C01A-HX:P1-IN",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P1-PT-IN-CH2",
+      "tap": "G01-C01A-HX:P1-IN",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P1-PT-OUT-CH1",
+      "tap": "G01-C01A-HX:P1-OUT",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P1-PT-OUT-CH2",
+      "tap": "G01-C01A-HX:P1-OUT",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-PT-SUC-SINGLE",
+      "tap": "G01-C01A:P2-P-J1",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-PT-DIS-SINGLE",
+      "tap": "G01-C01A:P2-P-J2",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P2-F-PDT-SINGLE",
+      "tap": "G01-C01A:P2-P-J2",
+      "low_tap": "G01-C01A:P2-F-J2",
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P2-PT-IN-SINGLE",
+      "tap": "G01-C01A-HX:P2-IN",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P2-PT-OUT-SINGLE",
+      "tap": "G01-C01A-HX:P2-OUT",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01A-P2-SYS-PDT-SINGLE",
+      "tap": "G01-U1-P2-A:SUP",
+      "low_tap": "G01-U1-P2-A:RET",
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P1-PT-IN-CH1",
+      "tap": "G01-C01B-HX:P1-IN",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P1-PT-IN-CH2",
+      "tap": "G01-C01B-HX:P1-IN",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P1-PT-OUT-CH1",
+      "tap": "G01-C01B-HX:P1-OUT",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P1-PT-OUT-CH2",
+      "tap": "G01-C01B-HX:P1-OUT",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-PT-SUC-SINGLE",
+      "tap": "G01-C01B:P2-P-J1",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-PT-DIS-SINGLE",
+      "tap": "G01-C01B:P2-P-J2",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P2-F-PDT-SINGLE",
+      "tap": "G01-C01B:P2-P-J2",
+      "low_tap": "G01-C01B:P2-F-J2",
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P2-PT-IN-SINGLE",
+      "tap": "G01-C01B-HX:P2-IN",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P2-PT-OUT-SINGLE",
+      "tap": "G01-C01B-HX:P2-OUT",
+      "low_tap": null,
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    },
+    {
+      "id": "G01-C01B-P2-SYS-PDT-SINGLE",
+      "tap": "G01-U1-P2-B:SUP",
+      "low_tap": "G01-U1-P2-B:RET",
+      "source": [
+        "S3 PDF p6 PID-005"
+      ],
+      "hardware_status": "NOT_HARDWARE_VERIFIED"
+    }
+  ],
+  "virtual_diagnostic_taps": [
+    "HX:P1-IN",
+    "HX:P1-OUT",
+    "HX:P2-IN",
+    "HX:P2-OUT",
+    "P2-PM1:IN",
+    "P2-PM1:OUT",
+    "P2-F01:IN",
+    "P2-F01:OUT"
+  ],
+  "diagnostic_warning": "Pump flange and filter body virtual taps are NOT identical to common PT-SUC/PT-DIS/filter-PDT taps across isolation/check valves.",
+  "overlap_permission": "HX secondary outlet A versus B, not cross-media 10 kPa",
+  "pressure_measurement_error_budget": null
+}
