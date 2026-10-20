@@ -1,0 +1,48 @@
+{
+  "schema": "MEMPHIS-R12-SOURCE-INTAKE-v1",
+  "user_authority": "S1 weather supplement; S2 current PID data; S3 system PID; S4 clarification. S5 old JSON structure reference only. Conflicts retained, not silently resolved.",
+  "sources": [
+    {
+      "id": "S1",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\Memphis_Meteorological_Data_Analysis_Guide(3).md",
+      "name": "Memphis_Meteorological_Data_Analysis_Guide(3).md",
+      "role": "WEATHER_GUIDE_AND_REPORTED_SUMMARY_NOT_RAW_SERIES",
+      "bytes": 7524,
+      "sha256": "ab407b149b9de515b6c6d48cd5b9cd700a34d727bfa2d734ce6efe3c6e8cd4f3"
+    },
+    {
+      "id": "S2",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025_P&ID评估底层数据- ACC(1).xlsx",
+      "name": "26025_P&ID评估底层数据- ACC(1).xlsx",
+      "role": "CURRENT_PID_DATA",
+      "bytes": 54238,
+      "sha256": "93ae03b2dc61ab7300985bc0e985b5f1d35a72de3f75417c98e7691c94d0306d"
+    },
+    {
+      "id": "S3",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025_系统PID_欧洲版IEC-ISO_R12-ACC(1).pdf",
+      "name": "26025_系统PID_欧洲版IEC-ISO_R12-ACC(1).pdf",
+      "role": "CURRENT_SYSTEM_PID_R12",
+      "bytes": 4413331,
+      "sha256": "8bc163364d1aa82195158fb1109fdddddb53cf068699d291a79283a32d1eb2f6"
+    },
+    {
+      "id": "S4",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025_11号函逐项核查与澄清-ACC(1).pdf",
+      "name": "26025_11号函逐项核查与澄清-ACC(1).pdf",
+      "role": "CURRENT_CLARIFICATION",
+      "bytes": 938692,
+      "sha256": "e15d5b1f0398d204fc32a2afc5c7e0db7d08895d5f95ab7764c9d94be04454a2"
+    },
+    {
+      "id": "S5",
+      "path": "D:\\wechat\\xwechat_files\\dragonzxh_3c8d\\temp\\RWTemp\\2026-10\\c01dd019f88d93ed1655a2b02f61ad0b\\26025 eval data(1).json",
+      "name": "26025 eval data(1).json",
+      "role": "LEGACY_SCHEMA_REFERENCE_ONLY_NOT_PARAMETER_AUTHORITY",
+      "bytes": 35072,
+      "sha256": "25735d7f030d43e3b143313e5272d083d1d877cd6dbfc13a448599a68a124a2d"
+    }
+  ],
+  "simulation_changed": false,
+  "new_test_budget_approved": false
+}
