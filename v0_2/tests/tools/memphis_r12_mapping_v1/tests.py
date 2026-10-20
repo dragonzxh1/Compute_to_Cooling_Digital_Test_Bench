@@ -19,7 +19,8 @@ def observation(g, time=0., stage="primary"):
     a, b = cdu_name(1, S.A), cdu_name(1, S.B)
     # Newly connected CDU B uses A primary, NEVER a B-tank route.
     f["valves"][b+"-P1-CV-AS"] = f["valves"][b+"-P1-CV-AR"] = True
-    o = dict(**f, id=f"TEST-OBS-{time}-{stage}", sample_s=time, release_s=time,
+    o = dict(f)
+    o.update(id=f"TEST-OBS-{time}-{stage}", sample_s=time, release_s=time,
         provenance="SYNTHETIC_RELEASED_UNIT_MEASUREMENTS", channels_independent_fixture=True,
         delta_T_K=[1., 1.1], delta_p_kPa=[2., 2.1], new_primary_flow_m3_h=[110.,110.],
         new_secondary_flow_m3_h=[0.,0.], rack_flow_m3_h=[[0.,0.] for _ in range(6)],
