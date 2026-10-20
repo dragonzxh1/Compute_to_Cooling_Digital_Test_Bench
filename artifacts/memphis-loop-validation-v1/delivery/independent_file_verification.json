@@ -1,0 +1,282 @@
+{
+  "status": "OFFICIAL_ZIP_RAW_AND_RUNTIME_INDEPENDENT_FILE_VERIFICATION_PASS",
+  "run": 39376914865,
+  "source_commit": "1f67d705571a09f04c29e37c094d280b85d041ce",
+  "manifest_sha256": "f37fed67b81d774b7dc61d1b3a430f4c91f2d8e99a0c6bc19677b9b1d9486e61",
+  "raw_files": 3417,
+  "stages": [
+    {
+      "image": "20261012.333.1",
+      "pid": 6108,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "ASSERTIONS",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 1816,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "BASELINE_EXACT",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 8040,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "NEW_PATH_SMOKE",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 5716,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_SELECTABLE_80",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 6024,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_SELECTABLE_160",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 4396,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_A_SERVICE",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 2804,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "FINAL",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 6252,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "SHARED_80",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 3948,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "SHARED_160",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 2668,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "SHARED_DT005",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 6928,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "C_CONDITIONAL_HYDRAULIC",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 1336,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_SINK_LOSS_NEGATIVE",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 3036,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "SHARED_PUMP_LOSS_NEGATIVE",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 7028,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "SHARED_SECOND_REPAIRED",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 5988,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_SECOND_REPAIRED",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 4284,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_PERF500_SECOND",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 7920,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_PERF750_SECOND",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    },
+    {
+      "image": "20261012.333.1",
+      "pid": 3896,
+      "process_mb": 1024,
+      "cpu_rate": 2500,
+      "stage": "RC_PERF1250_SECOND",
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0
+    }
+  ],
+  "archives": [
+    {
+      "id": 12244285592,
+      "official_digest": "sha256:5c750402a3a802043837e0c12f0a8760989a7ce864038f3840e2f4abe5d3784b",
+      "bytes": 20201013,
+      "local_sha256": "5c750402a3a802043837e0c12f0a8760989a7ce864038f3840e2f4abe5d3784b",
+      "name": "memphis-loop-compact-baseline-39376914865"
+    },
+    {
+      "id": 12245110733,
+      "official_digest": "sha256:c054224a6a51e64e3941d596028b3a37c5791d821d94478c71ec4e43220f94e3",
+      "bytes": 488117,
+      "local_sha256": "c054224a6a51e64e3941d596028b3a37c5791d821d94478c71ec4e43220f94e3",
+      "name": "memphis-loop-compact-diagnostic-39376914865"
+    },
+    {
+      "id": 12245917053,
+      "official_digest": "sha256:9ff9b8dafb2b3910b8d5ff7c750d62998ec7f69556feedc641d8dfa9fcec4b43",
+      "bytes": 1771289,
+      "local_sha256": "9ff9b8dafb2b3910b8d5ff7c750d62998ec7f69556feedc641d8dfa9fcec4b43",
+      "name": "memphis-loop-compact-final-39376914865"
+    },
+    {
+      "id": 12244502148,
+      "official_digest": "sha256:68e93791a68bf0dc986ed00aa82cc1c8a51d6a85117891d87f16904760e86e80",
+      "bytes": 442124,
+      "local_sha256": "68e93791a68bf0dc986ed00aa82cc1c8a51d6a85117891d87f16904760e86e80",
+      "name": "memphis-loop-compact-mesh-39376914865"
+    },
+    {
+      "id": 12245771322,
+      "official_digest": "sha256:cbc7a31062beb7415bf0da32c3c3841950e849e37e714e34d60a82158eedde97",
+      "bytes": 5568,
+      "local_sha256": "cbc7a31062beb7415bf0da32c3c3841950e849e37e714e34d60a82158eedde97",
+      "name": "memphis-loop-compact-proposal-39376914865"
+    },
+    {
+      "id": 12246315076,
+      "official_digest": "sha256:7ad0695b39d7cd175486b0bf939abd317a62947551124f01db526f32c600848c",
+      "bytes": 1093880,
+      "local_sha256": "7ad0695b39d7cd175486b0bf939abd317a62947551124f01db526f32c600848c",
+      "name": "memphis-loop-compact-second-39376914865"
+    },
+    {
+      "id": 12243802868,
+      "official_digest": "sha256:c1f20795d2ffc3b77dfb098f625b00288dfee8ef8f165ceaef87386540f84895",
+      "bytes": 129901687,
+      "local_sha256": "c1f20795d2ffc3b77dfb098f625b00288dfee8ef8f165ceaef87386540f84895",
+      "name": "memphis-loop-raw-baseline-39376914865"
+    },
+    {
+      "id": 12244249995,
+      "official_digest": "sha256:aa19eccd087fd0350708d39266d5c742cb4fc20485e7ec45a0cb63b45751aad6",
+      "bytes": 301851115,
+      "local_sha256": "aa19eccd087fd0350708d39266d5c742cb4fc20485e7ec45a0cb63b45751aad6",
+      "name": "memphis-loop-raw-diagnostic-39376914865"
+    },
+    {
+      "id": 12246455052,
+      "official_digest": "sha256:27188dbf7e48e42b44ee93db56788ce304771c7c0e271b72456ed95cb29da037",
+      "bytes": 1787201,
+      "local_sha256": "27188dbf7e48e42b44ee93db56788ce304771c7c0e271b72456ed95cb29da037",
+      "name": "memphis-loop-raw-final-39376914865"
+    },
+    {
+      "id": 12243794950,
+      "official_digest": "sha256:df19201d4e9a3e576e4d7a5100cf490171a4576365a97878364dd29333c6d75b",
+      "bytes": 280308439,
+      "local_sha256": "df19201d4e9a3e576e4d7a5100cf490171a4576365a97878364dd29333c6d75b",
+      "name": "memphis-loop-raw-mesh-39376914865"
+    },
+    {
+      "id": 12244824839,
+      "official_digest": "sha256:2b1b3f4b72bf9fa9e9602491c23e9bac50442035ba4169ef6ef039e83a0ec40d",
+      "bytes": 20287,
+      "local_sha256": "2b1b3f4b72bf9fa9e9602491c23e9bac50442035ba4169ef6ef039e83a0ec40d",
+      "name": "memphis-loop-raw-proposal-39376914865"
+    },
+    {
+      "id": 12246155427,
+      "official_digest": "sha256:f2142d3ebbe95588540d8ad9fcb3b006605bc960ae032c4aaca8ea89b26b36e4",
+      "bytes": 650527814,
+      "local_sha256": "f2142d3ebbe95588540d8ad9fcb3b006605bc960ae032c4aaca8ea89b26b36e4",
+      "name": "memphis-loop-raw-second-39376914865"
+    }
+  ],
+  "raw_logs_sha256": "d3ccfc17469154d95d977e867f0b04ffdf9de3bdd6518382fa8978b1a1582e0e",
+  "method": "PowerShell streaming SHA256; no local Python/model",
+  "engineering_approval": false,
+  "formal": false,
+  "procurement": false,
+  "hardware": false,
+  "phase6": false
+}

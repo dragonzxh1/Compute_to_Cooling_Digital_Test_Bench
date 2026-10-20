@@ -1,0 +1,11 @@
+# Build001失败证据
+
+执行29b0540b15c3e1eb880a413a9dd6d93c836eaead；run39376164388；原始源码source-29b0540/与ZIP保持不变。
+
+ASSERTIONS及BASELINE_EXACT通过，原六份raw文件按登记精确复现；随后NEW_PATH_SMOKE在导入.simulation时发生ModuleNotFoundError：缺少memphis_loop_validation_v1.streaming。新增短程物理未执行，后续工程场景均skipped，不具备方案判断资格。
+
+普通版本适配错误，修复为显式引用已保护的memphis_hydraulic_continuity_v1.streaming.StreamArray，不修改其源码。另将预检补足新模块导入检查，并修正C门禁不得以最终流量冒充恢复时段；新build绑定新源码，fresh整轮，不借Build001 PASS。
+
+失败官方ZIP SHA256：420efc6110d1a94c13f170d22da1c107183f5f63c9c416ba391f6a33f870978a（与GitHub digest一致）；完整原始日志ZIP SHA256：7c57463affb35b77a987c910d0bb09f8edb348e7f47b1679103effac0cb7f996。
+
+下载位置D:/Github/c2c-evidence-review/memphis-loop-validation-v1/run39376164388/；两个实际Python Job（基线PID4304、失败PID5216）均assigned_before_resume=true、cleanup_complete=true、active_after_cleanup=0；失败退出码1没有改成0，源/依赖环境前后相同。保留失败，不重跑failed job，不在原execution修改取PASS。

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1560" role="img" aria-labelledby="title desc">
+  <title id="title">孟菲斯00/01原拓扑与可选回充支路——方案决策功能图 V1</title>
+  <desc id="desc">上部是按客户00/01文字重建的单个18柜组：共用源泵及冷源，经供回成对选择服务A或B罐；罐底供负载、热回液入罐顶。下部是新候选：专用RC经互锁选择服务同一罐的顶部和底部。两种均非施工图，RC尚未测试、未获设计批准。冷源切换不等于切换负荷环网。</desc>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width="0.5"/></pattern>
+    <marker id="cold" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0L9 3.5L0 7Z" fill="#22d3ee"/></marker>
+    <marker id="hot" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0L9 3.5L0 7Z" fill="#fb923c"/></marker>
+    <marker id="idle" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0L9 3.5L0 7Z" fill="#94a3b8"/></marker>
+    <style>
+      text{font-family:'Microsoft YaHei','Noto Sans SC','PingFang SC',sans-serif;fill:#e2e8f0;font-size:18px}
+      .title{font-size:30px;font-weight:600}.section{font-size:23px;font-weight:600}.name{font-size:21px;font-weight:600}.note{fill:#aebed0;font-size:17px}
+      .box{fill:#132035;stroke:#64748b;stroke-width:1.5}.tank{fill:#211d39;stroke:#a78bfa;stroke-width:1.5}.candidate{fill:#252317;stroke:#fbbf24;stroke-width:1.5}
+      .c{fill:none;stroke:#22d3ee;stroke-width:3;marker-end:url(#cold)}.h{fill:none;stroke:#fb923c;stroke-width:3;marker-end:url(#hot)}
+      .i{fill:none;stroke:#94a3b8;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#idle)}.region{fill:none;stroke:#475569;stroke-width:1}
+      .future{fill:none;stroke:#fbbf24;stroke-width:1;stroke-dasharray:9 6}
+    </style>
+  </defs>
+  <rect width="1500" height="1560" fill="#0f172a"/><rect width="1500" height="1560" fill="url(#grid)"/>
+  <text x="35" y="51" class="title">先证明原回路不够，再决定增加什么</text>
+  <text x="35" y="85" class="note">方案决策功能图 V1 · 单个18柜组 · 文字重建 / 非施工P&amp;ID / 非仿真结果 / 未批准新增设备</text>
+
+  <rect x="30" y="110" width="1440" height="510" rx="10" class="region"/>
+  <text x="55" y="149" class="section">主方案｜00/01原拓扑：共享源侧，A/B独立罐与负荷环网</text>
+  <!-- Pipe paths are separate hot/cold legs; inactive B paths are dashed. -->
+  <path d="M350 230H290" class="h"/><path d="M290 310H350" class="c"/>
+  <path d="M740 220H600" class="h"/><path d="M600 300H740" class="c"/>
+  <path d="M740 410H600" class="i"/><path d="M600 490H740" class="i"/>
+  <path d="M1050 220H900" class="h"/><path d="M900 300H1050" class="c"/>
+  <path d="M1050 410H900" class="i"/><path d="M900 490H1050" class="i"/>
+  <rect x="60" y="190" width="230" height="160" rx="8" class="box"/>
+  <text x="175" y="225" text-anchor="middle" class="name">共用源侧循环</text>
+  <text x="175" y="260" text-anchor="middle">源泵 → 合法冷源组合</text>
+  <text x="175" y="293" text-anchor="middle">4泵：常态3用1备</text>
+  <text x="175" y="327" text-anchor="middle" class="note">恢复期4泵流量需核准</text>
+  <rect x="350" y="185" width="250" height="330" rx="8" class="box"/>
+  <text x="475" y="227" text-anchor="middle" class="name">源侧供回成对选择</text>
+  <text x="475" y="270" text-anchor="middle">A取 / A回，或B取 / B回</text>
+  <text x="475" y="316" text-anchor="middle">停源泵 → 隔离旧网</text>
+  <text x="475" y="355" text-anchor="middle">目标供回成对建立</text>
+  <text x="475" y="394" text-anchor="middle">阀位确认 → 启源泵</text>
+  <text x="475" y="449" text-anchor="middle" class="note">不同时并通A/B</text>
+  <text x="475" y="485" text-anchor="middle" class="note">不停止运行负荷泵</text>
+  <rect x="740" y="185" width="160" height="150" rx="22" class="tank"/>
+  <text x="820" y="225" text-anchor="middle" class="name">A罐 · 15m³</text>
+  <text x="820" y="264" text-anchor="middle">热侧在顶</text><text x="820" y="303" text-anchor="middle">冷侧在底</text>
+  <rect x="740" y="375" width="160" height="150" rx="22" class="tank"/>
+  <text x="820" y="415" text-anchor="middle" class="name">B罐 · 15m³</text>
+  <text x="820" y="454" text-anchor="middle">热侧在顶</text><text x="820" y="493" text-anchor="middle">冷侧在底</text>
+  <rect x="1050" y="185" width="350" height="150" rx="8" class="box"/>
+  <text x="1225" y="222" text-anchor="middle" class="name">A负荷泵 → 合法CDU一次通道</text>
+  <text x="1225" y="263" text-anchor="middle">本图示意A运行：总负荷330m³/h</text>
+  <text x="1225" y="302" text-anchor="middle" class="note">CDU热回液 → A罐顶部</text>
+  <rect x="1050" y="375" width="350" height="150" rx="8" class="box"/>
+  <text x="1225" y="412" text-anchor="middle" class="name">B独立负荷泵 / 备用一次环网</text>
+  <text x="1225" y="453" text-anchor="middle">切负荷路径须另行完整验证</text>
+  <text x="1225" y="492" text-anchor="middle" class="note">非A/B直通，不代表两路同时运行</text>
+  <text x="60" y="400" class="note">冷源设备及并联阀组折叠表示</text>
+  <text x="60" y="434" class="note">不表示任何两台湿塔可同时运行</text>
+  <text x="60" y="468" class="note">本图不包含第三中性循环</text>
+  <text x="60" y="570">实线：A运行示意；虚线：B待选路径。选择器是功能边界，不是已定型阀组。</text>
+  <text x="60" y="601" class="note">3个六柜单元各有本地CDU一用一备与独立二次环网；图中折叠，不能代替完整3用3备接管图。</text>
+
+  <rect x="30" y="645" width="1440" height="410" rx="10" class="future"/>
+  <text x="55" y="685" class="section">备选增量｜专用RC支路：可选服务A或B，不再只接B</text>
+  <text x="55" y="718" class="note">下图复用上图同一A/B罐，只展示新增支路；原源侧与负荷回路仍保留。</text>
+  <path d="M250 770H450" class="h"/><path d="M450 850H250" class="c"/>
+  <path d="M250 910H450" class="i"/><path d="M450 990H250" class="i"/>
+  <path d="M720 790H900" class="h"/><path d="M900 940H720" class="c"/>
+  <rect x="65" y="735" width="185" height="145" rx="20" class="tank"/>
+  <text x="157" y="778" text-anchor="middle" class="name">A罐上部取热液</text>
+  <text x="157" y="825" text-anchor="middle">底部回冷液</text>
+  <text x="157" y="860" text-anchor="middle" class="note">原负荷支路不切断</text>
+  <rect x="65" y="895" width="185" height="125" rx="20" class="tank"/>
+  <text x="157" y="937" text-anchor="middle" class="name">B罐上部取热液</text>
+  <text x="157" y="984" text-anchor="middle">底部回冷液</text>
+  <rect x="450" y="735" width="270" height="285" rx="8" class="candidate"/>
+  <text x="585" y="778" text-anchor="middle" class="name">新增RC配对选择 / 隔离</text>
+  <text x="585" y="824" text-anchor="middle">只选A或只选B</text>
+  <text x="585" y="869" text-anchor="middle">取液与回液必须同罐</text>
+  <text x="585" y="914" text-anchor="middle">先停RC泵，再隔离与换罐</text>
+  <text x="585" y="959" text-anchor="middle" class="note">阀组形式 / 泄漏等级待设计</text>
+  <text x="585" y="995" text-anchor="middle" class="note">不得与源侧选择交叉串通</text>
+  <rect x="900" y="735" width="490" height="285" rx="8" class="candidate"/>
+  <text x="1145" y="780" text-anchor="middle" class="name">专用回充泵 → RC换热设备 → 冷液回罐</text>
+  <text x="1145" y="827" text-anchor="middle">热量 → 已核实的外部冷源 / 排热设备</text>
+  <text x="1145" y="872" text-anchor="middle">不同介质之间须有换热隔离</text>
+  <text x="1145" y="917" text-anchor="middle" class="note">冷源能力、共因故障、独立供电尚待核实</text>
+  <text x="1145" y="959" text-anchor="middle" class="note">专用接口及布水器须由罐厂家确认</text>
+  <text x="1145" y="995" text-anchor="middle" class="note">未选RC功率 / 泵扬程 / 管径 / 阀门型号</text>
+
+  <rect x="30" y="1080" width="1440" height="330" rx="10" class="region"/>
+  <text x="55" y="1120" class="section">操作边界｜先验证原拓扑，不把“B补冷结束”当作“双罐恢复”</text>
+  <text x="60" y="1166">正常供冷：源侧选A，A负荷泵供CDU；B隔离待命。B运行时对称。</text>
+  <text x="60" y="1209">故障切源：保持A负荷路径；只切源侧故障设备，计算建流、建冷及冷液到达时间。</text>
+  <text x="60" y="1252">原方案补B：A继续供负载 → 共用源侧限时补B → 返回A → 核准余量恢复A → 才能下一轮。</text>
+  <text x="60" y="1295">RC备选补冷：原源侧留在A，RC选B；如RC选A，须校核同罐双源的流量、混合与压力。</text>
+  <text x="60" y="1338">再次故障前：A就绪、B就绪、状态持续有效、整系统再次90秒验证；长期源恢复另行判断。</text>
+  <text x="60" y="1381" class="note">B_RECHARGE_DONE ≠ A_RESERVE_READY ≠ DUAL_RESERVE_READY ≠ SECOND_FAULT_QUALIFIED</text>
+
+  <text x="35" y="1452">决策：原拓扑能达标 → 不加；恢复能力确有缺口 → 比较RC；负荷接管仍不连续 → 才评估第三环。</text>
+  <text x="35" y="1486" class="note">依据：00-P455、P716–724、P757；01-P49、P54–57、P175–177。P是XML段落索引，不是页码。</text>
+  <text x="35" y="1518" class="note">PIPEWORK_CONCEPT_ONLY · MEMPHIS_ENGINEERING_NOT_APPROVED · 无新增执行 / 不改变历史证据 / 不批准采购施工</text>
+</svg>

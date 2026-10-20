@@ -1,0 +1,27 @@
+{
+  "schema": "MEMPHIS_LOOP_DECISION_CONCEPT_v1",
+  "status": "CONCEPT_FOR_DESIGN_REVIEW_NOT_CONSTRUCTION",
+  "scope": "Original 00/01 functional reconstruction, optional RC branch locations, operation matrix and design gates",
+  "new_simulation_executed": false,
+  "candidate_source_modified": false,
+  "git_commit_push": false,
+  "customer_design_change_approved": false,
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "files": [
+    {"path": "functional-comparison.svg", "sha256": "0ba416cb127526442b8991361c819609b15f7e04b0362e21860a8eeb273bc5cb"},
+    {"path": "functional-comparison@2x.png", "sha256": "9a7999bd03c3ddbd802fac6acc5df9d290eef5ef05834212241736651f743669"},
+    {"path": "DESIGN_DECISION.md", "sha256": "78b795d1fd2729beb7dceff1c33e78e1c86685440336e5eb7a6467d6fbb17c6a"}
+  ],
+  "source_bindings": [
+    {"path": "C:/Users/Aiden Zhang/.codex/worktrees/six-rack-integration/Compute_to_Cooling_Digital_Test_Bench/v0_2/tests/tools/memphis_topology_audit_v1/customer_originals.json", "sha256": "d39bc45c827764a032893321abb9f1bd5a27744a864acd36305444b9a0e5435b", "use": "Previously verified original document paragraph extracts; no original DOCX reopen claimed in this turn"},
+    {"path": "D:/Github/c2c-evidence-review/memphis-topology-audit-v1/run39269508449/delivery/03_CUSTOMER_00_01_PID_COMPARISON.md", "sha256": "f25bb55b0669fe200b7c524cda584d42bafcc43bcafa8b6c0953abb667f8aa75"},
+    {"path": "D:/Github/c2c-evidence-review/memphis-topology-audit-v1/run39269508449/delivery/13_ENGINEERING_REPORT_ZH.md", "sha256": "1434811a5d9c24745a7290183ae2fd874f434e5ce12d9dbb047a8b333701b516"},
+    {"path": "D:/Github/c2c-evidence-review/memphis-topology-audit-v1/run39269508449/delivery/15_SOURCE_AND_EVIDENCE_MANIFEST.json", "sha256": "9f1395bb2452b2869b0169b5a94811ff10b98890bca7c73fe736a24c9cff06e6"}
+  ],
+  "original_document_identities_from_verified_extract": {
+    "00_raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7",
+    "01_raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+  },
+  "historical_audit": {"run": "39269508449", "execution_commit": "fc46f80ef34c0f2c7c157279b4f2ee250dc5487c"},
+  "verification_scope": "SVG XML parse, 2x static raster render, visual inspection, file and source-binding hashes; no hydraulic/thermal/controller validation"
+}

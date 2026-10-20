@@ -1,0 +1,19 @@
+{
+  "schema": "MEMPHIS-READER-VIEW-QA-v1",
+  "source_commit": "1f67d705571a09f04c29e37c094d280b85d041ce",
+  "run": "39376914865",
+  "tool": "gstack browse",
+  "scope": "Saved-data rendering only; no model execution",
+  "page": "reviewed_engineering_report.html",
+  "original": "OFFICIAL_ENGINEERING_REPORT.html",
+  "changes": ["Add explicit INCOMPLETE coverage and conditional-result explanation", "Mobile padding and heading size only"],
+  "all_13_case_selectors_exercised": true,
+  "three_svg_charts_per_case": true,
+  "nan_paths": false,
+  "console_errors": false,
+  "desktop_viewport": [1440, 1000],
+  "mobile_viewport": [390, 844],
+  "mobile_document_width": 390,
+  "physical_data_modified": false,
+  "engineering_approval": false
+}

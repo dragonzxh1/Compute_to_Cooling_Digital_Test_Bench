@@ -1,0 +1,323 @@
+{
+  "schema": "SAVED_SOURCE_ADMISSION_FILE_ANALYSIS_v1",
+  "run": "39376914865",
+  "execution_commit": "1f67d705571a09f04c29e37c094d280b85d041ce",
+  "case": "SHARED_80",
+  "official_archives": [
+    {
+      "name": "memphis-loop-compact-mesh-39376914865",
+      "sha256": "sha256:68e93791a68bf0dc986ed00aa82cc1c8a51d6a85117891d87f16904760e86e80"
+    },
+    {
+      "name": "memphis-loop-raw-mesh-39376914865",
+      "sha256": "sha256:df19201d4e9a3e576e4d7a5100cf490171a4576365a97878364dd29333c6d75b"
+    }
+  ],
+  "snapshots": [
+    {
+      "source_tank": "A",
+      "requested_time_s": 30,
+      "source_path": "W1",
+      "rack_C": 42.945371631904436,
+      "primary_C": 41.3355761546689,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 30.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 13.5,
+      "source_return_C": 41.39516602615953
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 43,
+      "source_path": "W2",
+      "rack_C": 42.97724692802632,
+      "primary_C": 40.567904716677276,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 43.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 28.94932063069411,
+      "A_cold_m3": 12.1875,
+      "source_return_C": 48.28557859485659
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 45,
+      "source_path": "W2",
+      "rack_C": 42.97054023112446,
+      "primary_C": 44.74341314553618,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 45.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 12.0,
+      "source_return_C": 48.285372356330186
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 60,
+      "source_path": "W2",
+      "rack_C": 47.07048613400673,
+      "primary_C": 48.38902794079854,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 60.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 11.625,
+      "source_return_C": 48.378226307317846
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 90,
+      "source_path": "W2",
+      "rack_C": 51.08786813467299,
+      "primary_C": 51.62829402729915,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 90.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 11.4375,
+      "source_return_C": 51.71669730898304
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 120,
+      "source_path": "W2",
+      "rack_C": 53.61322142590319,
+      "primary_C": 52.02827044086263,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 120.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 11.4375,
+      "source_return_C": 51.46907398412111
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 150,
+      "source_path": "W2",
+      "rack_C": 50.44942333549892,
+      "primary_C": 47.48090648523947,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 150.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 11.25,
+      "source_return_C": 47.34489752122602
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 423,
+      "source_path": "W2",
+      "rack_C": 44.04039125805173,
+      "primary_C": 41.54414049573944,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 423.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 10.125,
+      "source_return_C": 41.45030979798048
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 424,
+      "source_path": "W2",
+      "rack_C": 44.01930223682746,
+      "primary_C": 41.52341310670164,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 424.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 10.125,
+      "source_return_C": 41.42962383160409
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 435,
+      "source_path": "W2",
+      "rack_C": 43.78856933540186,
+      "primary_C": 41.29689654514431,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 435.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 10.3125,
+      "source_return_C": 41.203571188620174
+    },
+    {
+      "source_tank": "A",
+      "requested_time_s": 1800,
+      "source_path": "W2",
+      "rack_C": 42.782352143846765,
+      "primary_C": 40.79463745406906,
+      "load_m3_h": 330.0,
+      "actual_saved_time_s": 1800.0,
+      "B_cold_m3": 0.0,
+      "source_m3_h": 362.30400697477023,
+      "A_cold_m3": 12.375,
+      "source_return_C": 40.738140968061316
+    }
+  ],
+  "A_tank_ledger": [
+    {
+      "time_s": 30.0,
+      "bottom_C": 41.28654825996102,
+      "top_C": 48.646463097438755,
+      "load_W": 2753522.380950556,
+      "source_W": -2944490.089008179,
+      "cumulative_load_J": 86894389.40669785,
+      "cumulative_source_J": -94274838.70272799,
+      "cumulative_ambient_J": 7178.575867557076,
+      "cumulative_delta_U_J": -7373270.720186349
+    },
+    {
+      "time_s": 43.0,
+      "bottom_C": 40.54561018344424,
+      "top_C": 48.31623212878668,
+      "load_W": 2878556.577487135,
+      "source_W": -1033.1188150197995,
+      "cumulative_load_J": 123752348.30071516,
+      "cumulative_source_J": -99193267.86303233,
+      "cumulative_ambient_J": 10178.330421269528,
+      "cumulative_delta_U_J": 24569258.768070005
+    },
+    {
+      "time_s": 45.0,
+      "bottom_C": 44.88130021773037,
+      "top_C": 48.958677607228594,
+      "load_W": 2052162.0722342879,
+      "source_W": -247947.77857474965,
+      "cumulative_load_J": 128764333.41656017,
+      "cumulative_source_J": -99355390.8135356,
+      "cumulative_ambient_J": 10605.311156022419,
+      "cumulative_delta_U_J": 29419547.914149318
+    },
+    {
+      "time_s": 60.0,
+      "bottom_C": 48.33622174929866,
+      "top_C": 51.630764007217294,
+      "load_W": 1352078.4450546445,
+      "source_W": -1320294.9134397772,
+      "cumulative_load_J": 150117329.01071367,
+      "cumulative_source_J": -116342639.51077,
+      "cumulative_ambient_J": 13736.018494998969,
+      "cumulative_delta_U_J": 33788425.51842315
+    },
+    {
+      "time_s": 90.0,
+      "bottom_C": 51.58081261868381,
+      "top_C": 53.972264239748256,
+      "load_W": 1146214.2487257496,
+      "source_W": -912937.2166776845,
+      "cumulative_load_J": 187237740.56875056,
+      "cumulative_source_J": -147626245.2572758,
+      "cumulative_ambient_J": 19920.033666688974,
+      "cumulative_delta_U_J": 39631415.345132515
+    },
+    {
+      "time_s": 120.0,
+      "bottom_C": 51.946029323137736,
+      "top_C": 55.761646594282865,
+      "load_W": 1637660.2586864328,
+      "source_W": -1745473.3981632292,
+      "cumulative_load_J": 224690067.05839086,
+      "cumulative_source_J": -178966083.63473392,
+      "cumulative_ambient_J": 25928.186795704758,
+      "cumulative_delta_U_J": 45749911.61047835
+    },
+    {
+      "time_s": 150.0,
+      "bottom_C": 47.42137982042914,
+      "top_C": 54.64114810635073,
+      "load_W": 2903552.271120363,
+      "source_W": -2963946.108699007,
+      "cumulative_load_J": 299206515.3857861,
+      "cumulative_source_J": -257056566.97282308,
+      "cumulative_ambient_J": 31932.196279859585,
+      "cumulative_delta_U_J": 42181880.6092696
+    },
+    {
+      "time_s": 423.0,
+      "bottom_C": 41.48687774377538,
+      "top_C": 48.96745055718861,
+      "load_W": 3040499.746918319,
+      "source_W": -3054151.207427566,
+      "cumulative_load_J": 1126131327.507139,
+      "cumulative_source_J": -1090210050.575184,
+      "cumulative_ambient_J": 87948.35953383085,
+      "cumulative_delta_U_J": 36009225.29169419
+    },
+    {
+      "time_s": 424.0,
+      "bottom_C": 41.46615257810379,
+      "top_C": 48.947372576641214,
+      "load_W": 3040340.029960014,
+      "source_W": -3054397.198223678,
+      "cumulative_load_J": 1129171739.664794,
+      "cumulative_source_J": -1093264337.0329576,
+      "cumulative_ambient_J": 88154.67570433472,
+      "cumulative_delta_U_J": 35995557.30774572
+    },
+    {
+      "time_s": 435.0,
+      "bottom_C": 41.23966091746456,
+      "top_C": 48.72808402897135,
+      "load_W": 3038386.651923228,
+      "source_W": -3057134.020861643,
+      "cumulative_load_J": 1162604961.7225118,
+      "cumulative_source_J": -1126877847.9951499,
+      "cumulative_ambient_J": 90424.98667488089,
+      "cumulative_delta_U_J": 35817538.71424255
+    },
+    {
+      "time_s": 1800.0,
+      "bottom_C": 40.739378679804645,
+      "top_C": 47.73782062662514,
+      "load_W": 2708032.394153729,
+      "source_W": -2843173.269186232,
+      "cumulative_load_J": 4881582289.98929,
+      "cumulative_source_J": -4901895114.822023,
+      "cumulative_ambient_J": 400029.4048356671,
+      "cumulative_delta_U_J": -19912795.427743457
+    }
+  ],
+  "events": [
+    {
+      "from_state": "RUN",
+      "reason": "RELEASED_SOURCE_UNAVAILABLE_KEEP_A_LOAD_RUNNING",
+      "time_ns": 31100000000,
+      "to_state": "STOP_SOURCE"
+    },
+    {
+      "from_state": "STOP_SOURCE",
+      "reason": "SOURCE_ZERO_SPEED",
+      "time_ns": 32500000000,
+      "to_state": "CLOSE"
+    },
+    {
+      "from_state": "CLOSE",
+      "reason": "OLD_SUPPLY_RETURN_CLOSED",
+      "time_ns": 37700000000,
+      "to_state": "OPEN"
+    },
+    {
+      "from_state": "OPEN",
+      "reason": "PAIR_OPEN_START_FLOW_NOT_A_COLD_RETURN_CLAIM",
+      "time_ns": 42900000000,
+      "to_state": "BUILD_COLD"
+    },
+    {
+      "from_state": "BUILD_COLD",
+      "reason": "RELEASED_PAIRED_TT_AND_DESIGN_FT_COLD_RETURN",
+      "time_ns": 434100000000,
+      "to_state": "RUN"
+    }
+  ],
+  "actual_source_flow_during_restoration_m3_h": 362.30400697477023,
+  "source_qualified_cold_delay_s": 393.3,
+  "B_recharge_actually_exercised": false,
+  "controller_gate": "New conservative17TT screen and complete absence budget; NOT a customer-approved readiness definition",
+  "physical_assumptions": "Standby line48.29C and ZERO source rejection until54s after new flow begins; not an OEM startup curve",
+  "conclusion_scope": "File-level causal clues only, not proof original customer design fails or RC is necessary",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}
