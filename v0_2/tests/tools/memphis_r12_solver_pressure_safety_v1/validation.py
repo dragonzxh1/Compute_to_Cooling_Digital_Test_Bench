@@ -62,11 +62,16 @@ def reproduce(out):
     assert abs(c["min_rack_flow_m3_h"]-11.62290356569)<1e-6
     assert abs(c["max_rack_inlet_C"]-39.61142002412)<1e-6
     assert abs(c["max_hx_inlet_gauge_difference_kPa"]-192.41233186268)<1e-6
-    assert results[-1]["execution_status"]=="INVALID"
-    save(out/"unchanged_reproduction.json",dict(status="REPRODUCED_NOT_FIXED",results=results))
-    return dict(status="REPRODUCED_NOT_FIXED",results=results)
+    reproduced=results[-1]["execution_status"]=="INVALID"
+    summary=dict(status="FULL_TRAJECTORY_FAILURE_REPRODUCED" if reproduced else "HISTORICAL_FAILURE_NOT_RECURRENT",
+        pressure_baseline_reproduced=True, early_exit_failure_recurrent=reproduced,
+        note="Fresh completion is not proof the old solver is robust. Do not force a failure to match history.",
+        results=results)
+    save(out/"unchanged_reproduction.json",summary)
+    return summary
 
 
 def execute(out, stage):
     if stage=="baseline": return reproduce(out)
-    raise RuntimeError("PATCH_NOT_IMPLEMENTED")
+    from .suite import run
+    return run(out)

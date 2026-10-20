@@ -1,0 +1,40 @@
+{
+  "schema": "MEMPHIS-DESIGN-BASIS-PRECEDENCE-v1",
+  "authority": "User clarification: 基准还是以之前的00,01文件为准",
+  "final_design_sources": [
+    {
+      "id": "00",
+      "filename": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    },
+    {
+      "id": "01",
+      "filename": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    }
+  ],
+  "raw_sources_rehashed_and_match_previous_registration": true,
+  "source_precedence": [
+    "00 and 01 are the final customer design basis. Report conflicts between them; do not choose silently.",
+    "R12 drawings, spreadsheets and clarification documents are process/research references, not overrides of 00/01.",
+    "Register every R12/model difference against 00/01 before claiming final-design verification.",
+    "Unconfirmed parameters remain explicitly labeled research assumptions, not customer or OEM guarantees."
+  ],
+  "historical_evidence_policy": {
+    "R12_original_pressure_limit": "Retain registered 10 kPa condition and historical FAIL; do not erase by changing source precedence.",
+    "R12_tap_mapping": "Research-source interpretation only until reconciled against 00/01.",
+    "R12_solver_reproduction": "Numerical diagnosis, not 00/01 design validation.",
+    "new_run": 39495584820,
+    "new_run_source": "222b3454d40f2cfe6cedb65adbe478c9fffd46e6",
+    "new_run_result": "FAIL: expected historical early-exit failure did not recur in fresh full trajectory; preserve actual completed early-exit evidence and failed reproduction assertion.",
+    "unexpected_general_CI": {
+      "run": 39495584602,
+      "status": "CANCELLED",
+      "evidence_credit": "NONE"
+    }
+  },
+  "next_required_step": "00/01-versus-R12-versus-executable-model topology, parameter, pressure-tap and requirement reconciliation before further model publication or execution.",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "new_18_rack_or_1800_second_authorization": false,
+  "formal_C3_C_or_hardware_or_procurement_or_production_authorization": false
+}

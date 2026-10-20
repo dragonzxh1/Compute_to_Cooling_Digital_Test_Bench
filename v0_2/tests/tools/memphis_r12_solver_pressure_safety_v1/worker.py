@@ -31,6 +31,7 @@ def main():
         for r in manifest['source_files']:
             if hashlib.sha256((repo/r['path']).read_bytes()).hexdigest()!=r['sha256']:raise RuntimeError('SOURCE_DRIFT '+r['path'])
     verify()
+    if os.environ.get('ImageVersion') not in ('20261004.326.1','20261012.333.1'):raise RuntimeError('IMAGE_DRIFT')
     if platform.python_version()!='3.11.9':raise RuntimeError('PYTHON_VERSION_DRIFT')
     import numpy
     if numpy.__version__!='2.4.6':raise RuntimeError('DEPENDENCY_VERSION_DRIFT')
@@ -43,8 +44,10 @@ def main():
     try:
         from .validation import execute
         details=execute(out/'delivery', stage)
+        elapsed=time.monotonic()-started
         result.update(status='PASS', meaning='BOUNDED_EXECUTION_NOT_ENGINEERING_APPROVAL',
-            elapsed_s=time.monotonic()-started, suite_admitted=True, details=details)
+            elapsed_s=elapsed, suite_admitted=stage=='baseline' and elapsed*5<420,
+            details=details)
         verify()
     except BaseException as e:
         result.update(error=repr(e),traceback=traceback.format_exc(),elapsed_s=time.monotonic()-started)

@@ -1,0 +1,215 @@
+{
+  "schema": "MEMPHIS-00-01-R12-MODEL-RECONCILIATION-v1",
+  "sources": {
+    "final_00_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7",
+    "final_01_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c",
+    "historical_execution": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+    "historical_delivery": "3c2b6fce6a700c6495433373e07f3a18d8b16545",
+    "historical_run": 39492934891
+  },
+  "locator_rule": "B is a top-level OOXML body child, not rendered page",
+  "scope_decision": "RESEARCH_NUMERICAL_COMPARISON_ADMITTED; FINAL_00_01_DYNAMIC_DESIGN_VALIDATION_NOT_ADMITTED",
+  "frozen_originals_modified": false,
+  "rows": [
+    {
+      "id": "B01",
+      "item": "设计依据",
+      "final_00_01": "00/01最终方案",
+      "r12_reference": "R12过程资料",
+      "current_model": "研究R12 JSON及参数",
+      "source_locator": "00 B020,B026;01 B026",
+      "classification": "FINAL_PRECEDENCE_RESTORED",
+      "required_action": "最终设计评价只按00/01；R12不自动覆盖"
+    },
+    {
+      "id": "B02",
+      "item": "六柜CDU结构",
+      "final_00_01": "每6柜2台CDU，1用1备；每台2台100%二次泵",
+      "r12_reference": "相同功能并细化阀组",
+      "current_model": "仅G01-U1两CDU/六柜动态",
+      "source_locator": "00 B017,B259,B260;01 B006",
+      "classification": "CONSISTENT_SCOPE_SUBSET",
+      "required_action": "18柜/90柜不在本轮动态范围"
+    },
+    {
+      "id": "B03",
+      "item": "负载",
+      "final_00_01": "155kW/柜、95%入液、147.25kW/柜",
+      "r12_reference": "同设计口径",
+      "current_model": "147250W/柜×6，泵热另加",
+      "source_locator": "00 B020;01 B005",
+      "classification": "CONSISTENT",
+      "required_action": "不降载，不将1100kW容量当作实际入液热"
+    },
+    {
+      "id": "B04",
+      "item": "温度",
+      "final_00_01": "40→44°C随干球；入口45°C硬上限",
+      "r12_reference": "过程采用相同硬限",
+      "current_model": "原边界37°C定温；无室外目标曲线",
+      "source_locator": "00 B104,B192;01 B020",
+      "classification": "PARTIAL_NOT_FULL_ENVIRONMENT",
+      "required_action": "39.611°C只对应原定温研究工况"
+    },
+    {
+      "id": "B05",
+      "item": "二次流量",
+      "final_00_01": "49.19/68.37m³/h每六柜",
+      "r12_reference": "相同参考",
+      "current_model": "高温11.395m³/h每柜门槛",
+      "source_locator": "00 B129,B139;01 B011",
+      "classification": "CONSISTENT_HIGH_FLOW_REFERENCE",
+      "required_action": "正常流量与热目标曲线未覆盖"
+    },
+    {
+      "id": "B06",
+      "item": "板换一次压降",
+      "final_00_01": "85.92kPa@110m³/h预算",
+      "r12_reference": "R12过程预算不能替代原文",
+      "current_model": "130kPa@110m³/h",
+      "source_locator": "00 B154",
+      "classification": "MODEL_PARAMETER_DIFFERENT",
+      "required_action": "保持旧结果，新最终设计模型需单独绑定"
+    },
+    {
+      "id": "B07",
+      "item": "板换二次压降",
+      "final_00_01": "26.60kPa@68.37m³/h预算",
+      "r12_reference": "须核厂家与实际接管",
+      "current_model": "172.18kPa@68.37m³/h",
+      "source_locator": "00 B163",
+      "classification": "MODEL_PARAMETER_DIFFERENT",
+      "required_action": "不能把外管损失混入板换后再评价四端压力"
+    },
+    {
+      "id": "B08",
+      "item": "二次外管",
+      "final_00_01": "123.58kPa等效路径，DN100/120m/K20预算",
+      "r12_reference": "R12管段进一步细化但待几何",
+      "current_model": "PIPE合并为零损失连接；无独立外管压降",
+      "source_locator": "00 B163,B164,B168",
+      "classification": "MODEL_CAPABILITY_MISSING",
+      "required_action": "需独立供回外管损失及几何，不能只改板换K"
+    },
+    {
+      "id": "B09",
+      "item": "内部管阀过滤",
+      "final_00_01": "合计50kPa；实际泵→过滤→HX→供液",
+      "r12_reference": "增加清晰过滤器隔离阀方案",
+      "current_model": "二次滤20kPa+每阀1kPa；一次滤10kPa+每阀1kPa",
+      "source_locator": "00 B154,B163,B165,B168",
+      "classification": "UNALLOCATED_BUDGET",
+      "required_action": "逐件分配待设计/OEM；集中位置不是真实测点"
+    },
+    {
+      "id": "B10",
+      "item": "二次泵",
+      "final_00_01": "371.81kPa高温运行预算；70m³/h/500kPa/22kW候选",
+      "r12_reference": "主站许可待校审",
+      "current_model": "H0=573780.864Pa；曲线降92952.5Pa@68.37；效率0.72；死头300W",
+      "source_locator": "00 B148,B195;01 B025",
+      "classification": "RESEARCH_CURVE_NOT_OEM",
+      "required_action": "同铭牌候选不等于相同整条曲线"
+    },
+    {
+      "id": "B11",
+      "item": "一次源/负荷回路",
+      "final_00_01": "分层罐解耦；共用4源泵3用1备；负荷泵独立成环",
+      "r12_reference": "过程功能图扩展",
+      "current_model": "常温无限排热边界+单RESEARCH_BOUNDARY_LP_A；无实际源泵/塔/罐动态",
+      "source_locator": "00 B132,B148,B156,B158",
+      "classification": "MODEL_CAPABILITY_MISSING",
+      "required_action": "本轮不可证明源侧建冷、库存或回充"
+    },
+    {
+      "id": "B12",
+      "item": "定压/静压",
+      "final_00_01": "共同罐体335.89kPa(g)等效基准；二次60kPa(g)示例；实际待深化",
+      "r12_reference": "R22泵出口代入口且依赖示例",
+      "current_model": "一次165/二次100kPa(g)独立研究参考",
+      "source_locator": "00 B156,B158,B167,B168",
+      "classification": "NOT_FINAL_DESIGN_BOUNDARY",
+      "required_action": "保留原比较；不能人为调偏置取得PASS"
+    },
+    {
+      "id": "B13",
+      "item": "跨板换入口压差",
+      "final_00_01": "abs(P1-HX-IN−P2-HX-IN)≤10kPa；非板片各处最大差压",
+      "r12_reference": "同数值；R22等效测点混用",
+      "current_model": "原HX两入口计算192.412kPa",
+      "source_locator": "00 B146,B168",
+      "classification": "REQUIREMENT_CONFIRMED_MODEL_FAIL",
+      "required_action": "旧FAIL保留；实际设计是否满足待真实压损/定压证明"
+    },
+    {
+      "id": "B14",
+      "item": "泵入口",
+      "final_00_01": "所有源泵、负荷泵、二次泵≥50kPa(g)",
+      "r12_reference": "相同方向",
+      "current_model": "仅单六柜二次泵与简化边界",
+      "source_locator": "00 B146,B148;01 B025",
+      "classification": "PARTIAL_COVERAGE",
+      "required_action": "不能把二次吸入PASS当全部泵PASS"
+    },
+    {
+      "id": "B15",
+      "item": "二次并流许可",
+      "final_00_01": "必要一对短时重叠；接口许可参考02；本次未确认2K/5kPa/5s/30s数字",
+      "r12_reference": "2K/5kPa持续5s，重叠≤30s",
+      "current_model": "按R12独立研究许可执行",
+      "source_locator": "00 B212,B265,B266;01 B014",
+      "classification": "RESEARCH_POLICY_NOT_DIRECT_FINAL_BINDING",
+      "required_action": "不取消原研究门槛，不宣称00/01直接批准精确定值"
+    },
+    {
+      "id": "B16",
+      "item": "A/B隔离",
+      "final_00_01": "一次A/B不得并通，供回同网；CDU备用限本六柜",
+      "r12_reference": "身份/一次网/二次网分离",
+      "current_model": "守卫拒绝非法一次A/B并通，B可接一次A",
+      "source_locator": "00 B226,B260,B266;01 B018",
+      "classification": "CONSISTENT_FUNCTION",
+      "required_action": "CDU B接管不意味着B罐放冷"
+    },
+    {
+      "id": "B17",
+      "item": "回充",
+      "final_00_01": "共用源泵分段补B→回A恢复，必要第4泵；无独立RC",
+      "r12_reference": "R12为过程深化参考",
+      "current_model": "无罐/回充动态",
+      "source_locator": "00 B202,B204,B205,B206;01 B035,B037",
+      "classification": "NOT_MODELED",
+      "required_action": "独立RC/第三回路不能当原方案"
+    },
+    {
+      "id": "B18",
+      "item": "储罐与90秒",
+      "final_00_01": "每罐15m³，330m³/h90秒温升≤0.5K；60秒建冷含检测+30秒置换",
+      "r12_reference": "过程许可不可替代罐性能",
+      "current_model": "本轮60秒CDU转移，无罐库存、无冷源故障",
+      "source_locator": "00 B271;01 B012",
+      "classification": "NOT_IN_SCOPE",
+      "required_action": "不得由35.2秒CDU接管推断90秒冷源连续供冷"
+    },
+    {
+      "id": "B19",
+      "item": "物性/HX热参数",
+      "final_00_01": "PG25；具体温度物性及污垢曲线需核",
+      "r12_reference": "过程数据与OEM仍待定",
+      "current_model": "rho1025/cp3800常数、UA184000W/K研究假设",
+      "source_locator": "00 B063,B198;01 B025,B026",
+      "classification": "UNCALIBRATED_ASSUMPTIONS",
+      "required_action": "不自动替换为其他常数；需另注册物性随温度来源"
+    },
+    {
+      "id": "B20",
+      "item": "施工/设备批准",
+      "final_00_01": "初设；实际几何、承压、接口待深化",
+      "r12_reference": "R12过程图可修订",
+      "current_model": "仅离线软件研究；无硬件安全认证",
+      "source_locator": "00 B020,B048,B168,B234;01 B026,B027",
+      "classification": "ENGINEERING_NOT_APPROVED",
+      "required_action": "数值PASS不释放采购、施工或生产"
+    }
+  ]
+}
