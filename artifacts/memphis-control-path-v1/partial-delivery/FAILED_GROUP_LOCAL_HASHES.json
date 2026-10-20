@@ -1,0 +1,2534 @@
+[
+  {
+    "bytes": 678,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/component_prelude.json",
+    "local_sha256": "a58e4682581e1bace22cbd71bcfd2d84d264a241afeb708b8254d1036eab7c69"
+  },
+  {
+    "bytes": 14820946,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/m1_U0.zlib",
+    "local_sha256": "4ea7d74944cf06c60aa8f518ce2d9e6d61c6da43651eb0f5bf732edb92dc2b71"
+  },
+  {
+    "bytes": 56344,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/m1_U0_index.json",
+    "local_sha256": "c83b71aacda97d1e5ededfc3bc36eb249a4fd5af78b6492efa2393cce3c8da80"
+  },
+  {
+    "bytes": 9153,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/input.json",
+    "local_sha256": "fc65483e98312962bf72e6d3acb89e94a3f631be92030bf8d70d5bb687a2c565"
+  },
+  {
+    "bytes": 14823532,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/m1_U1.zlib",
+    "local_sha256": "8127982c7323cd62ca4794813ab82a7ff329f789eb066dd745d287e67055be2c"
+  },
+  {
+    "bytes": 56344,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/m1_U1_index.json",
+    "local_sha256": "b3ef5ec99a9097670e013e7cd24e9e71d6c641aa401d72ddcc57b74ac7666eab"
+  },
+  {
+    "bytes": 14819504,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/m1_U2.zlib",
+    "local_sha256": "8605575c75aee8de4ace417a0a2c7f939631a4cd2596c987d5204117304d8333"
+  },
+  {
+    "bytes": 56344,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/m1_U2_index.json",
+    "local_sha256": "e43bfe0024acd719cfc07e29a6f3a27391b625b72669b26e6a70799b070ac055"
+  },
+  {
+    "bytes": 18044804,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/measurements.json",
+    "local_sha256": "5d3ef4cc5c8d63e9cc4a2ba34666f078bd5aa481e35b518a69b486c420b2bda8"
+  },
+  {
+    "bytes": 3959315,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/phases.json",
+    "local_sha256": "2fab2f57afd5dd17a2a82cfd61f240a17c6e41a1a4f04351ccc71b5d53fe3560"
+  },
+  {
+    "bytes": 10964857,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/physical_path.csv",
+    "local_sha256": "e1fcebd4842f9401f9514c2c5805947b1f89b8cfb3d24c01392fa66c51acba31"
+  },
+  {
+    "bytes": 308068716,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/physics.json",
+    "local_sha256": "4fb0eab4688ad4ea558636747f05425fee699ce866244bc36958033ac37ac96b"
+  },
+  {
+    "bytes": 6911,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/result.json",
+    "local_sha256": "298bde6a7ee80145aa8f0713a28fd51ccaac2c11853402a5a08ba1bf5e180d13"
+  },
+  {
+    "bytes": 15373128,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/series.json",
+    "local_sha256": "0c9092a05e09105c81d36449b6206d03aa82883b6f6d98e147baf66138091b96"
+  },
+  {
+    "bytes": 16992551,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/source_observations.json",
+    "local_sha256": "0f454edd29291d9e5f2340c58b8eb851c14ae35daa351b0f090ac072b959b4db"
+  },
+  {
+    "bytes": 39142781,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case/source_phases.json",
+    "local_sha256": "f53f35b7e2b1aad0693e22b20cba51db7dd281f51995332a28221333bda9385c"
+  },
+  {
+    "bytes": 1137,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/case_spec.json",
+    "local_sha256": "d1043a4036905d8822a37b491f39b43cd9d83bc07734d022073884fc5705553b"
+  },
+  {
+    "bytes": 677,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/external_job_identity.json",
+    "local_sha256": "1742e519a92f0fe39750e659d8dd6ad1b2cb29538866790ed529be5667879df8"
+  },
+  {
+    "bytes": 20752,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/forward_result.json",
+    "local_sha256": "66e954b9e300ca99f5dd8e6cfe8788065c22eebf1e3502c76b86b75885a6bd61"
+  },
+  {
+    "bytes": 1151282,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/FINAL_DISCHARGE.csv",
+    "local_sha256": "0ef14ee3ac66d630cc776778e4c5253e49cbdf3d38763a01dad7290b8e2d0e26"
+  },
+  {
+    "bytes": 237,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json",
+    "local_sha256": "c9e31f49899cd9b3553c5ba8f98955e9d118acafab21159aef43d474188aa221"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-001.json",
+    "local_sha256": "8a3ed41a4111dae6acea07488a70714ebe8354670900c51f244091629fd30ae1"
+  },
+  {
+    "bytes": 99,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-000.json",
+    "local_sha256": "718c584c9c6f8b1285ecaa762e51844f739b8342c688dc7c3201c10dcbd0e841"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-002.json",
+    "local_sha256": "1f5b5c71dbfe976336586865f0ec479ae31e2cdbd52e0ea1bdf00388e2397ad6"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-003.json",
+    "local_sha256": "51d1a0c11eb5f057182ab87a0079a92fe760eadf3e8d138114e11b69619ac8e2"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-004.json",
+    "local_sha256": "5fa81200feba279fa8d23572d765a26ee50faf2a1816acfbd228b5a36c63f295"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-005.json",
+    "local_sha256": "ce630ff49d218e49872dc689ecbac28fe43476a2517c61be1210e0d88b12eaf0"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-006.json",
+    "local_sha256": "36b76bc0b858705e0e6ea93a90f7a128b1cd863d7b5b3b5c5bbdbe5c40901e6a"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-007.json",
+    "local_sha256": "91161252f938515bb018858793ae4e26699482e95bae9e968efdfc5639c15368"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-008.json",
+    "local_sha256": "cc1fd426708bd458c049e7b24f7fb3c27d20f4132c9f91342aa63c84ede42cd0"
+  },
+  {
+    "bytes": 101,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-009.json",
+    "local_sha256": "916a8220e813aa2c1ceb1cf10cae95410aa51508563edfb4754f0ad6dbddbf65"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-010.json",
+    "local_sha256": "34c771b22adab23207f1e3f8fc009483ba0dc7f71a32593813c0c1f23cd515da"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-011.json",
+    "local_sha256": "4e6df68fd8eb346cab920ec32ab4d70ae0b666604906704978fd71c0bc384aed"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-012.json",
+    "local_sha256": "7f08c3090e8df3d844681a12357c3ab365c7a55e78b60fb97570f939c013d72b"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-013.json",
+    "local_sha256": "d31edb979b371b26830dff545e015f5ad36e7112155abd23ca19d8c2779081a4"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-014.json",
+    "local_sha256": "4c6b7f3cac3bb728e719d79a49e619ede080f470461fd70af5292f528f1db8b2"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-015.json",
+    "local_sha256": "4ba5aa0424664a4b83ce5dea1208dcb370f6542dfd13015123199ad81c39086c"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-016.json",
+    "local_sha256": "eaf1630f27e7a96323fedb193f1bb0d4f905b9b07033a1915eed4185f5d6a95d"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-017.json",
+    "local_sha256": "d5a7638b07530e2428c1b309c60b3c9ae3204f1d6f9df227027d3b7bfb2adec1"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-018.json",
+    "local_sha256": "c2d8c2e5137ad727430bc2723e4264576864bcb48b60f6bc0a5482cae2afc3e2"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-020.json",
+    "local_sha256": "73dcb1ddae7136f4c74517bc7a7f4ee9f0819656c0d9f92518ef6b8c375a2faa"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-019.json",
+    "local_sha256": "2dfd8852dff9eba51e675ef610695f2b015bb17f678b8ef8549bbdf0df7d37ae"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-021.json",
+    "local_sha256": "0113b234faf4984ee6838075f36610d36d7174cd5d2c5c653c3c543b7e388c77"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-022.json",
+    "local_sha256": "f7eb3e67d85c6f15056500774526f644d9a10040575a7e90d212d23d1fea1aa8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-023.json",
+    "local_sha256": "e714f3d0555913a9f5b4f0d755c1567afe2e2b2d04b36474c51ffa9c33b9284f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-025.json",
+    "local_sha256": "157c78aae90ad137ec6e9a908543bc4abb6995d7706afa3e1cabdea4516bf538"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-026.json",
+    "local_sha256": "f4a8aa382b16f416cbba00000c2a20fa801ecc825259c96c1572a2a4dd1c4781"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-024.json",
+    "local_sha256": "f63100c74a7c182c0d7193fa684072dd2c22a43de6e57d3a7c6df8c7bed1e6b6"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-027.json",
+    "local_sha256": "2348f4674e9159d44d4cf4f1174798937eace6e659f34d77cc854df9f7cf62bd"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-028.json",
+    "local_sha256": "eaf6841f766fd6d93cd5e4b2170e13ec6ef5edab4ba7cdf034d5c3e6ad738c45"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-029.json",
+    "local_sha256": "bd625b80786f0db17d7c3d6f51f4479b27cf4cc3b235c97db14b8117cf32a83c"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-030.json",
+    "local_sha256": "515a2aab64cabfbf14394d99f7fe591c1a7bdf02fb055dcaafe4bc56adc020ef"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-031.json",
+    "local_sha256": "8f0adef79ae4ea25422ee70e6fcf80417e65123f621f125f9a4e1041ab7be7c7"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-033.json",
+    "local_sha256": "298e5fd50a255bc8c667c9e2176a5f44f72a453a394aba5ae11b70489c691944"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-034.json",
+    "local_sha256": "108efa6b1a962a9ce862bd8c333624b759a0c4cbf5156f58bcc5d58a8eede1a0"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-032.json",
+    "local_sha256": "09aa82159a85fe3d7c212c85628c38d07a0acbc604f153c077f92f84d190d361"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-035.json",
+    "local_sha256": "617eaf2faa537426adbda9b08d8fc3fa59d517ee63ba8af7434260ecdf65765a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-036.json",
+    "local_sha256": "a7b2df3e6395740cfbfde855f7f2ae73b0b3c666dcd0ecc0a030d49ccfddace2"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-039.json",
+    "local_sha256": "bceeadaaba193aafce812d21e5cf842f91d3760228f909d8f82de5741c4d5388"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-038.json",
+    "local_sha256": "1c1d0a96f28240c323420e67e446b84d9ad2505ba206595b2ae6b5b558442932"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-037.json",
+    "local_sha256": "7aa6c69edd71c2cafd26bdd505581243908d88b37eb8d716340617aa0ce5adfd"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-040.json",
+    "local_sha256": "46eb7ca314cb0766238287d6e5ef3e0aa2d3495bd5def5f9bc0450d7f0d20e54"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-041.json",
+    "local_sha256": "d9e31bfacb7e076bcee21baf228455fcf1ac5f2f418ab3847c40a736fcc8dc05"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-042.json",
+    "local_sha256": "c58014fdf0e7b0ec47025f0e8f31e3cab39545134efda5556e60a2e85223afd1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-043.json",
+    "local_sha256": "9625ae29ee76b296c4d259a004b8ef221eeff8f2d38a54aff550a365998a6e34"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-044.json",
+    "local_sha256": "fef3b481e4bdcb79a7975438c8fa7c2a068344435c1360077d1de6597757e4e3"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-045.json",
+    "local_sha256": "073f154ca61eda46a6a5fb771a3f27c459632dc2d0e5ef0da308cda255294deb"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-046.json",
+    "local_sha256": "5a1f1dbf9374f8a157d384194732edc1dca4a1fb41aa8a326505cdd4a6a0a3ac"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-047.json",
+    "local_sha256": "e4601001d4c49a9e64c4e70c6b76b91ab50a635532bcd27328ddbfcf92b4c863"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-048.json",
+    "local_sha256": "7e5b065aad510e3c965f6df8dcee3bfb4e6d79a113838c5eb07d1b0a08eb9ce8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-049.json",
+    "local_sha256": "1c954ca318daf78942e9ee21fa8ee7a3da3389534a07942937a12e496616ba52"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-050.json",
+    "local_sha256": "b6666e1389f0a881e9d8006db84529ec43f5a8f460c492fe00b37dce2c9cf06c"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-051.json",
+    "local_sha256": "b4d6bd13ff55f70dc6cd4392a472e3c86ab337c214f6b6593e6914fa9a04481e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-052.json",
+    "local_sha256": "9e9d881173fe14b53fc0b6564bf7d3f52fbf77fe4b7d2207d10348a379cb1e10"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-053.json",
+    "local_sha256": "ab622624caab01bc3668291471a1e0ec4789718356243524fa2953970008dfd8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-054.json",
+    "local_sha256": "c5c8cd628a887ce45270ea22891617a623c1d6550e772af14f0201b451435301"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-055.json",
+    "local_sha256": "c806ee16074978f59111b6535d0a503db5df3508cc8913b86dadc6f206355fb3"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-056.json",
+    "local_sha256": "751d16e9f8f531afa39b243626aeea20a568c81fa51f080240ad43e1c48ebf7f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-057.json",
+    "local_sha256": "f50b8792b74935ad35d40c93b890ac7103b426ed468796761ca67e9564e3764d"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-059.json",
+    "local_sha256": "fcd3f0684920824fd22e7d38ef7e5a94e71df9cdf9d581671ceb34fabc7a89d9"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-058.json",
+    "local_sha256": "f2ff25db33947440fb3cf66d54570887c3a6d72f0a8a420c09288266fffe45d9"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-060.json",
+    "local_sha256": "86d6f546d2d3dbdffb0f50a5f0d5d79e08b459a86f81c1de605a4e77a4de2980"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-061.json",
+    "local_sha256": "76e0564c239d120f8a7d8d01bc590bf4ebdf50fc4ab0594790dae098557e6390"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-062.json",
+    "local_sha256": "ccb27d845536f594096a60bfa2f13a491582bd7dd20e7df57ca79ef8ea2d7421"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-063.json",
+    "local_sha256": "8f1d390651a4b912d1a092b819ef3e7d2c2a721c49c43402889790b930eb6e7f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-064.json",
+    "local_sha256": "e4ffdaeb512cd919b2c959c57e49a2bbc95175678bcf7ca7fe5349d67db59746"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-066.json",
+    "local_sha256": "2f0ab60b0ec88d6177cc324ea40521d668df780c4a5dc3c1035b897d62612f10"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-065.json",
+    "local_sha256": "8dfcf976e7af08cae55263e18f6aedc5462ae10e66d0d8471d6883fe97b40e08"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-067.json",
+    "local_sha256": "b0041470a60ea9d790678d1572ec7a1c2f955727f18912c1a36a86c556562019"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-068.json",
+    "local_sha256": "0eb846ee59f8ffde425f1fcffe988791de693c282ab94b655427c009c8251b36"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-069.json",
+    "local_sha256": "683d7acb210d3b1278dfda8e794f7ec67993a2b38a703e072778ef21bc2d8c78"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-070.json",
+    "local_sha256": "35ae1443780b43870a611fbfab280f48b6f8ba0eef4baea8a732e57afea183e0"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-071.json",
+    "local_sha256": "174899e77dd23b4c04c523ec32cff2430d0b9ddea27402785fb14dba86a1f6e4"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-072.json",
+    "local_sha256": "761a85e08df7f3603fea8cbbc4a909e75ed33c379f1bc514c6c7881ba8daf6cf"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-073.json",
+    "local_sha256": "73d659e1cb56d3cd522637d4cf4e8d7bbdb52bd1bc820bcb5e1f114d495f7b12"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-074.json",
+    "local_sha256": "d5130e6ffba9e2e0198432959e1dbaaac57bd4fe737fff2d2b8c76ef1ace059c"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-075.json",
+    "local_sha256": "7b82735ee1ef666e667e35052b641e361060ee0fa5b62bc756aa8edcec2032c1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-076.json",
+    "local_sha256": "77a4df10900659bd6a1b39287b297771f7839bb46db41692be892c792a13e500"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-077.json",
+    "local_sha256": "6312be1d169a55a31b1f0a077d45b76259997f07471045de51b537368dc6ec9e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-078.json",
+    "local_sha256": "dff64613cabd6bd02acebf208c98dbd3ff5c94a1ed9862d1939a5bd5ce4ae43f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-079.json",
+    "local_sha256": "ee0bdbb90273f355f8cabc709245e95f2a36ae782043865dbd469f20fab8c116"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-081.json",
+    "local_sha256": "727f8c0ad4dd4c6657d8624262833669dc0c02b2cc3aff9287cead6b3b0c29ad"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-080.json",
+    "local_sha256": "7693854574bcb7a76966d7374a14c9a2f93bfc138a552055fb7e846305dcfcf1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-082.json",
+    "local_sha256": "e7e98478de74f264898b274b59fb5e01c5fce3681fc2d8aa9eaf466dcf791b50"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-083.json",
+    "local_sha256": "1b96cf785628c8e8f0ac59b72c84111a474fdf4a0d562c3593ae977670a883dd"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-084.json",
+    "local_sha256": "ec2630a2e852a5c8440c43f8a65afbfe1e0e0073eae7840bd60140106408eef2"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-085.json",
+    "local_sha256": "4cbb9778c375c237841c791b1ab20169d885c152bd2f45166f7b069f5091a3a2"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-086.json",
+    "local_sha256": "b2c206ecc4357f192f99dfbff81b7ee60a438ef9a50fbdab5f5c48a8f7f90e31"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-087.json",
+    "local_sha256": "87e9c89f209f6fd6edd3ef44a7b8047b40df0c5b6dd88185639aacc273ab81c0"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-088.json",
+    "local_sha256": "8a6e8c38115ffb97df39b51bf5b94441552e45f7d2197adf7cc56c919920859e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-089.json",
+    "local_sha256": "4359ac1c423cc2b3a59acfd435d41f513dfb68f6cc9a50ab8b8dec65cd863a6e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-090.json",
+    "local_sha256": "ab3ce8e249d51fb01c3d9f8faa0e21fe90767feb8b065eaf7362e4fc79064dd3"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-091.json",
+    "local_sha256": "76059e4d0e48d9409912f56237b72ee5ddbb104a4d682c5d969adcd609435101"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-093.json",
+    "local_sha256": "e7ed00171888c03578e1b61cd6502630d054cd9fa623611fa989f9cae2dd85b6"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-092.json",
+    "local_sha256": "9f1835e8df95f07bc2d0de5df588dc3e958cd11f0d8649ea0f34f5d82bfa9caa"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-094.json",
+    "local_sha256": "9201e921dc79fd0311e8748be1a27cfab478bf5245489657d2411ab9b4c820e0"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-095.json",
+    "local_sha256": "61666eea8448974711c9def2b5a808e00f13b30b4ee32b716aa71a27b56c5f82"
+  },
+  {
+    "bytes": 104,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-096.json",
+    "local_sha256": "b82f31c3c8edfd02301725ef73a58283e5bdc8b8ecab8fb9a841b7013d1d37ca"
+  },
+  {
+    "bytes": 104,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-097.json",
+    "local_sha256": "94d75dfc88e1ff05952338fc412421c96f17e76b45566eec26ced9d0aa823f4b"
+  },
+  {
+    "bytes": 104,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-098.json",
+    "local_sha256": "6b486dd2f077a1d439a0768ceaa423a431ca0378915aa5679ac91d65696baa1f"
+  },
+  {
+    "bytes": 104,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-099.json",
+    "local_sha256": "75f2fa7abd87ae14167de12050ad983a5c0bd4d75e6acb603511167fdaeea710"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-100.json",
+    "local_sha256": "867e2a2934bf8fd199af2cbe716c4acbc20c190c11a534adc657d968bdc9c27c"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-101.json",
+    "local_sha256": "5529b15d6d8b7c7cb037d25a585cb52f8e1b809a19663e6e2c7d54f5d41a227a"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-102.json",
+    "local_sha256": "a8929893a3a3784817d65f483386386fb675393cfa0856cfd3f7b4138073d0a7"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-103.json",
+    "local_sha256": "05031dbe88f7153d29bd0f67a652f58a864c237fd5d619fcd57018ac04af97bc"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-104.json",
+    "local_sha256": "53a4a2af9ddc401bc856af6724c20da292c5450c5c48551a9269c870cb92ed87"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-105.json",
+    "local_sha256": "ba3865a01bc9f7ad82afaf65fdb61284c7e874165ca0d0091ecc1c39c73b8ea2"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-106.json",
+    "local_sha256": "8b4e42cc94bb7e1e15a17e1d7330194e1febf363dcf8f15d5a5e59958e9cde2a"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-108.json",
+    "local_sha256": "c6603ea354338b28b4b8a5a43c6da2eefa447b0b46691ad3e4453d7a1f9e24ce"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-109.json",
+    "local_sha256": "19c218d7ed8b684c27124523a28bb5834e17284ab539a457ac609071127fcd79"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-107.json",
+    "local_sha256": "caec60471d712bb53f295a49030bb0ce6a5b2f4d0a387697a10fb621a8ffc51b"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-110.json",
+    "local_sha256": "bf6434a0c547375989d2da1e45f8f68b9d32d73b42f7d3097624642e57a7f0ca"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-111.json",
+    "local_sha256": "45ac40c2b453f05c531eecb0a29e05868b2067a993e3b4bc44fad33a7a289114"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-112.json",
+    "local_sha256": "60bb8ee435017ca6849786bd789ce4e28104a00e9c80ecd07838f57e21b2d531"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-113.json",
+    "local_sha256": "789f65d75aa54ec03f51cb5e85edc06057080d200ce4215c08465e27d1821617"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-114.json",
+    "local_sha256": "f5f625db4b92d701289e79063cb5d336fc333afdc0ed76abfd4aacb9c8821fcb"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-115.json",
+    "local_sha256": "bd68bd5c7cd237a7ed77fee31cd7354d21542f429ea60cf3af83d1a7c7d6640c"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-116.json",
+    "local_sha256": "e71749297424cd17ecd5a60aebe5a3be304225572b3dc7944f05289e4e76992e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-117.json",
+    "local_sha256": "0d28e1015ee4109704a2fd673918c945a3cd33cba8b595e6ecb15dfe8f3770c1"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-118.json",
+    "local_sha256": "ac4d8ddd613c0ef9517313be7799fe35afa7c057904adae73ab4d2b70ee26331"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-119.json",
+    "local_sha256": "c5c4dc4d9c26e8d0dfb44ee28cbf052886a705bbc60538ed54d3202ac3a2e002"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-120.json",
+    "local_sha256": "a9b16ff77106662f88d42ed2c26c0951add674992458f454aac9a8cb352e7abd"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-121.json",
+    "local_sha256": "8c9c8d429b559cf991a75cc20f8702b4a389fbb4b56822abb8e857b28c6a4b29"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-122.json",
+    "local_sha256": "c87ecde1447247697ed3ac7685100b6221445833c22c6c7060c00f31a12c6429"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-123.json",
+    "local_sha256": "6ee6b41d861c6b3afb2fc0084a1b656e4365827ed907b0b719b5d1bcd9f4d0f0"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-124.json",
+    "local_sha256": "f83816cce83b9dc1d6a2a5f808a91d37be5a991fc64a64dfd99050e8ecbc120b"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-125.json",
+    "local_sha256": "5c035e3416e8c5a4dbf4c2cd8722b552b647ee77b0bef121ebdf08dc82a8b294"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-126.json",
+    "local_sha256": "571be4287d27497881a21cd739be7c56755997227dd158a12c13949cb87c3810"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-127.json",
+    "local_sha256": "eb3071a8fcb9a0631613f81d08915ce1bee0fc12c07175b7e7aebb153f39a064"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-128.json",
+    "local_sha256": "3d7e72692c99118afc7e62112756c30b79ddb39656bfb79c917f28acc9adbff0"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-129.json",
+    "local_sha256": "a2994289871f480e8eef252a4e4635841e21c2276cccb0a2869764993684c992"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-130.json",
+    "local_sha256": "df84887803a2e9ccc157ceef90d95df46c88ef0489866436e0eafa1c5f656e24"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-131.json",
+    "local_sha256": "d0b9495c63dde31fb948cba76d314dceabc11c4f1ea52e8da80ffb63f519e532"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-132.json",
+    "local_sha256": "9b25801e1cb2dd8ff99dfa9ae769d07ea290c2126a08a7a88c5088cc17d71f04"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-133.json",
+    "local_sha256": "01b056c187bd37ba59b3b4fe4d4e8360bfd6b30678b140196b8552eb18346231"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-134.json",
+    "local_sha256": "f8df63216e42a3dbb0a4bde0bad05e4b43ef5ba2749b077f35e62e17f7043cf5"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-135.json",
+    "local_sha256": "9b93517a74058cb4b3321a3bcd743324f7e941ebe8b5619dd1fdfdb547a8e7d4"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-136.json",
+    "local_sha256": "25d2a5b53bc4ac21c048c481e67e1b777024a93c762add87557e25f6293a9be8"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-137.json",
+    "local_sha256": "eec6bc6a2d395a94fe23f165a6a2f521c6a367f0a82b8490bb7db542e97ab94d"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-138.json",
+    "local_sha256": "fcfbc166efb44e94dd2ac72a2dfef9af51f0ead58f730f4eab853735bc6b7488"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-139.json",
+    "local_sha256": "91063711a9910437a137807b2058c82adb97751705f9e2bafb1841c400c68609"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-140.json",
+    "local_sha256": "158b88a8f630f24b507f4ee30962232cfdd4f347a1bcf43b8ce97078b2394507"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-141.json",
+    "local_sha256": "12cdf79c7583c01e3e321ae879d076072ae1317b0bc50eb7a9ea4292295579a3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-142.json",
+    "local_sha256": "86a59ccd7fba957206c4ebcd8e425d73fc0877c8322247444e8e5b9725f2af2c"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-143.json",
+    "local_sha256": "169126731479531d8ea47d326811f81ff8dcc28cf4e6ac05f26bd207db404562"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-144.json",
+    "local_sha256": "8951f1dc65ebc1ff7ea32af5d2614accd7b80e0562d33d33dc6184fd3703c98e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-146.json",
+    "local_sha256": "e7229883bcc1dde03a9e623b1a5942f99e2cbdee87d5a7773a80e3b6f2b5806d"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-145.json",
+    "local_sha256": "4f411822a6365371566401405a6ceb5e24f062a4a1da238b57f5322c2a33a4fa"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-147.json",
+    "local_sha256": "a962983b5c7865c176e4efab01639a4a4651d7948f643d06601b370f602c953a"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-148.json",
+    "local_sha256": "bb78cb20aea66f69c23874b56f24394b317c73d47f46d2991472f7425cbc3f1e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-149.json",
+    "local_sha256": "11b486f3ca01b96450731d074ce124b1a8eec4ba02c8c84aa8acc9a095cbcfb5"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-150.json",
+    "local_sha256": "280c56e210df1a6facf6251ed5b9239e8491a0c0ac1e8200983ec9fa623a1212"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-151.json",
+    "local_sha256": "a9ca5dab7e5b478dc03447f2345e63de78102e1f3bbbb95e01ea37c62f30ce65"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-152.json",
+    "local_sha256": "5cdfc9a8936a5e60655c94d0ba0b6158ab9f9e0f43650a74b5c433e0be2fc392"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-153.json",
+    "local_sha256": "e013ae174d4cb53d5af186d9b8af22b93917d95b3e1517293af0998f03d94be9"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-154.json",
+    "local_sha256": "89230d99cac48628eac9176a0acc041a365bb9b984c1132f0ca22b14419c0f8f"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-155.json",
+    "local_sha256": "fa02318729291fa1aee1899f8c95e99c5aa8d55a66b3b3733687e4204119f7ff"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-156.json",
+    "local_sha256": "0d6746de8ede6c9e1f246ef224dfa09d650debdfde2539eb567dac20c14cf077"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-157.json",
+    "local_sha256": "e902c28f58ae3323a9516a4578274168e18e77289f0b709268a95d98a0db4555"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-158.json",
+    "local_sha256": "582cbe15191b422a5d96c84d4cb9f3df530796e3166b59ff1fc52b5a4b5f388e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-159.json",
+    "local_sha256": "700ea48a41c94b17c9cb279f733a6c820ed2768cde30e6f5f1a29a61d6da21c1"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-160.json",
+    "local_sha256": "43a1e5e5a1696fc054988473891a6abc0f09b51c0e987c441e517a96461523a5"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-161.json",
+    "local_sha256": "ad748c2080c70909211a46dad554ca999c2483b9f0ddab0369ac0d8279097d76"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-163.json",
+    "local_sha256": "48fd551d1239d638b9c6d79b4d37d928f57dabe7a8891c02921e135234fbc352"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-162.json",
+    "local_sha256": "b77a471a63ede4148df5f6e469adfc1376fc46de31567c4a7537d7cb424d1f15"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-164.json",
+    "local_sha256": "273364c46279bf44d957266e05568ca3eba995d47eace37641ee29d57ce18a59"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-165.json",
+    "local_sha256": "350460e634c23e1a76c9b8e97e740719a082264ae89a1004a9a70a162181447e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-166.json",
+    "local_sha256": "e064f29851f9b66792d3a334863bf68fa21049c2b1d38b17ab75f772ca90fd95"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-167.json",
+    "local_sha256": "30fb99b8da2f51d7bc8ac2ba567f4b40c18d1cd09361a61ce7fa753df44f8366"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-168.json",
+    "local_sha256": "fa853c9d2c643159271c614434a08c1ff5ad4c0acc2941ab1a7f8a5430084767"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-169.json",
+    "local_sha256": "233bd7279397c9e893a6cb52839897d8a7a8c0e5b80f61f8fb2dcf440ae78081"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-170.json",
+    "local_sha256": "75381ee4ed9149d03a26eda12a093ab5c572c94b23b3b39800db94a302a9786d"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-171.json",
+    "local_sha256": "3ec97e4c4a4e7b96306df7a9f81e719cc16e6c107f283595d6de0c4ce02b814c"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-172.json",
+    "local_sha256": "8a3770fec0c526f3b203a5f7a485a56550568029323c750795113c321f1c37e3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_start.json.heartbeat-173.json",
+    "local_sha256": "e1ae199dfd1a8e6038f60dde52c573fc52a454af6e4af7f7cd0bbffe9e2cf99e"
+  },
+  {
+    "bytes": 156,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/job_status.json",
+    "local_sha256": "067fc5edbbe1cb942b621053bb9ee18a5c4cb1f13e30393d9d6bb1c7ec814e41"
+  },
+  {
+    "bytes": 6485107,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/plot_data.json",
+    "local_sha256": "fec6a605409387efd5658f3d081743a6d7a9c85f8f65bb2a3c556b6e0da89a7d"
+  },
+  {
+    "bytes": 1152654,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/PRE_SECOND_DISCHARGE.csv",
+    "local_sha256": "329200cf35675a89f0caa779eed89ae33fec93b41ca8123b294a57f499c4ab09"
+  },
+  {
+    "bytes": 93,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/ready.json",
+    "local_sha256": "031d443cead7f936c45e6305d14bfc2e4ba54d5713c0f677a71989e525dfe27d"
+  },
+  {
+    "bytes": 134,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/release.json",
+    "local_sha256": "3d854bb46e2e8e6bfdc3a029a6538d8e8110502e7f532691ec8bdc77e2b52ec7"
+  },
+  {
+    "bytes": 2274,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/result.json",
+    "local_sha256": "4e0ea93760300ecd83dae08dcb3af059a7f3ee6b83485318a311433a0ab4ec35"
+  },
+  {
+    "bytes": 2524,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/stdout.raw",
+    "local_sha256": "678debee2577fedd0daf28168562588cb0c55751dca2e5fa402d4b34d174588b"
+  },
+  {
+    "bytes": 13902255,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/B_VALVE_STUCK/tank_port_ledger.csv",
+    "local_sha256": "67baa04fb9510f769941c2728168741202527d0d70f9514cb1446fcf0c8f02db"
+  },
+  {
+    "bytes": 423,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/environment_registration.json",
+    "local_sha256": "f93fc3879207571d473728759be049478a222088f5fc206d85ef3600db245cde"
+  },
+  {
+    "bytes": 847,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/branch_coverage.json",
+    "local_sha256": "8f75e38ffe2820d2ad16b5c2d8166edabf10edd2f77ae2cb64fd42cdd9653c36"
+  },
+  {
+    "bytes": 678,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/component_prelude.json",
+    "local_sha256": "a58e4682581e1bace22cbd71bcfd2d84d264a241afeb708b8254d1036eab7c69"
+  },
+  {
+    "bytes": 9153,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/input.json",
+    "local_sha256": "eb4386a2530c3cfe21734210cffd5c5468204ff95177a8195cbed9520e92adf4"
+  },
+  {
+    "bytes": 14826716,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/m1_U0.zlib",
+    "local_sha256": "90dafa975331cefbf9ae16deb4d328a89e5552db426812d18942082b49cb9772"
+  },
+  {
+    "bytes": 56344,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/m1_U0_index.json",
+    "local_sha256": "f434e97fe7f5fdabec0fa91a9dc680b8ab488788df6300085cd055bcdae76346"
+  },
+  {
+    "bytes": 14834683,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/m1_U1.zlib",
+    "local_sha256": "fd0e6171813e63d361a5cd9de5b1e1041ebdd8dc3e5f4620fcfb76b7db506a33"
+  },
+  {
+    "bytes": 56344,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/m1_U1_index.json",
+    "local_sha256": "686f58f1c0e49f26ca11b6dc3029a44f443f477569cb3b345cc63f1b5e90ee63"
+  },
+  {
+    "bytes": 14835762,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/m1_U2.zlib",
+    "local_sha256": "f616d0e5cef468492d6ce54e14865da39aeb793bea2599d97f92d6ab20750ace"
+  },
+  {
+    "bytes": 18044804,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/measurements.json",
+    "local_sha256": "5d3ef4cc5c8d63e9cc4a2ba34666f078bd5aa481e35b518a69b486c420b2bda8"
+  },
+  {
+    "bytes": 56344,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/m1_U2_index.json",
+    "local_sha256": "cc76364d7f201233bbad193f48a43ab2fb84589555345ee876229276f3f1e927"
+  },
+  {
+    "bytes": 10964857,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/physical_path.csv",
+    "local_sha256": "e1fcebd4842f9401f9514c2c5805947b1f89b8cfb3d24c01392fa66c51acba31"
+  },
+  {
+    "bytes": 4002515,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/phases.json",
+    "local_sha256": "78b5bf52e94003b099b8a9749141d1815eb3b4ae5c0526c3181bb5cb382c19c8"
+  },
+  {
+    "bytes": 308068716,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/physics.json",
+    "local_sha256": "4fb0eab4688ad4ea558636747f05425fee699ce866244bc36958033ac37ac96b"
+  },
+  {
+    "bytes": 6913,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/result.json",
+    "local_sha256": "3200a22e7b92e2cd7d13a74d192832a6338005baf7f6efceecf6f42af7e920e2"
+  },
+  {
+    "bytes": 15373128,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/series.json",
+    "local_sha256": "0c9092a05e09105c81d36449b6206d03aa82883b6f6d98e147baf66138091b96"
+  },
+  {
+    "bytes": 16992551,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/source_observations.json",
+    "local_sha256": "0f454edd29291d9e5f2340c58b8eb851c14ae35daa351b0f090ac072b959b4db"
+  },
+  {
+    "bytes": 39142781,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case/source_phases.json",
+    "local_sha256": "f53f35b7e2b1aad0693e22b20cba51db7dd281f51995332a28221333bda9385c"
+  },
+  {
+    "bytes": 1137,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/case_spec.json",
+    "local_sha256": "064562d1a567327fe5b43ff643d62689bc0fcb89373f7495a3789d1fee75d0dd"
+  },
+  {
+    "bytes": 677,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/external_job_identity.json",
+    "local_sha256": "74f41ae8563f3db1dd14b69ddb88fdf8a6ccfc3ff944bb6c8133de66b6fb8244"
+  },
+  {
+    "bytes": 1151282,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/FINAL_DISCHARGE.csv",
+    "local_sha256": "0ef14ee3ac66d630cc776778e4c5253e49cbdf3d38763a01dad7290b8e2d0e26"
+  },
+  {
+    "bytes": 20754,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/forward_result.json",
+    "local_sha256": "9a9ff44181321e0a7c8b0a69ff42a362fa2a86d00275952e23c838c9fbaa8e32"
+  },
+  {
+    "bytes": 871,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/independent_analysis.json",
+    "local_sha256": "be59065e91d6d4e3112682b3612a992a21a92bfa6d46d2cdf0da724ca5e787bb"
+  },
+  {
+    "bytes": 237,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json",
+    "local_sha256": "4f9e5976cacb31ac663188be6dba2421e2ca610fa1451cc8c4e967cba395a297"
+  },
+  {
+    "bytes": 99,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-000.json",
+    "local_sha256": "44b88bda2f59da0e1ce064e769d46f6dee334548111d601ba01751c10ab02e69"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-001.json",
+    "local_sha256": "3451d9052d7bec9f243eb30a73a941410668f9b090124cef535c8c6268df889a"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-002.json",
+    "local_sha256": "9f169b8590383dc112a7e4770961544851634cbec057f61526c0e091c7f816f9"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-003.json",
+    "local_sha256": "fd08294dffef231243eef3ce1d811f2e2814251aed6e0708fac8280058982d67"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-004.json",
+    "local_sha256": "8bad9001c26f92b311271e8e1c841e718f0e2260504fd179a109ec753e987752"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-005.json",
+    "local_sha256": "919256d864bfe09ccc1ddbf26f8e13ee4d434b57357a23be159c171041cef428"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-006.json",
+    "local_sha256": "b1dcedfe658d7fac7a0c2391608b0ea07a7648167276d3b7333b0bf1f0d26d04"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-007.json",
+    "local_sha256": "a37fbc421c080f680bf06a72af1e2f934ff201ebebb046a602cb546219aa27f8"
+  },
+  {
+    "bytes": 100,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-008.json",
+    "local_sha256": "df439e0c14a853ddcc85f261ec7916f9b56aa1ea6a67f9e8ec9752f40c5054d8"
+  },
+  {
+    "bytes": 101,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-009.json",
+    "local_sha256": "cd298bb341f17e012f5ea21a364b70b3d53d8d2c230c6c4cf33d797d5632de09"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-010.json",
+    "local_sha256": "44545ef7697b9847bca9cced2b8ba1644c060ae053f5f9812039cc576603b45e"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-011.json",
+    "local_sha256": "168cd2569570bcb70f127e78af430630c96cdafbaad1ce6fc7843d0592d9f85d"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-012.json",
+    "local_sha256": "b885e886f829c468d4f0a099c214b3fe088b51dad89e0a9b96a3f2bdd1e83800"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-013.json",
+    "local_sha256": "27263ff5721e80d003c30a33a56591b7ad893dbb96c539efda670e9b0624accf"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-014.json",
+    "local_sha256": "a728e73b812afe6ba8348c13dff0b385c4b3129e389d1284cecebaaa7f7e27d0"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-015.json",
+    "local_sha256": "bc35e48dbdbcf15d8e8dc04fb7a4e8f1d95c373154e2cf35ebbcba76ddfc337d"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-016.json",
+    "local_sha256": "ed691a13772ef20b64c47e014efb8adf454c59c741e546b55625ac81fac43460"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-017.json",
+    "local_sha256": "f5e73ae9b19c05fca0975571d9b53bc28352808705b5fae9b07cc13aaa9a18f5"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-018.json",
+    "local_sha256": "87b69234c5c03507cf1726b7b42074a7473fe583eb7e4b2c42c3c66d158f3ee4"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-019.json",
+    "local_sha256": "51becee69fc37388bbcc7cc695faa8581de4abf1e30bb5ae06ff1bed91647a03"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-020.json",
+    "local_sha256": "a8d64c4083d41a3519959d89a069ef2891a68e566a3e0d2b6c1eec554f1ef05b"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-021.json",
+    "local_sha256": "d5014647cca9e9e3020359ae12d5fa60796395e5a2a03131fe423831ef5fa831"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-022.json",
+    "local_sha256": "c3231c266df744724b2e27c6e2e44b8300c7ce70ff813aa8d60647143e7a3d55"
+  },
+  {
+    "bytes": 102,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-023.json",
+    "local_sha256": "29d7cd1a9461123e88241909403717872fa82e09e6eb6aab05c6466accf6c5e8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-024.json",
+    "local_sha256": "fbd4eba60e1413695a3b72d65ef3bcd1490ce2432826f3c61a9fd5ac21c5c778"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-025.json",
+    "local_sha256": "b85b91c7ec5d620411b449bf9caa68bfb7ad2753a67f847383dc5cf12f998486"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-027.json",
+    "local_sha256": "1a5af466f01d7ef1ff0f9fed8b3dd4e7b8eff2f23e8aa15d92cefa0ae39c9f8e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-026.json",
+    "local_sha256": "eb19fdfb4e39be85561fd55540f3cd31400e1cbb06ab256f0c98a9b320109414"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-028.json",
+    "local_sha256": "7e15ee165932b9858fb0f959a664970644f09f04f24857714c6133bf5fe4422f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-029.json",
+    "local_sha256": "1d1e0a8a1b30c482fbe2fffbdf714556efbad0390356a9ff41f7cde315131862"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-030.json",
+    "local_sha256": "fd6f56b896894b84c483b4bc76cc41a075772f1b0645392456e97092fb7517d2"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-031.json",
+    "local_sha256": "8393b31250fcf131d4f8b907813a70af2c73eac98e32b434ad9a66f0604aa70f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-032.json",
+    "local_sha256": "ef735ce0f5ed75b845b5928c424dcdd7af4342b6b78bbcc2a6296a1cb9d629c9"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-034.json",
+    "local_sha256": "3ce72b4bbd305bb4290fc0556e4df9ec563eaf2b62513eb9cdee88fbf0b285e1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-033.json",
+    "local_sha256": "097bb33cc667ccc4cec1404780ceacba1eb97329a2b028eb6d791f6ec75bc367"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-035.json",
+    "local_sha256": "5259d871f8ed1d01fad240ad985cbd4de0d2b0c6e108a8046bfb2524117cad14"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-036.json",
+    "local_sha256": "bf6d34bdca9cc8235eefe4e2dc69f4bb604b6c652cafa98c0e0d9dadc36ee79d"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-038.json",
+    "local_sha256": "ef44314a5a383bdd6bedab357196de53bf94493aa2ca3bbfbc384648f39ff5a9"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-039.json",
+    "local_sha256": "c95e2f6dca0129d1ec6052b307464c697f22c571296c3f83bfc34c328393c637"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-037.json",
+    "local_sha256": "3d8d1e7cff74415bcc573fa2647e114452152e2665fa975800cca4be2c58266c"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-040.json",
+    "local_sha256": "3de39e67cdb221c668cde5799fc80de1f48fe3641f31faf63879b1f50e571601"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-041.json",
+    "local_sha256": "a92f6334acfa052710e8b2a28769ddc7897105b215b9248e0849b21139b3980a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-042.json",
+    "local_sha256": "99b65c6c447af0643351fe11a7a501fa54ea78d11ac6010c2ec0d91f538955c8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-043.json",
+    "local_sha256": "b27d42a1c60b51d70b16640da1c89bc67d17ebd641f4ba1a5c53d120a75bd48d"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-044.json",
+    "local_sha256": "bce00bbd37b7cbdebaceca87ad45fdd589b3a6b62a6cd30b5e0692e924576863"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-045.json",
+    "local_sha256": "4bdabe79db722c87c097f9542ab532e405151f36f68851e82cdfd106a3aa45e9"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-047.json",
+    "local_sha256": "6ab1c8ab3ee6ab52476e2f6ccabe9faf98b825638b8ee998942fb8daac6e5891"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-046.json",
+    "local_sha256": "d9f6f5419266a219ab0dfbc6b7df16f69b40caf648b1e7902b526f1783f925c6"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-048.json",
+    "local_sha256": "7a7385c35a1ca12cd6cb163b0d8b6a7d2059f6a4006993fa51efb93840f5f9e3"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-049.json",
+    "local_sha256": "595ab104516c2703f4aa1cd873709e9a81422e9e2a2e07efa6be85ff948dfe65"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-050.json",
+    "local_sha256": "e3e9ea7a260fde5eec3a5c37cd727b6bfcf2fd6b117228f27545fdb36ed3aa60"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-051.json",
+    "local_sha256": "f9ae0d4dcc3de5db153e2ba150b6d94faad419f4234f766f30ca520e0a2ac14a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-052.json",
+    "local_sha256": "85df35d76cf615c079b1f7664d59694610226944199b6dfc39df18e3a73e92f8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-053.json",
+    "local_sha256": "f268b48dd2a70a15bf0a3e2bf9bf041083631ffaf3e4205964ca40d5aa66d4dd"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-054.json",
+    "local_sha256": "4d47b9265584f4454f03c677d0780752f535ce3f51ee60f5997fa1b68ad852ca"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-055.json",
+    "local_sha256": "d44db25c663d20f80892a8c521ec394c159a6ba873c292fa6af856cbf7c091a5"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-056.json",
+    "local_sha256": "38d5bc7b2b3fd1d2e97d7656e416e3610f1c7b746812eee7587e44bc5e72afc1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-057.json",
+    "local_sha256": "9d27055c29746b0e9eb204784157d3e72c5212b53cd299d854fcbe06f244f7d1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-058.json",
+    "local_sha256": "68621c12603fbf5201d9ab81bef986ccdcb37674274eab00523f11d368e4aa0a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-059.json",
+    "local_sha256": "6dc7e56d5cc921e40765a907f26b673ff828135e53341e9a642e0f5ca54108d4"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-060.json",
+    "local_sha256": "ab764079f52650c9c494f8ce5a4c37c8409a9fdba6d9aec1f027016ccbdfc42f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-061.json",
+    "local_sha256": "7d4dee76264972db252281ac10ff423462a4c72c6a75e8b163f2fca1f2051bac"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-062.json",
+    "local_sha256": "32aae6930a9eb1e88dcb783842d9eb820170e50bc454bcda9aa283bd73e342aa"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-063.json",
+    "local_sha256": "4dc9e59ffe54df5dfa31d70f8b0007c0f90eb64c7c6fe5cc3138e7f7635321fb"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-064.json",
+    "local_sha256": "3e1cd1239ef067facf23b5022c559ad40194fe04243dfa9866cdabf8bbc869c1"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-065.json",
+    "local_sha256": "257de0f95b547a0e7ad4467092f8cad82215ccfe5bd55a7111d9034a71ab3878"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-066.json",
+    "local_sha256": "7fcc8e72f4e1d673b1c4b542e90906e1c931f46d8f804cf53cf8b171dc638e9a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-067.json",
+    "local_sha256": "0613ed29fd9eff237e4ad7e02e2364515f6f69d9e853bde6ead66a69266f4889"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-068.json",
+    "local_sha256": "2410192e7bb4abbc772eb788a7690f9fe6d1b8b161a69572f850a1be5f331652"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-069.json",
+    "local_sha256": "e6dc986602689a81498e6a8afe7c1ec6d0397f3013bc96e661b1b27da53a23be"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-070.json",
+    "local_sha256": "7b974cd2e7b2b26b5108c073530ec2a3117821573e1c91285aa90a35281d2d6a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-071.json",
+    "local_sha256": "e6014ff837e9f3caffb84252e3c48e4f1508793522cb340bd3301d7c55ece7e5"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-072.json",
+    "local_sha256": "aee3801e1e99f09ce16c8929cf4515a387fd06c097ee2186c7ce3fae6ae76906"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-073.json",
+    "local_sha256": "0066fef0b8ce791ec317018b5182682811a1c1a28559e9a7e59399c0b125e652"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-074.json",
+    "local_sha256": "c2fbf603e11d1758911df4fd006594558a2953b6902dd77d980cc2ed612d262f"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-075.json",
+    "local_sha256": "dd6fd435c4f4e6e26eaaab4dc48e15d3deeeeb7bd6b8e689cb7c0d8253ccdcc9"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-076.json",
+    "local_sha256": "179e41bbe8bb59b68d123cb6bbd12a480a69d2a822b74822a87d592a82917e4c"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-077.json",
+    "local_sha256": "8845ce6beb7116375ee09adc810748a8fed46db4e2f85804f8b49490f4a3e56e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-078.json",
+    "local_sha256": "3d3ce1ccb45b42f8ba5299594d941b116ae433733f7ab64f63285bc894447e2a"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-079.json",
+    "local_sha256": "17fcb4cfc26d8f9d14c1f081d23fa84a24c9f5489b54bb0e2f57712371d65fb8"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-080.json",
+    "local_sha256": "f2c6f383de16ab6931452e4d8410b220b44d63b3c41d957eba1fd7c20310e2ae"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-081.json",
+    "local_sha256": "afa52f643406369cc572d43521844f86a31aa1d02dce5ecd761c654e08435ac3"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-082.json",
+    "local_sha256": "096bb5eaa14de6c6065c3b7315d54d389e9072f3b2f8cc96acf02d1fb264bd5d"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-083.json",
+    "local_sha256": "3c3ea51df83dc6535612766ce207b14197cf00112f8546691a1795e750365712"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-084.json",
+    "local_sha256": "1a6886f174d369705183d00c6a949b8869b8f5b09600b7d2dc532c3fda2641e0"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-085.json",
+    "local_sha256": "972775cda1abc569b522fc97db6fcee427f2da67c771f7ab48cc6ed96695b9b3"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-086.json",
+    "local_sha256": "6f3fcdb937fa0b7b6967c98234fbc4204a910c53f894a2244b8fccc75fb3a6a5"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-088.json",
+    "local_sha256": "1ef05787696b7eb18ad02da7d9b52eb0c3ae96e5249be89f384b575a1c1f93be"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-089.json",
+    "local_sha256": "b34297830e6fcc1c14145a2c35ab3c53255b174713e51dda683fb764c825d240"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-090.json",
+    "local_sha256": "6a56e247ca69c895091d30c27c22ee537575f6d9208b25f64630213cfe4f8794"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-087.json",
+    "local_sha256": "09a06d958f7a43b8ca2becd6c6f575f33b5314ee1c70a2090cbb4a00bc809b76"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-091.json",
+    "local_sha256": "df7831ce84321d9a9f0f6b83d6031af579edf04887077e66af47c4312bed19bb"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-092.json",
+    "local_sha256": "7281141bd916d7e67823e3743cc7f1f5769fff33a3b562bd7f72588caac93a50"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-093.json",
+    "local_sha256": "27971f0dd1454dbb0a7c105a839fbdd7bb5df6999462447d9b6c2e2c1308b51e"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-094.json",
+    "local_sha256": "cd51f505b5865ebcf55aa87c1b9b15dbb2e181a9d012823b4c4b2a364e7b7c6b"
+  },
+  {
+    "bytes": 103,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-095.json",
+    "local_sha256": "a7ce8d0e79ccb48f2f3d8b079162d0015d7ec5c398cfc6447ca2bd530a046a75"
+  },
+  {
+    "bytes": 104,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-096.json",
+    "local_sha256": "acc486b33a286723c01ea2de8e8ae8dc38eda6a585a7d53931015685340cb4b4"
+  },
+  {
+    "bytes": 104,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-097.json",
+    "local_sha256": "6fc709461d9a96521817b7221e01f89e41af6b5d3639b6893db8b133c40ac8a6"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-098.json",
+    "local_sha256": "90938313caa91fda72db4cddc0084dcf8dc5742bc88532afc9a67ac6dd5753a1"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-099.json",
+    "local_sha256": "fa25ee78814373d3672b0734c64e15419ffe9edf1c6611c313537b2c9fb78e31"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-101.json",
+    "local_sha256": "0c3f7e11e1972c917aa0e66f5856bb0c223bb88d558a81571a8e921b20f3238f"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-102.json",
+    "local_sha256": "e2b7ae0e78c7dd605eab95761239798daafba0a588aa45994dc527d179be5e35"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-100.json",
+    "local_sha256": "15c8e3117f9e56f1fc4422e97fbe2d21d8ffe512734316112652054ec69cebc3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-103.json",
+    "local_sha256": "f110a4e67131f66a79b35194922161d73e1588fa185d3a84fa1916b0a964d00a"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-104.json",
+    "local_sha256": "f0009c91215094fbdcae59f69d5712d242a12407aaff9ea1c2e69b5e095c7fe7"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-105.json",
+    "local_sha256": "3fff925ab183367aee9cebd70966d9c26e56a71e547bc4dc66f514e8856a780f"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-106.json",
+    "local_sha256": "bd2307b3cdc74916a248f6e9fab5ae984226279e433677d3fb5f58af8e12cc6c"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-107.json",
+    "local_sha256": "df880b8c8321cd99d464feae0d4ae5d2d65c1870220fc4170d8909992b34e6d2"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-108.json",
+    "local_sha256": "011f34beec0efd52e92add45097bb4e5054aa7339c0642808803cc7277be05eb"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-109.json",
+    "local_sha256": "c02d237b98ed74ce6066e14ff7047089a60dd3e320a4ce5886056df737733a2d"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-110.json",
+    "local_sha256": "31200e6b618120f2ed31447daa0ba4637c009b9ce13b8552ec029499b2eee178"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-111.json",
+    "local_sha256": "64c0d8915b42e23001e6480deba8a0a16d5c7a19a877c0f23ffd2de55e085fa8"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-112.json",
+    "local_sha256": "87ecb1dc4773d7fc3554d4607febf6df9efe6a70b719de01b54120ff341f2e90"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-113.json",
+    "local_sha256": "c297b49575da6aa01f1fb66f4b760da8fb9bebbb8826a190febb603e77bbc921"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-114.json",
+    "local_sha256": "1d92e9f7fecab16eafc39ab1721f33696f3669d12b05ec1e21cb2ec961be5b4d"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-115.json",
+    "local_sha256": "658cd1250cab0e980cb6beaa92bc893b42d508bdc0995fdfd137c99d72e6cfde"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-116.json",
+    "local_sha256": "7b40715401f6532f8c10a434c54e0a3ec7aad7cda19cab7c65a1a38fc79a1930"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-117.json",
+    "local_sha256": "53a3a08d5752edbb490f4c12c0bcad4f0b038a6467da845b142590bd6bb97346"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-118.json",
+    "local_sha256": "0fd40b09464adb8f7ecd1b14ccbe57e33fa3206b1edfebaa896a3563b6f40af3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-119.json",
+    "local_sha256": "01c40926923ae1befc566a23d2bb15345705dede87afb9dc0e0be366684c3961"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-120.json",
+    "local_sha256": "bc6911ce71acc638f524f6b08154ff8f5b2efa8ca5593b9e57e03a8058faff48"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-121.json",
+    "local_sha256": "b603ba088199fa194fac11f7f49f76836c8b032089978ff9da426a9b68d73ba3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-122.json",
+    "local_sha256": "3c1787400aad384b504d6b2b0d2d95549be2f6c290cb7ed931329919a83273a0"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-123.json",
+    "local_sha256": "d133098e514f25723be1541618f326a7776a026b040563c3907dd1b3bd5d2524"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-124.json",
+    "local_sha256": "f0506797b40cee775deed711d2544f1646fb8cdb13fc6e5cda63b15fee935e63"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-125.json",
+    "local_sha256": "08d5a224210f23ffa0b0163a9fcf5ba9d9712f232fdb70dc85bc8f93b0eae0b5"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-126.json",
+    "local_sha256": "7a01de195ced9214dc0df482afb5116898c5a44ab74405a9fbe2d32ab1038bfb"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-127.json",
+    "local_sha256": "b69ba8dc2d1b359f819e2107e6f5b3d87d528833ebe42b2bc90bc412cda56d1e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-128.json",
+    "local_sha256": "95c132f8f0f3d88b8529d00e5f868670f6becbd49cc6f89ea97d88a82bbcb0d7"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-129.json",
+    "local_sha256": "bf874ef6996c1de52e2e6b71183b34aa68daf27a5dd9c80f2c8d99754059538e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-130.json",
+    "local_sha256": "67f2f3866b0d34ce2c2966958c131336f20f74c187f82bddeb548d53e55b9318"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-131.json",
+    "local_sha256": "a4763a3872e08cd8ed72b1983fa984fa7f04fc190af7ee0ef73f353e52224d01"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-132.json",
+    "local_sha256": "25ec492052132927efcee8945697f1abf3023d6cadd3f0c4f29d0fdf7933d1b7"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-133.json",
+    "local_sha256": "3c71bd30fc3ecc8d5e55a361ddd8d3aadc16ed302dd2de9c11c9e2999cc55ea7"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-134.json",
+    "local_sha256": "3a5e23d7ef9c27118977b886ea9f0c42076eaf0650c445f53df6ffda4e48efd0"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-135.json",
+    "local_sha256": "a1621948a297582ea8e1a7c594af79c6365c9540dca8ecb6af7500530ff516e3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-136.json",
+    "local_sha256": "79f50f8dfd3bd5144e721cf3d560342a80b3454713eefddf05d94b603ca8320f"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-137.json",
+    "local_sha256": "fe739629402fd5b596aa5d611b7a4b9e0b56afda21822f48629c3e26e4e3a65e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-138.json",
+    "local_sha256": "3dd8b47c64a96b66e0b45f95438cc2484a24d18b7b922581394fcbd2a28c5a0b"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-139.json",
+    "local_sha256": "12bb2c10a08a7b03ee908a0ed1692dd2a28e3f7d10b666bc825b61e5aabfe191"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-140.json",
+    "local_sha256": "8a78a4793aa06afef50be15a2ba3bfce6d87dbd96499b97ed68a70da6158daa1"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-141.json",
+    "local_sha256": "e825b0357c713aba2559d0d6a4d31f31186f470dbe37623bc29b057b1aa2d26e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-142.json",
+    "local_sha256": "164e8aa8577b2af1712d4390e3fdd81097064a483584e04505babf4ddfc8e192"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-143.json",
+    "local_sha256": "e0f26ac07e9309ab2aa375d048176a0fe5def262936dac5ac70c0079376f52b3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-144.json",
+    "local_sha256": "62f6e66f8dea0543b5fa67372b7dfb2a1cf5ce30200f2ba7ff85001190448abc"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-145.json",
+    "local_sha256": "40d24f550777972eb1a3fdd864bf3e6047990986ec2460e554a320e3b1ac5a9a"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-146.json",
+    "local_sha256": "7b13f26e1be18309f6e44e602bf244e29f7a1374b27abad06391a0153991a601"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-147.json",
+    "local_sha256": "3744630fea7418cbf2c8d29d9caad51ae51aa9e5d6f77b29c0fbc3fb1515dc26"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-149.json",
+    "local_sha256": "00f5f976b531253635c779ea734f29729b9fd970f1da885a2ea178ef18910ab4"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-150.json",
+    "local_sha256": "4a9936320974508468cb21239004522667650b63849eb617d265715a7c99d210"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-148.json",
+    "local_sha256": "60bae0986412f31275aaac1cca392067445f5515690991a06da4aea961a0bc62"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-151.json",
+    "local_sha256": "40a7affa4afd098c2763bb7c437107fd7ecd363866d46ca754fce3f9e077f43e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-152.json",
+    "local_sha256": "a00a37651ad98452315c7fd3bcc10f3f9c6dd2a1bca316a4468cc28deb20b7b3"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-153.json",
+    "local_sha256": "8ad3951f2e36c0f21663f7023a4c9703d94deab9a9ba77237c324de7381b4a9b"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-154.json",
+    "local_sha256": "740011c6eb0db95e30caf699585cf487d0b9b420685f777afe6372bb205cab29"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-155.json",
+    "local_sha256": "b4dd05aa90d0cec60ebc79e3f04b8c07e332a5a1982a32ef63264f6aac33a192"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-156.json",
+    "local_sha256": "c0703691ac30c78b846403ae3b14fd870f9b5fe151bd90200e47109cc88aaaaa"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-157.json",
+    "local_sha256": "18f0e4ccab828184482baed6db9fd1eb24520ff1df050cbb4cb97208367e4a4f"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-158.json",
+    "local_sha256": "230287ea989e6c2395a9714cb27123012f40df026ed748c8419ffb67d4d362d9"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-159.json",
+    "local_sha256": "a352d5dda89e2ee2d440387afd7d8557eac56b6e2307ac68dfe89b61a1114ae4"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-160.json",
+    "local_sha256": "20c0e894ed428bf084f8783a30bcf433f2770ea1ad2646335b17bf57ffb68d23"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-161.json",
+    "local_sha256": "9f67cf6355e8766d1b5b646aa4f65a7676bef70d2d363ba1abaf69f388271465"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-162.json",
+    "local_sha256": "c9c2a7d904da4ea884657ce28a4c087ef9d628d06fd70b3bd252d209ceed0f8e"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-163.json",
+    "local_sha256": "3a86dfdf4742c103142567be672fbc36976747ef5180f3ca54792564ace7823c"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-164.json",
+    "local_sha256": "4ab044bd8325cb046a7305258aaf053d689eae4e4bf3a571489fe97ed9ecaa91"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-165.json",
+    "local_sha256": "884fe5b3d7535bd8489de6fd3f8651c01c3a94d61a453b8590aad71715509286"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-166.json",
+    "local_sha256": "06137019c45433ec801ac0915af11f140242260d61315aafc38fa412c677a242"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-167.json",
+    "local_sha256": "971ca800690a035918d0968676f8e81e4dfc10b7c99b7e550930234599e92261"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-168.json",
+    "local_sha256": "14c75f29562513a58341dc37f745eb891d1dfe5a5751ad1a7538a50523a611f6"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-169.json",
+    "local_sha256": "787c43f17c19f82bf908bf4c5b0004b8ca79115229c510d184b9411f8d221b7b"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-170.json",
+    "local_sha256": "ed910a4860074c0cfc582118cfbdb485367f015c621c22db78711bc83f7dd065"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-171.json",
+    "local_sha256": "f4f2ad86b64ad5bf16677e948ac8b0ea0f83e19b0fc3bdde1048e7032c1f4842"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-172.json",
+    "local_sha256": "ef703f02d5054f3f4dee11c0609d27d29115101f31308caf340c61f7f8e51975"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-173.json",
+    "local_sha256": "11c8af29e30a305df86c84cc690c80c1cbcd9da367bf62e7d4fa7e86d87043de"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-174.json",
+    "local_sha256": "222f6c1546e0dc1f4e4d999a84d925b5559dd28de32849767e4692a62435ec56"
+  },
+  {
+    "bytes": 105,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_start.json.heartbeat-175.json",
+    "local_sha256": "40066b2d557d4e437700462657863639501ce01c0c6d9774d1787f07152d3297"
+  },
+  {
+    "bytes": 156,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/job_status.json",
+    "local_sha256": "a10692b918ae863e7c5c70feb88e20790fee324afd7b84b64b2cb21fbc994338"
+  },
+  {
+    "bytes": 43355,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/loop_summary.json",
+    "local_sha256": "da08db9dd8a562b1e6e7a881670e0993e026d31250dc806e27730511b90c0c14"
+  },
+  {
+    "bytes": 14433,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/per_tank_qualification.json",
+    "local_sha256": "44e912a8498ec91065b61b36ea0b43b35d367af054986d524f8550d537f54fd6"
+  },
+  {
+    "bytes": 6485107,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/plot_data.json",
+    "local_sha256": "fec6a605409387efd5658f3d081743a6d7a9c85f8f65bb2a3c556b6e0da89a7d"
+  },
+  {
+    "bytes": 1152654,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PRE_SECOND_DISCHARGE.csv",
+    "local_sha256": "329200cf35675a89f0caa779eed89ae33fec93b41ca8123b294a57f499c4ab09"
+  },
+  {
+    "bytes": 1047666,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_00000_90S.csv",
+    "local_sha256": "4b48cbaa4b88af3583d2cb3c55bc4fd57782fd8df8a12b5712c54e44f6bf352a"
+  },
+  {
+    "bytes": 1147163,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_00300_90S.csv",
+    "local_sha256": "c9b1b9555f32957a5f335be7a9b1a62553a77e6266649c10bf6fc9d284254684"
+  },
+  {
+    "bytes": 1155870,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_00600_90S.csv",
+    "local_sha256": "9ea132d92105ce11a52ef2d3f9b19cdf379d0129c513207f3048c61670e0827a"
+  },
+  {
+    "bytes": 1143303,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_00900_90S.csv",
+    "local_sha256": "c0b7ad9c6681d0eb667ae55812182b043d784bd1c61d9bb757842d29070130c4"
+  },
+  {
+    "bytes": 1161395,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_01200_90S.csv",
+    "local_sha256": "d318ee7f8d70eafc68e055be1cf72139336269f2a0f4d83424baf14ca2eabbbe"
+  },
+  {
+    "bytes": 1152654,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_01500_90S.csv",
+    "local_sha256": "329200cf35675a89f0caa779eed89ae33fec93b41ca8123b294a57f499c4ab09"
+  },
+  {
+    "bytes": 1151282,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/PROFILE_01800_90S.csv",
+    "local_sha256": "0ef14ee3ac66d630cc776778e4c5253e49cbdf3d38763a01dad7290b8e2d0e26"
+  },
+  {
+    "bytes": 93,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/ready.json",
+    "local_sha256": "a2f8f871c459c8bb3627a6fe5f8b9f9a21cc8d0b3330f5b001ec6523da7dca8d"
+  },
+  {
+    "bytes": 134,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/release.json",
+    "local_sha256": "d846f8e9e8960cc92ed6ef0f3c7dad7d2feeb97661250970787888c2a9131a54"
+  },
+  {
+    "bytes": 1778,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/result.json",
+    "local_sha256": "1405e4e35901a1dbce8ef4e293bb060836e273c6710a3dee59211db8cbdad608"
+  },
+  {
+    "bytes": 1324,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/stdout.raw",
+    "local_sha256": "acec9419103084f89dd8227a1d645ad4959602c63ecaf55ce35a2bd23ff3c6a4"
+  },
+  {
+    "bytes": 13902255,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/tank_port_ledger.csv",
+    "local_sha256": "67baa04fb9510f769941c2728168741202527d0d70f9514cb1446fcf0c8f02db"
+  },
+  {
+    "bytes": 960,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "artifacts/m1-remote-executor-v1/build/build_identity.json",
+    "local_sha256": "6b6e07e2f6ad0f80560a02b68766db2608582ecf39284653657ddc70468e1e95"
+  },
+  {
+    "bytes": 44667,
+    "artifact": "memphis-loop-raw-second-39408912940",
+    "path": "v0_2/tests/tools/memphis_control_path_v1/source_manifest.json",
+    "local_sha256": "14964e55fe39f721ffd2fd03e8cd3f2f1e58a0ae168d630c07e2be62c04fbf97"
+  }
+]

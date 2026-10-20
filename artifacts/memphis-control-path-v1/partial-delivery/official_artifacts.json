@@ -1,0 +1,145 @@
+{
+  "total_count": 7,
+  "artifacts": [
+    {
+      "id": 12260285436,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI2MDI4NTQzNg==",
+      "name": "memphis-loop-raw-second-39408912940",
+      "size_in_bytes": 157370261,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12260285436",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12260285436/zip",
+      "expired": false,
+      "digest": "sha256:04568d2d7f3d75e7f766ec6e45c4cab4e069d022486d2c22b1eecd02d7f9de13",
+      "created_at": "2026-10-20T11:00:42Z",
+      "updated_at": "2026-10-20T11:00:42Z",
+      "expires_at": "2026-11-19T11:00:27Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    },
+    {
+      "id": 12259106124,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI1OTEwNjEyNA==",
+      "name": "memphis-loop-compact-baseline-39408912940",
+      "size_in_bytes": 20276282,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12259106124",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12259106124/zip",
+      "expired": false,
+      "digest": "sha256:18ecd04a76e3cc7b691e493546951490a581c5cd2f22267b94119bf423f871e4",
+      "created_at": "2026-10-20T10:39:03Z",
+      "updated_at": "2026-10-20T10:39:03Z",
+      "expires_at": "2026-11-19T10:39:01Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    },
+    {
+      "id": 12258783193,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI1ODc4MzE5Mw==",
+      "name": "memphis-loop-compact-mesh-39408912940",
+      "size_in_bytes": 4906049,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258783193",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258783193/zip",
+      "expired": false,
+      "digest": "sha256:9d295a3f4bb273443da3e6758097c38d30059c30305a6721b352d852a234bb99",
+      "created_at": "2026-10-20T10:48:35Z",
+      "updated_at": "2026-10-20T10:48:35Z",
+      "expires_at": "2026-11-19T10:48:33Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    },
+    {
+      "id": 12258766532,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI1ODc2NjUzMg==",
+      "name": "memphis-loop-raw-baseline-39408912940",
+      "size_in_bytes": 132272651,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258766532",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258766532/zip",
+      "expired": false,
+      "digest": "sha256:b24b0ce2c07aeeb610e674d28edce760a5dd0386c4bf3b47f60f3c46e042c4c3",
+      "created_at": "2026-10-20T10:39:00Z",
+      "updated_at": "2026-10-20T10:39:00Z",
+      "expires_at": "2026-11-19T10:38:47Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    },
+    {
+      "id": 12258729313,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI1ODcyOTMxMw==",
+      "name": "memphis-loop-compact-diagnostic-39408912940",
+      "size_in_bytes": 1620144,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258729313",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258729313/zip",
+      "expired": false,
+      "digest": "sha256:fa2a71fd67e4aa064527660dbc7d64a506cbc392bc746a561da9be3f2205064f",
+      "created_at": "2026-10-20T10:53:38Z",
+      "updated_at": "2026-10-20T10:53:38Z",
+      "expires_at": "2026-11-19T10:53:36Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    },
+    {
+      "id": 12258449455,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI1ODQ0OTQ1NQ==",
+      "name": "memphis-loop-raw-diagnostic-39408912940",
+      "size_in_bytes": 83780304,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258449455",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258449455/zip",
+      "expired": false,
+      "digest": "sha256:98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+      "created_at": "2026-10-20T10:53:36Z",
+      "updated_at": "2026-10-20T10:53:36Z",
+      "expires_at": "2026-11-19T10:53:25Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    },
+    {
+      "id": 12258238746,
+      "node_id": "MDg6QXJ0aWZhY3QxMjI1ODIzODc0Ng==",
+      "name": "memphis-loop-raw-mesh-39408912940",
+      "size_in_bytes": 308052716,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258238746",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12258238746/zip",
+      "expired": false,
+      "digest": "sha256:a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+      "created_at": "2026-10-20T10:48:33Z",
+      "updated_at": "2026-10-20T10:48:33Z",
+      "expires_at": "2026-11-19T10:48:15Z",
+      "workflow_run": {
+        "id": 39408912940,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-control-path-v1",
+        "head_sha": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+      }
+    }
+  ]
+}

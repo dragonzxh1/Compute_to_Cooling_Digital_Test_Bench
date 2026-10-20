@@ -1,0 +1,69 @@
+[
+  {
+    "data": {
+      "B_actual_volume_m3": 0.9166666666666659,
+      "B_commands": 109,
+      "B_coverage": "ACTUAL_COLD_RECOVERY_PATH_EXERCISED",
+      "B_net_source_heat_J": -28811889.409234636,
+      "B_source_cooled_J": 28811889.409234636,
+      "actual_B_flow_duration_s": 11.200000000000001,
+      "actual_B_open_pair_s": 12.7,
+      "actual_B_selector_s": 7.8,
+      "actual_load_B_s": null,
+      "fault_first_released_observation_s": 30.1,
+      "first_B_cold_return_s": 13.0,
+      "first_B_command_s": 7.7,
+      "first_B_flow_s": 13.0,
+      "first_B_inventory_increase_s": 17.7,
+      "first_source_return_A_after_B_s": 29.6,
+      "maximum_B_cold_m3": 0.375,
+      "maximum_B_m3_h": 330.0,
+      "maximum_energy_residual_J": 0.0,
+      "minimum_B_positive_m3_h": 13.582550867200842,
+      "pressure_scope": "QUASI_STEADY_RELATIVE_ONLY; NO_STATIC_NPSH_WATERHAMMER",
+      "qualification": "PHYSICAL_BRANCH_WITNESS_NOT_90S_RESERVE_PASS",
+      "segments": [
+        {
+          "A_cold_end_m3": 11.4375,
+          "A_cold_start_m3": 13.875,
+          "end_s": 29.6,
+          "min_load_m3_h": 330.0,
+          "peak_rack_C": 43.42995614053052,
+          "start_s": 7.7
+        }
+      ],
+      "shared_budget_m3": 11.916666666666666,
+      "source_commit": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+    },
+    "entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/baseline/NEW_PATH_SMOKE/ORIGINAL_SHARED/branch_coverage.json"
+  },
+  {
+    "data": {
+      "B_actual_volume_m3": 0.0,
+      "B_commands": 0,
+      "B_coverage": "UNREACHABLE_WITH_EVIDENCE_IN_REGISTERED_ENVELOPE",
+      "B_net_source_heat_J": 0.0,
+      "B_source_cooled_J": 0.0,
+      "actual_B_flow_duration_s": 0.0,
+      "actual_B_open_pair_s": null,
+      "actual_B_selector_s": null,
+      "actual_load_B_s": null,
+      "fault_first_released_observation_s": 30.1,
+      "first_B_cold_return_s": null,
+      "first_B_command_s": null,
+      "first_B_flow_s": null,
+      "first_B_inventory_increase_s": null,
+      "first_source_return_A_after_B_s": null,
+      "maximum_B_cold_m3": 0.0,
+      "maximum_B_m3_h": 0.0,
+      "maximum_energy_residual_J": 0.0,
+      "minimum_B_positive_m3_h": null,
+      "pressure_scope": "QUASI_STEADY_RELATIVE_ONLY; NO_STATIC_NPSH_WATERHAMMER",
+      "qualification": "PHYSICAL_BRANCH_WITNESS_NOT_90S_RESERVE_PASS",
+      "segments": [],
+      "shared_budget_m3": 0.0,
+      "source_commit": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+    },
+    "entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/baseline/NEW_PATH_SMOKE/SELECTABLE_RC/branch_coverage.json"
+  }
+]

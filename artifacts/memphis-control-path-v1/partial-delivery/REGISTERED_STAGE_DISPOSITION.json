@@ -1,0 +1,202 @@
+[
+  {
+    "id": "ASSERTIONS",
+    "group": "baseline",
+    "kind": "assertions",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "NEW_PATH_SMOKE",
+    "group": "baseline",
+    "kind": "smoke",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "BASELINE_EXACT",
+    "group": "baseline",
+    "kind": "old",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "ORIGINAL_20",
+    "group": "mesh",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ORIGINAL_40",
+    "group": "mesh",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ORIGINAL_80",
+    "group": "mesh",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ORIGINAL_160",
+    "group": "mesh",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_BASE",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_STARTUP0",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_WARMUP27",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_COLD_PIPE",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_SMEARED",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_MIX005",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_HEAD_MINUS3",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_VALVE2",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_DELAY05",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_CAPACITY85",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "ATTR_DT005",
+    "group": "diagnostic",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "NO_B_PERMISSION",
+    "group": "second",
+    "kind": "forward",
+    "execution": "PASS",
+    "failure": null,
+    "result_in_report": true
+  },
+  {
+    "id": "B_VALVE_STUCK",
+    "group": "second",
+    "kind": "forward",
+    "execution": "FAIL",
+    "failure": "NEGATIVE_B_NOT_EXCITED",
+    "result_in_report": false
+  },
+  {
+    "id": "B_PUMP_NO_FLOW",
+    "group": "second",
+    "kind": "forward",
+    "execution": "NOT_EXECUTED",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "STALE_MEASUREMENT",
+    "group": "second",
+    "kind": "forward",
+    "execution": "NOT_EXECUTED",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "RC_FIXED1000_CONTROL",
+    "group": "second",
+    "kind": "forward",
+    "execution": "NOT_EXECUTED",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "LOAD_TAKEOVER_DIAGNOSTIC",
+    "group": "second",
+    "kind": "forward",
+    "execution": "NOT_EXECUTED",
+    "failure": null,
+    "result_in_report": false
+  },
+  {
+    "id": "FINAL",
+    "group": "final",
+    "kind": "final",
+    "execution": "NOT_EXECUTED",
+    "failure": null,
+    "result_in_report": false
+  }
+]

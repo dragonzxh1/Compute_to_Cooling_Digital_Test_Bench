@@ -1,0 +1,7 @@
+{
+  "not_all_raw_csv_published_to_git": true,
+  "local": "Includes raw/<case>/ original CSV/JSON",
+  "complete_original": "Exact official raw artifact ZIPs retained beside this directory, see official_artifacts.json",
+  "git": "Top-level review files and source_snapshot only; candidate source is in execution commit",
+  "not_a_remote_final": true
+}

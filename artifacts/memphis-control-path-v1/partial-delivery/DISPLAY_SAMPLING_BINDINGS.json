@@ -1,0 +1,162 @@
+[
+  {
+    "case": "ATTR_BASE",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_BASE/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_BASE/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_CAPACITY85",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_CAPACITY85/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_CAPACITY85/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_COLD_PIPE",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_COLD_PIPE/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_COLD_PIPE/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_DELAY05",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_DELAY05/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_DELAY05/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_DT005",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_DT005/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_DT005/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_HEAD_MINUS3",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_HEAD_MINUS3/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_HEAD_MINUS3/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_MIX005",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_MIX005/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_MIX005/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_SMEARED",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_SMEARED/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_SMEARED/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_STARTUP0",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_STARTUP0/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_STARTUP0/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_VALVE2",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_VALVE2/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_VALVE2/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ATTR_WARMUP27",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_WARMUP27/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/diagnostic/ATTR_WARMUP27/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-diagnostic-39408912940.zip",
+    "official_zip_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ORIGINAL_160",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_160/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_160/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-mesh-39408912940.zip",
+    "official_zip_sha256": "a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ORIGINAL_20",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_20/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_20/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-mesh-39408912940.zip",
+    "official_zip_sha256": "a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ORIGINAL_40",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_40/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_40/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-mesh-39408912940.zip",
+    "official_zip_sha256": "a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "ORIGINAL_80",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_80/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_80/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-mesh-39408912940.zip",
+    "official_zip_sha256": "a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+    "coverage": "Only stages with loop_summary included"
+  },
+  {
+    "case": "NO_B_PERMISSION",
+    "time_display": "Every fifth saved display point and final; full physical-step verdicts unchanged",
+    "raw_summary_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/loop_summary.json",
+    "raw_plots_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/second/NO_B_PERMISSION/plot_data.json",
+    "profile_display": "Nine actual layer values bottom to top; full arrays in official raw archive",
+    "official_zip": "memphis-loop-raw-second-39408912940.zip",
+    "official_zip_sha256": "04568d2d7f3d75e7f766ec6e45c4cab4e069d022486d2c22b1eecd02d7f9de13",
+    "coverage": "Only stages with loop_summary included"
+  }
+]

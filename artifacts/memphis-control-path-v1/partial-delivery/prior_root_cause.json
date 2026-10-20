@@ -1,0 +1,12 @@
+{
+ "scope":"INDEPENDENT_SAVED_EVIDENCE_READING_NOT_NEW_SIMULATION_OR_INHERITED_PASS",
+ "run":39376914865,
+ "execution":"1f67d705571a09f04c29e37c094d280b85d041ce",
+ "manifest":"f37fed67b81d774b7dc61d1b3a430f4c91f2d8e99a0c6bc19677b9b1d9486e61",
+ "SHARED_80_source_phases_raw_sha256":"16eb52bcb4749b3232149329ad9f783f79b01bd727bcc4f2fe185e3a671b0be1",
+ "analysis":{"after120_samples":8400,"maximum_guarded_cold_estimate_m3":12.1875,"minimum_first16_TT_spread_K":4.90528087702251,"maximum_first16_TT_spread_K":11.4456010412283,"old_inventory_gate_m3":14.0625,"old_flatness_gate_K":0.25,"B_source_commands":0,"actual_B_source_flow_seconds":0},
+ "chain":["W1 failed30s and released observation triggered source switch31.1s","W2 actual flow and delayed physical cooling occurred; cold TT+FT RUN434.1s","RUN did not permit sharedB: observed A never met14.0625m3 AND uniformity<=0.25K","No B source command, therefore no PLC refusal or valve path excitation","No shared B enthalpy recovery; B initialwarm remainedwarm"],
+ "classification":"CANDIDATE_CONTROL_PRECONDITION_INCOMPATIBLE_WITH_OBSERVED_STRATIFIED_A; not proof original topology impossible",
+ "changes_not_approved_by_customer":"New segment permission uses guarded contiguous bottom volume and full absence budget; research85pct and customer70pct component verdicts remain separate.10s segment/30s valve-return budget require designer confirmation.",
+ "source_time_limits":"Original actual source cold return423.3s versus RUN434.1s; neither means B recovered. All old artifacts immutable."
+}

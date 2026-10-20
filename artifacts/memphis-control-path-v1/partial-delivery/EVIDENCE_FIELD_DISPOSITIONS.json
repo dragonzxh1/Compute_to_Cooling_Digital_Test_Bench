@@ -1,0 +1,32 @@
+{
+  "schema": "MEMPHIS-CONTROL-PATH-EVIDENCE-FIELD-REVIEW-v1",
+  "execution": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+  "run": "39408912940",
+  "dispositions": [
+    {
+      "field": "control_path.maximum_energy_residual_J",
+      "status": "INVALID_UNCOMPUTED_METADATA",
+      "reason": "Coverage collector initializes this unused field to0 and never updates it. It is not an actual residual statistic and must not be cited as zero energy error.",
+      "valid_alternatives": ["observed.maximum_tank_residual_J", "independent.independent_energy", "raw per-step global_residual_j and tank_port_ledger.csv independent_residual_J"],
+      "used_by_any_qualification_or_guard": false,
+      "raw_preservation": "Original source, outputs and hashes unchanged. Reader labels invalid field explicitly; no replacement of raw numbers."
+    },
+    {
+      "field": "control_path.segments",
+      "status": "VALID_SELECTOR_B_INTERVAL_ONLY_NOT_WHOLE_ABSENCE",
+      "reason": "Does not include outbound stop/valves before actual B selection or final A flow/cold-return rebuild. Whole absence is reconstructed separately from saved actual events and physical CSV."
+    },
+    {
+      "field": "control_path.B_coverage for SELECTABLE_RC",
+      "status": "SHARED_SOURCE_PATH_NOT_APPLICABLE_TO_RC",
+      "reason": "No shared source-to-B command is expected for the isolated RC architecture; actual_RC_served_B/A and RC port enthalpy are separate witnesses. Do not present absence of sharedB as an RC adapter failure."
+    },
+    {
+      "field": "requested_recharge_done and independent.recharge_done",
+      "status": "LEGACY_COMPATIBILITY_ALIAS_TT_SCREEN_ONLY",
+      "reason": "Kept for unchanged audit adapter compatibility; neither alias is full component or system reserve qualification. Refer to real profile90s trials and second-fault thermal/hydraulic verdicts."
+    }
+  ],
+  "engineering_approval": false,
+  "source_reexecution": false
+}

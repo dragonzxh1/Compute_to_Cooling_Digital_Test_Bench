@@ -1,0 +1,104 @@
+{
+  "run": "39408912940",
+  "method": "Official ZIP digest checked; actual saved PLC event and physical CSV only; no local model",
+  "schema": "SAVED-PHYSICAL-ABSENCE-FILE-ANALYSIS-v1",
+  "cases": [
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "NO_B_PERMISSION"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_BASE"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_CAPACITY85"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_COLD_PIPE"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_DELAY05"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_DT005"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_HEAD_MINUS3"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_MIX005"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_SMEARED"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_STARTUP0"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_VALVE2"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ATTR_WARMUP27"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ORIGINAL_160"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ORIGINAL_20"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ORIGINAL_40"
+    },
+    {
+      "full_absence_windows": [],
+      "source": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+      "selector_B_segments_scope": "Original control_path.segments only covers actual selectorB; excludes outbound stop and final A rebuild",
+      "id": "ORIGINAL_80"
+    }
+  ],
+  "execution": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+}

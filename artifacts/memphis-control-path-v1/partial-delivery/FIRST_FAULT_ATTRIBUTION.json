@@ -1,0 +1,265 @@
+[
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.57219908208907,
+    "energy": {
+      "bound_j": 255.35200711567663,
+      "environment_gain_j": 305624.8771028646,
+      "export_j": 552915528.6108434,
+      "final_j": 57915063270.19308,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.720673026284203E-08,
+      "pump_j": 16400455.526681056,
+      "residual_j": 0.0001350513775832951
+    },
+    "delta_K": 0.0,
+    "id": "ATTR_BASE",
+    "change": {
+      "seconds": 240,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.58004362232248
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.648251760862706,
+    "energy": {
+      "bound_j": 255.35152119194953,
+      "environment_gain_j": 66222.73354357234,
+      "export_j": 470659031.86091006,
+      "final_j": 57997088804.14969,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.720673026284203E-08,
+      "pump_j": 16408894.876858084,
+      "residual_j": 0.00019562491797842085
+    },
+    "delta_K": 0.09509175148451732,
+    "id": "ATTR_CAPACITY85",
+    "change": {
+      "seconds": 240,
+      "capacity_scale": 0.85,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.675135373806995
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 50.92070331157714,
+    "energy": {
+      "bound_j": 254.22015248586416,
+      "environment_gain_j": 752466.8374222228,
+      "export_j": 552915528.6108434,
+      "final_j": 57656126482.153366,
+      "initial_j": 57555769088.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7197976376337465E-08,
+      "pump_j": 16400455.526681056,
+      "residual_j": 0.00010469462722539902
+    },
+    "delta_K": -2.627116621241157,
+    "id": "ATTR_COLD_PIPE",
+    "change": {
+      "seconds": 240,
+      "standby_initial_c": 40.5,
+      "second_fault_at_s": null
+    },
+    "peak_C": 50.95292700108132
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.521276005619825,
+    "energy": {
+      "bound_j": 255.35188311121394,
+      "environment_gain_j": 292251.9720382191,
+      "export_j": 547616389.0611963,
+      "final_j": 57920327330.0481,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7205536551045952E-08,
+      "pump_j": 16378748.737192627,
+      "residual_j": 6.728398147970438E-05
+    },
+    "delta_K": -0.009539197987976422,
+    "id": "ATTR_DELAY05",
+    "change": {
+      "seconds": 240,
+      "source_sensor_delay_s": 0.5,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.5705044243345
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.56208955394379,
+    "energy": {
+      "bound_j": 510.59766064744286,
+      "environment_gain_j": 305283.71502064087,
+      "export_j": 552925275.5059094,
+      "final_j": 57915053084.50512,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7204911273438483E-08,
+      "pump_j": 16400357.895609453,
+      "residual_j": 0.000397101859562099
+    },
+    "delta_K": -0.011082542074632329,
+    "id": "ATTR_DT005",
+    "change": {
+      "seconds": 240,
+      "dt_s": 0.05,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.568961080247846
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.59325131632767,
+    "energy": {
+      "bound_j": 255.35130977287847,
+      "environment_gain_j": 314842.6164701948,
+      "export_j": 552802685.3552811,
+      "final_j": 57915021052.073944,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7204456526087597E-08,
+      "pump_j": 16236176.412648909,
+      "residual_j": 0.00010456948075443506
+    },
+    "delta_K": 0.02708822370021835,
+    "id": "ATTR_HEAD_MINUS3",
+    "change": {
+      "seconds": 240,
+      "source_head_factor": 0.97,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.607131846022696
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.317849191088726,
+    "energy": {
+      "bound_j": 255.35204697017022,
+      "environment_gain_j": 323875.8056019703,
+      "export_j": 552894725.6164222,
+      "final_j": 57915102324.11586,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7196725821122527E-08,
+      "pump_j": 16400455.526681056,
+      "residual_j": -2.400018274784088E-06
+    },
+    "delta_K": -0.2542202674993064,
+    "id": "ATTR_MIX005",
+    "change": {
+      "seconds": 240,
+      "mixing_m3_s": 0.005,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.32582335482317
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.59686105640117,
+    "energy": {
+      "bound_j": 255.35217637086325,
+      "environment_gain_j": 285634.2605100224,
+      "export_j": 553564962.0219381,
+      "final_j": 57914442595.75223,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.720388809189899E-08,
+      "pump_j": 16449205.113427455,
+      "residual_j": 0.00022691988851875067
+    },
+    "delta_K": 0.024726013306917594,
+    "id": "ATTR_SMEARED",
+    "change": {
+      "seconds": 240,
+      "initial_profile": "SMEARED",
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.604769635629395
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 48.124965947603926,
+    "energy": {
+      "bound_j": 255.35326181714797,
+      "environment_gain_j": 880201.659232027,
+      "export_j": 728664706.1446714,
+      "final_j": 57739888669.44145,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7200818547280505E-08,
+      "pump_j": 16400455.526681056,
+      "residual_j": 0.00020884803961962461
+    },
+    "delta_K": -5.455077674718552,
+    "id": "ATTR_STARTUP0",
+    "change": {
+      "seconds": 240,
+      "physical_startup_s": 0,
+      "second_fault_at_s": null
+    },
+    "peak_C": 48.124965947603926
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 53.62163352807164,
+    "energy": {
+      "bound_j": 255.35247728376325,
+      "environment_gain_j": 320213.7048714559,
+      "export_j": 572715528.6108434,
+      "final_j": 57895378218.76712,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.720673026284203E-08,
+      "pump_j": 16500815.272976954,
+      "residual_j": 0.00011380505748093128
+    },
+    "delta_K": 0.04158990574916288,
+    "id": "ATTR_VALVE2",
+    "change": {
+      "seconds": 240,
+      "valve_s": 2,
+      "second_fault_at_s": null
+    },
+    "peak_C": 53.62163352807164
+  },
+  {
+    "minimum_flow_m3_h": 330.0,
+    "scope": "FIRST240S_ONLY; source assumptions, not OEM facts",
+    "first90_C": 51.16859431666478,
+    "energy": {
+      "bound_j": 255.3526096132698,
+      "environment_gain_j": 581532.0441526698,
+      "export_j": 642015528.6108434,
+      "final_j": 57826239177.36008,
+      "initial_j": 57815152718.4,
+      "liquid_j": 636120000.0,
+      "max_local_residual_j": 1.7203547031385824E-08,
+      "pump_j": 16400455.526681056,
+      "residual_j": 8.506304584443569E-05
+    },
+    "delta_K": -2.4114493056576976,
+    "id": "ATTR_WARMUP27",
+    "change": {
+      "seconds": 240,
+      "physical_startup_s": 27,
+      "second_fault_at_s": null
+    },
+    "peak_C": 51.16859431666478
+  }
+]

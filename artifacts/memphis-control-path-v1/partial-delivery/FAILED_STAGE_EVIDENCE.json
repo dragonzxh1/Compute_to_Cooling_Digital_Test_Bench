@@ -1,0 +1,90 @@
+{
+  "raw_stdout": "EQUIPMENT_STAGE_BEGIN B_VALVE_STUCK\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 60.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 120.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 180.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 240.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 300.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 360.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 420.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 480.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 540.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 600.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 660.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 720.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 780.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 840.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 900.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 960.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1020.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1080.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1140.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1200.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1260.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1320.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1380.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1440.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1500.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1560.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1620.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1680.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1740.0s\r\nMEMPHIS_PROGRESS B_VALVE_STUCK 1800.0s\r\nTraceback (most recent call last):\r\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_control_path_v1\\worker.py\", line 25, in main\r\n    result['analysis']=stage(spec,directory);result['status']='PASS';save('independent_analysis.json',result['analysis'])\r\n                       ^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_control_path_v1\\stages.py\", line 167, in stage\r\n    result['control_path']=verify_coverage(directory/'case',c)\r\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_control_path_v1\\coverage.py\", line 79, in verify_coverage\r\n    require(commands>0,'NEGATIVE_B_NOT_EXCITED');require(not valid,'NEGATIVE_B_FALSE_SUCCESS')\r\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_hydraulic_continuity_v1\\independent.py\", line 11, in require\r\n    if not ok:raise ValueError(code)\r\n              ^^^^^^^^^^^^^^^^^^^^^^\r\nValueError: NEGATIVE_B_NOT_EXCITED\r\n\r\nEQUIPMENT_STAGE_END B_VALVE_STUCK FAIL\r\n",
+  "external_identity": {
+    "actual_python_pid": 7364,
+    "in_target_job": true,
+    "target_job_name": "Local\\C2CDTB_OwnedJob_bcb8c724077f44f191435cca08d93248",
+    "cpu_rate": 2500,
+    "cpu_flags": 5,
+    "basic_flags": 8968,
+    "max_active_processes": 4,
+    "process_mb": 1024,
+    "job_mb": 2048,
+    "modules_before_workload": [
+      "python.exe",
+      "ntdll.dll",
+      "KERNEL32.DLL",
+      "KERNELBASE.dll",
+      "ucrtbase.dll",
+      "VCRUNTIME140.dll",
+      "python311.dll",
+      "WS2_32.dll",
+      "RPCRT4.dll",
+      "VERSION.dll",
+      "msvcrt.dll",
+      "bcrypt.dll",
+      "ADVAPI32.dll",
+      "sechost.dll",
+      "bcryptprimitives.dll",
+      "python3.DLL",
+      "_hashlib.pyd",
+      "libcrypto-3.dll",
+      "USER32.dll",
+      "win32u.dll",
+      "GDI32.dll",
+      "gdi32full.dll",
+      "msvcp_win.dll",
+      "IMM32.DLL",
+      "_bz2.pyd",
+      "_lzma.pyd",
+      "_socket.pyd",
+      "IPHLPAPI.DLL",
+      "select.pyd"
+    ]
+  },
+  "scope": "Original failed bytes preserved in official ZIP; JSON parses/collects them for review, not a new test",
+  "result": {
+    "environment": {
+      "dependencies": {
+        "jsonschema": "4.26.0",
+        "numpy": "2.4.6",
+        "pytest": "9.1.1"
+      },
+      "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+      "image": "20261012.333.1",
+      "job_proof_sha256": "1742e519a92f0fe39750e659d8dd6ad1b2cb29538866790ed529be5667879df8",
+      "python": "3.11.9",
+      "source_commit": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+    },
+    "environment_after": {
+      "dependencies": {
+        "jsonschema": "4.26.0",
+        "numpy": "2.4.6",
+        "pytest": "9.1.1"
+      },
+      "executable": "C:\\hostedtoolcache\\windows\\Python\\3.11.9\\x64\\python.exe",
+      "image": "20261012.333.1",
+      "job_proof_sha256": "1742e519a92f0fe39750e659d8dd6ad1b2cb29538866790ed529be5667879df8",
+      "python": "3.11.9",
+      "source_commit": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d"
+    },
+    "error": "NEGATIVE_B_NOT_EXCITED",
+    "error_type": "ValueError",
+    "formal_C3C": false,
+    "pid": 7364,
+    "scope": "DEVELOPMENT_EXECUTION_NOT_ENGINEERING_AGGREGATE_PASS",
+    "stage": "B_VALVE_STUCK",
+    "status": "FAIL",
+    "traceback": "Traceback (most recent call last):\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_control_path_v1\\worker.py\", line 25, in main\n    result['analysis']=stage(spec,directory);result['status']='PASS';save('independent_analysis.json',result['analysis'])\n                       ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_control_path_v1\\stages.py\", line 167, in stage\n    result['control_path']=verify_coverage(directory/'case',c)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_control_path_v1\\coverage.py\", line 79, in verify_coverage\n    require(commands>0,'NEGATIVE_B_NOT_EXCITED');require(not valid,'NEGATIVE_B_FALSE_SUCCESS')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\a\\Compute_to_Cooling_Digital_Test_Bench\\Compute_to_Cooling_Digital_Test_Bench\\v0_2\\tests\\tools\\memphis_hydraulic_continuity_v1\\independent.py\", line 11, in require\n    if not ok:raise ValueError(code)\n              ^^^^^^^^^^^^^^^^^^^^^^\nValueError: NEGATIVE_B_NOT_EXCITED\n"
+  },
+  "native_job": {
+    "outcome": "EXITED",
+    "child_exitcode": 1,
+    "pid": 7364,
+    "assigned_before_resume": true,
+    "resumed": true,
+    "cleanup_complete": true,
+    "active_after_cleanup": 0,
+    "error": ""
+  }
+}

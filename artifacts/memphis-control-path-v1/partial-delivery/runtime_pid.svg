@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+<title id="title">原共享源侧运行时功能P&amp;ID</title><desc id="desc">源侧选择A或B顶抽底回，独立负载泵从选定罐底抽顶回。选择器成对先闭后开，不允许A/B并通。图不是施工图，实际选通和温流来自HTML时间滑块。</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1e293b" stroke-width=".5"/></pattern><marker id="hot" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#fb923c"/></marker><marker id="cold" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="#22d3ee"/></marker><style>text{font-family:"Cascadia Code","Microsoft YaHei",sans-serif;fill:#e2e8f0;font-size:17px}.sub{font-size:14px;fill:#94a3b8}.box{fill:#0f172a;stroke:#94a3b8;stroke-width:2}.h{fill:none;stroke:#fb923c;stroke-width:3;marker-end:url(#hot)}.c{fill:none;stroke:#22d3ee;stroke-width:3;marker-end:url(#cold)}</style></defs>
+<rect width="1200" height="660" fill="#0f172a"/><rect width="1200" height="660" fill="url(#grid)"/>
+<text x="30" y="36" font-size="23" font-weight="700">原00/01主回路 · 实际模型连接 / 非施工图</text>
+<text x="30" y="66" class="sub">所有A/B支路经互斥成对选择器；线条表示可选连接，不表示同时连通</text>
+<path class="h" d="M440 200H350V140H275"/><path class="h" d="M440 420H330V155H275"/>
+<path class="c" d="M275 240H375V300H440"/><path class="c" d="M275 260H355V520H440"/>
+<path class="c" d="M660 300H760V250H900"/><path class="c" d="M660 520H780V270H900"/>
+<path class="h" d="M900 150H800V200H660"/><path class="h" d="M900 170H820V420H660"/>
+<rect x="45" y="110" width="230" height="200" rx="12" class="box"/>
+<text x="160" y="147" text-anchor="middle">W1 / W2 冷源</text><text x="160" y="182" text-anchor="middle">共享源泵4台</text><text x="160" y="215" text-anchor="middle">常态3用1备</text><text x="160" y="252" class="sub" text-anchor="middle">实际Q-H交点，非指定440</text><text x="160" y="281" class="sub" text-anchor="middle">暖管 / 建冷 / 泵热计账</text>
+<rect x="440" y="160" width="220" height="180" rx="20" class="box"/><text x="550" y="201" text-anchor="middle">A罐 15m³</text><text x="550" y="238" class="sub" text-anchor="middle">顶部：源抽 / 负载回</text><text x="550" y="277" class="sub" text-anchor="middle">底部：源回 / 负载抽</text><text x="550" y="313" class="sub" text-anchor="middle">实际逐层温度与焓流</text>
+<rect x="440" y="380" width="220" height="180" rx="20" class="box"/><text x="550" y="421" text-anchor="middle">B罐 15m³</text><text x="550" y="458" class="sub" text-anchor="middle">顶部：源抽 / 负载回</text><text x="550" y="497" class="sub" text-anchor="middle">底部：源回 / 负载抽</text><text x="550" y="533" class="sub" text-anchor="middle">不得与A非法并通</text>
+<rect x="900" y="110" width="255" height="200" rx="12" class="box"/><text x="1027" y="150" text-anchor="middle">负载选择器 + 独立泵</text><text x="1027" y="188" text-anchor="middle">3个运行CDU / 18柜</text><text x="1027" y="225" text-anchor="middle">330m³/h / 2650.50kW</text><text x="1027" y="267" class="sub" text-anchor="middle">负载切B仅独立候选场景</text>
+<text x="44" y="390" class="sub">源侧补B时：A继续供负载</text><text x="44" y="420" class="sub">B补冷须有真实流量与净抽热</text><text x="44" y="450" class="sub">返回A后才恢复A冷库存</text>
+<text x="885" y="390" class="sub">独立RC仅对照场景显式安装</text><text x="885" y="420" class="sub">RC选择同一罐顶抽底回</text><text x="885" y="450" class="sub">不把W2冷量重复计作RC冷量</text>
+<text x="30" y="607" fill="#22d3ee">青色：冷液方向</text><text x="280" y="607" fill="#fb923c">橙色：热液方向</text><text x="560" y="607" class="sub">相对压差已计算；静压/NPSH/水锤未验证</text>
+<text x="30" y="637" class="sub">MEMPHIS_ENGINEERING_NOT_APPROVED · 选通/阀位/温流按保存的逐时轨迹核对</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "schema": "SAVED-REPORT-BROWSER-CHECK-v1",
+  "execution_commit": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+  "run": "39408912940",
+  "method": "Existing gstack browse, local file playback only; no numerical model execution",
+  "checked": {
+    "all_16_case_selections_rendered": true,
+    "three_saved_data_plots_per_case": true,
+    "time_slider_reaches_actual_240_or_1800_second_endpoint": true,
+    "invalid_uncomputed_residual_marked_in_all_16_cases": true,
+    "default_case": "ORIGINAL_80",
+    "diagram_image_loaded": true,
+    "mobile_inner_width": 375,
+    "mobile_document_scroll_width": 375,
+    "desktop_viewport": "1280x900",
+    "console_errors_after_final_load": 0,
+    "screenshots_viewed": ["report-mobile.png", "report-desktop.png"]
+  },
+  "scope": "UI playback consistency only, not engineering qualification or full accessibility audit",
+  "campaign": "INCOMPLETE_FAILED_NEGATIVE_NOT_EXCITED",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}

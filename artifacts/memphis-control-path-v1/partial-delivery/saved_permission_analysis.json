@@ -1,0 +1,21 @@
+{
+  "eligible_frames": 5279,
+  "observation_budget_gap_m3": 2.541666666666666,
+  "window_s": [
+    120,
+    1500
+  ],
+  "run": "39408912940",
+  "registered_budget_m3": 11.916666666666666,
+  "B_commands": 0,
+  "raw_entry": "artifacts/m1-autonomous-development/memphis-control-path-v1-39408912940-1/mesh/ORIGINAL_80/case/source_phases.json",
+  "method": "Independent saved JSON arithmetic, no model execution",
+  "case": "ORIGINAL_80",
+  "execution": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+  "max_contiguous_A_estimate_m3": 9.375,
+  "raw_sha256": "f53f35b7e2b1aad0693e22b20cba51db7dd281f51995332a28221333bda9385c",
+  "interpretation": "CONTROL_ESTIMATE_BUDGET_GAP; NOT extra tank volume, hardware deficit or RC sizing; finite window only",
+  "last_eligible_s": 1499.9,
+  "first_eligible_s": 444.3,
+  "schema": "SAVED-PERMISSION-WITNESS-v1"
+}

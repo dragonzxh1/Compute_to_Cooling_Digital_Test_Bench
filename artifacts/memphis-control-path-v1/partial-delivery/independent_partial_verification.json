@@ -1,0 +1,352 @@
+{
+  "schema": "MEMPHIS-PARTIAL-OFFICIAL-REVIEW-v1",
+  "evidence_integrity": "AVAILABLE_OFFICIAL_BYTES_AND_ACTUAL_JOBS_VERIFIED_WITH_EXPLICIT_INDEX_GAP",
+  "campaign": "INCOMPLETE_FAILED_NEGATIVE_NOT_EXCITED",
+  "engineering": "MEMPHIS_ENGINEERING_NOT_APPROVED",
+  "run": "39408912940",
+  "execution_commit": "3ee9f97f31f5f395e51c1a561b2a8aed8ba2c97d",
+  "manifest_sha256": "14964e55fe39f721ffd2fd03e8cd3f2f1e58a0ae168d630c07e2be62c04fbf97",
+  "source_counts": {
+    "protected": 836,
+    "new": 26,
+    "preserved": 298
+  },
+  "source_method": "SHA256 sources plus exact remote Git blob identity; protected hydration entries separately verified in sealed hash-bound source bundle; original checkout CI preserved",
+  "hydration_manifest_sha256": "6842d3bd57a73d883d724fe7352680f9dfd1ba9a2c420b9ec5fa0925b05ffe93",
+  "raw_files": 1603,
+  "stages": [
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ASSERTIONS",
+      "pid": 5044,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "NEW_PATH_SMOKE",
+      "pid": 6116,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "BASELINE_EXACT",
+      "pid": 6000,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_BASE",
+      "pid": 2284,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_STARTUP0",
+      "pid": 6564,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_WARMUP27",
+      "pid": 2596,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_COLD_PIPE",
+      "pid": 7816,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_SMEARED",
+      "pid": 4684,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_MIX005",
+      "pid": 4600,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_HEAD_MINUS3",
+      "pid": 964,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_VALVE2",
+      "pid": 6620,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_DELAY05",
+      "pid": 640,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_CAPACITY85",
+      "pid": 2104,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ATTR_DT005",
+      "pid": 3540,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ORIGINAL_20",
+      "pid": 7944,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ORIGINAL_40",
+      "pid": 5820,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ORIGINAL_80",
+      "pid": 4672,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "ORIGINAL_160",
+      "pid": 6824,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "B_VALVE_STUCK",
+      "pid": 7364,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": "NEGATIVE_B_NOT_EXCITED",
+      "status": "FAIL"
+    },
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "NO_B_PERMISSION",
+      "pid": 7388,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": null,
+      "status": "PASS"
+    }
+  ],
+  "failed": [
+    {
+      "image": "20261012.333.1",
+      "process_mb": 1024,
+      "stage": "B_VALVE_STUCK",
+      "pid": 7364,
+      "cpu_rate": 2500,
+      "job_mb": 2048,
+      "cleanup_complete": true,
+      "active_after_cleanup": 0,
+      "error": "NEGATIVE_B_NOT_EXCITED",
+      "status": "FAIL"
+    }
+  ],
+  "missing": [
+    "B_PUMP_NO_FLOW",
+    "STALE_MEASUREMENT",
+    "RC_FIXED1000_CONTROL",
+    "LOAD_TAKEOVER_DIAGNOSTIC",
+    "FINAL"
+  ],
+  "completed_forward_cases": [
+    "ATTR_BASE",
+    "ATTR_STARTUP0",
+    "ATTR_WARMUP27",
+    "ATTR_COLD_PIPE",
+    "ATTR_SMEARED",
+    "ATTR_MIX005",
+    "ATTR_HEAD_MINUS3",
+    "ATTR_VALVE2",
+    "ATTR_DELAY05",
+    "ATTR_CAPACITY85",
+    "ATTR_DT005",
+    "ORIGINAL_20",
+    "ORIGINAL_40",
+    "ORIGINAL_80",
+    "ORIGINAL_160",
+    "NO_B_PERMISSION"
+  ],
+  "archives": [
+    {
+      "id": 12259106124,
+      "official_digest": "sha256:18ecd04a76e3cc7b691e493546951490a581c5cd2f22267b94119bf423f871e4",
+      "local_sha256": "18ecd04a76e3cc7b691e493546951490a581c5cd2f22267b94119bf423f871e4",
+      "name": "memphis-loop-compact-baseline-39408912940"
+    },
+    {
+      "id": 12258729313,
+      "official_digest": "sha256:fa2a71fd67e4aa064527660dbc7d64a506cbc392bc746a561da9be3f2205064f",
+      "local_sha256": "fa2a71fd67e4aa064527660dbc7d64a506cbc392bc746a561da9be3f2205064f",
+      "name": "memphis-loop-compact-diagnostic-39408912940"
+    },
+    {
+      "id": 12258783193,
+      "official_digest": "sha256:9d295a3f4bb273443da3e6758097c38d30059c30305a6721b352d852a234bb99",
+      "local_sha256": "9d295a3f4bb273443da3e6758097c38d30059c30305a6721b352d852a234bb99",
+      "name": "memphis-loop-compact-mesh-39408912940"
+    },
+    {
+      "id": 12258766532,
+      "official_digest": "sha256:b24b0ce2c07aeeb610e674d28edce760a5dd0386c4bf3b47f60f3c46e042c4c3",
+      "local_sha256": "b24b0ce2c07aeeb610e674d28edce760a5dd0386c4bf3b47f60f3c46e042c4c3",
+      "name": "memphis-loop-raw-baseline-39408912940"
+    },
+    {
+      "id": 12258449455,
+      "official_digest": "sha256:98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+      "local_sha256": "98c5af459b7ed13bc7b8ae8c8b186419baba21b4b063cc2c90b6b5a34a53f803",
+      "name": "memphis-loop-raw-diagnostic-39408912940"
+    },
+    {
+      "id": 12258238746,
+      "official_digest": "sha256:a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+      "local_sha256": "a981a4978dfbc3a3e56c8d61264a06cc5e93934c752218a10f6c3ba8b8ee1fe8",
+      "name": "memphis-loop-raw-mesh-39408912940"
+    },
+    {
+      "id": 12260285436,
+      "official_digest": "sha256:04568d2d7f3d75e7f766ec6e45c4cab4e069d022486d2c22b1eecd02d7f9de13",
+      "local_sha256": "04568d2d7f3d75e7f766ec6e45c4cab4e069d022486d2c22b1eecd02d7f9de13",
+      "name": "memphis-loop-raw-second-39408912940"
+    }
+  ],
+  "raw_logs_sha256": "b4c4723b0710d78ed564e72b0f80b6e48eb4de7a95044ed81a3e52a51eac0227",
+  "failed_group_index": "NOT_WRITTEN_AFTER_BATCH_THROW; official ZIP digest checked; local post-download hashes separately saved, NOT remote completion receipts",
+  "failed_group_local_hashes_sha256": "499e4b8a896bfe6918f73622433b1e9f053803467f1c7fd01e16f352af6e836e",
+  "final_batch_cleanup": "NOT_EXECUTED_FINAL_SKIPPED",
+  "full_campaign_pass": false,
+  "formal": false,
+  "hardware": false,
+  "procurement": false,
+  "phase6": false,
+  "method": "Pure PowerShell/ZIP/hash review; no local model"
+}
