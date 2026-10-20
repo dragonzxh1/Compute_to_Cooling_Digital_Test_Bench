@@ -80,7 +80,7 @@ def write_package(g, results, directory, source_manifest, environment):
     csv_file(out/"R12_COMPONENT_PORT_REGISTRY.csv",[
         dict(record_type="COMPONENT",id=c["tag"],**c) for c in g["components"]]+[
         dict(record_type="PORT",**p) for p in g["ports"]],
-        ["record_type","id","equipment_tag","tag","kind","fluid_domain","primary_network","secondary_network","direction","confirmation","use","source_refs"])
+        ["record_type","id","equipment_tag","tag","kind","fluid_domain","primary_network","primary_network_candidates","secondary_network","secondary_network_candidates","direction","confirmation","use","source_refs"])
     identity=[dict(unit=c["unit"],CDU_IDENTITY=c["CDU_IDENTITY"],secondary_network=c["secondary_network"],
              allowed_primary_networks="A or B (paired selector)",tank_from_CDU_identity=False,source_refs=c["source_refs"])
               for c in g["components"] if c["kind"]=="CDU"]
@@ -215,6 +215,10 @@ SVG完整支路图谱与JSON逐边核对一致：{len(drawn)}条。不是施工C
 """
     (out/"R12_MODEL_MAPPING_REPORT_ZH.md").write_text(report,encoding="utf-8")
     save(out/"R12_STATUS.json",status)
+    template=(Path(__file__).parent/"report_template.html").read_text(encoding="utf-8")
+    data=json.dumps(dict(cases=[x for x in results if x["id"].startswith(("CASE01_","CASE02_","CASE03_"))],statuses=status,report=report),ensure_ascii=False,allow_nan=False).replace("<","\\u003c")
+    viewer=template.replace("__ATLAS__",(out/"R12_FUNCTIONAL_PID.svg").read_text(encoding="utf-8")).replace("__EVIDENCE__",data)
+    (out/"engineering_report.html").write_text(viewer,encoding="utf-8")
     save(out/"R12_SOURCE_INPUT_ENVIRONMENT_MANIFEST.json",dict(source_manifest=source_manifest,environment=environment,
         graph_revision=g["revision"],control_revision="R12-INTENT-CONTROL-v1",svg_json_check={"status":"PASS","edges":len(drawn)},
         authorities=dict(development=True,git_dedicated_branch=True,remote_unit_tests=True,long_simulation=False,formal_C3C=False,hardware=False,production=False,phase6=False)))

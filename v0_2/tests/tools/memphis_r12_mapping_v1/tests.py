@@ -7,7 +7,7 @@ import copy
 import json
 import math
 from .topology import (CDU_IDENTITY, PRIMARY_NETWORK_ID as P, SECONDARY_NETWORK_ID as S,
-                       cdu_name, operating_fixture, connectivity, isolation_errors, enabled_edges, path)
+                       cdu_name, operating_fixture, connectivity, isolation_errors, enabled_edges, path, heat_interface)
 from .control import T2Controller, T1Controller, RechargeController, UnitPolicy
 
 
@@ -106,6 +106,17 @@ def run_tests(g):
         print(id+" "+record["status"],flush=True)
 
     check("SCHEMA",False,"6 CDU; 12 secondary pumps; 18 racks; 72 rack valves; provenance and domain integrity",lambda:validate_schema(g),"R12 PID-005/006; S2设备清单")
+    def membership():
+        ports={p["id"]:p for p in g["ports"]}
+        for c in (x for x in g["components"] if x["kind"]=="CDU"):
+            for suffix in (":P1-IN",":P1-OUT"):
+                assert ports[c["tag"]+suffix]["primary_network_candidates"]==["A","B"]
+                assert ports[c["tag"]+suffix]["primary_network"]!="A"
+        for c in (x for x in g["components"] if x["kind"]=="RACK_LOAD"):
+            for suffix in (":IN",":OUT"):
+                assert ports[c["tag"]+suffix]["secondary_network_candidates"]==["A","B"]
+        return dict(actual="CDU primary selectors and rack merged ports correctly multi-candidate",command="schema mapping",no_parallel_authority=True)
+    check("SELECTOR_PORT_MEMBERSHIP_NOT_FIXED_A",False,"selectable ports list A/B candidates, never inherit first A label",membership,"PID-005/006 selector semantics")
     def steady(p,s):
         f=operating_fixture(g,p,s); proof=connectivity(g,f)
         assert not proof["isolation_errors"]
@@ -173,6 +184,19 @@ def run_tests(g):
         o["valves"]["G01-U1-R01-CV-BS"]=False
     check("CASE09_STUCK_VALVE_NO_FAKE_PATH",True,"command open/actual closed gives no rack path",lambda:neg_t2(stuck),"PID-006 real valve feedback, not command")
     check("CASE10_STALE_NO_READY",True,"stale measurement cannot complete",lambda:neg_t2(lambda o,t:o.update(sample_s=max(0,t-1))),"source freshness policy OPEN; .5s used only in explicit unit fixture")
+    def revoke_completed():
+        c,inputs=t2_trace(g)
+        assert c.state=="COMPLETED_UNIT_INTENT_ONLY"
+        o=observation(g,7,"master"); row=c.step(o,8)
+        assert row["state"]=="COMPLETION_REVOKED_HOLD" and row["verdict"]!="UNIT_READY_NOT_DYNAMIC_READY"
+        return dict(command=row["command"],actual=o,events=c.events,blocked=True)
+    check("NEG_STALE_AFTER_COMPLETION_REVOKES_READY",True,"completed state revoked on stale subsequent input",revoke_completed,"PID-006 freshness; no stale Ready label")
+    def source_cross():
+        f=source_fixture(g,"A","W1")
+        f["valves"]["G01-SRC-H-B"]=f["valves"]["G01-SRC-S-B"]=True
+        assert "COMMON_SOURCE_PRIMARY_CROSS_CONNECT" in isolation_errors(g,f["valves"])
+        return dict(command="request both common source networks",actual=f,errors=isolation_errors(g,f["valves"]),blocked=True)
+    check("NEG_SHARED_SOURCE_PRIMARY_CROSS_CONNECT",True,"shared source suction/headers never join A and B",source_cross,"PID-002/008 common-source isolation")
     def timeout():
         c,inputs=t2_trace(g,lambda o,t:o.update(new_secondary_flow_m3_h=[0.,0.]),end=36)
         assert c.state=="OVERLAP_TIMEOUT_HOLD"
@@ -197,17 +221,18 @@ def run_tests(g):
         f=operating_fixture(g,P.A,S.B);proof=connectivity(g,f)
         rack_heat=[147.25]*18 # independent expected source row, not generated component sum
         assert sum(x["liquid_heat_kW"] for x in g["components"] if x["kind"]=="RACK_LOAD")==2650.5
-        unit=[]
-        for u in proof["units"]:
-            assert u["primary_connected"] and all(r["connected"] for r in u["racks"])
-            q=sum(rack_heat[:6]);unit.append(dict(CDU=u["CDU"],rack_liquid_kW=q,HX_secondary_removed_kW=q,HX_primary_received_kW=q,
-                 closure_error_kW=q-q,primary_flow_fixture_m3_h=110,secondary_flow_fixture_m3_h=68.37,
-                 temperatures="NOT_COMPUTED_NO_CALIBRATED_UA"))
+        unit=heat_interface(g,f,[(110.,68.37)]*3)
+        assert all(x["HX_primary_received_kW"]==883.5 for x in unit)
         assert sum(x["HX_primary_received_kW"] for x in unit)==2650.5
+        no_flow=heat_interface(g,f,[(0.,68.37),(110.,68.37),(110.,68.37)])[0]
+        assert no_flow["HX_primary_received_kW"]==0. and no_flow["unremoved_load_kW"]==883.5
+        blocked=copy.deepcopy(f);blocked["valves"]["G01-C01B-P1-CV-AS"]=False
+        disconnected=heat_interface(g,blocked,[(110.,68.37)]*3)[0]
+        assert disconnected["HX_primary_received_kW"]==0. and disconnected["unremoved_load_kW"]==883.5
         # A disconnected path carries zero assigned HX transfer, not zero rack load.
         return dict(command=f["CDU_IDENTITY"],actual=f,connectivity=proof,unit_interfaces=unit,
             group_liquid_heat_kW=2650.5,not_included="pump heat/storage/dynamic temperatures; no physical conservation claim",
-            disconnected_interface={"rack_heat_input_kW":883.5,"HX_transfer_kW":0.,"unremoved_load_kW":883.5})
+            disconnected_interface=disconnected,no_primary_flow_interface=no_flow)
     check("FLOW_ENERGY_INTERFACE",False,"18*147.25=2650.5kW routed via three active B CDUs; no fluid mixing",heat,"S2复算 R01/R02 + basic algebra interface, not solved heat-transfer capacity")
     def recharge():
         c=RechargeController(g,P.A,P.B,"W1",POLICY);inputs=[]

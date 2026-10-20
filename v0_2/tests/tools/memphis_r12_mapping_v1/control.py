@@ -74,6 +74,8 @@ class T2Controller:
             if len(obs.get("pressure_masters", [])) > 1:
                 errors.append("MULTIPLE_PRESSURE_MASTERS")
         if errors:
+            if self.state == "COMPLETED_UNIT_INTENT_ONLY":
+                self.state = "COMPLETION_REVOKED_HOLD"
             return self._record(obs, now, perms, errors, "HOLD_REQUEST_LOAD_PROTECTION")
         c = cdu_name(self.unit, self.new); a = cdu_name(self.unit, self.old)
         n = self.primary.value

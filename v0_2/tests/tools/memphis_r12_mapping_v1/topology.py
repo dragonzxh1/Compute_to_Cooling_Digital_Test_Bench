@@ -43,7 +43,7 @@ def cdu_name(unit, side):
 
 
 def build_topology(intake):
-    g = {"schema": "MEMPHIS-R12-FUNCTIONAL-GRAPH-v1", "revision": "R12-MAPPING-v1",
+    g = {"schema": "MEMPHIS-R12-FUNCTIONAL-GRAPH-v1", "revision": "R12-MAPPING-v1-build003",
          "admission": "PARTIALLY_MAPPED_BLOCKED",
          "bounded_test_scope": "DECLARED_FUNCTIONAL_INTENT_STATIC_AND_SYNTHETIC_UNIT_ONLY",
          "source_status": "R12_DRAFT_PROVIDED_REVISION_ALLOWED_ORIGINAL_PRESERVED",
@@ -67,8 +67,21 @@ def build_topology(intake):
                 nodes.add(node)
                 g["ports"].append(dict(id=node, equipment_tag=node.split(":")[0], fluid_domain=domain,
                     primary_network=primary, secondary_network=secondary,
+                    primary_network_candidates=[primary] if primary is not None else [],
+                    secondary_network_candidates=[secondary] if secondary is not None else [],
                     direction="SEE_INCIDENT_DIRECTED_BRANCHES", source_refs=sources,
                     confirmation="SOURCE_DECLARED_FUNCTIONAL_PORT", use="BOUNDED_INTENT_TEST_ONLY"))
+            else:
+                port=next(p for p in g["ports"] if p["id"]==node)
+                if port["fluid_domain"] != domain:
+                    raise ValueError("FLUID_DOMAIN_CONFLICT:"+node)
+                for field,network in (("primary_network",primary),("secondary_network",secondary)):
+                    if network is not None and network not in port[field+"_candidates"]:
+                        port[field+"_candidates"].append(network)
+                        port[field+"_candidates"].sort()
+                    if len(port[field+"_candidates"])>1:
+                        port[field]="SELECTABLE_A_OR_B_NOT_SIMULTANEOUS_AUTHORITY"
+                port["source_refs"]=port["source_refs"]+[x for x in sources if x not in port["source_refs"]]
         record = dict(id=tag, equipment_tag=tag.split("/")[0], upstream=a, downstream=b,
             fluid_domain=domain, primary_network=primary, secondary_network=secondary,
             allowed_direction="UPSTREAM_TO_DOWNSTREAM", valve_dependencies=list(valves),
@@ -256,3 +269,25 @@ def connectivity(g, f):
                          primary_connected=supply is not None and ret is not None, racks=racks))
     return dict(isolation_errors=isolation_errors(g, f["valves"]), units=rows,
                 scope="STATIC_ACTUAL_FEEDBACK_FIXTURE_CONNECTIVITY_NOT_FLOW_MAGNITUDE")
+
+
+def heat_interface(g, fixture, measured_unit_flows):
+    """Conditional port-bookkeeping contract, NOT a heat-exchanger capacity law.
+
+Flows are synthetic external inputs in unit tests. Capacity/UA, stored energy,
+and temperature dynamics are not computed. Disconnected heat cannot disappear.
+"""
+    graph_proof=connectivity(g,fixture)
+    units=[]
+    for index,proof in enumerate(graph_proof["units"]):
+        load=sum(c["liquid_heat_kW"] for c in g["components"] if c["kind"]=="RACK_LOAD" and c["unit"]==index+1)
+        primary,secondary=measured_unit_flows[index]
+        valid=(not graph_proof["isolation_errors"] and proof["primary_connected"] and
+               all(r["connected"] for r in proof["racks"]) and primary>0 and secondary>0)
+        assigned=load if valid else 0.
+        units.append(dict(CDU=proof["CDU"],rack_liquid_kW=load,HX_secondary_removed_kW=assigned,
+                          HX_primary_received_kW=assigned,unremoved_load_kW=load-assigned,
+                          closure_error_kW=load-assigned-(load-assigned),
+                          primary_flow_fixture_m3_h=primary,secondary_flow_fixture_m3_h=secondary,
+                          scope="CONDITIONAL_BOOKKEEPING_NOT_ACTUAL_CAPACITY_OR_THERMAL_SOLUTION"))
+    return units
