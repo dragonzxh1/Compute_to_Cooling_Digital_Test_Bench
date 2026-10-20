@@ -80,8 +80,16 @@ class Network:
         preferred=([self.port_index['G01-NET-A:RET']] if self.primary else
             [self.port_index[f'G01-C01{s}-P2-XV-RET:OUT'] for s in 'AB'])
         for indices in zones.values():anchors.append(next((p for p in preferred if p in indices),min(indices)))
-        unknown=[i for i in range(n) if i not in anchors]
         p=self.p.copy(); p-=np.array([p[next(a for a in anchors if find(a)==find(i))] for i in range(n)])
+        # An isolated passive pressure zone has no imposed head and no external
+        # flow: its exact quasi-steady solution is zero relative pressure/flow.
+        # Do not let a disconnected old HX contaminate the driven zone's Newton
+        # conditioning. Trapped absolute pressure/compliance is NOT modeled.
+        driven={find(e['i']) for e in active if e['kind'] in ('pump','boundary_pump') and e['head']>0}
+        for zone,indices in zones.items():
+            if zone not in driven:p[indices]=0.
+        unknown=[i for i in range(n) if i not in anchors and find(i) in driven]
+        blocks=[[i for i in indices if i in unknown] for zone,indices in zones.items() if zone in driven]
         reg=self.a['pressure_regularization_Pa']
         def evaluate(values,jacobian=False):
             f=np.zeros(n); jac=np.zeros((n,n)) if jacobian else None; flows=[]
@@ -103,16 +111,18 @@ class Network:
             f,jac,qs=evaluate(p,True);err=float(np.max(np.abs(f)))
             if err<self.a['mass_relative_tolerance']:convergence=True;break
             if not unknown:break
-            sub=jac[np.ix_(unknown,unknown)]; rhs=-f[unknown]
-            # Ideal closed check valves leave legitimate undetermined dead-leg
-            # pressure modes. A rank-revealing solve removes those null modes;
-            # it does not invent a reservoir leak or relax the KCL residual.
-            delta=np.linalg.lstsq(sub,rhs,rcond=1e-12)[0]
-            if not np.all(np.isfinite(delta)):raise RuntimeError('NONFINITE_PRESSURE_STEP')
-            largest=max(float(np.max(np.abs(delta))),1.);delta/=largest
+            delta=np.zeros(n)
+            for indices in blocks:
+                if not indices:continue
+                sub=jac[np.ix_(indices,indices)]; rhs=-f[indices]
+                # Rank-revealing solve within each driven pressure zone only.
+                step=np.linalg.lstsq(sub,rhs,rcond=1e-12)[0]
+                if not np.all(np.isfinite(step)):raise RuntimeError('NONFINITE_PRESSURE_STEP')
+                step/=max(float(np.max(np.abs(step))),1.)
+                delta[indices]=step
             merit=float(np.linalg.norm(f));accepted=False
             for backtrack in range(16):
-                trial=p.copy();trial[unknown]+=delta*(.5**backtrack)
+                trial=p.copy();trial+=delta*(.5**backtrack)
                 ft,_,_=evaluate(trial)
                 if float(np.linalg.norm(ft))<merit:
                     p=trial;accepted=True;break

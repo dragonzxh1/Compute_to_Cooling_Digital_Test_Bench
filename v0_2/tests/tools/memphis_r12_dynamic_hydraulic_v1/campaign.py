@@ -53,6 +53,10 @@ def run_case(graph,reg,case,out):
             audit.append(dict(t=now,source_sample=frame['sampled_at'] if frame else None,
                 released=frame['release_at'] if frame else None,state=control.state,refusal=refusal))
         raw.flush()
+    except BaseException:
+        dump(out/'numerical_failure.json',dict(t=now,state=control.state,
+            secondary=getattr(plant.sec,'failure',None),primary=getattr(plant.pri,'failure',None)))
+        raise
     finally:raw.close()
     def write_csv(name,rows):
         with (out/name).open('x',encoding='utf-8-sig',newline='') as f:

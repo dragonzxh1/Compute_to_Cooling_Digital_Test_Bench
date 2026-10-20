@@ -1,5 +1,5 @@
 {
-  "revision": "R12-DYNAMIC-HYDRAULIC-V1-BUILD002",
+  "revision": "R12-DYNAMIC-HYDRAULIC-V1-BUILD003",
   "scope": "ONE_SIX_RACK_SHORT_DYNAMIC_RESEARCH",
   "frozen_m1_modified": false,
   "cpu_rate": 2500,
@@ -40,8 +40,12 @@
       "sha256": "a295e24d88fc0bbef257750bebf76a7f13220734e05960d9ddcad988bfa950de"
     },
     {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/BUILD003_CHANGE.md",
+      "sha256": "23fb869009b3f9401c890dc6286334172cb32068a20340bd17dbbaf5e6264568"
+    },
+    {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/campaign.py",
-      "sha256": "2ecc0401e76ba9c4bf674f3ef7bfeb3bceabb987c2e9434120a6a0620dd42958"
+      "sha256": "3c0d658a9807fbc843e50bd504311b269b13b47ce5f19d0f71d1d9c5bc933761"
     },
     {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/control.py",
@@ -49,7 +53,7 @@
     },
     {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/hydraulics.py",
-      "sha256": "1653c97caa91b90a8d69311d158c98e081ecb67128f54d03889eb81fc6ee72f3"
+      "sha256": "150f2322c063ba4d154b127f1e744d0115c7b074d5a4b3ed7b692e70275a3374"
     },
     {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/infra/ci-branch-only.yml",
@@ -73,7 +77,7 @@
     },
     {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/registration.json",
-      "sha256": "612c09f8e845459554a5f75eb5e48e6a66a2f4da4cd42f33c8d65f6aa4aa848c"
+      "sha256": "922fb21d17eea223f5b867f2e6ee64f37e13c0b9e485c15e01262d45607b3e80"
     },
     {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/report.py",
