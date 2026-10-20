@@ -15,12 +15,13 @@
 const D=JSON.parse(document.querySelector('#evidence').textContent),N='http://www.w3.org/2000/svg';
 function node(tag,attrs,text,parent){let e=document.createElementNS(N,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(text)e.textContent=text;(parent||document.querySelector('#view')).appendChild(e);return e}
 function draw(){let svg=document.querySelector('#view');svg.replaceChildren();let t=D.cases[+document.querySelector('#case').value],i=+document.querySelector('#unit').value,u=t.actual.connectivity.units[i],p=t.actual.command.primary,s=t.actual.command.secondary,c=u.CDU;
-node('defs',{},'',svg);let defs=svg.firstChild;let m=node('marker',{id:'arrow',viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto'},'',defs);node('path',{d:'M0 0L10 5L0 10Z',fill:'#17859b'},'',m);
-function line(points,ids,color='#17859b',dashed=false){node('polyline',{points,fill:'none',stroke:color,'stroke-width':4,'stroke-dasharray':dashed?'7 5':'none','marker-end':dashed?'':'url(#arrow)','data-edge-ids':JSON.stringify(ids)},'');}
+node('defs',{},'',svg);let defs=svg.firstChild;for(let [id,color] of [['arrow','#17859b'],['arrow-ret','#ce8052']]){let m=node('marker',{id,viewBox:'0 0 10 10',refX:9,refY:5,markerWidth:7,markerHeight:7,orient:'auto'},'',defs);node('path',{d:'M0 0L10 5L0 10Z',fill:color},'',m)}
+function line(points,ids,color='#17859b',dashed=false){node('polyline',{points,fill:'none',stroke:color,'stroke-width':4,'stroke-dasharray':dashed?'7 5':'none','marker-end':dashed?'':color==='#ce8052'?'url(#arrow-ret)':'url(#arrow)','data-edge-ids':JSON.stringify(ids)},'');}
 function box(x,y,w,h,title,sub,on=true){node('rect',{x,y,width:w,height:h,rx:10,fill:on?'#e6f4f7':'#f0f3f5',stroke:on?'#3196a5':'#c6d1d9','stroke-width':1.5});node('text',{x:x+15,y:y+29,fill:on?'#133849':'#718494','font-size':16,'font-weight':600},title);node('text',{x:x+15,y:y+53,fill:'#617684','font-size':12},sub)}
 const y=p==='A'?200:420;
-line(`210,${y} 285,${y} 285,265 380,265`,u.primary_supply_path);line(`380,305 300,305 300,555 120,555 120,${y+60}`,u.primary_return_path,'#ce8052');
-let secondary=u.racks[0].supply_path;line('760,265 840,265 840,305 940,305',secondary);line('940,380 830,380 830,470 760,470',u.racks[0].return_path,'#ce8052');line('640,290 710,290',[],'#c0942e',true);
+const returnX=p==='A'?250:330,returnY=y+35;
+line(`210,${y} 285,${y} 285,265 380,265`,u.primary_supply_path);line(`380,305 ${returnX},305 ${returnX},${returnY} 210,${returnY}`,u.primary_return_path,'#ce8052');
+let secondary=u.racks[0].supply_path;line('760,265 840,265 840,305 940,305',secondary);line('940,380 830,380 830,470 760,470',u.racks[0].return_path,'#ce8052');line('705,455 675,455 675,320 705,320',u.racks[0].return_path,'#ce8052');line('640,290 710,290',[],'#c0942e',true);
 box(30,155,180,100,'BT-A / LP-A',p==='A'?'负载支路启用':'负载支路未启用',p==='A');box(30,375,180,100,'BT-B / LP-B',p==='B'?'负载支路启用':'待命，无负载启用路径',p==='B');
 box(380,195,255,155,c+' · 一次侧','一次网 '+p+'；P1-'+p+'S/'+p+'R 开');node('text',{x:397,y:288,fill:'#5b7181','font-size':12},'另一一次网选择阀关闭');node('text',{x:397,y:313,fill:'#5b7181','font-size':12},'供回必须同网，不跨罐串流');
 box(705,195,200,155,'二次 '+s+' 环 / HX','两台100%泵，一用一备');node('text',{x:720,y:289,fill:'#5b7181','font-size':12},'与一次侧只交换热量');node('text',{x:720,y:314,fill:'#5b7181','font-size':12},'无跨板换流体边');
