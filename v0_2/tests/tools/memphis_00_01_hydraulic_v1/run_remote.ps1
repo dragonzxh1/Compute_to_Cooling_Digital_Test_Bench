@@ -12,26 +12,39 @@ function Verify-Source {
 }
 Verify-Source
 $taskRoot=Join-Path $taskRepo ('artifacts/memphis-00-01-hydraulic-v1/'+$env:GITHUB_RUN_ID+'-'+$env:GITHUB_RUN_ATTEMPT)
+New-Item -ItemType Directory -Path $taskRoot -Force|Out-Null
+$taskPolicy=Get-Content -LiteralPath (Join-Path $PSScriptRoot 'resource_environment.json') -Raw|ConvertFrom-Json
+if($Stage -eq 'baseline'){
+ $taskOS=Get-CimInstance Win32_OperatingSystem
+ $taskReg=Get-ItemProperty 'HKLM:/SOFTWARE/Microsoft/Windows NT/CurrentVersion'
+ $taskHost=@{image=$env:ImageVersion;image_os=$env:ImageOS;os_build=[int]$taskOS.BuildNumber;ubr=[int]$taskReg.UBR;
+  total_mb=[math]::Floor($taskOS.TotalVisibleMemorySize/1024);free_mb=[math]::Floor($taskOS.FreePhysicalMemory/1024);
+  logical_processors=[Environment]::ProcessorCount;policy=$taskPolicy}
+ . ./v0_2/tests/tools/liquid_recovery_v1/batch.ps1
+ $null=Write-RecoveryJson (Join-Path $taskRoot 'host_preflight.json') $taskHost
+ if($taskHost.image -cne $taskPolicy.image -or $taskHost.image_os -cne $taskPolicy.image_os -or $taskHost.os_build -ne $taskPolicy.windows_build -or $taskHost.ubr -ne $taskPolicy.windows_ubr){throw 'REGISTERED_HOST_IMAGE_DRIFT'}
+ if($taskHost.total_mb -lt $taskPolicy.min_host_total_mb -or $taskHost.free_mb -lt $taskPolicy.min_host_free_mb){throw 'HOST_HEADROOM_INSUFFICIENT'}
+}
 if($Stage -eq 'suite'){
  $previous=Get-Content -LiteralPath (Join-Path $taskRoot 'baseline/result.json') -Raw|ConvertFrom-Json
  $oldJob=Get-Content -LiteralPath (Join-Path $taskRoot 'baseline/job_status.json') -Raw|ConvertFrom-Json
  if(-not $previous.suite_admitted -or $previous.status -cne 'PASS' -or $previous.environment.source_commit -cne $ExpectedCommit -or -not $oldJob.cleanup_complete -or $oldJob.active_after_cleanup -ne 0){throw 'SUITE_NOT_ADMITTED_BY_BASELINE'}
 }
 if($Stage -eq 'baseline'){
- & ./v0_2/tests/tools/m1_remote_executor_v1/build.ps1
+ & ./v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/build.ps1 -OutputPath (Join-Path $taskRoot 'build')
  if($LASTEXITCODE -ne 0){throw 'SUPERVISOR_BUILD_FAILED'}
 }else{
- $identity=Get-Content -LiteralPath 'artifacts/m1-remote-executor-v1/build/build_identity.json' -Raw|ConvertFrom-Json
+ $identity=Get-Content -LiteralPath (Join-Path $taskRoot 'build/build_identity.json') -Raw|ConvertFrom-Json
  foreach($name in @('ControlledJob','VerifyTarget')){
   $expected=$identity.source_and_binary_hashes.$name.binary_raw_sha256
-  if((Get-FileHash -LiteralPath ('artifacts/m1-remote-executor-v1/build/'+$name+'.exe')).Hash.ToLowerInvariant() -cne $expected){throw 'NATIVE_BINARY_DRIFT'}
+  if((Get-FileHash -LiteralPath (Join-Path $taskRoot ('build/'+$name+'.exe'))).Hash.ToLowerInvariant() -cne $expected){throw 'NATIVE_BINARY_DRIFT'}
  }
 }
 . ./v0_2/tests/tools/liquid_recovery_v1/batch.ps1
 $taskOut=Join-Path $taskRoot $Stage
 New-Item -ItemType Directory -Path $taskOut -Force|Out-Null
 if(Test-Path -LiteralPath (Join-Path $taskOut 'ready.json')){throw 'STAGE_ALREADY_EXECUTED'}
-$taskBuild=Join-Path $taskRepo 'artifacts/m1-remote-executor-v1/build'
+$taskBuild=Join-Path $taskRoot 'build'
 $taskPython=(Get-Command python).Source
 function Q([string]$s){
  $b=[Text.StringBuilder]::new('"');$n=0
@@ -43,7 +56,7 @@ function Q([string]$s){
  $null=$b.Append('\',2*$n);$null=$b.Append('"');$b.ToString()
 }
 $taskArgs=@((Join-Path $taskOut 'job_status.json'),(Join-Path $taskOut 'job_start.json'),(Join-Path $taskOut 'cancel.request'),
- (Join-Path $taskOut 'stdout.raw'),(Join-Path $taskOut 'stderr.raw'),'480000','2500','256','512',
+ (Join-Path $taskOut 'stdout.raw'),(Join-Path $taskOut 'stderr.raw'),[string]($taskPolicy.wall_seconds*1000),[string]$taskPolicy.cpu_rate,[string]$taskPolicy.process_mb,[string]$taskPolicy.job_mb,
  $taskPython,'-B','-m','v0_2.tests.tools.memphis_00_01_hydraulic_v1.worker',$taskOut,$Stage)
 $taskProcess=Start-Process -FilePath (Join-Path $taskBuild 'ControlledJob.exe') -WindowStyle Hidden `
  -ArgumentList (($taskArgs|ForEach-Object{Q ([string]$_)}) -join ' ') -WorkingDirectory $taskRepo -PassThru `
@@ -57,13 +70,13 @@ try{
  $ready=Get-Content (Join-Path $taskOut 'ready.json') -Raw|ConvertFrom-Json
  $start=Get-Content (Join-Path $taskOut 'job_start.json') -Raw|ConvertFrom-Json
  $proof=Join-Path $taskOut 'external_job_identity.json'
- $va=@($start.job_name,[string]$ready.pid,'256','512',$proof,'2500')
+ $va=@($start.job_name,[string]$ready.pid,[string]$taskPolicy.process_mb,[string]$taskPolicy.job_mb,$proof,[string]$taskPolicy.cpu_rate)
  $vp=Start-Process -FilePath (Join-Path $taskBuild 'VerifyTarget.exe') -WindowStyle Hidden -PassThru `
   -ArgumentList (($va|ForEach-Object{Q ([string]$_)}) -join ' ') `
   -RedirectStandardOutput (Join-Path $taskOut 'verify_stdout.raw') -RedirectStandardError (Join-Path $taskOut 'verify_stderr.raw')
  if(-not $vp.WaitForExit(5000) -or $vp.ExitCode -ne 0){throw 'ACTUAL_PYTHON_JOB_FAILED'}
  $p=Get-Content $proof -Raw|ConvertFrom-Json
- if(-not $p.in_target_job -or $p.actual_python_pid -ne $ready.pid -or $p.cpu_rate -ne 2500 -or $p.process_mb -ne 256 -or $p.job_mb -ne 512){throw 'LIMIT_PROOF_FAILED'}
+ if(-not $p.in_target_job -or $p.actual_python_pid -ne $ready.pid -or $p.cpu_rate -ne $taskPolicy.cpu_rate -or $p.process_mb -ne $taskPolicy.process_mb -or $p.job_mb -ne $taskPolicy.job_mb){throw 'LIMIT_PROOF_FAILED'}
  $null=Write-RecoveryJson (Join-Path $taskOut 'release.json') @{actual_python_pid=$ready.pid;external_proof_raw_sha256=(Get-FileHash $proof).Hash.ToLowerInvariant()}
  if(-not $taskProcess.WaitForExit(495000)){throw 'NATIVE_TIMEOUT'}
  $native=Get-Content (Join-Path $taskOut 'job_status.json') -Raw|ConvertFrom-Json

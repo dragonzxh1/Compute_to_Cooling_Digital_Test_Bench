@@ -1,4 +1,13 @@
 {
+  "wall_seconds": 480,
+  "solver_modified": false,
+  "previous_manifest_sha256": "8654f0d534f7dde01eb154e4b0f24a9d7edafe53df34dc9174d08379a123e335",
+  "cpu_rate": 10000,
+  "process_mb": 4096,
+  "frozen_m1_modified": false,
+  "model_modified": false,
+  "previous_execution_commit": "7204410221fb161ae70858e8d20b5234098a4b67",
+  "revision": "00-01-HYDRAULIC-V1-BUILD002-HOSTED",
   "source_files": [
     {
       "path": ".github/workflows/ci.yml",
@@ -6,7 +15,7 @@
     },
     {
       "path": ".github/workflows/memphis-00-01-hydraulic-v1.yml",
-      "sha256": "8d5cfc95b5f1be82279283ce1c6e414f2b2c732f16b9a44ab77747b40d6c47fb"
+      "sha256": "288e734399cb29749021af6cf0e3ea8ba6be8b643eda2728ac2d5c4baffb2b00"
     },
     {
       "path": ".github/workflows/memphis-r12-dynamic-hydraulic-v1.yml",
@@ -45,8 +54,24 @@
       "sha256": "1df571389d15decb5f07d7b402e521bf0d87e235a22a01bb9c550306b13808a1"
     },
     {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/BUILD002_CHANGE_RECORD.md",
+      "sha256": "7ce820a98d451e28a3771eb3b6d37646190a3977441436db0d57b9b5f225fe20"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/build.ps1",
+      "sha256": "684d96e94d0ddfbc553df6a3d167f4c5cff3a906e0329242e4357adbcd771e35"
+    },
+    {
       "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/ci-branch-only.yml",
       "sha256": "b968b124ef4c6cb8c7bd05e9fadf45cfb194d243e9b02482a2907cb03656d89a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/ControlledJob.cs",
+      "sha256": "8a101be3fc129201ad9fccac842997f79a967b8d1d6196661c59134278b01789"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/VerifyTarget.cs",
+      "sha256": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8"
     },
     {
       "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/network_spec.json",
@@ -57,8 +82,12 @@
       "sha256": "437ea4b09e13ecde08902a4f7117fb83b8ad476067efb4f72ffca5bf21af7285"
     },
     {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/resource_environment.json",
+      "sha256": "97f83c34c92d719912a3698e9a0a2aa37c0bcd73db55cfca2b97b064ea8a95b6"
+    },
+    {
       "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/run_remote.ps1",
-      "sha256": "9a8d0b4115d3ea45bf0ee7a72724d271a4dd5e81f3025f4f5551afb9eed097a0"
+      "sha256": "22bcbb5120bd778fe3b11b5d30887e76f462c42c91bdbb196d95578c561ed392"
     },
     {
       "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/validation.py",
@@ -66,7 +95,7 @@
     },
     {
       "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/worker.py",
-      "sha256": "62fed2175206fe292c805fb8e81b49fb4cbae47ed0a6bff7186a5f1c12f96336"
+      "sha256": "8f498fbdbec1f940e50f061ef7805d2f582659796c65c80acc17069b522c7739"
     },
     {
       "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/__init__.py",
@@ -193,11 +222,5 @@
       "sha256": "c61c0b36f2116dbbd39461fe8789b1cf4bc1fb58da34c2f56dfb50f74d210962"
     }
   ],
-  "cpu_rate": 2500,
-  "solver_modified": false,
-  "frozen_m1_modified": false,
-  "job_mb": 512,
-  "process_mb": 256,
-  "wall_seconds": 480,
-  "revision": "00-01-HYDRAULIC-V1-BUILD001"
+  "job_mb": 8192
 }

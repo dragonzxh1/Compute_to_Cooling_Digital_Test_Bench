@@ -41,7 +41,6 @@ jobs:
           name: 00-01-hydraulic-${{ github.run_id }}
           path: |
             artifacts/memphis-00-01-hydraulic-v1/
-            artifacts/m1-remote-executor-v1/build/build_identity.json
             v0_2/tests/tools/memphis_00_01_hydraulic_v1/
           retention-days: 30
           if-no-files-found: error
