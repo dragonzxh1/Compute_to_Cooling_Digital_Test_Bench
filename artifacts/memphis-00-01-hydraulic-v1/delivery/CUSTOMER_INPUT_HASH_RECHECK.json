@@ -1,0 +1,16 @@
+{
+  "status": "RAW_HASH_MATCH",
+  "sources": [
+    {
+      "id": "00",
+      "filename": "00_26025项目高密度液冷数据中心建设方案_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "f366d8001fdb785c5b41cf149886eefac1ad9e79d1b498f0244cc2cdffd915b7"
+    },
+    {
+      "id": "01",
+      "filename": "01_方案介绍_中文_v9_客户确定方案_20260926.docx",
+      "raw_sha256": "5c52fec8ad34b675cc6294d699754fb896f2e31abc120c4a6bc8dfac29b9e73c"
+    }
+  ],
+  "meaning": "Original DOCX bytes accessible and unchanged; selected quotations in source/basis.json; originals not redistributed"
+}

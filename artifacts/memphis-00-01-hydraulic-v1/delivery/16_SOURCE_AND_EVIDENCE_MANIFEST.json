@@ -1,0 +1,619 @@
+{
+  "revision": "00-01-HYDRAULIC-V1-BUILD004-REVIEWED",
+  "source_commit": "274871a94ef13680c508a736ea9635095570cecb",
+  "official_zip_sha256": "849cc83d4cbaab979dca08cc2046bff771c24e00a76eb72b0542fb5a3e2914c6",
+  "source_manifest_sha256": "71dfe6dcb967f6d8cc9ca59f756ce706eafa8dabf7da3b8d7c297f0661fa20d8",
+  "self_excluded": true,
+  "records": [
+    {
+      "path": "01_00_01_PRESSURE_BUDGET.csv",
+      "bytes": 2667,
+      "sha256": "1048a16cf9abbb623deceab07beb2aae558e3c6f4c33a52e6c0596f7083e1ef3"
+    },
+    {
+      "path": "02_HYDRAULIC_NETWORK_NETLIST.json",
+      "bytes": 18836,
+      "sha256": "91dd5942da0f676f9ce95aec9be027dbd8c4ab5dbb9debb3ddda78ef17f85c45"
+    },
+    {
+      "path": "03_PRESSURE_SOURCE_PROVENANCE.md",
+      "bytes": 1258,
+      "sha256": "c4520fae9689a34095ed69906d5eddfd0bd5fa04c735aec6df051e78ab3fabda"
+    },
+    {
+      "path": "04_PRESSURIZATION_BOUNDARY_MAP.json",
+      "bytes": 1917,
+      "sha256": "2c9d6c60e6b007e264efb3742665236b3baa5db4d3554014cc634f010cc47ebd"
+    },
+    {
+      "path": "05_PUMP_QH_OPERATING_ENVELOPE.csv",
+      "bytes": 2107,
+      "sha256": "dfc2e0fadb64952f6f27aac9ef82223f7736efb6840e956039921f21d8d19c0f"
+    },
+    {
+      "path": "06_HX_INLET_DIFFERENTIAL_ANALYSIS.csv",
+      "bytes": 817,
+      "sha256": "1de21a3d48c72420e0649cdaf276140a66843dae2982c63fdecfd5a0e97f3a6a"
+    },
+    {
+      "path": "07_SECONDARY_BRANCH_LOSS_ANALYSIS.csv",
+      "bytes": 17914,
+      "sha256": "8bd7cb5ba345c70b4e091e7e504e787658ac1aa90b51d9831c50c8a70dbaccbf"
+    },
+    {
+      "path": "08_PRESSURE_UNIQUENESS_TESTS.json",
+      "bytes": 17915,
+      "sha256": "5a5610e6c79a6b7996b4d21b4fa7a47ecfceef5b0793bdec4c31eee762bf918a"
+    },
+    {
+      "path": "09_PUMP_SUCTION_AND_MAWP_CHECK.csv",
+      "bytes": 478,
+      "sha256": "1db089c59e4e2340b2a8f8b6a432e88f0804fd9a170910823b8ba6409619bd15"
+    },
+    {
+      "path": "10_T2_CONTROLLED_TRANSFER_RETEST.csv",
+      "bytes": 82658,
+      "sha256": "bf6cba48757d5f91fc7e5d6699db11947495a0ee1300be138a50454afcc7cf5f"
+    },
+    {
+      "path": "11_UNEXPECTED_PUMP_TRIP_RETEST.csv",
+      "bytes": 80158,
+      "sha256": "cf8e422c9959b39274046b22d1a8df483af3c4c65ab5a49a6e38f48c3fbbf326"
+    },
+    {
+      "path": "12_PHYSICAL_HYDRAULIC_PID.svg",
+      "bytes": 18945,
+      "sha256": "39a6af09c9b1e389b9246500f973c086463fa7ffba6d8006273098ffeb17f236"
+    },
+    {
+      "path": "12_PHYSICAL_HYDRAULIC_PID@2x.png",
+      "bytes": 632856,
+      "sha256": "5d44a3c51c3d8ca9886ee28f0436650603bf0cb13b9a9ca6b75d86f2ba695aa2"
+    },
+    {
+      "path": "13_OEM_DATA_REQUEST.csv",
+      "bytes": 1386,
+      "sha256": "070c43ff75a0dbdc81ade0d9bcf439c8add6434c0a1feafbb999c3ae4c455746"
+    },
+    {
+      "path": "14_ENGINEERING_REPORT_ZH.md",
+      "bytes": 5835,
+      "sha256": "99873e65f0acff1aace280e4a4b827d03f0f588c92aa2747b1408bcf60743787"
+    },
+    {
+      "path": "15_INTERACTIVE_REPORT.html",
+      "bytes": 416633,
+      "sha256": "0ba51f84c064faa69ab3a26c5e5616cc8f72e451172f122b4c087e296ca0414b"
+    },
+    {
+      "path": "BOTH_PUMPS_FAILED.json",
+      "bytes": 17197,
+      "sha256": "31f43097a05ac7573282cf3346aa0f7705d8ecd0a20bb63e764ec08fed13ca88"
+    },
+    {
+      "path": "checks.json",
+      "bytes": 1523,
+      "sha256": "361985485e546a8719f7e0eb8def7a9c349e7cff886c17c479cb5667fc795396"
+    },
+    {
+      "path": "CONTROLLED_T2_TRANSFER.ndjson",
+      "bytes": 6196221,
+      "sha256": "c340589857a233a9f8d36cbf99b112a3954a67dc2ee8d38954d7762ee34a9882"
+    },
+    {
+      "path": "CONTROLLED_T2_TRANSFER_result.json",
+      "bytes": 680,
+      "sha256": "609b589a96fd167d5b92c277afda4ef138435344330bfa3f12cb7f551e1bfd7e"
+    },
+    {
+      "path": "CUSTOMER_INPUT_HASH_RECHECK.json",
+      "bytes": 610,
+      "sha256": "3a197671bea8613058ec0d3d62152fe0252be3af607fefcbe5faadebe85f1993"
+    },
+    {
+      "path": "document_tools/assemble.mjs",
+      "bytes": 14575,
+      "sha256": "1d2d85bc2d93410bde17ef645ba204177b2c390350074f4d0373364a8a526e16"
+    },
+    {
+      "path": "document_tools/diagram.mjs",
+      "bytes": 3965,
+      "sha256": "fa99ffbdb305f375803b701ed62fc8461773d952e1d1480def4a15327448fe86"
+    },
+    {
+      "path": "document_tools/finalize.mjs",
+      "bytes": 6705,
+      "sha256": "b7cadee02e0d35c5186739d48ee657cd489bffb7b3c9e5b3b86002c6715cbd50"
+    },
+    {
+      "path": "document_tools/finish_display.mjs",
+      "bytes": 1539,
+      "sha256": "3818441060bb59f7973e7f20689d26d33f8084042aafcbb203b3089afcad9787"
+    },
+    {
+      "path": "document_tools/review_build002.ps1",
+      "bytes": 7612,
+      "sha256": "5fea14237c0faa3bc7da58533a01a3fe83fe77640ef4dc844ae41d24dbec4c6d"
+    },
+    {
+      "path": "document_tools/scope_svg_style.mjs",
+      "bytes": 825,
+      "sha256": "fa935553fa1f2949ff40fab9ee1fc0b03ba13003ac021b6f09bda2af88d189ad"
+    },
+    {
+      "path": "document_tools/seal_delivery.mjs",
+      "bytes": 3804,
+      "sha256": "c823426132e53c18b456eb7dd54dd3cdd767e66645ee1d8fb5171f5d5d9f6ccd"
+    },
+    {
+      "path": "DUTY_STOPPED.json",
+      "bytes": 13552,
+      "sha256": "beb75594d6838d7399f1a7ad6df7df7f9f03ad44152f03df0635a2cab6921f3d"
+    },
+    {
+      "path": "evidence/baseline/artifact_hashes.json",
+      "bytes": 6785,
+      "sha256": "a6e7ed1e8357894a5abd919280ac9686c412f5d608c4eb0ba26397a190f17463"
+    },
+    {
+      "path": "evidence/baseline/delivery/01_00_01_PRESSURE_BUDGET.csv",
+      "bytes": 2667,
+      "sha256": "1048a16cf9abbb623deceab07beb2aae558e3c6f4c33a52e6c0596f7083e1ef3"
+    },
+    {
+      "path": "evidence/baseline/delivery/02_HYDRAULIC_NETWORK_NETLIST.json",
+      "bytes": 18836,
+      "sha256": "91dd5942da0f676f9ce95aec9be027dbd8c4ab5dbb9debb3ddda78ef17f85c45"
+    },
+    {
+      "path": "evidence/baseline/delivery/04_PRESSURIZATION_BOUNDARY_MAP.json",
+      "bytes": 1917,
+      "sha256": "2c9d6c60e6b007e264efb3742665236b3baa5db4d3554014cc634f010cc47ebd"
+    },
+    {
+      "path": "evidence/baseline/delivery/05_PUMP_QH_OPERATING_ENVELOPE.csv",
+      "bytes": 2107,
+      "sha256": "dfc2e0fadb64952f6f27aac9ef82223f7736efb6840e956039921f21d8d19c0f"
+    },
+    {
+      "path": "evidence/baseline/delivery/06_HX_INLET_DIFFERENTIAL_ANALYSIS.csv",
+      "bytes": 817,
+      "sha256": "1de21a3d48c72420e0649cdaf276140a66843dae2982c63fdecfd5a0e97f3a6a"
+    },
+    {
+      "path": "evidence/baseline/delivery/07_SECONDARY_BRANCH_LOSS_ANALYSIS.csv",
+      "bytes": 17914,
+      "sha256": "8bd7cb5ba345c70b4e091e7e504e787658ac1aa90b51d9831c50c8a70dbaccbf"
+    },
+    {
+      "path": "evidence/baseline/delivery/08_PRESSURE_UNIQUENESS_TESTS.json",
+      "bytes": 17915,
+      "sha256": "5a5610e6c79a6b7996b4d21b4fa7a47ecfceef5b0793bdec4c31eee762bf918a"
+    },
+    {
+      "path": "evidence/baseline/delivery/09_PUMP_SUCTION_AND_MAWP_CHECK.csv",
+      "bytes": 478,
+      "sha256": "1db089c59e4e2340b2a8f8b6a432e88f0804fd9a170910823b8ba6409619bd15"
+    },
+    {
+      "path": "evidence/baseline/delivery/10_T2_CONTROLLED_TRANSFER_RETEST.csv",
+      "bytes": 82658,
+      "sha256": "bf6cba48757d5f91fc7e5d6699db11947495a0ee1300be138a50454afcc7cf5f"
+    },
+    {
+      "path": "evidence/baseline/delivery/11_UNEXPECTED_PUMP_TRIP_RETEST.csv",
+      "bytes": 80158,
+      "sha256": "cf8e422c9959b39274046b22d1a8df483af3c4c65ab5a49a6e38f48c3fbbf326"
+    },
+    {
+      "path": "evidence/baseline/delivery/BOTH_PUMPS_FAILED.json",
+      "bytes": 17197,
+      "sha256": "31f43097a05ac7573282cf3346aa0f7705d8ecd0a20bb63e764ec08fed13ca88"
+    },
+    {
+      "path": "evidence/baseline/delivery/checks.json",
+      "bytes": 1523,
+      "sha256": "361985485e546a8719f7e0eb8def7a9c349e7cff886c17c479cb5667fc795396"
+    },
+    {
+      "path": "evidence/baseline/delivery/CONTROLLED_T2_TRANSFER.ndjson",
+      "bytes": 6196221,
+      "sha256": "c340589857a233a9f8d36cbf99b112a3954a67dc2ee8d38954d7762ee34a9882"
+    },
+    {
+      "path": "evidence/baseline/delivery/CONTROLLED_T2_TRANSFER_result.json",
+      "bytes": 680,
+      "sha256": "609b589a96fd167d5b92c277afda4ef138435344330bfa3f12cb7f551e1bfd7e"
+    },
+    {
+      "path": "evidence/baseline/delivery/DUTY_STOPPED.json",
+      "bytes": 13552,
+      "sha256": "beb75594d6838d7399f1a7ad6df7df7f9f03ad44152f03df0635a2cab6921f3d"
+    },
+    {
+      "path": "evidence/baseline/delivery/NORMAL.json",
+      "bytes": 13112,
+      "sha256": "ac2fc87b6ca5704243bde03b7ff1ec9b7ffd74563bc373859142ebf1a4f561e7"
+    },
+    {
+      "path": "evidence/baseline/delivery/normal_1.05.json",
+      "bytes": 13108,
+      "sha256": "ce41c832d6b361dfc0734d71f6a53e09d504d19e243d84c694bc7622d24a75bf"
+    },
+    {
+      "path": "evidence/baseline/delivery/normal_1.15.json",
+      "bytes": 13112,
+      "sha256": "ac2fc87b6ca5704243bde03b7ff1ec9b7ffd74563bc373859142ebf1a4f561e7"
+    },
+    {
+      "path": "evidence/baseline/delivery/normal_1.3.json",
+      "bytes": 13129,
+      "sha256": "dd11a3d90ad154b10a052c36fb78bd23c7a1da4d9fcc3e9444f1639246f53c6f"
+    },
+    {
+      "path": "evidence/baseline/delivery/RESEARCH_BOTH_OPEN.json",
+      "bytes": 16673,
+      "sha256": "d8cb78e15342d750fbab790f130b2731fe42b297106cf83e7df9fbd89a1a172f"
+    },
+    {
+      "path": "evidence/baseline/delivery/SPARE_B_ONLY.json",
+      "bytes": 13148,
+      "sha256": "c0d3ba8b4e386552dcc8805a0bd8c6df674e838fa27ce0eae9154c041411ee34"
+    },
+    {
+      "path": "evidence/baseline/delivery/stage_result.json",
+      "bytes": 2197,
+      "sha256": "29d4fab365b7f03b346a3a00b41af164ccc91e1700c25acac1c42be26cfdf249"
+    },
+    {
+      "path": "evidence/baseline/delivery/static_states.json",
+      "bytes": 1223,
+      "sha256": "0e578a5c7c3101de218160987963db610852472dec95e415cbbbed6a3a96d842"
+    },
+    {
+      "path": "evidence/baseline/delivery/UNEXPECTED_DUTY_PUMP_TRIP.ndjson",
+      "bytes": 6485667,
+      "sha256": "aa10e7ebb5de3a370e19540319485223a879a24badce095b3ed374d7808aa6f4"
+    },
+    {
+      "path": "evidence/baseline/delivery/UNEXPECTED_DUTY_PUMP_TRIP_result.json",
+      "bytes": 693,
+      "sha256": "e23bda0a25db8b6d3d548520089fd4a688a75fadf86d3e35f5c9ad8f72781502"
+    },
+    {
+      "path": "evidence/baseline/environment_admission.json",
+      "bytes": 1130,
+      "sha256": "9d64b0a94a2b29aa3ab9a20141cf723e6ffc19563e71cc5ac77cbb43ca8ff5c3"
+    },
+    {
+      "path": "evidence/baseline/environment_after.json",
+      "bytes": 2689,
+      "sha256": "1c2dd52e51d4c890258bc463d7167d657acfeff4df698a98704cf4b0968d092b"
+    },
+    {
+      "path": "evidence/baseline/environment_before.json",
+      "bytes": 2689,
+      "sha256": "1c2dd52e51d4c890258bc463d7167d657acfeff4df698a98704cf4b0968d092b"
+    },
+    {
+      "path": "evidence/baseline/external_job_identity.json",
+      "bytes": 655,
+      "sha256": "c94eadbacbbcb6b821b4d7f9575bd782b1d628eb38f1a5dbab12f9c49385c22f"
+    },
+    {
+      "path": "evidence/baseline/job_start.json",
+      "bytes": 238,
+      "sha256": "199ddf7db8d3b0420c01d99a9b8acc1de0386c6a196cb493f4ad5ad458b24ed2"
+    },
+    {
+      "path": "evidence/baseline/job_start.json.heartbeat-000.json",
+      "bytes": 99,
+      "sha256": "4906304fe1702cfc463a2c2cfb3ce5219075824aa9635332f720d632530e1245"
+    },
+    {
+      "path": "evidence/baseline/job_status.json",
+      "bytes": 156,
+      "sha256": "8453e65341270cbe974c19e3f39d5f50798df4b3bb5d4e00fa0f204cef2beb94"
+    },
+    {
+      "path": "evidence/baseline/ready.json",
+      "bytes": 99,
+      "sha256": "3a94fed2d5c589ccbda352120f9b64edc9abc631ca6152db962592e615647486"
+    },
+    {
+      "path": "evidence/baseline/release.json",
+      "bytes": 134,
+      "sha256": "64471548c9da94c228375ad33458e4ae3364a3b51356119842a8bb3e6915253d"
+    },
+    {
+      "path": "evidence/baseline/result.json",
+      "bytes": 5290,
+      "sha256": "c2a9adc8bcc5615b2c89dcb7734916b1a4ab967635437e93841ae150b24f860b"
+    },
+    {
+      "path": "evidence/baseline/supervisor_stderr.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/baseline/supervisor_stdout.raw",
+      "bytes": 4459,
+      "sha256": "eec7d501e7db7e5f3ce5b9846343dcaa20807c25b209bf5595d397c9c31a4e42"
+    },
+    {
+      "path": "evidence/baseline/verify_stderr.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/baseline/verify_stdout.raw",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/build/build_identity.json",
+      "bytes": 1839,
+      "sha256": "82abc9a04576f54805edb64b4bfdf331a5da00fbd2386a138e9df836c8e801cb"
+    },
+    {
+      "path": "evidence/build/ControlledJob.exe",
+      "bytes": 14336,
+      "sha256": "871b0c6bcc90ebc84e06456b7ab8bf0764f5bd9c03073603e3ac0f23d79de0ba"
+    },
+    {
+      "path": "evidence/build/VerifyTarget.exe",
+      "bytes": 7680,
+      "sha256": "c0d75321834525aa8d4c4ffc438026050acff219aa3cdf14f8eb359d531813e5"
+    },
+    {
+      "path": "evidence/failed-run39909757507/00-01-hydraulic-39909757507.zip",
+      "bytes": 28346,
+      "sha256": "88ca350286147139d65bca6899580876dd553770715e1a04229908034466b82a"
+    },
+    {
+      "path": "evidence/failed-run39909757507/github_artifacts.json",
+      "bytes": 1009,
+      "sha256": "8b27e2c61a14f379e286eaab3a44e8710b084b5629ad91be381661175fbfe4f2"
+    },
+    {
+      "path": "evidence/failed-run39909757507/github_run.json",
+      "bytes": 16530,
+      "sha256": "68b21cb89037c0cc210554e9bf0a1df91012682e47302a2ca9d49c5dd187755c"
+    },
+    {
+      "path": "evidence/failed-run39909757507/official_logs.zip",
+      "bytes": 14830,
+      "sha256": "62f2d552fc2d16a382e317591921a97ee21d50edcde71716c02289e861535e22"
+    },
+    {
+      "path": "evidence/failed-run39911963438/00-01-hydraulic-39911963438.zip",
+      "bytes": 34996,
+      "sha256": "810a21d819cf3bc287b8567ebd0434ba94f835b2bd9c3678533d6c1589e1c91e"
+    },
+    {
+      "path": "evidence/failed-run39911963438/github_artifacts.json",
+      "bytes": 1009,
+      "sha256": "33056e11a0b2a6b90fdc298fbdebc577ab169a2a983e01082ec61f81c69ff20f"
+    },
+    {
+      "path": "evidence/failed-run39911963438/github_run.json",
+      "bytes": 16556,
+      "sha256": "3b3abc57f9b580ca00e4eb0a880deabbec64daad6180883dced372768a4dfd5f"
+    },
+    {
+      "path": "evidence/failed-run39911963438/official_logs.zip",
+      "bytes": 15057,
+      "sha256": "3d7130d6813d69239a6f77f3f5c224ca4b01b37c1f828e73a2edf4e9b6d14b73"
+    },
+    {
+      "path": "evidence/failed-run39912320956/00-01-hydraulic-39912320956.zip",
+      "bytes": 51898,
+      "sha256": "960bccc92ceaf770d86a99d216e1806711df334634aba27b612b055b962d4274"
+    },
+    {
+      "path": "evidence/failed-run39912320956/github_artifacts.json",
+      "bytes": 1009,
+      "sha256": "5c96b0f2339f477bdd1cb75b62f2a365ad89df1a44f3d96e3142e0e3e66baf27"
+    },
+    {
+      "path": "evidence/failed-run39912320956/github_run.json",
+      "bytes": 16577,
+      "sha256": "0c02e89d5d33bd58617d75a30d6ce942a43fe014873c90b427e1f82e97329273"
+    },
+    {
+      "path": "evidence/failed-run39912320956/official_logs.zip",
+      "bytes": 14988,
+      "sha256": "8a41a8a14fb8497e1951b6fed23a5b5d8e9701bdced8106a13fc66bb606e9338"
+    },
+    {
+      "path": "evidence/github_artifacts.json",
+      "bytes": 1010,
+      "sha256": "0e517dd0ab84cce30f2323a6275bd80b811716056a5d1c0875a4a920639697f6"
+    },
+    {
+      "path": "evidence/github_run.json",
+      "bytes": 16577,
+      "sha256": "7c96884ce4089bfd994fbb9dd384ea0be9bce957c0c0a5928ca5236fcd704c59"
+    },
+    {
+      "path": "evidence/host_preflight.json",
+      "bytes": 1136,
+      "sha256": "718f8c88d7dd676ccc42ec961e1b6e479edbe6650312da71b60c6ddb50c2e36c"
+    },
+    {
+      "path": "evidence/official_logs.zip",
+      "bytes": 15063,
+      "sha256": "ca28931b07990b67f298c384f1566e72e95e64acc02cefdd7593c09e220733ee"
+    },
+    {
+      "path": "HOSTED_RESOURCE_VALIDATION.json",
+      "bytes": 2716,
+      "sha256": "b9e46c74e1ca8cbf9a848da231ff2fdf9bb2aeaebc3291029b342f4fa6021fa0"
+    },
+    {
+      "path": "independent_byte_review.json",
+      "bytes": 14529,
+      "sha256": "772ae06a558b3c0059a5b18f06fd52788205b5af3d2c7a61b34caa9568b88efb"
+    },
+    {
+      "path": "independent_trace_review.json",
+      "bytes": 256,
+      "sha256": "a9e52760ba072dd249d15dd5850d0cd91dca9571a2aca4628a7aaa56c61c2e40"
+    },
+    {
+      "path": "NORMAL.json",
+      "bytes": 13112,
+      "sha256": "ac2fc87b6ca5704243bde03b7ff1ec9b7ffd74563bc373859142ebf1a4f561e7"
+    },
+    {
+      "path": "normal_1.05.json",
+      "bytes": 13108,
+      "sha256": "ce41c832d6b361dfc0734d71f6a53e09d504d19e243d84c694bc7622d24a75bf"
+    },
+    {
+      "path": "normal_1.15.json",
+      "bytes": 13112,
+      "sha256": "ac2fc87b6ca5704243bde03b7ff1ec9b7ffd74563bc373859142ebf1a4f561e7"
+    },
+    {
+      "path": "normal_1.3.json",
+      "bytes": 13129,
+      "sha256": "dd11a3d90ad154b10a052c36fb78bd23c7a1da4d9fcc3e9444f1639246f53c6f"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 1564,
+      "sha256": "92b650b7ad562b9c0de5f60a5db1b6d3f35bfd71c9935a3ce35557592b09cc05"
+    },
+    {
+      "path": "report-desktop.png",
+      "bytes": 52019,
+      "sha256": "5beb044f0e2b8ef828bdeda76d78a65c92324042ef9d8f8d1c9117c76edd9c7a"
+    },
+    {
+      "path": "report-mobile.png",
+      "bytes": 38472,
+      "sha256": "3c2fd89e61803610e02bffab159e99c69e64c2690effde4951bb48271a0eeb77"
+    },
+    {
+      "path": "REPORT_QA.json",
+      "bytes": 530,
+      "sha256": "95d72ddd5e5fae8076659ac5f2e03d3f91337d770ab75d85096d98e1cfd9cc83"
+    },
+    {
+      "path": "RESEARCH_BOTH_OPEN.json",
+      "bytes": 16673,
+      "sha256": "d8cb78e15342d750fbab790f130b2731fe42b297106cf83e7df9fbd89a1a172f"
+    },
+    {
+      "path": "retained_failures.json",
+      "bytes": 1337,
+      "sha256": "1b1e72cfcf7bf581adf7652c5ee2fc97155c27b6b1df88e98de195d40da4adfc"
+    },
+    {
+      "path": "source/basis.json",
+      "bytes": 19127,
+      "sha256": "1df571389d15decb5f07d7b402e521bf0d87e235a22a01bb9c550306b13808a1"
+    },
+    {
+      "path": "source/BUILD002_CHANGE_RECORD.md",
+      "bytes": 1665,
+      "sha256": "7ce820a98d451e28a3771eb3b6d37646190a3977441436db0d57b9b5f225fe20"
+    },
+    {
+      "path": "source/BUILD003_CHANGE_RECORD.md",
+      "bytes": 878,
+      "sha256": "990173210e28eb1d1cb1d019307ca1479ac3f5910926295bda7ebc9b7c144dfe"
+    },
+    {
+      "path": "source/BUILD004_CHANGE_RECORD.md",
+      "bytes": 970,
+      "sha256": "a0fe49dc20805999514307e4e8000f65389122ac7691739147f34e5f12931fbd"
+    },
+    {
+      "path": "source/infra/build.ps1",
+      "bytes": 2304,
+      "sha256": "684d96e94d0ddfbc553df6a3d167f4c5cff3a906e0329242e4357adbcd771e35"
+    },
+    {
+      "path": "source/infra/ci-branch-only.yml",
+      "bytes": 4476,
+      "sha256": "b968b124ef4c6cb8c7bd05e9fadf45cfb194d243e9b02482a2907cb03656d89a"
+    },
+    {
+      "path": "source/infra/ControlledJob.cs",
+      "bytes": 13564,
+      "sha256": "8a101be3fc129201ad9fccac842997f79a967b8d1d6196661c59134278b01789"
+    },
+    {
+      "path": "source/infra/VerifyTarget.cs",
+      "bytes": 4819,
+      "sha256": "cf6aeb122ce66dc2783e76d43e8b51f6a42aeaf7ff538f188448cf96e224b686"
+    },
+    {
+      "path": "source/network.py",
+      "bytes": 3852,
+      "sha256": "437ea4b09e13ecde08902a4f7117fb83b8ad476067efb4f72ffca5bf21af7285"
+    },
+    {
+      "path": "source/network_spec.json",
+      "bytes": 18196,
+      "sha256": "d1082ce339d6b8001c71cd2a4a727f559d645b62f314bc608ab13fda0ea60c21"
+    },
+    {
+      "path": "source/resource_environment.json",
+      "bytes": 861,
+      "sha256": "14f53f03a2bc76363bbba9b948b4513114f98c25da65e86c728e45768f250c60"
+    },
+    {
+      "path": "source/run_remote.ps1",
+      "bytes": 7548,
+      "sha256": "ac5d556b8a0131b71163b273c72fe4655e73dfa47f536b0382e118d6dd7d0717"
+    },
+    {
+      "path": "source/source_manifest.json",
+      "bytes": 10399,
+      "sha256": "71dfe6dcb967f6d8cc9ca59f756ce706eafa8dabf7da3b8d7c297f0661fa20d8"
+    },
+    {
+      "path": "source/validation.py",
+      "bytes": 9692,
+      "sha256": "bf2665f66e676647b6ef078cf45329313ef2e7365a457a8c93fc51a60fb165ac"
+    },
+    {
+      "path": "source/worker.py",
+      "bytes": 4308,
+      "sha256": "cf257d2e21fde3fbeb2188726489cef065e1c982363d1db4befcd30f4bcf56aa"
+    },
+    {
+      "path": "source/__init__.py",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "SPARE_B_ONLY.json",
+      "bytes": 13148,
+      "sha256": "c0d3ba8b4e386552dcc8805a0bd8c6df674e838fa27ce0eae9154c041411ee34"
+    },
+    {
+      "path": "stage_result.json",
+      "bytes": 2197,
+      "sha256": "29d4fab365b7f03b346a3a00b41af164ccc91e1700c25acac1c42be26cfdf249"
+    },
+    {
+      "path": "static_states.json",
+      "bytes": 1223,
+      "sha256": "0e578a5c7c3101de218160987963db610852472dec95e415cbbbed6a3a96d842"
+    },
+    {
+      "path": "UNEXPECTED_DUTY_PUMP_TRIP.ndjson",
+      "bytes": 6485667,
+      "sha256": "aa10e7ebb5de3a370e19540319485223a879a24badce095b3ed374d7808aa6f4"
+    },
+    {
+      "path": "UNEXPECTED_DUTY_PUMP_TRIP_result.json",
+      "bytes": 693,
+      "sha256": "e23bda0a25db8b6d3d548520089fd4a688a75fadf86d3e35f5c9ad8f72781502"
+    }
+  ]
+}

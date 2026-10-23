@@ -1,0 +1,8 @@
+{
+  "frames": 1200,
+  "maxMass_m3_s": 1.018829093082969e-17,
+  "maxPower_W": 3.637978807091713e-12,
+  "maxEquation_Pa": 0.000019402330508455634,
+  "scope": "Saved hydraulic equations only, NOT thermal/field calibration",
+  "pressure_nulls_verified": true
+}

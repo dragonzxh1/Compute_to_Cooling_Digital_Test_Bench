@@ -1,0 +1,234 @@
+{
+  "previous_execution_commit": "0dd48316022ed1121d1dd94292a0c1080a5865ee",
+  "previous_manifest_sha256": "6b2a9f282da9ca4824eea2fc41c6469f92450cb8ddbdbbf47ab7cedddeadb01c",
+  "revision": "00-01-HYDRAULIC-V1-BUILD004-HOSTED",
+  "wall_seconds": 480,
+  "cpu_rate": 10000,
+  "model_modified": false,
+  "job_mb": 8192,
+  "process_mb": 4096,
+  "source_files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "b968b124ef4c6cb8c7bd05e9fadf45cfb194d243e9b02482a2907cb03656d89a"
+    },
+    {
+      "path": ".github/workflows/memphis-00-01-hydraulic-v1.yml",
+      "sha256": "288e734399cb29749021af6cf0e3ea8ba6be8b643eda2728ac2d5c4baffb2b00"
+    },
+    {
+      "path": ".github/workflows/memphis-r12-dynamic-hydraulic-v1.yml",
+      "sha256": "24bfeefaceeee666710632260859a6b3a9df0565c02b1f54d4038ec4f8ccaf8b"
+    },
+    {
+      "path": ".github/workflows/memphis-r12-solver-pressure-safety-v1.yml",
+      "sha256": "38a3b5fe946882e62f5a22a0e83fa99761fe34d9db5c364ba32749fbf985a6b4"
+    },
+    {
+      "path": "v0_2/__init__.py",
+      "sha256": "b526e266cb8ee98cd02b1a4a61f6829a95ab0ad45ac9cc221eb05ee6b651935a"
+    },
+    {
+      "path": "v0_2/tests/tools/liquid_recovery_v1/batch.ps1",
+      "sha256": "0b128615f0ecbaed53c05d06f74ea47a59e4c76a185983366db52d1394caa90f"
+    },
+    {
+      "path": "v0_2/tests/tools/m1_remote_executor_v1/build.ps1",
+      "sha256": "5b9363ee1e809b4d8dcd688d38c20906169898848c423854a8a20d75ad04d55f"
+    },
+    {
+      "path": "v0_2/tests/tools/m1_remote_executor_v1/ControlledJob.cs",
+      "sha256": "eb36313d9184971d317b866e493d95afce4b002ee3f06f094d62a91df99de992"
+    },
+    {
+      "path": "v0_2/tests/tools/m1_remote_executor_v1/VerifyTarget.cs",
+      "sha256": "85d4f6cf01f577cb92b9c24f70a1dee808c89c3bdeb548c24154290dea5309c8"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/basis.json",
+      "sha256": "1df571389d15decb5f07d7b402e521bf0d87e235a22a01bb9c550306b13808a1"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/BUILD002_CHANGE_RECORD.md",
+      "sha256": "7ce820a98d451e28a3771eb3b6d37646190a3977441436db0d57b9b5f225fe20"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/BUILD003_CHANGE_RECORD.md",
+      "sha256": "990173210e28eb1d1cb1d019307ca1479ac3f5910926295bda7ebc9b7c144dfe"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/BUILD004_CHANGE_RECORD.md",
+      "sha256": "a0fe49dc20805999514307e4e8000f65389122ac7691739147f34e5f12931fbd"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/build.ps1",
+      "sha256": "684d96e94d0ddfbc553df6a3d167f4c5cff3a906e0329242e4357adbcd771e35"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/ci-branch-only.yml",
+      "sha256": "b968b124ef4c6cb8c7bd05e9fadf45cfb194d243e9b02482a2907cb03656d89a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/ControlledJob.cs",
+      "sha256": "8a101be3fc129201ad9fccac842997f79a967b8d1d6196661c59134278b01789"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/infra/VerifyTarget.cs",
+      "sha256": "cf6aeb122ce66dc2783e76d43e8b51f6a42aeaf7ff538f188448cf96e224b686"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/network_spec.json",
+      "sha256": "d1082ce339d6b8001c71cd2a4a727f559d645b62f314bc608ab13fda0ea60c21"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/network.py",
+      "sha256": "437ea4b09e13ecde08902a4f7117fb83b8ad476067efb4f72ffca5bf21af7285"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/resource_environment.json",
+      "sha256": "14f53f03a2bc76363bbba9b948b4513114f98c25da65e86c728e45768f250c60"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/run_remote.ps1",
+      "sha256": "ac5d556b8a0131b71163b273c72fe4655e73dfa47f536b0382e118d6dd7d0717"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/validation.py",
+      "sha256": "bf2665f66e676647b6ef078cf45329313ef2e7365a457a8c93fc51a60fb165ac"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/worker.py",
+      "sha256": "cf257d2e21fde3fbeb2188726489cef065e1c982363d1db4befcd30f4bcf56aa"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/__init__.py",
+      "sha256": "8089e00ac79e4aaf9180394c458f7f8f5901bda65638eb766a144129b6e5de08"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/BUILD002_CHANGE.md",
+      "sha256": "a295e24d88fc0bbef257750bebf76a7f13220734e05960d9ddcad988bfa950de"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/BUILD003_CHANGE.md",
+      "sha256": "23fb869009b3f9401c890dc6286334172cb32068a20340bd17dbbaf5e6264568"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/campaign.py",
+      "sha256": "3c0d658a9807fbc843e50bd504311b269b13b47ce5f19d0f71d1d9c5bc933761"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/control.py",
+      "sha256": "c7ab9a1a924f2c63570774ce0717dda0903a15c64afa252eff7f256bdcb540e1"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/hydraulics.py",
+      "sha256": "150f2322c063ba4d154b127f1e744d0115c7b074d5a4b3ed7b692e70275a3374"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/infra/ci-branch-only.yml",
+      "sha256": "da03c9295324885f71e3a5e39dac9b0acacc23aa15974dab76630ab0713e2469"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/inputs/pid_spec.json",
+      "sha256": "5d67438a38cc13f12bb474fd8753c8796fdccf608dcd12ce0319cefede41fc64"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/inputs/pid.expanded.json",
+      "sha256": "3cef7f02928e3ac11eb1fd672622a80cb2f6cdb402337291e4796d30d2a4a02b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/plant.py",
+      "sha256": "f44d9cb80f46908fd1c8e177d12570ab60183088fb1134c42de46aad059d6e8a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/README_ZH.md",
+      "sha256": "0516f625847e380c36645cbf427f9c501b1c0cbb2b33378351d386b36aa9f6b6"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/registration.json",
+      "sha256": "922fb21d17eea223f5b867f2e6ee64f37e13c0b9e485c15e01262d45607b3e80"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/report.py",
+      "sha256": "9e5018d566ba06818cab6ad76b5c7b68ed73de075f1e9d30970169cef29da180"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/run_remote.ps1",
+      "sha256": "5a2ea3ac0eaf1305aec4895629fd39019da0fcbf11a53c65da905422468c28ef"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/source_manifest.json",
+      "sha256": "4a2978d991cdc2cf9a3c45c8f374bdad05324147fc0fc5c098aabbca3fda93b0"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_dynamic_hydraulic_v1/worker.py",
+      "sha256": "322cf639a5339f0c35327282a14395f472d9d0684972cf487286a8ad0b53c54a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/__init__.py",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/01_PRESSURE_REQUIREMENT_PROVENANCE.md",
+      "sha256": "2c9fd3b842e957bac00b9cde33168f70a91d52ca73e19402f2346f0532f660af"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/05_PUMP_CHECK_VALVE_EQUATIONS.md",
+      "sha256": "8c968b5cc4cd0578b32fbea9718ac686daccf3bd76d73e4491d2a2dc91d3c534"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/audited.py",
+      "sha256": "197957f669934fa91d6c774a701a0a188be73f78dbf5f135ed23f71d71ddc75e"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/basis_reconciliation.json",
+      "sha256": "faa154059630d8faaddbae46cc8dabb7e1a81e427f48028bfba0bea16c4a7b38"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/constrained.py",
+      "sha256": "5a0836ba4a4ceeeba2297987d01ea5354f869ffd14801ce5c41061a5778afe8f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/design_basis.json",
+      "sha256": "dfd9c59cc53b591ee92534c5a5c947359929a65c39c026e561ddcdb28875da14"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/infra/ci-branch-only.yml",
+      "sha256": "f04063325f8030b1125fadd036c3de9f3f1c6ec678f0e9e0a2c494a1841d521b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/inputs/historical_rejected_trial.json",
+      "sha256": "551a6dad3089d46c044a8f2de3fa873c40ede2ebf6d1957dce3e071c1743500d"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/README_ZH.md",
+      "sha256": "fdbcb85b304b69d0d93c72c96967497a3e8d846afa31d46cc64feb5894a33186"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/run_remote.ps1",
+      "sha256": "12d763c2c7826643240c804c909e97d143fa4b3ce89a5f9c86176c2ffdda57bb"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/source_manifest.json",
+      "sha256": "76c5c6f6cec514f028a8defc385051aa5cd7dcd81f6a7bebe3fed7ab92387eb1"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/suite.py",
+      "sha256": "367ca723f8cf1817f8a9eab3dbd65122e6a128ec2fa5d6729f945042462dfbf9"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/validation.py",
+      "sha256": "fe98366f1a024d78517cdf680a8ee34d7004ddfc536b839e19c5d995c092c11c"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_r12_solver_pressure_safety_v1/worker.py",
+      "sha256": "c61c0b36f2116dbbd39461fe8789b1cf4bc1fb58da34c2f56dfb50f74d210962"
+    }
+  ],
+  "solver_modified": false,
+  "frozen_m1_modified": false
+}

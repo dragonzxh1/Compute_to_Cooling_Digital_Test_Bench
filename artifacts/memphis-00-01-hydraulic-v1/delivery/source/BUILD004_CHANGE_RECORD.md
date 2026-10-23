@@ -1,0 +1,9 @@
+# BUILD004：同步专用核验器的资源准入参数
+
+BUILD003 run39912320956、commit0dd48316022ed1121d1dd94292a0c1080a5865ee的镜像和主机内存预检、native ABI、旧策略拒绝检查通过，但VerifyTarget.cs入口仍硬编码CPU2500，因此在模型释放前退出125。没有模型结果，不是物理FAIL。
+
+真实Python PID7988已由ControlledJob在resume前加入Job；失败后CANCELLED，cleanup_complete=true、active_after_cleanup=0。未生成external_job_identity，因此绝不视为身份核验通过。
+
+本版本仅修改本命名空间下的VerifyTarget.cs副本：入口精确要求CPU10000、进程4096MiB/Job8192MiB；Windows原生Job查询、实际PID归属、CPU flags、内存实值及清理证明均未绕过。旧m1_remote_executor_v1完全不变。
+
+BUILD002说明中“VerifyTarget保持原字节”仅适用于BUILD002/003，不能套用本版本。水力model/validation/00/01依据/求解器/阈值依旧保持原字节。

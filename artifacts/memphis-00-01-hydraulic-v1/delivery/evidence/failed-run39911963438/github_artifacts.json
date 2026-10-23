@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 12482578536,
+      "node_id": "MDg6QXJ0aWZhY3QxMjQ4MjU3ODUzNg==",
+      "name": "00-01-hydraulic-39911963438",
+      "size_in_bytes": 34996,
+      "url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12482578536",
+      "archive_download_url": "https://api.github.com/repos/dragonzxh1/Compute_to_Cooling_Digital_Test_Bench/actions/artifacts/12482578536/zip",
+      "expired": false,
+      "digest": "sha256:810a21d819cf3bc287b8567ebd0434ba94f835b2bd9c3678533d6c1589e1c91e",
+      "created_at": "2026-10-23T06:31:31Z",
+      "updated_at": "2026-10-23T06:31:31Z",
+      "expires_at": "2026-11-22T06:31:30Z",
+      "workflow_run": {
+        "id": 39911963438,
+        "repository_id": 1371600389,
+        "head_repository_id": 1371600389,
+        "head_branch": "codex/memphis-00-01-hydraulic-v1",
+        "head_sha": "0aec52a4a836ff42e44e03ce8507945c727742cf"
+      }
+    }
+  ]
+}

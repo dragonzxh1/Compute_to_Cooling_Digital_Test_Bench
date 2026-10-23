@@ -1,0 +1,32 @@
+[
+  {
+    "run": "39909757507",
+    "commit": "7204410221fb161ae70858e8d20b5234098a4b67",
+    "reason": "IMAGE_DRIFT_NEW_IMAGE_NOT_REGISTERED",
+    "python_started": true,
+    "model_started": false,
+    "official_zip_sha256": "88ca350286147139d65bca6899580876dd553770715e1a04229908034466b82a",
+    "logs_sha256": "62f2d552fc2d16a382e317591921a97ee21d50edcde71716c02289e861535e22",
+    "verdict": "FAILED_EXECUTION_NOT_PHYSICAL_MODEL_FAIL"
+  },
+  {
+    "run": "39911963438",
+    "commit": "0aec52a4a836ff42e44e03ce8507945c727742cf",
+    "reason": "ROLLING_HOST_OLDER_IMAGE_NOT_IN_BUILD002",
+    "python_started": false,
+    "model_started": false,
+    "official_zip_sha256": "810a21d819cf3bc287b8567ebd0434ba94f835b2bd9c3678533d6c1589e1c91e",
+    "logs_sha256": "3d7130d6813d69239a6f77f3f5c224ca4b01b37c1f828e73a2edf4e9b6d14b73",
+    "verdict": "FAILED_EXECUTION_NOT_PHYSICAL_MODEL_FAIL"
+  },
+  {
+    "run": "39912320956",
+    "commit": "0dd48316022ed1121d1dd94292a0c1080a5865ee",
+    "reason": "VERIFIER_ARGUMENT_GUARD_STILL_CPU2500",
+    "python_started": true,
+    "model_started": false,
+    "official_zip_sha256": "960bccc92ceaf770d86a99d216e1806711df334634aba27b612b055b962d4274",
+    "logs_sha256": "8a41a8a14fb8497e1951b6fed23a5b5d8e9701bdced8106a13fc66bb606e9338",
+    "verdict": "FAILED_EXECUTION_NOT_PHYSICAL_MODEL_FAIL"
+  }
+]

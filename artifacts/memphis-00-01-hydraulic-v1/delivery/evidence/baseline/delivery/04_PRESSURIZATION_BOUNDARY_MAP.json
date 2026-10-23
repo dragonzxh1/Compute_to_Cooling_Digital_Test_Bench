@@ -1,0 +1,55 @@
+{
+  "status": "OPEN_PRESSURE_UNDERDETERMINED",
+  "devices_added": [],
+  "interfaces": [
+    {
+      "id": "PRIMARY_PRESSURE_BOUNDARY",
+      "status": "OPEN",
+      "actual_value": null,
+      "source": "00_B168_and_other_vendor_interfaces; numerical examples do not specify equipment"
+    },
+    {
+      "id": "SECONDARY_PRESSURE_BOUNDARY",
+      "status": "OPEN",
+      "actual_value": null,
+      "source": "00_B168_and_other_vendor_interfaces; numerical examples do not specify equipment"
+    },
+    {
+      "id": "PRESSURIZATION_DEVICE_MODEL",
+      "status": "OPEN",
+      "actual_value": null,
+      "source": "00_B168_and_other_vendor_interfaces; numerical examples do not specify equipment"
+    },
+    {
+      "id": "ELEVATION_REFERENCE",
+      "status": "OPEN",
+      "actual_value": null,
+      "source": "00_B168_and_other_vendor_interfaces; numerical examples do not specify equipment"
+    },
+    {
+      "id": "EXPANSION_VOLUME_MODEL",
+      "status": "OPEN",
+      "actual_value": null,
+      "source": "00_B168_and_other_vendor_interfaces; numerical examples do not specify equipment"
+    },
+    {
+      "id": "PRESSURE_RELIEF_INTERFACE",
+      "status": "OPEN",
+      "actual_value": null,
+      "source": "00_B168_and_other_vendor_interfaces; numerical examples do not specify equipment"
+    }
+  ],
+  "example_primary_tank_kPa_g": 335.89,
+  "example_secondary_kPa_g": 60,
+  "examples_used_as_physical_grounds": false,
+  "NPSHA_formula": "(p_suction_abs-p_vapor)/(rho*g)+v_suction^2/(2*g); actual atmosphere/vapor/properties/elevation/OEM NPSHR missing",
+  "pump_suction_min_kPa_g": 50,
+  "HX_inlet_cross_side_limit_kPa": 10,
+  "structural_HX_allowable_differential_kPa": null,
+  "wet_coil_operating_range_kPa": [
+    100,
+    600
+  ],
+  "wet_coil_test_kPa": 1000,
+  "warning": "Test pressure is NOT MAWP. 10kPa is NOT plate structural rating."
+}

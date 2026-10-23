@@ -1,0 +1,16 @@
+{
+  "case": "CONTROLLED_T2_TRANSFER",
+  "physical_seconds": 60,
+  "dt_s": 0.1,
+  "wall_s": 0.6720000000000255,
+  "zero_flow_duration_s": 0,
+  "deficit_m3": 0.0,
+  "min_rack_flow_m3_h": 11.3950000004239,
+  "min_unit_flow_m3_h": 68.3700000025434,
+  "takeover_status": "NOT_DYNAMICALLY_VERIFIED_PRESSURE_GATE_HOLD",
+  "continuity_status": "CONDITIONAL_RESEARCH_INITIAL_PATH_ONLY",
+  "thermal_status": "NOT_DYNAMICALLY_VERIFIED_THIS_HYDRAULIC_STAGE",
+  "check_valve_model": "QUASI_STEADY_COMPLEMENTARITY_NO_CLOSURE_TIME_OR_WATERHAMMER",
+  "fast_protection": "NOT_EXERCISED_NO_THERMAL_OR_REAL_PRESSURE_INPUT",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}

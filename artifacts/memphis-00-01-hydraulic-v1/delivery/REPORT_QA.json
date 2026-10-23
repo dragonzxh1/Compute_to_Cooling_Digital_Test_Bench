@@ -1,0 +1,19 @@
+{
+  "method": "gstack browse interactive checks on saved remote evidence",
+  "controlled_59_9": {
+    "flow_display": "68.370",
+    "permission": false,
+    "hold": true
+  },
+  "trip_15_0": {
+    "flow_display": "≈0.000",
+    "permission": false
+  },
+  "json_edges_rendered": 42,
+  "mobile_width": 390,
+  "mobile_scroll_width": 390,
+  "console_errors": 0,
+  "svg_styles_scoped": true,
+  "source_or_raw_model_values_modified": false,
+  "note": "Display below 1e-6 m3/h is approximate zero only; signed raw residuals unchanged."
+}

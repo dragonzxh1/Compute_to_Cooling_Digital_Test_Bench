@@ -1,0 +1,16 @@
+{
+  "case": "UNEXPECTED_DUTY_PUMP_TRIP",
+  "physical_seconds": 60,
+  "dt_s": 0.1,
+  "wall_s": 0.6559999999999491,
+  "zero_flow_duration_s": 50.00000000000044,
+  "deficit_m3": 0.9495833333333368,
+  "min_rack_flow_m3_h": -5.5739644503539864e-12,
+  "min_unit_flow_m3_h": -4.658855997305217e-14,
+  "takeover_status": "NOT_DYNAMICALLY_VERIFIED_PRESSURE_GATE_HOLD",
+  "continuity_status": "FAIL",
+  "thermal_status": "NOT_DYNAMICALLY_VERIFIED_THIS_HYDRAULIC_STAGE",
+  "check_valve_model": "QUASI_STEADY_COMPLEMENTARITY_NO_CLOSURE_TIME_OR_WATERHAMMER",
+  "fast_protection": "NOT_EXERCISED_NO_THERMAL_OR_REAL_PRESSURE_INPUT",
+  "engineering_status": "MEMPHIS_ENGINEERING_NOT_APPROVED"
+}

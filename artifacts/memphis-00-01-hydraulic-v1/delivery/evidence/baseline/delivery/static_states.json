@@ -1,0 +1,42 @@
+[
+  {
+    "case": "NORMAL",
+    "scope": "STATIC_CONFIGURATION_NOT_TRANSFER_PERMISSION",
+    "unit_flow_m3_h": 68.3700000025434,
+    "physical_gauge": null,
+    "cross_HX_dp": null,
+    "status": "PRESSURE_UNDERDETERMINED"
+  },
+  {
+    "case": "RESEARCH_BOTH_OPEN",
+    "scope": "STATIC_CONFIGURATION_NOT_TRANSFER_PERMISSION",
+    "unit_flow_m3_h": 93.01089842303284,
+    "physical_gauge": null,
+    "cross_HX_dp": null,
+    "status": "PRESSURE_UNDERDETERMINED"
+  },
+  {
+    "case": "SPARE_B_ONLY",
+    "scope": "STATIC_CONFIGURATION_NOT_TRANSFER_PERMISSION",
+    "unit_flow_m3_h": 68.37000000254342,
+    "physical_gauge": null,
+    "cross_HX_dp": null,
+    "status": "PRESSURE_UNDERDETERMINED"
+  },
+  {
+    "case": "DUTY_STOPPED",
+    "scope": "STATIC_CONFIGURATION_NOT_TRANSFER_PERMISSION",
+    "unit_flow_m3_h": -1.3471168427813384e-13,
+    "physical_gauge": null,
+    "cross_HX_dp": null,
+    "status": "PRESSURE_UNDERDETERMINED"
+  },
+  {
+    "case": "BOTH_PUMPS_FAILED",
+    "scope": "STATIC_CONFIGURATION_NOT_TRANSFER_PERMISSION",
+    "unit_flow_m3_h": 2.5143845339137296e-13,
+    "physical_gauge": null,
+    "cross_HX_dp": null,
+    "status": "PRESSURE_UNDERDETERMINED"
+  }
+]

@@ -1,0 +1,5 @@
+﻿equipment,min_gauge_kPa,NPSHA_m,NPSHR_m,shutoff_head_kPa,MAWP_kPa,required_min_gauge_kPa,status,missing
+SOURCE_PUMP,,,,,,50,OPEN,Actual boundary/elevation/OEM QH-NPSHR/relief/compliance/transients
+LOAD_PUMP,,,,,,50,OPEN,Actual boundary/elevation/OEM QH-NPSHR/relief/compliance/transients
+CDU_A_PM1,,,,,,50,OPEN,Actual boundary/elevation/OEM QH-NPSHR/relief/compliance/transients
+CDU_B_PM1,,,,,,50,OPEN,Actual boundary/elevation/OEM QH-NPSHR/relief/compliance/transients

@@ -1,0 +1,66 @@
+[
+  {
+    "test": "SECONDARY_SERIES_BUDGET",
+    "passed": true,
+    "details": "No duplicate parallel branches"
+  },
+  {
+    "test": "SOURCE_SEPARATE_FROM_LOAD",
+    "passed": true,
+    "details": "Tank decoupling; heads never stacked"
+  },
+  {
+    "test": "LOAD_BUDGET",
+    "passed": true,
+    "details": "110m3/h CDU equivalent; group330 is not simulated"
+  },
+  {
+    "test": "DESIGN_POINT_FAMILY_1.05",
+    "passed": true,
+    "details": {
+      "flow": 68.3700000001801,
+      "relative_only": true
+    }
+  },
+  {
+    "test": "DESIGN_POINT_FAMILY_1.15",
+    "passed": true,
+    "details": {
+      "flow": 68.3700000025434,
+      "relative_only": true
+    }
+  },
+  {
+    "test": "DESIGN_POINT_FAMILY_1.3",
+    "passed": true,
+    "details": {
+      "flow": 68.36999999882927,
+      "relative_only": true
+    }
+  },
+  {
+    "test": "CONTROLLED_T2_TRANSFER_KCL",
+    "passed": true,
+    "details": "Independent saved nodal balances"
+  },
+  {
+    "test": "CONTROLLED_T2_TRANSFER_POWER",
+    "passed": true,
+    "details": "Hydraulic input equals friction, no thermal claim"
+  },
+  {
+    "test": "UNEXPECTED_DUTY_PUMP_TRIP_KCL",
+    "passed": true,
+    "details": "Independent saved nodal balances"
+  },
+  {
+    "test": "UNEXPECTED_DUTY_PUMP_TRIP_POWER",
+    "passed": true,
+    "details": "Hydraulic input equals friction, no thermal claim"
+  },
+  {
+    "test": "TRIP_EXPOSES_FAILURE",
+    "passed": true,
+    "details": "Do not aggregate into PASS"
+  }
+]
