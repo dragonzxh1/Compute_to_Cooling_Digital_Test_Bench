@@ -1,9 +1,8 @@
 {
-  "revision": "00-01-HYDRAULIC-V1-BUILD002-HOSTED",
-  "image": "20261021.343.1",
+  "revision": "00-01-HYDRAULIC-V1-BUILD003-HOSTED",
+  "allowed_images": {"20261021.343.1": 5761, "20261012.333.1": 5622},
   "image_os": "win22",
   "windows_build": 20348,
-  "windows_ubr": 5761,
   "python": "3.11.9",
   "numpy": "2.4.6",
   "cpu_rate": 10000,

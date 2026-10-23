@@ -35,7 +35,9 @@ def main():
     admission=dict(source_commit=os.environ['GITHUB_SHA'],image=os.environ.get('ImageVersion'),image_os=os.environ.get('ImageOS'),
         os=platform.platform(),python=platform.python_version(),pid=os.getpid(),policy=policy)
     save('environment_admission.json',admission)
-    if os.environ.get('ImageVersion')!=policy['image'] or os.environ.get('ImageOS')!=policy['image_os']:raise RuntimeError('IMAGE_DRIFT')
+    host=json.loads((out.parent/'host_preflight.json').read_bytes())
+    if (os.environ.get('ImageVersion') not in policy['allowed_images'] or os.environ.get('ImageOS')!=policy['image_os']
+        or host['image']!=os.environ.get('ImageVersion') or host['ubr']!=policy['allowed_images'][host['image']]):raise RuntimeError('IMAGE_DRIFT')
     if sys.getwindowsversion().build!=policy['windows_build']:raise RuntimeError('OS_BUILD_DRIFT')
     if platform.python_version()!=policy['python']:raise RuntimeError('PYTHON_VERSION_DRIFT')
     import numpy

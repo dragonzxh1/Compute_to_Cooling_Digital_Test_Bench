@@ -22,7 +22,8 @@ if($Stage -eq 'baseline'){
   logical_processors=[Environment]::ProcessorCount;policy=$taskPolicy}
  . ./v0_2/tests/tools/liquid_recovery_v1/batch.ps1
  $null=Write-RecoveryJson (Join-Path $taskRoot 'host_preflight.json') $taskHost
- if($taskHost.image -cne $taskPolicy.image -or $taskHost.image_os -cne $taskPolicy.image_os -or $taskHost.os_build -ne $taskPolicy.windows_build -or $taskHost.ubr -ne $taskPolicy.windows_ubr){throw 'REGISTERED_HOST_IMAGE_DRIFT'}
+ $taskAllowed=@($taskPolicy.allowed_images.PSObject.Properties|Where-Object {$_.Name -ceq $taskHost.image -and $_.Value -eq $taskHost.ubr})
+ if($taskAllowed.Count -ne 1 -or $taskHost.image_os -cne $taskPolicy.image_os -or $taskHost.os_build -ne $taskPolicy.windows_build){throw 'REGISTERED_HOST_IMAGE_DRIFT'}
  if($taskHost.total_mb -lt $taskPolicy.min_host_total_mb -or $taskHost.free_mb -lt $taskPolicy.min_host_free_mb){throw 'HOST_HEADROOM_INSUFFICIENT'}
 }
 if($Stage -eq 'suite'){
