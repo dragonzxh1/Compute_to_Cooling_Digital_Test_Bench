@@ -41,7 +41,7 @@ public static class VerifyTarget {
            Environment.GetEnvironmentVariable("RUNNER_ENVIRONMENT")!="github-hosted" ||
            Environment.GetEnvironmentVariable("RUNNER_OS")!="Windows" ||
            Environment.MachineName.Equals("HIPPO",StringComparison.OrdinalIgnoreCase))return 129;
-        if(args.Length!=6 || args[5]!="2500") return 125;
+        if(args.Length!=6 || args[5]!="10000" || args[2]!="4096" || args[3]!="8192") return 125;
         // named Job, actual PID, expected process MB, job MB, proof path, expected CPU rate
         IntPtr job=IntPtr.Zero,process=IntPtr.Zero;
         try {

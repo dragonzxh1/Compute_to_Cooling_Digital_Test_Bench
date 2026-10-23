@@ -1,5 +1,5 @@
 {
-  "revision": "00-01-HYDRAULIC-V1-BUILD003-HOSTED",
+  "revision": "00-01-HYDRAULIC-V1-BUILD004-HOSTED",
   "allowed_images": {"20261021.343.1": 5761, "20261012.333.1": 5622},
   "image_os": "win22",
   "windows_build": 20348,
