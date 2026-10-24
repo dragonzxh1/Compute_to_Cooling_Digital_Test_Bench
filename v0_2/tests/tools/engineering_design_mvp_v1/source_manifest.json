@@ -34,6 +34,10 @@
       "sha256": "33f291e9b946a245dbea85d1042ee2660608bef95cf5e32a27845a2057c50aec"
     },
     {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/browser_entry_acceptance.js",
+      "sha256": "6b03ceefc04f50d005b13b869a81dac9054b109432e5a238cf4b11d8ca615cc9"
+    },
+    {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/browser_switching_acceptance.js",
       "sha256": "4c4470d5db00e42c7c2ff530d3c0e1f3e95e9a9f3e3081b34b8fd5403bf08e7d"
     },
@@ -111,7 +115,7 @@
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/README_ZH.md",
-      "sha256": "e72f3a4062e138c1e55fe14157dc4d5da28a4da38628b54820d9c6bb85528a0c"
+      "sha256": "52421e1c1eb17ee41326e1538a3693a9c0e2cab76dfcd80c387a23cc401f169c"
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/request_contract.py",
@@ -127,7 +131,7 @@
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/run_visual_ci.mjs",
-      "sha256": "2ac1c727d977fd9e10d72f7c1b2a593ce687e747e11c32ab42e8ead588f4400e"
+      "sha256": "b40ec8b2219199611e183ffcf3f9b6063557df6b5d39a2456029d2f25db10fa3"
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/server.py",
@@ -139,7 +143,7 @@
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/style.css",
-      "sha256": "d0af409db87a1d0b440b769e7359380e5391bc6f12d71d96304040ea6afb9e3e"
+      "sha256": "3d39268191a76bbe2b1d62bb0d9176392c004d904bc9b52cd3661e0f58b1550c"
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_core.mjs",
@@ -171,7 +175,7 @@
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/visual-ui.mjs",
-      "sha256": "880732e331fc7d16bc9231cd74cb00ecb1ed20a31300e0f18a37cb6c4b5dcd38"
+      "sha256": "c6695ff5e135d5e26662a00bb16f6cb3bdcca557c29fd4228a135cedc4c6a82d"
     },
     {
       "path": "v0_2/tests/tools/engineering_design_mvp_v1/worker.py",

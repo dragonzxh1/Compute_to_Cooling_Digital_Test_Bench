@@ -26,6 +26,7 @@ try{
  browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1600,height:1000},deviceScaleFactor:1}),errors=[];
  page.on('pageerror',e=>errors.push(e.message));
  const open=async()=>{await page.goto('http://127.0.0.1:8768/');await page.waitForSelector('#v-dataset');};
+ await open();await page.screenshot({path:path.join(out,'default-replay-entry.png'),fullPage:true});await acceptance(page,'browser_entry_acceptance.js','c2cEntryPromise','browser-dynamic-entry');
  await open();await acceptance(page,'browser_acceptance.js','c2cVisualAcceptancePromise','browser-regression');
  await open();await acceptance(page,'browser_switching_acceptance.js','c2cSwitchingPromise','browser-switching');
  await page.selectOption('#v-dataset','source');await page.locator('#v-time').fill('100');await page.screenshot({path:path.join(out,'source-switch.png'),fullPage:true});

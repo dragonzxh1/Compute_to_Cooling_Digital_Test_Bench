@@ -12,7 +12,7 @@ export function visualReportHTML(options,session){
 export function mountVisual(host,options){
  const {design,history,switching,onCheck,onEdit,onTopology}=options;
  const verifiedResult=matchingDynamic(options.result,options.designHash);
- const s={dataset:'design',caseID:'SR_STUCK',cduCase:'T2_COLD_STANDBY',level:'system',unit:1,cdu:'A',selected:'tank-A',t:0,layer:'physical',future:false,display:'temperature',rate:1,playing:false,zoom:1,panX:0,panY:0,...options.session};
+ const s={dataset:switching?.source?'source':'single',caseID:'SR_STUCK',cduCase:'T2_COLD_STANDBY',level:'system',unit:1,cdu:'A',selected:'tank-A',t:switching?.source?.frames?.[0]?.t_s||0,layer:'physical',future:false,display:'temperature',rate:4,playing:false,zoom:1,panX:0,panY:0,...options.session};
  let single=options.single.cases?.[s.caseID]||options.single;
  let sampleCache={};
  s.playing=false;
@@ -34,9 +34,17 @@ export function mountVisual(host,options){
   if(s.level==='six')return sixScene(design,s.unit,f?{rack_inlet_c:f.rack_inlet_c?.slice((s.unit-1)*6,s.unit*6)}:null);
   return systemScene(design,f);
  }
- function stop(){s.playing=false;q('#v-play').textContent='播放';}
+ function playControls(){
+  const historical=!['design','current'].includes(s.dataset),enabled=duration()>0;
+  if(q('#v-play')){q('#v-play').textContent=s.playing?'暂停':'播放';q('#v-play').disabled=!enabled;}
+  if(q('#v-play-top')){q('#v-play-top').textContent=s.playing?'暂停回放':historical?'播放仿真回放':s.dataset==='design'?'静态图不播放':enabled?'播放当前计算':'当前结果未就绪';q('#v-play-top').disabled=!enabled;}
+  if(q('#v-play-state'))q('#v-play-state').textContent=enabled?`${N(s.t)} s · ${s.playing?'播放中':'已暂停'} · ${s.rate}×`:'无可播放动态结果';
+ }
+ function stop(){s.playing=false;playControls();}
+ function togglePlayback(){if(s.playing)stop();else if(duration()){if(s.t>=duration())s.t=0;s.playing=true;last=0;update();}}
  function chooseDataset(value){stop();s.dataset=value;s.t=0;s.zoom=1;s.panX=s.panY=0;selectionLayer=null;flowOffsets.clear();
-  s.level=value==='ab'?'tanks':'system';s.layer='physical';s.selected=value==='single'?'pump':value==='cdu'?'U1-CDU-A':'tank-A';shell();}
+  s.level=value==='ab'?'tanks':'system';s.layer='physical';s.selected=value==='single'?'pump':value==='cdu'?'U1-CDU-A':'tank-A';
+  if(['source','cdu'].includes(value))s.t=data()?.frames?.[0]?.t_s||0;shell();}
  function events(){
   if(s.dataset==='single')return visibleEvents(singleEvents(single),s.t,{future:s.future,layer:s.layer});
   return visibleEvents((data()?.events||[]).map(e=>({t_s:e.t_s,label:e.label||e.reason||e.event||`${e.from} → ${e.to}`,kind:'record'})),s.t,{future:s.future});
@@ -47,11 +55,14 @@ export function mountVisual(host,options){
   return `历史 ${data()?.run} / ${s.dataset==='single'?s.caseID:data()?.case} · 非当前方案${s.dataset==='cdu'?' · 仅U1动态；U2/U3无记录':''}`;
  }
  function shell(){
-  host.innerHTML=`<section class="visual-workbench"><div class="visual-toolbar"><label>数据来源<select id="v-dataset"><option value="design">当前 00/01 研究方案 · 静态</option><option value="single">历史单柜 · 液体流动与卡泵</option><option value="ab">历史 A/B 罐 · 分层与冷库存</option><option value="current">当前版本 · 新动态结果</option></select></label><label>查看层级<select id="v-level" ${['single','current'].includes(s.dataset)?'disabled':''}><option value="system">系统总览</option><option value="six">六柜单元</option><option value="cdu">CDU 功能端口</option><option value="tanks">A/B 分层</option></select></label><label>单元<select id="v-unit" ${s.dataset!=='design'?'disabled':''}><option value="1">U1</option><option value="2">U2</option><option value="3">U3</option></select></label><label>显示<select id="v-display"><option value="temperature">节点温度</option><option value="flow">流量</option><option value="pressure">压差</option></select></label><button id="v-export">导出此图与回放</button></div>
+  const views=[...(switching?[['source','冷源与A/B罐切换'],['cdu','6台CDU与接管']]:[]),['ab','储罐分层'],['single','单柜故障'],['design','00/01静态设计']];
+  host.innerHTML=`<section class="visual-workbench"><div class="visual-entry"><div class="entry-heading"><div><strong id="v-mode-title"></strong><p id="v-mode-detail"></p></div><div class="entry-play"><button id="v-play-top" class="primary">播放仿真回放</button><span id="v-play-state" role="status"></span></div></div><div class="visual-view-tabs" aria-label="图形场景">${views.map(([id,label])=>`<button data-visual-view="${id}" aria-pressed="${s.dataset===id}">${label}</button>`).join('')}</div></div><div class="visual-toolbar"><label>数据来源<select id="v-dataset"><option value="design">当前 00/01 研究方案 · 静态</option><option value="single">历史单柜 · 液体流动与卡泵</option><option value="ab">历史 A/B 罐 · 分层与冷库存</option><option value="current">当前版本 · 新动态结果</option></select></label><label>查看层级<select id="v-level" ${['single','current'].includes(s.dataset)?'disabled':''}><option value="system">系统总览</option><option value="six">六柜单元</option><option value="cdu">CDU 功能端口</option><option value="tanks">A/B 分层</option></select></label><label>单元<select id="v-unit" ${s.dataset!=='design'?'disabled':''}><option value="1">U1</option><option value="2">U2</option><option value="3">U3</option></select></label><label>显示<select id="v-display"><option value="temperature">节点温度</option><option value="flow">流量</option><option value="pressure">压差</option></select></label><button id="v-export">导出此图与回放</button></div>
    <div class="visual-origin" id="v-origin"></div><div id="v-presets" class="scenario-strip"></div><div class="visual-grid"><div class="visual-main"><div class="canvas-tools"><div><span id="v-breadcrumb"></span></div><div class="zoom-controls"><button id="v-up" aria-label="返回系统总览">上一级</button><button id="v-minus" aria-label="缩小">−</button><button id="v-fit">适合画布</button><button id="v-plus" aria-label="放大">＋</button></div></div><div id="v-stage" class="visual-stage" tabindex="0" aria-label="系统画布。方向键平移，Home复位，点击设备查看，双击下钻"><div id="v-scene"></div><canvas id="v-liquid" aria-hidden="true"></canvas></div><div class="canvas-legend"><span><i class="temp-key"></i>节点35–55°C</span><span>→ 已知流向</span><span>┄ 功能关联 / 未知流量</span><span>圆点速度仅表示相对流量，不是液团或输送时间</span></div><p id="v-scope" class="canvas-scope"></p></div><aside id="v-inspector" class="visual-inspector"></aside></div>
    <div class="replay-bar"><button id="v-play" class="primary">播放</button><button id="v-step" aria-label="前进一个保存帧">逐帧 ›</button><output id="v-clock">0.0 s</output><label class="time-control"><span class="sr-only">共同时间游标</span><input id="v-time" type="range" min="0" max="${duration()}" step="${s.dataset==='single'?'.1':'1'}" value="${s.t}"></label><label>速度<select id="v-rate"><option value="0.5">0.5×</option><option value="1">1×</option><option value="4">4×</option><option value="10">10×</option></select></label><label>记录<select id="v-layer" ${s.dataset!=='single'?'disabled':''}><option value="physical">模型真值</option><option value="arrived">已到达观测</option></select></label><label class="check-label"><input id="v-future" type="checkbox" ${s.future?'checked':''}>全时段事后分析</label></div>
    <div class="visual-lower"><section class="visual-curves"><div class="lower-heading"><h2>同步曲线</h2><span id="v-curve-mode"></span></div><div id="v-curves"></div></section><section class="visual-events"><h2>事件与原因</h2><div id="v-events"></div></section></div><p id="v-message" role="status" class="tagline"></p></section>`;
   if(switching)q('#v-dataset').insertAdjacentHTML('beforeend','<option value="source">历史冷源切换 · W1/W2与A/B罐</option><option value="cdu">6台CDU · 主备切换记录</option>');
+  q('[data-visual-view]')?.closest('.visual-view-tabs').querySelectorAll('[data-visual-view]').forEach(b=>b.onclick=()=>chooseDataset(b.dataset.visualView));
+  q('#v-play-top').onclick=togglePlayback;
   for(const [id,value]of Object.entries({'v-dataset':s.dataset,'v-level':s.level,'v-unit':String(s.unit),'v-display':s.display,'v-rate':String(s.rate),'v-layer':s.layer}))q('#'+id).value=value;
   q('#v-time').step=String(stepSeconds());q('#v-unit').disabled=!['design','cdu'].includes(s.dataset);
   if(['source','cdu'].includes(s.dataset))q('#v-level').querySelectorAll('option').forEach(o=>o.disabled=!(s.dataset==='source'?['system','tanks']:['system','six']).includes(o.value));
@@ -72,11 +83,11 @@ export function mountVisual(host,options){
   q('#v-unit').onchange=e=>{s.unit=Number(e.target.value);if(s.dataset==='cdu'){s.level='six';s.selected=`U${s.unit}-CDU-A`;q('#v-level').value='six';}update();};
   q('#v-display').onchange=e=>{s.display=e.target.value;update();};
   q('#v-layer').onchange=e=>{s.layer=e.target.value;stop();update();};
-  q('#v-rate').onchange=e=>s.rate=Number(e.target.value);
+  q('#v-rate').onchange=e=>{s.rate=Number(e.target.value);playControls();};
   q('#v-future').onchange=e=>{s.future=e.target.checked;update();};
   q('#v-time').oninput=e=>{stop();s.t=Number(e.target.value);update();};
   q('#v-step').onclick=()=>{stop();s.t=Math.min(duration(),Number((s.t+stepSeconds()).toFixed(1)));update();};
-  q('#v-play').onclick=()=>{if(s.playing)stop();else if(duration()){if(s.t>=duration())s.t=0;s.playing=true;q('#v-play').textContent='暂停';last=0;update();}};
+  q('#v-play').onclick=togglePlayback;
   q('#v-plus').onclick=()=>zoom(1.25);q('#v-minus').onclick=()=>zoom(.8);q('#v-fit').onclick=fit;
   q('#v-up').onclick=()=>{s.level=s.level==='cdu'?'six':'system';s.selected='';s.zoom=1;s.panX=s.panY=0;update();q('#v-level').value=s.level;};
   q('#v-export').onclick=exportReplay;
@@ -117,6 +128,9 @@ export function mountVisual(host,options){
   renderScene=sc;
   if(!sc.nodes.some(n=>n.id===s.selected)&&!sc.edges.some(e=>e.id===s.selected))s.selected=sc.edges.find(e=>e.label==='pump')?.id||sc.nodes[0]?.id||'';
   q('#v-origin').textContent=identity();q('#v-origin').dataset.mode=s.dataset;
+  q('#v-mode-title').textContent=s.dataset==='design'?'00/01设计编辑 · 静态':s.dataset==='current'?'当前方案 · 动态计算结果':'仿真回放 · 图形与数值同步';
+  q('#v-mode-detail').textContent=s.dataset==='design'?'修改参数会更新工程检查；当前设计尚无完整动态联动。选择上方回放场景，可观察已有仿真过程。':s.dataset==='current'?'仅显示与当前输入匹配的远程计算。没有新结果时保持空白。':'点击播放，观察流路、设备状态、温度和流量随时间变化。使用已有仿真记录，不代表当前00/01方案已完成动态验证。';
+  playControls();
   q('#v-breadcrumb').textContent=sc.title;q('#v-scope').textContent=[sc.scope,...sc.notes].join(' ');
   q('#v-clock').textContent=N(s.t)+' s';q('#v-time').value=s.t;
   q('#v-scene').innerHTML=sceneSVG(sc,{selected:s.selected,selectedLayer:selectionLayer,issues,display:s.display});transform();
