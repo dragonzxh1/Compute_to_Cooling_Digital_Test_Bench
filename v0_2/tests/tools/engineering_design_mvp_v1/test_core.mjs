@@ -1,0 +1,33 @@
+// Product/formula tests only, no dynamic model or native execution.
+import assert from 'node:assert/strict';import fs from 'node:fs';
+import {assess,edit,clone,validate,topologyCheck,compare,digest,reportHTML,admitResult} from './core.mjs';
+const base=JSON.parse(fs.readFileSync(new URL('./data/baseline.json',import.meta.url))),tests=[];
+function test(name,fn){fn();tests.push({name,status:'PASS'});}
+test('00/01 liquid heat',()=>assert.equal(assess(base).liquid_kw,2650.5));
+test('90s displacement is not approval',()=>{const r=assess(base).rows.find(r=>r.id==='volume');assert.equal(r.value,8.25);assert.equal(r.status,'CONDITIONAL');});
+test('371.81 budget',()=>assert.ok(Math.abs(assess(base).secondary_budget_kpa-371.81)<1e-9));
+test('unknown QH stays unknown',()=>assert.equal(assess(base).rows.find(r=>r.id==='pump_point').value,null));
+test('tank volume changes estimate not dynamic pass',()=>{const r=assess(edit(base,'tank_volume',20));assert.equal(r.rows.find(r=>r.id==='cold').value,14);assert.equal(r.rows.find(r=>r.id==='tank90').status,'UNKNOWN');assert.equal(base.parameters.tank_volume.value,15);});
+test('UA modification changes capacity',()=>{const a=assess(base),b=assess(edit(base,'ua',110));assert.ok(b.rows.find(r=>r.id==='hx_capacity').value<a.rows.find(r=>r.id==='hx_capacity').value);});
+test('null affects dependent checks only',()=>{const a=assess(edit(base,'rho',null));assert.equal(a.liquid_kw,2650.5);assert.equal(a.rows.find(r=>r.id==='ua').status,'UNKNOWN');});
+test('no lowering hard limits',()=>{const d=clone(base);d.requirements.rack_inlet_max_c=46;assert.throws(()=>validate(d));});
+test('nonfinite rejected',()=>assert.throws(()=>edit(base,'ua',NaN)));
+test('wrong units rejected',()=>{const d=clone(base);d.parameters.primary_flow.unit='L/s';assert.throws(()=>validate(d));});
+test('OEM without evidence refused',()=>{const d=clone(base);d.parameters.ua.kind='OEM_CONFIRMED';assert.throws(()=>validate(d));});
+test('disconnected flow path localized',()=>{const t=clone(base.topology);t.edges=t.edges.filter(e=>e.id!=='U1-CDU-A-pump');assert.ok(topologyCheck(t).issues.some(r=>r.id==='DISCONNECT_U1-CDU-A'));});
+test('bypass detected',()=>{const t=clone(base.topology),c=t.circuits[0];t.edges.push({id:'shortcut',from:c.from,to:c.to,kind:'pipe',active:true,circuit:c.id});assert.ok(topologyCheck(t).issues.some(r=>r.id==='BYPASS_U1-CDU-A_pump'));});
+test('fluid cross connection detected',()=>{const t=clone(base.topology);t.edges.push({id:'mix',from:t.ports[0].id,to:t.ports[4].id,kind:'pipe',active:true});assert.ok(topologyCheck(t).issues.some(r=>r.id==='DOMAIN_mix'));});
+test('closed extra edge not a bypass',()=>{const t=clone(base.topology),c=t.circuits[0];t.edges.push({id:'closed',from:c.from,to:c.to,kind:'pipe',active:false,circuit:c.id});assert.equal(topologyCheck(t).issues.length,0);});
+test('comparison keeps regressions and null',()=>{const r=compare(base,edit(base,'ua',110));assert.ok(r.find(x=>x.id==='hx_capacity').delta<0);assert.equal(r.find(x=>x.id==='pressure').delta,null);});
+test('report escaping',()=>{const d=clone(base);d.title='<script>evil</script>';assert.ok(!reportHTML(d,base).includes('<script>evil'));});
+test('malformed import refuses before rendering',()=>{const d=clone(base);delete d.patches;assert.throws(()=>validate(d));});
+test('prototype parameter not editable',()=>assert.throws(()=>edit(base,'toString',10)));
+test('energy and displacement are separate lower bounds',()=>{const rows=assess(base).rows;assert.ok(rows.find(r=>r.id==='ideal_volume').value>0);assert.notEqual(rows.find(r=>r.id==='ideal_volume').value,8.25);assert.equal(rows.find(r=>r.id==='tank90').status,'UNKNOWN');});
+test('flow-temperature relationship recalculates',()=>{const a=assess(base),b=assess(edit(base,'primary_flow',660));assert.equal(b.rows.find(r=>r.id==='primary_dt').value,a.rows.find(r=>r.id==='primary_dt').value/2);});
+test('standby belongs to same unit',()=>{const t=clone(base.topology);t.standby_pairs=[{a:'U1-CDU-A',b:'U2-CDU-B'}];assert.ok(topologyCheck(t).issues.some(r=>r.id.startsWith('STANDBY_')));});
+test('AB operational isolation needs confirmed open states',()=>{const t={authority:'RESEARCH',ports:[{id:'A',domain:'PRIMARY',network:'A'},{id:'B',domain:'PRIMARY',network:'B'}],circuits:[],edges:[{id:'v',from:'A',to:'B',kind:'valve',active:null}]};assert.equal(topologyCheck(t).issues.length,0);t.edges[0].active=true;assert.ok(topologyCheck(t).issues.some(r=>r.id.startsWith('AB_ACTIVE_')));});
+test('missing dynamic evidence rejected',()=>assert.throws(()=>admitResult({result:null},'x')));
+test('unverified dynamic evidence rejected',()=>assert.throws(()=>admitResult({result:{schema:'C2C-RESEARCH-RESULT-1'}},'x')));
+test('cross-version dynamic result rejected',()=>assert.throws(()=>admitResult({verification:'OFFICIAL_ZIP_RAW_SOURCE_INPUT_PID_ENV_CLEANUP_VERIFIED',model:'tank90',commit:'c',result:{schema:'C2C-RESEARCH-RESULT-1',design_sha256:'old',model:'tank90',source_commit:'c',frames:[{t_s:0}]}},'new')));
+const a=await digest(base),b=await digest(edit(base,'tank_volume',20));assert.notEqual(a,b);tests.push({name:'input identity invalidates previous result',status:'PASS'});
+console.log(JSON.stringify({scope:'JS_PRODUCT_AND_STATIC_FORMULAS_NOT_DYNAMIC_VALIDATION',tests},null,2));

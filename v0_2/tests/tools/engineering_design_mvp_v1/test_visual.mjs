@@ -1,0 +1,52 @@
+// Read-only record/display tests. No numerical solver or new physical simulation.
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {flowMark,advanceFlowOffset,flowGlyphs,labelledLayers,atTime,singleFrame,singleEvents,visibleEvents,singleScene,systemScene,sixScene,cduScene,tankScene,sceneSVG,matchingDynamic,referenceEnergy,temperatureColor} from './visual-core.mjs';
+import {visualReportHTML} from './visual-ui.mjs';
+const read=p=>JSON.parse(fs.readFileSync(new URL(p,import.meta.url))),catalog=read('./data/single_history.json'),base=read('./data/baseline.json'),history=read('./data/historical.json'),single=catalog.cases.SR_STUCK,tests=[];
+function test(name,fn){fn();tests.push({name,status:'PASS'});}
+test('five source-separated actual cases',()=>assert.deepEqual(Object.keys(catalog.cases),['SR_NORMAL','SR_STEP','SR_STUCK','SR_MISSING','SR_WARM']));
+test('official zip identity retained',()=>assert.equal(catalog.zip_sha256,'a99914a2fb8d0fcfbf5a5863fa4be649461b287ed4cdce1b876e88e0e820f85a'));
+test('raw inventories not resampled',()=>{for(const d of Object.values(catalog.cases)){assert.equal(d.series.length,1201);assert.equal(d.phases.length,600);assert.equal(d.input.case_id,d.case_id);assert.equal(Object.keys(d.bindings).length,4);}});
+test('select saved record, never interpolate',()=>{const r=atTime(single.series,30123456789,'time_ns');assert.equal(r.time_ns,30100000000);});
+test('observation absent before first arrival',()=>{const f=singleFrame(single,0,'arrived');assert.equal(f.flow,null);assert.equal(f.command,null);assert.equal(f.latched,null);});
+test('arrived observation retains sample and arrival times',()=>{const f=singleFrame(single,.1,'arrived');assert.equal(f.record_s,0);assert.equal(f.arrival_s,.1);assert.equal(f.age_s,.1);});
+test('command does not become actual speed',()=>{const f=singleFrame(single,30);assert.equal(f.command,90);assert.ok(f.actual_speed<50);assert.ok(f.flow>0);assert.equal(f.safety,'FAULT');assert.equal(f.latched,true);});
+test('invalid measurement does not animate a guessed flow',()=>{const f=singleFrame(catalog.cases.SR_MISSING,30,'arrived');assert.equal(f.flow,null);assert.equal(f.actual_speed,null);assert.equal(flowMark(f.flow,{playing:true}).speed,0);});
+test('missing measurement does not erase underlying physical truth',()=>assert.ok(singleFrame(catalog.cases.SR_MISSING,30).flow>0));
+test('scenario change changes recorded outcomes',()=>{const a=singleFrame(catalog.cases.SR_STEP,30),b=singleFrame(single,30);assert.notEqual(a.flow,b.flow);assert.notEqual(a.actual_speed,b.actual_speed);});
+test('physical events hidden from arrived-observation mode',()=>assert.ok(!visibleEvents(singleEvents(single),30,{layer:'arrived'}).some(e=>e.kind==='physical')));
+test('future event not disclosed by default',()=>assert.ok(visibleEvents(singleEvents(single),1).every(e=>e.t_s<=1)));
+test('normal scenario has no invented fault injection',()=>assert.ok(!singleEvents(catalog.cases.SR_NORMAL).some(e=>e.kind==='physical')));
+test('zero flow stops',()=>assert.deepEqual(flowMark(0,{playing:true}).speed,0));
+test('unknown flow never becomes zero or movement',()=>{for(const v of [null,undefined,NaN,Infinity])assert.equal(flowMark(v,{playing:true}).state,'unknown');});
+test('negative flow reverses direction',()=>assert.equal(flowMark(-4,{playing:true}).direction,-1));
+test('motion speed monotone and bounded, not transport velocity',()=>{assert.ok(flowMark(10,{playing:true}).speed<flowMark(100,{playing:true}).speed);assert.ok(flowMark(1e10,{playing:true}).speed<=60);});
+test('pause and reduced motion stop particles',()=>{assert.equal(flowMark(5).speed,0);assert.equal(flowMark(5,{playing:true,reduced:true}).speed,0);});
+test('flow animation freezes its exact offset on pause or invalid flow',()=>{const off=advanceFlowOffset(7,10,.1,{playing:true});assert.ok(off>7);for(const options of [{playing:false},{playing:true,reduced:true}])assert.equal(advanceFlowOffset(off,10,.1,options),off);for(const q of [0,null,NaN])assert.equal(advanceFlowOffset(off,q,.1,{playing:true}),off);});
+test('flow phase integrates speed changes without repositioning old travel',()=>{const a=advanceFlowOffset(3,5,.1,{playing:true}),b=advanceFlowOffset(a,30,.1,{playing:true});assert.ok(Math.abs(b-a-flowMark(30,{playing:true}).speed*.1)<1e-9);assert.ok(advanceFlowOffset(30,-5,.1,{playing:true})<30);});
+test('arrow trails follow display polyline corners',()=>{const glyphs=flowGlyphs([[0,0],[100,0],[100,100]],20);assert.ok(glyphs.some(p=>p.x===100&&p.angle===Math.PI/2));assert.ok(glyphs.every(p=>p.y===0||p.x===100));});
+test('current design associations cannot animate',()=>assert.ok(systemScene(base).edges.every(e=>e.relation&&e.q===null)));
+test('single serial flow not inferred from command',()=>{const sc=singleScene(single,30);assert.ok(sc.edges.filter(e=>!e.relation).every(e=>e.q===sc.frame.flow));assert.ok(sc.edges.find(e=>e.id==='thermal').relation);});
+test('unit totals not split into fictional per-rack feedback',()=>{const sc=sixScene(base,1,{rack_inlet_c:history.frames[0].rack_inlet_c});assert.ok(sc.nodes.filter(n=>n.type==='rack').every(n=>n.metrics.find(m=>m.unit==='m³/h').value===undefined));});
+test('CDU rendered endpoints exactly match edited JSON',()=>{const d=structuredClone(base);d.topology.edges.push({id:'test-bypass',from:d.topology.circuits[0].from,to:d.topology.circuits[0].to,kind:'pipe',circuit:'U1-CDU-A',active:true});const s=cduScene(d,'U1-CDU-A');const e=s.edges.find(e=>e.id==='test-bypass');assert.equal(e.from,d.topology.circuits[0].from);assert.equal(e.to,d.topology.circuits[0].to);});
+test('layer ordering and count preserved',()=>{const s=tankScene(history,history.frames[50]);assert.equal(s.nodes[0].layers,history.frames[50].A);assert.equal(s.nodes[0].layers.length,20);assert.equal((sceneSVG(s).match(/data-layer=/g)||[]).length,40);});
+test('all 20 layer labels use actual saved values',()=>{const sc=tankScene(history,history.frames[50]),svg=sceneSVG(sc);assert.equal((svg.match(/class="layer-temperature /g)||[]).length,40);for(const n of sc.nodes)for(const t of n.layers)assert.ok(svg.includes(t.toFixed(2)+' °C'));assert.equal(labelledLayers(sc.nodes[0].layers).length,20);});
+test('dense meshes keep raw bands and bounded non-overlapping label count',()=>{const actual=history.frames[50].A;const mesh=Array.from({length:160},(_,i)=>actual[i%20]);assert.ok(labelledLayers(mesh).length<=21);assert.equal(labelledLayers(mesh).at(-1).index,159);});
+test('unavailable layer data kept unknown',()=>assert.ok(sceneSVG(tankScene(null,null)).includes('逐层数据未知')));
+test('cold volume not relabeled as guaranteed energy',()=>{assert.ok(referenceEnergy(history.frames[0].A,history)>0);assert.equal(referenceEnergy([40],{}),null);});
+test('temperature scale fixed across scenes',()=>assert.equal(temperatureColor(41),temperatureColor(41)));
+test('SVG import fields escaped',()=>{const s=systemScene(base);s.nodes[0].label='<script>alert(1)</script>';assert.ok(!sceneSVG(s).includes('<script>'));});
+test('issues highlight exact edge identity',()=>{const s=cduScene(base,'U1-CDU-A');assert.ok(sceneSVG(s,{issues:[{edgeIds:[s.edges[0].id]}]}).includes('issue-edge'));});
+test('dynamic evidence absent or wrong-version not admitted for display',()=>{assert.equal(matchingDynamic(null,'a'.repeat(64)),null);assert.equal(matchingDynamic({design_sha256:'b'.repeat(64)},'a'.repeat(64)),null);assert.equal(matchingDynamic({design_sha256:null},null),null);});
+test('CDU identity never visually locks to primary B',()=>assert.ok(!sixScene(base).edges.some(e=>e.from==='primary-B'&&e.to.includes('CDU-B'))));
+test('design tank edit appears on graph without implying dynamics',()=>{const d=structuredClone(base);d.parameters.tank_volume.value=20;const s=systemScene(d);assert.ok(s.nodes.find(n=>n.id==='tank-A').annotation.includes('20'));assert.ok(s.edges.every(e=>e.q===null));});
+test('offline report embeds real records, no external runtime and no cross-version result',()=>{
+ const src=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8');
+ const html=visualReportHTML({design:base,history,single:catalog,designHash:'a'.repeat(64),result:{design_sha256:'b'.repeat(64)},coreSource:src('./visual-core.mjs'),uiSource:src('./visual-ui.mjs'),styles:src('./style.css')},{dataset:'single',caseID:'SR_STUCK',t:30});
+ assert.ok(!/<script[^>]+src=/.test(html));assert.ok(!/<link[^>]+href=/.test(html));
+ const payload=JSON.parse(html.match(/<script id="visual-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+ assert.equal(payload.result,null);assert.equal(payload.single.cases.SR_STUCK.series.length,1201);assert.equal(payload.session.t,30);
+ const script=html.match(/<script type="module">([\s\S]*?)<\/script>/)[1];assert.doesNotThrow(()=>new Function(script));
+});
+console.log(JSON.stringify({scope:'VISUAL_DISPLAY_AND_HISTORICAL_RECORDS_ONLY_NOT_DYNAMIC_QUALIFICATION',tests,
+ actual_at_30s:Object.fromEntries(Object.entries(catalog.cases).map(([id,d])=>{const f=singleFrame(d,30);return [id,{flow_m3_h:f.flow,speed_pct:f.actual_speed,supply_c:f.supply,command_pct:f.command}];}))},null,2));

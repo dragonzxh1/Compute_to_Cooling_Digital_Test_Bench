@@ -1,0 +1,14 @@
+{
+  "SR_STUCK": {
+    "input.json": "289f3fdf53d9c91a82ba3246ab684d88c1d3b005b4aa36fa1152d39df898cb94",
+    "phases.json": "04238affa5dcce40155b8da71f7d43d7f60fa6c9cd0d4588f9762d61a5b8a43e",
+    "physics.json": "c793521990caeaf5eb9fae7fbbe12c96f3ce5ead2fcba00a4731cf15a6635600",
+    "series.json": "416a51ff5357b1f979e0f13f6007079aae68506df5f359ddac875ea60b7aba20"
+  },
+  "WET_LOSS_STRATIFIED": {
+    "input.json": "d4c933b404e0de66954b073f2efb09f5bd53d9e648dbcf07af1883dbf3b8e627",
+    "phases.json": "1a8fb086924ca8e70d267e387c2d11eb544a9b4543b301dcf94b4e4be6359e03",
+    "physics.json": "03d26b78103ce803d14c7097bc76fc7893f6eb0ff476306e8a2a517836b5f1d7",
+    "series.json": "8fe0533d83bb86c42279601b3f5d4c87732b122daacd375e3d111db3109b3bb8"
+  }
+}

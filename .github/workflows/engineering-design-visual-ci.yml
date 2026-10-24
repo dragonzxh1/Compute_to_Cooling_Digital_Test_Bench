@@ -1,0 +1,41 @@
+name: C2C saved switching visual verification
+on:
+  push:
+    branches: ['codex/engineering-visual-switching-*']
+    paths: ['v0_2/tests/tools/engineering_design_mvp_v1/**', '.github/workflows/engineering-design-visual-ci.yml']
+permissions:
+  contents: read
+concurrency:
+  group: engineering-visual-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  display:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      C2C_UI_DEPS: ${{ github.workspace }}/artifacts/ui-test-deps
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with:
+          python-version: '3.11.9'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22.14.0'
+      - name: Install browser testing dependency on GitHub only
+        run: |
+          mkdir -p "$C2C_UI_DEPS"
+          npm install --prefix "$C2C_UI_DEPS" --ignore-scripts --no-audit --no-fund playwright@1.56.1
+          "$C2C_UI_DEPS/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Source-bound product and saved-record browser checks
+        run: node v0_2/tests/tools/engineering_design_mvp_v1/run_visual_ci.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: engineering-visual-${{ github.run_id }}
+          path: artifacts/engineering-design-visual-ci/
+          retention-days: 30
+          if-no-files-found: error

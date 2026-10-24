@@ -1,0 +1,182 @@
+{
+  "schema": "C2C-VISUAL-CI-SOURCE-1",
+  "scope": "PRODUCT_AND_SAVED_RECORD_BROWSER_ONLY_NO_NEW_PHYSICS",
+  "files": [
+    {
+      "path": ".github/workflows/engineering-design-visual-ci.yml",
+      "sha256": "7e57188ee96152845ad30ab4a2feff6744b8e433b356e4ccff27eba92ea83167"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "fe9bcb989b0e70ed069f3fd88a43bcb1822c6445d49b25cfbe37d969d52c7d03"
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha256": "12d820fbc9708c1443ba7defb0b4f272137946ee0f82ba84427e3cf71f04b1ec"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/__init__.py",
+      "sha256": "b5e9b50c37645bd0149d96c6b791d77fa21cb18d45ac6b618014a811300dcade"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/app.mjs",
+      "sha256": "2b9a9779f1d6c3f992730568e2b338dafa8b3b1e4b196814986a03c35a2ab929"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/browser_acceptance.js",
+      "sha256": "33f291e9b946a245dbea85d1042ee2660608bef95cf5e32a27845a2057c50aec"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/browser_switching_acceptance.js",
+      "sha256": "4c4470d5db00e42c7c2ff530d3c0e1f3e95e9a9f3e3081b34b8fd5403bf08e7d"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/core.mjs",
+      "sha256": "b22c3116a3ae23daa62f32690af776eacebb8b662076d38a1d5aef64363073ab"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/baseline_report.html",
+      "sha256": "a4b3a480f554b0484013c6615db568468651ff0d7bfd3595166f6cc9711cce2a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/baseline.json",
+      "sha256": "60d006bc0c2ad903a89dea11f7fa3e9140e637b9157408fbb7916ffd76ecc90a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/cdu_zip_bindings.json",
+      "sha256": "e53fa8ef4c37d2604785bca171efab15ccdc2503e835494ea29cea917f86f8fd"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/historical.json",
+      "sha256": "31c3ae1bf42f011cd667b8c69fb03988e7821ec75771b80f031a9d8d0eb304ca"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/parameter_contract.json",
+      "sha256": "62c9c0520c0a6fae74062c97f477a71cae65840e40a69c0468eb33835034ceb4"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/single_history.json",
+      "sha256": "078538800cf7eb0338008eab968cde45ee53a182bc54721b58903b6b232940ec"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/switching.json",
+      "sha256": "747052f451d277a76239486ccfee60d113acc6076bccdd30ce9537c78856dad2"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/DELIVERY_STATUS.md",
+      "sha256": "c647af18ffa7e175211b844e88232a69d29da8cbaac3f39df40fccc7b9d689ad"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/index.html",
+      "sha256": "26d11e02d26c26c8e7111fa0c616fbf82dddedd8a2da146cbc3c6a9cd3078a24"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/infra/build.ps1",
+      "sha256": "907d66b3c1843de5f6e2ed0afbefd85569984b652356c23b0140c8ae4dfafa52"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/infra/ControlledJob.cs",
+      "sha256": "8a101be3fc129201ad9fccac842997f79a967b8d1d6196661c59134278b01789"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/infra/VerifyTarget.cs",
+      "sha256": "cf6aeb122ce66dc2783e76d43e8b51f6a42aeaf7ff538f188448cf96e224b686"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_data.mjs",
+      "sha256": "974189afdba6e37b2252b3d0e544b6fc7f331018710b4c7e1a01bb737e8c66d3"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_package.mjs",
+      "sha256": "8388185923e86818e178fa446bfec24c718d3f3db3a040f50a07fe37dc22c1ae"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_switching_data.mjs",
+      "sha256": "a9cc2b7cbfaa7556c35204b4862b24dc1ee884af0d0009bd01079aebae618f68"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_switching_data.ps1",
+      "sha256": "945ee7ddd34f82f1a9475c80e662971b98a00535a37dec9292ef78db89298d17"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_visual_data.ps1",
+      "sha256": "59c07a1c4cd5a108be48e223ec47cb81c2e567766b7c148402fca9a0e87a3227"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/README_ZH.md",
+      "sha256": "e72f3a4062e138c1e55fe14157dc4d5da28a4da38628b54820d9c6bb85528a0c"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/request_contract.py",
+      "sha256": "9f7ce15ac5c5923ad21349a15061e74809b49541de3ab151c7928c8ae569828f"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/request.json",
+      "sha256": "7cd3c84b8a87d9e3617d14f3e85ce318ff2d197cba10324a3ad44dda0d708426"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/resource_environment.json",
+      "sha256": "9ef3133bde0fa9d53f250a6fa7430e23be9086fc41858846ecbcb4098f7c55d6"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/run_remote.ps1",
+      "sha256": "7740f10371bf7dab3a0a91ebce88eeae84fc37207233d2ebd3975ee0e2cadc0d"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/run_visual_ci.mjs",
+      "sha256": "2ac1c727d977fd9e10d72f7c1b2a593ce687e747e11c32ab42e8ead588f4400e"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/server.py",
+      "sha256": "85637aa4fca17983911956903b5c0ada1bf75a859802654687d042e9b8af9fb5"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/source_manifest.json",
+      "sha256": "ecdc4285f7d1e5c9e7e150793809adf2118fa67da240cd22bd7c4f2ac03f846b"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/start_workbench.ps1",
+      "sha256": "42c84b145cf36144836247de96c3a19b4b1c4aa47e09a76593d4ef325bf6ab9a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/style.css",
+      "sha256": "d0af409db87a1d0b440b769e7359380e5391bc6f12d71d96304040ea6afb9e3e"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_core.mjs",
+      "sha256": "bcf1203e11e709874cbe01c853ac7b57339ed3bdd77761b49c97073f65777e8f"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_server.py",
+      "sha256": "67a316c26e0110c08365b4051268a789ae7048bd19e6b55c89aae4796ed64592"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_switching.mjs",
+      "sha256": "a81655acfbca8795487cbda4fb83d8d94401704fc9104d02f868b787ee95905f"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_visual.mjs",
+      "sha256": "2dfcdf8adba031e403d2548c8a224e6c6f7f3dab94fbdc1b073d78f9d6618290"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/validation.py",
+      "sha256": "2200b1e1f28c769fbba3a42ef00d629857dbdbcaf52cc6392308b81ac3ce5848"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/verify_local.mjs",
+      "sha256": "6702300927c8a19082b68893afddcfbd84b5a281d1fa5dbbea1b7e32c391cc7a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/visual-core.mjs",
+      "sha256": "8c0e7fdddd484eb001178ef101c59d2c94840e0a9624bd272c4149b0e225b483"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/visual-ui.mjs",
+      "sha256": "880732e331fc7d16bc9231cd74cb00ecb1ed20a31300e0f18a37cb6c4b5dcd38"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/worker.py",
+      "sha256": "283be0e6e844e77b75173447f0e765d2302264d4914aee1070e6f89d3ac3d4fe"
+    }
+  ]
+}

@@ -1,0 +1,653 @@
+{
+  "schema": "C2C-ENGINEERING-SOURCE-1",
+  "scope": "TANK90_OR_SIX60_BOUNDED_RESEARCH_NOT_ENGINEERING_APPROVAL",
+  "mutable_input": "v0_2/tests/tools/engineering_design_mvp_v1/request.json",
+  "input_binding": "raw request SHA256 and embedded canonical design SHA256; executable source fixed by operator commit",
+  "frozen_legacy_files": 118,
+  "source_files": [
+    {
+      "path": ".github/workflows/engineering-design-mvp-v1.yml",
+      "sha256": "deaa03fa0050bf36d540eede43ac0507c1c02701dfce6e029bc33f352aa2b07f"
+    },
+    {
+      "path": ".github/workflows/engineering-design-visual-ci.yml",
+      "sha256": "7e57188ee96152845ad30ab4a2feff6744b8e433b356e4ccff27eba92ea83167"
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "fe9bcb989b0e70ed069f3fd88a43bcb1822c6445d49b25cfbe37d969d52c7d03"
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha256": "12d820fbc9708c1443ba7defb0b4f272137946ee0f82ba84427e3cf71f04b1ec"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/__init__.py",
+      "sha256": "b5e9b50c37645bd0149d96c6b791d77fa21cb18d45ac6b618014a811300dcade"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/app.mjs",
+      "sha256": "2b9a9779f1d6c3f992730568e2b338dafa8b3b1e4b196814986a03c35a2ab929"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/browser_acceptance.js",
+      "sha256": "33f291e9b946a245dbea85d1042ee2660608bef95cf5e32a27845a2057c50aec"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/browser_switching_acceptance.js",
+      "sha256": "4c4470d5db00e42c7c2ff530d3c0e1f3e95e9a9f3e3081b34b8fd5403bf08e7d"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/core.mjs",
+      "sha256": "b22c3116a3ae23daa62f32690af776eacebb8b662076d38a1d5aef64363073ab"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/baseline_report.html",
+      "sha256": "a4b3a480f554b0484013c6615db568468651ff0d7bfd3595166f6cc9711cce2a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/baseline.json",
+      "sha256": "60d006bc0c2ad903a89dea11f7fa3e9140e637b9157408fbb7916ffd76ecc90a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/cdu_zip_bindings.json",
+      "sha256": "e53fa8ef4c37d2604785bca171efab15ccdc2503e835494ea29cea917f86f8fd"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/historical.json",
+      "sha256": "31c3ae1bf42f011cd667b8c69fb03988e7821ec75771b80f031a9d8d0eb304ca"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/parameter_contract.json",
+      "sha256": "62c9c0520c0a6fae74062c97f477a71cae65840e40a69c0468eb33835034ceb4"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/single_history.json",
+      "sha256": "078538800cf7eb0338008eab968cde45ee53a182bc54721b58903b6b232940ec"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/data/switching.json",
+      "sha256": "747052f451d277a76239486ccfee60d113acc6076bccdd30ce9537c78856dad2"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/DELIVERY_STATUS.md",
+      "sha256": "c647af18ffa7e175211b844e88232a69d29da8cbaac3f39df40fccc7b9d689ad"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/index.html",
+      "sha256": "26d11e02d26c26c8e7111fa0c616fbf82dddedd8a2da146cbc3c6a9cd3078a24"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/infra/build.ps1",
+      "sha256": "907d66b3c1843de5f6e2ed0afbefd85569984b652356c23b0140c8ae4dfafa52"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/infra/ControlledJob.cs",
+      "sha256": "8a101be3fc129201ad9fccac842997f79a967b8d1d6196661c59134278b01789"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/infra/VerifyTarget.cs",
+      "sha256": "cf6aeb122ce66dc2783e76d43e8b51f6a42aeaf7ff538f188448cf96e224b686"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_data.mjs",
+      "sha256": "974189afdba6e37b2252b3d0e544b6fc7f331018710b4c7e1a01bb737e8c66d3"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_package.mjs",
+      "sha256": "8388185923e86818e178fa446bfec24c718d3f3db3a040f50a07fe37dc22c1ae"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_switching_data.mjs",
+      "sha256": "a9cc2b7cbfaa7556c35204b4862b24dc1ee884af0d0009bd01079aebae618f68"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_switching_data.ps1",
+      "sha256": "945ee7ddd34f82f1a9475c80e662971b98a00535a37dec9292ef78db89298d17"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/prepare_visual_data.ps1",
+      "sha256": "59c07a1c4cd5a108be48e223ec47cb81c2e567766b7c148402fca9a0e87a3227"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/README_ZH.md",
+      "sha256": "e72f3a4062e138c1e55fe14157dc4d5da28a4da38628b54820d9c6bb85528a0c"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/request_contract.py",
+      "sha256": "9f7ce15ac5c5923ad21349a15061e74809b49541de3ab151c7928c8ae569828f"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/resource_environment.json",
+      "sha256": "9ef3133bde0fa9d53f250a6fa7430e23be9086fc41858846ecbcb4098f7c55d6"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/run_remote.ps1",
+      "sha256": "7740f10371bf7dab3a0a91ebce88eeae84fc37207233d2ebd3975ee0e2cadc0d"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/run_visual_ci.mjs",
+      "sha256": "2ac1c727d977fd9e10d72f7c1b2a593ce687e747e11c32ab42e8ead588f4400e"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/server.py",
+      "sha256": "85637aa4fca17983911956903b5c0ada1bf75a859802654687d042e9b8af9fb5"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/start_workbench.ps1",
+      "sha256": "42c84b145cf36144836247de96c3a19b4b1c4aa47e09a76593d4ef325bf6ab9a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/style.css",
+      "sha256": "d0af409db87a1d0b440b769e7359380e5391bc6f12d71d96304040ea6afb9e3e"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_core.mjs",
+      "sha256": "bcf1203e11e709874cbe01c853ac7b57339ed3bdd77761b49c97073f65777e8f"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_server.py",
+      "sha256": "67a316c26e0110c08365b4051268a789ae7048bd19e6b55c89aae4796ed64592"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_switching.mjs",
+      "sha256": "a81655acfbca8795487cbda4fb83d8d94401704fc9104d02f868b787ee95905f"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/test_visual.mjs",
+      "sha256": "2dfcdf8adba031e403d2548c8a224e6c6f7f3dab94fbdc1b073d78f9d6618290"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/validation.py",
+      "sha256": "2200b1e1f28c769fbba3a42ef00d629857dbdbcaf52cc6392308b81ac3ce5848"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/verify_local.mjs",
+      "sha256": "6702300927c8a19082b68893afddcfbd84b5a281d1fa5dbbea1b7e32c391cc7a"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/visual-core.mjs",
+      "sha256": "8c0e7fdddd484eb001178ef101c59d2c94840e0a9624bd272c4149b0e225b483"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/visual-ui.mjs",
+      "sha256": "880732e331fc7d16bc9231cd74cb00ecb1ed20a31300e0f18a37cb6c4b5dcd38"
+    },
+    {
+      "path": "v0_2/tests/tools/engineering_design_mvp_v1/worker.py",
+      "sha256": "283be0e6e844e77b75173447f0e765d2302264d4914aee1070e6f89d3ac3d4fe"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/__init__.py",
+      "sha256": "ae2cf333afa99c04c02c94111279ec6ba9c02b3c26bf614824048ffd0803136f"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/audit_results.ps1",
+      "sha256": "1d3bd09f2f5918b66655882adf37952826308095f3b677e26e70370b8c812614"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/bound_project.json",
+      "sha256": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/interfaces.py",
+      "sha256": "f4df0acd2799cae23d135878aa9b9c0f39b8d86e03e7352faaa2fff7a95085fe"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/parameter_provenance.json",
+      "sha256": "26e2afd201b554b487d7812999fd3908fcedf087d1e65b36896c08ff0ca8e1f1"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/plant.py",
+      "sha256": "b03d04f1953253a7b1c4a75cfe421f4917e8d69545f9b49cb139c943855dbbfd"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/README.md",
+      "sha256": "9b123d8e89cbf493a53af779f3d632f3ead31570710f9154b10475b964f7cf5b"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/run_remote.ps1",
+      "sha256": "b56cf737e1b4603b349b6302deab1fd8d72bf2109a708b7163ba982710207ef0"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/scenario.json",
+      "sha256": "2022a57ee7b57a6f932de71e7b6b78d13d7f47c7776d1aece3a6aabeeb853287"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/simulation.py",
+      "sha256": "9153866405b97a3f946d59fcda09b27bf982455c74e5bfb8329f1775b38b3185"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/source_manifest.json",
+      "sha256": "b6c3f668f1c9ac68c6e344fdd635f80faf17185855211462ce38bb75cc2ffa8c"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/test_integration.py",
+      "sha256": "366dbf6253d220afa9e23e65f92bb20554591d377392d79de241df4100f18f65"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v1/worker.py",
+      "sha256": "43f80ba3a92609c0d280b26908ac269ba68c9363a6a61a95a8a030658a35b3fc"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/__init__.py",
+      "sha256": "fcc1cdac980c97e4585c21964038efdbd5c34356b7f33fb10a8e978d73d83e11"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/audit.py",
+      "sha256": "2d8252aa13b12939f0d5a5b3d7a483b0a785a32a47b95873fb93f9d84625f4c3"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/cases.py",
+      "sha256": "32b37da0abf293eb6b3e7c9875d36efba5bbf42ed0a791441d20a4fc94d47905"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/extensions.py",
+      "sha256": "243e0a89c7361cddcea4dcbaf2c1226aa85c10d55f97e7c70fb46350ac75ab74"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/README.md",
+      "sha256": "04e43d06f220ceab10d279302129e2547580c456a7bc55b46e7161a8a3f8cdc6"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/report.ps1",
+      "sha256": "0f339e78c0c4af19be179279f23e6afc85ae559e8d2a850d4409bb9f9a46c35f"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/run_remote.ps1",
+      "sha256": "cf63a055f7f449a52b29ed303b538a7f231209c9a394bb58a0058130ca6bcf8f"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/simulation.py",
+      "sha256": "f948f92af4794e3b933a4b426010a486d4a4ed96fb3442575fab0fb93d9677a9"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/source_manifest.json",
+      "sha256": "fbbddeb69a34ba2c9a79d165004b542970a21b8852982299f4223cb8f9db2098"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/study.json",
+      "sha256": "45e297d98f85823920eafeb08d07719c47021f9710922c926e948ac30bb3fa49"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/test_study.py",
+      "sha256": "a5873709d00fb8c74c2409b3bf7464bd9f989ff8830088dca94f08b71e2a9077"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/v1_regression_hashes.json",
+      "sha256": "f38de6a5e4ed36251c3a43d0f7aef45911367f9675d17358f9d5b07617bf2cd6"
+    },
+    {
+      "path": "v0_2/tests/tools/gb300_m1_closed_loop_v2/worker.py",
+      "sha256": "fc0dcd79343e9ec5ff21006026102f96d68f1f2d9b56ceea1b9e45d2efb60d64"
+    },
+    {
+      "path": "v0_2/tests/tools/liquid_recovery_v1/batch.ps1",
+      "sha256": "0b128615f0ecbaed53c05d06f74ea47a59e4c76a185983366db52d1394caa90f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_00_01_hydraulic_v1/basis.json",
+      "sha256": "1df571389d15decb5f07d7b402e521bf0d87e235a22a01bb9c550306b13808a1"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/__init__.py",
+      "sha256": "f579c027da62cdeb606566055b01a553eb1954f15406dffdcea3e5962ff3beb8"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/audit.py",
+      "sha256": "104f9845bb21937b25eb122f051b203785478ceb820b082e60f1aca98a0874b1"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/engineering.py",
+      "sha256": "475567b792cdbc3214d59be01baaa262bb9be1ffbc68cebf42c3c8f086e744f2"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/__init__.py",
+      "sha256": "9c88a4790f13f08a64563e8473c9d504039ab1af613bfc9a6fec4f016f99f332"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/common.py",
+      "sha256": "5a84c1c99fc73c4948572fac7da789c0090b2e8e897b3d7c1c7e8b93db806b6d"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/coordination.py",
+      "sha256": "ed29f5489af6c42b11504e27f71a71bcd5901690b1b785014c3ac5a5e6fdd26c"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/hydraulics.py",
+      "sha256": "3e320eff7b35e53dbf8c7930c30ae544f9d086a1d69903d6480c6e486cab50a0"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/legacy_audit.py",
+      "sha256": "9d9d12628f8ebc27eec7daa23e7bbbe9e0eeb5d3f9700658a39294e99d639098"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/plant.py",
+      "sha256": "7abc2b7dc52c70257e167f3348dfb2f5d75af89b03d5ae698a9835e7be42d002"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/registration.json",
+      "sha256": "bdec6137490661e4bf843c0c30abc5b42bfe9916a59a0d6a41852d6f2250bbe4"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/simulation.py",
+      "sha256": "bfae59d7e54dcce922d19790b3f6bbebbac4cb026a021156c0f40f14e11e2c8e"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/sources.py",
+      "sha256": "41bb05d9019e32da82094828dc14f9cb538f2587370cf3fa0c4d6d7294576aab"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/tank.py",
+      "sha256": "f405e80a876024c10ae8b56151a2c78c5183047110def648862d41a6269ddc33"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/.gitattributes",
+      "sha256": "8e8d3542416ce4e5b824fe3861d0dd11359434d1e21b49646fdb2ae5cbd1701e"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/cdu.mjs",
+      "sha256": "93da7611f3868ca46ef52b1a787c3b0a419bdb80420f3af8c9e8a3cd81062d83"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/model.mjs",
+      "sha256": "e16bdff14d9621d8913fdb936d1a94e89617c4d9135731c87a4dfd7b8e699c0f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/parameters.mjs",
+      "sha256": "d8fc703b89bee334ef24eb6548d5f7dd98c97ff0bd1ab30d81a3f84320a0abca"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/group_model/upstream/project.json",
+      "sha256": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/historical_hashes.json",
+      "sha256": "32375d06b5b2d7a97f4d6b838cf04f5949b70d60c246bcd71d2a9a415534b3e3"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/prepare_snapshot.ps1",
+      "sha256": "290e1e707c33fa5b3ab4d45585467d28bf603298546f4305cb9d0949db44879c"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/README.md",
+      "sha256": "31d0ec551bd6e56b3e5bc215401213736b12c4ac88a9df37cfd3e7090c152cf7"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/registration.json",
+      "sha256": "670c1d582893f14f0fc9ea12184950992b37fac3747aaf15691a858624fef8b7"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/report.ps1",
+      "sha256": "b237d3fc4b8d5be48ea5316bdfdbb92971f8a6dd1f62c6c0a217b8492c876e2e"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/report.template.html",
+      "sha256": "1d5def8f037e03874b3f842265aeb260dc7082d61e9fdb1045bd7c926b5b5360"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/run_remote.ps1",
+      "sha256": "b5a032488d2103dc9489e27925daab34a4236f6341fddf10e5ada41f83316e5d"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/stages.py",
+      "sha256": "3590b4a3c17e5a4da9cc7960d519ce4874eb8d12c68b2b63e2e4ce7c3a61b95b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/test_validation.py",
+      "sha256": "d3ed54f5613a3786c3972f15ffcfdc8567e765f0c177a91493058dda605ee397"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/unit.py",
+      "sha256": "e73a669c4d8ef82cef61f84b0f1c4f7e7c6deba466e49ae8b49d19995e4cd5ac"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/validation.py",
+      "sha256": "49c3a6be52a78ef5e20243e9ba0233656462cc12c82603c094bd31bdc18c5618"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_equipment_validation_v2/worker.py",
+      "sha256": "9dd67bdb2796d110eea9df013185ef69738b45819258dbd8c262a20506329721"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/__init__.py",
+      "sha256": "9c88a4790f13f08a64563e8473c9d504039ab1af613bfc9a6fec4f016f99f332"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/audit.py",
+      "sha256": "e0bf6c4bbb2d1ffc18088b953c142fd80f5a585e1d7195924ffab3614069acc5"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/bridge.mjs",
+      "sha256": "25f7fcbb9aa6ab370a911084e27cc38861e7ecd6129b3239e3ad6447ceaa3903"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/common.py",
+      "sha256": "f5378988aa57b596a5dccc68721fb4617fef4fdf9282337885fde5c5fc970c7a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/coordination.py",
+      "sha256": "66a84b93ab56f2bc08fa052a0fc1355ae359b6beb1904c75ba81ba355117955b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/hydraulics.py",
+      "sha256": "3e320eff7b35e53dbf8c7930c30ae544f9d086a1d69903d6480c6e486cab50a0"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/plant.py",
+      "sha256": "7abc2b7dc52c70257e167f3348dfb2f5d75af89b03d5ae698a9835e7be42d002"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/README.md",
+      "sha256": "a1b8aa7fa1fd1b6e923c23c571b54d93d84fbc07fab4960d1d7b5056e9711fff"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/registration.json",
+      "sha256": "65409a300d9a2dac82bf4985d436fb77b3fda2c62dc8e6125c8a98162511350d"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/report.ps1",
+      "sha256": "89161b7f8eb70c15bd79eab199fa1ee2a7cd0e8a67d26db92a1ecd4c415b7ac0"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/run_remote.ps1",
+      "sha256": "5df5729fd7fc5dfea542bce99e188c6b83e9b7fe9f69927d654afe8d3bf7665a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/simulation.py",
+      "sha256": "c93cf464fc749b05a6de9e348874407b961b64d106943948305e1d09f6952008"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/source_manifest.json",
+      "sha256": "4feddfa82ca0af660016e6b04d1844fd662dc6ad7c9fd5777aadef2c5c906cca"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/sources.py",
+      "sha256": "67397e8b15e7b0506d8d906897778bfd0d2f963794615453b34904d64efabd10"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/tank.py",
+      "sha256": "f405e80a876024c10ae8b56151a2c78c5183047110def648862d41a6269ddc33"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/test_project.py",
+      "sha256": "d32660e3213cc6441c498e7a022fd079fb619ed522874928ff0eb8a42ba38d85"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/upstream/.gitattributes",
+      "sha256": "8e8d3542416ce4e5b824fe3861d0dd11359434d1e21b49646fdb2ae5cbd1701e"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/upstream/cdu.mjs",
+      "sha256": "93da7611f3868ca46ef52b1a787c3b0a419bdb80420f3af8c9e8a3cd81062d83"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/upstream/model.mjs",
+      "sha256": "e16bdff14d9621d8913fdb936d1a94e89617c4d9135731c87a4dfd7b8e699c0f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/upstream/parameters.mjs",
+      "sha256": "d8fc703b89bee334ef24eb6548d5f7dd98c97ff0bd1ab30d81a3f84320a0abca"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/upstream/project.json",
+      "sha256": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v1/worker.py",
+      "sha256": "313127768c4d927f7a738160ee15a8015d854ff61fa926f02da0e43f7bb087c6"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/__init__.py",
+      "sha256": "9c88a4790f13f08a64563e8473c9d504039ab1af613bfc9a6fec4f016f99f332"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/.gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/audit.py",
+      "sha256": "9d9d12628f8ebc27eec7daa23e7bbbe9e0eeb5d3f9700658a39294e99d639098"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/bridge.mjs",
+      "sha256": "25f7fcbb9aa6ab370a911084e27cc38861e7ecd6129b3239e3ad6447ceaa3903"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/common.py",
+      "sha256": "f5378988aa57b596a5dccc68721fb4617fef4fdf9282337885fde5c5fc970c7a"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/coordination.py",
+      "sha256": "ed29f5489af6c42b11504e27f71a71bcd5901690b1b785014c3ac5a5e6fdd26c"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/hydraulics.py",
+      "sha256": "3e320eff7b35e53dbf8c7930c30ae544f9d086a1d69903d6480c6e486cab50a0"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/plant.py",
+      "sha256": "7abc2b7dc52c70257e167f3348dfb2f5d75af89b03d5ae698a9835e7be42d002"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/README.md",
+      "sha256": "62c40158773b323a43368d031f2edb128afa6691932368ac62027c7e75342265"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/registration.json",
+      "sha256": "bdec6137490661e4bf843c0c30abc5b42bfe9916a59a0d6a41852d6f2250bbe4"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/report.ps1",
+      "sha256": "fdd670a0466f29218ca2d473b655f21b4a32e542a7d97753c0168cf99006583b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/run_remote.ps1",
+      "sha256": "f79d7dc5393745b7eb37fa264dd4df880829a7f514430d56411d26657316773b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/simulation.py",
+      "sha256": "c93cf464fc749b05a6de9e348874407b961b64d106943948305e1d09f6952008"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/source_manifest.json",
+      "sha256": "0fae67b3b430f7072030f5338e8ff54512c9e9c0c0eb1f135efabdd088ec21a3"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/sources.py",
+      "sha256": "67397e8b15e7b0506d8d906897778bfd0d2f963794615453b34904d64efabd10"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/tank.py",
+      "sha256": "f405e80a876024c10ae8b56151a2c78c5183047110def648862d41a6269ddc33"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/test_compound.py",
+      "sha256": "424a7f96462a069a10c9ef1e700196428414034bb023e56e90f252ba83ae4d1b"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/test_project.py",
+      "sha256": "d32660e3213cc6441c498e7a022fd079fb619ed522874928ff0eb8a42ba38d85"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/upstream/.gitattributes",
+      "sha256": "8e8d3542416ce4e5b824fe3861d0dd11359434d1e21b49646fdb2ae5cbd1701e"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/upstream/cdu.mjs",
+      "sha256": "93da7611f3868ca46ef52b1a787c3b0a419bdb80420f3af8c9e8a3cd81062d83"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/upstream/model.mjs",
+      "sha256": "e16bdff14d9621d8913fdb936d1a94e89617c4d9135731c87a4dfd7b8e699c0f"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/upstream/parameters.mjs",
+      "sha256": "d8fc703b89bee334ef24eb6548d5f7dd98c97ff0bd1ab30d81a3f84320a0abca"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/upstream/project.json",
+      "sha256": "2ec9a4a775a269292af36d4b3e29a3a054401a1a065a0bf88b54995aabdecbcf"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_project_v2/worker.py",
+      "sha256": "6b72e35295e5dcf5df2c08b52a14679c28b40a7989f29a75b0868d9536164caf"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/__init__.py",
+      "sha256": "62fa45f73b89b5a714127605379a3fe114c48c52f2a331aada1afe527dc176a2"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/.gitattributes",
+      "sha256": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/audit.py",
+      "sha256": "bca3457b7ee06311e7fb9efd6aed070d99daca3e555bf69f3a985c4fa7049c55"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/baseline_registration.json",
+      "sha256": "ef7726fe7565b26242b8a0fd58dd3cd6c2d26c4bb761a3910a73da8f8b13adba"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/build_manifest.ps1",
+      "sha256": "71c5164ffaf86e3eab3846f2104cfd009c299491ca0bd0d93c6945fc12b98861"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/cases.py",
+      "sha256": "944d40369a24adea9b43cb22430fb322a72e96bcab8846cf947493dcfb3b2051"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/plant.py",
+      "sha256": "3db764afa3d8498f252e381f27a9a4c2c10b766e68732200fc774a7c3ded55b7"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/README.md",
+      "sha256": "e63e906fd191ac826828ef5d161d636764fc321ad6f96545395fa47bcf04de46"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/registration.json",
+      "sha256": "0a828b3cf668b2ab083c232a392647fa136c308b70ec2221ba6736c0896746e8"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/report.ps1",
+      "sha256": "dd6719e1e1157ed6b45763040887a703c1c0708e98788c79717e6dfb2510acbc"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/run_remote.ps1",
+      "sha256": "9c9a0f988da711b0ab058e7705692da6d57c6c525696329e878fdc86026039dc"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/simulation.py",
+      "sha256": "8b479e257352861466f2fa2c073ff3f2c07b826d4df8959ce47a084f16109cf6"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/test_baseline.py",
+      "sha256": "2c7a3c55725d16f0690bead2a84e0e62faa0dbb56d0c1e39705d152e9d17fdda"
+    },
+    {
+      "path": "v0_2/tests/tools/memphis_single_rack_v1/worker.py",
+      "sha256": "cc7cc389058affc2c4224b2b963c1a673e925e90292f4c7d6486f05cab212559"
+    }
+  ]
+}

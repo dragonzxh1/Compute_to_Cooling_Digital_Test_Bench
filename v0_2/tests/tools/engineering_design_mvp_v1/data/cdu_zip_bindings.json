@@ -1,0 +1,31 @@
+{
+  "run": "39492934891",
+  "source_commit": "cfc7eb2663f8ed28ea8bfcc3b88182c54983d941",
+  "official_zip_sha256": "371fa29d99aa97d778a451c20fe98c7450816d320c91e5a55f28e731de613263",
+  "files": {
+    "T2_COLD_STANDBY/trace.ndjson": {
+      "entry": "artifacts/memphis-r12-dynamic-hydraulic-v1/39492934891-1/baseline/delivery/T2_COLD_STANDBY/trace.ndjson",
+      "sha256": "f95ff26aeeaa480225ed6c876d77242a59a15938ce9bc2cea5857f33a42253e7"
+    },
+    "T2_COLD_STANDBY/case_result.json": {
+      "entry": "artifacts/memphis-r12-dynamic-hydraulic-v1/39492934891-1/baseline/delivery/T2_COLD_STANDBY/case_result.json",
+      "sha256": "98e155d4a0acf1cd05f5a0e47661ece49f01c48c5cd329196fa264e0424f51d7"
+    },
+    "T2_WARM_STANDBY/trace.ndjson": {
+      "entry": "artifacts/memphis-r12-dynamic-hydraulic-v1/39492934891-1/suite/delivery/T2_WARM_STANDBY/trace.ndjson",
+      "sha256": "ccbb87db5f3049b7346e36b60405e237b6f6445d53b90facc70320986e7e2bdf"
+    },
+    "T2_WARM_STANDBY/case_result.json": {
+      "entry": "artifacts/memphis-r12-dynamic-hydraulic-v1/39492934891-1/suite/delivery/T2_WARM_STANDBY/case_result.json",
+      "sha256": "51286f4157553e913907b27996a69bb1368e154dd0638568a26d505c132238d2"
+    },
+    "NEG_DUTY_PUMP_LOSS/trace.ndjson": {
+      "entry": "artifacts/memphis-r12-dynamic-hydraulic-v1/39492934891-1/suite/delivery/NEG_DUTY_PUMP_LOSS/trace.ndjson",
+      "sha256": "28573ac05263c5505ae05f5c60c4387e4f207210ae607eddea003fd48d96b223"
+    },
+    "NEG_DUTY_PUMP_LOSS/case_result.json": {
+      "entry": "artifacts/memphis-r12-dynamic-hydraulic-v1/39492934891-1/suite/delivery/NEG_DUTY_PUMP_LOSS/case_result.json",
+      "sha256": "8ed046eff3d28ff90b936cf4b518773c887198873d665710fdca399a221558b6"
+    }
+  }
+}
